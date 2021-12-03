@@ -1,5 +1,4 @@
 <?php
-
 /**
  * HostGator WordPress Plugin
  *
@@ -10,7 +9,7 @@
  *
  * @wordpress-plugin
  * Plugin Name:       HostGator WordPress Plugin
- * Plugin URI:        
+ * Plugin URI:        https://hostgator.com
  * Description:       WordPress plugin that integrates your WordPress site with the HostGator control panel, including performance, security, and update features.
  * Version:           1.0
  * Requires PHP:      7.0
