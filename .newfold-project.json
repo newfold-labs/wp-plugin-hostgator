@@ -1,7 +1,7 @@
 {
     "name": "HostGator WordPress Plugin",
     "description": "WordPress plugin that integrates your WordPress site with the HostGator control panel, including performance, security, and update features.",
-    "url": "",
+    "url": "https://hostgator.com",
     "package": {
         "vendor": "newfold",
         "name": "hostgator-wordpress-plugin"
@@ -17,7 +17,7 @@
         "url": "https://evanmullins.com"
     },
     "text_domain": "hostgator-wordpress-plugin",
-    "namespace": "HostGatorWP",
+    "namespace": "Hostgator",
     "prefixes": {
         "long": "HostGatorWordPressPlugin",
         "short": "hgwpp",
