@@ -1,23 +1,24 @@
-# ignore everything in the root except the "wp-content" directory.
-!wp-content/
+# Composer
+/vendor
 
-# ignore everything in the "wp-content" directory, except:
-# "mu-plugins", "plugins", "themes" directory
-wp-content/*
-!wp-content/mu-plugins/
-!wp-content/plugins/
-!wp-content/themes/
+#node_modules
+/node_modules
 
-# ignore these plugins
-wp-content/plugins/hello.php
+# System and IDE files
+.DS_Store
+.idea
 
-# ignore specific themes
-wp-content/themes/twenty*/
+# Cypress
+cypress.env.json
+/tests/cypress/screenshots
+/tests/cypress/videos
 
-# ignore node dependency directories
-node_modules/
+# Built-app files
+/.docs
+/build/*
+/bluehost-wordpress-plugin
 
-# ignore log files and databases
+# File Types
 *.log
 *.sql
-*.sqlite
+*.zip

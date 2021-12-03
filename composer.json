@@ -1,0 +1,42 @@
+{
+    "name": "newfold/hostgator-wordpress-plugin",
+    "description": "WordPress plugin that integrates your WordPress site with the HostGator control panel, including performance, security, and update features.",
+    "type": "wordpress-plugin",
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "authors": [
+        {
+            "name": "Evan Mullins",
+            "email": "evanrm@gmail.com"
+        }
+    ],
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "platform-check": false
+    },
+    "repositories": {
+        "bluehost-satis": {
+            "type": "composer",
+            "url": "https://bluehost.github.io/satis/"
+        }
+    },
+    "require-dev": {
+        "bluehost/wp-php-standards": "^1.1",
+        "wp-phpunit/wp-phpunit": "^5.8"
+    },
+    "scripts": {
+        "fix": "vendor/bin/phpcbf --standard=phpcs.xml .",
+        "lint": "vendor/bin/phpcs --standard=phpcs.xml -s .",
+        "i18n": [
+            "vendor/bin/wp i18n make-pot . ./languages/hostgator-wordpress-plugin.pot --headers=Report-Msgid-Bugs-To:https://github.com/newfold/hostgator-wordpress-plugin/issues --exclude=assets,storybook,tests",
+            "vendor/bin/wp i18n make-pot . ./languages/hostgator-wordpress-plugin.pot --headers=POT-Creation-Date:null --exclude=assets,storybook,tests"
+        ]
+    },
+    "scripts-descriptions": {
+        "fix": "Automatically fix coding standards issues where possible.",
+        "lint": "Check files against coding standards.",
+        "i18n": "Generate a .pot file for translation."
+    }
+}
