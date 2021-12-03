@@ -3,8 +3,8 @@
  * HostGator WordPress Plugin
  *
  * @package           HostGatorWordPressPlugin
- * @author            Evan Mullins
- * @copyright         Copyright 2021 by Evan Mullins - All rights reserved.
+ * @author            Newfold Digital
+ * @copyright         Copyright 2021 by Newfold Digital - All rights reserved.
  * @license           GPL-2.0-or-later
  *
  * @wordpress-plugin
@@ -14,8 +14,8 @@
  * Version:           1.0
  * Requires PHP:      7.0
  * Requires at least: 5.0
- * Author:            Evan Mullins
- * Author URI:        https://evanmullins.com
+ * Author:            Newfold Digital
+ * Author URI:        https://newfold.com
  * Text Domain:       hostgator-wordpress-plugin
  * Domain Path:       /languages
  * License:           GPL 2.0 or later
