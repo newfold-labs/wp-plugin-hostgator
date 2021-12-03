@@ -24,6 +24,7 @@
     },
     "require-dev": {
         "bluehost/wp-php-standards": "^1.1",
+        "wp-cli/i18n-command": "^2.2",
         "wp-phpunit/wp-phpunit": "^5.8"
     },
     "scripts": {
