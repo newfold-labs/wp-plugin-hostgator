@@ -22,3 +22,42 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  */
 
+// Do not allow multiple copies of the HostGator Plugin to be active
+if ( defined( 'HOSTGATOR_PLUGIN_VERSION' ) ) {
+	exit;
+}
+
+// Define constants
+define( 'HOSTGATOR_PLUGIN_VERSION', '1.0.0' );
+define( 'HOSTGATOR_PLUGIN_FILE', __FILE__ );
+define( 'HOSTGATOR_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+define( 'HOSTGATOR_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+if ( ! defined( 'BH_HUB_URL' ) ) {
+	define( 'BH_HUB_URL', 'https://hiive.cloud/api' );
+}
+
+global $pagenow;
+if ( 'plugins.php' === $pagenow ) {
+
+	require HOSTGATOR_PLUGIN_DIR . '/inc/plugin-php-compat-check.php';
+
+	$plugin_check = new HG_Plugin_PHP_Compat_Check( __FILE__ );
+
+	$plugin_check->min_php_version = '5.3';
+	$plugin_check->min_wp_version  = '4.7';
+
+	$plugin_check->check_plugin_requirements();
+}
+
+// Check NFD plugins
+require HOSTGATOR_PLUGIN_DIR . '/inc/plugin-nfd-compat-check.php';
+$nfd_plugins_check = new NFD_Plugin_Compat_Check( __FILE__ );
+// Save val to abort loading if incompatabilities are found
+$pass_nfd_check = $nfd_plugins_check->check_plugin_requirements();
+
+// $pass_nfd_check = true;
+
+// Check PHP version before initializing to prevent errors if plugin is incompatible.
+if ( $pass_nfd_check && version_compare( PHP_VERSION, '5.3', '>=' ) ) {
+	require dirname( __FILE__ ) . '/bootstrap.php';
+}
