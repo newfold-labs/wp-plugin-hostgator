@@ -22,6 +22,8 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  */
 
+Namespace HostGator;
+
 // Do not allow multiple copies of the HostGator Plugin to be active
 if ( defined( 'HOSTGATOR_PLUGIN_VERSION' ) ) {
 	exit;
@@ -35,6 +37,9 @@ define( 'HOSTGATOR_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 if ( ! defined( 'BH_HUB_URL' ) ) {
 	define( 'BH_HUB_URL', 'https://hiive.cloud/api' );
 }
+
+define( 'HOSTGATOR_BUILD_DIR', HOSTGATOR_PLUGIN_DIR . '/build/' . HOSTGATOR_PLUGIN_VERSION );
+define( 'HOSTGATOR_BUILD_URL', HOSTGATOR_PLUGIN_URL . '/build/' . HOSTGATOR_PLUGIN_VERSION );
 
 global $pagenow;
 if ( 'plugins.php' === $pagenow ) {

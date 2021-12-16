@@ -40,16 +40,18 @@
     },
     "dependencies": {
         "@wordpress/a11y": "^2.5.1",
+        "@wordpress/compose": "^5.0.6",
         "@wordpress/dom": "^2.6.0",
         "@wordpress/dom-ready": "^2.5.1",
         "@wordpress/element": "^2.8.2",
         "@wordpress/i18n": "^3.6.1",
+        "@wordpress/icons": "^6.1.1",
         "@wordpress/keycodes": "^2.6.2",
         "classnames": "^2.2.6",
         "jquery": "^3.5.1",
         "lodash": "^4.17.21",
+        "react": "^16.9.0",
         "react-error-boundary": "^3.1.1",
-        "react-router-dom": "^5.2.0",
-        "react": "^16.9.0"
+        "react-router-dom": "^6.0.2"
     }
 }

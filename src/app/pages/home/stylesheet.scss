@@ -1,0 +1,21 @@
+.hgwp-cardlist-content {
+    max-width: 60%;
+}
+
+.hgwp-section {
+    margin: 0 0 2rem;
+    position: relative;
+}
+
+.hgwp-section-graphic {
+    opacity: 0.8;
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+    z-index: 0;
+}
+
+.hgwp-section-card {
+    max-width: 66%;
+    z-index: 1;
+}

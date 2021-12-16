@@ -1,0 +1,84 @@
+:root {
+    // https://static.hostgator.com/docs/4.3/foundations/color/
+    // Neutral Colors
+    --hgwp-color-gray-10: #F9F9F9;
+    --hgwp-color-gray-20: #F5F9FA;
+    --hgwp-color-gray-30: #E0EAF3;
+    --hgwp-color-gray-40: #D5E2ED;
+    --hgwp-color-gray-50: #C2D6E7;
+    --hgwp-color-gray-60: #A0B2BF;
+    --hgwp-color-gray-70: #4B5E6C;
+    --hgwp-color-gray-80: #203646;
+    --hgwp-color-white: #FFFFFF;
+    --hgwp-color-light: var(--hgwp-color-gray-20);
+    --hgwp-color-dark: var(--hgwp-color-gray-80);
+    --hgwp-color-black: #0D151D;
+    // Brand colors
+    --hgwp-color-primary-light: #F1F8FF;
+    --hgwp-color-primary-medium: #38ADFF;
+    --hgwp-color-primary: #097DFE;
+    --hgwp-color-primary-dark: #0467D6;
+
+    --hgwp-color-secondary-light: #FFF3DA;
+    --hgwp-color-secondary-medium: #FFC94F;
+    --hgwp-color-secondary: #FFA503;
+    --hgwp-color-secondary-dark: #E38B00;
+    // Accent colors
+    --hgwp-color-success-light: #D6F7E9;
+    --hgwp-color-success-medium: #1FDA9F;
+    --hgwp-color-success: #08C05D;
+    --hgwp-color-success-dark: #019748;
+
+    --hgwp-color-danger-light: #FFE7E2;
+    --hgwp-color-danger-medium: #FF927D;
+    --hgwp-color-danger: #FE3E15;
+    --hgwp-color-danger-dark: #D13211;
+
+    --hgwp-color-warning-light: #FEFCE3;
+    --hgwp-color-warning-medium: #FFF281;
+    --hgwp-color-warning: #FFDF05;
+    --hgwp-color-warning-dark: #E2C104;
+}
+
+.hgwpp, .hgwpp * {
+    box-sizing: border-box;
+}
+
+#wpcontent {
+    padding-left: 0 !important;
+}
+
+.hgwp-app-body {
+    padding: 6px 24px 0;
+}
+
+.components-button.has-icon {
+    padding-right: 1rem;
+}
+.components-toggle-control .components-base-control__field {
+    margin-bottom: 0;
+}
+
+.grid {
+    display: grid;
+    gap: clamp(0.5rem, calc(1rem + 1vw), 2rem);
+    padding: 0.5rem;
+    &.col2,
+    &.col3,
+    &.col4 {
+        @media screen and (min-width: 600px) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+    &.col3,
+    &.col4 {
+        @media screen and (min-width: 800px) {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+    &.col4 {
+        @media screen and (min-width: 1020px) {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+    }
+}

@@ -5,6 +5,8 @@
  * @package HostGatorWordPressPlugin
  */
 
+Namespace HostGator;
+
 /**
  * Class HG_Plugin_PHP_Compat_Check
  *

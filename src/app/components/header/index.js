@@ -1,43 +1,23 @@
-// import './stylesheet.scss';
+import './stylesheet.scss';
 
-// import Home from './Home';
-// import Reloader from './Reloader';
-// import DesktopNav from './NavDesktop';
-// import MobileNav from './NavMobile';
-// import { useViewportMatch } from '@wordpress/compose';
+import Logo from './logo';
+import NavLarge from './nav-large';
+import NavSmall from './nav-small';
+import NavUtility from './nav-utility';
+import { useViewportMatch } from '@wordpress/compose';
 
 const Header = () => {
-	// const isLargeViewport = useViewportMatch('medium');
+	const isLargeViewport = useViewportMatch('medium');
 	return (
 		<Fragment>
-			<header className="brand-header">
-				<div style={{ width: '64px' }} />
-                <h1>Welcome to HostGator Plugin!</h1>
-				{/* <Home />
-				<Reloader /> */}
+			<header className="hgwp-header">
+				<Logo />
+                <NavUtility />
 			</header>
-			<nav>
-				<ul>
-                    <li>
-                        <a href="#"><strong>Home</strong></a>
-                    </li>
-                    <li>
-                        <a href="#">Themes</a>
-                    </li>
-                    <li>
-                        <a href="#">Plugins</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Settings</a>
-                    </li>
-                    <li>
-                        <a href="#">Help</a>
-                    </li>
-                </ul>
-			</nav>
+                <nav className="hgwp-nav">
+                    {isLargeViewport && <NavLarge />}
+                    {!isLargeViewport && <NavSmall />}
+                </nav>
 		</Fragment>
 	);
 };

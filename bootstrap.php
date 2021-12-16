@@ -4,6 +4,7 @@
  * 
  * @package HostGatorWordPressPlugin
  */
+namespace HostGator;
 
 use Hostgator\UpgradeHandler;
 use Endurance_WP_Plugin_Updater\Updater;
@@ -35,6 +36,10 @@ if ( is_admin() ) {
 }
 
 
-// Require files
-require HOSTGATOR_PLUGIN_DIR . '/inc/menu.php';
-require HOSTGATOR_PLUGIN_DIR . '/inc/scripts.php';
+// Required files
+require HOSTGATOR_PLUGIN_DIR . '/inc/Admin.php';
+
+/* WordPress Admin Page & Features */
+if ( is_admin() ) {
+	new Admin();
+}

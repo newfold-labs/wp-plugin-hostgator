@@ -1,29 +1,35 @@
+import './stylesheet.scss';
 
-// import { useLocation } from 'react-router-dom';
-
-// import { __ } from '@wordpress/i18n';
+import { Route, HashRouter as Router, Routes } from 'react-router-dom';
+import { __ } from '@wordpress/i18n';
 import classnames from 'classnames';
 import Header from './components/header';
-// import { kebabCase } from 'lodash';
+import AppRoutes from './data/routes';
 
 const AppBody = ( props ) => {
-	
+	// const isLargeViewport = useMediaQuery('(min-width: >= 1020px)');
+	// const location = useLocation();
+
 	return (
 		<main 
-			id="bwa-app-rendered" 
+			id="hgwp-app-rendered" 
 			className={ classnames(
 				'wpadmin-brand-hostgator',
 				props.className
 			) }
 		>
             <Header />
-            <p>The react app is started!</p>
+			<div className='hgwp-app-body'>
+				<AppRoutes />
+			</div>
 		</main>
-	)
-}
+	);
+};
 
 export const App = () => (
-    <AppBody />
-)
+	<Router>
+		<AppBody />
+	</Router>
+);
 
 export default App;
