@@ -50,7 +50,7 @@ final class Admin {
 	 */
 	public static function render() {
 		echo '<!-- HostGator -->' . PHP_EOL;
-		echo '<div id="hwa-app" class="hgwpp hgwpp_app">Loading... </div>' . PHP_EOL;
+		echo '<div id="hwa-app" class="hgwpp hgwpp_app"></div>' . PHP_EOL;
 		echo '<!-- /HostGator -->' . PHP_EOL;
 	}
 

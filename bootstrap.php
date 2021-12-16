@@ -43,3 +43,8 @@ require HOSTGATOR_PLUGIN_DIR . '/inc/Admin.php';
 if ( is_admin() ) {
 	new Admin();
 }
+
+// Require files
+require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/SettingsController.php';
+require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/rest-api.php';
+require HOSTGATOR_PLUGIN_DIR . '/inc/updates.php';

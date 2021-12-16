@@ -23,6 +23,7 @@ final class Data {
 			'url'     => HOSTGATOR_BUILD_URL,
 			'version' => HOSTGATOR_PLUGIN_VERSION,
 			'admin'   => \admin_url(),
+			// 'uid'     => uid(),
 		);
 
 		return $runtime;
