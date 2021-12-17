@@ -71,7 +71,7 @@ const CommentSettings = () => {
                             "Comments are allowed on old posts."
                     }
                     onChange={ () => {
-                        setDisableCommentsOldPosts( ( state ) => !state );
+                        setDisableCommentsOldPosts( ( value ) => !value );
                     } }
                 />
             </CardBody>
@@ -97,7 +97,7 @@ const CommentSettings = () => {
                         { label: '50', value: '50' },
                         { label: '100', value: '100' },
                     ] }
-                    onChange={ ( state ) => setNumCloseCommentsDays( state ) }
+                    onChange={ ( value ) => setNumCloseCommentsDays( value ) }
                 />
             </CardBody>
             <CardDivider />
@@ -113,7 +113,7 @@ const CommentSettings = () => {
                         { label: '30', value: '30' },
                         { label: '50', value: '50' },
                     ] }
-                    onChange={ ( state ) => setNumCommentsPerPage( state ) }
+                    onChange={ ( value ) => setNumCommentsPerPage( value ) }
                 />
             </CardBody>
         </Card>

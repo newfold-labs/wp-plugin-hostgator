@@ -63,7 +63,7 @@ const ContentSettings = () => {
                         { label: '20', value: '20' },
                         { label: '40', value: '40' },
                     ] }
-                    onChange={ ( state ) => setNumContentRevisions( state ) }
+                    onChange={ ( value ) => setNumContentRevisions( value ) }
                 />
             </CardBody>
 
@@ -79,7 +79,7 @@ const ContentSettings = () => {
 						{ label: '3', value: '21' },
 						{ label: '4', value: '30' },
                     ] }
-                    onChange={ ( state ) => setNumEmptyTrashDays( state ) }
+                    onChange={ ( value ) => setNumEmptyTrashDays( value ) }
                 />
             </CardBody>
         </Card>

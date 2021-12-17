@@ -17,12 +17,12 @@ import apiFetch from '@wordpress/api-fetch';
 const ComingSoonSection = () => {
     const { store, setStore } = useContext(AppStore);
 	const [ isComingSoon, setComingSoon ] = useState( store.comingSoon );
+	const [ wasComingSoon, setWasComingSoon ] = useState( false );
 
     useEffect(() => {
 		setStore({
 			...store,
 			comingSoon: isComingSoon,
-            wasComingSoon: true
 		});
 		//save setting to db
 		apiFetch( { path: 'hostgator/v1/settings', method: 'POST', data: {
@@ -47,13 +47,14 @@ const ComingSoonSection = () => {
                             icon="yes-alt"
                             onClick={ () => {
                                 setComingSoon( () => false );
+                                setWasComingSoon( () => true );
                             } }
                         >Launch Site</Button>
                     </CardFooter>
                 </Card>
             }
             {
-                !isComingSoon && store.wasComingSoon  &&
+                !isComingSoon && wasComingSoon &&
                 <Card size="large" className="hgwp-section-card">
                     <CardHeader>
                         <Heading level="2">Site Launched!</Heading>
@@ -68,6 +69,7 @@ const ComingSoonSection = () => {
                             icon="no-alt"
                             onClick={ () => {
                                 setComingSoon( () => true );
+                                setWasComingSoon( () => true );
                             } }
                         >Undo Launch</Button>
                     </CardFooter>

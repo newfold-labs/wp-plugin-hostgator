@@ -91,7 +91,7 @@ final class Admin {
 		);
 
         $screen = get_current_screen();
-        if( false !== strpos( $screen->id, 'hostgator' ) ) {       
+        if( false !== strpos( $screen->id, 'hostgator' ) ) {
 			\wp_enqueue_script( 'hostgator-script' );
 			\wp_enqueue_style( 'hostgator-style' );
 		}

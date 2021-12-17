@@ -18,14 +18,14 @@ const ComingSoon = () => {
 	const [ isComingSoon, setComingSoon ] = useState( store.comingSoon );
 	
 	useEffect(() => {
-		setStore({
-			...store,
-			comingSoon: isComingSoon,
-		});
-		//save setting to db
 		apiFetch( { path: 'hostgator/v1/settings', method: 'POST', data: {
 			comingSoon: isComingSoon
-		} } );
+		} } ).then( () => {
+            setStore({
+                ...store,
+                comingSoon: isComingSoon,
+            });
+        });
 	}, [isComingSoon]);
 
 	return (
@@ -47,7 +47,7 @@ const ComingSoon = () => {
                             : 'Coming soon is not active.'
                     }
                     onChange={ () => {
-                        setComingSoon( ( state ) => ! state );
+                        setComingSoon( ( value ) => ! value );
                         // setCustomComingSoon( () => false );
                     } }
                 />
@@ -65,7 +65,7 @@ const ComingSoon = () => {
                             : 'Default coming soon content.'
                     }
                     onChange={ () => {
-                        setCustomComingSoon( ( state ) => ! state );
+                        setCustomComingSoon( ( value ) => ! value );
                     } }
                 />
             </CardBody> }

@@ -72,7 +72,7 @@ const AutomaticUpdates = () => {
 								: 'WordPress must be manually updated.'
 						}
 						onChange={ () => {
-							setAutoUpdatesCore( ( state ) => ! state );
+							setAutoUpdatesCore( ( value ) => ! value );
 						} }
 					/>
 				</CardBody>
@@ -87,7 +87,7 @@ const AutomaticUpdates = () => {
 								: 'Each plugin must be manually updated.'
 						}
 						onChange={ () => {
-							setAutoUpdatesPlugins( ( state ) => ! state );
+							setAutoUpdatesPlugins( ( value ) => ! value );
 						} }
 					/>
 				</CardBody>
@@ -102,7 +102,7 @@ const AutomaticUpdates = () => {
 								: 'Each theme must be manually updated.'
 						}
 						onChange={ () => {
-							setAutoUpdatesThemes( ( state ) => ! state );
+							setAutoUpdatesThemes( ( value ) => ! value );
 						} }
 					/>
 				</CardBody>
