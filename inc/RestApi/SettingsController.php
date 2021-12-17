@@ -86,7 +86,7 @@ class SettingsController extends \WP_REST_Controller {
 					case 'autoUpdatesPlugins':
 						// Keep the WordPress Core setting in sync.
 						if ( $new_value ) {
-							bh_sync_plugin_update_settings();
+							// bh_sync_plugin_update_settings();
 						}
 
 						$new_value = ( $new_value ) ? 'true' : 'false';
@@ -95,7 +95,7 @@ class SettingsController extends \WP_REST_Controller {
 					case 'autoUpdatesThemes':
 						// Keep the WordPress Core setting in sync.
 						if ( $new_value ) {
-							bh_sync_theme_update_settings();
+							// bh_sync_theme_update_settings();
 						}
 
 						$new_value = ( $new_value ) ? 'true' : 'false';
@@ -177,7 +177,7 @@ class SettingsController extends \WP_REST_Controller {
 			'autoUpdatesPlugins'      => $plugins,
 			'autoUpdatesThemes'       => $themes,
 			'autoUpdatesTranslations' => $translations,
-			'disableCommentsOldPosts' => ( 1 === get_option( 'close_comments_for_old_posts', 0 ) ),
+			'disableCommentsOldPosts' => ( 'true' === get_option( 'close_comments_for_old_posts', 'false' ) ),
 			'closeCommentsDays'       => intval( get_option( 'close_comments_days_old', 14 ) ),
 			'commentsPerPage'         => intval( get_option( 'comments_per_page', 50 ) ),
 			'contentRevisions'        => intval( defined( 'WP_POST_REVISIONS' ) ? WP_POST_REVISIONS : 5 ),

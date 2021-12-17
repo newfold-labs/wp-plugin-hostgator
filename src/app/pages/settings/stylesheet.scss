@@ -1,0 +1,17 @@
+
+.components-toggle-control .components-base-control__field {
+    margin-bottom: 0;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    .components-toggle-control__label {
+        font-weight: 600;
+    }
+}
+
+.components-card-body {
+
+    &.disabled {
+        opacity: .5;
+    }
+}

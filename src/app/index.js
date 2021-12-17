@@ -12,7 +12,6 @@ import AppRoutes from './data/routes';
 const AppBody = ( props ) => {
 	const { booted } = useContext(AppStore);
 	// const isLargeViewport = useMediaQuery('(min-width: >= 1020px)');
-	// const location = useLocation();
 
 	return (
 		<main 
