@@ -5,6 +5,7 @@ import {
 	CardHeader,
 	CardDivider,
 	CardFooter,
+    TextControl,
 	ToggleControl,
 } from '@wordpress/components';
 import { __experimentalHeading as Heading } from '@wordpress/components';
@@ -12,11 +13,21 @@ import AppStore from '../../data/store';
 import { useState } from '@wordpress/element';
 import { useEffect } from 'react';
 import apiFetch from '@wordpress/api-fetch';
+import { dispatch } from '@wordpress/data';
 
 const ComingSoon = () => {
 	const { store, setStore } = useContext(AppStore);
 	const [ isComingSoon, setComingSoon ] = useState( store.comingSoon );
-	
+	const [ isCustomComingSoon, setCustomComingSoon ] = useState( store.customComingSoon );
+	const [ comingSoonHeadline, setComingSoonHeadline ] = useState( store.comingSoonHeadline );
+	const [ comingSoonBody, setComingSoonBody ] = useState( store.comingSoonBody );
+	const getComingSoonNoticeText = () => {
+        return isComingSoon ? 'Coming soon activated.' : 'Coming soon deactivated.'
+    };
+    const getComingSoonHelpText = () => {
+        return isComingSoon ? 'Coming soon page is active and site is protected.' : 'Coming soon page is not active and site is acessible.'
+    };
+
 	useEffect(() => {
 		apiFetch( { path: 'hostgator/v1/settings', method: 'POST', data: {
 			comingSoon: isComingSoon
@@ -25,9 +36,23 @@ const ComingSoon = () => {
                 ...store,
                 comingSoon: isComingSoon,
             });
+            dispatch('core/notices').createNotice(
+                'info',
+                getComingSoonNoticeText(),
+                {
+                  type: 'snackbar',
+                  isDismissible: true,
+                }
+            );
+            
+            if ( !isComingSoon ) {
+                document.getElementById('wp-admin-bar-hostgator-coming_soon').classList.add('hideme');
+            } else {
+                document.getElementById('wp-admin-bar-hostgator-coming_soon').classList.remove('hideme');
+            }
         });
 	}, [isComingSoon]);
-
+    
 	return (
         <Card>
             <CardHeader>
@@ -41,20 +66,16 @@ const ComingSoon = () => {
                 <ToggleControl
                     label="Coming Soon"
                     checked={ isComingSoon }
-                    help={
-                        isComingSoon
-                            ? 'Coming soon is active.'
-                            : 'Coming soon is not active.'
-                    }
+                    help={ getComingSoonHelpText() }
                     onChange={ () => {
                         setComingSoon( ( value ) => ! value );
-                        // setCustomComingSoon( () => false );
+                        setCustomComingSoon( () => false );
                     } }
                 />
             </CardBody>
-            
-            {/* 				
-            { isComingSoon && 
+
+            				
+            {/* { isComingSoon && 
             <CardBody>
                 <ToggleControl
                     label="Custom Coming Soon Content"
@@ -72,21 +93,20 @@ const ComingSoon = () => {
 
             { isCustomComingSoon && 
             <CardBody>
-                <RichText
-                    placeholder={ __( 'Coming Soon', 'hostgator-wordpres-plugin' ) }
-                    value={ comingSoonHeadline }
-                    onChange={ (value) => { setComingSoonHeadline( () => { value } ) } }
-                    tagName="h2"
-                    allowedFormats={[]}
-                />
-                <RichText
+                <TextControl
                     placeholder={ __( 'A New WordPress Site', 'hostgator-wordpres-plugin' ) }
                     value={ comingSoonBody }
                     onChange={ (value) => { setComingSoonBody( () => { value } ) } }
-                    tagName="p"
+                    tagName="h2"
                 />
-            </CardBody> } 
-            */}
+                <TextControl
+                    placeholder={ __( 'Coming Soon', 'hostgator-wordpres-plugin' ) }
+                    value={ comingSoonHeadline }
+                    onChange={ (value) => { setComingSoonHeadline( () => { value } ) } }
+                    tagName="h1"
+                />
+            </CardBody> }  */}
+           
         </Card>
     );
 };

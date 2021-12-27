@@ -79,3 +79,22 @@
         }
     }
 }
+
+.hgwp-app-snackbar {
+    padding: 0 24px;
+    position: relative;
+
+    .components-snackbar-list {
+        bottom: .5rem;
+        position: fixed;
+    }
+}
+
+#wpadminbar .ab-top-menu {
+    li {
+        transition: opacity .33s ease;
+    }
+    .hideme {
+        opacity: 0;
+    }
+}
