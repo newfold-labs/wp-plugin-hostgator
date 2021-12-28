@@ -115,12 +115,10 @@ class SettingsController extends \WP_REST_Controller {
 						update_option( 'comments_per_page', $new_value );
 						break;
 					case 'contentRevisions':
-						$revisions = intval( $new_value );
-						exec( "wp config set WP_POST_REVISIONS $revisions --type=constant --raw" ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.system_calls_exec
+						update_option( 'nfd_wp_post_revisions', intval( $new_value ) );
 						break;
 					case 'emptyTrashDays':
-						$days = intval( $new_value );
-						exec( "wp config set EMPTY_TRASH_DAYS $days --type=constant --raw" ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.system_calls_exec
+						update_option( 'nfd_empty_trash_days', intval( $new_value ) );
 						break;
 					case 'cacheLevel':
 						update_option( 'endurance_cache_level', $new_value );
@@ -180,8 +178,8 @@ class SettingsController extends \WP_REST_Controller {
 			'disableCommentsOldPosts' => ( 'true' === get_option( 'close_comments_for_old_posts', 'false' ) ),
 			'closeCommentsDays'       => intval( get_option( 'close_comments_days_old', 14 ) ),
 			'commentsPerPage'         => intval( get_option( 'comments_per_page', 50 ) ),
-			'contentRevisions'        => intval( defined( 'WP_POST_REVISIONS' ) ? WP_POST_REVISIONS : 5 ),
-			'emptyTrashDays'          => intval( defined( 'EMPTY_TRASH_DAYS' ) ? EMPTY_TRASH_DAYS : 30 ),
+			'contentRevisions'        => intval( get_option( 'nfd_wp_post_revisions', 5 ) ),
+			'emptyTrashDays'          => intval( get_option( 'nfd_empty_trash_days', 30 ) ),
 			'cacheLevel'              => intval( get_option( 'endurance_cache_level', 2 ) ),
 			'hasSetHomepage'          => (bool) get_option( 'bh_has_set_homepage', false ),
 			'showOnFront'             => (string) get_option( 'show_on_front' ),

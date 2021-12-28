@@ -49,3 +49,4 @@ require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/SettingsController.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/rest-api.php';
 // require HOSTGATOR_PLUGIN_DIR . '/inc/updates.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/coming-soon.php';
+require HOSTGATOR_PLUGIN_DIR . '/inc/settings.php';
