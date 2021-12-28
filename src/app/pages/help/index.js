@@ -25,7 +25,7 @@ const Help = () => {
 						</CardHeader>
 						<CardBody>{item.description}</CardBody>
 						<CardFooter>
-							<Button variant="primary" href={item.url} icon={<Dashicon icon={item.icon} />}> {item.cta} </Button>
+							<Button variant="primary" href={item.url} target="_blank" icon={<Dashicon icon={item.icon} />}> {item.cta} </Button>
 						</CardFooter>
 					</Card>
 				))}
