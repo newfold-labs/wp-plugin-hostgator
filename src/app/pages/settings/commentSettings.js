@@ -1,4 +1,4 @@
-import { __ } from '@wordpress/i18n';
+import { __, _n } from '@wordpress/i18n';
 import {
 	Card,
 	CardBody,
@@ -6,70 +6,113 @@ import {
 	CardDivider,
 	CardFooter,
 	ToggleControl,
-    SelectControl
+    SelectControl,
+    __experimentalHeading as Heading
 } from '@wordpress/components';
-import { __experimentalHeading as Heading } from '@wordpress/components';
-import AppStore from '../../data/store';
 import { useState } from '@wordpress/element';
-import { useEffect } from 'react';
-import apiFetch from '@wordpress/api-fetch';
+import { useUpdateEffect } from 'react-use';
+import AppStore from '../../data/store';
+import {
+	hostgatorApiFetch,
+	dispatchUpdateSnackbar
+} from './helpers';
 
 const CommentSettings = () => {
 	const { store, setStore } = useContext(AppStore);
-	const [ isDisableCommentsOldPosts, setDisableCommentsOldPosts ] = useState( store.disableCommentsOldPosts );
-	const [ numCloseCommentsDays, setNumCloseCommentsDays ] = useState( store.closeCommentsDays );
-	const [ numCommentsPerPage, setNumCommentsPerPage ] = useState( store.commentsPerPage );
+	const [ disableCommentsOldPosts, setDisableCommentsOldPosts ] = useState( store.disableCommentsOldPosts );
+	const [ closeCommentsDays, setNumCloseCommentsDays ] = useState( store.closeCommentsDays );
+	const [ commentsPerPage, setNumCommentsPerPage ] = useState( store.commentsPerPage );
+    const disableCommentsHelpText = () => {
+        return disableCommentsOldPosts ?
+            __( 'Comments on old posts are disabled.', 'hostgator-wordpress-plugin' ) :
+            __( 'Comments are allowed on old posts.', 'hostgator-wordpress-plugin' )
+    };
+    const disableCommentsNoticeText = () => {
+        return disableCommentsOldPosts ?
+            __( 'Old post comments disabled.', 'hostgator-wordpress-plugin' ) :
+            __( 'Old post comments enabled.', 'hostgator-wordpress-plugin' )
+    };
+    const closeCommentsLabelText = () => {
+        // `Close comments after ${closeCommentsDays} day(s)`
+        return <span>
+            { __( 'Close comments after ', 'hostgator-wordpress-plugin' ) } 
+            <strong>{ closeCommentsDays }</strong>
+            { _n( ' day', ' days', closeCommentsDays, 'hostgator-wordpress-plugin' ) }
+        </span>
+    };
+    const closeCommentsHelpText = () => {
+        //`Comments on posts are disabled after ${closeCommentsDays} days.`
+        return <span>
+            { __( 'Comments on posts are disabled after ', 'hostgator-wordpress-plugin' ) }
+            <strong>{ closeCommentsDays }</strong>
+            { _n( ' day', ' days', closeCommentsDays, 'hostgator-wordpress-plugin' ) }
+        </span>
+    };
+    const closeCommentsNoticeText = () => {
+        return __( 'Disabled comments on posts older than ', 'hostgator-wordpress-plugin' ) + closeCommentsDays + _n( ' day', ' days ', closeCommentsDays, 'hostgator-wordpress-plugin' );
+    };
+    const commentsPerPageLabelText = () => {
+        // `Display ${commentsPerPage} comment(s) per page`
+        return <span>
+            { __( 'Display ', 'hostgator-wordpress-plugin' ) } 
+            <strong>{ commentsPerPage }</strong>
+            { _n( ' comment per page', ' comments per page', commentsPerPage, 'hostgator-wordpress-plugin' ) }  
+        </span>
+    };
+    const commentsPerPageHelpText = () => {
+        //`Posts will display ${commentsPerPage} comments at a time.`
+        return <span>
+            { __( 'Posts will display ', 'hostgator-wordpress-plugin' ) }
+            <strong>{ commentsPerPage }</strong>
+            { _n( ' comment at a time', ' comments at a time', commentsPerPage, 'hostgator-wordpress-plugin' ) }
+        </span>
+    };
+    const commentsPerPageNoticeText = () => {
+        return __( 'Comments per page setting saved.', 'hostgator-wordpress-plugin' );
+    };
+	useUpdateEffect(() => {
+		hostgatorApiFetch( { disableCommentsOldPosts: disableCommentsOldPosts ? 'true' : 'false' } ).then( () => {
+            setStore({
+                ...store,
+                disableCommentsOldPosts,
+            });
+            dispatchUpdateSnackbar( disableCommentsNoticeText() );
+        });
+	}, [disableCommentsOldPosts]);
 
-	useEffect(() => {
-		setStore({
-			...store,
-			disableCommentsOldPosts: isDisableCommentsOldPosts,
-		});
-		//save setting to db
-		apiFetch( { path: 'hostgator/v1/settings', method: 'POST', data: {
-			disableCommentsOldPosts: isDisableCommentsOldPosts ? 'true' : 'false'
-		} } );
-	}, [isDisableCommentsOldPosts]);
+	useUpdateEffect(() => {
+		hostgatorApiFetch( { closeCommentsDays } ).then( () => {
+            setStore({
+                ...store,
+                closeCommentsDays,
+            });
+            dispatchUpdateSnackbar( closeCommentsNoticeText() );
+        });
+	}, [closeCommentsDays]);
 
-	useEffect(() => {
-		setStore({
-			...store,
-			closeCommentsDays: numCloseCommentsDays,
-		});
-		//save setting to db
-		apiFetch( { path: 'hostgator/v1/settings', method: 'POST', data: {
-			closeCommentsDays: numCloseCommentsDays
-		} } );
-	}, [numCloseCommentsDays]);
-
-	useEffect(() => {
-		setStore({
-			...store,
-			commentsPerPage: numCommentsPerPage,
-		});
-		//save setting to db
-		apiFetch( { path: 'hostgator/v1/settings', method: 'POST', data: {
-			commentsPerPage: numCommentsPerPage
-		} } );
-	}, [numCommentsPerPage]);
+	useUpdateEffect(() => {
+		hostgatorApiFetch( { commentsPerPage } ).then( () => {
+            setStore({
+                ...store,
+                commentsPerPage,
+            });
+            dispatchUpdateSnackbar( commentsPerPageNoticeText() );
+        });
+	}, [commentsPerPage]);
 
 	return (
         <Card>
             <CardHeader>
-                <Heading level="3">Comments</Heading>
+                <Heading level="3">{ __( 'Comments', 'hostgator-wordpress-plugin' ) }</Heading>
             </CardHeader>
             <CardBody>
-                Make blog post comments disabled on older posts and control how many to display.
+                { __( 'Make blog post comments disabled on older posts and control how many to display.', 'hostgator-wordpress-plugin' ) }
             </CardBody>
             <CardBody>
                 <ToggleControl
-                    checked={ isDisableCommentsOldPosts }
-                    label="Disable comments for older posts"
-                    help={
-                        isDisableCommentsOldPosts ?
-                            "Comments on old posts are disabled." :
-                            "Comments are allowed on old posts."
-                    }
+                    checked={ disableCommentsOldPosts }
+                    label={ __( 'Disable comments for older posts', 'hostgator-wordpress-plugin' ) }
+                    help={ disableCommentsHelpText() }
                     onChange={ () => {
                         setDisableCommentsOldPosts( ( value ) => !value );
                     } }
@@ -77,13 +120,13 @@ const CommentSettings = () => {
             </CardBody>
             <CardDivider />
             <CardBody
-                className={ isDisableCommentsOldPosts ? '' : 'disabled' }
+                className={ disableCommentsOldPosts ? '' : 'disabled' }
             >
                 <SelectControl
-                    disabled={ !isDisableCommentsOldPosts }
-                    label={`Close comments after ${numCloseCommentsDays} days`}
-                    value={ numCloseCommentsDays }
-                    help={`Comments on posts are disabled after ${numCloseCommentsDays} days.`}
+                    disabled={ !disableCommentsOldPosts }
+                    label={ closeCommentsLabelText() }
+                    value={ closeCommentsDays }
+                    help={ closeCommentsHelpText() }
                     options={ [
                         { label: '1', value: '1' },
                         { label: '3', value: '3' },
@@ -103,9 +146,9 @@ const CommentSettings = () => {
             <CardDivider />
             <CardBody>
                 <SelectControl
-                    label={`Display ${numCommentsPerPage} comments per page`}
-                    value={ numCommentsPerPage }
-                    help={`Posts will display ${numCommentsPerPage} comments at a time.`}
+                    label={ commentsPerPageLabelText() }
+                    value={ commentsPerPage }
+                    help={ commentsPerPageHelpText() }
                     options={ [
                         { label: '10', value: '10' },
                         { label: '15', value: '15' },

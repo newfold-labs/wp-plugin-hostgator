@@ -4,84 +4,86 @@ import {
 	CardBody,
 	CardHeader,
 	CardDivider,
-	CardFooter,
     TextControl,
 	ToggleControl,
+    __experimentalHeading as Heading
 } from '@wordpress/components';
-import { __experimentalHeading as Heading } from '@wordpress/components';
-import AppStore from '../../data/store';
 import { useState } from '@wordpress/element';
-import { useEffect } from 'react';
-import apiFetch from '@wordpress/api-fetch';
-import { dispatch } from '@wordpress/data';
+import { useUpdateEffect } from 'react-use';
+import AppStore from '../../data/store';
+import {
+	hostgatorApiFetch,
+	dispatchUpdateSnackbar
+} from './helpers';
 
 const ComingSoon = () => {
 	const { store, setStore } = useContext(AppStore);
-	const [ isComingSoon, setComingSoon ] = useState( store.comingSoon );
-	const [ isCustomComingSoon, setCustomComingSoon ] = useState( store.customComingSoon );
-	const [ comingSoonHeadline, setComingSoonHeadline ] = useState( store.comingSoonHeadline );
-	const [ comingSoonBody, setComingSoonBody ] = useState( store.comingSoonBody );
+	const [ comingSoon, setComingSoon ] = useState( store.comingSoon );
+	// const [ customComingSoon, setCustomComingSoon ] = useState( store.customComingSoon );
+	// const [ comingSoonHeadline, setComingSoonHeadline ] = useState( store.comingSoonHeadline );
+	// const [ comingSoonBody, setComingSoonBody ] = useState( store.comingSoonBody );
+
 	const getComingSoonNoticeText = () => {
-        return isComingSoon ? 'Coming soon activated.' : 'Coming soon deactivated.'
+        return comingSoon ?
+            __('Coming soon activated.', 'hostgator-wordpress-plugin') :
+            __('Coming soon deactivated.', 'hostgator-wordpress-plugin')
     };
     const getComingSoonHelpText = () => {
-        return isComingSoon ? 'Coming soon page is active and site is protected.' : 'Coming soon page is not active and site is acessible.'
+        return comingSoon ?
+            __('Coming soon page is active and site is protected.', 'hostgator-wordpress-plugin') :
+            __('Coming soon page is not active and site is acessible.', 'hostgator-wordpress-plugin')
+    };
+    const comingSoonAdminbarToggle = () => {
+        let comingsoonadminbar = document.getElementById('wp-admin-bar-hostgator-coming_soon');
+        if ( !comingsoonadminbar ) {
+            return;
+        }
+        if ( !comingSoon ) {
+            comingsoonadminbar.classList.add('hideme');
+        } else {
+            comingsoonadminbar.classList.remove('hideme');
+        }
     };
 
-	useEffect(() => {
-		apiFetch( { path: 'hostgator/v1/settings', method: 'POST', data: {
-			comingSoon: isComingSoon
-		} } ).then( () => {
+	useUpdateEffect(() => {
+		hostgatorApiFetch( { comingSoon } ).then( () => {
             setStore({
                 ...store,
-                comingSoon: isComingSoon,
+                comingSoon,
             });
-            dispatch('core/notices').createNotice(
-                'info',
-                getComingSoonNoticeText(),
-                {
-                  type: 'snackbar',
-                  isDismissible: true,
-                }
-            );
-            
-            if ( !isComingSoon ) {
-                document.getElementById('wp-admin-bar-hostgator-coming_soon').classList.add('hideme');
-            } else {
-                document.getElementById('wp-admin-bar-hostgator-coming_soon').classList.remove('hideme');
-            }
+            dispatchUpdateSnackbar( getComingSoonNoticeText() );
+            comingSoonAdminbarToggle();
         });
-	}, [isComingSoon]);
+	}, [comingSoon]);
     
 	return (
         <Card>
             <CardHeader>
-                <Heading level="3">Coming Soon</Heading>
+                <Heading level="3">{ __( 'Coming Soon', 'hostgator-wordpress-plugin' ) }</Heading>
             </CardHeader>
             <CardBody>
-                Not ready for your site to be live? Enable a "Coming Soon" page while you build your website for the public eye. This will disable all parts of your site and show visitors a "coming soon" landing page.
+            { __( 'Not ready for your site to be live? Enable a "Coming Soon" page while you build your website for the public eye. This will disable all parts of your site and show visitors a "coming soon" landing page.', 'hostgator-wordpress-plugin' ) }
             </CardBody>
             <CardDivider />
             <CardBody>
                 <ToggleControl
-                    label="Coming Soon"
-                    checked={ isComingSoon }
+                    label={ __( 'Coming Soon', 'hostgator-wordpress-plugin' ) }
+                    checked={ comingSoon }
                     help={ getComingSoonHelpText() }
                     onChange={ () => {
                         setComingSoon( ( value ) => ! value );
-                        setCustomComingSoon( () => false );
+                        // setCustomComingSoon( () => false );
                     } }
                 />
             </CardBody>
-
             				
-            {/* { isComingSoon && 
+            {/* { comingSoon && 
             <CardBody>
                 <ToggleControl
                     label="Custom Coming Soon Content"
-                    checked={ isCustomComingSoon }
+                    checked={ customComingSoon }
                     help={
-                        isCustomComingSoon
+                        customComingSoon
                             ? 'Coming soon has custom content (below).'
                             : 'Default coming soon content.'
                     }
@@ -91,7 +93,7 @@ const ComingSoon = () => {
                 />
             </CardBody> }
 
-            { isCustomComingSoon && 
+            { customComingSoon && 
             <CardBody>
                 <TextControl
                     placeholder={ __( 'A New WordPress Site', 'hostgator-wordpres-plugin' ) }
