@@ -37,7 +37,7 @@ const CommentSettings = () => {
         return <span>
             { __( 'Close comments after ', 'hostgator-wordpress-plugin' ) } 
             <strong>{ closeCommentsDays }</strong>
-            { _n( ' day', ' days', closeCommentsDays, 'hostgator-wordpress-plugin' ) }
+            { _n( ' day.', ' days.', closeCommentsDays, 'hostgator-wordpress-plugin' ) }
         </span>
     };
     const closeCommentsHelpText = () => {
@@ -45,18 +45,18 @@ const CommentSettings = () => {
         return <span>
             { __( 'Comments on posts are disabled after ', 'hostgator-wordpress-plugin' ) }
             <strong>{ closeCommentsDays }</strong>
-            { _n( ' day', ' days', closeCommentsDays, 'hostgator-wordpress-plugin' ) }
+            { _n( ' day.', ' days.', closeCommentsDays, 'hostgator-wordpress-plugin' ) }
         </span>
     };
     const closeCommentsNoticeText = () => {
-        return __( 'Disabled comments on posts older than ', 'hostgator-wordpress-plugin' ) + closeCommentsDays + _n( ' day', ' days ', closeCommentsDays, 'hostgator-wordpress-plugin' );
+        return __( 'Disabled comments on posts older than ', 'hostgator-wordpress-plugin' ) + closeCommentsDays + _n( ' day.', ' days.', closeCommentsDays, 'hostgator-wordpress-plugin' );
     };
     const commentsPerPageLabelText = () => {
         // `Display ${commentsPerPage} comment(s) per page`
         return <span>
             { __( 'Display ', 'hostgator-wordpress-plugin' ) } 
             <strong>{ commentsPerPage }</strong>
-            { _n( ' comment per page', ' comments per page', commentsPerPage, 'hostgator-wordpress-plugin' ) }  
+            { _n( ' comment per page.', ' comments per page.', commentsPerPage, 'hostgator-wordpress-plugin' ) }  
         </span>
     };
     const commentsPerPageHelpText = () => {
@@ -64,7 +64,7 @@ const CommentSettings = () => {
         return <span>
             { __( 'Posts will display ', 'hostgator-wordpress-plugin' ) }
             <strong>{ commentsPerPage }</strong>
-            { _n( ' comment at a time', ' comments at a time', commentsPerPage, 'hostgator-wordpress-plugin' ) }
+            { _n( ' comment at a time.', ' comments at a time.', commentsPerPage, 'hostgator-wordpress-plugin' ) }
         </span>
     };
     const commentsPerPageNoticeText = () => {

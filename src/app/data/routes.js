@@ -1,16 +1,18 @@
 import {
 	Icon,
 	settings,
-	lifesaver,
+	trendingUp,
+	help,
+	grid,
+	store,
 } from "@wordpress/icons";
 
 import { Route, HashRouter as Router, Routes } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
 import Home from '../pages/home';
-import Themes from '../pages/themes';
-import Plugins from '../pages/plugins';
-import Services from '../pages/services';
+import Marketplace from '../pages/marketplace';
 import Settings from '../pages/settings';
+import Performance from '../pages/performance';
 import Help from '../pages/help';
 
 export const AppRoutes = () => {
@@ -41,13 +43,13 @@ export const AppRoutes = () => {
 
 const topRoutePaths = [
 	"/home",
-	"/themes",
-	"/plugins",
-	"/services",
+	"/marketplace",
+	"/performance",
 	"/settings",
     "/help",
 ];
 const utilityRoutePaths = [
+	"/performance",
 	"/settings",
     "/help",
 ];
@@ -58,28 +60,21 @@ export const routes = [
 		title: __("Home", "hostgator-wordpress-plugin"),
 		description: __("Home", "hostgator-wordpress-plugin"),
 		Component: Home,
-		// Icon: HomeIcon,
+		Icon: grid,
 	},
 	{
-		name: "/themes",
-		title: __("Themes", "hostgator-wordpress-plugin"),
-		description: __("Themes", "hostgator-wordpress-plugin"),
-		Component: Themes,
-		// Icon: ColorsIcon,
+		name: "/marketplace",
+		title: __("Marketplace", "hostgator-wordpress-plugin"),
+		description: __("Marketplace", "hostgator-wordpress-plugin"),
+		Component: Marketplace,
+		Icon: store,
 	},
 	{
-		name: "/plugins",
-		title: __("Plugins", "hostgator-wordpress-plugin"),
-		description: __("plugins", "hostgator-wordpress-plugin"),
-		Component: Plugins,
-		// Icon: TypographyIcon,
-	},
-	{
-		name: "/services",
-		title: __("Services", "hostgator-wordpress-plugin"),
-		description: __("Services", "hostgator-wordpress-plugin"),
-		Component: Services,
-		// Icon: LayoutSpacingIcon,
+		name: "/performance",
+		title: __("Performance", "hostgator-wordpress-plugin"),
+		description: __("Performance", "hostgator-wordpress-plugin"),
+		Component: Performance,
+		Icon: trendingUp,
 	},
 	{
 		name: "/settings",
@@ -93,7 +88,7 @@ export const routes = [
 		title: __("Help", "hostgator-wordpress-plugin"),
 		description: __("Help", "hostgator-wordpress-plugin"),
 		Component: Help,
-		Icon: lifesaver,
+		Icon: help,
 	}
 ];
 

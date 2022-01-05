@@ -4,7 +4,6 @@ import AutomaticUpdates from './automaticUpdates';
 import ComingSoon from './comingSoon';
 import CommentSettings from './commentSettings';
 import ContentSettings from './contentSettings';
-import CacheSettings from './cacheSettings';
 
 const Settings = () => {
 
@@ -14,7 +13,6 @@ const Settings = () => {
 			<ComingSoon />
 			<CommentSettings />
 			<ContentSettings />
-			<CacheSettings />
 		</div>
 
 	);
