@@ -1,5 +1,7 @@
-import { __ } from '@wordpress/i18n';
+import './stylesheet.scss';
+
 import CacheSettings from './cacheSettings';
+import ClearCache from './clearCache';
 
 const Performance = () => {
 	
@@ -7,6 +9,7 @@ const Performance = () => {
 		<div className="hgwp-Performance grid col2">
 			
 			<CacheSettings />
+			<ClearCache />
 
 		</div>
 	);

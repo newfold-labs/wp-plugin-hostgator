@@ -1,4 +1,3 @@
-import { __ } from '@wordpress/i18n';
 import {
 	Card,
 	CardBody,
@@ -12,9 +11,9 @@ import { useState } from '@wordpress/element';
 import { useUpdateEffect } from 'react-use';
 import AppStore from '../../data/store';
 import {
-	hostgatorApiFetch,
+	hostgatorSettingsApiFetch,
 	dispatchUpdateSnackbar
-} from './helpers';
+} from '../../util/helpers';
 
 const ComingSoon = () => {
 	const { store, setStore } = useContext(AppStore);
@@ -46,7 +45,7 @@ const ComingSoon = () => {
     };
 
 	useUpdateEffect(() => {
-		hostgatorApiFetch( { comingSoon } ).then( () => {
+		hostgatorSettingsApiFetch( { comingSoon } ).then( () => {
             setStore({
                 ...store,
                 comingSoon,

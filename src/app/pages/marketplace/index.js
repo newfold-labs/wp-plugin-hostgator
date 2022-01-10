@@ -1,8 +1,5 @@
 import './stylesheet.scss';
-import { __ } from '@wordpress/i18n';
-import {
-    __experimentalDivider as Divider
-} from '@wordpress/components';
+import { __experimentalDivider as Divider } from '@wordpress/components';
 import Themes from './themes';
 import Plugins from './plugins';
 import Services from './services';

@@ -1,4 +1,3 @@
-import { __ } from '@wordpress/i18n';
 import {
 	Card,
 	CardBody,
@@ -11,9 +10,9 @@ import { useState } from '@wordpress/element';
 import { useUpdateEffect } from 'react-use';
 import AppStore from '../../data/store';
 import {
-	hostgatorApiFetch,
+	hostgatorSettingsApiFetch,
 	dispatchUpdateSnackbar
-} from './helpers';
+} from '../../util/helpers';
 
 const AutomaticUpdates = () => {
 	const { store, setStore } = useContext(AppStore);
@@ -53,7 +52,7 @@ const AutomaticUpdates = () => {
     };
 	
 	useUpdateEffect(() => {
-		hostgatorApiFetch( { autoUpdatesMajorCore } ).then( () => {
+		hostgatorSettingsApiFetch( { autoUpdatesMajorCore } ).then( () => {
 			setStore({
 				...store,
 				autoUpdatesMajorCore
@@ -63,7 +62,7 @@ const AutomaticUpdates = () => {
 	}, [autoUpdatesMajorCore]);
 
 	useUpdateEffect(() => {
-		hostgatorApiFetch( { autoUpdatesPlugins } ).then( () => {
+		hostgatorSettingsApiFetch( { autoUpdatesPlugins } ).then( () => {
 			setStore({
 				...store,
 				autoUpdatesPlugins
@@ -73,7 +72,7 @@ const AutomaticUpdates = () => {
 	}, [autoUpdatesPlugins]);
 
 	useUpdateEffect(() => {
-		hostgatorApiFetch( { autoUpdatesThemes } ).then( () => {
+		hostgatorSettingsApiFetch( { autoUpdatesThemes } ).then( () => {
 			setStore({
 				...store,
 				autoUpdatesThemes

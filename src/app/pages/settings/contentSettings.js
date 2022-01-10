@@ -1,4 +1,3 @@
-import { __ } from '@wordpress/i18n';
 import {
 	Card,
 	CardBody,
@@ -10,9 +9,9 @@ import { useState } from '@wordpress/element';
 import { useUpdateEffect } from 'react-use';
 import AppStore from '../../data/store';
 import {
-	hostgatorApiFetch,
+	hostgatorSettingsApiFetch,
 	dispatchUpdateSnackbar
-} from './helpers';
+} from '../../util/helpers';
 
 const ContentSettings = () => {
 	const { store, setStore } = useContext(AppStore);
@@ -59,7 +58,7 @@ const ContentSettings = () => {
 	};
 
 	useUpdateEffect(() => {
-		hostgatorApiFetch( { contentRevisions } ).then( () => {
+		hostgatorSettingsApiFetch( { contentRevisions } ).then( () => {
             setStore({
                 ...store,
                 contentRevisions,
@@ -70,7 +69,7 @@ const ContentSettings = () => {
 
 	useUpdateEffect(() => {
 		numTrashWeeks = Math.floor( emptyTrashDays / 7 );
-		hostgatorApiFetch( { emptyTrashDays } ).then( () => {
+		hostgatorSettingsApiFetch( { emptyTrashDays } ).then( () => {
             setStore({
                 ...store,
                 emptyTrashDays,

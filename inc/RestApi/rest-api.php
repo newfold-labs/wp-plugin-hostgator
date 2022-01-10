@@ -6,6 +6,7 @@
 function hostgator_init_rest_api() {
 
 	$controllers = array(
+		'HostGator\\RestApi\\CachingController',
 		'HostGator\\RestApi\\SettingsController',
 	);
 

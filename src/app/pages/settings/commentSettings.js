@@ -1,4 +1,4 @@
-import { __, _n } from '@wordpress/i18n';
+import { _n } from '@wordpress/i18n';
 import {
 	Card,
 	CardBody,
@@ -13,9 +13,9 @@ import { useState } from '@wordpress/element';
 import { useUpdateEffect } from 'react-use';
 import AppStore from '../../data/store';
 import {
-	hostgatorApiFetch,
+	hostgatorSettingsApiFetch,
 	dispatchUpdateSnackbar
-} from './helpers';
+} from '../../util/helpers';
 
 const CommentSettings = () => {
 	const { store, setStore } = useContext(AppStore);
@@ -71,7 +71,7 @@ const CommentSettings = () => {
         return __( 'Comments per page setting saved.', 'hostgator-wordpress-plugin' );
     };
 	useUpdateEffect(() => {
-		hostgatorApiFetch( { disableCommentsOldPosts: disableCommentsOldPosts ? 'true' : 'false' } ).then( () => {
+		hostgatorSettingsApiFetch( { disableCommentsOldPosts: disableCommentsOldPosts ? 'true' : 'false' } ).then( () => {
             setStore({
                 ...store,
                 disableCommentsOldPosts,
@@ -81,7 +81,7 @@ const CommentSettings = () => {
 	}, [disableCommentsOldPosts]);
 
 	useUpdateEffect(() => {
-		hostgatorApiFetch( { closeCommentsDays } ).then( () => {
+		hostgatorSettingsApiFetch( { closeCommentsDays } ).then( () => {
             setStore({
                 ...store,
                 closeCommentsDays,
@@ -91,7 +91,7 @@ const CommentSettings = () => {
 	}, [closeCommentsDays]);
 
 	useUpdateEffect(() => {
-		hostgatorApiFetch( { commentsPerPage } ).then( () => {
+		hostgatorSettingsApiFetch( { commentsPerPage } ).then( () => {
             setStore({
                 ...store,
                 commentsPerPage,

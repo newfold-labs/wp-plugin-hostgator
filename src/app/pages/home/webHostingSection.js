@@ -1,4 +1,3 @@
-import { __ } from '@wordpress/i18n';
 import {
 	Button,
 	Card,
@@ -6,9 +5,9 @@ import {
 	CardHeader,
 	CardMedia,
 	CardFooter,
-	Dashicon
+	Dashicon,
+    __experimentalHeading as Heading
 } from '@wordpress/components';
-import { __experimentalHeading as Heading } from '@wordpress/components';
 
 const WebHostingSection = () => {
 	

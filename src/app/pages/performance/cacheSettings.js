@@ -1,61 +1,96 @@
-import { __ } from '@wordpress/i18n';
 import {
-    Button,
 	Card,
 	CardBody,
 	CardHeader,
-	CardDivider,
-	CardFooter,
-	ToggleControl,
+    RadioControl,
+    __experimentalHeading as Heading
 } from '@wordpress/components';
-import { __experimentalHeading as Heading } from '@wordpress/components';
-import AppStore from '../../data/store';
 import { useState } from '@wordpress/element';
-import { useEffect } from 'react';
-import apiFetch from '@wordpress/api-fetch';
+import { useUpdateEffect } from 'react-use';
+import AppStore from '../../data/store';
+import {
+	hostgatorSettingsApiFetch,
+	dispatchUpdateSnackbar
+} from '../../util/helpers';
 
 const CacheSettings = () => {
 	const { store, setStore } = useContext(AppStore);
-	// const [ isDisableCommentsOldPosts, setDisableCommentsOldPosts ] = useState( store.disableCommentsOldPosts );
-	// const [ isCloseCommentsDays, setCloseCommentsDays ] = useState( store.closeCommentsDays );
-	// const [ isCommentsPerPage, setCommentsPerPage ] = useState( store.commentsPerPage );
+	const [ cacheLevel, setCacheLevel ] = useState( store.cacheLevel );
 
-	// useEffect(() => {
-	// 	setStore({
-	// 		...store,
-	// 		disableCommentsOldPosts: isDisableCommentsOldPosts,
-	// 	});
-	// 	//save setting to db
-	// 	apiFetch( { path: 'hostgator/v1/settings', method: 'POST', data: {
-	// 		disableCommentsOldPosts: isDisableCommentsOldPosts ? 'true' : 'false'
-	// 	} } );
-	// }, [isDisableCommentsOldPosts]);
+    const cacheOptions = [
+        { 
+            label: <span>
+                <strong>{__( 'Disabled', 'hostgator-wordpress-plugin' )}</strong>
+                <span>{__( 'No cache enabled.', 'hostgator-wordpress-plugin' )}</span>
+                <em>{__('Not recommended.', 'hostgator-wordpress-plugin' )}</em>
+                </span>, 
+            value: 0, 
+            notice: 'Caching disabled.'
+        },
+        { 
+            label: <span>
+                <strong>{__( 'Assets Only', 'hostgator-wordpress-plugin' )}</strong>
+                <span>{__( 'Cache static assets like images and the appearance of your site for 1 hour.', 'hostgator-wordpress-plugin' )}</span>
+                <em>{__( 'Recommended for ecommerce and sites that update frequently or display info in real-time.', 'hostgator-wordpress-plugin' )}</em>
+                </span>, 
+            value: 1, 
+            notice: 'Cache enabled for assets only.'
+        },
+        { 
+            label: <span>
+                <strong>{__( 'Assets & Web Pages', 'hostgator-wordpress-plugin' )}</strong>
+                <span>{__( 'Cache static assets for 24 hours and web pages for 2 hours.', 'hostgator-wordpress-plugin' )}</span>
+                <em>{__( 'Recommended for blogs, educational sites, and sites that update at least weekly.', 'hostgator-wordpress-plugin' )}</em>
+            </span>, 
+            value: 2, 
+            notice: 'Cache enabled for assets and pages.'
+        },
+        { 
+            label: <span>
+                <strong>{__( 'Assets & Web Pages - Extended', 'hostgator-wordpress-plugin' )}</strong>
+                <span>{__( 'Cache static assets for 1 week and web pages for 8 hours.', 'hostgator-wordpress-plugin' )}</span>
+                <em>{__( 'Recommended for portfolios, brochure sites, and sites that update monthly or less often.', 'hostgator-wordpress-plugin' )}</em>
+            </span>, 
+            value: 3, 
+            notice: 'Cache enabled for assets and pages (extended).'
+        },
+    ];
+
+    const getCacheLevelNoticeText = () => {
+        return cacheOptions[cacheLevel].notice;
+    };
+    const getCacheHelpText = () => {
+        return __('Select a cache level', 'hostgator-wordpress-plugin');
+    };
+
+    useUpdateEffect(() => {
+		hostgatorSettingsApiFetch( { cacheLevel } ).then( () => {
+            setStore({
+                ...store,
+                cacheLevel,
+            });
+            dispatchUpdateSnackbar( getCacheLevelNoticeText() );
+        });
+	}, [cacheLevel]);
 
 	return (
         <Card>
             <CardHeader>
-                <Heading level="3">Performance and Cache</Heading>
+                <Heading level="3">{ __('Cache Level', 'hostgat0r-wordpress-plugin') }</Heading>
             </CardHeader>
             <CardBody>
-                Cache options to speed up your site.
+                { __('Boost speed and performance by storing a copy of your website content, files, and images online so the pages of your website load faster for your visitors.', 'hostgator-wordpress-plugin')}
             </CardBody>
             <CardBody>
-                <strong>Caching</strong>
+                <RadioControl
+                    selected={ cacheLevel }
+                    options={ cacheOptions }
+                    onChange={ ( value ) => setCacheLevel( parseInt(value) ) }
+                />
             </CardBody>
-            <CardBody>
-                <strong>Cache Level</strong>
-            </CardBody>
-            <CardFooter>
-                <strong>Clear Cache</strong>
-                <Button
-                    variant="primary"
-                    disabled
-                >
-                    Clear Cache
-                </Button>
-            </CardFooter>
         </Card>
     );
 };
+
 
 export default CacheSettings;

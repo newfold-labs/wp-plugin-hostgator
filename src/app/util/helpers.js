@@ -25,16 +25,32 @@ export const dispatchUpdateSnackbar = ( text = 'Settings Saved' ) => {
     });
     
 };
+
 /**
  * Wrapper method to post setting to hostgator endpoint
  * @param {*} data object of data
  * @returns 
  */
-export const hostgatorApiFetch = ( data ) => { 
+export const hostgatorSettingsApiFetch = ( data ) => { 
     return apiFetch( 
         {
             path: 'hostgator/v1/settings', 
             method: 'POST', 
+            data
+        } 
+    );
+};
+
+/**
+ * Wrapper method to post request to hostgator cache endpoint
+ * @param {*} data object of data
+ * @returns 
+ */
+ export const hostgatorPurgeCacheApiFetch = ( data ) => { 
+    return apiFetch( 
+        {
+            path: 'hostgator/v1/caching', 
+            method: 'DELETE', 
             data
         } 
     );
