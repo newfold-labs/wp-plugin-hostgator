@@ -1,0 +1,14 @@
+.card-help {
+    text-align: center;
+
+    svg {
+        width: 100px;
+        height: 100px;
+    }
+
+    .components-card-header,
+    .components-card-footer {
+        flex-direction: column;
+        justify-content: end;
+    }
+}

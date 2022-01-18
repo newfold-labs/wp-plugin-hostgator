@@ -7,7 +7,7 @@ const Themes = () => {
 	return (
         <>
         <Heading>Themes</Heading>
-        <div className="hgwp-themes grid col2">
+        <div className="hgwp-themes grid col3">
 			{themes.map((item) => (
                 <MarketplaceItem item={item} />
             ))}

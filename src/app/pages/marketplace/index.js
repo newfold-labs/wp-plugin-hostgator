@@ -10,9 +10,9 @@ const Marketplace = () => {
 		<div className="hgwp-marketplace">
 			<Services />
 			<Divider />
-			<Themes />
-			<Divider />
 			<Plugins />
+			<Divider />
+			<Themes />
 		</div>
 	);
 };

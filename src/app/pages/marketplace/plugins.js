@@ -8,7 +8,7 @@ const Plugins = () => {
 	return (
         <>
         <Heading>Plugins</Heading>
-        <div className="hgwp-plugins grid col2">
+        <div className="hgwp-plugins grid col3">
 			{plugins.map((item) => (
                 <MarketplaceItem item={item} />
             ))}

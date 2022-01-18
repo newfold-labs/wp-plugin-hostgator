@@ -16,14 +16,17 @@ const Help = () => {
 	
 	return (
 		<div className="hgwp-help">
-			<div className="help grid col2">
+			<div className="help grid col3">
 
 				{help.map((item) => (
-					<Card size="small">
+					<Card size="small" className="card-help">
 						<CardHeader>
-							<Heading level="3">{item.title}</Heading> {item.icon &&<Dashicon icon={item.icon} size={20} />}
+							<Heading level="3">{item.title}</Heading> 
 						</CardHeader>
-						<CardBody>{item.description}</CardBody>
+						<CardBody>
+							{<item.Svg />}
+							<p>{item.description}</p>
+						</CardBody>
 						<CardFooter>
 							<Button variant="primary" href={item.url} target="_blank" icon={<Dashicon icon={item.icon} />}> {item.cta} </Button>
 						</CardFooter>

@@ -1,4 +1,4 @@
-import { ReactComponent as Graphic } from '../../../../assets/svg/hg-build-website.svg';
+import { ReactComponent as Graphic } from '../../../../assets/svg/a-illustration__gator-scales-image-3_-notext.svg';
 import {
 	Button,
 	Card,

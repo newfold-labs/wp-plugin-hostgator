@@ -1,3 +1,5 @@
+import { ReactComponent as Graphic } from '../../../../assets/svg/snappy-holding-site-left.svg';
+
 import {
 	Button,
 	Card,
@@ -30,7 +32,8 @@ const ComingSoonSection = () => {
 	}, [isComingSoon]);
 	
 	return (
-        <section className="hgwp-section">
+        <section className="hgwp-section coming-soon">
+            <Graphic className="hgwp-section-graphic" />
             { isComingSoon && 
                 <Card size="large" className="hgwp-section-card">
                     <CardHeader>

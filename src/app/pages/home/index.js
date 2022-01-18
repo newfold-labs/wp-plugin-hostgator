@@ -2,6 +2,7 @@ import './stylesheet.scss';
 import ComingSoonSection from './comingSoonSection';
 import WebContentSection from './webContentSection';
 import WebHostingSection from './webHostingSection';
+import SettingsSection from './settingsSection';
 
 const Home = () => {
 	
@@ -9,6 +10,7 @@ const Home = () => {
 		<div className="hgwp-home ">
 			<ComingSoonSection />
 			<WebContentSection />
+			<SettingsSection />
 			<WebHostingSection />
 		</div>
 	);

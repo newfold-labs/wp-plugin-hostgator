@@ -1,6 +1,15 @@
 .hgwp-section {
     margin: 0 0 2rem;
     position: relative;
+
+    &.coming-soon {
+        margin-bottom: 10rem;
+
+        .hgwp-section-graphic {
+            top: -3rem;
+            right: -6rem; 
+        }
+    }
 }
 
 .hgwp-section-graphic {

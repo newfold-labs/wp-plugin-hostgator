@@ -23,6 +23,7 @@ final class Data {
 			'url'     => HOSTGATOR_BUILD_URL,
 			'version' => HOSTGATOR_PLUGIN_VERSION,
 			'admin'   => \admin_url(),
+			'assets'  => HOSTGATOR_PLUGIN_URL . 'assets/',
 			// 'uid'     => uid(),
 		);
 

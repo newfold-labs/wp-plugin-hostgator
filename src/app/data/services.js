@@ -6,7 +6,7 @@ const services = [
         price: "2.99/month",
 		cta: __("Learn More", "hostgator-wordpress-plugin"),
 		url: "https://www.hostgator.com/codeguard",
-        // img: "https://static.hostgator.com//img/app-logos/codeguard.svg",
+        img: HGWP.assets + "images/accord-codeguard.png",
 	},
 	{
 		name: "seo",
@@ -19,7 +19,7 @@ const services = [
         </ul></>,
 		cta: __("Get a FREE SEO Review", "hostgator-wordpress-plugin"),
 		url: "https://www.hostgator.com/services/seo",
-        // img: "https://static.hostgator.com//img/app-logos/seo-tools.svg",
+        img: HGWP.assets + "images/accord-seo.png",
 	},
     {
         name: "ppc",
@@ -32,6 +32,7 @@ const services = [
         </ul></>,
         cta: __("Get More Leads", "hostgator-wordpress-plugin"),
         url: "https://www.hostgator.com/services/ppc",
+        img: HGWP.assets + "images/accord-sitelock.png",
     },
     {
         name: "webdesign",
@@ -44,6 +45,7 @@ const services = [
         </ul></>,
         cta: __("Custom Design Your Website", "hostgator-wordpress-plugin"),
         url: "https://www.hostgator.com/services/web-design",
+        img: HGWP.assets + "images/accord-ssl.png",
     },
 ];
 

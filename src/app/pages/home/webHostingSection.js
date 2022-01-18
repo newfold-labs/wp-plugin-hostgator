@@ -1,3 +1,4 @@
+import { ReactComponent as Graphic } from '../../../../assets/svg/a-illustration__testenvironment.svg';
 import {
 	Button,
 	Card,
@@ -13,7 +14,7 @@ const WebHostingSection = () => {
 	
 	return (
         <section className="hgwp-section">
-            <img src="https://static.hostgator.com//img/My-Site.svg" className="hgwp-section-graphic" />
+            <Graphic className="hgwp-section-graphic" />
             <Card size="large" className="hgwp-section-card">
                 <CardHeader>
                     <Heading level="2">Web Hosting</Heading>
