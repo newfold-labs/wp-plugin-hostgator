@@ -8,3 +8,42 @@
     }
     
 }
+
+.hgwp-marketplace-tabs {
+    display: flex;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: var(--hgwp-color-primary);
+
+    .components-tab-panel__tabs {
+        min-width: 10rem;
+        margin-right: 2rem;
+        margin-top: -1px;
+    }
+    
+    .components-tab-panel__tabs-item {
+        background-color: var(--hgwp-color-gray-30);
+        border-width: 0 1px 0 0;
+        border-style: solid;
+        border-color: var(--hgwp-color-primary);
+
+        &:focus:not(:disabled) {
+            box-shadow: none;
+        }
+
+        &:hover {
+            color: var(--hgwp-color-primary);
+        }
+
+        &.current-tab {
+            background-color: transparent;
+            color: var(--hgwp-color-primary);
+            // font-weight: bold;
+            border-width: 1px 0;
+        }
+    }
+
+    .components-tab-panel__tab-content {
+        padding-top: 1rem;
+    }
+}

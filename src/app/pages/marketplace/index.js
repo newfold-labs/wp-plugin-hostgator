@@ -1,5 +1,5 @@
 import './stylesheet.scss';
-import { __experimentalDivider as Divider } from '@wordpress/components';
+import { TabPanel } from '@wordpress/components';
 import Themes from './themes';
 import Plugins from './plugins';
 import Services from './services';
@@ -8,11 +8,37 @@ const Marketplace = () => {
 	
 	return (
 		<div className="hgwp-marketplace">
-			<Plugins />
-			<Divider />
-			<Services />
-			<Divider />
-			<Themes />
+			<TabPanel
+				className="hgwp-marketplace-tabs"
+				activeClass="current-tab"
+				orientation="vertical"
+				onSelect={ ( tabName ) => {
+					console.log( 'Selecting tab', tabName );
+				} }
+				tabs={ [
+					{
+						name: 'plugins',
+						className: 'plugins',
+						title: 'Plugins',
+						Component: Plugins,
+					},
+					{
+						name: 'services',
+						className: 'services',
+						title: 'Services',
+						Component: Services,
+					},
+					{
+						name: 'themes',
+						className: 'themes',
+						title: 'Themes',
+						Component: Themes,
+					},
+
+				] }
+			>
+				{ ( tab ) => <tab.Component /> }
+			</TabPanel>
 		</div>
 	);
 };

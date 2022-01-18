@@ -6,14 +6,11 @@ import services from '../../data/services';
 const Services = () => {
 
 	return (
-        <>
-        <Heading level="2">Services</Heading>
-        <div className="hgwp-services grid col3">
+        <div className="hgwp-services grid col2">
 			{services.map((item) => (
                 <MarketplaceItem item={item} />
             ))}
         </div>
-        </>
     );
 };
 
