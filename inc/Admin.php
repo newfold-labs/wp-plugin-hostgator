@@ -22,6 +22,15 @@ final class Admin {
 		\add_action( 'load-toplevel_page_hostgator', array( __CLASS__, 'assets' ) );
 		/* Add Links to WordPress Plugins list item. */
 		\add_filter( 'plugin_action_links_hostgator-wordpress-plugin/hostgator-wordpress-plugin.php', array( __CLASS__, 'actions' ) );
+		/* Add inline style to hide subnav link */
+		\add_action( 'admin_head', array( __CLASS__, 'admin_nav_style' ) );
+	}
+
+	/**
+	 * Add inline script to admin screens to hide extra link in subnav
+	 */
+	public static function admin_nav_style() {
+		echo "<style>li#toplevel_page_hostgator > ul > li.wp-first-item { display: none !important;}</style>";
 	}
 
 	/**
@@ -41,6 +50,52 @@ final class Admin {
             $snappy,
             3
         );
+
+		\add_submenu_page(
+            'hostgator',
+			__('Home', 'hostgator-wordpress-plugin' ),
+			__('Home', 'hostgator-wordpress-plugin' ),
+            'manage_options',
+			'hostgator#/home',
+			array( __CLASS__, 'render' ),
+		);
+
+		\add_submenu_page(
+            'hostgator',
+			__('Marketplace', 'hostgator-wordpress-plugin' ),
+			__('Marketplace', 'hostgator-wordpress-plugin' ),
+            'manage_options',
+			'hostgator#/marketplace',
+			array( __CLASS__, 'render' ),
+		);
+
+		\add_submenu_page(
+            'hostgator',
+			__('Performance', 'hostgator-wordpress-plugin' ),
+			__('Performance', 'hostgator-wordpress-plugin' ),
+            'manage_options',
+			'hostgator#/performance',
+			array( __CLASS__, 'render' ),
+		);
+
+		\add_submenu_page(
+            'hostgator',
+			__('Settings', 'hostgator-wordpress-plugin' ),
+			__('Settings', 'hostgator-wordpress-plugin' ),
+            'manage_options',
+			'hostgator#/settings',
+			array( __CLASS__, 'render' ),
+		);
+
+		\add_submenu_page(
+            'hostgator',
+			__('Help', 'hostgator-wordpress-plugin' ),
+			__('Help', 'hostgator-wordpress-plugin' ),
+            'manage_options',
+			'hostgator#/help',
+			array( __CLASS__, 'render' ),
+		);
+
 	}
 
 	/**

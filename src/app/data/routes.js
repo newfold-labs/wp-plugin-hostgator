@@ -7,7 +7,7 @@ import {
 	store,
 } from "@wordpress/icons";
 
-import { Route, HashRouter as Router, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
 import Home from '../pages/home';
 import Marketplace from '../pages/marketplace';

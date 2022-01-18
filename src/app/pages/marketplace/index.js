@@ -8,9 +8,9 @@ const Marketplace = () => {
 	
 	return (
 		<div className="hgwp-marketplace">
-			<Services />
-			<Divider />
 			<Plugins />
+			<Divider />
+			<Services />
 			<Divider />
 			<Themes />
 		</div>

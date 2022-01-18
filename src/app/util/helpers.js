@@ -2,6 +2,29 @@ import { dispatch } from '@wordpress/data';
 import apiFetch from '@wordpress/api-fetch';
 
 let lastNoticeId;
+const HG_nav_sel = '#toplevel_page_hostgator .wp-submenu';
+const HG_NAV = document.querySelector(HG_nav_sel);
+
+/**
+ * Set active nav in wp admin sub pages.
+ */
+ export const setActiveSubnav = ( path ) => {
+    var lis = HG_NAV.children;
+    for(var i=0; i<lis.length; i++){
+        // get all children li elements
+        var link = lis[i].children[0];
+        if (link) {
+            let href = link.getAttribute('href')
+            // check each child a href for match with path
+            if ( href.endsWith( path ) ) {
+                // update li class when match
+                lis[i].classList.add('current');
+            } else {
+                lis[i].classList.remove('current');
+            }
+        }
+    }
+};
 
 /**
  * Wrapper method to dispatch snackbar notice

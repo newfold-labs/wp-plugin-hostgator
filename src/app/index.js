@@ -2,7 +2,7 @@ import './stylesheet.scss';
 
 import AppStore, { AppStoreProvider } from './data/store';
 import { useMediaQuery } from '@wordpress/compose';
-import { Route, HashRouter as Router, Routes } from 'react-router-dom';
+import { useLocation, HashRouter as Router } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
 import { 
 	SnackbarList, 
@@ -16,7 +16,9 @@ import {
     useDispatch,
     useSelect,
 } from '@wordpress/data';
+import { useEffect } from 'react';
 import { store as noticesStore } from '@wordpress/notices';
+import { setActiveSubnav } from './util/helpers';
 
 const Notices = () => {
     const notices = useSelect(
@@ -36,8 +38,16 @@ const Notices = () => {
     );
 };
 
+const handlePageLoad = () => {
+	let location = useLocation();
+	useEffect(() => {
+		setActiveSubnav( location.pathname );
+	}, [location]);
+};
+
 const AppBody = ( props ) => {
 	const { booted } = useContext(AppStore);
+	handlePageLoad();
 	// const isLargeViewport = useMediaQuery('(min-width: >= 1020px)');
 
 	return (

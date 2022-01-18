@@ -7,7 +7,7 @@ const Services = () => {
 
 	return (
         <>
-        <Heading>Services</Heading>
+        <Heading level="2">Services</Heading>
         <div className="hgwp-services grid col3">
 			{services.map((item) => (
                 <MarketplaceItem item={item} />
