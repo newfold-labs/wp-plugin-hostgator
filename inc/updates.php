@@ -4,7 +4,7 @@
  *
  * By default, all auto-updates are enabled (including major releases).
  *
- * @package bluehost-wordpress-plugin
+ * @package hostgator-wordpress-plugin
  */
 
 /**
@@ -110,8 +110,8 @@ function bh_plugin_auto_update_setting_html( $html ) {
 		'<span class="label">Auto-updates enabled</span>',
 		sprintf(
 		/* translators: %s Settings > General page URL. */
-			__( 'Auto-updates enabled on the <a href="%s">Bluehost > Settings</a> page.', 'bluehost-wordpress-plugin' ),
-			admin_url( 'admin.php?page=bluehost#/settings' )
+			__( 'Auto-updates enabled on the <a href="%s">HostGator > Settings</a> page.', 'hostgator-wordpress-plugin' ),
+			admin_url( 'admin.php?page=hostgator#/settings' )
 		),
 		$html
 	);
@@ -138,8 +138,8 @@ function bh_theme_auto_update_setting_html( $html ) {
 
 	return sprintf(
 	/* translators: %s Settings > General page URL. */
-		__( 'Auto-updates enabled on the <a href="%s">Bluehost > Settings</a> page.', 'bluehost-wordpress-plugin' ),
-		admin_url( 'admin.php?page=bluehost#/settings' )
+		__( 'Auto-updates enabled on the <a href="%s">HostGator > Settings</a> page.', 'hostgator-wordpress-plugin' ),
+		admin_url( 'admin.php?page=hostgator#/settings' )
 	);
 }
 
@@ -161,12 +161,12 @@ function bh_theme_auto_update_setting_template( $template ) {
 	}
 
 	$template_string = '<# } else if ( data.autoupdate.forced ) { #>
-					' . __( 'Auto-updates enabled', 'bluehost-wordpress-plugin' );
+					' . __( 'Auto-updates enabled', 'hostgator-wordpress-plugin' );
 	$replacement     = '<# } else if ( data.autoupdate.forced ) { #>';
 	$replacement    .= sprintf(
 	/* translators: %s Settings > General page URL. */
-		__( 'Auto-updates enabled on the <a href="%s">Bluehost > Settings</a> page.', 'bluehost-wordpress-plugin' ),
-		admin_url( 'admin.php?page=bluehost#/settings' )
+		__( 'Auto-updates enabled on the <a href="%s">HostGator > Settings</a> page.', 'hostgator-wordpress-plugin' ),
+		admin_url( 'admin.php?page=hostgator#/settings' )
 	);
 
 	return str_replace( $template_string, $replacement, $template );

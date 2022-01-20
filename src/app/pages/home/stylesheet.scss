@@ -17,7 +17,12 @@
     position: absolute;
     right: 1rem;
     top: 2rem;
+    transition: all .5s ease;
     z-index: 0;
+
+    &.reverse {
+        transform: rotateY(180deg);
+    }
 }
 
 .hgwp-section-card {

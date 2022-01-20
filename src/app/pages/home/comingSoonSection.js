@@ -19,6 +19,41 @@ const ComingSoonSection = () => {
     const { store, setStore } = useContext(AppStore);
 	const [ isComingSoon, setComingSoon ] = useState( store.comingSoon );
 	const [ wasComingSoon, setWasComingSoon ] = useState( false );
+    
+    const getComingSoonHeadline = () => {
+        return isComingSoon ?
+            __('Coming Soon', 'hostgator-wordpress-plugin') :
+            __('Site Launched!', 'hostgator-wordpress-plugin')
+    };
+    const getComingSoonBody = () => {
+        return isComingSoon ?
+            __('Your site currently displays a coming soon page to visitors. Once you have finished setting up your site, be sure to launch it so your visitors can reach it.', 'hostgator-wordpress-plugin') :
+            __('Congratulations! You just successfully launched your site! Visitors will now see the site, you can easily undo this and restore the coming soon page if you are not ready.', 'hostgator-wordpress-plugin')
+    };
+    const getComingSoonGraphicClass = () => {
+        return isComingSoon ?
+            'hgwp-section-graphic' :
+            'hgwp-section-graphic reverse'
+    };
+    const getComingSoonButton = () => {
+        return isComingSoon ? 
+            <Button 
+                variant="primary"
+                icon="yes-alt"
+                onClick={ () => {
+                    setComingSoon( () => false );
+                    setWasComingSoon( () => true );
+                } }
+            >Launch Site</Button> :
+            <Button 
+                variant="secondary"
+                icon="no-alt"
+                onClick={ () => {
+                    setComingSoon( () => true );
+                    setWasComingSoon( () => true );
+                } }
+            >Undo Launch</Button>;
+    }
 
     useEffect(() => {
 		setStore({
@@ -32,52 +67,23 @@ const ComingSoonSection = () => {
 	}, [isComingSoon]);
 	
 	return (
-        <section className="hgwp-section coming-soon">
-            <Graphic className="hgwp-section-graphic" />
-            { isComingSoon && 
+        <>
+        { ( isComingSoon || ( !isComingSoon && wasComingSoon ) ) && 
+            <section className="hgwp-section coming-soon">
+                <Graphic className={ getComingSoonGraphicClass() } />
                 <Card size="large" className="hgwp-section-card">
                     <CardHeader>
-                        <Heading level="2">Coming Soon</Heading>
+                        <Heading level="2">{ getComingSoonHeadline() }</Heading>
                     </CardHeader>
-                    <CardBody>
-                        <p>Your site currently has a coming soon page. Once you have finished setting up your site, be sure to launch so your visitors can reach the site.</p>
-                    </CardBody>
+                    <CardBody>{ getComingSoonBody() }</CardBody>
                     <CardFooter>
                         <div className="hgwp-cardlist-content" />
-                        <Button 
-                            variant="primary"
-                            icon="yes-alt"
-                            onClick={ () => {
-                                setComingSoon( () => false );
-                                setWasComingSoon( () => true );
-                            } }
-                        >Launch Site</Button>
+                        { getComingSoonButton() }
                     </CardFooter>
                 </Card>
-            }
-            {
-                !isComingSoon && wasComingSoon &&
-                <Card size="large" className="hgwp-section-card">
-                    <CardHeader>
-                        <Heading level="2">Site Launched!</Heading>
-                    </CardHeader>
-                    <CardBody>
-                        <p>Your just successfully launched your site! Congratulations!</p>
-                    </CardBody>
-                    <CardFooter>
-                        <div className="hgwp-cardlist-content" />
-                        <Button 
-                            variant="secondary"
-                            icon="no-alt"
-                            onClick={ () => {
-                                setComingSoon( () => true );
-                                setWasComingSoon( () => true );
-                            } }
-                        >Undo Launch</Button>
-                    </CardFooter>
-                </Card>
-            }
-        </section>
+            </section>
+        }
+        </>
     );
 };
 
