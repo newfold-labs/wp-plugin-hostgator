@@ -9,18 +9,27 @@ const HG_NAV = document.querySelector(HG_nav_sel);
  * Set active nav in wp admin sub pages.
  */
  export const setActiveSubnav = ( path ) => {
+    console.log('path = ', path);
     var lis = HG_NAV.children;
-    for(var i=0; i<lis.length; i++){
+    for( var i = 0; i < lis.length; i++ ){
         // get all children li elements
         var link = lis[i].children[0];
         if (link) {
             let href = link.getAttribute('href')
             // check each child a href for match with path
-            if ( href.endsWith( path ) ) {
+            if ( href.endsWith( path ) || // match
+                path === '/' && href.endsWith('home') ) { // highlight home subnav for root page
                 // update li class when match
                 lis[i].classList.add('current');
             } else {
                 lis[i].classList.remove('current');
+            }
+            // highlight our home nav for root level access
+            if ( path === '/' && href.endsWith('home') ) {
+                let homenavlink = document.querySelector('.hgwp-nav a[href="#/home"]');
+                if( homenavlink ) {
+                    homenavlink.classList.add('active');
+                }
             }
         }
     }
