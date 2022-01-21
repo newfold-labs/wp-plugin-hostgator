@@ -54,7 +54,6 @@ export const AppStoreProvider = ({ children }) => {
 					url: window.HGWP.url,
                     admin: window.HGWP.admin,
 					migrated: true,
-                    // comingSoon: settings.comingSoon,
 				};
 				setBooted(true);
 			});

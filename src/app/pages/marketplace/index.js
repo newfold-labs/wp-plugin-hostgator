@@ -12,9 +12,6 @@ const Marketplace = () => {
 				className="hgwp-marketplace-tabs"
 				activeClass="current-tab"
 				orientation="vertical"
-				onSelect={ ( tabName ) => {
-					console.log( 'Selecting tab', tabName );
-				} }
 				tabs={ [
 					{
 						name: 'plugins',

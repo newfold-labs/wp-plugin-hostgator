@@ -1,13 +1,10 @@
 import { ReactComponent as Graphic } from '../../../../assets/svg/snappy-holding-site-left.svg';
-
 import {
 	Button,
 	Card,
 	CardBody,
 	CardHeader,
-	CardMedia,
 	CardFooter,
-	Dashicon,
     __experimentalHeading as Heading
 } from '@wordpress/components';
 import AppStore from '../../data/store';
@@ -44,7 +41,7 @@ const ComingSoonSection = () => {
                     setComingSoon( () => false );
                     setWasComingSoon( () => true );
                 } }
-            >Launch Site</Button> :
+            >{__('Launch Site', 'hostgator-wordpress-plugin')}</Button> :
             <Button 
                 variant="secondary"
                 icon="no-alt"
@@ -52,7 +49,7 @@ const ComingSoonSection = () => {
                     setComingSoon( () => true );
                     setWasComingSoon( () => true );
                 } }
-            >Undo Launch</Button>;
+            >{__('Undo Launch', 'hostgator-wordpress-plugin')}</Button>;
     }
 
     useEffect(() => {

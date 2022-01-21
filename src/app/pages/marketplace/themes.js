@@ -1,4 +1,3 @@
-import { __experimentalHeading as Heading } from '@wordpress/components';
 import MarketplaceItem from '../../components/marketplaceItem';
 import themes from '../../data/themes';
 

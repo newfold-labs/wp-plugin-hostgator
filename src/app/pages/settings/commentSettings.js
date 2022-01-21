@@ -4,7 +4,6 @@ import {
 	CardBody,
 	CardHeader,
 	CardDivider,
-	CardFooter,
 	ToggleControl,
     SelectControl,
     __experimentalHeading as Heading

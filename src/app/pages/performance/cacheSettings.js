@@ -59,9 +59,6 @@ const CacheSettings = () => {
     const getCacheLevelNoticeText = () => {
         return cacheOptions[cacheLevel].notice;
     };
-    const getCacheHelpText = () => {
-        return __('Select a cache level', 'hostgator-wordpress-plugin');
-    };
 
     useUpdateEffect(() => {
 		hostgatorSettingsApiFetch( { cacheLevel } ).then( () => {

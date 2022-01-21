@@ -1,18 +1,16 @@
 import './stylesheet.scss';
 
 import AppStore, { AppStoreProvider } from './data/store';
-import { useMediaQuery } from '@wordpress/compose';
 import { useLocation, HashRouter as Router } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
 import { 
 	SnackbarList, 
-	Spinner 
+	Spinner
 } from '@wordpress/components';
 import classnames from 'classnames';
 import Header from './components/header';
 import AppRoutes from './data/routes';
 import {
-    dispatch,
     useDispatch,
     useSelect,
 } from '@wordpress/data';

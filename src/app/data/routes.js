@@ -1,5 +1,4 @@
 import {
-	Icon,
 	settings,
 	trendingUp,
 	help,
@@ -33,7 +32,7 @@ export const AppRoutes = () => {
 				path="*"
 				element={
 					<main style={{ padding: "1rem" }}>
-					<p>There's nothing here!</p>
+					<p>{__('There\'s nothing here!', 'hostgator-wordpress-plugin')}</p>
 					</main>
 				}
 				/>
@@ -58,35 +57,30 @@ export const routes = [
 	{
 		name: "/home",
 		title: __("Home", "hostgator-wordpress-plugin"),
-		description: __("Home", "hostgator-wordpress-plugin"),
 		Component: Home,
 		Icon: grid,
 	},
 	{
 		name: "/marketplace",
 		title: __("Marketplace", "hostgator-wordpress-plugin"),
-		description: __("Marketplace", "hostgator-wordpress-plugin"),
 		Component: Marketplace,
 		Icon: store,
 	},
 	{
 		name: "/performance",
 		title: __("Performance", "hostgator-wordpress-plugin"),
-		description: __("Performance", "hostgator-wordpress-plugin"),
 		Component: Performance,
 		Icon: trendingUp,
 	},
 	{
 		name: "/settings",
 		title: __("Settings", "hostgator-wordpress-plugin"),
-		description: __("Settings", "hostgator-wordpress-plugin"),
 		Component: Settings,
 		Icon: settings,
 	},
 	{
 		name: "/help",
 		title: __("Help", "hostgator-wordpress-plugin"),
-		description: __("Help", "hostgator-wordpress-plugin"),
 		Component: Help,
 		Icon: help,
 	}

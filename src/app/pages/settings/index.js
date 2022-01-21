@@ -1,6 +1,5 @@
 import './stylesheet.scss';
 import { ReactComponent as Graphic } from '../../../../assets/svg/a-illustration__gaming.svg';
-
 import AutomaticUpdates from './automaticUpdates';
 import ComingSoon from './comingSoon';
 import CommentSettings from './commentSettings';

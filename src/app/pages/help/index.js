@@ -1,6 +1,4 @@
 import './stylesheet.scss';
-
-import { __ } from '@wordpress/i18n';
 import {
 	Button,
 	Card,
