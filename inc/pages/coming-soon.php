@@ -172,7 +172,7 @@
 				border: 1px solid #F72F26;
 			}
 
-			.hg_subscription_widget form .bh-inputs {
+			.hg_subscription_widget form .hg-inputs {
 				display: inline-block;
 				position: relative;
 				vertical-align: middle;
@@ -182,14 +182,14 @@
 				transition: all 0.1s ease-in-out;
 			}
 
-			.hg_subscription_widget form .bh-inputs.active {
+			.hg_subscription_widget form .hg-inputs.active {
 				-webkit-transition: all 0.1s ease-in-out;
 				-moz-transition: all 0.1s ease-in-out;
 				-o-transition: all 0.1s ease-in-out;
 				transition: all 0.1s ease-in-out;
 			}
 
-			.hg_subscription_widget form .bh-inputs.email.active #bh-subscribe-label {
+			.hg_subscription_widget form .hg-inputs.email.active #hg-subscribe-label {
 				color: #5B5B5B;
 				clip: auto !important;
 				height: auto !important;
@@ -201,9 +201,9 @@
 				top: 2px;
 			}
 
-			.hg_subscription_widget form .bh-inputs.email input[type="email"] {
+			.hg_subscription_widget form .hg-inputs.email input[type="email"] {
 				background-color: #fff;
-				background-image: url("<?php echo esc_url( HOSTGATOR_PLUGIN_URL . 'images/icon-email.svg' ); ?>");
+				background-image: url("<?php echo esc_url( HOSTGATOR_PLUGIN_URL . 'assets/svg/icon-email.svg' ); ?>");
 				background-position: 10px center;
 				background-repeat: no-repeat;
 				border: 1px solid #5B5B5B;
@@ -220,14 +220,14 @@
 				transition: all 0.05s ease-in-out;
 			}
 
-			.hg_subscription_widget form .bh-inputs.email.active input[type="email"] {
+			.hg_subscription_widget form .hg-inputs.email.active input[type="email"] {
 				background-image: none;
 				font-size: 14px;
 				padding: 16px 15px 12px 15px;
 				max-height: 45px;
 			}
 
-			.hg_subscription_widget form .bh-inputs.submit input[type="submit"] {
+			.hg_subscription_widget form .hg-inputs.submit input[type="submit"] {
 				background-color: #3575D3;
 				border: none;
 				border-radius: 4px;
@@ -244,7 +244,7 @@
 				transition: all 0.1s ease-in-out;
 			}
 
-			.hg_subscription_widget form .bh-inputs.submit input[type="submit"]:hover {
+			.hg_subscription_widget form .hg-inputs.submit input[type="submit"]:hover {
 				background-color: #5B5B5B;
 				border-color: #5B5B5B;
 				-webkit-transition: all 0.1s ease-in-out;
@@ -283,17 +283,17 @@
 					margin-top: 10px;
 				}
 
-				.hg_subscription_widget form .bh-inputs,
-				.hg_subscription_widget form .bh-inputs.email input[type="email"],
-				.hg_subscription_widget form .bh-inputs.submit input[type="submit"] {
+				.hg_subscription_widget form .hg-inputs,
+				.hg_subscription_widget form .hg-inputs.email input[type="email"],
+				.hg_subscription_widget form .hg-inputs.submit input[type="submit"] {
 					width: 100%;
 				}
 
-				.hg_subscription_widget form .bh-inputs.email input[type="email"] {
+				.hg_subscription_widget form .hg-inputs.email input[type="email"] {
 					min-width: 0;
 				}
 
-				.hg_subscription_widget form .bh-inputs {
+				.hg_subscription_widget form .hg-inputs {
 					margin-bottom: 10px;
 				}
 			}
@@ -326,11 +326,11 @@
 						<div id="error">
 							<?php esc_html_e( 'There was an error with your submission and you were not subscribed. Please try again with a different email address.', 'hostgator-wordpress-plugin' ); ?>
 						</div>
-						<form action="" method="post" accept-charset="utf-8" id="subscribe-bh">
+						<form action="" method="post" accept-charset="utf-8" id="subscribe-hg">
 							<input type="hidden" name="action" value="mojo_coming_soon_subscribe">
 							<?php wp_nonce_field( 'mojo_coming_soon_subscribe_nonce', 'mm_nonce-coming-soon-subscribe' ); ?>
-							<span class="bh-inputs email" id="subscribe-email">
-								<label id="bh-subscribe-label" for="subscribe-field-bh">
+							<span class="hg-inputs email" id="subscribe-email">
+								<label id="hg-subscribe-label" for="subscribe-field-hg">
 									<?php esc_html_e( 'Email', 'hostgator-wordpress-plugin' ); ?>
 								</label>
 								<input
@@ -338,11 +338,11 @@
 									name="email"
 									required="required"
 									value=""
-									id="subscribe-field-bh"
+									id="subscribe-field-hg"
 									placeholder="Enter your email address"
 								>
 							</span>
-							<span class="bh-inputs submit" id="subscribe-submit">
+							<span class="hg-inputs submit" id="subscribe-submit">
 								<input class="btn" type="submit" value="Subscribe" name="hg_subscriptions_widget">
 							</span>
 						</form>
@@ -351,7 +351,7 @@
 							(function (d) {
 								// In case the placeholder functionality is available we remove labels
 								if (('placeholder' in d.createElement('input'))) {
-									var label = d.querySelector('label[for=subscribe-field-bh]');
+									var label = d.querySelector('label[for=subscribe-field-hg]');
 									label.style.clip = 'rect(1px, 1px, 1px, 1px)';
 									label.style.position = 'absolute';
 									label.style.height = '1px';
@@ -405,7 +405,7 @@
 					$('#success').hide();
 					$('#error').hide();
 
-					var email = $('#subscribe-field-bh').val();
+					var email = $('#subscribe-field-hg').val();
 					var nonce = $('#mm_nonce-coming-soon-subscribe').val();
 					var ajaxscript = {ajax_url: '<?php echo esc_url( admin_url() ); ?>admin-ajax.php'}
 
