@@ -14,10 +14,11 @@ const Header = () => {
 				<Logo />
                 <NavUtility />
 			</header>
-                <nav className="hgwp-nav">
-                    {isLargeViewport && <NavLarge />}
-                    {!isLargeViewport && <NavSmall />}
-                </nav>
+				{isLargeViewport &&
+					<nav className="hgwp-nav">
+						<NavLarge />
+					</nav>
+				}
 		</Fragment>
 	);
 };

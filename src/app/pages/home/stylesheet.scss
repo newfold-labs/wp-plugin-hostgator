@@ -26,10 +26,34 @@
 }
 
 .hgwp-section-card {
-    max-width: 66%;
+    max-width: 90%;
     z-index: 1;
-}
 
-.hgwp-cardlist-content {
-    max-width: 60%;
+    @media screen and (min-width: 700px) {
+        max-width: 66%;
+    }
+
+    .components-card__footer {
+        flex-direction: column;
+        
+        .hgwp-cardlist-content {
+            width: 100%;
+        }
+
+        .components-button {
+            margin: 1rem auto;
+        }
+
+        @media screen and (min-width: 700px) {
+            flex-direction: row;
+
+            .hgwp-cardlist-content {
+                max-width: 60%;
+            }
+
+            .components-button {
+                margin: 0;
+            }
+        }
+    }
 }

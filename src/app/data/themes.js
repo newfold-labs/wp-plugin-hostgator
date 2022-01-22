@@ -3,7 +3,7 @@ const themes = [
 		name: 'highend',
 		title: __('Highend - Ultimate Multipurpose WordPress Theme', 'hostgator-wordpress-plugin'),
         price: '59',
-		description: 'Highend — The Ultimate WordPress Theme allows you to build stunning websites without any coding skills. It comes with Drag & Drop editor which makes website building so much easier and faster.',
+		description: __('The Ultimate WordPress Theme allows you to build stunning websites without any coding skills.', 'hostgator-wordpress-plugin'),
 		cta: __('Buy Now', 'hostgator-wordpress-plugin'),
 		url: 'https://www.mojomarketplace.com/cart?item_id=5377b431-d8a8-431b-a711-50c10a141528&#038;utm_source=mojo_wp_plugin&#038;utm_campaign=mojo_wp_plugin&#038;utm_medium=plugin_admin&#038;utm_content=buy_now_preview&#038;theme=hostgator',
         img: 'https://marketplace-assets-production.s3-us-west-2.amazonaws.com/vault/items/preview-5f1ab073-c768-4a90-9bdb-63370a14153a-HSGIn.png',
@@ -12,7 +12,7 @@ const themes = [
 		name: 'creativo',
 		title: __('Creativo - Best Multipurpose WordPress Theme', 'hostgator-wordpress-plugin'),
         price: '59',
-		description: 'Creativo is the Ultimate Multipurpose WordPress theme. Use Creativo to create pixel perfect websites without coding. Every page is built using a Page Builder. Drag and Drop to position elements anywhere on your pages. Create everything without coding knowledge.',
+		description: __('Use Creativo to create pixel perfect websites without coding.', 'hostgator-wordpress-plugin'),
 		cta: __('Buy Now', 'hostgator-wordpress-plugin'),
 		url: 'https://www.mojomarketplace.com/cart?item_id=518048d9-ae08-4939-93ac-0a000a140b1e&#038;utm_source=mojo_wp_plugin&#038;utm_campaign=mojo_wp_plugin&#038;utm_medium=plugin_admin&#038;utm_content=buy_now_preview&#038;theme=hostgator',
         img: 'https://marketplace-assets-production.s3-us-west-2.amazonaws.com/vault/items/preview-5f58a759-a740-4706-a41d-71a90a14153a-9etrI.jpg',
@@ -20,7 +20,7 @@ const themes = [
 	{
 		name: 'atrium',
 		title: __('Atrium - Clean and Modern Business WP Theme', 'hostgator-wordpress-plugin'),
-		description: 'Atrium is a modern and clean business WordPress theme. This theme is beautifully designed, using the browser space entirely to make your website easy to read and focus. One of the important features of this theme is the usage of block patterns. We have pre-designed four blocks that you can use throughout your website.',
+		description: __('This theme is beautifully designed, using the browser space entirely to make your website easy to read and focus.', 'hostgator-wordpress-plugin'),
         price: '49',
 		cta: __('Buy Now', 'hostgator-wordpress-plugin'),
 		url: 'https://www.mojomarketplace.com/cart?item_id=600ed234-47f8-4e2a-921f-23020a141537&#038;utm_source=mojo_wp_plugin&#038;utm_campaign=mojo_wp_plugin&#038;utm_medium=plugin_admin&#038;utm_content=buy_now_preview&#038;theme=hostgator',
@@ -29,7 +29,7 @@ const themes = [
 	{
 		name: 'chia',
 		title: __('Chia - Easy to Use Deli & Cafe WordPress Theme', 'hostgator-wordpress-plugin'),
-		description: 'Chia is a modern responsive WordPress theme ideal for creating a deli or cafe website as well as a food-based blog. It is extremely easy to set up and use thanks to seamless integration with the WordPress block editor and pre-built block patterns. With its fresh look, smart color options, and WooCommerce integration you’ll have all the tools you need to create a website your visitors will love.',
+		description: __('Chia is a modern responsive WordPress theme ideal for creating a deli or cafe website as well as a food-based blog.', 'hostgator-wordpress-plugin'),
         price: '59',
 		cta: __('Buy Now', 'hostgator-wordpress-plugin'),
 		url: 'https://www.mojomarketplace.com/cart?item_id=60858bab-c640-409e-912a-59770a141536&#038;utm_source=mojo_wp_plugin&#038;utm_campaign=mojo_wp_plugin&#038;utm_medium=plugin_admin&#038;utm_content=buy_now_preview&#038;theme=hostgator',
@@ -38,7 +38,7 @@ const themes = [
 	{
 		name: 'mikejane',
 		title: __('Mike + Jane - Minimal WooCommerce Theme', 'hostgator-wordpress-plugin'),
-		description: 'Mike + Jane is a minimal WordPress + WooCommerce theme built for optimizing sales. Forget about complex frameworks and confusing required plugins - working with this theme is easy and fun!',
+		description: __('Forget about complex frameworks and confusing required plugins - working with this theme is easy and fun!', 'hostgator-wordpress-plugin'),
         price: '69',
 		cta: __('Buy Now', 'hostgator-wordpress-plugin'),
 		url: 'https://www.mojomarketplace.com/cart?item_id=6072a76b-a7a8-412c-9c65-3cdb0a141538&#038;utm_source=mojo_wp_plugin&#038;utm_campaign=mojo_wp_plugin&#038;utm_medium=plugin_admin&#038;utm_content=buy_now_preview&#038;theme=hostgator',
@@ -47,7 +47,7 @@ const themes = [
 	{
 		name: 'daisy',
 		title: __('Daisy Blog WordPress Theme', 'hostgator-wordpress-plugin'),
-		description: 'Daisy, #1 blog theme sold on the marketplace!',
+		description: __('Daisy is the #1 blog theme on the marketplace!', 'hostgator-wordpress-plugin'),
         price: '59',
 		cta: __('Buy Now', 'hostgator-wordpress-plugin'),
 		url: 'https://www.mojomarketplace.com/cart?item_id=55f82a3d-0ab8-49c6-a224-1a220a141f38&#038;utm_source=mojo_wp_plugin&#038;utm_campaign=mojo_wp_plugin&#038;utm_medium=plugin_admin&#038;utm_content=buy_now_preview&#038;theme=hostgator',

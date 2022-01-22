@@ -4,7 +4,7 @@ import services from '../../data/services';
 const Services = () => {
 
 	return (
-        <div className="hgwp-services grid col2">
+        <div className="hgwp-services grid col3">
 			{services.map((item) => (
                 <MarketplaceItem item={item} />
             ))}

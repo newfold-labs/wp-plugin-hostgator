@@ -20,7 +20,7 @@ const MarketplaceItem = ({item}) => {
             <CardHeader>
                 <Heading level="4">{item.title}</Heading>
                 { item.price &&
-                <em>${item.price}</em>
+                <em className="price">${item.price}</em>
                 }
             </CardHeader>
             {item.description &&
