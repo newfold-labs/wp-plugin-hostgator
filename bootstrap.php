@@ -37,7 +37,10 @@ if ( is_admin() ) {
 // Required files
 require HOSTGATOR_PLUGIN_DIR . '/inc/Admin.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/AdminBar.php';
+require HOSTGATOR_PLUGIN_DIR . '/inc/base.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/coming-soon.php';
+require HOSTGATOR_PLUGIN_DIR . '/inc/jetpack.php';
+require HOSTGATOR_PLUGIN_DIR . '/inc/partners.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/performance.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/CachingController.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/SettingsController.php';
