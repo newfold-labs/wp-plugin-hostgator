@@ -95,8 +95,11 @@
         transition: opacity .33s ease;
     }
     .hideme {
+        max-height: 32px;
         opacity: 0;
+        overflow: hidden;
         pointer-events: none;
+        width: 0;
     }
 }
 

@@ -24,7 +24,6 @@ final class Data {
 			'version' => HOSTGATOR_PLUGIN_VERSION,
 			'admin'   => \admin_url(),
 			'assets'  => HOSTGATOR_PLUGIN_URL . 'assets/',
-			// 'uid'     => uid(),
 		);
 
 		return $runtime;

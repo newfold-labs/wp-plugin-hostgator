@@ -22,7 +22,6 @@ export const hgApiFetchAll = async (endpoint, options = {}) => {
 
 	return await apiFetch({
 		path: REST_BASE + '/' + endpoint,
-		// headers: { 'X-HGWP': window.HGWP.uid },
 		...options,
 	});
 };
@@ -48,7 +47,6 @@ export const AppStoreProvider = ({ children }) => {
 			hgApiFetchAll('settings').then((settings) => {
 				setStore({ ...store, ...window.HGWP, ...settings });
 				window.HGWP = {
-					// uid: window.HGWP.uid,
 					url: window.HGWP.url,
 					admin: window.HGWP.admin,
 					migrated: true,
