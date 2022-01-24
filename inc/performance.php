@@ -2,12 +2,12 @@
 
 function mojo_cache_toggle() {
 	if ( isset( $_POST['cache_level'] ) && is_numeric( $_POST['cache_level'] ) ) {
-		$cache_level = (int) $_POST['cache_level'];
+		$cache_level = (int) filter_input( INPUT_POST, 'cache_level', FILTER_SANITIZE_NUMBER_INT );
 		$response    = mojo_cache_add( 'page' );
 
-		if ( isset( $response['status'] ) && 'success' == $response['status'] ) {
+		if ( isset( $response['status'] ) && 'success' === $response['status'] ) {
 			$update = update_option( 'endurance_cache_level', $cache_level );
-			if ( true == $update ) {
+			if ( true === $update ) {
 				$response = array(
 					'status'  => 'success',
 					'message' => 'Cache level updated successfully.',
@@ -25,12 +25,18 @@ function mojo_cache_toggle() {
 			);
 		}
 
-		echo json_encode( $response );
+		echo wp_json_encode( $response );
 	}
 	die;
 }
 add_action( 'wp_ajax_mm_cache', 'mojo_cache_toggle' );
 
+/**
+ * Callback for adding caching MU plugins.
+ *
+ * @param string|null $type - Type of caching
+ * @return void
+ */
 function mojo_cache_add( $type = null ) {
 	$cache = array();
 	if ( ! is_dir( WP_CONTENT_DIR . '/mu-plugins' ) ) {
@@ -79,6 +85,12 @@ function mojo_cache_add( $type = null ) {
 
 }
 
+/**
+ * Callback for removing caching MU plugins.
+ *
+ * @param string|null $type - Type of caching
+ * @return void
+ */
 function mojo_cache_remove( $type = null ) {
 	switch ( $type ) {
 		case 'browser':

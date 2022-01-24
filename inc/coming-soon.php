@@ -9,12 +9,11 @@
  * Display coming soon notice.
  */
 function mojo_cs_notice_display() {
-    $screen = get_current_screen();
-	if ( 
-            'true' === get_option( 'mm_coming_soon', 'false' ) && 
-            false === strpos( $screen->id, 'hostgator' ) &&
-            current_user_can( 'manage_options' ) 
-        ) {
+	$screen = get_current_screen();
+	if ( 'true' === get_option( 'mm_coming_soon', 'false' ) &&
+			false === strpos( $screen->id, 'hostgator' ) &&
+			current_user_can( 'manage_options' )
+		) {
 		?>
 		<div class='notice notice-warning'>
 			<p>

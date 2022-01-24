@@ -22,7 +22,7 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  */
 
-Namespace HostGator;
+namespace HostGator;
 
 // Do not allow multiple copies of the HostGator Plugin to be active
 if ( defined( 'HOSTGATOR_PLUGIN_VERSION' ) ) {
