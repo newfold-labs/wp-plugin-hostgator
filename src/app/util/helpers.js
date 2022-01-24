@@ -94,3 +94,20 @@ export const hostgatorPurgeCacheApiFetch = (data) => {
 		data,
 	});
 };
+
+/**
+ * Coming soon admin bar 
+ */
+export const comingSoonAdminbarToggle = (comingSoon) => {
+	const comingsoonadminbar = document.getElementById(
+		'wp-admin-bar-hostgator-coming_soon'
+	);
+	if (!comingsoonadminbar) {
+		return;
+	}
+	if (!comingSoon) {
+		comingsoonadminbar.classList.add('hideme');
+	} else {
+		comingsoonadminbar.classList.remove('hideme');
+	}
+};

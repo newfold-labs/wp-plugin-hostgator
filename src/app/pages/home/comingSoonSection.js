@@ -9,21 +9,25 @@ import {
 } from '@wordpress/components';
 import AppStore from '../../data/store';
 import { useState } from '@wordpress/element';
-import { useEffect } from 'react';
-import apiFetch from '@wordpress/api-fetch';
+import { useUpdateEffect } from 'react-use';
+import {
+	hostgatorSettingsApiFetch,
+	dispatchUpdateSnackbar,
+	comingSoonAdminbarToggle
+} from '../../util/helpers';
 
 const ComingSoonSection = () => {
 	const { store, setStore } = useContext(AppStore);
-	const [isComingSoon, setComingSoon] = useState(store.comingSoon);
+	const [comingSoon, setComingSoon] = useState(store.comingSoon);
 	const [wasComingSoon, setWasComingSoon] = useState(false);
 
 	const getComingSoonHeadline = () => {
-		return isComingSoon
+		return comingSoon
 			? __('Coming Soon', 'hostgator-wordpress-plugin')
 			: __('Site Launched!', 'hostgator-wordpress-plugin');
 	};
 	const getComingSoonBody = () => {
-		return isComingSoon
+		return comingSoon
 			? __(
 					'Your site currently displays a coming soon page to visitors. Once you have finished setting up your site, be sure to launch it so your visitors can reach it.',
 					'hostgator-wordpress-plugin'
@@ -34,12 +38,12 @@ const ComingSoonSection = () => {
 			  );
 	};
 	const getComingSoonGraphicClass = () => {
-		return isComingSoon
+		return comingSoon
 			? 'hgwp-section-graphic'
 			: 'hgwp-section-graphic reverse';
 	};
 	const getComingSoonButton = () => {
-		return isComingSoon ? (
+		return comingSoon ? (
 			<Button
 				variant="primary"
 				icon="yes-alt"
@@ -63,25 +67,28 @@ const ComingSoonSection = () => {
 			</Button>
 		);
 	};
+	const getComingSoonNoticeText = () => {
+		return comingSoon
+			? __('Coming soon activated.', 'hostgator-wordpress-plugin')
+			: __('Coming soon deactivated.', 'hostgator-wordpress-plugin');
+	};
 
-	useEffect(() => {
-		setStore({
-			...store,
-			comingSoon: isComingSoon,
+	useUpdateEffect(() => {
+		hostgatorSettingsApiFetch({ 
+			comingSoon: comingSoon ? 'true' : 'false',
+		 }).then(() => {
+			setStore({
+				...store,
+				comingSoon,
+			});
+			dispatchUpdateSnackbar(getComingSoonNoticeText());
+			comingSoonAdminbarToggle(comingSoon);
 		});
-		//save setting to db
-		apiFetch({
-			path: 'hostgator/v1/settings',
-			method: 'POST',
-			data: {
-				comingSoon: isComingSoon,
-			},
-		});
-	}, [isComingSoon]);
+	}, [comingSoon]);
 
 	return (
 		<>
-			{(isComingSoon || (!isComingSoon && wasComingSoon)) && (
+			{(comingSoon || (!comingSoon && wasComingSoon)) && (
 				<section className="hgwp-section coming-soon">
 					<Graphic className={getComingSoonGraphicClass()} />
 					<Card size="large" className="hgwp-section-card">
