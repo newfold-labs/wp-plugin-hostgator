@@ -39,7 +39,7 @@ const ComingSoon = () => {
 
 	useUpdateEffect(() => {
 		hostgatorSettingsApiFetch({ 
-			comingSoon: comingSoon ? 'true' : 'false',
+			comingSoon,
 		 }).then(() => {
 			setStore({
 				...store,
