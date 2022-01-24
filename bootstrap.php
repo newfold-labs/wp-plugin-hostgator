@@ -21,7 +21,6 @@ if ( is_admin() || ( defined( 'DOING_CRON' ) && DOING_CRON ) || ( defined( 'WP_C
 if ( is_admin() ) {
 
 	// Handle plugin upgrades
-
 	require HOSTGATOR_PLUGIN_DIR . '/inc/UpgradeHandler.php';
 	$upgrade_handler = new UpgradeHandler(
 		HOSTGATOR_PLUGIN_DIR . '/inc/upgrades',
@@ -35,20 +34,20 @@ if ( is_admin() ) {
 	}
 }
 
-
 // Required files
 require HOSTGATOR_PLUGIN_DIR . '/inc/Admin.php';
+require HOSTGATOR_PLUGIN_DIR . '/inc/AdminBar.php';
+require HOSTGATOR_PLUGIN_DIR . '/inc/coming-soon.php';
+require HOSTGATOR_PLUGIN_DIR . '/inc/performance.php';
+require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/CachingController.php';
+require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/SettingsController.php';
+require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/rest-api.php';
+require HOSTGATOR_PLUGIN_DIR . '/inc/settings.php';
+require HOSTGATOR_PLUGIN_DIR . '/inc/updates.php';
 
 /* WordPress Admin Page & Features */
 if ( is_admin() ) {
 	new Admin();
 }
 
-// Require files
-require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/CachingController.php';
-require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/SettingsController.php';
-require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/rest-api.php';
-require HOSTGATOR_PLUGIN_DIR . '/inc/updates.php';
-require HOSTGATOR_PLUGIN_DIR . '/inc/coming-soon.php';
-require HOSTGATOR_PLUGIN_DIR . '/inc/settings.php';
-require HOSTGATOR_PLUGIN_DIR . '/inc/performance.php';
+AdminBar::init();
