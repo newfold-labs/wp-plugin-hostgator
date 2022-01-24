@@ -55,16 +55,27 @@ const ComingSoonSection = () => {
 				{__('Launch Site', 'hostgator-wordpress-plugin')}
 			</Button>
 		) : (
-			<Button
-				variant="secondary"
-				icon="no-alt"
-				onClick={() => {
-					setComingSoon(() => true);
-					setWasComingSoon(() => true);
-				}}
-			>
-				{__('Undo Launch', 'hostgator-wordpress-plugin')}
-			</Button>
+			<>
+				<Button
+					variant="link"
+					onClick={() => {
+						setComingSoon(() => false);
+						setWasComingSoon(() => false);
+					}}
+				>
+					{__('Dismiss', 'hostgator-wordpress-plugin')}
+				</Button>
+				<Button
+					variant="secondary"
+					icon="no-alt"
+					onClick={() => {
+						setComingSoon(() => true);
+						setWasComingSoon(() => true);
+					}}
+				>
+					{__('Undo Launch', 'hostgator-wordpress-plugin')}
+				</Button>
+			</>
 		);
 	};
 	const getComingSoonNoticeText = () => {
