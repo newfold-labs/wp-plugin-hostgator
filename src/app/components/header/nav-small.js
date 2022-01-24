@@ -3,15 +3,13 @@ import { topRoutes } from '../../data/routes';
 
 const NavSmall = () => (
 	<div className="hgwp-nav-small">
-		<ul> 
-            {topRoutes.map((page) => (
-                <li>
-                    <NavLink key={page.name} to={page.name}>
-                        {page.title}
-                    </NavLink>
-                </li>
-            ))}
-        </ul>
+		<ul>
+			{topRoutes.map((page) => (
+				<li key={page.name}>
+					<NavLink to={page.name}>{page.title}</NavLink>
+				</li>
+			))}
+		</ul>
 	</div>
 );
 

@@ -6,9 +6,7 @@ import apiFetch from '@wordpress/api-fetch';
 export const REST_BASE = 'hostgator/v1';
 
 /* endpoints inside REST_BASE */
-export const ENDPOINTS = [
-	'settings',
-];
+export const ENDPOINTS = ['settings'];
 
 const DEFAULT = {
 	store: {},
@@ -52,7 +50,7 @@ export const AppStoreProvider = ({ children }) => {
 				window.HGWP = {
 					// uid: window.HGWP.uid,
 					url: window.HGWP.url,
-                    admin: window.HGWP.admin,
+					admin: window.HGWP.admin,
 					migrated: true,
 				};
 				setBooted(true);

@@ -5,7 +5,6 @@ import CacheSettings from './cacheSettings';
 import ClearCache from './clearCache';
 
 const Performance = () => {
-	
 	return (
 		<div className="hgwp-Performance grid col2 has-page-graphic">
 			<CacheSettings />
