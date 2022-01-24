@@ -30,7 +30,7 @@ final class Admin {
 	 * Add inline script to admin screens to hide extra link in subnav
 	 */
 	public static function admin_nav_style() {
-		echo "<style>li#toplevel_page_hostgator > ul > li.wp-first-item { display: none !important;}</style>";
+		echo '<style>li#toplevel_page_hostgator > ul > li.wp-first-item { display: none !important;}</style>';
 	}
 
 	/**
@@ -39,59 +39,59 @@ final class Admin {
 	 * @return void
 	 */
 	public static function page() {
-        $snappy = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNTggMTY3LjciPgogIDxwYXRoIGZpbGw9ImJsYWNrIiBkPSJNMTE2IDY1LjFjMi44LTI2LTQuOS00MS43LTEyLTQ0LjEtNy0yLjQtMTEuMiA1LTExLjIgNS0xMy42LTguNC0yNS43LTcuNi0yNS43LTcuNlM1OS42LS41IDQ0LjguMWMtMTkuNC44LTI5IDQxLTMxLjMgNTIuNGExNy40IDE3LjQgMCAwIDAtMTAuMiA5LjJjLTUuOCAxMS40LTguOCAzMi4yIDM0LjUgNjQuNyA0My4zIDMyLjYgNjIuNCA0MS40IDcxLjggNDEuNCAxMiAwIDEyLjgtNC41IDI2LjYtNi40IDcuMS0xIDEyLjQtMTMuMiA0LjgtMjMuNi03LjctMTAuNC0yNi0yMy0yNi0yM3MxMi4yLS4yIDE5LjgtMS4ybC4xLjRhMzkgMzkgMCAwIDAgMS4zIDNjLjggMS44IDEuMSA0IDEuNyA2IC4yIDEgLjUgMS44IDEgMi41LjMuNyAxIDEuMiAxLjggMS40IDIgLjIgMy44LTEgNS0yLjYgMS4zLTEuNyAyLjMtNCAzLTYuM2E1MyA1MyAwIDAgMCAxLjYtOS4ydi0uNGM0LjctMy4xIDguMy04LjYgNy43LTE4LjYtLjgtMTEuOC0xMy44LTE4LTI2LTE0LjEtNi05LjctMTYtMTAuNi0xNi0xMC42Wm0tMTMuNyAyMy4yYzQtMS4zIDcgNCAxLjggNi4yLS43IDIgLjQgNCAzLjYgNC44LTEwIDItMTAuNC05LjItNS40LTExWm0zOS43IDcuNWMyLjYtLjYgMy42LTIuNCAzLTQtNC4zLTEuOS0xLjgtNi4yIDEuNC01LjIgNC4xIDEuNSAzLjcgMTAuOS00LjQgOS4yWk00MS42IDIyczEzLjcgNi41IDIyLjggMzVjMCAwLTIxLjYtMy41LTMxLjEtMi44IDAgMCA4LjctMTYuMiA4LjMtMzIuMlptNC43IDI0YzAgNC42IDIuNyA4LjQgNiA4LjQgMy40IDAgNi4yLTMuOCA2LjItOC40IDAtNC42LTIuOC04LjMtNi4xLTguMy0zLjQgMC02IDMuNy02IDguM1ptNDMuNiAxMy40czUuNi0xOC4zIDE2LjItMjMuNGMwIDAgLjYgMTQuNyAzIDI2LjQgMCAwLTcuOC0xLjgtMTkuMi0zWm03LjYtNS40YzAgMy42IDIgNi40IDQuNiA2LjQgMi42IDAgNC42LTIuOCA0LjYtNi40IDAtMy41LTItNi40LTQuNi02LjQtMi41IDAtNC42IDIuOS00LjYgNi40Wm0xNS44IDYwLjhzLTQuOCAxOS42LTEyLjEgMTcuNGMtMi41LS43LTEuNS02LjMtMi41LTEwLTEtMy45LTMuOC0xMS4yLTMuOC0xMS4yWm0zNi41LTZzLTEuNSAxOC43LTkuMiAxNy44Yy0yLjUtLjMtMi40LTYtNC05LjYtMS43LTMuNi0xLjQtMy4zLTEuNC0zLjNhNTAgNTAgMCAwIDAgMTQuNi00LjlaIi8+Cjwvc3ZnPg==';
+		$snappy = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNTggMTY3LjciPgogIDxwYXRoIGZpbGw9ImJsYWNrIiBkPSJNMTE2IDY1LjFjMi44LTI2LTQuOS00MS43LTEyLTQ0LjEtNy0yLjQtMTEuMiA1LTExLjIgNS0xMy42LTguNC0yNS43LTcuNi0yNS43LTcuNlM1OS42LS41IDQ0LjguMWMtMTkuNC44LTI5IDQxLTMxLjMgNTIuNGExNy40IDE3LjQgMCAwIDAtMTAuMiA5LjJjLTUuOCAxMS40LTguOCAzMi4yIDM0LjUgNjQuNyA0My4zIDMyLjYgNjIuNCA0MS40IDcxLjggNDEuNCAxMiAwIDEyLjgtNC41IDI2LjYtNi40IDcuMS0xIDEyLjQtMTMuMiA0LjgtMjMuNi03LjctMTAuNC0yNi0yMy0yNi0yM3MxMi4yLS4yIDE5LjgtMS4ybC4xLjRhMzkgMzkgMCAwIDAgMS4zIDNjLjggMS44IDEuMSA0IDEuNyA2IC4yIDEgLjUgMS44IDEgMi41LjMuNyAxIDEuMiAxLjggMS40IDIgLjIgMy44LTEgNS0yLjYgMS4zLTEuNyAyLjMtNCAzLTYuM2E1MyA1MyAwIDAgMCAxLjYtOS4ydi0uNGM0LjctMy4xIDguMy04LjYgNy43LTE4LjYtLjgtMTEuOC0xMy44LTE4LTI2LTE0LjEtNi05LjctMTYtMTAuNi0xNi0xMC42Wm0tMTMuNyAyMy4yYzQtMS4zIDcgNCAxLjggNi4yLS43IDIgLjQgNCAzLjYgNC44LTEwIDItMTAuNC05LjItNS40LTExWm0zOS43IDcuNWMyLjYtLjYgMy42LTIuNCAzLTQtNC4zLTEuOS0xLjgtNi4yIDEuNC01LjIgNC4xIDEuNSAzLjcgMTAuOS00LjQgOS4yWk00MS42IDIyczEzLjcgNi41IDIyLjggMzVjMCAwLTIxLjYtMy41LTMxLjEtMi44IDAgMCA4LjctMTYuMiA4LjMtMzIuMlptNC43IDI0YzAgNC42IDIuNyA4LjQgNiA4LjQgMy40IDAgNi4yLTMuOCA2LjItOC40IDAtNC42LTIuOC04LjMtNi4xLTguMy0zLjQgMC02IDMuNy02IDguM1ptNDMuNiAxMy40czUuNi0xOC4zIDE2LjItMjMuNGMwIDAgLjYgMTQuNyAzIDI2LjQgMCAwLTcuOC0xLjgtMTkuMi0zWm03LjYtNS40YzAgMy42IDIgNi40IDQuNiA2LjQgMi42IDAgNC42LTIuOCA0LjYtNi40IDAtMy41LTItNi40LTQuNi02LjQtMi41IDAtNC42IDIuOS00LjYgNi40Wm0xNS44IDYwLjhzLTQuOCAxOS42LTEyLjEgMTcuNGMtMi41LS43LTEuNS02LjMtMi41LTEwLTEtMy45LTMuOC0xMS4yLTMuOC0xMS4yWm0zNi41LTZzLTEuNSAxOC43LTkuMiAxNy44Yy0yLjUtLjMtMi40LTYtNC05LjYtMS43LTMuNi0xLjQtMy4zLTEuNC0zLjNhNTAgNTAgMCAwIDAgMTQuNi00LjlaIi8+Cjwvc3ZnPg==';
 
 		\add_menu_page(
-            __( 'HostGator', 'hostgator-wordpress-plugin' ),
-            __( 'HostGator', 'hostgator-wordpress-plugin' ),
-            'manage_options',
-            'hostgator',
+			__( 'HostGator', 'hostgator-wordpress-plugin' ),
+			__( 'HostGator', 'hostgator-wordpress-plugin' ),
+			'manage_options',
+			'hostgator',
 			array( __CLASS__, 'render' ),
-            $snappy,
-            3
-        );
+			$snappy,
+			3
+		);
 
 		\add_submenu_page(
-            'hostgator',
-			__('Home', 'hostgator-wordpress-plugin' ),
-			__('Home', 'hostgator-wordpress-plugin' ),
-            'manage_options',
+			'hostgator',
+			__( 'Home', 'hostgator-wordpress-plugin' ),
+			__( 'Home', 'hostgator-wordpress-plugin' ),
+			'manage_options',
 			'hostgator#/home',
 			array( __CLASS__, 'render' ),
 		);
 
 		\add_submenu_page(
-            'hostgator',
-			__('Marketplace', 'hostgator-wordpress-plugin' ),
-			__('Marketplace', 'hostgator-wordpress-plugin' ),
-            'manage_options',
+			'hostgator',
+			__( 'Marketplace', 'hostgator-wordpress-plugin' ),
+			__( 'Marketplace', 'hostgator-wordpress-plugin' ),
+			'manage_options',
 			'hostgator#/marketplace',
 			array( __CLASS__, 'render' ),
 		);
 
 		\add_submenu_page(
-            'hostgator',
-			__('Performance', 'hostgator-wordpress-plugin' ),
-			__('Performance', 'hostgator-wordpress-plugin' ),
-            'manage_options',
+			'hostgator',
+			__( 'Performance', 'hostgator-wordpress-plugin' ),
+			__( 'Performance', 'hostgator-wordpress-plugin' ),
+			'manage_options',
 			'hostgator#/performance',
 			array( __CLASS__, 'render' ),
 		);
 
 		\add_submenu_page(
-            'hostgator',
-			__('Settings', 'hostgator-wordpress-plugin' ),
-			__('Settings', 'hostgator-wordpress-plugin' ),
-            'manage_options',
+			'hostgator',
+			__( 'Settings', 'hostgator-wordpress-plugin' ),
+			__( 'Settings', 'hostgator-wordpress-plugin' ),
+			'manage_options',
 			'hostgator#/settings',
 			array( __CLASS__, 'render' ),
 		);
 
 		\add_submenu_page(
-            'hostgator',
-			__('Help', 'hostgator-wordpress-plugin' ),
-			__('Help', 'hostgator-wordpress-plugin' ),
-            'manage_options',
+			'hostgator',
+			__( 'Help', 'hostgator-wordpress-plugin' ),
+			__( 'Help', 'hostgator-wordpress-plugin' ),
+			'manage_options',
 			'hostgator#/help',
 			array( __CLASS__, 'render' ),
 		);
@@ -131,7 +131,7 @@ final class Admin {
 			true
 		);
 
-        include HOSTGATOR_PLUGIN_DIR . '/inc/Data.php';
+		include HOSTGATOR_PLUGIN_DIR . '/inc/Data.php';
 		\wp_add_inline_script(
 			'hostgator-script',
 			'var HGWP =' . \wp_json_encode( Data::runtime() ) . ';',
@@ -145,8 +145,8 @@ final class Admin {
 			$asset['version']
 		);
 
-        $screen = get_current_screen();
-        if( false !== strpos( $screen->id, 'hostgator' ) ) {
+		$screen = get_current_screen();
+		if ( false !== strpos( $screen->id, 'hostgator' ) ) {
 			\wp_enqueue_script( 'hostgator-script' );
 			\wp_enqueue_style( 'hostgator-style' );
 		}

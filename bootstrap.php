@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin bootstrap file
- * 
+ *
  * @package HostGatorWordPressPlugin
  */
 namespace HostGator;
@@ -22,7 +22,7 @@ if ( is_admin() ) {
 
 	// Handle plugin upgrades
 
-    require HOSTGATOR_PLUGIN_DIR . '/inc/UpgradeHandler.php';
+	require HOSTGATOR_PLUGIN_DIR . '/inc/UpgradeHandler.php';
 	$upgrade_handler = new UpgradeHandler(
 		HOSTGATOR_PLUGIN_DIR . '/inc/upgrades',
 		get_option( 'hostgator_plugin_version', '1.0' ),

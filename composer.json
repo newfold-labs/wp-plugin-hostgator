@@ -14,7 +14,10 @@
     "config": {
         "optimize-autoloader": true,
         "sort-packages": true,
-        "platform-check": false
+        "platform-check": false,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     },
     "repositories": {
         "bluehost-satis": {

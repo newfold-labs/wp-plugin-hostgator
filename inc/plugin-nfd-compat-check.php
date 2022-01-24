@@ -5,7 +5,7 @@
  * @package HostGatorWordPressPlugin
  */
 
-Namespace HostGator;
+namespace HostGator;
 
 /**
  * Class NDF_Plugin_Compat_Check
