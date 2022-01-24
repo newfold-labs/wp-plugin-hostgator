@@ -9,8 +9,11 @@ const help = [
 	{
 		name: 'phone',
 		title: __('Phone', 'hostgator-wordpress-plugin'),
-        description: __('Give us a ring at (866) 96-GATOR', 'hostgator-wordpress-plugin'),
-        icon: 'phone',
+		description: __(
+			'Give us a ring at (866) 96-GATOR',
+			'hostgator-wordpress-plugin'
+		),
+		icon: 'phone',
 		Svg: Phone,
 		cta: __('Call Us', 'hostgator-wordpress-plugin'),
 		url: 'tel:(866)_964-286',
@@ -18,8 +21,11 @@ const help = [
 	{
 		name: 'chat',
 		title: __('Chat', 'hostgator-wordpress-plugin'),
-        description: __('Have a question? We\'re here 24/7/365', 'hostgator-wordpress-plugin'),
-        icon: 'format-chat',
+		description: __(
+			"Have a question? We're here 24/7/365",
+			'hostgator-wordpress-plugin'
+		),
+		icon: 'format-chat',
 		Svg: Chat,
 		cta: __('Live Chat', 'hostgator-wordpress-plugin'),
 		url: 'https://helpchat.hostgator.com/',
@@ -27,8 +33,11 @@ const help = [
 	{
 		name: 'twitter',
 		title: __('Tweet', 'hostgator-wordpress-plugin'),
-        description: __('Tweet us at @hgsupport for support', 'hostgator-wordpress-plugin'),
-        icon: 'twitter',
+		description: __(
+			'Tweet us at @hgsupport for support',
+			'hostgator-wordpress-plugin'
+		),
+		icon: 'twitter',
 		Svg: Tweet,
 		cta: __('Tweet Us', 'hostgator-wordpress-plugin'),
 		url: 'https://twitter.com/hgsupport',
@@ -36,8 +45,11 @@ const help = [
 	{
 		name: 'kb',
 		title: __('Knowledge Base', 'hostgator-wordpress-plugin'),
-        description: __('Know what the pros know.', 'hostgator-wordpress-plugin'),
-        icon: 'book',
+		description: __(
+			'Know what the pros know.',
+			'hostgator-wordpress-plugin'
+		),
+		icon: 'book',
 		Svg: Book,
 		cta: __('Find Answers', 'hostgator-wordpress-plugin'),
 		url: 'https://www.hostgator.com/help',
@@ -45,8 +57,11 @@ const help = [
 	{
 		name: 'blog',
 		title: __('Blog', 'hostgator-wordpress-plugin'),
-        description: __('Get our tips and in-depth articles.', 'hostgator-wordpress-plugin'),
-        icon: 'text-page',
+		description: __(
+			'Get our tips and in-depth articles.',
+			'hostgator-wordpress-plugin'
+		),
+		icon: 'text-page',
 		Svg: Site,
 		cta: __('Learn Stuff', 'hostgator-wordpress-plugin'),
 		url: 'https://www.hostgator.com/blog/',
@@ -54,8 +69,11 @@ const help = [
 	{
 		name: 'video',
 		title: __('Video Tutorials', 'hostgator-wordpress-plugin'),
-        description: __('Step-by-step tutorials and additional guides.', 'hostgator-wordpress-plugin'),
-        icon: 'format-video',
+		description: __(
+			'Step-by-step tutorials and additional guides.',
+			'hostgator-wordpress-plugin'
+		),
+		icon: 'format-video',
 		Svg: Video,
 		cta: __('Watch Now', 'hostgator-wordpress-plugin'),
 		url: 'https://www.youtube.com/c/hostgatorUS',

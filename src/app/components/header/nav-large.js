@@ -3,12 +3,12 @@ import { topRoutes } from '../../data/routes';
 
 const NavLarge = () => (
 	<ul className="hgwp-nav-large">
-        {topRoutes.map((page) => (
-			<li>
-                <NavLink key={page.name} to={page.name}>
-                    {page.title}
-                </NavLink>
-            </li>
+		{topRoutes.map((page) => (
+			<li key={page.name}>
+				<NavLink to={page.name}>
+					{page.title}
+				</NavLink>
+			</li>
 		))}
 	</ul>
 );
