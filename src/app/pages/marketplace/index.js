@@ -5,14 +5,13 @@ import Plugins from './plugins';
 import Services from './services';
 
 const Marketplace = () => {
-	
 	return (
 		<div className="hgwp-marketplace">
 			<TabPanel
 				className="hgwp-marketplace-tabs"
 				activeClass="current-tab"
 				orientation="vertical"
-				tabs={ [
+				tabs={[
 					{
 						name: 'plugins',
 						className: 'plugins',
@@ -31,10 +30,9 @@ const Marketplace = () => {
 						title: 'Themes',
 						Component: Themes,
 					},
-
-				] }
+				]}
 			>
-				{ ( tab ) => <tab.Component /> }
+				{(tab) => <tab.Component />}
 			</TabPanel>
 		</div>
 	);

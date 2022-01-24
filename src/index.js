@@ -40,7 +40,7 @@ const HG_ASCI = `
                      (#&(((((((((((((((,,,,,,,,,,,,,,,,,,,((                    
                           .((((((((((((,,,,,,,,,,,,,,,                          
                               Welcome to HostGator!
-`
+`;
 console.log(HG_ASCI);
 
 const HGWPRender = () => {

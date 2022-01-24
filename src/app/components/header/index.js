@@ -12,13 +12,13 @@ const Header = () => {
 		<Fragment>
 			<header className="hgwp-header">
 				<Logo />
-                <NavUtility />
+				<NavUtility />
 			</header>
-				{isLargeViewport &&
-					<nav className="hgwp-nav">
-						<NavLarge />
-					</nav>
-				}
+			{isLargeViewport && (
+				<nav className="hgwp-nav">
+					<NavLarge />
+				</nav>
+			)}
 		</Fragment>
 	);
 };

@@ -6,7 +6,6 @@ import CommentSettings from './commentSettings';
 import ContentSettings from './contentSettings';
 
 const Settings = () => {
-
 	return (
 		<div className="hgwp-Settings grid col2 has-page-graphic">
 			<AutomaticUpdates />
@@ -15,7 +14,6 @@ const Settings = () => {
 			<ContentSettings />
 			<Graphic className="hgwp-page-graphic" />
 		</div>
-
 	);
 };
 

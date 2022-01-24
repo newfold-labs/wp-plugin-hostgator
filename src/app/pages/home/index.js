@@ -5,7 +5,6 @@ import WebHostingSection from './webHostingSection';
 import SettingsSection from './settingsSection';
 
 const Home = () => {
-	
 	return (
 		<div className="hgwp-home ">
 			<ComingSoonSection />
