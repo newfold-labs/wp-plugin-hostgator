@@ -28,8 +28,8 @@ const AutomaticUpdates = () => {
 
 	const getCoreNoticeText = () => {
 		return autoUpdatesMajorCore
-			? __('Core autoupdates activated.', 'hostgator-wordpress-plugin')
-			: __('Core autoupdates deactivated.', 'hostgator-wordpress-plugin');
+			? __('Core will auto-update.', 'hostgator-wordpress-plugin')
+			: __('Core will not auto-update.', 'hostgator-wordpress-plugin');
 	};
 	const getCoreHelpText = () => {
 		return autoUpdatesMajorCore
@@ -44,9 +44,9 @@ const AutomaticUpdates = () => {
 	};
 	const getPluginsNoticeText = () => {
 		return autoUpdatesPlugins
-			? __('Plugin autoupdates activated.', 'hostgator-wordpress-plugin')
+			? __('Plugins will auto-update.', 'hostgator-wordpress-plugin')
 			: __(
-					'Plugin autoupdates deactivated.',
+					'Plugins will not auto-update.',
 					'hostgator-wordpress-plugin'
 			  );
 	};
@@ -63,9 +63,9 @@ const AutomaticUpdates = () => {
 	};
 	const getThemesNoticeText = () => {
 		return autoUpdatesThemes
-			? __('Theme autoupdates activated.', 'hostgator-wordpress-plugin')
+			? __('Themes will auto-update.', 'hostgator-wordpress-plugin')
 			: __(
-					'Theme autoupdates deactivated.',
+					'Theme will not auto-update.',
 					'hostgator-wordpress-plugin'
 			  );
 	};
