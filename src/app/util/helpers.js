@@ -20,6 +20,7 @@ export const setActiveSubnav = (path) => {
 					// check each child a href for match with path
 					if (
 						href.endsWith(path) || // match
+						(path.includes('/marketplace/') && href.endsWith('marketplace')) ||
 						(path === '/' && href.endsWith('home'))
 					) {
 						// highlight home subnav for root page
