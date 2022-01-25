@@ -57,7 +57,7 @@ final class Admin {
 			__( 'Home', 'hostgator-wordpress-plugin' ),
 			'manage_options',
 			'hostgator#/home',
-			array( __CLASS__, 'render' ),
+			array( __CLASS__, 'render' )
 		);
 
 		\add_submenu_page(
@@ -66,7 +66,7 @@ final class Admin {
 			__( 'Marketplace', 'hostgator-wordpress-plugin' ),
 			'manage_options',
 			'hostgator#/marketplace',
-			array( __CLASS__, 'render' ),
+			array( __CLASS__, 'render' )
 		);
 
 		\add_submenu_page(
@@ -75,7 +75,7 @@ final class Admin {
 			__( 'Performance', 'hostgator-wordpress-plugin' ),
 			'manage_options',
 			'hostgator#/performance',
-			array( __CLASS__, 'render' ),
+			array( __CLASS__, 'render' )
 		);
 
 		\add_submenu_page(
@@ -84,7 +84,7 @@ final class Admin {
 			__( 'Settings', 'hostgator-wordpress-plugin' ),
 			'manage_options',
 			'hostgator#/settings',
-			array( __CLASS__, 'render' ),
+			array( __CLASS__, 'render' )
 		);
 
 		\add_submenu_page(
@@ -93,7 +93,7 @@ final class Admin {
 			__( 'Help', 'hostgator-wordpress-plugin' ),
 			'manage_options',
 			'hostgator#/help',
-			array( __CLASS__, 'render' ),
+			array( __CLASS__, 'render' )
 		);
 
 	}
