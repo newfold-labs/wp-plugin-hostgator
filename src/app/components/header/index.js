@@ -2,7 +2,7 @@ import './stylesheet.scss';
 
 import Logo from './logo';
 import NavLarge from './nav-large';
-import NavSmall from './nav-small';
+import NavMobile from './nav-mobile';
 import NavUtility from './nav-utility';
 import { useViewportMatch } from '@wordpress/compose';
 
@@ -13,7 +13,7 @@ const Header = () => {
 			<header className="hgwp-header">
 				<div className="hgwp-header-inner">
 					<Logo />
-					<NavUtility />
+					{isLargeViewport && (<NavUtility />) || <NavMobile />}
 				</div>
 				
 			</header>
