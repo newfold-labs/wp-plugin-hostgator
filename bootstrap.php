@@ -10,7 +10,14 @@ use Hostgator\UpgradeHandler;
 use Endurance_WP_Plugin_Updater\Updater;
 
 // Composer autoloader
-require __DIR__ . '/vendor/autoload.php';
+if ( is_readable( __DIR__ . '/vendor/autoload.php' ) ) {
+	require __DIR__ . '/vendor/autoload.php';
+} else {
+	if ( 'local' === wp_get_environment_type() ) {
+		wp_die( __('Please install the HostGator Plugin dependencies.', 'hostgator-wordpress-plugin') );
+	}
+	return;
+}
 
 // Handle plugin updates
 if ( is_admin() || ( defined( 'DOING_CRON' ) && DOING_CRON ) || ( defined( 'WP_CLI' ) && WP_CLI ) ) {
