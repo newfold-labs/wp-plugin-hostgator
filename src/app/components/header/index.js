@@ -11,8 +11,11 @@ const Header = () => {
 	return (
 		<Fragment>
 			<header className="hgwp-header">
-				<Logo />
-				<NavUtility />
+				<div className="hgwp-header-inner">
+					<Logo />
+					<NavUtility />
+				</div>
+				
 			</header>
 			{isLargeViewport && (
 				<nav className="hgwp-nav">

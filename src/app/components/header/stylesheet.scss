@@ -6,6 +6,13 @@
     align-items: center;
     justify-content: space-between;
     padding: 12px 12px 12px 0;
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1320px;
+        margin: 0 auto;
+        width: 100%;
+    }
 }
 
 .hgwp-logo-wrap {
@@ -32,6 +39,9 @@
 .hgwp-nav-large {
     display: flex;
     list-style: none;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
 
     a {
         margin: 0.5rem 1rem 0;

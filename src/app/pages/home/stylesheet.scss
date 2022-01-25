@@ -12,13 +12,23 @@
     }
 }
 
-.hgwp-section-graphic {
-    opacity: 0.8;
+.section-graphic {
     position: absolute;
     right: 1rem;
     top: 2rem;
     transition: all .5s ease;
     z-index: 0;
+    display:none;
+    @media screen and (min-width: 882px) {
+        display: block;
+        max-width: 200px;
+    }
+    @media screen and (min-width: 1080px) {
+        max-width: 260px;
+    }
+    @media screen and (min-width: 1440px) {
+        max-width: 360px;
+    }
 
     &.reverse {
         transform: rotateY(180deg);
@@ -26,10 +36,9 @@
 }
 
 .hgwp-section-card {
-    max-width: 90%;
     z-index: 1;
 
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 882px) {
         max-width: 66%;
     }
 
@@ -45,6 +54,12 @@
                     margin-right: 8px;
                     color: var(--hgbrand-color-secondary);
                     fill: var(--hgbrand-color-secondary);
+                }
+            }
+            @media screen and (max-width: 700px) {
+                text-align: center;
+                .components-heading {
+                    justify-content: center;
                 }
             }
         }

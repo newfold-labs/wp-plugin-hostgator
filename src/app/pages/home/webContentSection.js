@@ -1,4 +1,4 @@
-import { ReactComponent as Graphic } from '../../../../assets/svg/a-illustration__gator-scales-image-3_-notext.svg';
+import graphicUrl from '../../../../assets/svg/a-illustration__gator-scales-image-3_-notext.svg';
 import {
 	Button,
 	Card,
@@ -12,7 +12,7 @@ import {
 const WebContentSection = () => {
 	return (
 		<section className="hgwp-section">
-			<Graphic className="hgwp-section-graphic" />
+			<img src={graphicUrl} className='section-graphic' />
 			<Card size="large" className="hgwp-section-card">
 				<CardHeader>
 					<Heading level="2">

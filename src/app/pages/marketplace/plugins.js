@@ -3,7 +3,7 @@ import plugins from '../../data/plugins';
 
 const Plugins = () => {
 	return (
-		<div className="hgwp-plugins grid col3">
+		<div className="hgwp-plugins grid col2">
 			{plugins.map((item) => (
 				<MarketplaceItem key={item.url} item={item} />
 			))}

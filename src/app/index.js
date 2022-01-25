@@ -49,7 +49,9 @@ const AppBody = (props) => {
 		>
 			<Header />
 			<div className="hgwp-app-body">
-				{(true === booted && <AppRoutes />) || <Spinner />}
+				<div className="hgwp-app-body-inner">
+					{(true === booted && <AppRoutes />) || <Spinner />}
+				</div>
 			</div>
 
 			<div className="hgwp-app-snackbar">

@@ -12,6 +12,11 @@
     --hgbrand-color-green: #38c174;
 }
 
+html {
+    overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll;
+}
+
 body.toplevel_page_hostgator {
     --wp-admin-theme-color: var(--hgbrand-color-primary);
     --wp-admin-theme-color-darker-10: var(--hgbrand-color-primary-dark);
@@ -78,6 +83,12 @@ body.toplevel_page_hostgator {
 
 .hgwp-app-body {
     padding: 18px 24px 0;
+    &-inner {
+        max-width: 1290px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
 }
 
 .components-button.has-icon {

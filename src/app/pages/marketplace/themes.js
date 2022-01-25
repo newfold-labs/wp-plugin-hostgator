@@ -3,7 +3,7 @@ import themes from '../../data/themes';
 
 const Themes = () => {
 	return (
-		<div className="hgwp-themes grid col3">
+		<div className="hgwp-themes grid col2">
 			{themes.map((item) => (
 				<MarketplaceItem key={item.url} item={item} />
 			))}

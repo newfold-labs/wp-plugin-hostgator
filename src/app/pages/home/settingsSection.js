@@ -1,4 +1,4 @@
-import { ReactComponent as Graphic } from '../../../../assets/svg/a-illustration__checklist.svg';
+import graphicUrl from '../../../../assets/svg/a-illustration__checklist.svg';
 import {
 	Button,
 	Card,
@@ -12,7 +12,7 @@ import { Icon, settings, trendingUp, store } from '@wordpress/icons';
 const SettingsSection = () => {
 	return (
 		<section className="hgwp-section">
-			<Graphic className="hgwp-section-graphic" />
+			<img src={graphicUrl} className='section-graphic' />
 			<Card size="large" className="hgwp-section-card">
 				<CardHeader>
 					<Heading level="2">
