@@ -32,6 +32,9 @@
 
     &.reverse {
         transform: rotateY(180deg);
+        @media(prefers-reduced-motion) {
+            transform: none;
+        }
     }
 }
 

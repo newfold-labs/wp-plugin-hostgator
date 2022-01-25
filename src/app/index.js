@@ -32,15 +32,18 @@ const Notices = () => {
 
 const handlePageLoad = () => {
 	const location = useLocation();
+	const routeContents = document.querySelector('.hgwp-app-body-inner');
 	useEffect(() => {
 		setActiveSubnav(location.pathname);
-	}, [location]);
+		if ( routeContents ) {
+			routeContents.focus({ preventScroll: true });
+		}
+	}, [location.pathname]);
 };
 
 const AppBody = (props) => {
 	const { booted } = useContext(AppStore);
 	handlePageLoad();
-	// const isLargeViewport = useMediaQuery('(min-width: >= 1020px)');
 
 	return (
 		<main
