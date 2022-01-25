@@ -99,7 +99,7 @@ const WebHostingSection = () => {
 							<Dashicon icon="sos" />{' '}
 							{__('Help', 'hostgator-wordpress-plugin')}
 						</Heading>
-						<p>{__('Get Help.', 'hostgator-wordpress-plugin')}</p>
+						<p>{__('24/7/365 support. We work when you work.', 'hostgator-wordpress-plugin')}</p>
 					</div>
 					<Button variant="secondary" href="#/help" icon="sos">
 						{__('Get Help', 'hostgator-wordpress-plugin')}
