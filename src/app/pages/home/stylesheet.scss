@@ -38,6 +38,13 @@
         
         .hgwp-cardlist-content {
             width: 100%;
+            .components-heading {
+                display: flex;
+                align-items: center;
+                .dashicons, svg {
+                    margin-right: 8px;
+                }
+            }
         }
 
         .components-button {
