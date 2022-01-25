@@ -3,7 +3,7 @@ import { ReactComponent as Brand } from '../../../../assets/svg/nav-for-light.sv
 
 const Logo = () => {
 	return (
-		<div className="hgwp-logo">
+		<div className="hgwp-logo-wrap">
 			<Button
 				icon={<Brand className="hgwp-logo" />}
 				style={{ height: '39px' }}
