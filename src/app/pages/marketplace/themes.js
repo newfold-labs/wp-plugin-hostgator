@@ -5,7 +5,7 @@ const Themes = () => {
 	return (
 		<div className="hgwp-themes grid col3">
 			{themes.map((item) => (
-				<MarketplaceItem item={item} />
+				<MarketplaceItem key={item.url} item={item} />
 			))}
 		</div>
 	);
