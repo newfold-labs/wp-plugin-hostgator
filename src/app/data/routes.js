@@ -15,7 +15,7 @@ export const AppRoutes = () => {
 				<Route
 					end
 					key={page.name}
-					path={page.name}
+					path={'/marketplace' === page.name ? '/marketplace/*' : page.name}
 					element={<page.Component />}
 				/>
 			))}
