@@ -13,8 +13,10 @@
 }
 
 html {
-    overflow: -moz-scrollbars-vertical; 
-    overflow-y: scroll;
+    @media screen and (min-width: 782px) {
+        overflow: -moz-scrollbars-vertical; 
+        overflow-y: scroll;
+    }
 }
 
 body.toplevel_page_hostgator {
