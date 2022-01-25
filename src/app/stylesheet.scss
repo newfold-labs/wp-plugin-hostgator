@@ -1,50 +1,32 @@
 :root {
-    // https://static.hostgator.com/docs/4.3/foundations/color/
-    // Neutral Colors
-    --hgwp-color-gray-10: #F9F9F9;
-    --hgwp-color-gray-20: #F5F9FA;
-    --hgwp-color-gray-30: #E0EAF3;
-    --hgwp-color-gray-40: #D5E2ED;
-    --hgwp-color-gray-50: #C2D6E7;
-    --hgwp-color-gray-60: #A0B2BF;
-    --hgwp-color-gray-70: #4B5E6C;
-    --hgwp-color-gray-80: #203646;
-    --hgwp-color-white: #FFFFFF;
-    --hgwp-color-light: var(--hgwp-color-gray-20);
-    --hgwp-color-dark: var(--hgwp-color-gray-80);
-    --hgwp-color-black: #0D151D;
-    // Brand colors
-    --hgwp-color-primary-light: #F1F8FF;
-    --hgwp-color-primary-medium: #38ADFF;
-    --hgwp-color-primary: #097DFE;
-    --hgwp-color-primary-dark: #0467D6;
-
-    --hgwp-color-secondary-light: #FFF3DA;
-    --hgwp-color-secondary-medium: #FFC94F;
-    --hgwp-color-secondary: #FFA503;
-    --hgwp-color-secondary-dark: #E38B00;
-    // Accent colors
-    --hgwp-color-success-light: #D6F7E9;
-    --hgwp-color-success-medium: #1FDA9F;
-    --hgwp-color-success: #08C05D;
-    --hgwp-color-success-dark: #019748;
-
-    --hgwp-color-danger-light: #FFE7E2;
-    --hgwp-color-danger-medium: #FF927D;
-    --hgwp-color-danger: #FE3E15;
-    --hgwp-color-danger-dark: #D13211;
-
-    --hgwp-color-warning-light: #FEFCE3;
-    --hgwp-color-warning-medium: #FFF281;
-    --hgwp-color-warning: #FFDF05;
-    --hgwp-color-warning-dark: #E2C104;
+    --hgbrand-color-primary: #1f2044;
+    --hgbrand-color-primary-dark: #191936;
+    --hgbrand-color-secondary: #2e93ee;
+    --hgbrand-color-secondary-dark: #3c97ff;
+    --hgbrand-color-yellow: #ffcf00;
+    --hgbrand-color-orange: #ff9144;
+    --hgbrand-color-foreground: #363636;
+    --hgbrand-color-accent: #cdd8df;
+    --hgbrand-color-background: #f5f6f8;
+    --hgbrand-color-green: #38c174;
 }
 
 body.toplevel_page_hostgator {
+    --wp-admin-theme-color: var(--hgbrand-color-primary);
+    --wp-admin-theme-color-darker-10: var(--hgbrand-color-primary-dark);
+    --wp-admin-theme-color-darker-20: var(--hgbrand-color-foreground);
+    
+    a {
+        color: var(--hgbrand-color-secondary);
+    }
+    
     @media screen and (max-width:782px) {
         .wp-responsive-open #wpbody {
             right: -190px; // only when mobile admin menu open
         }
+    }
+    #wpwrap {
+        background-color: var(--hgbrand-color-background);
     }
     #wpcontent {
         padding-left: 0 !important;
@@ -63,7 +45,29 @@ body.toplevel_page_hostgator {
         }
     }
 }
-
+.hgwpp {
+    h1, h2, h3, h4, h5, h6, .hgwp-nav a {
+        font-weight: 800;
+        color: var(--hgbrand-color-primary);
+    }
+    p, .hgwp-nav a, div {
+        font-size: 15px;
+    }
+    .components-card__body .components-toggle-control .components-base-control__field .components-toggle-control__label,
+    .components-card__body .components-input-control__label,
+    .components-card__body .components-input-control__label *,
+    .components-card__body .components-radio-control__option label strong {
+        font-weight: 800;
+        color: var(--hgbrand-color-primary);
+    }
+    .components-button {
+        font-weight: 800;
+    }
+    .components-base-control__help,
+    .components-radio-control__option label span span {
+        color: var(--hgbrand-color-secondary);
+    }
+}
 .hgwpp, .hgwpp * {
     box-sizing: border-box;
 }

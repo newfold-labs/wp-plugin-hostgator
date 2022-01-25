@@ -2,6 +2,8 @@
     
     .price {
         margin-left: 2rem;
+        color: var(--hgbrand-color-green);
+        font-weight: 800;
     }
 }
 
@@ -9,7 +11,7 @@
     display: flex;
     border-width: 1px 0 0 0;
     border-style: solid;
-    border-color: var(--hgwp-color-primary);
+    border-color: var(--hgbrand-color-secondary);
 
     .components-tab-panel__tabs {
         min-width: 10rem;
@@ -18,23 +20,23 @@
     }
     
     .components-tab-panel__tabs-item {
-        background-color: var(--hgwp-color-gray-30);
+        background-color: var(--hgbrand-color-accent);
         border-width: 0 1px 0 0;
         border-style: solid;
-        border-color: var(--hgwp-color-primary);
+        border-color: var(--hgbrand-color-secondary);
+        font-size: 15px;
 
         &:focus:not(:disabled) {
             box-shadow: none;
         }
 
         &:hover {
-            color: var(--hgwp-color-primary);
+            color: var(--hgbrand-color-secondary);
         }
 
         &.current-tab {
             background-color: transparent;
-            color: var(--hgwp-color-primary);
-            // font-weight: bold;
+            color: var(--hgbrand-color-secondary);
             border-width: 1px 0;
         }
     }

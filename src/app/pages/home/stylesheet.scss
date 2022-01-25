@@ -43,6 +43,8 @@
                 align-items: center;
                 .dashicons, svg {
                     margin-right: 8px;
+                    color: var(--hgbrand-color-secondary);
+                    fill: var(--hgbrand-color-secondary);
                 }
             }
         }
