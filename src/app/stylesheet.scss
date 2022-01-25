@@ -40,12 +40,32 @@
     --hgwp-color-warning-dark: #E2C104;
 }
 
-.hgwpp, .hgwpp * {
-    box-sizing: border-box;
+body.toplevel_page_hostgator {
+    @media screen and (max-width:782px) {
+        .wp-responsive-open #wpbody {
+            right: -190px; // only when mobile admin menu open
+        }
+    }
+    #wpcontent {
+        padding-left: 0 !important;
+    }
+
+    #wpadminbar .ab-top-menu {
+        li {
+            transition: opacity .33s ease;
+        }
+        .hideme {
+            max-height: 32px;
+            opacity: 0;
+            overflow: hidden;
+            pointer-events: none;
+            width: 0;
+        }
+    }
 }
 
-#wpcontent {
-    padding-left: 0 !important;
+.hgwpp, .hgwpp * {
+    box-sizing: border-box;
 }
 
 .hgwp-app-body {
@@ -90,18 +110,6 @@
     }
 }
 
-#wpadminbar .ab-top-menu {
-    li {
-        transition: opacity .33s ease;
-    }
-    .hideme {
-        max-height: 32px;
-        opacity: 0;
-        overflow: hidden;
-        pointer-events: none;
-        width: 0;
-    }
-}
 
 .has-page-graphic {
     padding-bottom: 26rem;
