@@ -94,6 +94,9 @@ body.toplevel_page_hostgator {
 .components-button.has-icon {
     padding-right: 1rem;
 }
+.components-snackbar__content {
+    color: var(--hgbrand-color-background) !important;
+}
 
 .grid {
     display: grid;

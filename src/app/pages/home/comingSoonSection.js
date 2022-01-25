@@ -1,4 +1,4 @@
-import { ReactComponent as Graphic } from '../../../../assets/svg/snappy-holding-site-left.svg';
+import snappyUrl from '../../../../assets/svg/snappy-holding-site-left.svg';
 import {
 	Button,
 	Card,
@@ -39,8 +39,8 @@ const ComingSoonSection = () => {
 	};
 	const getComingSoonGraphicClass = () => {
 		return comingSoon
-			? 'hgwp-section-graphic'
-			: 'hgwp-section-graphic reverse';
+			? 'section-graphic'
+			: 'section-graphic reverse';
 	};
 	const getComingSoonButton = () => {
 		return comingSoon ? (
@@ -101,18 +101,19 @@ const ComingSoonSection = () => {
 		<>
 			{(comingSoon || (!comingSoon && wasComingSoon)) && (
 				<section className="hgwp-section coming-soon">
-					<Graphic className={getComingSoonGraphicClass()} />
+					<img src={snappyUrl} className={getComingSoonGraphicClass()} style={{ maxWidth: '220px', top: 0 }}/>
 					<Card size="large" className="hgwp-section-card">
 						<CardHeader>
 							<Heading level="2">
 								{getComingSoonHeadline()}
 							</Heading>
+							{getComingSoonButton()}
 						</CardHeader>
 						<CardBody>{getComingSoonBody()}</CardBody>
-						<CardFooter>
+						{/* <CardFooter>
 							<div className="hgwp-cardlist-content" />
-							{getComingSoonButton()}
-						</CardFooter>
+							
+						</CardFooter> */}
 					</Card>
 				</section>
 			)}
