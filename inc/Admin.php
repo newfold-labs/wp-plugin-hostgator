@@ -24,6 +24,10 @@ final class Admin {
 		\add_filter( 'plugin_action_links_hostgator-wordpress-plugin/hostgator-wordpress-plugin.php', array( __CLASS__, 'actions' ) );
 		/* Add inline style to hide subnav link */
 		\add_action( 'admin_head', array( __CLASS__, 'admin_nav_style' ) );
+		
+		if ( isset( $_GET['page'] ) && str_contains( filter_input( INPUT_GET, 'page', FILTER_SANITIZE_STRING ), 'hostgator' ) ) {
+			\add_action( 'admin_footer_text', array( __CLASS__, 'add_brand_to_admin_footer' ) );
+		}
 	}
 
 	/**
@@ -148,5 +152,16 @@ final class Admin {
 			),
 			$actions
 		);
+	}
+
+	/**
+	 * Filter WordPress Admin Footer Text "Thank you for creating with..."
+	 *
+	 * @param string $footer_text
+	 * @return string
+	 */
+	public static function add_brand_to_admin_footer( $footer_text ) {
+		$footer_text = \sprintf( \__( 'Thank you for creating with <a href="https://wordpress.org/">WordPress</a> and <a href="https://hostgator.com/about">HostGator</a>.', 'hostgator-wordpress-plugin' ) );
+		return $footer_text;
 	}
 } // END \HostGator\Admin
