@@ -27,6 +27,23 @@ final class Admin {
 	}
 
 	/**
+	 * Subpages to register with add_submenu_page().
+	 *
+	 * Order or array items determines menu order.
+	 *
+	 * @return array
+	 */
+	public static function subpages() {
+		return array(
+			'hostgator#/home'        => __( 'Home', 'hostgator' ),
+			'hostgator#/marketplace' => __( 'Marketplace', 'hostgator' ),
+			'hostgator#/performance' => __( 'Performance', 'hostgator' ),
+			'hostgator#/settings'    => __( 'Settings', 'hostgator' ),
+			'hostgator#/help'        => __( 'Help', 'hostgator' ),
+		);
+	}
+
+	/**
 	 * Add inline script to admin screens to hide extra link in subnav
 	 */
 	public static function admin_nav_style() {
@@ -51,51 +68,16 @@ final class Admin {
 			3
 		);
 
-		\add_submenu_page(
-			'hostgator',
-			__( 'Home', 'hostgator-wordpress-plugin' ),
-			__( 'Home', 'hostgator-wordpress-plugin' ),
-			'manage_options',
-			'hostgator#/home',
-			array( __CLASS__, 'render' )
-		);
-
-		\add_submenu_page(
-			'hostgator',
-			__( 'Marketplace', 'hostgator-wordpress-plugin' ),
-			__( 'Marketplace', 'hostgator-wordpress-plugin' ),
-			'manage_options',
-			'hostgator#/marketplace',
-			array( __CLASS__, 'render' )
-		);
-
-		\add_submenu_page(
-			'hostgator',
-			__( 'Performance', 'hostgator-wordpress-plugin' ),
-			__( 'Performance', 'hostgator-wordpress-plugin' ),
-			'manage_options',
-			'hostgator#/performance',
-			array( __CLASS__, 'render' )
-		);
-
-		\add_submenu_page(
-			'hostgator',
-			__( 'Settings', 'hostgator-wordpress-plugin' ),
-			__( 'Settings', 'hostgator-wordpress-plugin' ),
-			'manage_options',
-			'hostgator#/settings',
-			array( __CLASS__, 'render' )
-		);
-
-		\add_submenu_page(
-			'hostgator',
-			__( 'Help', 'hostgator-wordpress-plugin' ),
-			__( 'Help', 'hostgator-wordpress-plugin' ),
-			'manage_options',
-			'hostgator#/help',
-			array( __CLASS__, 'render' )
-		);
-
+		foreach ( self::subpages() as $route => $title ) {
+			\add_submenu_page(
+				'hostgator',
+				$title,
+				$title,
+				'manage_options',
+				$route,
+				array( __CLASS__, 'render' )
+			);
+		}
 	}
 
 	/**
