@@ -13,7 +13,7 @@ import { Icon, settings, store } from '@wordpress/icons';
 const SettingsSection = () => {
 	return (
 		<section className="hgwp-section">
-			<img src={graphicUrl} className='section-graphic' />
+			<img src={graphicUrl} className='section-graphic' alt={__('Settings illustration', 'hostgator-wordpress-plugin')} />
 			<Card size="large" className="hgwp-section-card">
 				<CardHeader>
 					<Heading level="2">

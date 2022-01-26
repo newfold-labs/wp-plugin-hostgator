@@ -13,7 +13,7 @@ const MarketplaceItem = ({ item }) => {
 		<Card>
 			{item.img && (
 				<CardMedia>
-					<img src={item.img} />
+					<img src={item.img} alt={item.title + ' thumbnail'} />
 				</CardMedia>
 			)}
 			<CardHeader>

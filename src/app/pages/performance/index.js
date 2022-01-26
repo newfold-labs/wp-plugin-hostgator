@@ -16,7 +16,7 @@ const Performance = () => {
 				<SettingsCallout />
 			</div>
 			<div>
-				<img src={graphicUrl} style={{ float: 'right' }} />
+				<img src={graphicUrl} style={{ float: 'right' }} alt={__('Performance illustration', 'hostgator-wordpress-plugin')} />
 			</div>
 		</div>
 	);

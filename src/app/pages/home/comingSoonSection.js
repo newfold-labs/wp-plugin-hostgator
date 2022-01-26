@@ -4,7 +4,6 @@ import {
 	Card,
 	CardBody,
 	CardHeader,
-	CardFooter,
 	__experimentalHeading as Heading,
 } from '@wordpress/components';
 import AppStore from '../../data/store';
@@ -101,7 +100,7 @@ const ComingSoonSection = () => {
 		<>
 			{(comingSoon || (!comingSoon && wasComingSoon)) && (
 				<section className="hgwp-section coming-soon">
-					<img src={snappyUrl} className={getComingSoonGraphicClass()} style={{ maxWidth: '220px', top: 0 }}/>
+					<img src={snappyUrl} className={getComingSoonGraphicClass()} style={{ maxWidth: '220px', top: 0 }} alt={__('HostGator`s Snappy holding site', 'hostagtor-wordpress-plugin')}/>
 					<Card size="large" className="hgwp-section-card">
 						<CardHeader>
 							<Heading level="2">
@@ -110,10 +109,6 @@ const ComingSoonSection = () => {
 							{getComingSoonButton()}
 						</CardHeader>
 						<CardBody>{getComingSoonBody()}</CardBody>
-						{/* <CardFooter>
-							<div className="hgwp-cardlist-content" />
-							
-						</CardFooter> */}
 					</Card>
 				</section>
 			)}

@@ -14,7 +14,7 @@ const Settings = () => {
 			<AutomaticUpdates />
 			{isWideViewport && (
 				<div>
-					<img src={graphicUrl} style={{ float: 'right'}} />
+					<img src={graphicUrl} style={{ float: 'right'}} alt={__('Settings illustration', 'hostgator-wordpress-plugin')} />
 				</div>
 			)}
 			<div>
