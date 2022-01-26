@@ -34,6 +34,9 @@ class AdminBar {
 				'id'    => 'hostgator-support',
 				'title' => __( 'Need help?', 'hostgator-wordpress-plugin' ),
 				'href'  => admin_url( 'admin.php?page=hostgator#/help' ),
+				'meta'  => array(
+					'title' => esc_attr__( 'We\'re here for you!', 'hostgator-wordpress-plugin' ),
+				),
 			)
 		);
 	}
