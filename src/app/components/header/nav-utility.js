@@ -1,4 +1,5 @@
 import { Icon } from '@wordpress/icons';
+import { Dashicon } from '@wordpress/components';
 import { NavLink } from 'react-router-dom';
 import { utilityRoutes } from '../../data/routes';
 
@@ -12,11 +13,19 @@ const NavUtility = () => (
 						aria-label={page.title}
 						title={page.title}
 					>
-						<Icon
-							icon={page.Icon}
-							className="hgwp-nav-utility-icon"
-							size={28}
-						/>
+						{ page.Icon && 
+							<Icon
+								icon={page.Icon}
+								className="hgwp-nav-utility-icon"
+								size={28}
+							/>
+						}
+						{ page.Dashicon && 
+							<Dashicon 
+								icon={page.Dashicon} 
+								className="hgwp-nav-utility-icon"
+							/>
+						}
 					</NavLink>
 			</li>
 		))}

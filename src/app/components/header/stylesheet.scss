@@ -59,8 +59,21 @@
 .hgwp-nav-utility {
 
     a {
+        text-decoration: none;
+
+        span.dashicon {
+            color: var(--hgbrand-color-primary);
+            width: 28px;
+            height: 28px;
+            font-size: 28px;
+        }
+
         &.active {
             fill: var(--hgbrand-color-secondary);
+
+            span.dashicon {
+                color: var(--hgbrand-color-secondary);
+            }
         }
     }
 }

@@ -1,5 +1,4 @@
 import { settings, trendingUp, help, grid, store } from '@wordpress/icons';
-
 import { Route, Routes } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
 import Home from '../pages/home';
@@ -63,7 +62,7 @@ export const routes = [
 		name: '/performance',
 		title: __('Performance', 'hostgator-wordpress-plugin'),
 		Component: Performance,
-		Icon: trendingUp,
+		Dashicon: 'performance',
 	},
 	{
 		name: '/settings',

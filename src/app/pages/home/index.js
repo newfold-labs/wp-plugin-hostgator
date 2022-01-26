@@ -6,7 +6,7 @@ import SettingsSection from './settingsSection';
 
 const Home = () => {
 	return (
-		<div className="hgwp-home ">
+		<div className="hgwp-home">
 			<ComingSoonSection />
 			<WebContentSection />
 			<SettingsSection />
