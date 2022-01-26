@@ -23,6 +23,8 @@ body.toplevel_page_hostgator {
     --wp-admin-theme-color: var(--hgbrand-color-primary);
     --wp-admin-theme-color-darker-10: var(--hgbrand-color-primary-dark);
     --wp-admin-theme-color-darker-20: var(--hgbrand-color-foreground);
+    --wp-admin-border-width-focus: 2px;
+    --hgbrand-focus: inset 0 0 0 1px #fff,0 0 0 var(--wp-admin-border-width-focus) var(--hgbrand-color-secondary);
     
     a {
         color: var(--hgbrand-color-secondary);
@@ -73,6 +75,14 @@ body.toplevel_page_hostgator {
     .components-button {
         font-weight: 800;
         font-size: 15px;
+
+        &:focus:not(:disabled) {
+            box-shadow: var(--hgbrand-focus);
+        }
+    }
+    a:focus {
+        box-shadow: var(--hgbrand-focus);
+        outline: 0;
     }
     .components-base-control__help,
     .components-radio-control__option label span span {

@@ -27,7 +27,7 @@
         font-size: 15px;
 
         &:focus:not(:disabled) {
-            box-shadow: none;
+            box-shadow: inset 0 1px var(--hgbrand-color-primary), inset 0 -1px var(--hgbrand-color-primary);
         }
 
         &:hover {
