@@ -44,7 +44,7 @@ function bluehost_add_tool_bar_items( WP_Admin_Bar $admin_bar ) {
 			$cs_args = array(
 				'id'    => 'hostgator-coming_soon',
 				'href'  => admin_url( 'admin.php?page=hostgator#/home' ),
-				'title' => '<div style="background-color: #E2C104; padding: 0 10px;color:#fff;">' . esc_html__( 'Coming Soon Active', 'hostgator-wordpress-plugin' ) . '</div>',
+				'title' => '<div class="hostgator-coming_soon-highlight">' . esc_html__( 'Coming Soon Active', 'hostgator-wordpress-plugin' ) . '</div>',
 				'meta'  => array(
 					'title' => esc_attr__( 'Launch Your Site', 'hostgator-wordpress-plugin' ),
 				),

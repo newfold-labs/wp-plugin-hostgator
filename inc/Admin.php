@@ -48,10 +48,17 @@ final class Admin {
 	}
 
 	/**
-	 * Add inline script to admin screens to hide extra link in subnav
+	 * Add inline script to admin screens 
+	 * 1. hide extra link in subnav
+	 * 2. style coming soon in adminbar
 	 */
 	public static function admin_nav_style() {
-		echo '<style>li#toplevel_page_hostgator > ul > li.wp-first-item { display: none !important;}</style>';
+		echo '<style>';
+		echo 'li#toplevel_page_hostgator > ul > li.wp-first-item { display: none !important; }';
+		echo '#wp-toolbar #wp-admin-bar-hostgator-coming_soon .ab-item { padding: 0; }';
+		echo '#wp-admin-bar-hostgator-coming_soon .hostgator-coming_soon-highlight{ background-color: #ffcf00; color: #191936; padding: 0 1rem; }';
+		echo '#wp-admin-bar-hostgator-coming_soon .hostgator-coming_soon-highlight:hover { color: #1f2044; }';
+		echo '</style>';
 	}
 
 	/**
