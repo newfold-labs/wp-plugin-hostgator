@@ -3,6 +3,7 @@ import graphicUrl from '../../../../assets/svg/a-illustration__checklist.svg';
 
 import CacheSettings from './cacheSettings';
 import ClearCache from './clearCache';
+import SettingsCallout from './settingsCallout';
 
 const Performance = () => {
 	return (
@@ -11,6 +12,8 @@ const Performance = () => {
 				<CacheSettings />
 				<br />
 				<ClearCache />
+				<br />
+				<SettingsCallout />
 			</div>
 			<div>
 				<img src={graphicUrl} style={{ float: 'right' }} />

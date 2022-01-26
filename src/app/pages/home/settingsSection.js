@@ -5,9 +5,10 @@ import {
 	CardBody,
 	CardHeader,
 	CardFooter,
+	Dashicon,
 	__experimentalHeading as Heading,
 } from '@wordpress/components';
-import { Icon, settings, trendingUp, store } from '@wordpress/icons';
+import { Icon, settings, store } from '@wordpress/icons';
 
 const SettingsSection = () => {
 	return (
@@ -51,7 +52,7 @@ const SettingsSection = () => {
 				<CardFooter>
 					<div className="hgwp-cardlist-content">
 						<Heading level="4">
-							<Icon icon={trendingUp} />{' '}
+							<Dashicon icon='performance' />{' '}
 							{__('Performance', 'hostgator-wordpress-plugin')}
 						</Heading>
 						<p>
@@ -64,7 +65,7 @@ const SettingsSection = () => {
 					<Button
 						variant="primary"
 						href="#/performance"
-						icon={trendingUp}
+						icon={<Dashicon icon='performance' />}
 					>
 						{__('Performance', 'hostgator-wordpress-plugin')}
 					</Button>
