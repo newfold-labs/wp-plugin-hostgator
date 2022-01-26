@@ -25,7 +25,7 @@ final class Admin {
 		/* Add inline style to hide subnav link */
 		\add_action( 'admin_head', array( __CLASS__, 'admin_nav_style' ) );
 		
-		if ( isset( $_GET['page'] ) && str_contains( filter_input( INPUT_GET, 'page', FILTER_SANITIZE_STRING ), 'hostgator' ) ) {
+		if ( isset( $_GET['page'] ) && strpos( filter_input( INPUT_GET, 'page', FILTER_SANITIZE_STRING ), 'hostgator' ) >= 0 ) {
 			\add_action( 'admin_footer_text', array( __CLASS__, 'add_brand_to_admin_footer' ) );
 		}
 	}
