@@ -4,6 +4,7 @@ import AutomaticUpdates from './automaticUpdates';
 import ComingSoon from './comingSoon';
 import CommentSettings from './commentSettings';
 import ContentSettings from './contentSettings';
+import PerformanceCallout from './performanceCallout';
 import { useViewportMatch } from '@wordpress/compose';
 
 const Settings = () => {
@@ -22,6 +23,7 @@ const Settings = () => {
 				<ContentSettings />
 			</div>
 			<CommentSettings />
+			<PerformanceCallout />
 			
 		</div>
 	);
