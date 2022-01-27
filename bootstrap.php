@@ -8,6 +8,7 @@ namespace HostGator;
 
 use Hostgator\UpgradeHandler;
 use Endurance_WP_Plugin_Updater\Updater;
+use WP_Forge\WPUpdateHandler\PluginUpdater;
 
 // Composer autoloader
 if ( is_readable( __DIR__ . '/vendor/autoload.php' ) ) {
@@ -19,10 +20,23 @@ if ( is_readable( __DIR__ . '/vendor/autoload.php' ) ) {
 	return;
 }
 
+$updateurl = 'https://hiive.cloud/workers/release-api/plugins/bluehost/hostgator-wordpress-plugin'; // Custom API GET endpoint
+$pluginUpdater = new PluginUpdater( HOSTGATOR_PLUGIN_FILE, $updateurl );
+$pluginUpdater->setDataMap(
+    [
+        'version'       => 'version.latest',
+        'download_link' => 'download',
+        'last_updated'  => 'updated',
+        'requires'      => 'requires.wp',
+        'requires_php'  => 'requires.php',
+        'tested'        => 'tested.wp',
+    ]
+);
+
 // Handle plugin updates
-if ( is_admin() || ( defined( 'DOING_CRON' ) && DOING_CRON ) || ( defined( 'WP_CLI' ) && WP_CLI ) ) {
-	new Updater( 'hostgator', 'hostgator-wordpress-plugin', 'hostgator-wordpress-plugin/hostgator-wordpress-plugin.php' );
-}
+// if ( is_admin() || ( defined( 'DOING_CRON' ) && DOING_CRON ) || ( defined( 'WP_CLI' ) && WP_CLI ) ) {
+// 	new Updater( 'hostgator', 'hostgator-wordpress-plugin', 'hostgator-wordpress-plugin/hostgator-wordpress-plugin.php' );
+// }
 
 // Handle any upgrade routines
 if ( is_admin() ) {

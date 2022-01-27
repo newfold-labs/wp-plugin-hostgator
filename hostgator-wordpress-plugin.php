@@ -11,11 +11,12 @@
  * Plugin Name:       HostGator WordPress Plugin
  * Plugin URI:        https://hostgator.com
  * Description:       WordPress plugin that integrates your WordPress site with the HostGator control panel, including performance, security, and update features.
- * Version:           1.0
- * Requires PHP:      7.0
- * Requires at least: 5.0
- * Author:            Newfold Digital
- * Author URI:        https://newfold.com
+ * Version:           0.9.0
+ * Requires at least: 4.7
+ * Requires PHP:      5.6
+ * Tested up to:      5.9
+ * Author:            HostGator
+ * Author URI:        https://hostgator.com
  * Text Domain:       hostgator-wordpress-plugin
  * Domain Path:       /languages
  * License:           GPL 2.0 or later
@@ -30,7 +31,7 @@ if ( defined( 'HOSTGATOR_PLUGIN_VERSION' ) ) {
 }
 
 // Define constants
-define( 'HOSTGATOR_PLUGIN_VERSION', '1.0.0' );
+define( 'HOSTGATOR_PLUGIN_VERSION', '0.9.0' );
 define( 'HOSTGATOR_PLUGIN_FILE', __FILE__ );
 define( 'HOSTGATOR_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'HOSTGATOR_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
@@ -60,9 +61,8 @@ $nfd_plugins_check = new NFD_Plugin_Compat_Check( __FILE__ );
 // Save val to abort loading if incompatabilities are found
 $pass_nfd_check = $nfd_plugins_check->check_plugin_requirements();
 
-// $pass_nfd_check = true;
-
 // Check PHP version before initializing to prevent errors if plugin is incompatible.
 if ( $pass_nfd_check && version_compare( PHP_VERSION, '5.3', '>=' ) ) {
 	require dirname( __FILE__ ) . '/bootstrap.php';
 }
+
