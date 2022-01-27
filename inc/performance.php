@@ -1,7 +1,10 @@
 <?php
 
+/**
+ * Callback to Toggle Mojo Cache level
+ */
 function mojo_cache_toggle() {
-	if ( isset( $_POST['cache_level'] ) && is_numeric( $_POST['cache_level'] ) ) {
+	if ( isset( $_POST['cache_level'] ) && is_numeric( $_POST['cache_level'] ) ) { // phpcs:ignore
 		$cache_level = (int) filter_input( INPUT_POST, 'cache_level', FILTER_SANITIZE_NUMBER_INT );
 		$response    = mojo_cache_add( 'page' );
 
@@ -35,7 +38,7 @@ add_action( 'wp_ajax_mm_cache', 'mojo_cache_toggle' );
  * Callback for adding caching MU plugins.
  *
  * @param string|null $type - Type of caching
- * @return void
+ * @return array
  */
 function mojo_cache_add( $type = null ) {
 	$cache = array();
@@ -65,7 +68,7 @@ function mojo_cache_add( $type = null ) {
 	if ( isset( $cache['code'] ) && isset( $cache['location'] ) ) {
 		$request = wp_remote_get( $cache['code'] );
 		if ( ! is_wp_error( $request ) ) {
-			file_put_contents( $cache['location'], $request['body'] );
+			file_put_contents( $cache['location'], $request['body'] ); // phpcs:ignore
 			if ( file_exists( $cache['location'] ) ) {
 				$response = array(
 					'status'  => 'success',
@@ -89,7 +92,7 @@ function mojo_cache_add( $type = null ) {
  * Callback for removing caching MU plugins.
  *
  * @param string|null $type - Type of caching
- * @return void
+ * @return array
  */
 function mojo_cache_remove( $type = null ) {
 	switch ( $type ) {

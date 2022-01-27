@@ -4,6 +4,7 @@
  *
  * @package HostGatorWordPressPlugin
  */
+
 namespace HostGator;
 
 use Hostgator\UpgradeHandler;
@@ -15,22 +16,22 @@ if ( is_readable( __DIR__ . '/vendor/autoload.php' ) ) {
 	require __DIR__ . '/vendor/autoload.php';
 } else {
 	if ( 'local' === wp_get_environment_type() ) {
-		wp_die( __('Please install the HostGator Plugin dependencies.', 'hostgator-wordpress-plugin') );
+		wp_die( esc_html( __( 'Please install the HostGator Plugin dependencies.', 'hostgator-wordpress-plugin' ) ) );
 	}
 	return;
 }
 
-$updateurl = 'https://hiive.cloud/workers/release-api/plugins/bluehost/hostgator-wordpress-plugin'; // Custom API GET endpoint
+$updateurl     = 'https://hiive.cloud/workers/release-api/plugins/bluehost/hostgator-wordpress-plugin'; // Custom API GET endpoint
 $pluginUpdater = new PluginUpdater( HOSTGATOR_PLUGIN_FILE, $updateurl );
 $pluginUpdater->setDataMap(
-    [
-        'version'       => 'version.latest',
-        'download_link' => 'download',
-        'last_updated'  => 'updated',
-        'requires'      => 'requires.wp',
-        'requires_php'  => 'requires.php',
-        'tested'        => 'tested.wp',
-    ]
+	array(
+		'version'       => 'version.latest',
+		'download_link' => 'download',
+		'last_updated'  => 'updated',
+		'requires'      => 'requires.wp',
+		'requires_php'  => 'requires.php',
+		'tested'        => 'tested.wp',
+	)
 );
 
 // Handle any upgrade routines

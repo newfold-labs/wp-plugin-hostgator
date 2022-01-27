@@ -24,13 +24,13 @@ class SettingsController extends \WP_REST_Controller {
 			'/settings',
 			array(
 				array(
-					'methods'  => \WP_REST_Server::READABLE,
-					'callback' => array( $this, 'get_item' ),
+					'methods'             => \WP_REST_Server::READABLE,
+					'callback'            => array( $this, 'get_item' ),
 					'permission_callback' => array( $this, 'check_permission' ),
 				),
 				array(
-					'methods'  => \WP_REST_Server::EDITABLE,
-					'callback' => array( $this, 'update_item' ),
+					'methods'             => \WP_REST_Server::EDITABLE,
+					'callback'            => array( $this, 'update_item' ),
 					'permission_callback' => array( $this, 'check_permission' ),
 				),
 			)

@@ -1,4 +1,9 @@
 <?php
+/**
+ * Base functions
+ *
+ * @package           HostGatorWordPressPlugin
+ */
 
 /**
  * Check if plugin install date exists.
@@ -26,6 +31,7 @@ function bh_get_plugin_install_date() {
 function bh_set_plugin_install_date( $value ) {
 	update_option( 'bh_plugin_install_date', $value, true );
 }
+
 
 /**
  * Get the number of days since the plugin was installed.
