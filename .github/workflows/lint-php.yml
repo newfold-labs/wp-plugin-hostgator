@@ -22,7 +22,13 @@ jobs:
         with:
           php-version: '7.4'
           coverage: none
-          tools: phpcs
+          tools: composer, phpcs
+
+      - name: Validate composer.json and composer.lock
+        run: composer validate
+        
+      - name: Install PHP Dependencies
+        run: composer install --no-progress
 
       - name: Get changed files
         uses: technote-space/get-diff-action@v3
