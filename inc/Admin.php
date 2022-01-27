@@ -76,7 +76,7 @@ final class Admin {
 			'hostgator',
 			array( __CLASS__, 'render' ),
 			$snappy,
-			3
+			0
 		);
 
 		foreach ( self::subpages() as $route => $title ) {
