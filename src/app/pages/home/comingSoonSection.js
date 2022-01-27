@@ -4,6 +4,7 @@ import {
 	Card,
 	CardBody,
 	CardHeader,
+	CardFooter,
 	__experimentalHeading as Heading,
 } from '@wordpress/components';
 import AppStore from '../../data/store';
@@ -56,15 +57,6 @@ const ComingSoonSection = () => {
 		) : (
 			<>
 				<Button
-					variant="link"
-					onClick={() => {
-						setComingSoon(() => false);
-						setWasComingSoon(() => false);
-					}}
-				>
-					{__('Dismiss', 'hostgator-wordpress-plugin')}
-				</Button>
-				<Button
 					variant="secondary"
 					icon="no-alt"
 					onClick={() => {
@@ -73,6 +65,15 @@ const ComingSoonSection = () => {
 					}}
 				>
 					{__('Undo Launch', 'hostgator-wordpress-plugin')}
+				</Button>
+				<Button
+					variant="link"
+					onClick={() => {
+						setComingSoon(() => false);
+						setWasComingSoon(() => false);
+					}}
+				>
+					{__('Dismiss', 'hostgator-wordpress-plugin')}
 				</Button>
 			</>
 		);
@@ -100,15 +101,15 @@ const ComingSoonSection = () => {
 		<>
 			{(comingSoon || (!comingSoon && wasComingSoon)) && (
 				<section className="hgwp-section coming-soon">
-					<img src={snappyUrl} className={getComingSoonGraphicClass()} style={{ maxWidth: '220px', top: 0 }} alt={__('HostGator`s Snappy holding site', 'hostagtor-wordpress-plugin')}/>
+					<img src={snappyUrl} className={getComingSoonGraphicClass()} style={{ top: 0 }} alt={__('HostGator`s Snappy holding site', 'hostagtor-wordpress-plugin')}/>
 					<Card size="large" className="hgwp-section-card">
 						<CardHeader>
 							<Heading level="2">
 								{getComingSoonHeadline()}
 							</Heading>
-							{getComingSoonButton()}
 						</CardHeader>
 						<CardBody>{getComingSoonBody()}</CardBody>
+						<CardFooter>{getComingSoonButton()}</CardFooter>
 					</Card>
 				</section>
 			)}

@@ -33,11 +33,6 @@ $pluginUpdater->setDataMap(
     ]
 );
 
-// Handle plugin updates
-// if ( is_admin() || ( defined( 'DOING_CRON' ) && DOING_CRON ) || ( defined( 'WP_CLI' ) && WP_CLI ) ) {
-// 	new Updater( 'hostgator', 'hostgator-wordpress-plugin', 'hostgator-wordpress-plugin/hostgator-wordpress-plugin.php' );
-// }
-
 // Handle any upgrade routines
 if ( is_admin() ) {
 
