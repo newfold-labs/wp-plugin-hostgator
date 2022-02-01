@@ -18,11 +18,10 @@
 		<style type="text/css">
 			body {
 				background-color: #fff;
-				background-image: url("<?php echo esc_url( HOSTGATOR_PLUGIN_URL . 'assets/images/cs-hostgator-bg.jpg' ); ?>");
-				background-position: top right;
-				background-repeat: no-repeat;
-				font-family: "Open Sans", sans-serif;
+				color: #1F2044;
+				font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 				overflow-x: hidden;
+				margin: 0;
 			}
 
 			* {
@@ -32,45 +31,60 @@
 			}
 
 			input {
-				font-family: "Open Sans", sans-serif;
+				font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 			}
 
 			::-webkit-input-placeholder {
-				color: #9DAFBD;
+				color: #686C6E;
 			}
 
 			::-moz-placeholder {
-				color: #9DAFBD;
+				color: #686C6E;
 			}
 
 			:-ms-input-placeholder {
-				color: #9DAFBD;
+				color: #686C6E;
 			}
 
 			:-moz-placeholder {
-				color: #9DAFBD;
+				color: #686C6E;
 			}
 
 			#wrap {
-				max-width: 560px;
-				margin: 320px auto 120px;
-				color: #444;
+				align-items: center;
+				background-image: url("<?php echo esc_url( HOSTGATOR_PLUGIN_URL . 'assets/svg/a-illustration__shape.svg' ); ?>");
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				display: flex;
+				justify-content: center;
+				min-height: 100vh;
+			}
+
+			.content {
+				background-image: url("<?php echo esc_url( HOSTGATOR_PLUGIN_URL . 'assets/svg/a-illustration__wordpress-snappy.svg' ); ?>");
+				background-position: center top;
+				background-repeat: no-repeat;
+				background-size: 283px 202px;
+				flex: 1;
+				margin: auto 5%;
+				padding: 210px 0 0;
 				text-align: center;
+				max-width: 420px;
 			}
 
 			#wrap h1 {
-				font-weight: 300;
-				font-size: 28px;
+				font-size: 16px;
+				font-weight: 700;
+				letter-spacing: 1px;
 			}
 
 			#wrap h2 {
-				font-weight: 300;
-				font-size: 38px;
-			}
-
-			#wrap p {
-				color: #666;
-				line-height: 1.5;
+				color: #FE3E15;
+				font-size: 35px;
+				font-weight: 700;
+				letter-spacing: -1px;
+				line-height: 54px;
 			}
 
 			footer {
@@ -121,9 +135,9 @@
 				background: #2e66ba;
 				color: #fff;
 				box-shadow: none;
-				border-radius: 3px;
 				text-decoration: none;
 				margin-top: 60px;
+				transition: all .2s ease;
 			}
 
 			.btn:hover {
@@ -132,21 +146,7 @@
 				color: #2e66ba;
 			}
 
-			.hg_subscription_widget {
-			}
-
-			.hg_subscription_widget h2.widgettitle {
-				color: #5B5B5B;
-				font-size: 38px;
-				letter-spacing: -1px;
-				line-height: 54px;
-				margin-bottom: 10px;
-			}
-
 			.hg_subscription_widget #subscribe-text p {
-				color: #5B5B5B;
-				font-size: 16px;
-				letter-spacing: 0;
 				line-height: 24px;
 				margin-bottom: 25px;
 			}
@@ -169,154 +169,57 @@
 
 			.hg_subscription_widget #error {
 				background: #FFEAE9;
-				border: 1px solid #F72F26;
+				border: 1px solid #FE3E15;
 			}
 
 			.hg_subscription_widget form .hg-inputs {
 				display: inline-block;
 				position: relative;
 				vertical-align: middle;
-				-webkit-transition: all 0.1s ease-in-out;
-				-moz-transition: all 0.1s ease-in-out;
-				-o-transition: all 0.1s ease-in-out;
-				transition: all 0.1s ease-in-out;
-			}
-
-			.hg_subscription_widget form .hg-inputs.active {
-				-webkit-transition: all 0.1s ease-in-out;
-				-moz-transition: all 0.1s ease-in-out;
-				-o-transition: all 0.1s ease-in-out;
-				transition: all 0.1s ease-in-out;
-			}
-
-			.hg_subscription_widget form .hg-inputs.email.active #hg-subscribe-label {
-				color: #5B5B5B;
-				clip: auto !important;
-				height: auto !important;
-				position: absolute !important;
-				overflow: visible !important;
-				width: auto !important;
-				left: 16px;
-				font-size: 11px;
-				top: 2px;
+				transition: all 0.1s ease;
 			}
 
 			.hg_subscription_widget form .hg-inputs.email input[type="email"] {
 				background-color: #fff;
-				background-image: url("<?php echo esc_url( HOSTGATOR_PLUGIN_URL . 'assets/svg/icon-email.svg' ); ?>");
-				background-position: 10px center;
-				background-repeat: no-repeat;
 				border: 1px solid #5B5B5B;
-				border-radius: 3px;
 				color: #5B5B5B;
 				font-size: 11px;
-				margin-right: 6px;
-				min-width: 300px;
-				padding: 14px 15px 14px 45px;
+				min-width: 240px;
+				padding: 14px 15px;
 				max-height: 45px;
-				-webkit-transition: all 0.05s ease-in-out;
-				-moz-transition: all 0.05s ease-in-out;
-				-o-transition: all 0.05s ease-in-out;
-				transition: all 0.05s ease-in-out;
-			}
-
-			.hg_subscription_widget form .hg-inputs.email.active input[type="email"] {
-				background-image: none;
-				font-size: 14px;
-				padding: 16px 15px 12px 15px;
-				max-height: 45px;
+				transition: all 0.05s ease;
 			}
 
 			.hg_subscription_widget form .hg-inputs.submit input[type="submit"] {
-				background-color: #3575D3;
+				background-color: #5EADF3;
 				border: none;
-				border-radius: 4px;
 				color: #fff;
 				font-size: 14px;
 				font-weight: 600;
 				line-height: 13px;
 				margin: 0;
 				padding: 15px 30px;
-				border: 1px solid #3575D3;
-				-webkit-transition: all 0.1s ease-in-out;
-				-moz-transition: all 0.1s ease-in-out;
-				-o-transition: all 0.1s ease-in-out;
-				transition: all 0.1s ease-in-out;
+				transition: all 0.1s ease;
 			}
 
 			.hg_subscription_widget form .hg-inputs.submit input[type="submit"]:hover {
-				background-color: #5B5B5B;
-				border-color: #5B5B5B;
-				-webkit-transition: all 0.1s ease-in-out;
-				-moz-transition: all 0.1s ease-in-out;
-				-o-transition: all 0.1s ease-in-out;
-				transition: all 0.1s ease-in-out;
+				background-color: #2E93EE;
+				transition: all 0.1s ease;
 			}
 
-			@media (min-width: 1920px) {
-				body {
-					background-position-x: center;
-				}
-			}
-
-			@media (max-width: 1024px) {
-				#wrap {
-					margin: 240px auto 120px;
-				}
-			}
-
-			@media (max-width: 960px) {
-				#wrap {
-					margin: 120px auto;
-				}
-			}
-
-			@media (max-width: 640px) {
-				#wrap {
-					margin: 60px auto 120px;
-					max-width: 100%;
-					color: #444;
-					padding: 0 20px;
-				}
-
-				.btn {
-					margin-top: 10px;
-				}
-
-				.hg_subscription_widget form .hg-inputs,
-				.hg_subscription_widget form .hg-inputs.email input[type="email"],
-				.hg_subscription_widget form .hg-inputs.submit input[type="submit"] {
-					width: 100%;
-				}
-
-				.hg_subscription_widget form .hg-inputs.email input[type="email"] {
-					min-width: 0;
-				}
-
-				.hg_subscription_widget form .hg-inputs {
-					margin-bottom: 10px;
-				}
-			}
-
-			@media (max-width: 360px) {
-				#wrap h1 {
-					font-size: 26px;
-				}
-
-				.btn {
-					margin-top: 40px;
-				}
-			}
 		</style>
 	</head>
 	<body>
 		<div id="wrap">
 			<main class="content">
 
-				<?php if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'subscriptions' ) ) { ?>
-
-					<div class="hg_subscription_widget">
-						<h2 class="widgettitle"><?php esc_html_e( 'Coming Soon!', 'hostgator-wordpress-plugin' ); ?></h2>
+				
+				<div class="hg_subscription_widget">
+					
+					<h1><?php esc_html_e( 'A New WordPress Site', 'hostgator-wordpress-plugin' ); ?></h1>
+					<h2><?php esc_html_e( 'Coming Soon!', 'hostgator-wordpress-plugin' ); ?></h2>
+					
+					<?php if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'subscriptions' ) ) { ?>
 						<div id="subscribe-text">
 							<p><?php esc_html_e( 'Be the first to know when we launch, enter your email address and we will let you know when we go live and any future website updates we have.', 'hostgator-wordpress-plugin' ); ?></p>
 						</div>
@@ -361,18 +264,9 @@
 
 							})(document);
 						</script>
+
+						<?php } //endif ?>
 					</div>
-
-				<?php } else { ?>
-
-					<h1><?php esc_html_e( 'A New WordPress Site', 'hostgator-wordpress-plugin' ); ?></h1>
-					<h2><?php esc_html_e( 'Coming Soon!', 'hostgator-wordpress-plugin' ); ?></h2>
-					<a class="btn" href="<?php echo esc_url( wp_login_url() ); ?>">
-						<?php esc_html_e( 'Admin Login', 'hostgator-wordpress-plugin' ); ?>
-					</a>
-
-				<?php } ?>
-
 			</main>
 		</div>
 		<footer>
@@ -443,13 +337,6 @@
 					});
 				});
 
-				var input = $('#subscribe-email');
-				input.focusin(function () {
-					$(this).addClass('active');
-				});
-				input.focusout(function () {
-					$(this).removeClass('active');
-				});
 			});
 		</script>
 	</body>
