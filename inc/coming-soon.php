@@ -38,7 +38,7 @@ add_action( 'admin_notices', 'mojo_cs_notice_display' );
  *
  * @param WP_Admin_Bar $admin_bar An instance of the WP_Admin_Bar class.
  */
-function bluehost_add_tool_bar_items( WP_Admin_Bar $admin_bar ) {
+function hostgator_add_tool_bar_items( WP_Admin_Bar $admin_bar ) {
 	if ( current_user_can( 'manage_options' ) ) {
 		if ( 'true' === get_option( 'mm_coming_soon', 'false' ) ) {
 			$cs_args = array(
@@ -54,7 +54,7 @@ function bluehost_add_tool_bar_items( WP_Admin_Bar $admin_bar ) {
 	}
 }
 
-add_action( 'admin_bar_menu', 'bluehost_add_tool_bar_items', 100 );
+add_action( 'admin_bar_menu', 'hostgator_add_tool_bar_items', 100 );
 
 /**
  * Load the coming soon page, if necessary.
@@ -93,9 +93,6 @@ function mojo_coming_soon_subscribe() {
 
 	} else {
 
-		// Initialize JetPack_Subscriptions
-		$jetpack = Jetpack_Subscriptions::init();
-
 		if ( ! is_email( $email ) ) {
 
 			$a_response['message'] = __( 'Please provide a valid email address', 'hostgator-wordpress-plugin' );
@@ -103,8 +100,15 @@ function mojo_coming_soon_subscribe() {
 
 		} else {
 
+			// Initialize JetPack_Subscriptions
+			$jetpack = Jetpack_Subscriptions::init();
 			// Get JetPack response and subscribe email if response is true
-			$response = $jetpack->subscribe( $email, 0, false );
+			$response = $jetpack->subscribe( $email, 0, false,
+				// See Jetpack subscribe `extra_data` attribute
+				array(
+					'server_data'    => jetpack_subscriptions_cherry_pick_server_data(),
+				)
+			);
 
 			if ( isset( $response[0]->errors ) ) {
 

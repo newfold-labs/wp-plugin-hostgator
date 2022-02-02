@@ -14,7 +14,7 @@
 		<meta name="robots" content="noindex, nofollow" />
 		<script
 			src="<?php echo esc_url( includes_url( 'js/jquery/jquery.js' ) ); //phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedScript ?>"></script>
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet"><?php //phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedStylesheet ?>
+		
 		<style type="text/css">
 			body {
 				background-color: #fff;
@@ -206,16 +206,12 @@
 				background-color: #2E93EE;
 				transition: all 0.1s ease;
 			}
-
 		</style>
 	</head>
 	<body>
 		<div id="wrap">
 			<main class="content">
-
-				
 				<div class="hg_subscription_widget">
-					
 					<h1><?php esc_html_e( 'A New WordPress Site', 'hostgator-wordpress-plugin' ); ?></h1>
 					<h2><?php esc_html_e( 'Coming Soon!', 'hostgator-wordpress-plugin' ); ?></h2>
 					
@@ -249,22 +245,6 @@
 								<input class="btn" type="submit" value="Subscribe" name="hg_subscriptions_widget">
 							</span>
 						</form>
-						<script>
-							// Custom functionality for safari and IE
-							(function (d) {
-								// In case the placeholder functionality is available we remove labels
-								if (('placeholder' in d.createElement('input'))) {
-									var label = d.querySelector('label[for=subscribe-field-hg]');
-									label.style.clip = 'rect(1px, 1px, 1px, 1px)';
-									label.style.position = 'absolute';
-									label.style.height = '1px';
-									label.style.width = '1px';
-									label.style.overflow = 'hidden';
-								}
-
-							})(document);
-						</script>
-
 						<?php } //endif ?>
 					</div>
 			</main>
@@ -312,27 +292,16 @@
 							'nonce': nonce
 						},
 						success: function (response) {
-
 							var status = response.status;
-
 							if (status == 'success') {
-
 								$('#success').show();
-
 							} else if (status == 'active') {
-
 								$('#error').show().text('<?php echo esc_js( __( 'Your email address is already subscribed to this website. Stay tuned to your inbox for our updates or try a different email address.', 'hostgator-wordpress-plugin' ) ); ?>');
-
 							} else if (status == 'invalid_email') {
-
 								$('#error').show().text('<?php echo esc_js( __( 'There was an error with your submission and you were not subscribed. Please try again with a valid email address.', 'hostgator-wordpress-plugin' ) ); ?>');
-
 							} else {
-
 								$('#error').show();
-
 							}
-
 						},
 					});
 				});
