@@ -14,6 +14,7 @@ import {
 	dispatchUpdateSnackbar,
 	comingSoonAdminbarToggle
 } from '../../util/helpers';
+import Accordion from '../../components/accordion';
 
 const ComingSoon = () => {
 	const { store, setStore } = useContext(AppStore);
@@ -73,6 +74,19 @@ const ComingSoon = () => {
 						setComingSoon((value) => !value);
 					}}
 				/>
+				{ comingSoon && (
+					<Accordion
+						summary={__(
+							'Pro Tip: Begin collecting subscribers',
+							'hostgator-wordpress-plugin'
+						)}
+					>
+						<p>{__(
+							'First, activate the "Jetpack" plugin, connect your site, and enable the "Subscriptions" module. Then, users can subsribe to be notified when you launch and publish new content.',
+							'hostgator-wordpress-plugin'
+						)}</p>
+					</Accordion>
+				)}
 			</CardBody>
 		</Card>
 	);

@@ -23,6 +23,7 @@ const Settings = () => {
 				<ContentSettings />
 			</div>
 			<CommentSettings />
+			<br />
 			<PerformanceCallout />
 			
 		</div>
