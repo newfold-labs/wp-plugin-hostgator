@@ -10,8 +10,8 @@
  *
  * @return bool
  */
-function bh_has_plugin_install_date() {
-	return ! empty( get_option( 'bh_plugin_install_date', '' ) );
+function hg_has_plugin_install_date() {
+	return ! empty( get_option( 'hg_plugin_install_date', '' ) );
 }
 
 /**
@@ -19,8 +19,8 @@ function bh_has_plugin_install_date() {
  *
  * @return string
  */
-function bh_get_plugin_install_date() {
-	return (string) get_option( 'bh_plugin_install_date', gmdate( 'U' ) );
+function hg_get_plugin_install_date() {
+	return (string) get_option( 'hg_plugin_install_date', gmdate( 'U' ) );
 }
 
 /**
@@ -28,8 +28,8 @@ function bh_get_plugin_install_date() {
  *
  * @param string $value Date in Unix timestamp format.
  */
-function bh_set_plugin_install_date( $value ) {
-	update_option( 'bh_plugin_install_date', $value, true );
+function hg_set_plugin_install_date( $value ) {
+	update_option( 'hg_plugin_install_date', $value, true );
 }
 
 
@@ -38,40 +38,44 @@ function bh_set_plugin_install_date( $value ) {
  *
  * @return int
  */
-function bh_get_days_since_plugin_install_date() {
-	return absint( ( gmdate( 'U' ) - bh_get_plugin_install_date() ) / DAY_IN_SECONDS );
+function hg_get_days_since_plugin_install_date() {
+	return absint( ( gmdate( 'U' ) - hg_get_plugin_install_date() ) / DAY_IN_SECONDS );
 }
 
 /**
- * Get the client IP address.
- *
- * @return string
+ * Basic setup
  */
-function bh_get_client_ip() {
-
-	// Default to REMOTE_ADDR
-	$ip = ( isset( $_SERVER['REMOTE_ADDR'] ) ) ? $_SERVER['REMOTE_ADDR'] : null;
-
-	$proxy_headers = array(
-		'HTTP_CF_CONNECTING_IP', // CloudFlare
-		'HTTP_FASTLY_CLIENT_IP', // Fastly
-		'HTTP_INCAP_CLIENT_IP', // Incapsula
-		'HTTP_TRUE_CLIENT_IP', // CloudFlare Enterprise
-		'HTTP_X_FORWARDED_FOR', // Any proxy
-		'HTTP_X_SUCURI_CLIENTIP', // Sucuri
-	);
-
-	// Check for alternate headers indicating a forwarded IP address
-	foreach ( $proxy_headers as $proxy_header ) {
-		if ( ! empty( $_SERVER[ $proxy_header ] ) ) {
-			$forwarded_ips = explode( ',', $_SERVER[ $proxy_header ] );
-			$forwarded_ip  = array_shift( $forwarded_ips );
-			if ( $forwarded_ip ) {
-				$ip = $forwarded_ip;
-				break;
-			}
-		}
+function hg_setup() {
+	if ( ( '' === get_option( 'mm_master_aff' ) || false === get_option( 'mm_master_aff' ) ) && defined( 'MMAFF' ) ) {
+		update_option( 'mm_master_aff', MMAFF );
 	}
-
-	return $ip;
+	$install_date = get_option( 'mm_install_date' );
+	if ( empty( $install_date ) ) {
+		update_option( 'mm_install_date', date( 'M d, Y' ) );
+		$event                            = array(
+			't'    => 'event',
+			'ec'   => 'plugin_status',
+			'ea'   => 'installed',
+			'el'   => 'Install date: ' . get_option( 'mm_install_date', date( 'M d, Y' ) ),
+			'keep' => false,
+		);
+		$events                           = get_option( 'mm_cron', array() );
+		$events['hourly'][ $event['ea'] ] = $event;
+		update_option( 'mm_cron', $events );
+	}
+	if ( ! hg_has_plugin_install_date() ) {
+		$date = false;
+		if ( ! empty( $install_date ) ) {
+			$date = DateTime::createFromFormat( 'M d, Y', $install_date );
+		}
+		hg_set_plugin_install_date( $date ? $date->format( 'U' ) : gmdate( 'U' ) );
+	}
 }
+
+add_action( 'admin_init', 'hg_setup' );
+
+
+function hg_install_date_filter( $install_date ) {
+    return hg_get_plugin_install_date();
+}
+add_filter( 'nfd_install_date_filter', 'hg_install_date_filter' );

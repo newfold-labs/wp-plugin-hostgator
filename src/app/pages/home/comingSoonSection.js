@@ -64,7 +64,7 @@ const ComingSoonSection = () => {
 						setWasComingSoon(() => true);
 					}}
 				>
-					{__('Undo Launch', 'hostgator-wordpress-plugin')}
+					{__('Restore Coming Soon', 'hostgator-wordpress-plugin')}
 				</Button>
 				<Button
 					variant="link"
