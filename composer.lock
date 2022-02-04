@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "436a3f07e3e40a845294c3e721556a6a",
+    "content-hash": "ee943deec8b780e32809a819cd465db2",
     "packages": [
         {
             "name": "bluehost/endurance-wp-module-loader",
@@ -193,16 +193,16 @@
         },
         {
             "name": "endurance/wp-module-data",
-            "version": "1.8.1",
+            "version": "1.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bluehost/endurance-wp-module-data.git",
-                "reference": "1205d43b19bec7e1ef45009c888bab72140486ab"
+                "reference": "1426e30456c1b0be25ba39a3ca916504f66fcf1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bluehost/endurance-wp-module-data/zipball/1205d43b19bec7e1ef45009c888bab72140486ab",
-                "reference": "1205d43b19bec7e1ef45009c888bab72140486ab",
+                "url": "https://api.github.com/repos/bluehost/endurance-wp-module-data/zipball/1426e30456c1b0be25ba39a3ca916504f66fcf1d",
+                "reference": "1426e30456c1b0be25ba39a3ca916504f66fcf1d",
                 "shasum": ""
             },
             "require-dev": {
@@ -230,10 +230,10 @@
             ],
             "description": "Endurance Data Module",
             "support": {
-                "source": "https://github.com/bluehost/endurance-wp-module-data/tree/1.8.1",
+                "source": "https://github.com/bluehost/endurance-wp-module-data/tree/1.8.2",
                 "issues": "https://github.com/bluehost/endurance-wp-module-data/issues"
             },
-            "time": "2021-12-09T19:57:06+00:00"
+            "time": "2022-02-04T20:13:09+00:00"
         },
         {
             "name": "pimple/pimple",
