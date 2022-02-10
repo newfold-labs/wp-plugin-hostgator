@@ -1,6 +1,6 @@
 <?php
 /**
- * This file adds custo api endpoints for the plugin.
+ * This file sets up custom api controllers for the plugin.
  *
  * @package HostGatorWordPressPlugin
  */

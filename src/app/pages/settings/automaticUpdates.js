@@ -7,6 +7,7 @@ import {
 	__experimentalHeading as Heading,
 } from '@wordpress/components';
 import { useState } from '@wordpress/element';
+import { useEffect } from 'react';
 import { useUpdateEffect } from 'react-use';
 import AppStore from '../../data/store';
 import {
@@ -16,6 +17,9 @@ import {
 
 const AutomaticUpdates = () => {
 	const { store, setStore } = useContext(AppStore);
+	const [autoUpdatesAll, setAutoUpdatesAll] = useState(
+		store.autoUpdatesMajorCore && store.autoUpdatesPlugins && store.autoUpdatesThemes ? true : false
+	);
 	const [autoUpdatesMajorCore, setAutoUpdatesCore] = useState(
 		store.autoUpdatesMajorCore
 	);
@@ -26,6 +30,22 @@ const AutomaticUpdates = () => {
 		store.autoUpdatesThemes
 	);
 
+	const getAllNoticeText = () => {
+		return autoUpdatesAll
+			? __('Everything will auto-update.', 'hostgator-wordpress-plugin')
+			: __('Custom auto-update settings.', 'hostgator-wordpress-plugin');
+	};
+	const getAllHelpText = () => {
+		return autoUpdatesAll
+			? __(
+					'Yay! Everything will automatically update.',
+					'hostgator-wordpress-plugin'
+			  )
+			: __(
+					'Custom automatic update settings.',
+					'hostgator-wordpress-plugin'
+			  );
+	};
 	const getCoreNoticeText = () => {
 		return autoUpdatesMajorCore
 			? __('Core will auto-update.', 'hostgator-wordpress-plugin')
@@ -81,13 +101,32 @@ const AutomaticUpdates = () => {
 			  );
 	};
 
+	useEffect(() => {
+		if ( autoUpdatesMajorCore && autoUpdatesPlugins && autoUpdatesThemes ) {
+			setAutoUpdatesAll( true );
+		} else {
+			setAutoUpdatesAll( false );
+		}
+	}, [autoUpdatesMajorCore, autoUpdatesPlugins, autoUpdatesThemes]);
+
+	useUpdateEffect(() => {
+		dispatchUpdateSnackbar( getAllNoticeText() );
+		if ( autoUpdatesAll ) {
+			setAutoUpdatesCore( autoUpdatesAll );
+			setAutoUpdatesPlugins( autoUpdatesAll );
+			setAutoUpdatesThemes( autoUpdatesAll );
+		} else {
+			// don't set anything, just enable them
+		}
+	}, [autoUpdatesAll]);
+
 	useUpdateEffect(() => {
 		hostgatorSettingsApiFetch({ autoUpdatesMajorCore }).then(() => {
 			setStore({
 				...store,
 				autoUpdatesMajorCore,
 			});
-			dispatchUpdateSnackbar(getCoreNoticeText());
+			dispatchUpdateSnackbar( getCoreNoticeText() );
 		});
 	}, [autoUpdatesMajorCore]);
 
@@ -97,7 +136,7 @@ const AutomaticUpdates = () => {
 				...store,
 				autoUpdatesPlugins,
 			});
-			dispatchUpdateSnackbar(getPluginsNoticeText());
+			dispatchUpdateSnackbar( getPluginsNoticeText() );
 		});
 	}, [autoUpdatesPlugins]);
 
@@ -107,7 +146,7 @@ const AutomaticUpdates = () => {
 				...store,
 				autoUpdatesThemes,
 			});
-			dispatchUpdateSnackbar(getThemesNoticeText());
+			dispatchUpdateSnackbar( getThemesNoticeText() );
 		});
 	}, [autoUpdatesThemes]);
 
@@ -127,8 +166,22 @@ const AutomaticUpdates = () => {
 			<CardDivider />
 			<CardBody>
 				<ToggleControl
+					label={__('Everything', 'hostgator-wordpress-plugin')}
+					checked={autoUpdatesAll}
+					help={getAllHelpText()}
+					onChange={() => {
+						setAutoUpdatesAll((value) => !value);
+					}}
+				/>
+			</CardBody>
+			<CardDivider />
+			<CardBody 
+				className={ autoUpdatesAll  ? 'disabled' : '' }
+			>
+				<ToggleControl
 					label={__('Core', 'hostgator-wordpress-plugin')}
 					checked={autoUpdatesMajorCore}
+					disabled={autoUpdatesAll}
 					help={getCoreHelpText()}
 					onChange={() => {
 						setAutoUpdatesCore((value) => !value);
@@ -136,10 +189,13 @@ const AutomaticUpdates = () => {
 				/>
 			</CardBody>
 			<CardDivider />
-			<CardBody>
+			<CardBody 
+				className={ autoUpdatesAll  ? 'disabled' : '' }
+			>
 				<ToggleControl
 					label={__('Plugins', 'hostgator-wordpress-plugin')}
 					checked={autoUpdatesPlugins}
+					disabled={autoUpdatesAll}
 					help={getPluginsHelpText()}
 					onChange={() => {
 						setAutoUpdatesPlugins((value) => !value);
@@ -147,10 +203,13 @@ const AutomaticUpdates = () => {
 				/>
 			</CardBody>
 			<CardDivider />
-			<CardBody>
+			<CardBody 
+				className={ autoUpdatesAll  ? 'disabled' : '' }
+			>
 				<ToggleControl
 					label={__('Themes', 'hostgator-wordpress-plugin')}
 					checked={autoUpdatesThemes}
+					disabled={autoUpdatesAll}
 					help={getThemesHelpText()}
 					onChange={() => {
 						setAutoUpdatesThemes((value) => !value);

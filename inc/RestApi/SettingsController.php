@@ -86,7 +86,7 @@ class SettingsController extends \WP_REST_Controller {
 					case 'autoUpdatesPlugins':
 						// Keep the WordPress Core setting in sync.
 						if ( $new_value ) {
-							bh_sync_plugin_update_settings();
+							\HostGator\sync_plugin_update_settings();
 						}
 
 						$new_value = ( $new_value ) ? 'true' : 'false';
@@ -95,7 +95,7 @@ class SettingsController extends \WP_REST_Controller {
 					case 'autoUpdatesThemes':
 						// Keep the WordPress Core setting in sync.
 						if ( $new_value ) {
-							bh_sync_theme_update_settings();
+							\HostGator\sync_theme_update_settings();
 						}
 
 						$new_value = ( $new_value ) ? 'true' : 'false';
