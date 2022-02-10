@@ -51,12 +51,12 @@ function hg_setup() {
 	}
 	$install_date = get_option( 'mm_install_date' );
 	if ( empty( $install_date ) ) {
-		update_option( 'mm_install_date', date( 'M d, Y' ) );
+		update_option( 'mm_install_date', date( 'M d, Y' ) ); // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
 		$event                            = array(
 			't'    => 'event',
 			'ec'   => 'plugin_status',
 			'ea'   => 'installed',
-			'el'   => 'Install date: ' . get_option( 'mm_install_date', date( 'M d, Y' ) ),
+			'el'   => 'Install date: ' . get_option( 'mm_install_date', date( 'M d, Y' ) ),  // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
 			'keep' => false,
 		);
 		$events                           = get_option( 'mm_cron', array() );
@@ -75,7 +75,13 @@ function hg_setup() {
 add_action( 'admin_init', 'hg_setup' );
 
 
+/**
+ * Filter the date used in data module
+ *
+ * @param string $install_date value from hook
+ * @return int
+ */
 function hg_install_date_filter( $install_date ) {
-    return hg_get_plugin_install_date();
+	return hg_get_plugin_install_date();
 }
 add_filter( 'nfd_install_date_filter', 'hg_install_date_filter' );

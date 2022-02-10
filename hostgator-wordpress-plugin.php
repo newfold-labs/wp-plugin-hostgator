@@ -11,7 +11,7 @@
  * Plugin Name:       HostGator
  * Plugin URI:        https://hostgator.com
  * Description:       WordPress plugin that integrates your WordPress site with the HostGator control panel, including performance, security, and update features.
- * Version:           0.9.3
+ * Version:           0.9.4
  * Requires at least: 4.7
  * Requires PHP:      5.6
  * Tested up to:      5.9
@@ -31,7 +31,7 @@ if ( defined( 'HOSTGATOR_PLUGIN_VERSION' ) ) {
 }
 
 // Define constants
-define( 'HOSTGATOR_PLUGIN_VERSION', '0.9.3' );
+define( 'HOSTGATOR_PLUGIN_VERSION', '0.9.4' );
 define( 'HOSTGATOR_PLUGIN_FILE', __FILE__ );
 define( 'HOSTGATOR_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'HOSTGATOR_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
@@ -54,13 +54,13 @@ if ( 'plugins.php' === $pagenow ) {
 
 	$plugin_check->check_plugin_requirements();
 }
-	
+
 // Check NFD plugin incompaatibilities
 require_once HOSTGATOR_PLUGIN_DIR . '/inc/plugin-nfd-compat-check.php';
-$nfd_plugins_check = new NFD_Plugin_Compat_Check( HOSTGATOR_PLUGIN_FILE );
+$nfd_plugins_check                       = new NFD_Plugin_Compat_Check( HOSTGATOR_PLUGIN_FILE );
 $nfd_plugins_check->incompatible_plugins = array( 'Bluehost' => 'bluehost-wordpress-plugin/bluehost-wordpress-plugin.php' );
-$nfd_plugins_check->legacy_plugins = array( 'MOJO Marketplace' => 'mojo-marketplace-wp-plugin/mojo-marketplace.php' );
-$pass_nfd_check = $nfd_plugins_check->check_plugin_requirements();
+$nfd_plugins_check->legacy_plugins       = array( 'MOJO Marketplace' => 'mojo-marketplace-wp-plugin/mojo-marketplace.php' );
+$pass_nfd_check                          = $nfd_plugins_check->check_plugin_requirements();
 
 // Check PHP version before initializing to prevent errors if plugin is incompatible.
 if ( $pass_nfd_check && version_compare( PHP_VERSION, '5.3', '>=' ) ) {

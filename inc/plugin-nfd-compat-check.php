@@ -33,11 +33,12 @@ class NFD_Plugin_Compat_Check {
 
 	/**
 	 * Global list of plugins with associated error (to prevent duplicate notices)
-	 * 
+	 *
 	 * conflict {
-	 * 	plugin: slug,
+	 *  plugin: slug,
 	 *  error: WP_Error
 	 * }
+	 *
 	 * @var array
 	 */
 	public $conflicts;
@@ -71,12 +72,13 @@ class NFD_Plugin_Compat_Check {
 		// require_once ABSPATH . '/wp-includes/option.php';
 		$this->slug      = $this->get_plugin_slug( $file );
 		$this->name      = $this->get_plugin_name( $file );
-		$this->conflicts = get_option('nfd_plugins_compat_check_conflicts', array());
+		$this->conflicts = get_option( 'nfd_plugins_compat_check_conflicts', array() );
 	}
 
 	/**
 	 * Get the plugin name from the plugin file headers
 	 *
+	 * @param string $file Plugin file
 	 * @return string
 	 */
 	public function get_plugin_name( $file ) {
@@ -85,14 +87,15 @@ class NFD_Plugin_Compat_Check {
 	}
 
 	/**
-	 * Get the plugin file from the plugin path
+	 * Get the plugin slug from the plugin path
 	 *
+	 * @param string $file Plugin file
 	 * @return string
 	 */
 	public function get_plugin_slug( $file ) {
 		$wp = ABSPATH . 'wp-content/plugins/';
-		if ( strpos($file, $wp) === 0 ) {
-			$file = substr( $file, strlen($wp) );
+		if ( strpos( $file, $wp ) === 0 ) {
+			$file = substr( $file, strlen( $wp ) );
 		}
 		return $file;
 	}
@@ -104,7 +107,7 @@ class NFD_Plugin_Compat_Check {
 	public function check_plugin_requirements() {
 
 		if ( ! empty( $this->incompatible_plugins ) ) {
-			$this->check_incompatible_plugins();			
+			$this->check_incompatible_plugins();
 
 			// Incompatible plugin error
 			if ( $this->has_errors() ) {
@@ -133,7 +136,7 @@ class NFD_Plugin_Compat_Check {
 			}
 		}
 
-		// Pre-existing conflict found 
+		// Pre-existing conflict found
 		// and the errors are loaded from option without displaying the notice yet
 		if ( $this->has_errors() ) {
 			add_action( 'admin_notices', array( $this, 'admin_notices' ) );
@@ -148,13 +151,13 @@ class NFD_Plugin_Compat_Check {
 	 */
 	public function check_incompatible_plugins() {
 		foreach ( $this->incompatible_plugins as $incompatible_name => $incompatible_file ) {
-			$conflict_plugins = array_column($this->conflicts, 'slug');
-			if ( function_exists( 'is_plugin_active' ) && is_plugin_active( $incompatible_file ) && !in_array( $this->slug, $conflict_plugins) ) {
+			$conflict_plugins = array_column( $this->conflicts, 'slug' );
+			if ( function_exists( 'is_plugin_active' ) && is_plugin_active( $incompatible_file ) && ! in_array( $this->slug, $conflict_plugins, true ) ) {
 				$error = new \WP_Error();
 				$error->add(
-					'nfd_plugin_incompatible', 
-					/* translators: 1: plugin name 2: incompatible plugin name */
+					'nfd_plugin_incompatible',
 					sprintf(
+						/* translators: 1: plugin name 2: incompatible plugin name */
 						__( '"%1$s" has self-deactivated. It is incompatible with "%2$s".', 'hostgator-wordpress-plugin' ),
 						$this->name,
 						$incompatible_name
@@ -163,9 +166,9 @@ class NFD_Plugin_Compat_Check {
 				$this->conflicts[] = array(
 					'slug'   => $this->slug,
 					'source' => $this->slug,
-					'error'  => $error
+					'error'  => $error,
 				);
-				update_option('nfd_plugins_compat_check_conflicts', $this->conflicts);
+				update_option( 'nfd_plugins_compat_check_conflicts', $this->conflicts );
 			}
 		}
 	}
@@ -175,13 +178,13 @@ class NFD_Plugin_Compat_Check {
 	 */
 	public function check_legacy_plugins() {
 		foreach ( $this->legacy_plugins as $legacy_name => $legacy_file ) {
-			$conflict_plugins = array_column($this->conflicts, 'slug');
-			if ( function_exists( 'is_plugin_active' ) && is_plugin_active( $legacy_file ) && !in_array( $legacy_file, $conflict_plugins) ) {
+			$conflict_plugins = array_column( $this->conflicts, 'slug' );
+			if ( function_exists( 'is_plugin_active' ) && is_plugin_active( $legacy_file ) && ! in_array( $legacy_file, $conflict_plugins, true ) ) {
 				$error = new \WP_Error();
 				$error->add(
 					'nfd_plugin_legacy',
-					/* translators: 1: legacy plugin name 2: plugin name */
 					sprintf(
+						/* translators: 1: legacy plugin name 2: plugin name */
 						__( '"%1$s" has been deactivated. It is incompatible with "%2$s".', 'hostgator-wordpress-plugin' ),
 						$legacy_name,
 						$this->name
@@ -190,9 +193,9 @@ class NFD_Plugin_Compat_Check {
 				$this->conflicts[] = array(
 					'slug'   => $legacy_file,
 					'source' => $this->slug,
-					'error'  => $error
+					'error'  => $error,
 				);
-				update_option('nfd_plugins_compat_check_conflicts', $this->conflicts);
+				update_option( 'nfd_plugins_compat_check_conflicts', $this->conflicts );
 			}
 		}
 	}
@@ -203,7 +206,7 @@ class NFD_Plugin_Compat_Check {
 	 * @return bool
 	 */
 	public function has_errors() {
-		foreach( $this->conflicts as $conflict) {
+		foreach ( $this->conflicts as $conflict ) {
 			if ( $conflict['source'] === $this->slug ) {
 				return true;
 			}
@@ -215,7 +218,7 @@ class NFD_Plugin_Compat_Check {
 	 * Deactivate the plugin
 	 */
 	public function deactivate() {
-		$conflict_plugins = array_column($this->conflicts, 'slug');
+		$conflict_plugins = array_column( $this->conflicts, 'slug' );
 		if ( function_exists( 'deactivate_plugins' ) ) {
 			deactivate_plugins( $conflict_plugins );
 		}
@@ -225,16 +228,15 @@ class NFD_Plugin_Compat_Check {
 	 * Display error messages in the admin
 	 */
 	public function admin_notices() {
-		$conflict_errors = array_column($this->conflicts, 'error');
+		$conflict_errors = array_column( $this->conflicts, 'error' );
 		foreach ( $conflict_errors as $error ) {
 			if ( \is_wp_error( $error ) ) {
 				echo '<div class="notice notice-error is-dismissible">';
 				echo '<p>' . esc_html( $error->get_error_message() ) . '</p>';
 				echo '</div>';
-				// continue; // only show first error - they tend to stack up.
 			}
 		}
-		delete_option('nfd_plugins_compat_check_conflicts');
+		delete_option( 'nfd_plugins_compat_check_conflicts' );
 	}
 
 }
