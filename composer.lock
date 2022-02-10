@@ -361,12 +361,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "WP_Forge\\Helpers\\": "includes"
-                },
                 "files": [
                     "includes/functions.php"
-                ]
+                ],
+                "psr-4": {
+                    "WP_Forge\\Helpers\\": "includes"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
