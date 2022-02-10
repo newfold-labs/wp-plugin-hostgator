@@ -5,9 +5,9 @@
  * @package HostGatorWordPressPlugin
  */
 
- namespace HostGator;
- 
- /**
+namespace HostGator;
+
+/**
  * Callback to Toggle Mojo Cache level
  */
 function mojo_cache_toggle() {

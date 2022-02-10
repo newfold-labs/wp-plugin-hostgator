@@ -5,7 +5,7 @@
  * @package HostGatorWordPressPlugin
  */
 
- namespace HostGator;
+namespace HostGator;
 
 /**
  * Check if plugin install date exists.

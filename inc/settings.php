@@ -6,8 +6,7 @@
  * @package HostGatorWordPressPlugin
  */
 
- namespace HostGator;
-
+namespace HostGator;
 
 /**
  * Filter wp revisions according to plugin setting

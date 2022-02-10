@@ -7,7 +7,7 @@
  * @package hostgator-wordpress-plugin
  */
 
- namespace HostGator;
+namespace HostGator;
 
 /**
  * Convert string boolean values to actual booleans.

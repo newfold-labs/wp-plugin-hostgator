@@ -5,7 +5,7 @@
  * @package HostGatorWordPressPlugin
  */
 
- namespace HostGator;
+namespace HostGator;
 
 /**
  * Instantiate controllers and register routes.

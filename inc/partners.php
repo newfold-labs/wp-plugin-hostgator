@@ -5,7 +5,7 @@
  * @package HostGatorWordPressPlugin
  */
 
- namespace HostGator;
+namespace HostGator;
 
 /**
  * WPForms upgrade affiliate link.

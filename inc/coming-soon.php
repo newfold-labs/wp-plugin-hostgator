@@ -5,7 +5,7 @@
  * @package HostGatorWordPressPlugin
  */
 
- namespace HostGator;
+namespace HostGator;
 
 /**
  * Display coming soon notice.
@@ -38,7 +38,7 @@ add_action( 'admin_notices', __NAMESPACE__ . '\\mojo_cs_notice_display' );
 /**
  * Customize the admin bar.
  *
- * @param WP_Admin_Bar $admin_bar An instance of the WP_Admin_Bar class.
+ * @param \WP_Admin_Bar $admin_bar An instance of the WP_Admin_Bar class.
  */
 function hostgator_add_tool_bar_items( \WP_Admin_Bar $admin_bar ) {
 	if ( current_user_can( 'manage_options' ) ) {

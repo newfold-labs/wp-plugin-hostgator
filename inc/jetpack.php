@@ -5,7 +5,7 @@
  * @package HostGatorWordPressPlugin
  */
 
- namespace HostGator;
+namespace HostGator;
 
 /**
  * Customize the default Jetpack modules that should be enabled.

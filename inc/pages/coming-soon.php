@@ -22,7 +22,6 @@
 		<meta name="robots" content="noindex, nofollow" />
 		<script
 			src="<?php echo esc_url( includes_url( 'js/jquery/jquery.js' ) ); //phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedScript ?>"></script>
-		
 		<style type="text/css">
 			body {
 				background-color: #fff;
@@ -221,8 +220,7 @@
 			<main class="content">
 				<div class="hg_subscription_widget">
 					<h1><?php esc_html_e( 'A New WordPress Site', 'hostgator-wordpress-plugin' ); ?></h1>
-					<h2><?php esc_html_e( 'Coming Soon!', 'hostgator-wordpress-plugin' ); ?></h2>
-					
+					<h2><?php esc_html_e( 'Coming Soon!', 'hostgator-wordpress-plugin' ); ?></h2>	
 					<?php if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'subscriptions' ) ) { ?>
 						<div id="subscribe-text">
 							<p><?php esc_html_e( 'Be the first to know when we launch, enter your email address and we will let you know when we go live and any future website updates we have.', 'hostgator-wordpress-plugin' ); ?></p>
