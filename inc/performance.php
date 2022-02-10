@@ -1,6 +1,13 @@
 <?php
-
 /**
+ * Manage legacy mojo performance settings.
+ *
+ * @package HostGatorWordPressPlugin
+ */
+
+ namespace HostGator;
+ 
+ /**
  * Callback to Toggle Mojo Cache level
  */
 function mojo_cache_toggle() {
@@ -32,7 +39,7 @@ function mojo_cache_toggle() {
 	}
 	die;
 }
-add_action( 'wp_ajax_mm_cache', 'mojo_cache_toggle' );
+add_action( 'wp_ajax_mm_cache', __NAMESPACE__ . '\\mojo_cache_toggle' );
 
 /**
  * Callback for adding caching MU plugins.

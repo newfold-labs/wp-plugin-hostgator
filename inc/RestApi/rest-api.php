@@ -1,9 +1,16 @@
 <?php
+/**
+ * This file adds custo api endpoints for the plugin.
+ *
+ * @package HostGatorWordPressPlugin
+ */
+
+ namespace HostGator;
 
 /**
  * Instantiate controllers and register routes.
  */
-function hostgator_init_rest_api() {
+function init_rest_api() {
 
 	$controllers = array(
 		'HostGator\\RestApi\\CachingController',
@@ -21,4 +28,4 @@ function hostgator_init_rest_api() {
 	}
 }
 
-add_action( 'rest_api_init', 'hostgator_init_rest_api' );
+add_action( 'rest_api_init', __NAMESPACE__ . '\\init_rest_api' );

@@ -2,8 +2,10 @@
 /**
  * Base functions
  *
- * @package           HostGatorWordPressPlugin
+ * @package HostGatorWordPressPlugin
  */
+
+ namespace HostGator;
 
 /**
  * Check if plugin install date exists.
@@ -72,7 +74,7 @@ function hg_setup() {
 	}
 }
 
-add_action( 'admin_init', 'hg_setup' );
+add_action( 'admin_init', __NAMESPACE__ . '\\hg_setup' );
 
 
 /**
@@ -84,4 +86,4 @@ add_action( 'admin_init', 'hg_setup' );
 function hg_install_date_filter( $install_date ) {
 	return hg_get_plugin_install_date();
 }
-add_filter( 'nfd_install_date_filter', 'hg_install_date_filter' );
+add_filter( 'nfd_install_date_filter', __NAMESPACE__ . '\\hg_install_date_filter' );

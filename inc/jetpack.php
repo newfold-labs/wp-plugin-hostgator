@@ -1,4 +1,11 @@
 <?php
+/**
+ * This file customizes Jetpack modules and blocks.
+ *
+ * @package HostGatorWordPressPlugin
+ */
+
+ namespace HostGator;
 
 /**
  * Customize the default Jetpack modules that should be enabled.
@@ -7,14 +14,14 @@
  *
  * @return array
  */
-function hostgator_customize_jetpack_default_modules( $modules ) {
+function customize_jetpack_default_modules( $modules ) {
 	$modules[] = 'photon';
 	$modules[] = 'sso';
 
 	return array_unique( $modules );
 }
 
-add_filter( 'jetpack_get_default_modules', 'hostgator_customize_jetpack_default_modules' );
+add_filter( 'jetpack_get_default_modules', __NAMESPACE__ . '\\customize_jetpack_default_modules' );
 
 /**
  * Unregister Jetpack blocks that we do not want enabled by default.
@@ -23,7 +30,7 @@ add_filter( 'jetpack_get_default_modules', 'hostgator_customize_jetpack_default_
  *
  * @return array
  */
-function hostgator_jetpack_unregister_blocks( $blocks ) {
+function jetpack_unregister_blocks( $blocks ) {
 	$blocks_to_deregister = array(
 		'mailchimp',
 		'revue',
@@ -37,4 +44,4 @@ function hostgator_jetpack_unregister_blocks( $blocks ) {
 	return $blocks;
 }
 
-add_filter( 'jetpack_set_available_blocks', 'hostgator_jetpack_unregister_blocks' );
+add_filter( 'jetpack_set_available_blocks', __NAMESPACE__ . '\\jetpack_unregister_blocks' );

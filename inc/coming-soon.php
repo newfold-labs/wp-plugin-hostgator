@@ -2,8 +2,10 @@
 /**
  * This file adds a coming soon page for new installs.
  *
- * @package HostGator
+ * @package HostGatorWordPressPlugin
  */
+
+ namespace HostGator;
 
 /**
  * Display coming soon notice.
@@ -30,7 +32,7 @@ function mojo_cs_notice_display() {
 		<?php
 	}
 }
-add_action( 'admin_notices', 'mojo_cs_notice_display' );
+add_action( 'admin_notices', __NAMESPACE__ . '\\mojo_cs_notice_display' );
 
 
 /**
@@ -38,7 +40,7 @@ add_action( 'admin_notices', 'mojo_cs_notice_display' );
  *
  * @param WP_Admin_Bar $admin_bar An instance of the WP_Admin_Bar class.
  */
-function hostgator_add_tool_bar_items( WP_Admin_Bar $admin_bar ) {
+function hostgator_add_tool_bar_items( \WP_Admin_Bar $admin_bar ) {
 	if ( current_user_can( 'manage_options' ) ) {
 		if ( 'true' === get_option( 'mm_coming_soon', 'false' ) ) {
 			$cs_args = array(
@@ -54,7 +56,7 @@ function hostgator_add_tool_bar_items( WP_Admin_Bar $admin_bar ) {
 	}
 }
 
-add_action( 'admin_bar_menu', 'hostgator_add_tool_bar_items', 100 );
+add_action( 'admin_bar_menu', __NAMESPACE__ . '\\hostgator_add_tool_bar_items', 100 );
 
 /**
  * Load the coming soon page, if necessary.
@@ -68,7 +70,7 @@ function mojo_cs_load() {
 		}
 	}
 }
-add_action( 'template_redirect', 'mojo_cs_load' );
+add_action( 'template_redirect', __NAMESPACE__ . '\\mojo_cs_load' );
 
 /**
  * Render the coming soon page.
@@ -101,7 +103,7 @@ function mojo_coming_soon_subscribe() {
 		} else {
 
 			// Initialize JetPack_Subscriptions
-			$jetpack = Jetpack_Subscriptions::init();
+			$jetpack = \Jetpack_Subscriptions::init();
 			// Get JetPack response and subscribe email if response is true
 			$response = $jetpack->subscribe(
 				$email,
@@ -134,8 +136,8 @@ function mojo_coming_soon_subscribe() {
 	}
 
 }
-add_action( 'wp_ajax_mojo_coming_soon_subscribe', 'mojo_coming_soon_subscribe' );
-add_action( 'wp_ajax_nopriv_mojo_coming_soon_subscribe', 'mojo_coming_soon_subscribe' );
+add_action( 'wp_ajax_mojo_coming_soon_subscribe', __NAMESPACE__ . '\\mojo_coming_soon_subscribe' );
+add_action( 'wp_ajax_nopriv_mojo_coming_soon_subscribe', __NAMESPACE__ . '\\mojo_coming_soon_subscribe' );
 
 /**
  * When the coming soon module is enabled, add a filter to override Jetpack to prevent emails from being sent.
@@ -146,12 +148,12 @@ function mojo_coming_soon_prevent_emails() {
 	if ( 'true' === $enabled ) {
 		add_filter(
 			'jetpack_subscriptions_exclude_all_categories_except',
-			'mojo_coming_soon_prevent_emails_return_array'
+			__NAMESPACE__ . '\\mojo_coming_soon_prevent_emails_return_array'
 		);
 	}
 
 }
-add_action( 'plugins_loaded', 'mojo_coming_soon_prevent_emails' );
+add_action( 'plugins_loaded', __NAMESPACE__ . '\\mojo_coming_soon_prevent_emails' );
 
 /**
  * Prevent emails from being sent.
