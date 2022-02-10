@@ -101,7 +101,12 @@ const WebHostingSection = () => {
 						</Heading>
 						<p>{__('24/7/365 support. We work when you work.', 'hostgator-wordpress-plugin')}</p>
 					</div>
-					<Button variant="secondary" href="#/help" icon="sos">
+					<Button
+						variant="secondary"
+						href="#/help"
+						onClick={() => {window.scrollTo(0, 0)}}
+						icon="sos"
+					>
 						{__('Get Help', 'hostgator-wordpress-plugin')}
 					</Button>
 				</CardFooter>

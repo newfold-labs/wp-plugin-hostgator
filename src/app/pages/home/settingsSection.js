@@ -45,7 +45,12 @@ const SettingsSection = () => {
 							)}
 						</p>
 					</div>
-					<Button variant="primary" href="#/settings" icon={settings}>
+					<Button 
+						variant="primary"
+						href="#/settings"
+						onClick={() => {window.scrollTo(0, 0)}}
+						icon={settings}
+					>
 						{__('Settings', 'hostgator-wordpress-plugin')}
 					</Button>
 				</CardFooter>
@@ -65,6 +70,7 @@ const SettingsSection = () => {
 					<Button
 						variant="primary"
 						href="#/performance"
+						onClick={() => {window.scrollTo(0, 0)}}
 						icon={<Dashicon icon='performance' />}
 					>
 						{__('Performance', 'hostgator-wordpress-plugin')}
@@ -83,7 +89,12 @@ const SettingsSection = () => {
 							)}
 						</p>
 					</div>
-					<Button variant="primary" href="#/marketplace" icon={store}>
+					<Button 
+						variant="primary"
+						href="#/marketplace"
+						onClick={() => {window.scrollTo(0, 0)}}
+						icon={store}
+					>
 						{__('Visit Marketplace', 'hostgator-wordpress-plugin')}
 					</Button>
 				</CardFooter>

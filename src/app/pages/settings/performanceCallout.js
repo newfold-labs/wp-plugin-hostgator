@@ -27,6 +27,7 @@ const PerformanceCallout = () => {
                 <Button
                     variant="primary"
                     href="#/performance"
+					onClick={() => {window.scrollTo(0, 0)}}
                     icon={<Dashicon icon='performance' />}
                 >
                     {__('Performance', 'hostgator-wordpress-plugin')}

@@ -27,6 +27,7 @@ const SettingsCallout = () => {
                 <Button
                     variant="primary"
                     href="#/settings"
+					onClick={() => {window.scrollTo(0, 0)}}
                     icon={settings}
                 >
                     {__('Settings', 'hostgator-wordpress-plugin')}
