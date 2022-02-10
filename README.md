@@ -2,11 +2,11 @@
     <img src="https://www.hostgator.com/static/cs/img/logos/nav-for-light.svg" alt="HostGator Logo" title="HostGator" align="right" height="32" />
 </a>
 
-# hostgator-wordpress-plugin
+# Hostgator Wordpress Plugin
 WordPress plugin that integrates a WordPress site with the HostGator control panel, including performance, security, and update features.
 
-$ Installation
-Find the `hostgator-wordpress-plugin.zip` asset for your version at: https://github.com/bluehost/hostgator-wordpress-plugin/releases
+# Installation
+Find the `hostgator-wordpress-plugin.zip` asset for your version at: https://github.com/bluehost/hostgator-wordpress-plugin/releases.
 Alternatively, check the updater endpoint for the latest version at: https://hiive.cloud/workers/release-api/plugins/bluehost/hostgator-wordpress-plugin, this also includes a download link to the latest zip file.
 
 # Releasing Updates
