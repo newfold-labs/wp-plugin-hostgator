@@ -7,8 +7,10 @@ import { SnackbarList, Spinner } from '@wordpress/components';
 import classnames from 'classnames';
 import Header from './components/header';
 import AppRoutes from './data/routes';
+import ErrorCard from './components/errorCard';
 import { useDispatch, useSelect } from '@wordpress/data';
 import { useEffect } from 'react';
+import { ErrorBoundary } from 'react-error-boundary';
 import { store as noticesStore } from '@wordpress/notices';
 import { setActiveSubnav } from './util/helpers';
 
@@ -54,7 +56,9 @@ const AppBody = (props) => {
 			<Header />
 			<div className="hgwp-app-body">
 				<div className="hgwp-app-body-inner">
-					{(true === booted && <AppRoutes />) || <Spinner />}
+					<ErrorBoundary FallbackComponent={<ErrorCard />}>
+						{(true === booted && <AppRoutes />) || <Spinner />}
+					</ErrorBoundary>
 				</div>
 			</div>
 

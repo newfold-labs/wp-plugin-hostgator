@@ -11,7 +11,7 @@ import { settings } from '@wordpress/icons';
 const SettingsCallout = () => {
 
 	return (
-		<Card>
+		<Card className="short">
 			<CardHeader>
 				<Heading level="3">
 					{__('Settings', 'hostgator-wordpress-plugin')}

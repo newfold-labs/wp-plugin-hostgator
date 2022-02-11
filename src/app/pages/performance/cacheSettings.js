@@ -8,6 +8,7 @@ import {
 import { useState } from '@wordpress/element';
 import { useUpdateEffect } from 'react-use';
 import AppStore from '../../data/store';
+import ErrorCard from '../../components/errorCard';
 import {
 	hostgatorSettingsApiFetch,
 	dispatchUpdateSnackbar,
@@ -16,7 +17,8 @@ import {
 const CacheSettings = () => {
 	const { store, setStore } = useContext(AppStore);
 	const [cacheLevel, setCacheLevel] = useState(store.cacheLevel);
-
+	const [isError, setError] = useState(false);
+	
 	const cacheOptions = [
 		{
 			label: (
@@ -114,7 +116,7 @@ const CacheSettings = () => {
 	};
 
 	useUpdateEffect(() => {
-		hostgatorSettingsApiFetch({ cacheLevel }).then(() => {
+		hostgatorSettingsApiFetch({ cacheLevel }, setError, (response) => {
 			setStore({
 				...store,
 				cacheLevel,
@@ -123,6 +125,9 @@ const CacheSettings = () => {
 		});
 	}, [cacheLevel]);
 
+	if ( isError ) {
+		return <ErrorCard error={isError} />
+	}
 	return (
 		<Card>
 			<CardHeader>

@@ -11,6 +11,7 @@ import {
 import { useState } from '@wordpress/element';
 import { useUpdateEffect } from 'react-use';
 import AppStore from '../../data/store';
+import ErrorCard from '../../components/errorCard';
 import {
 	hostgatorSettingsApiFetch,
 	dispatchUpdateSnackbar,
@@ -27,6 +28,8 @@ const CommentSettings = () => {
 	const [commentsPerPage, setNumCommentsPerPage] = useState(
 		store.commentsPerPage
 	);
+	const [isError, setError] = useState(false);
+
 	const disableCommentsHelpText = () => {
 		return disableCommentsOldPosts
 			? __(
@@ -130,7 +133,7 @@ const CommentSettings = () => {
 	useUpdateEffect(() => {
 		hostgatorSettingsApiFetch({
 			disableCommentsOldPosts: disableCommentsOldPosts ? 'true' : 'false',
-		}).then(() => {
+		}, setError, (response) => {
 			setStore({
 				...store,
 				disableCommentsOldPosts,
@@ -140,7 +143,7 @@ const CommentSettings = () => {
 	}, [disableCommentsOldPosts]);
 
 	useUpdateEffect(() => {
-		hostgatorSettingsApiFetch({ closeCommentsDays }).then(() => {
+		hostgatorSettingsApiFetch({ closeCommentsDays }, setError, (response) => {
 			setStore({
 				...store,
 				closeCommentsDays,
@@ -150,7 +153,7 @@ const CommentSettings = () => {
 	}, [closeCommentsDays]);
 
 	useUpdateEffect(() => {
-		hostgatorSettingsApiFetch({ commentsPerPage }).then(() => {
+		hostgatorSettingsApiFetch({ commentsPerPage }, setError, (response) => {
 			setStore({
 				...store,
 				commentsPerPage,
@@ -159,6 +162,9 @@ const CommentSettings = () => {
 		});
 	}, [commentsPerPage]);
 
+	if ( isError ) {
+		return <ErrorCard error={isError} />
+	}
 	return (
 		<Card>
 			<CardHeader>

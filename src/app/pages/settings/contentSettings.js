@@ -8,6 +8,7 @@ import {
 import { useState } from '@wordpress/element';
 import { useUpdateEffect } from 'react-use';
 import AppStore from '../../data/store';
+import ErrorCard from '../../components/errorCard';
 import {
 	hostgatorSettingsApiFetch,
 	dispatchUpdateSnackbar,
@@ -22,6 +23,8 @@ const ContentSettings = () => {
 		store.emptyTrashDays
 	);
 	let numTrashWeeks = Math.floor(emptyTrashDays / 7);
+	const [isError, setError] = useState(false);
+
 	const contentRevisionsLabelText = () => {
 		// `Keep ${contentRevisions} latest revision(s)`
 		return (
@@ -93,7 +96,7 @@ const ContentSettings = () => {
 	};
 
 	useUpdateEffect(() => {
-		hostgatorSettingsApiFetch({ contentRevisions }).then(() => {
+		hostgatorSettingsApiFetch({ contentRevisions }, setError, (response) => {
 			setStore({
 				...store,
 				contentRevisions,
@@ -104,7 +107,7 @@ const ContentSettings = () => {
 
 	useUpdateEffect(() => {
 		numTrashWeeks = Math.floor(emptyTrashDays / 7);
-		hostgatorSettingsApiFetch({ emptyTrashDays }).then(() => {
+		hostgatorSettingsApiFetch({ emptyTrashDays }, setError, (response) => {
 			setStore({
 				...store,
 				emptyTrashDays,
@@ -113,6 +116,9 @@ const ContentSettings = () => {
 		});
 	}, [emptyTrashDays]);
 
+	if ( isError ) {
+		return <ErrorCard error={isError} />
+	}
 	return (
 		<Card>
 			<CardHeader>

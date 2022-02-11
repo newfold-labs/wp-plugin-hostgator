@@ -11,7 +11,7 @@ import {
 const PerformanceCallout = () => {
 
 	return (
-		<Card>
+		<Card className="short">
 			<CardHeader>
 				<Heading level="3">
 					{__('Performance', 'hostgator-wordpress-plugin')}

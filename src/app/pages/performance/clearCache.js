@@ -6,6 +6,7 @@ import {
 	CardFooter,
 	__experimentalHeading as Heading,
 } from '@wordpress/components';
+import ErrorCard from '../../components/errorCard';
 import AppStore from '../../data/store';
 import {
 	hostgatorPurgeCacheApiFetch,
@@ -14,19 +15,23 @@ import {
 
 const ClearCache = () => {
 	const { store, setStore } = useContext(AppStore);
+	const [isError, setError] = useState(false);
 
 	const getCacheClearNoticeText = () => {
 		return __('Cache cleared', 'hostgator-wordpress-plugin');
 	};
 
 	const clearCache = () => {
-		hostgatorPurgeCacheApiFetch().then(() => {
+		hostgatorPurgeCacheApiFetch({}, setError, (response) => {
 			dispatchUpdateSnackbar(getCacheClearNoticeText());
 		});
 	};
 
+	if ( isError ) {
+		return <ErrorCard error={isError} />
+	}
 	return (
-		<Card>
+		<Card className="short">
 			<CardHeader>
 				<Heading level="3">
 					{__('Clear Cache', 'hostgator-wordpress-plugin')}

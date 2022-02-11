@@ -9,6 +9,13 @@
     }
 }
 
+.components-card {
+    
+    &.short {
+        margin-bottom: auto;
+    }
+}
+
 .components-card-body {
 
     &.disabled {

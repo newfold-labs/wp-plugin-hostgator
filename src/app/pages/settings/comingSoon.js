@@ -9,6 +9,7 @@ import {
 import { useState } from '@wordpress/element';
 import { useUpdateEffect } from 'react-use';
 import AppStore from '../../data/store';
+import ErrorCard from '../../components/errorCard';
 import {
 	hostgatorSettingsApiFetch,
 	dispatchUpdateSnackbar,
@@ -19,6 +20,7 @@ import Accordion from '../../components/accordion';
 const ComingSoon = () => {
 	const { store, setStore } = useContext(AppStore);
 	const [comingSoon, setComingSoon] = useState(store.comingSoon);
+	const [isError, setError] = useState(false);
 
 	const getComingSoonNoticeText = () => {
 		return comingSoon
@@ -39,9 +41,7 @@ const ComingSoon = () => {
 	
 
 	useUpdateEffect(() => {
-		hostgatorSettingsApiFetch({ 
-			comingSoon,
-		 }).then(() => {
+		hostgatorSettingsApiFetch({ comingSoon }, setError, (response) => {
 			setStore({
 				...store,
 				comingSoon,
@@ -51,6 +51,9 @@ const ComingSoon = () => {
 		});
 	}, [comingSoon]);
 
+	if ( isError ) {
+		return <ErrorCard error={isError} />
+	}
 	return (
 		<Card>
 			<CardHeader>

@@ -72,13 +72,21 @@ export const dispatchUpdateSnackbar = (text = 'Settings Saved') => {
  * Wrapper method to post setting to hostgator endpoint
  *
  * @param {*} data object of data
- * @return
+ * @param passError setter for the error in component
+ * @param thenCallback method to call in promise then
+ * @return apiFetch promise
  */
-export const hostgatorSettingsApiFetch = (data) => {
+export const hostgatorSettingsApiFetch = (data, passError, thenCallback) => {
 	return apiFetch({
 		path: 'hostgator/v1/settings',
 		method: 'POST',
 		data,
+	})
+	.then((response) => {
+		thenCallback(response);
+	})
+	.catch((error) => {
+		passError(error);
 	});
 };
 
@@ -86,13 +94,21 @@ export const hostgatorSettingsApiFetch = (data) => {
  * Wrapper method to post request to hostgator cache endpoint
  *
  * @param {*} data object of data
- * @return
+ * @param passError setter for the error in component
+ * @param thenCallback method to call in promise then
+ * @return apiFetch promise
  */
-export const hostgatorPurgeCacheApiFetch = (data) => {
+export const hostgatorPurgeCacheApiFetch = (data, passError, thenCallback) => {
 	return apiFetch({
 		path: 'hostgator/v1/caching',
 		method: 'DELETE',
 		data,
+	})
+	.then((response) => {
+		thenCallback(response);
+	})
+	.catch((error) => {
+		passError(error);
 	});
 };
 

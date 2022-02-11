@@ -8,6 +8,7 @@ import {
 	__experimentalHeading as Heading,
 } from '@wordpress/components';
 import AppStore from '../../data/store';
+import ErrorCard from '../../components/errorCard';
 import { useState } from '@wordpress/element';
 import { useUpdateEffect } from 'react-use';
 import {
@@ -18,6 +19,7 @@ import {
 
 const ComingSoonSection = () => {
 	const { store, setStore } = useContext(AppStore);
+	const [isError, setError] = useState(false);
 	const [comingSoon, setComingSoon] = useState(store.comingSoon);
 	const [wasComingSoon, setWasComingSoon] = useState(false);
 
@@ -85,35 +87,42 @@ const ComingSoonSection = () => {
 	};
 
 	useUpdateEffect(() => {
-		hostgatorSettingsApiFetch({ 
-			comingSoon,
-		 }).then(() => {
-			setStore({
-				...store,
-				comingSoon,
-			});
-			dispatchUpdateSnackbar(getComingSoonNoticeText());
-			comingSoonAdminbarToggle(comingSoon);
-		});
+		hostgatorSettingsApiFetch({ comingSoon }, setError,
+		 	(response) => {
+				setStore({
+					...store,
+					comingSoon,
+				});
+				dispatchUpdateSnackbar(getComingSoonNoticeText());
+				comingSoonAdminbarToggle(comingSoon);
+			}
+		);
 	}, [comingSoon]);
 
+	if ( isError ) {
+		return (
+			<section className="hgwp-section coming-soon">
+				<ErrorCard error={isError} className="hgwp-section-card" />
+			</section>
+		)
+	}
+	// render nothing if coming soon is not active or not just launched
+	if ( !(comingSoon || (!comingSoon && wasComingSoon)) ) {
+		return <></>;
+	}
 	return (
-		<>
-			{(comingSoon || (!comingSoon && wasComingSoon)) && (
-				<section className="hgwp-section coming-soon">
-					<img src={snappyUrl} className={getComingSoonGraphicClass()} style={{ top: 0 }} alt={__('HostGator`s Snappy holding site', 'hostagtor-wordpress-plugin')}/>
-					<Card size="large" className="hgwp-section-card">
-						<CardHeader>
-							<Heading level="2">
-								{getComingSoonHeadline()}
-							</Heading>
-						</CardHeader>
-						<CardBody>{getComingSoonBody()}</CardBody>
-						<CardFooter>{getComingSoonButton()}</CardFooter>
-					</Card>
-				</section>
-			)}
-		</>
+		<section className="hgwp-section coming-soon">
+			<img src={snappyUrl} className={getComingSoonGraphicClass()} style={{ top: 0 }} alt={__('HostGator`s Snappy holding site', 'hostagtor-wordpress-plugin')}/>
+			<Card size="large" className="hgwp-section-card">
+				<CardHeader>
+					<Heading level="2">
+						{getComingSoonHeadline()}
+					</Heading>
+				</CardHeader>
+				<CardBody>{getComingSoonBody()}</CardBody>
+				<CardFooter>{getComingSoonButton()}</CardFooter>
+			</Card>
+		</section>
 	);
 };
 

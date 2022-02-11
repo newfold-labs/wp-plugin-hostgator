@@ -10,6 +10,7 @@ import { useState } from '@wordpress/element';
 import { useEffect } from 'react';
 import { useUpdateEffect } from 'react-use';
 import AppStore from '../../data/store';
+import ErrorCard from '../../components/errorCard';
 import {
 	hostgatorSettingsApiFetch,
 	dispatchUpdateSnackbar,
@@ -29,6 +30,7 @@ const AutomaticUpdates = () => {
 	const [autoUpdatesThemes, setAutoUpdatesThemes] = useState(
 		store.autoUpdatesThemes
 	);
+	const [isError, setError] = useState(false);
 
 	const getAllNoticeText = () => {
 		return autoUpdatesAll
@@ -121,7 +123,7 @@ const AutomaticUpdates = () => {
 	}, [autoUpdatesAll]);
 
 	useUpdateEffect(() => {
-		hostgatorSettingsApiFetch({ autoUpdatesMajorCore }).then(() => {
+		hostgatorSettingsApiFetch({ autoUpdatesMajorCore }, setError, (response) => {
 			setStore({
 				...store,
 				autoUpdatesMajorCore,
@@ -131,7 +133,7 @@ const AutomaticUpdates = () => {
 	}, [autoUpdatesMajorCore]);
 
 	useUpdateEffect(() => {
-		hostgatorSettingsApiFetch({ autoUpdatesPlugins }).then(() => {
+		hostgatorSettingsApiFetch({ autoUpdatesPlugins }, setError, (response) => {
 			setStore({
 				...store,
 				autoUpdatesPlugins,
@@ -141,7 +143,7 @@ const AutomaticUpdates = () => {
 	}, [autoUpdatesPlugins]);
 
 	useUpdateEffect(() => {
-		hostgatorSettingsApiFetch({ autoUpdatesThemes }).then(() => {
+		hostgatorSettingsApiFetch({ autoUpdatesThemes }, setError, (response) => {
 			setStore({
 				...store,
 				autoUpdatesThemes,
@@ -150,6 +152,9 @@ const AutomaticUpdates = () => {
 		});
 	}, [autoUpdatesThemes]);
 
+	if ( isError ) {
+		return <ErrorCard error={isError} />
+	}
 	return (
 		<Card>
 			<CardHeader>
