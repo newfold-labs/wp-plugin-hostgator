@@ -103,20 +103,12 @@ const AutomaticUpdates = () => {
 			  );
 	};
 
-	useEffect(() => {
-		if ( autoUpdatesMajorCore && autoUpdatesPlugins && autoUpdatesThemes ) {
-			setAutoUpdatesAll( true );
-		} else {
-			setAutoUpdatesAll( false );
-		}
-	}, [autoUpdatesMajorCore, autoUpdatesPlugins, autoUpdatesThemes]);
-
 	useUpdateEffect(() => {
-		dispatchUpdateSnackbar( getAllNoticeText() );
 		if ( autoUpdatesAll ) {
 			setAutoUpdatesCore( autoUpdatesAll );
 			setAutoUpdatesPlugins( autoUpdatesAll );
 			setAutoUpdatesThemes( autoUpdatesAll );
+			dispatchUpdateSnackbar( getAllNoticeText() );
 		} else {
 			// don't set anything, just enable them
 		}
@@ -128,7 +120,9 @@ const AutomaticUpdates = () => {
 				...store,
 				autoUpdatesMajorCore,
 			});
-			dispatchUpdateSnackbar( getCoreNoticeText() );
+			if ( !autoUpdatesAll ) {
+				dispatchUpdateSnackbar( getCoreNoticeText() );
+			}
 		});
 	}, [autoUpdatesMajorCore]);
 
@@ -138,7 +132,9 @@ const AutomaticUpdates = () => {
 				...store,
 				autoUpdatesPlugins,
 			});
-			dispatchUpdateSnackbar( getPluginsNoticeText() );
+			if ( !autoUpdatesAll ) {
+				dispatchUpdateSnackbar( getPluginsNoticeText() );
+			}
 		});
 	}, [autoUpdatesPlugins]);
 
@@ -148,9 +144,19 @@ const AutomaticUpdates = () => {
 				...store,
 				autoUpdatesThemes,
 			});
-			dispatchUpdateSnackbar( getThemesNoticeText() );
+			if ( !autoUpdatesAll ) {
+				dispatchUpdateSnackbar( getThemesNoticeText() );
+			}
 		});
 	}, [autoUpdatesThemes]);
+
+	useEffect(() => {
+		if ( autoUpdatesMajorCore && autoUpdatesPlugins && autoUpdatesThemes ) {
+			setAutoUpdatesAll( true );
+		} else {
+			setAutoUpdatesAll( false );
+		}
+	}, [autoUpdatesMajorCore, autoUpdatesPlugins, autoUpdatesThemes]);
 
 	if ( isError ) {
 		return <ErrorCard error={isError} />
