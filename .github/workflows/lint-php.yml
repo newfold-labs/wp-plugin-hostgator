@@ -36,5 +36,5 @@ jobs:
           SUFFIX_FILTER: .php
 
       - name: Detecting PHP Code Standards Violations
-        run: phpcs --colors -s ${{ env.GIT_DIFF }}
+        run: vendor/bin/phpcs --colors -s ${{ env.GIT_DIFF }}
         if: "!! env.GIT_DIFF"
