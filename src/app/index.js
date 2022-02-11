@@ -35,6 +35,7 @@ const handlePageLoad = () => {
 	const routeContents = document.querySelector('.hgwp-app-body-inner');
 	useEffect(() => {
 		setActiveSubnav(location.pathname);
+		window.scrollTo(0, 0);
 		if ( routeContents ) {
 			routeContents.focus({ preventScroll: true });
 		}

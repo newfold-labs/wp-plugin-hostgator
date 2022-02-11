@@ -104,7 +104,6 @@ const WebHostingSection = () => {
 					<Button
 						variant="secondary"
 						href="#/help"
-						onClick={() => {window.scrollTo(0, 0)}}
 						icon="sos"
 					>
 						{__('Get Help', 'hostgator-wordpress-plugin')}
