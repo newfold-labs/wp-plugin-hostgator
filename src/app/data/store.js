@@ -49,6 +49,7 @@ export const AppStoreProvider = ({ children }) => {
 				window.HGWP = {
 					url: window.HGWP.url,
 					admin: window.HGWP.admin,
+					wpversion: window.HGWP.wpversion,
 					migrated: true,
 				};
 				setBooted(true);

@@ -19,11 +19,13 @@ final class Data {
 	 * @return array
 	 */
 	public static function runtime() {
+		global $wp_version;
 		$runtime = array(
-			'url'     => HOSTGATOR_BUILD_URL,
-			'version' => HOSTGATOR_PLUGIN_VERSION,
-			'admin'   => \admin_url(),
-			'assets'  => HOSTGATOR_PLUGIN_URL . 'assets/',
+			'url'       => HOSTGATOR_BUILD_URL,
+			'version'   => HOSTGATOR_PLUGIN_VERSION,
+			'wpversion' => $wp_version,
+			'admin'     => \admin_url(),
+			'assets'    => HOSTGATOR_PLUGIN_URL . 'assets/',
 		);
 
 		return $runtime;
