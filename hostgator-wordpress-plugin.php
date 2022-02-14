@@ -39,8 +39,8 @@ if ( ! defined( 'BH_HUB_URL' ) ) {
 	define( 'BH_HUB_URL', 'https://hiive.cloud/api' );
 }
 
-define( 'HOSTGATOR_BUILD_DIR', HOSTGATOR_PLUGIN_DIR . '/build/' . HOSTGATOR_PLUGIN_VERSION );
-define( 'HOSTGATOR_BUILD_URL', HOSTGATOR_PLUGIN_URL . '/build/' . HOSTGATOR_PLUGIN_VERSION );
+define( 'HOSTGATOR_BUILD_DIR', HOSTGATOR_PLUGIN_DIR . 'build/' . HOSTGATOR_PLUGIN_VERSION );
+define( 'HOSTGATOR_BUILD_URL', HOSTGATOR_PLUGIN_URL . 'build/' . HOSTGATOR_PLUGIN_VERSION );
 
 global $pagenow;
 if ( 'plugins.php' === $pagenow ) {
