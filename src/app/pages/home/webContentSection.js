@@ -73,30 +73,6 @@ const WebContentSection = () => {
 				<CardFooter>
 					<div className="hgwp-cardlist-content">
 						<Heading level="4">
-							<Dashicon icon="menu" />{' '}
-							{__('Navigation', 'hostgator-wordpress-plugin')}
-						</Heading>
-						<p>
-							{__(
-								"Adjust or edit your site's navigation menus.",
-								'hostgator-wordpress-plugin'
-							)}
-						</p>
-					</div>
-					<Button
-						variant="secondary"
-						href={
-							HGWP.admin +
-							'customize.php?autofocus[panel]=nav_menus'
-						}
-						icon="menu"
-					>
-						{__('Manage Menus', 'hostgator-wordpress-plugin')}
-					</Button>
-				</CardFooter>
-				<CardFooter>
-					<div className="hgwp-cardlist-content">
-						<Heading level="4">
 							<Dashicon icon="category" />{' '}
 							{__('Categories', 'hostgator-wordpress-plugin')}
 						</Heading>
