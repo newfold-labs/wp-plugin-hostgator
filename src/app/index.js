@@ -45,7 +45,8 @@ const handlePageLoad = () => {
 };
 
 const AppBody = (props) => {
-	const { booted } = useContext(AppStore);
+	const { booted, hasError } = useContext(AppStore);
+
 	handlePageLoad();
 
 	return (
@@ -57,7 +58,8 @@ const AppBody = (props) => {
 			<div className="hgwp-app-body">
 				<div className="hgwp-app-body-inner">
 					<ErrorBoundary FallbackComponent={<ErrorCard />}>
-						{(true === booted && <AppRoutes />) || <Spinner />}
+						{ hasError && <ErrorCard error={hasError} notice="Please update permalink settings!" /> }
+						{(true === booted && <AppRoutes />) || (!hasError && <Spinner />) }
 					</ErrorBoundary>
 				</div>
 			</div>

@@ -12,8 +12,9 @@ import {
 	dispatchUpdateSnackbar,
 } from '../../util/helpers';
 
-const ErrorCard = ({ error, className }) => {
-    dispatchUpdateSnackbar('Error!');
+const ErrorCard = ({ error, className, notice = 'Error!' }) => {
+    dispatchUpdateSnackbar(notice);
+
 	return (
         <Card className={classNames('error-card', className)}>
             <CardHeader>
@@ -29,8 +30,8 @@ const ErrorCard = ({ error, className }) => {
             </CardBody>
             <CardFooter>
                 <p>
-                    { error.message ? error.message : '' }
-                    { error.data ? __(' Error code: ', 'hostgator-wordpress-plugin') + error.data.status : '' }
+                    { error && error.message ? error.message : '' }
+                    { error && error.data ? __(' Error code: ', 'hostgator-wordpress-plugin') + error.data.status : '' }
                 </p>
             </CardFooter>
         </Card>

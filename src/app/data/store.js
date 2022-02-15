@@ -35,16 +35,18 @@ export const reformStore = (store, endpoint, response) => {
 
 export const AppStoreProvider = ({ children }) => {
 	const [booted, setBooted] = useState(false);
+	const [hasError, setError] = useState(false);
 	const [store, setStore] = useState({});
 
 	const contextStore = useMemo(
-		() => ({ store, setStore, booted, setBooted }),
-		[store, booted]
+		() => ({ store, setStore, booted, setBooted, hasError, setError }),
+		[store, booted, hasError]
 	);
 
 	useEffect(() => {
 		if (false === booted) {
-			hgApiFetchAll('settings').then((settings) => {
+			hgApiFetchAll('settings')
+			.then((settings) => {
 				setStore({ ...store, ...window.HGWP, ...settings });
 				window.HGWP = {
 					url: window.HGWP.url,
@@ -53,6 +55,9 @@ export const AppStoreProvider = ({ children }) => {
 					migrated: true,
 				};
 				setBooted(true);
+			})
+			.catch((error) => {
+				setError(error);
 			});
 		}
 	}, []);
