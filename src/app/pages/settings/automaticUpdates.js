@@ -103,6 +103,14 @@ const AutomaticUpdates = () => {
 			  );
 	};
 
+	useEffect(() => {
+		if ( autoUpdatesMajorCore && autoUpdatesPlugins && autoUpdatesThemes ) {
+			setAutoUpdatesAll( true );
+		} else {
+			setAutoUpdatesAll( false );
+		}
+	}, [autoUpdatesMajorCore, autoUpdatesPlugins, autoUpdatesThemes]);
+
 	useUpdateEffect(() => {
 		if ( autoUpdatesAll ) {
 			setAutoUpdatesCore( autoUpdatesAll );
@@ -149,14 +157,6 @@ const AutomaticUpdates = () => {
 			}
 		});
 	}, [autoUpdatesThemes]);
-
-	useEffect(() => {
-		if ( autoUpdatesMajorCore && autoUpdatesPlugins && autoUpdatesThemes ) {
-			setAutoUpdatesAll( true );
-		} else {
-			setAutoUpdatesAll( false );
-		}
-	}, [autoUpdatesMajorCore, autoUpdatesPlugins, autoUpdatesThemes]);
 
 	if ( isError ) {
 		return <ErrorCard error={isError} />

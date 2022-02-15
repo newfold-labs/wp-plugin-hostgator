@@ -37,8 +37,8 @@ const mostCommonImports = {
  * - Set Plugin-specific aliases for tidy imports.
  * - Use webpack's ProvidePlugin to ease repetitive imports.
  */
-const brandConfig = {
-    mode: 'development',
+const hostgatorConfig = {
+    mode: 'production',
     output: {
         // versioned output directory i.e. /build/1.0.0, /build/1.1.0, etc.
         path: path.resolve(process.cwd(), 'build/' + version),
@@ -46,4 +46,4 @@ const brandConfig = {
     resolve: { alias },
     plugins: [new ProvidePlugin(mostCommonImports)],
 };
-module.exports = merge(wpScriptsConfig, brandConfig);
+module.exports = merge(wpScriptsConfig, hostgatorConfig);

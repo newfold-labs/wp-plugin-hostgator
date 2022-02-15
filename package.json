@@ -36,7 +36,8 @@
         "create:dist": "rsync -r --exclude-from=.distignore . ./hostgator-wordpress-plugin",
         "php-deps": "composer install --no-dev --optimize-autoloader",
         "create:zip": "cd ./hostgator-wordpress-plugin && zip -r -9 ../hostgator-wordpress-plugin.zip . && ls -lh ../hostgator-wordpress-plugin.zip",
-        "simulate-runner-build": "rm -rf ./build ./hostgator-wordpress-plugin ./hostgator-wordpress-plugin.zip ./vendor && npm i && npm run build && npm run php-deps && npm run create:dist && npm run create:zip"
+        "prebuild:cleanup": "rm -rf ./build ./hostgator-wordpress-plugin ./hostgator-wordpress-plugin.zip ./vendor",
+        "simulate-runner-build": "npm run prebuild:cleanup && npm i && npm run build && npm run php-deps && npm run create:dist && npm run create:zip"
     },
     "dependencies": {
         "@wordpress/a11y": "^2.5.1",
