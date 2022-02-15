@@ -68,7 +68,7 @@ function hg_setup() {
 	if ( ! hg_has_plugin_install_date() ) {
 		$date = false;
 		if ( ! empty( $install_date ) ) {
-			$date = DateTime::createFromFormat( 'M d, Y', $install_date );
+			$date = \DateTime::createFromFormat( 'M d, Y', $install_date );
 		}
 		hg_set_plugin_install_date( $date ? $date->format( 'U' ) : gmdate( 'U' ) );
 	}
