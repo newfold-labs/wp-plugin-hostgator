@@ -119,7 +119,7 @@ final class Admin {
 		\wp_register_script(
 			'hostgator-script',
 			HOSTGATOR_BUILD_URL . '/index.js',
-			array_merge( $asset['dependencies'], array( 'wp-color-picker' ) ),
+			array_merge( $asset['dependencies'] ),
 			$asset['version'],
 			true
 		);

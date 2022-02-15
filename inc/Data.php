@@ -25,7 +25,7 @@ final class Data {
 			'version'   => HOSTGATOR_PLUGIN_VERSION,
 			'wpversion' => $wp_version,
 			'admin'     => \admin_url(),
-			'assets'    => HOSTGATOR_PLUGIN_URL . 'assets/',
+			'assets'    => HOSTGATOR_PLUGIN_URL . 'assets/'
 		);
 
 		return $runtime;
