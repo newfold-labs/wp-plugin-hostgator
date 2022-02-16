@@ -24,7 +24,7 @@ final class Data {
 		$runtime = array(
 			'url'       => HOSTGATOR_BUILD_URL,
 			'version'   => HOSTGATOR_PLUGIN_VERSION,
-			'resturl'   => \get_home_url() . "/index.php?rest_route=",
+			'resturl'   => \get_home_url() . '/index.php?rest_route=',
 			'wpversion' => $wp_version,
 			'admin'     => \admin_url(),
 			'assets'    => HOSTGATOR_PLUGIN_URL . 'assets/',
