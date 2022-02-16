@@ -78,7 +78,8 @@ export const dispatchUpdateSnackbar = (text = 'Settings Saved') => {
  */
 export const hostgatorSettingsApiFetch = (data, passError, thenCallback) => {
 	return apiFetch({
-		path: 'hostgator/v1/settings',
+		// path: 'hostgator/v1/settings', //  can't use path bacause it breaks on temp domains
+		url: window.HGWP.resturl + '/hostgator/v1/settings',
 		method: 'POST',
 		data,
 	})
@@ -100,7 +101,7 @@ export const hostgatorSettingsApiFetch = (data, passError, thenCallback) => {
  */
 export const hostgatorPurgeCacheApiFetch = (data, passError, thenCallback) => {
 	return apiFetch({
-		path: 'hostgator/v1/caching',
+		url: window.HGWP.resturl + '/hostgator/v1/caching',
 		method: 'DELETE',
 		data,
 	})

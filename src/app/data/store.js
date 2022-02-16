@@ -2,12 +2,6 @@ import { createContext, useMemo } from '@wordpress/element';
 
 import apiFetch from '@wordpress/api-fetch';
 
-/* domain.site/wp-json/hostgator/v1 */
-export const REST_BASE = 'hostgator/v1';
-
-/* endpoints inside REST_BASE */
-export const ENDPOINTS = ['settings'];
-
 const DEFAULT = {
 	store: {},
 	setStore: () => {},
@@ -15,13 +9,9 @@ const DEFAULT = {
 
 const AppStore = createContext(DEFAULT);
 
-export const hgApiFetchAll = async (endpoint, options = {}) => {
-	if (!endpoint in ENDPOINTS) {
-		return false; // only allow-list this method for presslens endpoints
-	}
-
+export const hgApiFetchSettings = async (options = {}) => {
 	return await apiFetch({
-		path: REST_BASE + '/' + endpoint,
+		url: window.HGWP.resturl + '/hostgator/v1/settings',
 		...options,
 	});
 };
@@ -45,15 +35,10 @@ export const AppStoreProvider = ({ children }) => {
 
 	useEffect(() => {
 		if (false === booted) {
-			hgApiFetchAll('settings')
+			hgApiFetchSettings()
 			.then((settings) => {
 				setStore({ ...store, ...window.HGWP, ...settings });
-				window.HGWP = {
-					url: window.HGWP.url,
-					admin: window.HGWP.admin,
-					wpversion: window.HGWP.wpversion,
-					migrated: true,
-				};
+				window.HGWP.migrated = true;
 				setBooted(true);
 			})
 			.catch((error) => {
