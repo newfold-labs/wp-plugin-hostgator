@@ -13,7 +13,7 @@ const NavMobile = () => {
                         <NavLink 
                             to={page.name} 
                             onClick={() => setIsOpen(false)} 
-                            className="components-button is-secondary" 
+                            className={`components-button is-secondary mobile-link-${page.title}`} 
                             style={{ width: '100%', textAlign: 'center' }}
                         >
                             {page.title}
@@ -25,8 +25,19 @@ const NavMobile = () => {
     }    
     return (
         <Fragment>
-            <Button icon={menu} style={{ paddingRight: '6px' }} onClick={() => setIsOpen(!isOpen)} />
-            {isOpen && (<Modal onRequestClose={() => setIsOpen(false)}><MobileMenu /></Modal>)} 
+            <Button 
+                icon={menu}
+                onClick={() => setIsOpen(!isOpen)}
+                className="mobile-toggle"
+            />
+            {isOpen && (
+                <Modal 
+                    data-testid="modal-menu-modal"
+                    onRequestClose={() => setIsOpen(false)}
+                >
+                        <MobileMenu />
+                </Modal>
+            )} 
         </Fragment>
     )
 }

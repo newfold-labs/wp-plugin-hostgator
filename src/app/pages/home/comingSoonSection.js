@@ -111,7 +111,7 @@ const ComingSoonSection = () => {
 		return <></>;
 	}
 	return (
-		<section className="hgwp-section coming-soon">
+		<section className="hgwp-section hgwp-section-coming-soon">
 			<img src={snappyUrl} className={getComingSoonGraphicClass()} style={{ top: 0 }} alt={__('HostGator`s Snappy holding site', 'hostagtor-wordpress-plugin')}/>
 			<Card size="large" className="hgwp-section-card">
 				<CardHeader>

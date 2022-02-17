@@ -11,7 +11,7 @@ import {
 
 const WebHostingSection = () => {
 	return (
-		<section className="hgwp-section">
+		<section className="hgwp-section hgwp-section-home-hosting">
 			<img src={graphicUrl} className='section-graphic' alt={__('Hosting illustration', 'hostgator-wordpress-plugin')} />
 			<Card size="large" className="hgwp-section-card">
 				<CardHeader>

@@ -1,9 +1,9 @@
 // <reference types="Cypress" />
 
-describe('Marketplace Page', function () {
+describe('Performance Page', function () {
 
 	before(() => {
-		cy.visit('/wp-admin/admin.php?page=hostgator#/marketplace');
+		cy.visit('/wp-admin/admin.php?page=hostgator#/performance');
 		cy.injectAxe();
 		
 	});

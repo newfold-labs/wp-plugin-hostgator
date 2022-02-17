@@ -11,7 +11,7 @@ import {
 
 const WebContentSection = () => {
 	return (
-		<section className="hgwp-section">
+		<section className="hgwp-section hgwp-section-home-content">
 			<img src={graphicUrl} className='section-graphic' alt={__('Website illustration', 'hostgator-wordpress-plugin')} />
 			<Card size="large" className="hgwp-section-card">
 				<CardHeader>

@@ -15,7 +15,7 @@ const Help = () => {
 		<div className="hgwp-help">
 			<div className="help grid col3">
 				{help.map((item) => (
-					<Card size="small" className="card-help">
+					<Card size="small" className={`card-help card-help-${item.name}`} key={item.name}>
 						<CardHeader>
 							<Heading level="3">{item.title}</Heading>
 						</CardHeader>

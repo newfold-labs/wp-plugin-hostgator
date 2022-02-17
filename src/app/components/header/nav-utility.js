@@ -9,7 +9,7 @@ const NavUtility = () => (
 			<li key={page.name}>
 					<NavLink
 						to={page.name}
-						className="hgwp-nav-utility-link"
+						className={`hgwp-nav-utility-link utility-link-${page.title}`}
 						aria-label={page.title}
 						title={page.title}
 					>

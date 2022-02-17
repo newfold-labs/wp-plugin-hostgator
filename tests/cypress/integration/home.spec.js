@@ -10,7 +10,6 @@ describe('Home Page', function () {
 
 	it('Header Exists', () => {
 		cy
-			// .findByRole('heading', {name: 'Website Content', level: 2})
             .get('.hgwp-header').contains('h2', 'HostGator')
 			.scrollIntoView()
 			.should('be.visible');
@@ -21,5 +20,25 @@ describe('Home Page', function () {
 		cy.checkA11y('.hgwp-app-body');
 	});
 
+	it('Web Content Section Exists', () => {
+		cy
+            .get('.hgwp-section-home-content').contains('h3', 'Content')
+			.scrollIntoView()
+			.should('be.visible');
+	});
+
+	it('Settings Section Exists', () => {
+		cy
+            .get('.hgwp-section-home-settings').contains('h3', 'Settings')
+			.scrollIntoView()
+			.should('be.visible');
+	});
+
+	it('Hosting Section Exists', () => {
+		cy
+            .get('.hgwp-section-home-hosting').contains('h3', 'Hosting')
+			.scrollIntoView()
+			.should('be.visible');
+	});
 
 });
