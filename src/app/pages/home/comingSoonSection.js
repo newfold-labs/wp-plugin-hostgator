@@ -115,7 +115,7 @@ const ComingSoonSection = () => {
 			<img src={snappyUrl} className={getComingSoonGraphicClass()} style={{ top: 0 }} alt={__('HostGator`s Snappy holding site', 'hostagtor-wordpress-plugin')}/>
 			<Card size="large" className="hgwp-section-card">
 				<CardHeader>
-					<Heading level="2">
+					<Heading level="3">
 						{getComingSoonHeadline()}
 					</Heading>
 				</CardHeader>

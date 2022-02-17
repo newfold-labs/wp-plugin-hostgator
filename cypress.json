@@ -12,6 +12,5 @@
   "video": false,
   "videosFolder": "tests/cypress/videos",
   "videoUploadOnPasses": false,
-  "chromeWebSecurity": false,
-  "experimentalFetchPolyfill": true
+  "chromeWebSecurity": false
 }

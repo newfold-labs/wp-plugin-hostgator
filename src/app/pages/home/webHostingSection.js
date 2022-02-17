@@ -15,7 +15,7 @@ const WebHostingSection = () => {
 			<img src={graphicUrl} className='section-graphic' alt={__('Hosting illustration', 'hostgator-wordpress-plugin')} />
 			<Card size="large" className="hgwp-section-card">
 				<CardHeader>
-					<Heading level="2">
+					<Heading level="3">
 						{__('Web Hosting', 'hostgator-wordpress-plugin')}
 					</Heading>
 				</CardHeader>

@@ -3,7 +3,7 @@
 describe('Home Page', function () {
 
 	before(() => {
-		cy.visit('/wp-admin/admin.php?page=hostgator#/home')
+		cy.visit('/wp-admin/admin.php?page=hostgator#/home');
 		cy.injectAxe();
 		
 	});

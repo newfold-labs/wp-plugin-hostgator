@@ -16,7 +16,7 @@ const SettingsSection = () => {
 			<img src={graphicUrl} className='section-graphic' alt={__('Settings illustration', 'hostgator-wordpress-plugin')} />
 			<Card size="large" className="hgwp-section-card">
 				<CardHeader>
-					<Heading level="2">
+					<Heading level="3">
 						{__(
 							'Settings and Performance',
 							'hostgator-wordpress-plugin'

@@ -15,7 +15,7 @@ const WebContentSection = () => {
 			<img src={graphicUrl} className='section-graphic' alt={__('Website illustration', 'hostgator-wordpress-plugin')} />
 			<Card size="large" className="hgwp-section-card">
 				<CardHeader>
-					<Heading level="2">
+					<Heading level="3">
 						{__('Website Content', 'hostgator-wordpress-plugin')}
 					</Heading>
 				</CardHeader>

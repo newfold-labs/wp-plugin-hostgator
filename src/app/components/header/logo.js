@@ -1,4 +1,7 @@
-import { Button } from '@wordpress/components';
+import {
+	Button,
+	__experimentalHeading as Heading,
+} from '@wordpress/components';
 import { ReactComponent as Brand } from '../../../../assets/svg/nav-for-light.svg';
 
 const Logo = () => {
@@ -10,9 +13,9 @@ const Logo = () => {
 				iconSize={39}
 				href="#/home"
 			></Button>
-			<h2 className="screen-reader-text">
+			<Heading level="2" className="screen-reader-text">
 				{__('HostGator WordPress Plugin', 'brand')}
-			</h2>
+			</Heading>
 		</div>
 	);
 };
