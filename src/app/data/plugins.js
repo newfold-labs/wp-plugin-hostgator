@@ -3,7 +3,7 @@ const plugins = [
 		name: 'yoast-premium',
 		title: __('Yoast SEO Premium', 'hostgator-wordpress-plugin'),
 		description: __('SEO made easy!', 'hostgator-wordpress-plugin'),
-		price: '89',
+		price: '99',
 		cta: __('Buy Now', 'hostgator-wordpress-plugin'),
 		url: 'https://yoa.st/bh-premium?utm_source=wp-admin%2Fadmin.php%3Fpage%3Dhostgator%23%2Fplugins&utm_medium=hostgator_plugin',
 		img: 'https://cdn.hiive.space/bluehost/plugin/yoast-seo-premium.png',
@@ -15,7 +15,7 @@ const plugins = [
 			'Make your products stand out in the search results',
 			'hostgator-wordpress-plugin'
 		),
-		price: '69',
+		price: '79',
 		cta: __('Buy Now', 'hostgator-wordpress-plugin'),
 		url: 'https://yoa.st/bh-woo-seo?utm_source=wp-admin%2Fadmin.php%3Fpage%3Dhostgator%23%2Fplugins&utm_medium=hostgator_plugin',
 		img: 'https://cdn.hiive.space/bluehost/plugin/yoast-seo-woo.png',

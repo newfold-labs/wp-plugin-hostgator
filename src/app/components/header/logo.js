@@ -14,7 +14,7 @@ const Logo = () => {
 				href="#/home"
 			></Button>
 			<Heading level="2" className="screen-reader-text">
-				{__('HostGator WordPress Plugin', 'brand')}
+				{__('HostGator WordPress Plugin', 'hostgator-wordpress-plugin')}
 			</Heading>
 		</div>
 	);
