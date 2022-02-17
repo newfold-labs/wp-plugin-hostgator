@@ -58,7 +58,7 @@ const AppBody = (props) => {
 			<div className="hgwp-app-body">
 				<div className="hgwp-app-body-inner">
 					<ErrorBoundary FallbackComponent={<ErrorCard />}>
-						{ hasError && <ErrorCard error={hasError} notice="Please update permalink settings!" /> }
+						{ hasError && <ErrorCard error={hasError} /> }
 						{(true === booted && <AppRoutes />) || (!hasError && <Spinner />) }
 					</ErrorBoundary>
 				</div>

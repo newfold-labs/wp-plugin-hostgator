@@ -3,11 +3,12 @@
 describe('Home Page', function () {
 
 	before(() => {
-		cy.visit('/wp-admin/admin.php?page=hostgator#/home'); // use internal override
-		// cy.injectAxe();
+		cy.visit('/wp-admin/admin.php?page=hostgator#/home')
+		cy.injectAxe();
+		
 	});
 
-	it('Exists', () => {
+	it('Header Exists', () => {
 		cy
 			// .findByRole('heading', {name: 'Website Content', level: 2})
             .get('.hgwp-header').contains('h2', 'HostGator')
