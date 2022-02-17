@@ -3,6 +3,7 @@
     --hgbrand-color-primary-dark: #191936;
     --hgbrand-color-secondary: #2e93ee;
     --hgbrand-color-secondary-dark: #3c97ff;
+    --hgbrand-color-secondary-darker: #0070F0;
     --hgbrand-color-yellow: #ffcf00;
     --hgbrand-color-orange: #ff9144;
     --hgbrand-color-foreground: #363636;
@@ -10,6 +11,7 @@
     --hgbrand-color-accent: #cdd8df;
     --hgbrand-color-background: #f5f6f8;
     --hgbrand-color-green: #38c174;
+    --hgbrand-color-white: #fff;
 }
 
 html {
@@ -24,7 +26,7 @@ body.toplevel_page_hostgator {
     --wp-admin-theme-color-darker-10: var(--hgbrand-color-primary-dark);
     --wp-admin-theme-color-darker-20: var(--hgbrand-color-foreground);
     --wp-admin-border-width-focus: 2px;
-    --hgbrand-focus: inset 0 0 0 1px #fff,0 0 0 var(--wp-admin-border-width-focus) var(--hgbrand-color-secondary);
+    --hgbrand-focus: inset 0 0 0 1px var(--hgbrand-color-white),0 0 0 var(--wp-admin-border-width-focus) var(--hgbrand-color-secondary);
     
     a {
         color: var(--hgbrand-color-secondary);
