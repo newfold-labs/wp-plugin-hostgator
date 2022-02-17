@@ -32,7 +32,6 @@ const NavMobile = () => {
             />
             {isOpen && (
                 <Modal 
-                    data-testid="modal-menu-modal"
                     onRequestClose={() => setIsOpen(false)}
                 >
                         <MobileMenu />

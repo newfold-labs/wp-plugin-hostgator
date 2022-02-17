@@ -10,7 +10,9 @@ import {
 
 const MarketplaceItem = ({ item }) => {
 	return (
-		<Card>
+		<Card
+			className={`marketplace-item-${item.name}`}
+		>
 			{item.img && (
 				<CardMedia>
 					<img src={item.img} alt={item.title + ' thumbnail'} />

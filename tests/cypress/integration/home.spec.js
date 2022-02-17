@@ -10,7 +10,7 @@ describe('Home Page', function () {
 
 	it('Header Exists', () => {
 		cy
-            .get('.hgwp-header').contains('h2', 'HostGator')
+			.get('.hgwp-header').contains('h2', 'HostGator')
 			.scrollIntoView()
 			.should('be.visible');
 	});
@@ -22,21 +22,21 @@ describe('Home Page', function () {
 
 	it('Web Content Section Exists', () => {
 		cy
-            .get('.hgwp-section-home-content').contains('h3', 'Content')
+			.get('.hgwp-section-home-content').contains('h3', 'Content')
 			.scrollIntoView()
 			.should('be.visible');
 	});
 
 	it('Settings Section Exists', () => {
 		cy
-            .get('.hgwp-section-home-settings').contains('h3', 'Settings')
+			.get('.hgwp-section-home-settings').contains('h3', 'Settings')
 			.scrollIntoView()
 			.should('be.visible');
 	});
 
 	it('Hosting Section Exists', () => {
 		cy
-            .get('.hgwp-section-home-hosting').contains('h3', 'Hosting')
+			.get('.hgwp-section-home-hosting').contains('h3', 'Hosting')
 			.scrollIntoView()
 			.should('be.visible');
 	});
