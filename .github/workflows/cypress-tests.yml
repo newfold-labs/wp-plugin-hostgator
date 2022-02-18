@@ -1,4 +1,4 @@
-name: Tests
+name: Cypress Tests
 on:
   push:
     branches:
@@ -96,9 +96,6 @@ jobs:
 
       - name: Install WordPress
         run: npx @wordpress/env@latest start
-
-      - name: Run PHPUnit Tests
-        run: npm run test:unit
 
       - name: Run Cypress Tests
         run: npm run test:e2e
