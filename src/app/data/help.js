@@ -28,7 +28,7 @@ const help = [
 		icon: 'format-chat',
 		Svg: Chat,
 		cta: __('Live Chat', 'hostgator-wordpress-plugin'),
-		url: 'https://helpchat.hostgator.com/',
+		url: 'https://helpchat.hostgator.com/?utm_campaign=&utm_content=help_chat_link&utm_term=live_chat&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=hostgator#/help',
 	},
 	{
 		name: 'twitter',
@@ -52,7 +52,7 @@ const help = [
 		icon: 'book',
 		Svg: Book,
 		cta: __('Find Answers', 'hostgator-wordpress-plugin'),
-		url: 'https://www.hostgator.com/help',
+		url: 'https://www.hostgator.com/help?utm_campaign=&utm_content=help_kb_link&utm_term=find_answers&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=hostgator#/help',
 	},
 	{
 		name: 'blog',
@@ -64,7 +64,7 @@ const help = [
 		icon: 'text-page',
 		Svg: Site,
 		cta: __('Learn Stuff', 'hostgator-wordpress-plugin'),
-		url: 'https://www.hostgator.com/blog/',
+		url: 'https://www.hostgator.com/blog/?utm_campaign=&utm_content=help_blog_link&utm_term=learn_stuff&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=hostgator#/help',
 	},
 	{
 		name: 'video',

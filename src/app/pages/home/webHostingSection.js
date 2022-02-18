@@ -42,7 +42,14 @@ const WebHostingSection = () => {
 					</div>
 					<Button
 						variant="primary"
-						href="https://portal.hostgator.com/packages"
+						href={
+							`https://portal.hostgator.com/packages?`+
+							`&utm_campaign=`+
+							`&utm_content=home_hosting_sites_link`+
+							`&utm_term=manage_sites`+
+							`&utm_medium=brand_plugin`+
+							`&utm_source=wp-admin/admin.php?page=hostgator#/home`
+						}
 						target="_blank"
 						icon="desktop"
 					>
@@ -64,7 +71,14 @@ const WebHostingSection = () => {
 					</div>
 					<Button
 						variant="primary"
-						href="https://portal.hostgator.com/email"
+						href={
+							`https://portal.hostgator.com/email?`+
+							`&utm_campaign=`+
+							`&utm_content=home_hosting_email_link`+
+							`&utm_term=manage_email`+
+							`&utm_medium=brand_plugin`+
+							`&utm_source=wp-admin/admin.php?page=hostgator#/home`
+						}
 						target="_blank"
 						icon="email"
 					>
@@ -86,7 +100,14 @@ const WebHostingSection = () => {
 					</div>
 					<Button
 						variant="secondary"
-						href="https://portal.hostgator.com/domain/purchase/registration"
+						href={
+							`https://portal.hostgator.com/domain/purchase/registration?`+
+							`&utm_campaign=`+
+							`&utm_content=home_hosting_domain_link`+
+							`&utm_term=find_domain`+
+							`&utm_medium=brand_plugin`+
+							`&utm_source=wp-admin/admin.php?page=hostgator#/home`
+						}
 						target="_blank"
 						icon="admin-site"
 					>
