@@ -132,7 +132,7 @@ const ContentSettings = () => {
 					'hostgator-wordpress-plugin'
 				)}
 			</CardBody>
-			<CardBody className="content-revisions-body">
+			<CardBody className="content-revisions-setting">
 				<SelectControl
 					label={contentRevisionsLabelText()}
 					className="content-revisions-select"
@@ -149,7 +149,7 @@ const ContentSettings = () => {
 				/>
 			</CardBody>
 
-			<CardBody>
+			<CardBody className="empty-trash-setting">
 				<SelectControl
 					label={emptyTrashDaysLabelText()}
 					className="empty-trash-select"

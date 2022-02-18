@@ -175,7 +175,9 @@ const AutomaticUpdates = () => {
 				)}
 			</CardBody>
 			<CardDivider />
-			<CardBody>
+			<CardBody 
+				className="autoupdate-all-setting"
+			>
 				<ToggleControl
 					label={__('Everything', 'hostgator-wordpress-plugin')}
 					className="autoupdate-all-toggle"
@@ -188,7 +190,7 @@ const AutomaticUpdates = () => {
 			</CardBody>
 			<CardDivider />
 			<CardBody 
-				className={ autoUpdatesAll  ? 'disabled' : '' }
+				className={`autoupdate-core-setting  ${autoUpdatesAll  ? 'disabled' : ''}` }
 			>
 				<ToggleControl
 					label={__('Core', 'hostgator-wordpress-plugin')}
@@ -203,8 +205,8 @@ const AutomaticUpdates = () => {
 			</CardBody>
 			<CardDivider />
 			<CardBody 
-				className={ autoUpdatesAll  ? 'disabled' : '' }
-			>
+				className={`autoupdate-plugin-setting  ${autoUpdatesAll  ? 'disabled' : ''}` }
+				>
 				<ToggleControl
 					label={__('Plugins', 'hostgator-wordpress-plugin')}
 					className="autoupdate-plugin-toggle"
@@ -218,8 +220,8 @@ const AutomaticUpdates = () => {
 			</CardBody>
 			<CardDivider />
 			<CardBody 
-				className={ autoUpdatesAll  ? 'disabled' : '' }
-			>
+				className={`autoupdate-theme-setting  ${autoUpdatesAll  ? 'disabled' : ''}` }
+				>
 				<ToggleControl
 					label={__('Themes', 'hostgator-wordpress-plugin')}
 					className="autoupdate-theme-toggle"

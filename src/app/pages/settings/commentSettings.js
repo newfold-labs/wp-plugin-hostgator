@@ -178,7 +178,9 @@ const CommentSettings = () => {
 					'hostgator-wordpress-plugin'
 				)}
 			</CardBody>
-			<CardBody>
+			<CardBody
+				className="disable-comments-setting"
+			>
 				<ToggleControl
 					checked={disableCommentsOldPosts}
 					className="disable-comments-toggle"
@@ -193,7 +195,9 @@ const CommentSettings = () => {
 				/>
 			</CardBody>
 			<CardDivider />
-			<CardBody className={disableCommentsOldPosts ? '' : 'disabled'}>
+			<CardBody 
+				className={`close-comments-days-setting ${disableCommentsOldPosts ? '' : 'disabled'}`}
+			>
 				<SelectControl
 					disabled={!disableCommentsOldPosts}
 					className="close-comments-days-select"
@@ -217,7 +221,9 @@ const CommentSettings = () => {
 				/>
 			</CardBody>
 			<CardDivider />
-			<CardBody>
+			<CardBody
+				className="comments-per-page-setting"
+			>
 				<SelectControl
 					label={commentsPerPageLabelText()}
 					className="comments-per-page-select"

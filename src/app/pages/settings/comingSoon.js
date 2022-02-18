@@ -68,7 +68,7 @@ const ComingSoon = () => {
 				)}
 			</CardBody>
 			<CardDivider />
-			<CardBody>
+			<CardBody className="coming-soon-setting">
 				<ToggleControl
 					label={__('Coming Soon', 'hostgator-wordpress-plugin')}
 					className="coming-soon-toggle"
