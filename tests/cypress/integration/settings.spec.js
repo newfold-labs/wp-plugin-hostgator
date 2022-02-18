@@ -100,7 +100,7 @@ describe('Settings Page', function () {
 			.contains('strong', '1')
 			.should('be.visible');
 		cy
-			.get('.content-revisions-body .components-base-control__help')
+			.get('.content-revisions-setting .components-base-control__help')
 			.contains('span', 'Posts will save 1 revision')
 			.should('be.visible');
 

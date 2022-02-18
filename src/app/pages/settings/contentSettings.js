@@ -34,7 +34,7 @@ const ContentSettings = () => {
 				{_n(
 					' latest revision',
 					' latest revisions',
-					contentRevisions,
+					parseInt(contentRevisions),
 					'hostgator-wordpress-plugin'
 				)}
 			</span>
@@ -47,9 +47,9 @@ const ContentSettings = () => {
 				{__('Posts will save ', 'hostgator-wordpress-plugin')}
 				<strong>{contentRevisions}</strong>
 				{_n(
-					' revision',
-					' revisions',
-					contentRevisions,
+					' revision.',
+					' revisions.',
+					parseInt(contentRevisions),
 					'hostgator-wordpress-plugin'
 				)}
 			</span>
