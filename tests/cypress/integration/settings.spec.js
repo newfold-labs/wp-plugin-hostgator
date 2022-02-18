@@ -117,13 +117,13 @@ describe('Settings Page', function () {
 		cy.get('.disable-comments-toggle input[type="checkbox"]').uncheck();
 		cy.get('.close-comments-days-select select').should('be.disabled');
 		cy.get('.disable-comments-toggle input[type="checkbox"]').check();
-		cy.get('.close-comments-days-select select').should('not.be.disabled');
 		cy.wait(100);
 		cy
 			.get('.edit-site-notices .components-snackbar__content')
-			.contains('div', 'enabled')
+			.contains('div', 'Old post comments')
 			.should('be.visible');
 
+		cy.get('.close-comments-days-select select').should('not.be.disabled');
 		cy.get('.close-comments-days-select select').select('3');
 		cy.get('.close-comments-days-select label').contains('span', '3').should('be.visible');
 		cy.wait(100);
