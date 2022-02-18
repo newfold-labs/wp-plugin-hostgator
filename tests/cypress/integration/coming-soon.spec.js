@@ -71,13 +71,49 @@ describe('Coming Soon', function () {
 			.should('be.visible');
 	});
 
+	it('Displays admin coming soon notice', () => {
+		cy.visit('/wp-admin/index.php');
+		cy
+			.get('.notice-warning')
+			.contains('p', 'Coming Soon')
+			.should('be.visible');
+	});
+
 	it('Displays Coming Soon on Frontend', () => {
 		cy.get('#wp-admin-bar-logout a').click({ force: true });
 		cy.visit('/');
 		cy
-			.get('.content')
+			.get('body')
 			.contains('h2', 'Coming Soon')
 			.should('be.visible');
 	});
 
+	it('Launching launches site', () => {
+		cy.login(Cypress.env('wpUsername'), Cypress.env('wpPassword'));
+		cy.visit('/wp-admin/admin.php?page=hostgator#/settings');
+		cy.get('.coming-soon-toggle input[type="checkbox"]').should('be.checked');
+
+		cy.visit('/wp-admin/admin.php?page=hostgator#/home');
+		cy
+			.get('.hgwp-section-coming-soon')
+			.scrollIntoView()
+			.contains('h3', 'Coming Soon')
+			.should('be.visible');
+
+		cy.get('.hgwp-section-coming-soon button.is-primary').click();
+		cy.get('.hgwp-section-coming-soon button.is-link').click(); //dismiss
+
+		cy
+			.get('.hgwp-section-coming-soon')
+			.should('not.exist');
+
+		cy.get('#wp-admin-bar-logout a').click({ force: true });
+		cy.visit('/');
+		cy
+			.get('body')
+			.contains('h2', 'Coming Soon')
+			.should('not.exist');
+
+		cy.login(Cypress.env('wpUsername'), Cypress.env('wpPassword'));
+	})
 });
