@@ -49,6 +49,7 @@ const SettingsSection = () => {
 						variant="primary"
 						href="#/settings"
 						icon={settings}
+						className="callout-link-settings"
 					>
 						{__('Settings', 'hostgator-wordpress-plugin')}
 					</Button>
@@ -70,6 +71,7 @@ const SettingsSection = () => {
 						variant="primary"
 						href="#/performance"
 						icon={<Dashicon icon='performance' />}
+						className="callout-link-performance"
 					>
 						{__('Performance', 'hostgator-wordpress-plugin')}
 					</Button>
@@ -91,6 +93,7 @@ const SettingsSection = () => {
 						variant="primary"
 						href="#/marketplace"
 						icon={store}
+						className="callout-link-marketplace"
 					>
 						{__('Visit Marketplace', 'hostgator-wordpress-plugin')}
 					</Button>

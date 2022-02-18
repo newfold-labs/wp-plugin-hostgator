@@ -55,7 +55,7 @@ const ComingSoon = () => {
 		return <ErrorCard error={isError} />
 	}
 	return (
-		<Card>
+		<Card className="card-coming-soon">
 			<CardHeader>
 				<Heading level="3">
 					{__('Coming Soon', 'hostgator-wordpress-plugin')}
@@ -71,6 +71,7 @@ const ComingSoon = () => {
 			<CardBody>
 				<ToggleControl
 					label={__('Coming Soon', 'hostgator-wordpress-plugin')}
+					className="coming-soon-toggle"
 					checked={comingSoon}
 					help={getComingSoonHelpText()}
 					onChange={() => {
@@ -79,6 +80,7 @@ const ComingSoon = () => {
 				/>
 				{ comingSoon && (
 					<Accordion
+						className="coming-soon-protip"
 						summary={__(
 							'Pro Tip: Begin collecting subscribers',
 							'hostgator-wordpress-plugin'

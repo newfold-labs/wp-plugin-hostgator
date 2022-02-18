@@ -11,7 +11,7 @@ import {
 const PerformanceCallout = () => {
 
 	return (
-		<Card className="short">
+		<Card className="card-performance-callout short">
 			<CardHeader>
 				<Heading level="3">
 					{__('Performance', 'hostgator-wordpress-plugin')}
@@ -28,6 +28,7 @@ const PerformanceCallout = () => {
                     variant="primary"
                     href="#/performance"
                     icon={<Dashicon icon='performance' />}
+					className="callout-link-performance"
                 >
                     {__('Performance', 'hostgator-wordpress-plugin')}
                 </Button>

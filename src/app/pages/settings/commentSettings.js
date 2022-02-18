@@ -166,7 +166,7 @@ const CommentSettings = () => {
 		return <ErrorCard error={isError} />
 	}
 	return (
-		<Card>
+		<Card className="card-comment-settings">
 			<CardHeader>
 				<Heading level="3">
 					{__('Comments', 'hostgator-wordpress-plugin')}
@@ -181,6 +181,7 @@ const CommentSettings = () => {
 			<CardBody>
 				<ToggleControl
 					checked={disableCommentsOldPosts}
+					className="disable-comments-toggle"
 					label={__(
 						'Disable comments for older posts',
 						'hostgator-wordpress-plugin'
@@ -195,6 +196,7 @@ const CommentSettings = () => {
 			<CardBody className={disableCommentsOldPosts ? '' : 'disabled'}>
 				<SelectControl
 					disabled={!disableCommentsOldPosts}
+					className="close-comments-days-select"
 					label={closeCommentsLabelText()}
 					value={closeCommentsDays}
 					help={closeCommentsHelpText()}
@@ -218,6 +220,7 @@ const CommentSettings = () => {
 			<CardBody>
 				<SelectControl
 					label={commentsPerPageLabelText()}
+					className="comments-per-page-select"
 					value={commentsPerPage}
 					help={commentsPerPageHelpText()}
 					options={[

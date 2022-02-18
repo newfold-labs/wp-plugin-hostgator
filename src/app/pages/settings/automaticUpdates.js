@@ -162,7 +162,7 @@ const AutomaticUpdates = () => {
 		return <ErrorCard error={isError} />
 	}
 	return (
-		<Card>
+		<Card className="card-auto-updates">
 			<CardHeader>
 				<Heading level="3">
 					{__('Automatic Updates', 'hostgator-wordpress-plugins')}
@@ -178,6 +178,7 @@ const AutomaticUpdates = () => {
 			<CardBody>
 				<ToggleControl
 					label={__('Everything', 'hostgator-wordpress-plugin')}
+					className="autoupdate-all-toggle"
 					checked={autoUpdatesAll}
 					help={getAllHelpText()}
 					onChange={() => {
@@ -191,6 +192,7 @@ const AutomaticUpdates = () => {
 			>
 				<ToggleControl
 					label={__('Core', 'hostgator-wordpress-plugin')}
+					className="autoupdate-core-toggle"
 					checked={autoUpdatesMajorCore}
 					disabled={autoUpdatesAll}
 					help={getCoreHelpText()}
@@ -205,6 +207,7 @@ const AutomaticUpdates = () => {
 			>
 				<ToggleControl
 					label={__('Plugins', 'hostgator-wordpress-plugin')}
+					className="autoupdate-plugin-toggle"
 					checked={autoUpdatesPlugins}
 					disabled={autoUpdatesAll}
 					help={getPluginsHelpText()}
@@ -219,6 +222,7 @@ const AutomaticUpdates = () => {
 			>
 				<ToggleControl
 					label={__('Themes', 'hostgator-wordpress-plugin')}
+					className="autoupdate-theme-toggle"
 					checked={autoUpdatesThemes}
 					disabled={autoUpdatesAll}
 					help={getThemesHelpText()}

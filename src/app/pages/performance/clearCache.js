@@ -31,7 +31,7 @@ const ClearCache = () => {
 		return <ErrorCard error={isError} />
 	}
 	return (
-		<Card className="short">
+		<Card className={`short card-clear-cache ${!store.cacheLevel ? 'disabled' : ''}`}>
 			<CardHeader>
 				<Heading level="3">
 					{__('Clear Cache', 'hostgator-wordpress-plugin')}

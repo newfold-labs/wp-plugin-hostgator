@@ -105,6 +105,7 @@ const WebHostingSection = () => {
 						variant="secondary"
 						href="#/help"
 						icon="sos"
+						className="callout-link-help"
 					>
 						{__('Get Help', 'hostgator-wordpress-plugin')}
 					</Button>

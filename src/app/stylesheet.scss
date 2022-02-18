@@ -157,3 +157,22 @@ body.toplevel_page_hostgator {
     right: 1rem;
     z-index: -1;
 }
+
+
+.components-card {
+    
+    &.short {
+        margin-bottom: auto;
+    }
+
+    &.disabled {
+        opacity: .5;
+    }
+}
+
+.components-card-body {
+
+    &.disabled {
+        opacity: .5;
+    }
+}

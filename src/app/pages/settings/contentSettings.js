@@ -120,7 +120,7 @@ const ContentSettings = () => {
 		return <ErrorCard error={isError} />
 	}
 	return (
-		<Card>
+		<Card className="card-content-settings">
 			<CardHeader>
 				<Heading level="3">
 					{__('Content Options', 'hostgator-wordpress-plugin')}
@@ -132,9 +132,10 @@ const ContentSettings = () => {
 					'hostgator-wordpress-plugin'
 				)}
 			</CardBody>
-			<CardBody>
+			<CardBody className="content-revisions-body">
 				<SelectControl
 					label={contentRevisionsLabelText()}
+					className="content-revisions-select"
 					value={contentRevisions}
 					help={contentRevisionsHelpText()}
 					options={[
@@ -151,6 +152,7 @@ const ContentSettings = () => {
 			<CardBody>
 				<SelectControl
 					label={emptyTrashDaysLabelText()}
+					className="empty-trash-select"
 					value={emptyTrashDays}
 					help={emptyTrashDaysHelpText()}
 					options={[

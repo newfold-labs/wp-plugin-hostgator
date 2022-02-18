@@ -129,10 +129,10 @@ const CacheSettings = () => {
 		return <ErrorCard error={isError} />
 	}
 	return (
-		<Card>
+		<Card className="card-cache-settings">
 			<CardHeader>
 				<Heading level="3">
-					{__('Cache Level', 'hostgat0r-wordpress-plugin')}
+					{__('Cache Level', 'hostgator-wordpress-plugin')}
 				</Heading>
 			</CardHeader>
 			<CardBody>
@@ -143,6 +143,7 @@ const CacheSettings = () => {
 			</CardBody>
 			<CardBody>
 				<RadioControl
+					className="input-cache-settings"
 					selected={cacheLevel}
 					options={cacheOptions}
 					onChange={(value) => setCacheLevel(parseInt(value))}

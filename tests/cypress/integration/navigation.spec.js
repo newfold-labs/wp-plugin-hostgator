@@ -1,6 +1,6 @@
 // <reference types="Cypress" />
 
-describe('Help Page', function () {
+describe('Navigation', function () {
 
 	before(() => {
 		cy.visit('/wp-admin/admin.php?page=hostgator');
