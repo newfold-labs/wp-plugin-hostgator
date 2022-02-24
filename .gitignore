@@ -16,10 +16,9 @@ cypress.env.json
 # Built-app files
 /.docs
 /build/*
-/bluehost-wordpress-plugin
+/wp-plugin-hostgator
 
 # File Types
 *.log
 *.sql
 *.zip
-hostgator-wordpress-plugin

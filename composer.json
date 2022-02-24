@@ -1,5 +1,5 @@
 {
-    "name": "newfold/hostgator-wordpress-plugin",
+    "name": "newfold/wp-plugin-hostgator",
     "description": "WordPress plugin that integrates your WordPress site with the HostGator control panel, including performance, security, and update features.",
     "type": "wordpress-plugin",
     "license": [
@@ -34,8 +34,8 @@
         "fix": "vendor/bin/phpcbf --standard=phpcs.xml .",
         "lint": "vendor/bin/phpcs --standard=phpcs.xml -s .",
         "i18n": [
-            "vendor/bin/wp i18n make-pot . ./languages/hostgator-wordpress-plugin.pot --headers=Report-Msgid-Bugs-To:https://github.com/bluehost/wp-plugin-hostgator/issues --exclude=assets,storybook,tests",
-            "vendor/bin/wp i18n make-pot . ./languages/hostgator-wordpress-plugin.pot --headers=POT-Creation-Date:null --exclude=assets,storybook,tests"
+            "vendor/bin/wp i18n make-pot . ./languages/wp-plugin-hostgator.pot --headers=Report-Msgid-Bugs-To:https://github.com/bluehost/wp-plugin-hostgator/issues --exclude=assets,storybook,tests",
+            "vendor/bin/wp i18n make-pot . ./languages/wp-plugin-hostgator.pot --headers=POT-Creation-Date:null --exclude=assets,storybook,tests"
         ]
     },
     "scripts-descriptions": {
