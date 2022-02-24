@@ -1,8 +1,8 @@
 {
-    "name": "hostgator-wordpress-plugin",
+    "name": "wp-plugin-hostgator",
     "description": "WordPress plugin that integrates your WordPress site with the HostGator control panel, including performance, security, and update features.",
     "license": "GPL-2.0-or-later",
-    "version": "0.9.10",
+    "version": "0.9.11",
     "private": true,
     "author": {
         "name": "Evan Mullins",
@@ -33,10 +33,10 @@
         "storybook:build": "build-storybook -c ./storybook -o ./.docs",
         "test:e2e": "npx cypress run",
         "test:unit": "wp-scripts test-unit-js",
-        "create:dist": "rsync -r --exclude-from=.distignore . ./hostgator-wordpress-plugin",
+        "create:dist": "rsync -r --exclude-from=.distignore . ./wp-plugin-hostgator",
         "php-deps": "composer install --no-dev --optimize-autoloader",
-        "create:zip": "cd ./hostgator-wordpress-plugin && zip -r -9 ../hostgator-wordpress-plugin.zip . && ls -lh ../hostgator-wordpress-plugin.zip",
-        "prebuild:cleanup": "rm -rf ./build ./hostgator-wordpress-plugin ./hostgator-wordpress-plugin.zip ./vendor",
+        "create:zip": "cd ./wp-plugin-hostgator && zip -r -9 ../wp-plugin-hostgator.zip . && ls -lh ../wp-plugin-hostgator.zip",
+        "prebuild:cleanup": "rm -rf ./build ./wp-plugin-hostgator ./wp-plugin-hostgator.zip ./vendor",
         "simulate-runner-build": "npm run prebuild:cleanup && npm i && npm run build && npm run php-deps && npm run create:dist && npm run create:zip"
     },
     "dependencies": {

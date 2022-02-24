@@ -20,8 +20,7 @@ if ( is_readable( __DIR__ . '/vendor/autoload.php' ) ) {
 	}
 	return;
 }
-
-$updateurl     = 'https://hiive.cloud/workers/release-api/plugins/bluehost/hostgator-wordpress-plugin'; // Custom API GET endpoint
+$updateurl     = 'https://hiive.cloud/workers/release-api/plugins/bluehost/wp-plugin-hostgator'; // Custom API GET endpoint
 $pluginUpdater = new PluginUpdater( HOSTGATOR_PLUGIN_FILE, $updateurl );
 $pluginUpdater->setDataMap(
 	array(
