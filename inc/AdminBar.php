@@ -32,10 +32,10 @@ class AdminBar {
 		$wp_admin_bar->add_menu(
 			array(
 				'id'    => 'hostgator-support',
-				'title' => __( 'Need help?', 'hostgator-wordpress-plugin' ),
+				'title' => __( 'Need help?', 'wp-plugin-hostgator' ),
 				'href'  => admin_url( 'admin.php?page=hostgator#/help' ),
 				'meta'  => array(
-					'title' => esc_attr__( 'We\'re here for you!', 'hostgator-wordpress-plugin' ),
+					'title' => esc_attr__( 'We\'re here for you!', 'wp-plugin-hostgator' ),
 				),
 			)
 		);

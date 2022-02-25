@@ -18,7 +18,7 @@ const ClearCache = () => {
 	const [isError, setError] = useState(false);
 
 	const getCacheClearNoticeText = () => {
-		return __('Cache cleared', 'hostgator-wordpress-plugin');
+		return __('Cache cleared', 'wp-plugin-hostgator');
 	};
 
 	const clearCache = () => {
@@ -34,13 +34,13 @@ const ClearCache = () => {
 		<Card className={`short card-clear-cache ${!store.cacheLevel ? 'disabled' : ''}`}>
 			<CardHeader>
 				<Heading level="3">
-					{__('Clear Cache', 'hostgator-wordpress-plugin')}
+					{__('Clear Cache', 'wp-plugin-hostgator')}
 				</Heading>
 			</CardHeader>
 			<CardBody>
 				{__(
 					'If you’ve recently updated your website, we recommend clearing the site cache. We’ll fetch a fresh version of your site to cache.',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 				)}
 			</CardBody>
 			<CardFooter>
@@ -51,7 +51,7 @@ const ClearCache = () => {
 					}}
 					disabled={!store.cacheLevel}
 				>
-					{__('Clear All Cache Now', 'hostgator-wordpress-plugin')}
+					{__('Clear All Cache Now', 'wp-plugin-hostgator')}
 				</Button>
 			</CardFooter>
 		</Card>

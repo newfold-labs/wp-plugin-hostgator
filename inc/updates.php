@@ -4,7 +4,7 @@
  *
  * By default, all auto-updates are enabled (including major releases).
  *
- * @package hostgator-wordpress-plugin
+ * @package HostGatorWordPressPlugin
  */
 
 namespace HostGator;
@@ -112,7 +112,7 @@ function plugin_auto_update_setting_html( $html ) {
 		'<span class="label">Auto-updates enabled</span>',
 		sprintf(
 		/* translators: %s Settings > General page URL. */
-			__( 'Auto-updates enabled on the <a href="%s">HostGator > Settings</a> page.', 'hostgator-wordpress-plugin' ),
+			__( 'Auto-updates enabled on the <a href="%s">HostGator > Settings</a> page.', 'wp-plugin-hostgator' ),
 			admin_url( 'admin.php?page=hostgator#/settings' )
 		),
 		$html
@@ -140,7 +140,7 @@ function theme_auto_update_setting_html( $html ) {
 
 	return sprintf(
 	/* translators: %s Settings > General page URL. */
-		__( 'Auto-updates enabled on the <a href="%s">HostGator > Settings</a> page.', 'hostgator-wordpress-plugin' ),
+		__( 'Auto-updates enabled on the <a href="%s">HostGator > Settings</a> page.', 'wp-plugin-hostgator' ),
 		admin_url( 'admin.php?page=hostgator#/settings' )
 	);
 }
@@ -163,11 +163,11 @@ function theme_auto_update_setting_template( $template ) {
 	}
 
 	$template_string = '<# } else if ( data.autoupdate.forced ) { #>
-					' . __( 'Auto-updates enabled', 'hostgator-wordpress-plugin' );
+					' . __( 'Auto-updates enabled', 'wp-plugin-hostgator' );
 	$replacement     = '<# } else if ( data.autoupdate.forced ) { #>';
 	$replacement    .= sprintf(
 	/* translators: %s Settings > General page URL. */
-		__( 'Auto-updates enabled on the <a href="%s">HostGator > Settings</a> page.', 'hostgator-wordpress-plugin' ),
+		__( 'Auto-updates enabled on the <a href="%s">HostGator > Settings</a> page.', 'wp-plugin-hostgator' ),
 		admin_url( 'admin.php?page=hostgator#/settings' )
 	);
 

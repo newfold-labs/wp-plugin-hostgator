@@ -34,29 +34,29 @@ const CommentSettings = () => {
 		return disableCommentsOldPosts
 			? __(
 					'Comments on old posts are disabled.',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 			  )
 			: __(
 					'Comments are allowed on old posts.',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 			  );
 	};
 	const disableCommentsNoticeText = () => {
 		return disableCommentsOldPosts
-			? __('Old post comments disabled.', 'hostgator-wordpress-plugin')
-			: __('Old post comments enabled.', 'hostgator-wordpress-plugin');
+			? __('Old post comments disabled.', 'wp-plugin-hostgator')
+			: __('Old post comments enabled.', 'wp-plugin-hostgator');
 	};
 	const closeCommentsLabelText = () => {
 		// `Close comments after ${closeCommentsDays} day(s)`
 		return (
 			<span>
-				{__('Close comments after ', 'hostgator-wordpress-plugin')}
+				{__('Close comments after ', 'wp-plugin-hostgator')}
 				<strong>{closeCommentsDays}</strong>
 				{_n(
 					' day.',
 					' days.',
 					closeCommentsDays,
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 				)}
 			</span>
 		);
@@ -67,14 +67,14 @@ const CommentSettings = () => {
 			<span>
 				{__(
 					'Comments on posts are disabled after ',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 				)}
 				<strong>{closeCommentsDays}</strong>
 				{_n(
 					' day.',
 					' days.',
 					closeCommentsDays,
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 				)}
 			</span>
 		);
@@ -83,14 +83,14 @@ const CommentSettings = () => {
 		return (
 			__(
 				'Disabled comments on posts older than ',
-				'hostgator-wordpress-plugin'
+				'wp-plugin-hostgator'
 			) +
 			closeCommentsDays +
 			_n(
 				' day.',
 				' days.',
 				closeCommentsDays,
-				'hostgator-wordpress-plugin'
+				'wp-plugin-hostgator'
 			)
 		);
 	};
@@ -98,13 +98,13 @@ const CommentSettings = () => {
 		// `Display ${commentsPerPage} comment(s) per page`
 		return (
 			<span>
-				{__('Display ', 'hostgator-wordpress-plugin')}
+				{__('Display ', 'wp-plugin-hostgator')}
 				<strong>{commentsPerPage}</strong>
 				{_n(
 					' comment per page.',
 					' comments per page.',
 					commentsPerPage,
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 				)}
 			</span>
 		);
@@ -113,13 +113,13 @@ const CommentSettings = () => {
 		//`Posts will display ${commentsPerPage} comments at a time.`
 		return (
 			<span>
-				{__('Posts will display ', 'hostgator-wordpress-plugin')}
+				{__('Posts will display ', 'wp-plugin-hostgator')}
 				<strong>{commentsPerPage}</strong>
 				{_n(
 					' comment at a time.',
 					' comments at a time.',
 					commentsPerPage,
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 				)}
 			</span>
 		);
@@ -127,7 +127,7 @@ const CommentSettings = () => {
 	const commentsPerPageNoticeText = () => {
 		return __(
 			'Comments per page setting saved.',
-			'hostgator-wordpress-plugin'
+			'wp-plugin-hostgator'
 		);
 	};
 	useUpdateEffect(() => {
@@ -169,13 +169,13 @@ const CommentSettings = () => {
 		<Card className="card-comment-settings">
 			<CardHeader>
 				<Heading level="3">
-					{__('Comments', 'hostgator-wordpress-plugin')}
+					{__('Comments', 'wp-plugin-hostgator')}
 				</Heading>
 			</CardHeader>
 			<CardBody>
 				{__(
 					'Make blog post comments disabled on older posts and control how many to display.',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 				)}
 			</CardBody>
 			<CardBody
@@ -186,7 +186,7 @@ const CommentSettings = () => {
 					className="disable-comments-toggle"
 					label={__(
 						'Disable comments for older posts',
-						'hostgator-wordpress-plugin'
+						'wp-plugin-hostgator'
 					)}
 					help={disableCommentsHelpText()}
 					onChange={() => {

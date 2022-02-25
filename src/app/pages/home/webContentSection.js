@@ -12,18 +12,18 @@ import {
 const WebContentSection = () => {
 	return (
 		<section className="hgwp-section hgwp-section-home-content">
-			<img src={graphicUrl} className='section-graphic' alt={__('Website illustration', 'hostgator-wordpress-plugin')} />
+			<img src={graphicUrl} className='section-graphic' alt={__('Website illustration', 'wp-plugin-hostgator')} />
 			<Card size="large" className="hgwp-section-card">
 				<CardHeader>
 					<Heading level="3">
-						{__('Website Content', 'hostgator-wordpress-plugin')}
+						{__('Website Content', 'wp-plugin-hostgator')}
 					</Heading>
 				</CardHeader>
 				<CardBody>
 					<p>
 						{__(
 							'Manage website content easily with these shortcut links.',
-							'hostgator-wordpress-plugin'
+							'wp-plugin-hostgator'
 						)}
 					</p>
 				</CardBody>
@@ -31,12 +31,12 @@ const WebContentSection = () => {
 					<div className="hgwp-cardlist-content">
 						<Heading level="4">
 							<Dashicon icon="admin-post" />{' '}
-							{__('Blog', 'hostgator-wordpress-plugin')}
+							{__('Blog', 'wp-plugin-hostgator')}
 						</Heading>
 						<p>
 							{__(
 								'Write a new blog post.',
-								'hostgator-wordpress-plugin'
+								'wp-plugin-hostgator'
 							)}
 						</p>
 					</div>
@@ -46,19 +46,19 @@ const WebContentSection = () => {
 						icon="admin-post"
 					>
 						{' '}
-						{__('New Post', 'hostgator-wordpress-plugin')}{' '}
+						{__('New Post', 'wp-plugin-hostgator')}{' '}
 					</Button>
 				</CardFooter>
 				<CardFooter>
 					<div className="hgwp-cardlist-content">
 						<Heading level="4">
 							<Dashicon icon="welcome-add-page" />{' '}
-							{__('Pages', 'hostgator-wordpress-plugin')}
+							{__('Pages', 'wp-plugin-hostgator')}
 						</Heading>
 						<p>
 							{__(
 								'Add fresh pages to your website.',
-								'hostgator-wordpress-plugin'
+								'wp-plugin-hostgator'
 							)}
 						</p>
 					</div>
@@ -67,19 +67,19 @@ const WebContentSection = () => {
 						href={HGWP.admin + 'post-new.php?post_type=page'}
 						icon="welcome-add-page"
 					>
-						{__('New Page', 'hostgator-wordpress-plugin')}
+						{__('New Page', 'wp-plugin-hostgator')}
 					</Button>
 				</CardFooter>
 				<CardFooter>
 					<div className="hgwp-cardlist-content">
 						<Heading level="4">
 							<Dashicon icon="category" />{' '}
-							{__('Categories', 'hostgator-wordpress-plugin')}
+							{__('Categories', 'wp-plugin-hostgator')}
 						</Heading>
 						<p>
 							{__(
 								'Organize existing content into categories.',
-								'hostgator-wordpress-plugin'
+								'wp-plugin-hostgator'
 							)}
 						</p>
 					</div>
@@ -88,7 +88,7 @@ const WebContentSection = () => {
 						href={HGWP.admin + 'edit-tags.php?taxonomy=category'}
 						icon="category"
 					>
-						{__('Manage Categories', 'hostgator-wordpress-plugin')}
+						{__('Manage Categories', 'wp-plugin-hostgator')}
 					</Button>
 				</CardFooter>
 			</Card>

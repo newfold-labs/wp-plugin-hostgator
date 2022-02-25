@@ -22,7 +22,7 @@ function mojo_cs_notice_display() {
 				<?php
 				printf(
 					/* translators: %1$s is replaced with the opening link tag and %2$s is replaced with the closing link tag. */
-					__( 'Your site is currently displaying a "Coming Soon" page. Once you are ready, %1$slaunch your site%2$s.', 'hostgator-wordpress-plugin' ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					__( 'Your site is currently displaying a "Coming Soon" page. Once you are ready, %1$slaunch your site%2$s.', 'wp-plugin-hostgator' ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					'<a href="' . esc_url( admin_url( 'admin.php?page=hostgator#/home' ) ) . '">',
 					'</a>'
 				);
@@ -46,9 +46,9 @@ function hostgator_add_tool_bar_items( \WP_Admin_Bar $admin_bar ) {
 			$cs_args = array(
 				'id'    => 'hostgator-coming_soon',
 				'href'  => admin_url( 'admin.php?page=hostgator#/home' ),
-				'title' => '<div class="hostgator-coming_soon-highlight">' . esc_html__( 'Coming Soon Active', 'hostgator-wordpress-plugin' ) . '</div>',
+				'title' => '<div class="hostgator-coming_soon-highlight">' . esc_html__( 'Coming Soon Active', 'wp-plugin-hostgator' ) . '</div>',
 				'meta'  => array(
-					'title' => esc_attr__( 'Launch Your Site', 'hostgator-wordpress-plugin' ),
+					'title' => esc_attr__( 'Launch Your Site', 'wp-plugin-hostgator' ),
 				),
 			);
 			$admin_bar->add_menu( $cs_args );
@@ -90,14 +90,14 @@ function mojo_coming_soon_subscribe() {
 
 	if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( wp_unslash( $_POST['nonce'] ), 'mojo_coming_soon_subscribe_nonce' ) ) {
 
-		$a_response['message'] = __( 'Gotcha!', 'hostgator-wordpress-plugin' );
+		$a_response['message'] = __( 'Gotcha!', 'wp-plugin-hostgator' );
 		$a_response['status']  = 'nonce_failure';
 
 	} else {
 
 		if ( ! is_email( $email ) ) {
 
-			$a_response['message'] = __( 'Please provide a valid email address', 'hostgator-wordpress-plugin' );
+			$a_response['message'] = __( 'Please provide a valid email address', 'wp-plugin-hostgator' );
 			$a_response['status']  = 'invalid_email';
 
 		} else {
@@ -120,12 +120,12 @@ function mojo_coming_soon_subscribe() {
 				$error_text = array_keys( $response[0]->errors );
 				$error_text = $error_text[0];
 
-				$a_response['message'] = __( 'There was an error with the subscription', 'hostgator-wordpress-plugin' );
+				$a_response['message'] = __( 'There was an error with the subscription', 'wp-plugin-hostgator' );
 				$a_response['status']  = $error_text;
 
 			} else {
 
-				$a_response['message'] = __( 'Subscription successful', 'hostgator-wordpress-plugin' );
+				$a_response['message'] = __( 'Subscription successful', 'wp-plugin-hostgator' );
 				$a_response['status']  = 'success';
 
 			}

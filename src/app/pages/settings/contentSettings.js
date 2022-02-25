@@ -29,13 +29,13 @@ const ContentSettings = () => {
 		// `Keep ${contentRevisions} latest revision(s)`
 		return (
 			<span>
-				{__('Keep ', 'hostgator-wordpress-plugin')}
+				{__('Keep ', 'wp-plugin-hostgator')}
 				<strong>{contentRevisions}</strong>
 				{_n(
 					' latest revision',
 					' latest revisions',
 					parseInt(contentRevisions),
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 				)}
 			</span>
 		);
@@ -44,13 +44,13 @@ const ContentSettings = () => {
 		//`Posts will save ${contentRevisions} revisions.`
 		return (
 			<span>
-				{__('Posts will save ', 'hostgator-wordpress-plugin')}
+				{__('Posts will save ', 'wp-plugin-hostgator')}
 				<strong>{contentRevisions}</strong>
 				{_n(
 					' revision.',
 					' revisions.',
 					parseInt(contentRevisions),
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 				)}
 			</span>
 		);
@@ -62,13 +62,13 @@ const ContentSettings = () => {
 		// `Empty trash every ${numTrashWeeks} week(s).`
 		return (
 			<span>
-				{__('Empty trash every ', 'hostgator-wordpress-plugin')}
+				{__('Empty trash every ', 'wp-plugin-hostgator')}
 				<strong>{numTrashWeeks}</strong>
 				{_n(
 					' week.',
 					' weeks.',
 					numTrashWeeks,
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 				)}
 			</span>
 		);
@@ -79,14 +79,14 @@ const ContentSettings = () => {
 			<span>
 				{__(
 					'The trash will automatically empty every ',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 				)}
 				<strong>{numTrashWeeks}</strong>
 				{_n(
 					' week.',
 					' weeks.',
 					numTrashWeeks,
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 				)}
 			</span>
 		);
@@ -123,13 +123,13 @@ const ContentSettings = () => {
 		<Card className="card-content-settings">
 			<CardHeader>
 				<Heading level="3">
-					{__('Content Options', 'hostgator-wordpress-plugin')}
+					{__('Content Options', 'wp-plugin-hostgator')}
 				</Heading>
 			</CardHeader>
 			<CardBody>
 				{__(
 					'Controls for content revisions and how often to empty the trash.',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 				)}
 			</CardBody>
 			<CardBody className="content-revisions-setting">

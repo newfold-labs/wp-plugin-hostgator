@@ -13,20 +13,20 @@ import { Icon, settings, store } from '@wordpress/icons';
 const SettingsSection = () => {
 	return (
 		<section className="hgwp-section hgwp-section-home-settings">
-			<img src={graphicUrl} className='section-graphic' alt={__('Settings illustration', 'hostgator-wordpress-plugin')} />
+			<img src={graphicUrl} className='section-graphic' alt={__('Settings illustration', 'wp-plugin-hostgator')} />
 			<Card size="large" className="hgwp-section-card">
 				<CardHeader>
 					<Heading level="3">
 						{__(
 							'Settings and Performance',
-							'hostgator-wordpress-plugin'
+							'wp-plugin-hostgator'
 						)}
 					</Heading>
 				</CardHeader>
 				<CardBody>
 					{__(
 						'Manage your site within this dashboard',
-						'hostgator-wordpress-plugin'
+						'wp-plugin-hostgator'
 					)}
 				</CardBody>
 				<CardFooter>
@@ -35,13 +35,13 @@ const SettingsSection = () => {
 							<Icon icon={settings} />{' '}
 							{__(
 								'Manage Settings',
-								'hostgator-wordpress-plugin'
+								'wp-plugin-hostgator'
 							)}
 						</Heading>
 						<p>
 							{__(
 								'Manage your site settings. You can ajdust automatic updates, comments, revisions and more.',
-								'hostgator-wordpress-plugin'
+								'wp-plugin-hostgator'
 							)}
 						</p>
 					</div>
@@ -51,19 +51,19 @@ const SettingsSection = () => {
 						icon={settings}
 						className="callout-link-settings"
 					>
-						{__('Settings', 'hostgator-wordpress-plugin')}
+						{__('Settings', 'wp-plugin-hostgator')}
 					</Button>
 				</CardFooter>
 				<CardFooter>
 					<div className="hgwp-cardlist-content">
 						<Heading level="4">
 							<Dashicon icon='performance' />{' '}
-							{__('Performance', 'hostgator-wordpress-plugin')}
+							{__('Performance', 'wp-plugin-hostgator')}
 						</Heading>
 						<p>
 							{__(
 								'Manage site performance and caching settings as well as clear the site cache.',
-								'hostgator-wordpress-plugin'
+								'wp-plugin-hostgator'
 							)}
 						</p>
 					</div>
@@ -73,19 +73,19 @@ const SettingsSection = () => {
 						icon={<Dashicon icon='performance' />}
 						className="callout-link-performance"
 					>
-						{__('Performance', 'hostgator-wordpress-plugin')}
+						{__('Performance', 'wp-plugin-hostgator')}
 					</Button>
 				</CardFooter>
 				<CardFooter>
 					<div className="hgwp-cardlist-content">
 						<Heading level="4">
 							<Icon icon={store} />{' '}
-							{__('Marketplace', 'hostgator-wordpress-plugin')}
+							{__('Marketplace', 'wp-plugin-hostgator')}
 						</Heading>
 						<p>
 							{__(
 								'Add site services, themes or plugins from the marketplace.',
-								'hostgator-wordpress-plugin'
+								'wp-plugin-hostgator'
 							)}
 						</p>
 					</div>
@@ -95,7 +95,7 @@ const SettingsSection = () => {
 						icon={store}
 						className="callout-link-marketplace"
 					>
-						{__('Visit Marketplace', 'hostgator-wordpress-plugin')}
+						{__('Visit Marketplace', 'wp-plugin-hostgator')}
 					</Button>
 				</CardFooter>
 			</Card>

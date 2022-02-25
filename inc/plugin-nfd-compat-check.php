@@ -158,7 +158,7 @@ class NFD_Plugin_Compat_Check {
 					'nfd_plugin_incompatible',
 					sprintf(
 						/* translators: 1: plugin name 2: incompatible plugin name */
-						__( '"%1$s" has self-deactivated. It is incompatible with "%2$s".', 'hostgator-wordpress-plugin' ),
+						__( '"%1$s" has self-deactivated. It is incompatible with "%2$s".', 'wp-plugin-hostgator' ),
 						$this->name,
 						$incompatible_name
 					)
@@ -185,7 +185,7 @@ class NFD_Plugin_Compat_Check {
 					'nfd_plugin_legacy',
 					sprintf(
 						/* translators: 1: legacy plugin name 2: plugin name */
-						__( '"%1$s" has been deactivated. It is incompatible with "%2$s".', 'hostgator-wordpress-plugin' ),
+						__( '"%1$s" has been deactivated. It is incompatible with "%2$s".', 'wp-plugin-hostgator' ),
 						$legacy_name,
 						$this->name
 					)

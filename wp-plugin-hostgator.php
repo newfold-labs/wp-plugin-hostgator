@@ -10,14 +10,14 @@
  * @wordpress-plugin
  * Plugin Name:       HostGator
  * Plugin URI:        https://hostgator.com
- * Description:       WordPress plugin that integrates your WordPress site with the HostGator control panel, including performance, security, and update features.
+ * Description:       WordPress plugin that integrates a WordPress site with the HostGator control panel, including performance, security, and update features.
  * Version:           0.9.11
  * Requires at least: 4.7
  * Requires PHP:      5.6
  * Tested up to:      5.9
  * Author:            HostGator
  * Author URI:        https://hostgator.com
- * Text Domain:       hostgator-wordpress-plugin
+ * Text Domain:       wp-plugin-hostgator
  * Domain Path:       /languages
  * License:           GPL 2.0 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html

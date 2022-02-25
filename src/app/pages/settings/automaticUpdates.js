@@ -34,72 +34,72 @@ const AutomaticUpdates = () => {
 
 	const getAllNoticeText = () => {
 		return autoUpdatesAll
-			? __('Everything will auto-update.', 'hostgator-wordpress-plugin')
-			: __('Custom auto-update settings.', 'hostgator-wordpress-plugin');
+			? __('Everything will auto-update.', 'wp-plugin-hostgator')
+			: __('Custom auto-update settings.', 'wp-plugin-hostgator');
 	};
 	const getAllHelpText = () => {
 		return autoUpdatesAll
 			? __(
 					'Yay! Everything will automatically update.',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 			  )
 			: __(
 					'Custom automatic update settings.',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 			  );
 	};
 	const getCoreNoticeText = () => {
 		return autoUpdatesMajorCore
-			? __('Core will auto-update.', 'hostgator-wordpress-plugin')
-			: __('Core will not auto-update.', 'hostgator-wordpress-plugin');
+			? __('Core will auto-update.', 'wp-plugin-hostgator')
+			: __('Core will not auto-update.', 'wp-plugin-hostgator');
 	};
 	const getCoreHelpText = () => {
 		return autoUpdatesMajorCore
 			? __(
 					'WordPress will automatically update.',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 			  )
 			: __(
 					'WordPress must be manually updated.',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 			  );
 	};
 	const getPluginsNoticeText = () => {
 		return autoUpdatesPlugins
-			? __('Plugins will auto-update.', 'hostgator-wordpress-plugin')
+			? __('Plugins will auto-update.', 'wp-plugin-hostgator')
 			: __(
 					'Plugins will not auto-update.',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 			  );
 	};
 	const getPluginsHelpText = () => {
 		return autoUpdatesPlugins
 			? __(
 					'All plugins will automatically update.',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 			  )
 			: __(
 					'Each plugin must be manually updated.',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 			  );
 	};
 	const getThemesNoticeText = () => {
 		return autoUpdatesThemes
-			? __('Themes will auto-update.', 'hostgator-wordpress-plugin')
+			? __('Themes will auto-update.', 'wp-plugin-hostgator')
 			: __(
 					'Theme will not auto-update.',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 			  );
 	};
 	const getThemesHelpText = () => {
 		return autoUpdatesThemes
 			? __(
 					'All themes will automatically update.',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 			  )
 			: __(
 					'Each theme must be manually updated.',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 			  );
 	};
 
@@ -165,13 +165,13 @@ const AutomaticUpdates = () => {
 		<Card className="card-auto-updates">
 			<CardHeader>
 				<Heading level="3">
-					{__('Automatic Updates', 'hostgator-wordpress-plugins')}
+					{__('Automatic Updates', 'wp-plugin-hostgator')}
 				</Heading>
 			</CardHeader>
 			<CardBody>
 				{__(
 					'Allow your site to stay updated automatically.',
-					'hostgator-wordpress-plugins'
+					'wp-plugin-hostgator'
 				)}
 			</CardBody>
 			<CardDivider />
@@ -179,7 +179,7 @@ const AutomaticUpdates = () => {
 				className="autoupdate-all-setting"
 			>
 				<ToggleControl
-					label={__('Everything', 'hostgator-wordpress-plugin')}
+					label={__('Everything', 'wp-plugin-hostgator')}
 					className="autoupdate-all-toggle"
 					checked={autoUpdatesAll}
 					help={getAllHelpText()}
@@ -193,7 +193,7 @@ const AutomaticUpdates = () => {
 				className={`autoupdate-core-setting  ${autoUpdatesAll  ? 'disabled' : ''}` }
 			>
 				<ToggleControl
-					label={__('Core', 'hostgator-wordpress-plugin')}
+					label={__('Core', 'wp-plugin-hostgator')}
 					className="autoupdate-core-toggle"
 					checked={autoUpdatesMajorCore}
 					disabled={autoUpdatesAll}
@@ -208,7 +208,7 @@ const AutomaticUpdates = () => {
 				className={`autoupdate-plugin-setting  ${autoUpdatesAll  ? 'disabled' : ''}` }
 				>
 				<ToggleControl
-					label={__('Plugins', 'hostgator-wordpress-plugin')}
+					label={__('Plugins', 'wp-plugin-hostgator')}
 					className="autoupdate-plugin-toggle"
 					checked={autoUpdatesPlugins}
 					disabled={autoUpdatesAll}
@@ -223,7 +223,7 @@ const AutomaticUpdates = () => {
 				className={`autoupdate-theme-setting  ${autoUpdatesAll  ? 'disabled' : ''}` }
 				>
 				<ToggleControl
-					label={__('Themes', 'hostgator-wordpress-plugin')}
+					label={__('Themes', 'wp-plugin-hostgator')}
 					className="autoupdate-theme-toggle"
 					checked={autoUpdatesThemes}
 					disabled={autoUpdatesAll}

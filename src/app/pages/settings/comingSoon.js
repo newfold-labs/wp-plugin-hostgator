@@ -24,18 +24,18 @@ const ComingSoon = () => {
 
 	const getComingSoonNoticeText = () => {
 		return comingSoon
-			? __('Coming soon activated.', 'hostgator-wordpress-plugin')
-			: __('Coming soon deactivated.', 'hostgator-wordpress-plugin');
+			? __('Coming soon activated.', 'wp-plugin-hostgator')
+			: __('Coming soon deactivated.', 'wp-plugin-hostgator');
 	};
 	const getComingSoonHelpText = () => {
 		return comingSoon
 			? __(
 					'Coming soon page is active and site is protected.',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 			  )
 			: __(
 					'Coming soon page is not active and site is acessible.',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 			  );
 	};
 	
@@ -58,19 +58,19 @@ const ComingSoon = () => {
 		<Card className="card-coming-soon">
 			<CardHeader>
 				<Heading level="3">
-					{__('Coming Soon', 'hostgator-wordpress-plugin')}
+					{__('Coming Soon', 'wp-plugin-hostgator')}
 				</Heading>
 			</CardHeader>
 			<CardBody>
 				{__(
 					'Not ready for your site to be live? Enable a "Coming Soon" page while you build your website for the public eye. This will disable all parts of your site and show visitors a "coming soon" landing page.',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 				)}
 			</CardBody>
 			<CardDivider />
 			<CardBody className="coming-soon-setting">
 				<ToggleControl
-					label={__('Coming Soon', 'hostgator-wordpress-plugin')}
+					label={__('Coming Soon', 'wp-plugin-hostgator')}
 					className="coming-soon-toggle"
 					checked={comingSoon}
 					help={getComingSoonHelpText()}
@@ -83,12 +83,12 @@ const ComingSoon = () => {
 						className="coming-soon-protip"
 						summary={__(
 							'Pro Tip: Begin collecting subscribers',
-							'hostgator-wordpress-plugin'
+							'wp-plugin-hostgator'
 						)}
 					>
 						<p>{__(
 							'First, activate the "Jetpack" plugin, connect your site, and enable the "Subscriptions" module. Then, users can subsribe to be notified when you launch and publish new content.',
-							'hostgator-wordpress-plugin'
+							'wp-plugin-hostgator'
 						)}</p>
 					</Accordion>
 				)}

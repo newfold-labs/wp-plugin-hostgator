@@ -26,7 +26,7 @@ export const AppRoutes = () => {
 						<p>
 							{__(
 								"There's nothing here!",
-								'hostgator-wordpress-plugin'
+								'wp-plugin-hostgator'
 							)}
 						</p>
 					</main>
@@ -48,31 +48,31 @@ const utilityRoutePaths = ['/performance', '/settings', '/help'];
 export const routes = [
 	{
 		name: '/home',
-		title: __('Home', 'hostgator-wordpress-plugin'),
+		title: __('Home', 'wp-plugin-hostgator'),
 		Component: Home,
 		Icon: grid,
 	},
 	{
 		name: '/marketplace',
-		title: __('Marketplace', 'hostgator-wordpress-plugin'),
+		title: __('Marketplace', 'wp-plugin-hostgator'),
 		Component: Marketplace,
 		Icon: store,
 	},
 	{
 		name: '/performance',
-		title: __('Performance', 'hostgator-wordpress-plugin'),
+		title: __('Performance', 'wp-plugin-hostgator'),
 		Component: Performance,
 		Dashicon: 'performance',
 	},
 	{
 		name: '/settings',
-		title: __('Settings', 'hostgator-wordpress-plugin'),
+		title: __('Settings', 'wp-plugin-hostgator'),
 		Component: Settings,
 		Icon: settings,
 	},
 	{
 		name: '/help',
-		title: __('Help', 'hostgator-wordpress-plugin'),
+		title: __('Help', 'wp-plugin-hostgator'),
 		Component: Help,
 		Icon: help,
 	},

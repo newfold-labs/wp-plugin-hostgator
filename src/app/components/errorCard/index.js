@@ -21,17 +21,17 @@ const ErrorCard = ({ error, className, notice = 'Error!' }) => {
                 <Heading level="3">
                     <Dashicon icon="warning" style={{ fontSize: "24px", width: "24px", height: "24px" }} />
                     {' '}
-                    {__('Oh No, An Error!', 'hostgator-wordpress-plugin')}
+                    {__('Oh No, An Error!', 'wp-plugin-hostgator')}
                 </Heading>
             </CardHeader>
             <CardBody>
-                <p>{__('You found an error, please refresh the page and try again!', 'hostgator-wordpress-plugin')}</p>
-                <p>{__('If the error persists, please contact support.', 'hostgator-wordpress-plugin')}</p>
+                <p>{__('You found an error, please refresh the page and try again!', 'wp-plugin-hostgator')}</p>
+                <p>{__('If the error persists, please contact support.', 'wp-plugin-hostgator')}</p>
             </CardBody>
             <CardFooter>
                 <p>
                     { error && error.message ? error.message : '' }
-                    { error && error.data ? __(' Error code: ', 'hostgator-wordpress-plugin') + error.data.status : '' }
+                    { error && error.data ? __(' Error code: ', 'wp-plugin-hostgator') + error.data.status : '' }
                 </p>
             </CardFooter>
         </Card>

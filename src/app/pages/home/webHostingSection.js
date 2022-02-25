@@ -12,18 +12,18 @@ import {
 const WebHostingSection = () => {
 	return (
 		<section className="hgwp-section hgwp-section-home-hosting">
-			<img src={graphicUrl} className='section-graphic' alt={__('Hosting illustration', 'hostgator-wordpress-plugin')} />
+			<img src={graphicUrl} className='section-graphic' alt={__('Hosting illustration', 'wp-plugin-hostgator')} />
 			<Card size="large" className="hgwp-section-card">
 				<CardHeader>
 					<Heading level="3">
-						{__('Web Hosting', 'hostgator-wordpress-plugin')}
+						{__('Web Hosting', 'wp-plugin-hostgator')}
 					</Heading>
 				</CardHeader>
 				<CardBody>
 					<p>
 						{__(
 							'Manage hosting in your HostGator portal account',
-							'hostgator-wordpress-plugin'
+							'wp-plugin-hostgator'
 						)}
 					</p>
 				</CardBody>
@@ -31,12 +31,12 @@ const WebHostingSection = () => {
 					<div className="hgwp-cardlist-content">
 						<Heading level="4">
 							<Dashicon icon="desktop" />{' '}
-							{__('Manage Sites', 'hostgator-wordpress-plugin')}
+							{__('Manage Sites', 'wp-plugin-hostgator')}
 						</Heading>
 						<p>
 							{__(
 								'Manage your site from the control panel. You can create backups, set security, and improve performance.',
-								'hostgator-wordpress-plugin'
+								'wp-plugin-hostgator'
 							)}
 						</p>
 					</div>
@@ -53,19 +53,19 @@ const WebHostingSection = () => {
 						target="_blank"
 						icon="desktop"
 					>
-						{__('Manage Sites', 'hostgator-wordpress-plugin')}
+						{__('Manage Sites', 'wp-plugin-hostgator')}
 					</Button>
 				</CardFooter>
 				<CardFooter>
 					<div className="hgwp-cardlist-content">
 						<Heading level="4">
 							<Dashicon icon="email" />{' '}
-							{__('Email', 'hostgator-wordpress-plugin')}
+							{__('Email', 'wp-plugin-hostgator')}
 						</Heading>
 						<p>
 							{__(
 								'Create email accounts, compose, send, and receive your email from the control panel.',
-								'hostgator-wordpress-plugin'
+								'wp-plugin-hostgator'
 							)}
 						</p>
 					</div>
@@ -82,19 +82,19 @@ const WebHostingSection = () => {
 						target="_blank"
 						icon="email"
 					>
-						{__('Manage Email', 'hostgator-wordpress-plugin')}
+						{__('Manage Email', 'wp-plugin-hostgator')}
 					</Button>
 				</CardFooter>
 				<CardFooter>
 					<div className="hgwp-cardlist-content">
 						<Heading level="4">
 							<Dashicon icon="admin-site" />{' '}
-							{__('Domains', 'hostgator-wordpress-plugin')}
+							{__('Domains', 'wp-plugin-hostgator')}
 						</Heading>
 						<p>
 							{__(
 								'Find a new domain and assign it to your site or start a new site with a fresh domain.',
-								'hostgator-wordpress-plugin'
+								'wp-plugin-hostgator'
 							)}
 						</p>
 					</div>
@@ -111,16 +111,16 @@ const WebHostingSection = () => {
 						target="_blank"
 						icon="admin-site"
 					>
-						{__('Find a Domain', 'hostgator-wordpress-plugin')}
+						{__('Find a Domain', 'wp-plugin-hostgator')}
 					</Button>
 				</CardFooter>
 				<CardFooter>
 					<div className="hgwp-cardlist-content">
 						<Heading level="4">
 							<Dashicon icon="sos" />{' '}
-							{__('Help', 'hostgator-wordpress-plugin')}
+							{__('Help', 'wp-plugin-hostgator')}
 						</Heading>
-						<p>{__('24/7/365 support. We work when you work.', 'hostgator-wordpress-plugin')}</p>
+						<p>{__('24/7/365 support. We work when you work.', 'wp-plugin-hostgator')}</p>
 					</div>
 					<Button
 						variant="secondary"
@@ -128,7 +128,7 @@ const WebHostingSection = () => {
 						icon="sos"
 						className="callout-link-help"
 					>
-						{__('Get Help', 'hostgator-wordpress-plugin')}
+						{__('Get Help', 'wp-plugin-hostgator')}
 					</Button>
 				</CardFooter>
 			</Card>

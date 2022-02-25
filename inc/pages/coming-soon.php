@@ -14,7 +14,7 @@
 			<?php
 			printf(
 			/* translators: %s: Blog name */
-				__( '%s &mdash; Coming Soon', 'hostgator-wordpress-plugin' ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				__( '%s &mdash; Coming Soon', 'wp-plugin-hostgator' ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				esc_html( get_option( 'blogname' ) )
 			);
 			?>
@@ -219,24 +219,24 @@
 		<div id="wrap">
 			<main class="content">
 				<div class="hg_subscription_widget">
-					<h1><?php esc_html_e( 'A New WordPress Site', 'hostgator-wordpress-plugin' ); ?></h1>
-					<h2><?php esc_html_e( 'Coming Soon!', 'hostgator-wordpress-plugin' ); ?></h2>	
+					<h1><?php esc_html_e( 'A New WordPress Site', 'wp-plugin-hostgator' ); ?></h1>
+					<h2><?php esc_html_e( 'Coming Soon!', 'wp-plugin-hostgator' ); ?></h2>	
 					<?php if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'subscriptions' ) ) { ?>
 						<div id="subscribe-text">
-							<p><?php esc_html_e( 'Be the first to know when we launch, enter your email address and we will let you know when we go live and any future website updates we have.', 'hostgator-wordpress-plugin' ); ?></p>
+							<p><?php esc_html_e( 'Be the first to know when we launch, enter your email address and we will let you know when we go live and any future website updates we have.', 'wp-plugin-hostgator' ); ?></p>
 						</div>
 						<div id="success">
-							<?php esc_html_e( 'Thank you, please check your email to confirm your subscription.', 'hostgator-wordpress-plugin' ); ?>
+							<?php esc_html_e( 'Thank you, please check your email to confirm your subscription.', 'wp-plugin-hostgator' ); ?>
 						</div>
 						<div id="error">
-							<?php esc_html_e( 'There was an error with your submission and you were not subscribed. Please try again with a different email address.', 'hostgator-wordpress-plugin' ); ?>
+							<?php esc_html_e( 'There was an error with your submission and you were not subscribed. Please try again with a different email address.', 'wp-plugin-hostgator' ); ?>
 						</div>
 						<form action="" method="post" accept-charset="utf-8" id="subscribe-hg">
 							<input type="hidden" name="action" value="mojo_coming_soon_subscribe">
 							<?php wp_nonce_field( 'mojo_coming_soon_subscribe_nonce', 'mm_nonce-coming-soon-subscribe' ); ?>
 							<span class="hg-inputs email" id="subscribe-email">
 								<label id="hg-subscribe-label" for="subscribe-field-hg">
-									<?php esc_html_e( 'Email', 'hostgator-wordpress-plugin' ); ?>
+									<?php esc_html_e( 'Email', 'wp-plugin-hostgator' ); ?>
 								</label>
 								<input
 									type="email"
@@ -262,13 +262,13 @@
 				$my_panel               = 'https://portal.hostgator.com/';
 				printf(
 				/* translators: %1$s is replaced with opening link tag taking you to hostgator.com/wordpress, %2$s is replaced with closing link tag */
-					esc_html__( 'A %1$sHostGator%2$s powered website.', 'hostgator-wordpress-plugin' ) . '&nbsp;',
+					esc_html__( 'A %1$sHostGator%2$s powered website.', 'wp-plugin-hostgator' ) . '&nbsp;',
 					'<a href="' . esc_url( $wordpress_hosting_page ) . '" class="hostgator" target="_blank" rel="noopener noreferrer nofollow">',
 					'</a>'
 				);
 				printf(
 				/* translators: %1$s is replaced with opening link tag taking you to login page, %2$s is replaced with opening link tag taking you to my.hostgator.com, %3$s is replaced with closing link tag */
-					esc_html__( 'Is this your website? Log in to %1$sWordPress%3$s or %2$sHostGator%3$s.', 'hostgator-wordpress-plugin' ),
+					esc_html__( 'Is this your website? Log in to %1$sWordPress%3$s or %2$sHostGator%3$s.', 'wp-plugin-hostgator' ),
 					'<a href="' . esc_url( wp_login_url() ) . '">',
 					'<a href="' . esc_url( $my_panel ) . '" class="hostgator" target="_blank" rel="noopener noreferrer nofollow">',
 					'</a>'
@@ -302,9 +302,9 @@
 							if (status == 'success') {
 								$('#success').show();
 							} else if (status == 'active') {
-								$('#error').show().text('<?php echo esc_js( __( 'Your email address is already subscribed to this website. Stay tuned to your inbox for our updates or try a different email address.', 'hostgator-wordpress-plugin' ) ); ?>');
+								$('#error').show().text('<?php echo esc_js( __( 'Your email address is already subscribed to this website. Stay tuned to your inbox for our updates or try a different email address.', 'wp-plugin-hostgator' ) ); ?>');
 							} else if (status == 'invalid_email') {
-								$('#error').show().text('<?php echo esc_js( __( 'There was an error with your submission and you were not subscribed. Please try again with a valid email address.', 'hostgator-wordpress-plugin' ) ); ?>');
+								$('#error').show().text('<?php echo esc_js( __( 'There was an error with your submission and you were not subscribed. Please try again with a valid email address.', 'wp-plugin-hostgator' ) ); ?>');
 							} else {
 								$('#error').show();
 							}

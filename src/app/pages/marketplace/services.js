@@ -6,7 +6,7 @@ const Services = () => {
 	return (
 		<div className="hgwp-services grid col2">
 			<Heading level="3" className="screen-reader-text">
-				{__('Services', 'hostgator-wordpress-plugin')}
+				{__('Services', 'wp-plugin-hostgator')}
 			</Heading>
 			{services.map((item) => (
 				<MarketplaceItem key={item.url} item={item} />

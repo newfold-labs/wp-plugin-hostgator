@@ -13,7 +13,7 @@ const Settings = () => {
 		<div className="hgwp-Settings grid col2 has-page-graphic">
 			<AutomaticUpdates />
 			{isWideViewport && (
-				<div><img src={graphicUrl} style={{ float: 'right'}} alt={__('Settings illustration', 'hostgator-wordpress-plugin')} /></div>
+				<div><img src={graphicUrl} style={{ float: 'right'}} alt={__('Settings illustration', 'wp-plugin-hostgator')} /></div>
 			)}
 			<ComingSoon />
 			<ContentSettings />

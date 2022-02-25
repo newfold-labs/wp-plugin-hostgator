@@ -25,18 +25,18 @@ const ComingSoonSection = () => {
 
 	const getComingSoonHeadline = () => {
 		return comingSoon
-			? __('Coming Soon', 'hostgator-wordpress-plugin')
-			: __('Site Launched!', 'hostgator-wordpress-plugin');
+			? __('Coming Soon', 'wp-plugin-hostgator')
+			: __('Site Launched!', 'wp-plugin-hostgator');
 	};
 	const getComingSoonBody = () => {
 		return comingSoon
 			? __(
 					'Your site currently displays a coming soon page to visitors. Once you have finished setting up your site, be sure to launch it so your visitors can reach it.',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 			  )
 			: __(
 					'Congratulations! You just successfully launched your site! Visitors will now see the site, you can easily undo this and restore the coming soon page if you are not ready.',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 			  );
 	};
 	const getComingSoonGraphicClass = () => {
@@ -54,7 +54,7 @@ const ComingSoonSection = () => {
 					setWasComingSoon(() => true);
 				}}
 			>
-				{__('Launch Site', 'hostgator-wordpress-plugin')}
+				{__('Launch Site', 'wp-plugin-hostgator')}
 			</Button>
 		) : (
 			<>
@@ -66,7 +66,7 @@ const ComingSoonSection = () => {
 						setWasComingSoon(() => true);
 					}}
 				>
-					{__('Restore Coming Soon', 'hostgator-wordpress-plugin')}
+					{__('Restore Coming Soon', 'wp-plugin-hostgator')}
 				</Button>
 				<Button
 					variant="link"
@@ -75,15 +75,15 @@ const ComingSoonSection = () => {
 						setWasComingSoon(() => false);
 					}}
 				>
-					{__('Dismiss', 'hostgator-wordpress-plugin')}
+					{__('Dismiss', 'wp-plugin-hostgator')}
 				</Button>
 			</>
 		);
 	};
 	const getComingSoonNoticeText = () => {
 		return comingSoon
-			? __('Coming soon activated.', 'hostgator-wordpress-plugin')
-			: __('Coming soon deactivated.', 'hostgator-wordpress-plugin');
+			? __('Coming soon activated.', 'wp-plugin-hostgator')
+			: __('Coming soon deactivated.', 'wp-plugin-hostgator');
 	};
 
 	useUpdateEffect(() => {

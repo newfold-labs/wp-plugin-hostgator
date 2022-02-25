@@ -8,74 +8,74 @@ import { ReactComponent as Video } from '../../../assets/svg/a-icon__youtube_-or
 const help = [
 	{
 		name: 'phone',
-		title: __('Phone', 'hostgator-wordpress-plugin'),
+		title: __('Phone', 'wp-plugin-hostgator'),
 		description: __(
 			'Give us a ring at (866) 96-GATOR',
-			'hostgator-wordpress-plugin'
+			'wp-plugin-hostgator'
 		),
 		icon: 'phone',
 		Svg: Phone,
-		cta: __('Call Us', 'hostgator-wordpress-plugin'),
+		cta: __('Call Us', 'wp-plugin-hostgator'),
 		url: 'tel:(866)_964-286',
 	},
 	{
 		name: 'chat',
-		title: __('Chat', 'hostgator-wordpress-plugin'),
+		title: __('Chat', 'wp-plugin-hostgator'),
 		description: __(
 			"Have a question? We're here 24/7/365",
-			'hostgator-wordpress-plugin'
+			'wp-plugin-hostgator'
 		),
 		icon: 'format-chat',
 		Svg: Chat,
-		cta: __('Live Chat', 'hostgator-wordpress-plugin'),
+		cta: __('Live Chat', 'wp-plugin-hostgator'),
 		url: 'https://helpchat.hostgator.com/?utm_campaign=&utm_content=help_chat_link&utm_term=live_chat&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=hostgator#/help',
 	},
 	{
 		name: 'twitter',
-		title: __('Tweet', 'hostgator-wordpress-plugin'),
+		title: __('Tweet', 'wp-plugin-hostgator'),
 		description: __(
 			'Tweet us at @hgsupport for support',
-			'hostgator-wordpress-plugin'
+			'wp-plugin-hostgator'
 		),
 		icon: 'twitter',
 		Svg: Tweet,
-		cta: __('Tweet Us', 'hostgator-wordpress-plugin'),
+		cta: __('Tweet Us', 'wp-plugin-hostgator'),
 		url: 'https://twitter.com/hgsupport',
 	},
 	{
 		name: 'kb',
-		title: __('Knowledge Base', 'hostgator-wordpress-plugin'),
+		title: __('Knowledge Base', 'wp-plugin-hostgator'),
 		description: __(
 			'Know what the pros know.',
-			'hostgator-wordpress-plugin'
+			'wp-plugin-hostgator'
 		),
 		icon: 'book',
 		Svg: Book,
-		cta: __('Find Answers', 'hostgator-wordpress-plugin'),
+		cta: __('Find Answers', 'wp-plugin-hostgator'),
 		url: 'https://www.hostgator.com/help?utm_campaign=&utm_content=help_kb_link&utm_term=find_answers&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=hostgator#/help',
 	},
 	{
 		name: 'blog',
-		title: __('Blog', 'hostgator-wordpress-plugin'),
+		title: __('Blog', 'wp-plugin-hostgator'),
 		description: __(
 			'Get our tips and in-depth articles.',
-			'hostgator-wordpress-plugin'
+			'wp-plugin-hostgator'
 		),
 		icon: 'text-page',
 		Svg: Site,
-		cta: __('Learn Stuff', 'hostgator-wordpress-plugin'),
+		cta: __('Learn Stuff', 'wp-plugin-hostgator'),
 		url: 'https://www.hostgator.com/blog/?utm_campaign=&utm_content=help_blog_link&utm_term=learn_stuff&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=hostgator#/help',
 	},
 	{
 		name: 'video',
-		title: __('Video Tutorials', 'hostgator-wordpress-plugin'),
+		title: __('Video Tutorials', 'wp-plugin-hostgator'),
 		description: __(
 			'Step-by-step tutorials and additional guides.',
-			'hostgator-wordpress-plugin'
+			'wp-plugin-hostgator'
 		),
 		icon: 'format-video',
 		Svg: Video,
-		cta: __('Watch Now', 'hostgator-wordpress-plugin'),
+		cta: __('Watch Now', 'wp-plugin-hostgator'),
 		url: 'https://www.youtube.com/c/hostgatorUS',
 	},
 ];

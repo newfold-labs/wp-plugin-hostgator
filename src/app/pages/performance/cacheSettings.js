@@ -24,13 +24,13 @@ const CacheSettings = () => {
 			label: (
 				<span>
 					<strong>
-						{__('Disabled', 'hostgator-wordpress-plugin')}
+						{__('Disabled', 'wp-plugin-hostgator')}
 					</strong>
 					<span>
-						{__('No cache enabled.', 'hostgator-wordpress-plugin')}
+						{__('No cache enabled.', 'wp-plugin-hostgator')}
 					</span>
 					<em>
-						{__('Not recommended.', 'hostgator-wordpress-plugin')}
+						{__('Not recommended.', 'wp-plugin-hostgator')}
 					</em>
 				</span>
 			),
@@ -41,18 +41,18 @@ const CacheSettings = () => {
 			label: (
 				<span>
 					<strong>
-						{__('Assets Only', 'hostgator-wordpress-plugin')}
+						{__('Assets Only', 'wp-plugin-hostgator')}
 					</strong>
 					<span>
 						{__(
 							'Cache static assets like images and the appearance of your site for 1 hour.',
-							'hostgator-wordpress-plugin'
+							'wp-plugin-hostgator'
 						)}
 					</span>
 					<em>
 						{__(
 							'Recommended for ecommerce and sites that update frequently or display info in real-time.',
-							'hostgator-wordpress-plugin'
+							'wp-plugin-hostgator'
 						)}
 					</em>
 				</span>
@@ -64,18 +64,18 @@ const CacheSettings = () => {
 			label: (
 				<span>
 					<strong>
-						{__('Assets & Web Pages', 'hostgator-wordpress-plugin')}
+						{__('Assets & Web Pages', 'wp-plugin-hostgator')}
 					</strong>
 					<span>
 						{__(
 							'Cache static assets for 24 hours and web pages for 2 hours.',
-							'hostgator-wordpress-plugin'
+							'wp-plugin-hostgator'
 						)}
 					</span>
 					<em>
 						{__(
 							'Recommended for blogs, educational sites, and sites that update at least weekly.',
-							'hostgator-wordpress-plugin'
+							'wp-plugin-hostgator'
 						)}
 					</em>
 				</span>
@@ -89,19 +89,19 @@ const CacheSettings = () => {
 					<strong>
 						{__(
 							'Assets & Web Pages - Extended',
-							'hostgator-wordpress-plugin'
+							'wp-plugin-hostgator'
 						)}
 					</strong>
 					<span>
 						{__(
 							'Cache static assets for 1 week and web pages for 8 hours.',
-							'hostgator-wordpress-plugin'
+							'wp-plugin-hostgator'
 						)}
 					</span>
 					<em>
 						{__(
 							'Recommended for portfolios, brochure sites, and sites that update monthly or less often.',
-							'hostgator-wordpress-plugin'
+							'wp-plugin-hostgator'
 						)}
 					</em>
 				</span>
@@ -132,13 +132,13 @@ const CacheSettings = () => {
 		<Card className="card-cache-settings">
 			<CardHeader>
 				<Heading level="3">
-					{__('Cache Level', 'hostgator-wordpress-plugin')}
+					{__('Cache Level', 'wp-plugin-hostgator')}
 				</Heading>
 			</CardHeader>
 			<CardBody>
 				{__(
 					'Boost speed and performance by storing a copy of your website content, files, and images online so the pages of your website load faster for your visitors.',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 				)}
 			</CardBody>
 			<CardBody>

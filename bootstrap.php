@@ -16,7 +16,7 @@ if ( is_readable( __DIR__ . '/vendor/autoload.php' ) ) {
 	require __DIR__ . '/vendor/autoload.php';
 } else {
 	if ( 'local' === wp_get_environment_type() ) {
-		wp_die( esc_html( __( 'Please install the HostGator Plugin dependencies.', 'hostgator-wordpress-plugin' ) ) );
+		wp_die( esc_html( __( 'Please install the HostGator Plugin dependencies.', 'wp-plugin-hostgator' ) ) );
 	}
 	return;
 }

@@ -120,8 +120,8 @@ class HG_Plugin_PHP_Compat_Check {
 	public function check_has_min_php_version() {
 		if ( version_compare( PHP_VERSION, $this->min_php_version, '<' ) ) {
 			/* translators: 1: plugin name 2: minimum required PHP version, current PHP version */
-			$error_msg  = sprintf( __( '%1$s requires PHP version %2$s or later. You are currently running version %3$s.', 'mojo-marketplace-wp-plugin' ), $this->name, $this->min_php_version, PHP_VERSION );
-			$error_msg .= esc_html__( ' Please contact your web host about upgrading PHP.', 'mojo-marketplace-wp-plugin' );
+			$error_msg  = sprintf( __( '%1$s requires PHP version %2$s or later. You are currently running version %3$s.', 'wp-plugin-hostgator' ), $this->name, $this->min_php_version, PHP_VERSION );
+			$error_msg .= esc_html__( ' Please contact your web host about upgrading PHP.', 'wp-plugin-hostgator' );
 			$this->errors->add( 'php_version', $error_msg );
 		}
 	}
@@ -136,7 +136,7 @@ class HG_Plugin_PHP_Compat_Check {
 				$this->errors->add(
 					'php_extension',
 					/* translators: 1: plugin name 2: required PHP extension */
-					sprintf( __( '%1$s requires the %2$s PHP extension.', 'mojo-marketplace-wp-plugin' ), $this->name, $extension )
+					sprintf( __( '%1$s requires the %2$s PHP extension.', 'wp-plugin-hostgator' ), $this->name, $extension )
 				);
 			}
 		}
@@ -152,7 +152,7 @@ class HG_Plugin_PHP_Compat_Check {
 				'wp_version',
 				sprintf(
 				/* translators: 1: plugin name 2: minimum required WordPress version 3: current WordPress version */
-					__( '%1$s requires WordPress version %2$s or later. You are currently running version %3$s.', 'mojo-marketplace-wp-plugin' ),
+					__( '%1$s requires WordPress version %2$s or later. You are currently running version %3$s.', 'wp-plugin-hostgator' ),
 					$this->name,
 					$this->min_wp_version,
 					$wp_version
@@ -190,7 +190,7 @@ class HG_Plugin_PHP_Compat_Check {
 		}
 		echo '<p>';
 		/* translators: plugin name */
-		printf( esc_html__( 'The "%s" plugin has been deactivated.', 'mojo-marketplace-wp-plugin' ), esc_html( $this->name ) );
+		printf( esc_html__( 'The "%s" plugin has been deactivated.', 'wp-plugin-hostgator' ), esc_html( $this->name ) );
 		echo '</p></div>';
 	}
 

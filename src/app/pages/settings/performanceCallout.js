@@ -14,13 +14,13 @@ const PerformanceCallout = () => {
 		<Card className="card-performance-callout short">
 			<CardHeader>
 				<Heading level="3">
-					{__('Performance', 'hostgator-wordpress-plugin')}
+					{__('Performance', 'wp-plugin-hostgator')}
 				</Heading>
 			</CardHeader>
 			<CardBody>
 				{__(
 					'Manage site performance and caching settings as well as clear the site cache.',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 				)}
 			</CardBody>
             <CardFooter>
@@ -30,7 +30,7 @@ const PerformanceCallout = () => {
                     icon={<Dashicon icon='performance' />}
 					className="callout-link-performance"
                 >
-                    {__('Performance', 'hostgator-wordpress-plugin')}
+                    {__('Performance', 'wp-plugin-hostgator')}
                 </Button>
             </CardFooter>
 		</Card>

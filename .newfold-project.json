@@ -4,7 +4,7 @@
     "url": "https://hostgator.com",
     "package": {
         "vendor": "newfold",
-        "name": "hostgator-wordpress-plugin"
+        "name": "wp-plugin-hostgator"
     },
     "license": {
         "slug": "GPL-2.0-or-later",
@@ -16,7 +16,7 @@
         "email": "evanrm@gmail.com",
         "url": "https://evanmullins.com"
     },
-    "text_domain": "hostgator-wordpress-plugin",
+    "text_domain": "wp-plugin-hostgator",
     "namespace": "Hostgator",
     "prefixes": {
         "long": "HostGatorWordPressPlugin",

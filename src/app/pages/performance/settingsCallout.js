@@ -14,13 +14,13 @@ const SettingsCallout = () => {
 		<Card className="short card-settings-callout">
 			<CardHeader>
 				<Heading level="3">
-					{__('Settings', 'hostgator-wordpress-plugin')}
+					{__('Settings', 'wp-plugin-hostgator')}
 				</Heading>
 			</CardHeader>
 			<CardBody>
 				{__(
 					'Manage your site settings. You can ajdust automatic updates, comments, revisions and more.',
-					'hostgator-wordpress-plugin'
+					'wp-plugin-hostgator'
 				)}
 			</CardBody>
             <CardFooter>
@@ -30,7 +30,7 @@ const SettingsCallout = () => {
                     icon={settings}
 					className="callout-link-settings"
                 >
-                    {__('Settings', 'hostgator-wordpress-plugin')}
+                    {__('Settings', 'wp-plugin-hostgator')}
                 </Button>
             </CardFooter>
 		</Card>
