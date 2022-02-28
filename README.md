@@ -9,13 +9,9 @@ update features.
 
 # Installation
 
-Find the `wp-plugin-hostgator.zip` asset for your preferred version
-at: https://github.com/newfold-labs/wp-plugin-hostgator/releases/.
+Find the `wp-plugin-hostgator.zip` asset for your preferred version at: https://github.com/newfold-labs/wp-plugin-hostgator/releases/.
 
-Alternatively, check the updater endpoint for the latest version
-at: https://hiive.cloud/workers/release-api/plugins/newfold-labs/wp-plugin-hostgator, this also includes a download link
-to the latest zip file or use this link to access the latest
-download: https://hiive.cloud/workers/release-api/plugins/bluehost/wp-plugin-hostgator/download/.
+Alternatively, check the updater endpoint for the latest version at: https://hiive.cloud/workers/release-api/plugins/newfold-labs/wp-plugin-hostgator, this also includes a download link to the latest zip file or use this link to access the latest download: https://hiive.cloud/workers/release-api/plugins/bluehost/wp-plugin-hostgator/download/.
 
 # Releasing Updates
 
