@@ -1,5 +1,5 @@
 {
-    "name": "newfold/wp-plugin-hostgator",
+    "name": "newfold-labs/wp-plugin-hostgator",
     "description": "WordPress plugin that integrates your WordPress site with the HostGator control panel, including performance, security, and update features.",
     "type": "wordpress-plugin",
     "license": [
