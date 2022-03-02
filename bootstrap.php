@@ -8,7 +8,6 @@
 namespace HostGator;
 
 use Hostgator\UpgradeHandler;
-use Endurance_WP_Plugin_Updater\Updater;
 use WP_Forge\WPUpdateHandler\PluginUpdater;
 
 // Composer autoloader
