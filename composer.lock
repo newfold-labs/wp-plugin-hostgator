@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "797ea7f19abbb45df7708edb8c47e350",
+    "content-hash": "fdcdfb686389393da4c4e02a05b92a85",
     "packages": [
         {
             "name": "bluehost/endurance-wp-module-loader",
@@ -143,16 +143,16 @@
         },
         {
             "name": "endurance/wp-module-data",
-            "version": "1.8.2",
+            "version": "1.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bluehost/endurance-wp-module-data.git",
-                "reference": "4410d86af5cb3d0501baaa04f7e5a179e23c887e"
+                "reference": "08855818870faf3a86c64a05cd83262de2d6bfb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bluehost/endurance-wp-module-data/zipball/4410d86af5cb3d0501baaa04f7e5a179e23c887e",
-                "reference": "4410d86af5cb3d0501baaa04f7e5a179e23c887e",
+                "url": "https://api.github.com/repos/bluehost/endurance-wp-module-data/zipball/08855818870faf3a86c64a05cd83262de2d6bfb0",
+                "reference": "08855818870faf3a86c64a05cd83262de2d6bfb0",
                 "shasum": ""
             },
             "require-dev": {
@@ -180,10 +180,10 @@
             ],
             "description": "Endurance Data Module",
             "support": {
-                "source": "https://github.com/bluehost/endurance-wp-module-data/tree/1.8.2",
+                "source": "https://github.com/bluehost/endurance-wp-module-data/tree/1.8.3",
                 "issues": "https://github.com/bluehost/endurance-wp-module-data/issues"
             },
-            "time": "2022-02-04T20:25:36+00:00"
+            "time": "2022-03-01T19:25:45+00:00"
         },
         {
             "name": "wp-forge/helpers",
