@@ -16,7 +16,7 @@ const help = [
 		icon: 'phone',
 		Svg: Phone,
 		cta: __('Call Us', 'wp-plugin-hostgator'),
-		url: 'tel:(866)_964-2867',
+		url: 'tel:8669642867',
 	},
 	{
 		name: 'chat',
