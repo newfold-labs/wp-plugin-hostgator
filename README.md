@@ -2,7 +2,7 @@
     <img src="https://www.hostgator.com/static/cs/img/logos/nav-for-light.svg" alt="HostGator Logo" title="HostGator" align="right" height="32" />
 </a>
 
-# Hostgator Wordpress Plugin
+# Hostgator WordPress Plugin
 
 WordPress plugin that integrates a WordPress site with the HostGator control panel, including performance, security, and
 update features.
