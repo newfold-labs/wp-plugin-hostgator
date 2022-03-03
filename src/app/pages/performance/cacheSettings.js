@@ -1,18 +1,17 @@
-import {
-	Card,
-	CardBody,
-	CardHeader,
-	RadioControl,
-	__experimentalHeading as Heading,
-} from '@wordpress/components';
-import { useState } from '@wordpress/element';
-import { useUpdateEffect } from 'react-use';
 import AppStore from '../../data/store';
-import ErrorCard from '../../components/errorCard';
+import { Heading, ErrorCard } from '../../components';
 import {
 	hostgatorSettingsApiFetch,
 	dispatchUpdateSnackbar,
 } from '../../util/helpers';
+import {
+	Card,
+	CardBody,
+	CardHeader,
+	RadioControl
+} from '@wordpress/components';
+import { useState } from '@wordpress/element';
+import { useUpdateEffect } from 'react-use';
 
 const CacheSettings = () => {
 	const { store, setStore } = useContext(AppStore);

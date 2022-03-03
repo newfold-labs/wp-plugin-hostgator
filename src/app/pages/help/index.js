@@ -1,4 +1,6 @@
 import './stylesheet.scss';
+import { Heading } from '../../components';
+import help from '../../data/help';
 import {
 	Button,
 	Card,
@@ -7,8 +9,6 @@ import {
 	CardFooter,
 	Dashicon,
 } from '@wordpress/components';
-import { __experimentalHeading as Heading } from '@wordpress/components';
-import help from '../../data/help';
 
 const Help = () => {
 	return (

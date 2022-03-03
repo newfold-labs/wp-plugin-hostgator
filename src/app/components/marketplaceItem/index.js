@@ -1,11 +1,11 @@
+import { Heading } from '../../components';
 import {
 	Button,
 	Card,
 	CardBody,
 	CardHeader,
 	CardFooter,
-	CardMedia,
-	__experimentalHeading as Heading,
+	CardMedia
 } from '@wordpress/components';
 
 const MarketplaceItem = ({ item }) => {

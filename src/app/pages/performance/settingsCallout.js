@@ -1,10 +1,10 @@
+import { Heading } from '../../components';
 import {
 	Card,
 	CardBody,
 	CardHeader,
     CardFooter,
-    Button,
-	__experimentalHeading as Heading,
+    Button
 } from '@wordpress/components';
 import { settings } from '@wordpress/icons';
 
