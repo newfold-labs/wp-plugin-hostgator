@@ -1,7 +1,8 @@
 .card-help {
     text-align: center;
 
-    svg {
+    .components-card-body svg,
+    .components-card__body svg {
         width: 100px;
         height: 100px;
     }
@@ -11,4 +12,11 @@
         flex-direction: column;
         justify-content: end;
     }
+
+    /* <= WP 5.8 */
+    .components-card__header,
+    .components-card__footer {
+        justify-content: center;
+    }
+
 }

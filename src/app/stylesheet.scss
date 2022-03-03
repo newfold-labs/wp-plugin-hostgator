@@ -82,9 +82,40 @@ body.toplevel_page_hostgator {
     .components-button {
         font-weight: 800;
         font-size: 15px;
+        transition: all 0.25s ease;
+        white-space: nowrap;
+
+        .dashicons, .dashicons-before:before {
+            transition: all .25s ease;
+        }
 
         &:focus:not(:disabled) {
             box-shadow: var(--hgbrand-focus);
+        }
+
+        &.is-primary,
+        &[variant="primary"] {
+            background-color: var(--hgbrand-color-primary);
+            color: var(--hgbrand-color-white);
+        }
+
+        &.is-secondary,
+        &[variant="secondary"] {
+            border-color: var(--hgbrand-color-primary);
+            box-shadow: inset 0 0 0 1px var(--hgbrand-color-primary);
+            color: var(--hgbrand-color-primary);
+        }
+
+        &:last-child {
+            padding-right: 1rem; /* <= WP 5.8 */
+        }
+
+        &.has-icon {
+            padding-right: 1rem;
+
+            .dashicon {
+                margin-right: 10px; /* <= WP 5.6 */
+            }
         }
     }
     a:focus {
@@ -94,6 +125,7 @@ body.toplevel_page_hostgator {
     .components-base-control__help,
     .components-radio-control__option label span span {
         color: var(--hgbrand-color-foreground-dark);
+        margin-top: 0.25rem;
     }
 }
 .hgwpp, .hgwpp * {
@@ -110,9 +142,6 @@ body.toplevel_page_hostgator {
     }
 }
 
-.components-button.has-icon {
-    padding-right: 1rem;
-}
 .components-snackbar__content {
     color: var(--hgbrand-color-background) !important;
 }
@@ -164,21 +193,24 @@ body.toplevel_page_hostgator {
     z-index: -1;
 }
 
+.hgwpp {
 
-.components-card {
-    
-    &.short {
-        margin-bottom: auto;
+    .components-card {
+        
+        &.short {
+            margin-bottom: auto;
+        }
+
+        &.disabled {
+            opacity: .5;
+        }
     }
 
-    &.disabled {
-        opacity: .5;
-    }
-}
+    .components-card-body,
+    .components-card__body {
 
-.components-card-body {
-
-    &.disabled {
-        opacity: .5;
+        &.disabled {
+            opacity: .5;
+        }
     }
 }
