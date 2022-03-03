@@ -15,6 +15,9 @@ import { store as noticesStore } from '@wordpress/notices';
 import { setActiveSubnav } from './util/helpers';
 
 const Notices = () => {
+	if ( 'undefined' === typeof noticesStore ) {
+		return null;
+	}
 	const notices = useSelect(
 		(select) =>
 			select(noticesStore)
