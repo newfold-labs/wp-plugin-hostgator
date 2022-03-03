@@ -55,7 +55,7 @@ const AppBody = (props) => {
 	return (
 		<main
 			id="hgwp-app-rendered"
-			className={classnames('wpadmin-brand-hostgator', props.className)}
+			className={classnames('wpadmin-brand-web', `hgwp-wp-${HGWP.wpversion}`, props.className)}
 		>
 			<Header />
 			<div className="hgwp-app-body">
