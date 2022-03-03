@@ -55,6 +55,12 @@ body.toplevel_page_hostgator {
             width: 0;
         }
     }
+        
+    #wpbody-content .notice,
+    #wpbody-content .update-nag {
+        display: none;
+    }
+
 }
 .hgwpp {
     color: #363636;
