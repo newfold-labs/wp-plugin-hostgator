@@ -117,7 +117,7 @@ final class Admin {
 		}
 
 		echo '<!-- /HostGator -->' . PHP_EOL;
-		
+
 	}
 
 	/**
