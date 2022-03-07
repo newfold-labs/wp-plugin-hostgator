@@ -1,3 +1,9 @@
+import AppStore from '../../data/store';
+import { Heading, ErrorCard } from '../../components';
+import {
+	hostgatorSettingsApiFetch,
+	dispatchUpdateSnackbar,
+} from '../../util/helpers';
 import { _n } from '@wordpress/i18n';
 import {
 	Card,
@@ -5,17 +11,10 @@ import {
 	CardHeader,
 	CardDivider,
 	ToggleControl,
-	SelectControl,
-	__experimentalHeading as Heading,
+	SelectControl
 } from '@wordpress/components';
 import { useState } from '@wordpress/element';
 import { useUpdateEffect } from 'react-use';
-import AppStore from '../../data/store';
-import ErrorCard from '../../components/errorCard';
-import {
-	hostgatorSettingsApiFetch,
-	dispatchUpdateSnackbar,
-} from '../../util/helpers';
 
 const CommentSettings = () => {
 	const { store, setStore } = useContext(AppStore);

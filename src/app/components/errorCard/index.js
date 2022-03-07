@@ -1,16 +1,15 @@
 import './stylesheet.scss';
+import { Heading } from '../../components';
 import {
-	Button,
+    dispatchUpdateSnackbar,
+} from '../../util/helpers';
+import {
 	Card,
 	CardBody,
 	CardHeader,
 	CardFooter,
-	Dashicon,
-	__experimentalHeading as Heading,
+	Dashicon
 } from '@wordpress/components';
-import {
-	dispatchUpdateSnackbar,
-} from '../../util/helpers';
 
 const ErrorCard = ({ error, className, notice = 'Error!' }) => {
     dispatchUpdateSnackbar(notice);

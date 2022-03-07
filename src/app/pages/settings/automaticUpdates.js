@@ -1,20 +1,19 @@
+import AppStore from '../../data/store';
+import { Heading, ErrorCard } from '../../components';
+import {
+	hostgatorSettingsApiFetch,
+	dispatchUpdateSnackbar,
+} from '../../util/helpers';
 import {
 	Card,
 	CardBody,
 	CardHeader,
 	CardDivider,
-	ToggleControl,
-	__experimentalHeading as Heading,
+	ToggleControl
 } from '@wordpress/components';
 import { useState } from '@wordpress/element';
 import { useEffect } from 'react';
 import { useUpdateEffect } from 'react-use';
-import AppStore from '../../data/store';
-import ErrorCard from '../../components/errorCard';
-import {
-	hostgatorSettingsApiFetch,
-	dispatchUpdateSnackbar,
-} from '../../util/helpers';
 
 const AutomaticUpdates = () => {
 	const { store, setStore } = useContext(AppStore);

@@ -1,21 +1,20 @@
+import AppStore from '../../data/store';
+import { ErrorCard, Heading } from '../../components';
+import {
+	hostgatorSettingsApiFetch,
+	dispatchUpdateSnackbar,
+	comingSoonAdminbarToggle
+} from '../../util/helpers';
 import snappyUrl from '../../../../assets/svg/snappy-holding-site-left.svg';
 import {
 	Button,
 	Card,
 	CardBody,
 	CardHeader,
-	CardFooter,
-	__experimentalHeading as Heading,
+	CardFooter
 } from '@wordpress/components';
-import AppStore from '../../data/store';
-import ErrorCard from '../../components/errorCard';
 import { useState } from '@wordpress/element';
 import { useUpdateEffect } from 'react-use';
-import {
-	hostgatorSettingsApiFetch,
-	dispatchUpdateSnackbar,
-	comingSoonAdminbarToggle
-} from '../../util/helpers';
 
 const ComingSoonSection = () => {
 	const { store, setStore } = useContext(AppStore);

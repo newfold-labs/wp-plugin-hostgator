@@ -1,21 +1,19 @@
-import {
-	Card,
-	CardBody,
-	CardHeader,
-	CardDivider,
-	ToggleControl,
-	__experimentalHeading as Heading
-} from '@wordpress/components';
-import { useState } from '@wordpress/element';
-import { useUpdateEffect } from 'react-use';
 import AppStore from '../../data/store';
-import ErrorCard from '../../components/errorCard';
+import { Heading, ErrorCard, Accordion } from '../../components';
 import {
 	hostgatorSettingsApiFetch,
 	dispatchUpdateSnackbar,
 	comingSoonAdminbarToggle
 } from '../../util/helpers';
-import Accordion from '../../components/accordion';
+import {
+	Card,
+	CardBody,
+	CardHeader,
+	CardDivider,
+	ToggleControl
+} from '@wordpress/components';
+import { useState } from '@wordpress/element';
+import { useUpdateEffect } from 'react-use';
 
 const ComingSoon = () => {
 	const { store, setStore } = useContext(AppStore);
