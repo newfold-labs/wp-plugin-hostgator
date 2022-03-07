@@ -1,3 +1,4 @@
+import { Heading } from '../../components';
 import graphicUrl from '../../../../assets/svg/a-illustration__checklist.svg';
 import {
 	Button,
@@ -5,8 +6,7 @@ import {
 	CardBody,
 	CardHeader,
 	CardFooter,
-	Dashicon,
-	__experimentalHeading as Heading,
+	Dashicon
 } from '@wordpress/components';
 import { Icon, settings, store } from '@wordpress/icons';
 

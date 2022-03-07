@@ -1,8 +1,6 @@
-import {
-	Button,
-	__experimentalHeading as Heading,
-} from '@wordpress/components';
+import { Heading } from '../../components';
 import { ReactComponent as Brand } from '../../../../assets/svg/nav-for-light.svg';
+import { Button } from '@wordpress/components';
 
 const Logo = () => {
 	return (

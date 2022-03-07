@@ -97,9 +97,27 @@ final class Admin {
 	 * @return void
 	 */
 	public static function render() {
+		global $wp_version;
+
 		echo '<!-- HostGator -->' . PHP_EOL;
-		echo '<div id="hwa-app" class="hgwpp hgwpp_app"></div>' . PHP_EOL;
+
+		if ( version_compare( $wp_version, '5.4', '>=' ) ) {
+			echo '<div id="hwa-app" class="hgwpp hgwpp_app"></div>' . PHP_EOL;
+		} else {
+			// fallback messaging for WordPress older than 5.4
+			echo '<div id="hwa-app" class="hgwpp hgwpp_app">' . PHP_EOL;
+			echo '<header class="hgwp-header" style="min-height: 90px; padding: 1rem; margin-bottom: 1.5rem;"><div class="hgwp-header-inner"><div class="hgwp-logo-wrap">' . PHP_EOL;
+			echo '<img src="' . esc_url( HOSTGATOR_PLUGIN_URL . 'assets/svg/nav-for-light.svg' ) . '" alt="HostGator logo" />' . PHP_EOL;
+			echo '</div></div></header>' . PHP_EOL;
+			echo '<div class="wrap">' . PHP_EOL;
+			echo '<div class="card" style="margin-left: 20px;"><h2 class="title">' . esc_html__( 'Please update to a newer WordPress version.', 'wp-plugin-hostgator' ) . '</h2>' . PHP_EOL;
+			echo '<p>' . esc_html__( 'There are new WordPress components which this plugin requires in order to render the interface.', 'wp-plugin-hostgator' ) . '</p>' . PHP_EOL;
+			echo '<p><a href="' . esc_url( admin_url( 'update-core.php' ) ) . '" class="button component-button is-primary button-primary" variant="primary">' . esc_html__( 'Please update now', 'wp-plugin-hostgator' ) . '</a></p>' . PHP_EOL;
+			echo '</div></div></div>' . PHP_EOL;
+		}
+
 		echo '<!-- /HostGator -->' . PHP_EOL;
+
 	}
 
 	/**

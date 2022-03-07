@@ -1,11 +1,11 @@
+import { Heading } from '../../components';
 import {
 	Card,
 	CardBody,
 	CardHeader,
     CardFooter,
 	Dashicon,
-    Button,
-	__experimentalHeading as Heading,
+    Button
 } from '@wordpress/components';
 
 const PerformanceCallout = () => {

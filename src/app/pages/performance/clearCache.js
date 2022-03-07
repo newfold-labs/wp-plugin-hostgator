@@ -1,17 +1,16 @@
+import AppStore from '../../data/store';
+import { Heading, ErrorCard } from '../../components';
+import {
+	hostgatorPurgeCacheApiFetch,
+	dispatchUpdateSnackbar,
+} from '../../util/helpers';
 import {
 	Button,
 	Card,
 	CardBody,
 	CardHeader,
-	CardFooter,
-	__experimentalHeading as Heading,
+	CardFooter
 } from '@wordpress/components';
-import ErrorCard from '../../components/errorCard';
-import AppStore from '../../data/store';
-import {
-	hostgatorPurgeCacheApiFetch,
-	dispatchUpdateSnackbar,
-} from '../../util/helpers';
 
 const ClearCache = () => {
 	const { store, setStore } = useContext(AppStore);
