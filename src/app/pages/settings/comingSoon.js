@@ -85,7 +85,7 @@ const ComingSoon = () => {
 						)}
 					>
 						<p>{__(
-							'First, activate the "Jetpack" plugin, connect your site, and enable the "Subscriptions" module. Then, users can subsribe to be notified when you launch and publish new content.',
+							'First, activate the "Jetpack" plugin, connect your site, and enable the "Subscriptions" module. Then, users can subscribe to be notified when you launch and publish new content.',
 							'wp-plugin-hostgator'
 						)}</p>
 					</Accordion>
