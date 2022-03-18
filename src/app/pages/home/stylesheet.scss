@@ -10,6 +10,22 @@
             right: -6rem; 
         }
     }
+
+    .components-card__header {
+        flex-direction: column;
+        @media screen and (min-width: 1132px) {
+            flex-direction: row;
+        }
+        .heading {
+            margin-bottom: 0 !important;
+            @media screen and (min-width: 1132px) {
+                margin-bottom: 24px !important;
+            }
+        }
+        p {
+            margin-left: 0;
+        }
+    }
 }
 
 .section-graphic {
@@ -51,7 +67,7 @@
         
         .hgwp-cardlist-content {
             width: 100%;
-            .components-heading {
+            .heading {
                 display: flex;
                 align-items: center;
                 .dashicons, svg {

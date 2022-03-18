@@ -18,15 +18,13 @@ const WebHostingSection = () => {
 					<Heading level="3">
 						{__('Web Hosting', 'wp-plugin-hostgator')}
 					</Heading>
-				</CardHeader>
-				<CardBody>
 					<p>
 						{__(
-							'Manage hosting in your HostGator portal account',
+							'Access & manage your HostGator account.',
 							'wp-plugin-hostgator'
 						)}
 					</p>
-				</CardBody>
+				</CardHeader>
 				<CardFooter>
 					<div className="hgwp-cardlist-content">
 						<Heading level="4">

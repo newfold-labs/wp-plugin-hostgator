@@ -22,13 +22,13 @@ const SettingsSection = () => {
 							'wp-plugin-hostgator'
 						)}
 					</Heading>
+					<p>
+						{ __(
+							'Customize & fine-tune your site.',
+							'wp-plugin-hostgator'
+						) }
+					</p>
 				</CardHeader>
-				<CardBody>
-					{__(
-						'Manage your site within this dashboard',
-						'wp-plugin-hostgator'
-					)}
-				</CardBody>
 				<CardFooter>
 					<div className="hgwp-cardlist-content">
 						<Heading level="4">

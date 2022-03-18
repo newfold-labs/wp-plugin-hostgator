@@ -18,15 +18,13 @@ const WebContentSection = () => {
 					<Heading level="3">
 						{__('Website Content', 'wp-plugin-hostgator')}
 					</Heading>
-				</CardHeader>
-				<CardBody>
 					<p>
-						{__(
-							'Manage website content easily with these shortcut links.',
-							'wp-plugin-hostgator'
-						)}
+						{ __(
+							'Create, manage & sort your story.',
+							'wp-plugin-web'
+						) }
 					</p>
-				</CardBody>
+				</CardHeader>
 				<CardFooter>
 					<div className="hgwp-cardlist-content">
 						<Heading level="4">
