@@ -9,7 +9,7 @@ import {
 	Card,
 	CardBody,
 	CardHeader,
-	CardFooter
+	CardFooter,
 } from '@wordpress/components';
 
 const ClearCache = () => {
@@ -26,11 +26,15 @@ const ClearCache = () => {
 		});
 	};
 
-	if ( isError ) {
-		return <ErrorCard error={isError} />
+	if (isError) {
+		return <ErrorCard error={isError} />;
 	}
 	return (
-		<Card className={`short card-clear-cache ${!store.cacheLevel ? 'disabled' : ''}`}>
+		<Card
+			className={`short card-clear-cache ${
+				!store.cacheLevel ? 'disabled' : ''
+			}`}
+		>
 			<CardHeader>
 				<Heading level="3">
 					{__('Clear Cache', 'wp-plugin-hostgator')}

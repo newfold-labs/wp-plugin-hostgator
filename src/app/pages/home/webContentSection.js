@@ -6,23 +6,27 @@ import {
 	CardBody,
 	CardHeader,
 	CardFooter,
-	Dashicon
+	Dashicon,
 } from '@wordpress/components';
 
 const WebContentSection = () => {
 	return (
 		<section className="hgwp-section hgwp-section-home-content">
-			<img src={graphicUrl} className='section-graphic' alt={__('Website illustration', 'wp-plugin-hostgator')} />
+			<img
+				src={graphicUrl}
+				className="section-graphic"
+				alt={__('Website illustration', 'wp-plugin-hostgator')}
+			/>
 			<Card size="large" className="hgwp-section-card">
 				<CardHeader>
 					<Heading level="3">
 						{__('Website Content', 'wp-plugin-hostgator')}
 					</Heading>
 					<p>
-						{ __(
+						{__(
 							'Create, manage & sort your story.',
 							'wp-plugin-web'
-						) }
+						)}
 					</p>
 				</CardHeader>
 				<CardFooter>

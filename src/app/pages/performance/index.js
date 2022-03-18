@@ -12,7 +12,16 @@ const Performance = () => {
 		<div className="hgwp-Performance grid col2 has-page-graphic">
 			<CacheSettings />
 			{isWideViewport && (
-				<div><img src={graphicUrl} style={{ float: 'right' }} alt={__('Performance illustration', 'wp-plugin-hostgator')} /></div>
+				<div>
+					<img
+						src={graphicUrl}
+						style={{ float: 'right' }}
+						alt={__(
+							'Performance illustration',
+							'wp-plugin-hostgator'
+						)}
+					/>
+				</div>
 			)}
 			<ClearCache />
 			<SettingsCallout />

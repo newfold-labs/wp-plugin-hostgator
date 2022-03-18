@@ -9,7 +9,7 @@ import {
 	CardBody,
 	CardHeader,
 	CardDivider,
-	ToggleControl
+	ToggleControl,
 } from '@wordpress/components';
 import { useState } from '@wordpress/element';
 import { useEffect } from 'react';
@@ -18,7 +18,11 @@ import { useUpdateEffect } from 'react-use';
 const AutomaticUpdates = () => {
 	const { store, setStore } = useContext(AppStore);
 	const [autoUpdatesAll, setAutoUpdatesAll] = useState(
-		store.autoUpdatesMajorCore && store.autoUpdatesPlugins && store.autoUpdatesThemes ? true : false
+		store.autoUpdatesMajorCore &&
+			store.autoUpdatesPlugins &&
+			store.autoUpdatesThemes
+			? true
+			: false
 	);
 	const [autoUpdatesMajorCore, setAutoUpdatesCore] = useState(
 		store.autoUpdatesMajorCore
@@ -42,10 +46,7 @@ const AutomaticUpdates = () => {
 					'Yay! Everything will automatically update.',
 					'wp-plugin-hostgator'
 			  )
-			: __(
-					'Custom automatic update settings.',
-					'wp-plugin-hostgator'
-			  );
+			: __('Custom automatic update settings.', 'wp-plugin-hostgator');
 	};
 	const getCoreNoticeText = () => {
 		return autoUpdatesMajorCore
@@ -54,22 +55,13 @@ const AutomaticUpdates = () => {
 	};
 	const getCoreHelpText = () => {
 		return autoUpdatesMajorCore
-			? __(
-					'WordPress will automatically update.',
-					'wp-plugin-hostgator'
-			  )
-			: __(
-					'WordPress must be manually updated.',
-					'wp-plugin-hostgator'
-			  );
+			? __('WordPress will automatically update.', 'wp-plugin-hostgator')
+			: __('WordPress must be manually updated.', 'wp-plugin-hostgator');
 	};
 	const getPluginsNoticeText = () => {
 		return autoUpdatesPlugins
 			? __('Plugins will auto-update.', 'wp-plugin-hostgator')
-			: __(
-					'Plugins will not auto-update.',
-					'wp-plugin-hostgator'
-			  );
+			: __('Plugins will not auto-update.', 'wp-plugin-hostgator');
 	};
 	const getPluginsHelpText = () => {
 		return autoUpdatesPlugins
@@ -85,80 +77,83 @@ const AutomaticUpdates = () => {
 	const getThemesNoticeText = () => {
 		return autoUpdatesThemes
 			? __('Themes will auto-update.', 'wp-plugin-hostgator')
-			: __(
-					'Theme will not auto-update.',
-					'wp-plugin-hostgator'
-			  );
+			: __('Theme will not auto-update.', 'wp-plugin-hostgator');
 	};
 	const getThemesHelpText = () => {
 		return autoUpdatesThemes
-			? __(
-					'All themes will automatically update.',
-					'wp-plugin-hostgator'
-			  )
-			: __(
-					'Each theme must be manually updated.',
-					'wp-plugin-hostgator'
-			  );
+			? __('All themes will automatically update.', 'wp-plugin-hostgator')
+			: __('Each theme must be manually updated.', 'wp-plugin-hostgator');
 	};
 
 	useEffect(() => {
-		if ( autoUpdatesMajorCore && autoUpdatesPlugins && autoUpdatesThemes ) {
-			setAutoUpdatesAll( true );
+		if (autoUpdatesMajorCore && autoUpdatesPlugins && autoUpdatesThemes) {
+			setAutoUpdatesAll(true);
 		} else {
-			setAutoUpdatesAll( false );
+			setAutoUpdatesAll(false);
 		}
 	}, [autoUpdatesMajorCore, autoUpdatesPlugins, autoUpdatesThemes]);
 
 	useUpdateEffect(() => {
-		if ( autoUpdatesAll ) {
-			setAutoUpdatesCore( autoUpdatesAll );
-			setAutoUpdatesPlugins( autoUpdatesAll );
-			setAutoUpdatesThemes( autoUpdatesAll );
-			dispatchUpdateSnackbar( getAllNoticeText() );
+		if (autoUpdatesAll) {
+			setAutoUpdatesCore(autoUpdatesAll);
+			setAutoUpdatesPlugins(autoUpdatesAll);
+			setAutoUpdatesThemes(autoUpdatesAll);
+			dispatchUpdateSnackbar(getAllNoticeText());
 		} else {
 			// don't set anything, just enable them
 		}
 	}, [autoUpdatesAll]);
 
 	useUpdateEffect(() => {
-		hostgatorSettingsApiFetch({ autoUpdatesMajorCore }, setError, (response) => {
-			setStore({
-				...store,
-				autoUpdatesMajorCore,
-			});
-			if ( !autoUpdatesAll ) {
-				dispatchUpdateSnackbar( getCoreNoticeText() );
+		hostgatorSettingsApiFetch(
+			{ autoUpdatesMajorCore },
+			setError,
+			(response) => {
+				setStore({
+					...store,
+					autoUpdatesMajorCore,
+				});
+				if (!autoUpdatesAll) {
+					dispatchUpdateSnackbar(getCoreNoticeText());
+				}
 			}
-		});
+		);
 	}, [autoUpdatesMajorCore]);
 
 	useUpdateEffect(() => {
-		hostgatorSettingsApiFetch({ autoUpdatesPlugins }, setError, (response) => {
-			setStore({
-				...store,
-				autoUpdatesPlugins,
-			});
-			if ( !autoUpdatesAll ) {
-				dispatchUpdateSnackbar( getPluginsNoticeText() );
+		hostgatorSettingsApiFetch(
+			{ autoUpdatesPlugins },
+			setError,
+			(response) => {
+				setStore({
+					...store,
+					autoUpdatesPlugins,
+				});
+				if (!autoUpdatesAll) {
+					dispatchUpdateSnackbar(getPluginsNoticeText());
+				}
 			}
-		});
+		);
 	}, [autoUpdatesPlugins]);
 
 	useUpdateEffect(() => {
-		hostgatorSettingsApiFetch({ autoUpdatesThemes }, setError, (response) => {
-			setStore({
-				...store,
-				autoUpdatesThemes,
-			});
-			if ( !autoUpdatesAll ) {
-				dispatchUpdateSnackbar( getThemesNoticeText() );
+		hostgatorSettingsApiFetch(
+			{ autoUpdatesThemes },
+			setError,
+			(response) => {
+				setStore({
+					...store,
+					autoUpdatesThemes,
+				});
+				if (!autoUpdatesAll) {
+					dispatchUpdateSnackbar(getThemesNoticeText());
+				}
 			}
-		});
+		);
 	}, [autoUpdatesThemes]);
 
-	if ( isError ) {
-		return <ErrorCard error={isError} />
+	if (isError) {
+		return <ErrorCard error={isError} />;
 	}
 	return (
 		<Card className="card-auto-updates">
@@ -174,9 +169,7 @@ const AutomaticUpdates = () => {
 				)}
 			</CardBody>
 			<CardDivider />
-			<CardBody 
-				className="autoupdate-all-setting"
-			>
+			<CardBody className="autoupdate-all-setting">
 				<ToggleControl
 					label={__('Everything', 'wp-plugin-hostgator')}
 					className="autoupdate-all-toggle"
@@ -188,8 +181,10 @@ const AutomaticUpdates = () => {
 				/>
 			</CardBody>
 			<CardDivider />
-			<CardBody 
-				className={`autoupdate-core-setting  ${autoUpdatesAll  ? 'disabled' : ''}` }
+			<CardBody
+				className={`autoupdate-core-setting  ${
+					autoUpdatesAll ? 'disabled' : ''
+				}`}
 			>
 				<ToggleControl
 					label={__('Core', 'wp-plugin-hostgator')}
@@ -203,9 +198,11 @@ const AutomaticUpdates = () => {
 				/>
 			</CardBody>
 			<CardDivider />
-			<CardBody 
-				className={`autoupdate-plugin-setting  ${autoUpdatesAll  ? 'disabled' : ''}` }
-				>
+			<CardBody
+				className={`autoupdate-plugin-setting  ${
+					autoUpdatesAll ? 'disabled' : ''
+				}`}
+			>
 				<ToggleControl
 					label={__('Plugins', 'wp-plugin-hostgator')}
 					className="autoupdate-plugin-toggle"
@@ -218,9 +215,11 @@ const AutomaticUpdates = () => {
 				/>
 			</CardBody>
 			<CardDivider />
-			<CardBody 
-				className={`autoupdate-theme-setting  ${autoUpdatesAll  ? 'disabled' : ''}` }
-				>
+			<CardBody
+				className={`autoupdate-theme-setting  ${
+					autoUpdatesAll ? 'disabled' : ''
+				}`}
+			>
 				<ToggleControl
 					label={__('Themes', 'wp-plugin-hostgator')}
 					className="autoupdate-theme-toggle"

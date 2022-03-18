@@ -3,7 +3,7 @@ import { ErrorCard, Heading } from '../../components';
 import {
 	hostgatorSettingsApiFetch,
 	dispatchUpdateSnackbar,
-	comingSoonAdminbarToggle
+	comingSoonAdminbarToggle,
 } from '../../util/helpers';
 import snappyUrl from '../../../../assets/svg/snappy-holding-site-left.svg';
 import {
@@ -11,7 +11,7 @@ import {
 	Card,
 	CardBody,
 	CardHeader,
-	CardFooter
+	CardFooter,
 } from '@wordpress/components';
 import { useState } from '@wordpress/element';
 import { useUpdateEffect } from 'react-use';
@@ -39,9 +39,7 @@ const ComingSoonSection = () => {
 			  );
 	};
 	const getComingSoonGraphicClass = () => {
-		return comingSoon
-			? 'section-graphic'
-			: 'section-graphic reverse';
+		return comingSoon ? 'section-graphic' : 'section-graphic reverse';
 	};
 	const getComingSoonButton = () => {
 		return comingSoon ? (
@@ -86,37 +84,41 @@ const ComingSoonSection = () => {
 	};
 
 	useUpdateEffect(() => {
-		hostgatorSettingsApiFetch({ comingSoon }, setError,
-		 	(response) => {
-				setStore({
-					...store,
-					comingSoon,
-				});
-				dispatchUpdateSnackbar(getComingSoonNoticeText());
-				comingSoonAdminbarToggle(comingSoon);
-			}
-		);
+		hostgatorSettingsApiFetch({ comingSoon }, setError, (response) => {
+			setStore({
+				...store,
+				comingSoon,
+			});
+			dispatchUpdateSnackbar(getComingSoonNoticeText());
+			comingSoonAdminbarToggle(comingSoon);
+		});
 	}, [comingSoon]);
 
-	if ( isError ) {
+	if (isError) {
 		return (
 			<section className="hgwp-section coming-soon">
 				<ErrorCard error={isError} className="hgwp-section-card" />
 			</section>
-		)
+		);
 	}
 	// render nothing if coming soon is not active or not just launched
-	if ( !(comingSoon || (!comingSoon && wasComingSoon)) ) {
+	if (!(comingSoon || (!comingSoon && wasComingSoon))) {
 		return <></>;
 	}
 	return (
 		<section className="hgwp-section hgwp-section-coming-soon">
-			<img src={snappyUrl} className={getComingSoonGraphicClass()} style={{ top: 0 }} alt={__('HostGator`s Snappy holding site', 'hostagtor-wordpress-plugin')}/>
+			<img
+				src={snappyUrl}
+				className={getComingSoonGraphicClass()}
+				style={{ top: 0 }}
+				alt={__(
+					'HostGator`s Snappy holding site',
+					'hostagtor-wordpress-plugin'
+				)}
+			/>
 			<Card size="large" className="hgwp-section-card">
 				<CardHeader>
-					<Heading level="3">
-						{getComingSoonHeadline()}
-					</Heading>
+					<Heading level="3">{getComingSoonHeadline()}</Heading>
 				</CardHeader>
 				<CardBody>{getComingSoonBody()}</CardBody>
 				<CardFooter>{getComingSoonButton()}</CardFooter>

@@ -14,7 +14,11 @@ export const AppRoutes = () => {
 				<Route
 					end
 					key={page.name}
-					path={'/marketplace' === page.name ? '/marketplace/*' : page.name}
+					path={
+						'/marketplace' === page.name
+							? '/marketplace/*'
+							: page.name
+					}
 					element={<page.Component />}
 				/>
 			))}
@@ -24,10 +28,7 @@ export const AppRoutes = () => {
 				element={
 					<main style={{ padding: '1rem' }}>
 						<p>
-							{__(
-								"There's nothing here!",
-								'wp-plugin-hostgator'
-							)}
+							{__("There's nothing here!", 'wp-plugin-hostgator')}
 						</p>
 					</main>
 				}

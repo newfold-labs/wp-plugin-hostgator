@@ -20,7 +20,8 @@ export const setActiveSubnav = (path) => {
 					// check each child a href for match with path
 					if (
 						href.endsWith(path) || // match
-						(path.includes('/marketplace/') && href.endsWith('marketplace')) ||
+						(path.includes('/marketplace/') &&
+							href.endsWith('marketplace')) ||
 						(path === '/' && href.endsWith('home'))
 					) {
 						// highlight home subnav for root page
@@ -83,12 +84,12 @@ export const hostgatorSettingsApiFetch = (data, passError, thenCallback) => {
 		method: 'POST',
 		data,
 	})
-	.then((response) => {
-		thenCallback(response);
-	})
-	.catch((error) => {
-		passError(error);
-	});
+		.then((response) => {
+			thenCallback(response);
+		})
+		.catch((error) => {
+			passError(error);
+		});
 };
 
 /**
@@ -105,16 +106,16 @@ export const hostgatorPurgeCacheApiFetch = (data, passError, thenCallback) => {
 		method: 'DELETE',
 		data,
 	})
-	.then((response) => {
-		thenCallback(response);
-	})
-	.catch((error) => {
-		passError(error);
-	});
+		.then((response) => {
+			thenCallback(response);
+		})
+		.catch((error) => {
+			passError(error);
+		});
 };
 
 /**
- * Coming soon admin bar 
+ * Coming soon admin bar
  */
 export const comingSoonAdminbarToggle = (comingSoon) => {
 	const comingsoonadminbar = document.getElementById(

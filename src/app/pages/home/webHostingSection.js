@@ -6,13 +6,17 @@ import {
 	CardBody,
 	CardHeader,
 	CardFooter,
-	Dashicon
+	Dashicon,
 } from '@wordpress/components';
 
 const WebHostingSection = () => {
 	return (
 		<section className="hgwp-section hgwp-section-home-hosting">
-			<img src={graphicUrl} className='section-graphic' alt={__('Hosting illustration', 'wp-plugin-hostgator')} />
+			<img
+				src={graphicUrl}
+				className="section-graphic"
+				alt={__('Hosting illustration', 'wp-plugin-hostgator')}
+			/>
 			<Card size="large" className="hgwp-section-card">
 				<CardHeader>
 					<Heading level="3">
@@ -41,11 +45,11 @@ const WebHostingSection = () => {
 					<Button
 						variant="primary"
 						href={
-							`https://portal.hostgator.com/packages?`+
-							`&utm_campaign=`+
-							`&utm_content=home_hosting_sites_link`+
-							`&utm_term=manage_sites`+
-							`&utm_medium=brand_plugin`+
+							`https://portal.hostgator.com/packages?` +
+							`&utm_campaign=` +
+							`&utm_content=home_hosting_sites_link` +
+							`&utm_term=manage_sites` +
+							`&utm_medium=brand_plugin` +
 							`&utm_source=wp-admin/admin.php?page=hostgator#/home`
 						}
 						target="_blank"
@@ -70,11 +74,11 @@ const WebHostingSection = () => {
 					<Button
 						variant="primary"
 						href={
-							`https://portal.hostgator.com/email?`+
-							`&utm_campaign=`+
-							`&utm_content=home_hosting_email_link`+
-							`&utm_term=manage_email`+
-							`&utm_medium=brand_plugin`+
+							`https://portal.hostgator.com/email?` +
+							`&utm_campaign=` +
+							`&utm_content=home_hosting_email_link` +
+							`&utm_term=manage_email` +
+							`&utm_medium=brand_plugin` +
 							`&utm_source=wp-admin/admin.php?page=hostgator#/home`
 						}
 						target="_blank"
@@ -99,11 +103,11 @@ const WebHostingSection = () => {
 					<Button
 						variant="secondary"
 						href={
-							`https://portal.hostgator.com/domain/purchase/registration?`+
-							`&utm_campaign=`+
-							`&utm_content=home_hosting_domain_link`+
-							`&utm_term=find_domain`+
-							`&utm_medium=brand_plugin`+
+							`https://portal.hostgator.com/domain/purchase/registration?` +
+							`&utm_campaign=` +
+							`&utm_content=home_hosting_domain_link` +
+							`&utm_term=find_domain` +
+							`&utm_medium=brand_plugin` +
 							`&utm_source=wp-admin/admin.php?page=hostgator#/home`
 						}
 						target="_blank"
@@ -118,7 +122,12 @@ const WebHostingSection = () => {
 							<Dashicon icon="sos" />{' '}
 							{__('Help', 'wp-plugin-hostgator')}
 						</Heading>
-						<p>{__('24/7/365 support. We work when you work.', 'wp-plugin-hostgator')}</p>
+						<p>
+							{__(
+								'24/7/365 support. We work when you work.',
+								'wp-plugin-hostgator'
+							)}
+						</p>
 					</div>
 					<Button
 						variant="secondary"

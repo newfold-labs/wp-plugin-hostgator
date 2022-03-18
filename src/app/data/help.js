@@ -45,10 +45,7 @@ const help = [
 	{
 		name: 'kb',
 		title: __('Knowledge Base', 'wp-plugin-hostgator'),
-		description: __(
-			'Know what the pros know.',
-			'wp-plugin-hostgator'
-		),
+		description: __('Know what the pros know.', 'wp-plugin-hostgator'),
 		icon: 'book',
 		Svg: Book,
 		cta: __('Find Answers', 'wp-plugin-hostgator'),

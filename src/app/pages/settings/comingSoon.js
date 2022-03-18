@@ -3,14 +3,14 @@ import { Heading, ErrorCard, Accordion } from '../../components';
 import {
 	hostgatorSettingsApiFetch,
 	dispatchUpdateSnackbar,
-	comingSoonAdminbarToggle
+	comingSoonAdminbarToggle,
 } from '../../util/helpers';
 import {
 	Card,
 	CardBody,
 	CardHeader,
 	CardDivider,
-	ToggleControl
+	ToggleControl,
 } from '@wordpress/components';
 import { useState } from '@wordpress/element';
 import { useUpdateEffect } from 'react-use';
@@ -36,7 +36,6 @@ const ComingSoon = () => {
 					'wp-plugin-hostgator'
 			  );
 	};
-	
 
 	useUpdateEffect(() => {
 		hostgatorSettingsApiFetch({ comingSoon }, setError, (response) => {
@@ -49,8 +48,8 @@ const ComingSoon = () => {
 		});
 	}, [comingSoon]);
 
-	if ( isError ) {
-		return <ErrorCard error={isError} />
+	if (isError) {
+		return <ErrorCard error={isError} />;
 	}
 	return (
 		<Card className="card-coming-soon">
@@ -76,7 +75,7 @@ const ComingSoon = () => {
 						setComingSoon((value) => !value);
 					}}
 				/>
-				{ comingSoon && (
+				{comingSoon && (
 					<Accordion
 						className="coming-soon-protip"
 						summary={__(
@@ -84,10 +83,12 @@ const ComingSoon = () => {
 							'wp-plugin-hostgator'
 						)}
 					>
-						<p>{__(
-							'First, activate the "Jetpack" plugin, connect your site, and enable the "Subscriptions" module. Then, users can subscribe to be notified when you launch and publish new content.',
-							'wp-plugin-hostgator'
-						)}</p>
+						<p>
+							{__(
+								'First, activate the "Jetpack" plugin, connect your site, and enable the "Subscriptions" module. Then, users can subscribe to be notified when you launch and publish new content.',
+								'wp-plugin-hostgator'
+							)}
+						</p>
 					</Accordion>
 				)}
 			</CardBody>

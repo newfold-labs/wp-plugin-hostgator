@@ -15,7 +15,7 @@ import { store as noticesStore } from '@wordpress/notices';
 import { setActiveSubnav } from './util/helpers';
 
 const Notices = () => {
-	if ( 'undefined' === typeof noticesStore ) {
+	if ('undefined' === typeof noticesStore) {
 		return null;
 	}
 	const notices = useSelect(
@@ -41,7 +41,7 @@ const handlePageLoad = () => {
 	useEffect(() => {
 		setActiveSubnav(location.pathname);
 		window.scrollTo(0, 0);
-		if ( routeContents ) {
+		if (routeContents) {
 			routeContents.focus({ preventScroll: true });
 		}
 	}, [location.pathname]);
@@ -55,14 +55,19 @@ const AppBody = (props) => {
 	return (
 		<main
 			id="hgwp-app-rendered"
-			className={classnames('wpadmin-brand-web', `hgwp-wp-${HGWP.wpversion}`, props.className)}
+			className={classnames(
+				'wpadmin-brand-web',
+				`hgwp-wp-${HGWP.wpversion}`,
+				props.className
+			)}
 		>
 			<Header />
 			<div className="hgwp-app-body">
 				<div className="hgwp-app-body-inner">
 					<ErrorBoundary FallbackComponent={<ErrorCard />}>
-						{ hasError && <ErrorCard error={hasError} /> }
-						{(true === booted && <AppRoutes />) || (!hasError && <Spinner />) }
+						{hasError && <ErrorCard error={hasError} />}
+						{(true === booted && <AppRoutes />) ||
+							(!hasError && <Spinner />)}
 					</ErrorBoundary>
 				</div>
 			</div>

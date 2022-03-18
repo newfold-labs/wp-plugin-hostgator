@@ -3,8 +3,8 @@ const Heading = ({ level, className, children }) => {
 
 	return (
 		<TagName className={classNames('heading', className)}>
-            { children }
-        </TagName>
+			{children}
+		</TagName>
 	);
 };
 

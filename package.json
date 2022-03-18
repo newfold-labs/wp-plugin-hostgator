@@ -21,6 +21,7 @@
         "check-licenses": "wp-scripts check-licenses --production",
         "develop": "npm run start",
         "develop:analyzer": "npm run start:analyzer",
+        "format": "wp-scripts format ./src",
         "lint:css": "wp-scripts lint-style '**/*.css'",
         "lint:js": "wp-scripts lint-js ./src",
         "lint:js:fix": "wp-scripts lint-js ./src --fix",

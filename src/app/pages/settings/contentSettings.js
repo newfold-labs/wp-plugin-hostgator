@@ -8,7 +8,7 @@ import {
 	Card,
 	CardBody,
 	CardHeader,
-	SelectControl
+	SelectControl,
 } from '@wordpress/components';
 import { useState } from '@wordpress/element';
 import { useUpdateEffect } from 'react-use';
@@ -63,12 +63,7 @@ const ContentSettings = () => {
 			<span>
 				{__('Empty trash every ', 'wp-plugin-hostgator')}
 				<strong>{numTrashWeeks}</strong>
-				{_n(
-					' week.',
-					' weeks.',
-					numTrashWeeks,
-					'wp-plugin-hostgator'
-				)}
+				{_n(' week.', ' weeks.', numTrashWeeks, 'wp-plugin-hostgator')}
 			</span>
 		);
 	};
@@ -81,12 +76,7 @@ const ContentSettings = () => {
 					'wp-plugin-hostgator'
 				)}
 				<strong>{numTrashWeeks}</strong>
-				{_n(
-					' week.',
-					' weeks.',
-					numTrashWeeks,
-					'wp-plugin-hostgator'
-				)}
+				{_n(' week.', ' weeks.', numTrashWeeks, 'wp-plugin-hostgator')}
 			</span>
 		);
 	};
@@ -95,13 +85,17 @@ const ContentSettings = () => {
 	};
 
 	useUpdateEffect(() => {
-		hostgatorSettingsApiFetch({ contentRevisions }, setError, (response) => {
-			setStore({
-				...store,
-				contentRevisions,
-			});
-			dispatchUpdateSnackbar(contentRevisionsNoticeText());
-		});
+		hostgatorSettingsApiFetch(
+			{ contentRevisions },
+			setError,
+			(response) => {
+				setStore({
+					...store,
+					contentRevisions,
+				});
+				dispatchUpdateSnackbar(contentRevisionsNoticeText());
+			}
+		);
 	}, [contentRevisions]);
 
 	useUpdateEffect(() => {
@@ -115,8 +109,8 @@ const ContentSettings = () => {
 		});
 	}, [emptyTrashDays]);
 
-	if ( isError ) {
-		return <ErrorCard error={isError} />
+	if (isError) {
+		return <ErrorCard error={isError} />;
 	}
 	return (
 		<Card className="card-content-settings">

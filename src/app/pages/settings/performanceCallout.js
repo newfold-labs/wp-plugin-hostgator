@@ -3,13 +3,12 @@ import {
 	Card,
 	CardBody,
 	CardHeader,
-    CardFooter,
+	CardFooter,
 	Dashicon,
-    Button
+	Button,
 } from '@wordpress/components';
 
 const PerformanceCallout = () => {
-
 	return (
 		<Card className="card-performance-callout short">
 			<CardHeader>
@@ -23,16 +22,16 @@ const PerformanceCallout = () => {
 					'wp-plugin-hostgator'
 				)}
 			</CardBody>
-            <CardFooter>
-                <Button
-                    variant="primary"
-                    href="#/performance"
-                    icon={<Dashicon icon='performance' />}
+			<CardFooter>
+				<Button
+					variant="primary"
+					href="#/performance"
+					icon={<Dashicon icon="performance" />}
 					className="callout-link-performance"
-                >
-                    {__('Performance', 'wp-plugin-hostgator')}
-                </Button>
-            </CardFooter>
+				>
+					{__('Performance', 'wp-plugin-hostgator')}
+				</Button>
+			</CardFooter>
 		</Card>
 	);
 };

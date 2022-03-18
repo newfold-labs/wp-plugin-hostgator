@@ -36,14 +36,14 @@ export const AppStoreProvider = ({ children }) => {
 	useEffect(() => {
 		if (false === booted) {
 			hgApiFetchSettings()
-			.then((settings) => {
-				setStore({ ...store, ...window.HGWP, ...settings });
-				window.HGWP.migrated = true;
-				setBooted(true);
-			})
-			.catch((error) => {
-				setError(error);
-			});
+				.then((settings) => {
+					setStore({ ...store, ...window.HGWP, ...settings });
+					window.HGWP.migrated = true;
+					setBooted(true);
+				})
+				.catch((error) => {
+					setError(error);
+				});
 		}
 	}, []);
 

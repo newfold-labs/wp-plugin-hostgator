@@ -5,14 +5,12 @@ import {
 	CardBody,
 	CardHeader,
 	CardFooter,
-	CardMedia
+	CardMedia,
 } from '@wordpress/components';
 
 const MarketplaceItem = ({ item }) => {
 	return (
-		<Card
-			className={`marketplace-item-${item.name}`}
-		>
+		<Card className={`marketplace-item-${item.name}`}>
 			{item.img && (
 				<CardMedia>
 					<img src={item.img} alt={item.title + ' thumbnail'} />

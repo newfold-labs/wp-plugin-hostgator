@@ -11,7 +11,7 @@ import {
 	CardHeader,
 	CardDivider,
 	ToggleControl,
-	SelectControl
+	SelectControl,
 } from '@wordpress/components';
 import { useState } from '@wordpress/element';
 import { useUpdateEffect } from 'react-use';
@@ -31,14 +31,8 @@ const CommentSettings = () => {
 
 	const disableCommentsHelpText = () => {
 		return disableCommentsOldPosts
-			? __(
-					'Comments on old posts are disabled.',
-					'wp-plugin-hostgator'
-			  )
-			: __(
-					'Comments are allowed on old posts.',
-					'wp-plugin-hostgator'
-			  );
+			? __('Comments on old posts are disabled.', 'wp-plugin-hostgator')
+			: __('Comments are allowed on old posts.', 'wp-plugin-hostgator');
 	};
 	const disableCommentsNoticeText = () => {
 		return disableCommentsOldPosts
@@ -85,12 +79,7 @@ const CommentSettings = () => {
 				'wp-plugin-hostgator'
 			) +
 			closeCommentsDays +
-			_n(
-				' day.',
-				' days.',
-				closeCommentsDays,
-				'wp-plugin-hostgator'
-			)
+			_n(' day.', ' days.', closeCommentsDays, 'wp-plugin-hostgator')
 		);
 	};
 	const commentsPerPageLabelText = () => {
@@ -124,31 +113,38 @@ const CommentSettings = () => {
 		);
 	};
 	const commentsPerPageNoticeText = () => {
-		return __(
-			'Comments per page setting saved.',
-			'wp-plugin-hostgator'
-		);
+		return __('Comments per page setting saved.', 'wp-plugin-hostgator');
 	};
 	useUpdateEffect(() => {
-		hostgatorSettingsApiFetch({
-			disableCommentsOldPosts: disableCommentsOldPosts ? 'true' : 'false',
-		}, setError, (response) => {
-			setStore({
-				...store,
-				disableCommentsOldPosts,
-			});
-			dispatchUpdateSnackbar(disableCommentsNoticeText());
-		});
+		hostgatorSettingsApiFetch(
+			{
+				disableCommentsOldPosts: disableCommentsOldPosts
+					? 'true'
+					: 'false',
+			},
+			setError,
+			(response) => {
+				setStore({
+					...store,
+					disableCommentsOldPosts,
+				});
+				dispatchUpdateSnackbar(disableCommentsNoticeText());
+			}
+		);
 	}, [disableCommentsOldPosts]);
 
 	useUpdateEffect(() => {
-		hostgatorSettingsApiFetch({ closeCommentsDays }, setError, (response) => {
-			setStore({
-				...store,
-				closeCommentsDays,
-			});
-			dispatchUpdateSnackbar(closeCommentsNoticeText());
-		});
+		hostgatorSettingsApiFetch(
+			{ closeCommentsDays },
+			setError,
+			(response) => {
+				setStore({
+					...store,
+					closeCommentsDays,
+				});
+				dispatchUpdateSnackbar(closeCommentsNoticeText());
+			}
+		);
 	}, [closeCommentsDays]);
 
 	useUpdateEffect(() => {
@@ -161,8 +157,8 @@ const CommentSettings = () => {
 		});
 	}, [commentsPerPage]);
 
-	if ( isError ) {
-		return <ErrorCard error={isError} />
+	if (isError) {
+		return <ErrorCard error={isError} />;
 	}
 	return (
 		<Card className="card-comment-settings">
@@ -177,9 +173,7 @@ const CommentSettings = () => {
 					'wp-plugin-hostgator'
 				)}
 			</CardBody>
-			<CardBody
-				className="disable-comments-setting"
-			>
+			<CardBody className="disable-comments-setting">
 				<ToggleControl
 					checked={disableCommentsOldPosts}
 					className="disable-comments-toggle"
@@ -194,8 +188,10 @@ const CommentSettings = () => {
 				/>
 			</CardBody>
 			<CardDivider />
-			<CardBody 
-				className={`close-comments-days-setting ${disableCommentsOldPosts ? '' : 'disabled'}`}
+			<CardBody
+				className={`close-comments-days-setting ${
+					disableCommentsOldPosts ? '' : 'disabled'
+				}`}
 			>
 				<SelectControl
 					disabled={!disableCommentsOldPosts}
@@ -220,9 +216,7 @@ const CommentSettings = () => {
 				/>
 			</CardBody>
 			<CardDivider />
-			<CardBody
-				className="comments-per-page-setting"
-			>
+			<CardBody className="comments-per-page-setting">
 				<SelectControl
 					label={commentsPerPageLabelText()}
 					className="comments-per-page-select"

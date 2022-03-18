@@ -10,21 +10,22 @@ const Marketplace = () => {
 	const location = useLocation();
 	const navigate = useNavigate();
 
-	const onTabNavigate = (tabName) => navigate( '/marketplace/' + tabName, { replace: true });
+	const onTabNavigate = (tabName) =>
+		navigate('/marketplace/' + tabName, { replace: true });
 
 	useEffect(() => {
 		if (location.pathname.includes('/services')) {
 			setInitialTab('services');
 		} else if (location.pathname.includes('/themes')) {
 			setInitialTab('themes');
-		} else if (! location.pathname.includes('/plugins')) {
+		} else if (!location.pathname.includes('/plugins')) {
 			navigate('/marketplace/plugins', { replace: true });
 		}
 		setIsLoading(false);
 	}, [location]);
 
-	if ( isLoading ) {
-		return <Spinner />
+	if (isLoading) {
+		return <Spinner />;
 	}
 
 	return (

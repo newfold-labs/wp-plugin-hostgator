@@ -8,7 +8,7 @@ import {
 	Card,
 	CardBody,
 	CardHeader,
-	RadioControl
+	RadioControl,
 } from '@wordpress/components';
 import { useState } from '@wordpress/element';
 import { useUpdateEffect } from 'react-use';
@@ -17,20 +17,16 @@ const CacheSettings = () => {
 	const { store, setStore } = useContext(AppStore);
 	const [cacheLevel, setCacheLevel] = useState(store.cacheLevel);
 	const [isError, setError] = useState(false);
-	
+
 	const cacheOptions = [
 		{
 			label: (
 				<span>
-					<strong>
-						{__('Disabled', 'wp-plugin-hostgator')}
-					</strong>
+					<strong>{__('Disabled', 'wp-plugin-hostgator')}</strong>
 					<span>
 						{__('No cache enabled.', 'wp-plugin-hostgator')}
 					</span>
-					<em>
-						{__('Not recommended.', 'wp-plugin-hostgator')}
-					</em>
+					<em>{__('Not recommended.', 'wp-plugin-hostgator')}</em>
 				</span>
 			),
 			value: 0,
@@ -39,9 +35,7 @@ const CacheSettings = () => {
 		{
 			label: (
 				<span>
-					<strong>
-						{__('Assets Only', 'wp-plugin-hostgator')}
-					</strong>
+					<strong>{__('Assets Only', 'wp-plugin-hostgator')}</strong>
 					<span>
 						{__(
 							'Cache static assets like images and the appearance of your site for 1 hour.',
@@ -124,8 +118,8 @@ const CacheSettings = () => {
 		});
 	}, [cacheLevel]);
 
-	if ( isError ) {
-		return <ErrorCard error={isError} />
+	if (isError) {
+		return <ErrorCard error={isError} />;
 	}
 	return (
 		<Card className="card-cache-settings">

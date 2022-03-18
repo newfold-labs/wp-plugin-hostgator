@@ -6,37 +6,35 @@ import {
 	CardBody,
 	CardHeader,
 	CardFooter,
-	Dashicon
+	Dashicon,
 } from '@wordpress/components';
 import { Icon, settings, store } from '@wordpress/icons';
 
 const SettingsSection = () => {
 	return (
 		<section className="hgwp-section hgwp-section-home-settings">
-			<img src={graphicUrl} className='section-graphic' alt={__('Settings illustration', 'wp-plugin-hostgator')} />
+			<img
+				src={graphicUrl}
+				className="section-graphic"
+				alt={__('Settings illustration', 'wp-plugin-hostgator')}
+			/>
 			<Card size="large" className="hgwp-section-card">
 				<CardHeader>
 					<Heading level="3">
-						{__(
-							'Settings and Performance',
-							'wp-plugin-hostgator'
-						)}
+						{__('Settings and Performance', 'wp-plugin-hostgator')}
 					</Heading>
 					<p>
-						{ __(
+						{__(
 							'Customize & fine-tune your site.',
 							'wp-plugin-hostgator'
-						) }
+						)}
 					</p>
 				</CardHeader>
 				<CardFooter>
 					<div className="hgwp-cardlist-content">
 						<Heading level="4">
 							<Icon icon={settings} />{' '}
-							{__(
-								'Manage Settings',
-								'wp-plugin-hostgator'
-							)}
+							{__('Manage Settings', 'wp-plugin-hostgator')}
 						</Heading>
 						<p>
 							{__(
@@ -45,7 +43,7 @@ const SettingsSection = () => {
 							)}
 						</p>
 					</div>
-					<Button 
+					<Button
 						variant="primary"
 						href="#/settings"
 						icon={settings}
@@ -57,7 +55,7 @@ const SettingsSection = () => {
 				<CardFooter>
 					<div className="hgwp-cardlist-content">
 						<Heading level="4">
-							<Dashicon icon='performance' />{' '}
+							<Dashicon icon="performance" />{' '}
 							{__('Performance', 'wp-plugin-hostgator')}
 						</Heading>
 						<p>
@@ -70,7 +68,7 @@ const SettingsSection = () => {
 					<Button
 						variant="primary"
 						href="#/performance"
-						icon={<Dashicon icon='performance' />}
+						icon={<Dashicon icon="performance" />}
 						className="callout-link-performance"
 					>
 						{__('Performance', 'wp-plugin-hostgator')}
@@ -89,7 +87,7 @@ const SettingsSection = () => {
 							)}
 						</p>
 					</div>
-					<Button 
+					<Button
 						variant="primary"
 						href="#/marketplace"
 						icon={store}

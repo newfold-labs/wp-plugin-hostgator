@@ -3,13 +3,12 @@ import {
 	Card,
 	CardBody,
 	CardHeader,
-    CardFooter,
-    Button
+	CardFooter,
+	Button,
 } from '@wordpress/components';
 import { settings } from '@wordpress/icons';
 
 const SettingsCallout = () => {
-
 	return (
 		<Card className="short card-settings-callout">
 			<CardHeader>
@@ -23,16 +22,16 @@ const SettingsCallout = () => {
 					'wp-plugin-hostgator'
 				)}
 			</CardBody>
-            <CardFooter>
-                <Button
-                    variant="primary"
-                    href="#/settings"
-                    icon={settings}
+			<CardFooter>
+				<Button
+					variant="primary"
+					href="#/settings"
+					icon={settings}
 					className="callout-link-settings"
-                >
-                    {__('Settings', 'wp-plugin-hostgator')}
-                </Button>
-            </CardFooter>
+				>
+					{__('Settings', 'wp-plugin-hostgator')}
+				</Button>
+			</CardFooter>
 		</Card>
 	);
 };

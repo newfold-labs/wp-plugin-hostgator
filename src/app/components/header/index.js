@@ -13,9 +13,8 @@ const Header = () => {
 			<header className="hgwp-header">
 				<div className="hgwp-header-inner">
 					<Logo />
-					{isLargeViewport && (<NavUtility />) || <NavMobile />}
+					{(isLargeViewport && <NavUtility />) || <NavMobile />}
 				</div>
-				
 			</header>
 			{isLargeViewport && (
 				<nav className="hgwp-nav">
