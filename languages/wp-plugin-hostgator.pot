@@ -36,37 +36,37 @@ msgstr ""
 
 #: inc/Admin.php:42
 #: inc/Admin.php:175
-#: src/app/data/routes.js:51
+#: src/app/data/routes.js:52
 msgid "Home"
 msgstr ""
 
 #: inc/Admin.php:43
-#: src/app/data/routes.js:57
-#: src/app/pages/home/settingsSection.js:83
+#: src/app/data/routes.js:58
+#: src/app/pages/home/settingsSection.js:81
 msgid "Marketplace"
 msgstr ""
 
 #: inc/Admin.php:44
-#: src/app/data/routes.js:63
-#: src/app/pages/home/settingsSection.js:61
-#: src/app/pages/home/settingsSection.js:76
-#: src/app/pages/settings/performanceCallout.js:17
-#: src/app/pages/settings/performanceCallout.js:33
+#: src/app/data/routes.js:64
+#: src/app/pages/home/settingsSection.js:59
+#: src/app/pages/home/settingsSection.js:74
+#: src/app/pages/settings/performanceCallout.js:16
+#: src/app/pages/settings/performanceCallout.js:32
 msgid "Performance"
 msgstr ""
 
 #: inc/Admin.php:45
 #: inc/Admin.php:176
-#: src/app/data/routes.js:69
-#: src/app/pages/home/settingsSection.js:54
-#: src/app/pages/performance/settingsCallout.js:17
-#: src/app/pages/performance/settingsCallout.js:33
+#: src/app/data/routes.js:70
+#: src/app/pages/home/settingsSection.js:52
+#: src/app/pages/performance/settingsCallout.js:16
+#: src/app/pages/performance/settingsCallout.js:32
 msgid "Settings"
 msgstr ""
 
 #: inc/Admin.php:46
-#: src/app/data/routes.js:75
-#: src/app/pages/home/webHostingSection.js:119
+#: src/app/data/routes.js:76
+#: src/app/pages/home/webHostingSection.js:123
 msgid "Help"
 msgstr ""
 
@@ -149,7 +149,7 @@ msgid "There was an error with your submission and you were not subscribed. Plea
 msgstr ""
 
 #: inc/pages/coming-soon.php:239
-#: src/app/pages/home/webHostingSection.js:61
+#: src/app/pages/home/webHostingSection.js:65
 msgid "Email"
 msgstr ""
 
@@ -225,19 +225,19 @@ msgstr ""
 msgid "Auto-updates enabled"
 msgstr ""
 
-#: src/app/components/errorCard/index.js:23
+#: src/app/components/errorCard/index.js:27
 msgid "Oh No, An Error!"
 msgstr ""
 
-#: src/app/components/errorCard/index.js:27
+#: src/app/components/errorCard/index.js:32
 msgid "You found an error, please refresh the page and try again!"
 msgstr ""
 
-#: src/app/components/errorCard/index.js:28
+#: src/app/components/errorCard/index.js:38
 msgid "If the error persists, please contact support."
 msgstr ""
 
-#: src/app/components/errorCard/index.js:33
+#: src/app/components/errorCard/index.js:48
 msgid " Error code: "
 msgstr ""
 
@@ -289,32 +289,32 @@ msgstr ""
 msgid "Know what the pros know."
 msgstr ""
 
-#: src/app/data/help.js:54
+#: src/app/data/help.js:51
 msgid "Find Answers"
 msgstr ""
 
-#: src/app/data/help.js:59
-#: src/app/pages/home/webContentSection.js:32
+#: src/app/data/help.js:56
+#: src/app/pages/home/webContentSection.js:36
 msgid "Blog"
 msgstr ""
 
-#: src/app/data/help.js:60
+#: src/app/data/help.js:57
 msgid "Get our tips and in-depth articles."
 msgstr ""
 
-#: src/app/data/help.js:66
+#: src/app/data/help.js:63
 msgid "Learn Stuff"
 msgstr ""
 
-#: src/app/data/help.js:71
+#: src/app/data/help.js:68
 msgid "Video Tutorials"
 msgstr ""
 
-#: src/app/data/help.js:72
+#: src/app/data/help.js:69
 msgid "Step-by-step tutorials and additional guides."
 msgstr ""
 
-#: src/app/data/help.js:78
+#: src/app/data/help.js:75
 msgid "Watch Now"
 msgstr ""
 
@@ -354,7 +354,7 @@ msgstr ""
 msgid "Capture visitor information right from your site."
 msgstr ""
 
-#: src/app/data/routes.js:27
+#: src/app/data/routes.js:31
 msgid "There's nothing here!"
 msgstr ""
 
@@ -440,8 +440,8 @@ msgid "Daisy is the #1 blog theme on the marketplace!"
 msgstr ""
 
 #: src/app/pages/home/comingSoonSection.js:27
-#: src/app/pages/settings/comingSoon.js:59
-#: src/app/pages/settings/comingSoon.js:71
+#: src/app/pages/settings/comingSoon.js:58
+#: src/app/pages/settings/comingSoon.js:70
 msgid "Coming Soon"
 msgstr ""
 
@@ -457,154 +457,154 @@ msgstr ""
 msgid "Congratulations! You just successfully launched your site! Visitors will now see the site, you can easily undo this and restore the coming soon page if you are not ready."
 msgstr ""
 
-#: src/app/pages/home/comingSoonSection.js:56
+#: src/app/pages/home/comingSoonSection.js:54
 msgid "Launch Site"
 msgstr ""
 
-#: src/app/pages/home/comingSoonSection.js:68
+#: src/app/pages/home/comingSoonSection.js:66
 msgid "Restore Coming Soon"
 msgstr ""
 
-#: src/app/pages/home/comingSoonSection.js:77
+#: src/app/pages/home/comingSoonSection.js:75
 msgid "Dismiss"
 msgstr ""
 
-#: src/app/pages/home/comingSoonSection.js:84
+#: src/app/pages/home/comingSoonSection.js:82
 #: src/app/pages/settings/comingSoon.js:25
 msgid "Coming soon activated."
 msgstr ""
 
-#: src/app/pages/home/comingSoonSection.js:85
+#: src/app/pages/home/comingSoonSection.js:83
 #: src/app/pages/settings/comingSoon.js:26
 msgid "Coming soon deactivated."
 msgstr ""
 
-#: src/app/pages/home/settingsSection.js:16
-#: src/app/pages/settings/index.js:16
+#: src/app/pages/home/settingsSection.js:19
+#: src/app/pages/settings/index.js:20
 msgid "Settings illustration"
 msgstr ""
 
-#: src/app/pages/home/settingsSection.js:20
+#: src/app/pages/home/settingsSection.js:24
 msgid "Settings and Performance"
 msgstr ""
 
-#: src/app/pages/home/settingsSection.js:26
+#: src/app/pages/home/settingsSection.js:27
 msgid "Customize & fine-tune your site."
 msgstr ""
 
-#: src/app/pages/home/settingsSection.js:36
+#: src/app/pages/home/settingsSection.js:37
 msgid "Manage Settings"
 msgstr ""
 
-#: src/app/pages/home/settingsSection.js:42
-#: src/app/pages/performance/settingsCallout.js:21
+#: src/app/pages/home/settingsSection.js:40
+#: src/app/pages/performance/settingsCallout.js:20
 msgid "Manage your site settings. You can ajdust automatic updates, comments, revisions and more."
 msgstr ""
 
-#: src/app/pages/home/settingsSection.js:64
-#: src/app/pages/settings/performanceCallout.js:21
+#: src/app/pages/home/settingsSection.js:62
+#: src/app/pages/settings/performanceCallout.js:20
 msgid "Manage site performance and caching settings as well as clear the site cache."
 msgstr ""
 
-#: src/app/pages/home/settingsSection.js:86
+#: src/app/pages/home/settingsSection.js:84
 msgid "Add site services, themes or plugins from the marketplace."
 msgstr ""
 
-#: src/app/pages/home/settingsSection.js:98
+#: src/app/pages/home/settingsSection.js:96
 msgid "Visit Marketplace"
 msgstr ""
 
-#: src/app/pages/home/webContentSection.js:15
+#: src/app/pages/home/webContentSection.js:18
 msgid "Website illustration"
 msgstr ""
 
-#: src/app/pages/home/webContentSection.js:19
+#: src/app/pages/home/webContentSection.js:23
 msgid "Website Content"
 msgstr ""
 
-#: src/app/pages/home/webContentSection.js:35
+#: src/app/pages/home/webContentSection.js:39
 msgid "Write a new blog post."
 msgstr ""
 
-#: src/app/pages/home/webContentSection.js:47
+#: src/app/pages/home/webContentSection.js:51
 msgid "New Post"
 msgstr ""
 
-#: src/app/pages/home/webContentSection.js:54
+#: src/app/pages/home/webContentSection.js:58
 msgid "Pages"
 msgstr ""
 
-#: src/app/pages/home/webContentSection.js:57
+#: src/app/pages/home/webContentSection.js:61
 msgid "Add fresh pages to your website."
 msgstr ""
 
-#: src/app/pages/home/webContentSection.js:68
+#: src/app/pages/home/webContentSection.js:72
 msgid "New Page"
 msgstr ""
 
-#: src/app/pages/home/webContentSection.js:75
+#: src/app/pages/home/webContentSection.js:79
 msgid "Categories"
 msgstr ""
 
-#: src/app/pages/home/webContentSection.js:78
+#: src/app/pages/home/webContentSection.js:82
 msgid "Organize existing content into categories."
 msgstr ""
 
-#: src/app/pages/home/webContentSection.js:89
+#: src/app/pages/home/webContentSection.js:93
 msgid "Manage Categories"
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:15
+#: src/app/pages/home/webHostingSection.js:18
 msgid "Hosting illustration"
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:19
+#: src/app/pages/home/webHostingSection.js:23
 msgid "Web Hosting"
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:22
+#: src/app/pages/home/webHostingSection.js:26
 msgid "Access & manage your HostGator account."
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:32
-#: src/app/pages/home/webHostingSection.js:54
+#: src/app/pages/home/webHostingSection.js:36
+#: src/app/pages/home/webHostingSection.js:58
 msgid "Manage Sites"
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:35
+#: src/app/pages/home/webHostingSection.js:39
 msgid "Manage your site from the control panel. You can create backups, set security, and improve performance."
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:64
+#: src/app/pages/home/webHostingSection.js:68
 msgid "Create email accounts, compose, send, and receive your email from the control panel."
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:83
+#: src/app/pages/home/webHostingSection.js:87
 msgid "Manage Email"
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:90
+#: src/app/pages/home/webHostingSection.js:94
 msgid "Domains"
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:93
+#: src/app/pages/home/webHostingSection.js:97
 msgid "Find a new domain and assign it to your site or start a new site with a fresh domain."
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:112
+#: src/app/pages/home/webHostingSection.js:116
 msgid "Find a Domain"
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:121
+#: src/app/pages/home/webHostingSection.js:126
 msgid "24/7/365 support. We work when you work."
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:129
+#: src/app/pages/home/webHostingSection.js:138
 msgid "Get Help"
 msgstr ""
 
 #: src/app/pages/marketplace/plugins.js:8
-#: src/app/pages/settings/automaticUpdates.js:210
+#: src/app/pages/settings/automaticUpdates.js:207
 msgid "Plugins"
 msgstr ""
 
@@ -613,63 +613,63 @@ msgid "Services"
 msgstr ""
 
 #: src/app/pages/marketplace/themes.js:8
-#: src/app/pages/settings/automaticUpdates.js:225
+#: src/app/pages/settings/automaticUpdates.js:224
 msgid "Themes"
 msgstr ""
 
-#: src/app/pages/performance/cacheSettings.js:26
+#: src/app/pages/performance/cacheSettings.js:25
 msgid "Disabled"
 msgstr ""
 
-#: src/app/pages/performance/cacheSettings.js:29
+#: src/app/pages/performance/cacheSettings.js:27
 msgid "No cache enabled."
 msgstr ""
 
-#: src/app/pages/performance/cacheSettings.js:32
+#: src/app/pages/performance/cacheSettings.js:29
 msgid "Not recommended."
 msgstr ""
 
-#: src/app/pages/performance/cacheSettings.js:43
+#: src/app/pages/performance/cacheSettings.js:38
 msgid "Assets Only"
 msgstr ""
 
-#: src/app/pages/performance/cacheSettings.js:46
+#: src/app/pages/performance/cacheSettings.js:40
 msgid "Cache static assets like images and the appearance of your site for 1 hour."
 msgstr ""
 
-#: src/app/pages/performance/cacheSettings.js:52
+#: src/app/pages/performance/cacheSettings.js:46
 msgid "Recommended for ecommerce and sites that update frequently or display info in real-time."
 msgstr ""
 
-#: src/app/pages/performance/cacheSettings.js:66
+#: src/app/pages/performance/cacheSettings.js:60
 msgid "Assets & Web Pages"
 msgstr ""
 
-#: src/app/pages/performance/cacheSettings.js:69
+#: src/app/pages/performance/cacheSettings.js:63
 msgid "Cache static assets for 24 hours and web pages for 2 hours."
 msgstr ""
 
-#: src/app/pages/performance/cacheSettings.js:75
+#: src/app/pages/performance/cacheSettings.js:69
 msgid "Recommended for blogs, educational sites, and sites that update at least weekly."
 msgstr ""
 
-#: src/app/pages/performance/cacheSettings.js:89
+#: src/app/pages/performance/cacheSettings.js:83
 msgid "Assets & Web Pages - Extended"
 msgstr ""
 
-#: src/app/pages/performance/cacheSettings.js:95
+#: src/app/pages/performance/cacheSettings.js:89
 msgid "Cache static assets for 1 week and web pages for 8 hours."
 msgstr ""
 
-#: src/app/pages/performance/cacheSettings.js:101
+#: src/app/pages/performance/cacheSettings.js:95
 msgid "Recommended for portfolios, brochure sites, and sites that update monthly or less often."
 msgstr ""
 
-#: src/app/pages/performance/cacheSettings.js:134
+#: src/app/pages/performance/cacheSettings.js:128
 msgid "Cache Level"
 msgstr ""
 
-#: src/app/pages/performance/cacheSettings.js:138
+#: src/app/pages/performance/cacheSettings.js:132
 msgid "Boost speed and performance by storing a copy of your website content, files, and images online so the pages of your website load faster for your visitors."
 msgstr ""
 
@@ -677,99 +677,99 @@ msgstr ""
 msgid "Cache cleared"
 msgstr ""
 
-#: src/app/pages/performance/clearCache.js:36
+#: src/app/pages/performance/clearCache.js:40
 msgid "Clear Cache"
 msgstr ""
 
-#: src/app/pages/performance/clearCache.js:40
+#: src/app/pages/performance/clearCache.js:44
 msgid "If you’ve recently updated your website, we recommend clearing the site cache. We’ll fetch a fresh version of your site to cache."
 msgstr ""
 
-#: src/app/pages/performance/clearCache.js:53
+#: src/app/pages/performance/clearCache.js:57
 msgid "Clear All Cache Now"
 msgstr ""
 
-#: src/app/pages/performance/index.js:15
+#: src/app/pages/performance/index.js:19
 msgid "Performance illustration"
 msgstr ""
 
-#: src/app/pages/settings/automaticUpdates.js:36
+#: src/app/pages/settings/automaticUpdates.js:40
 msgid "Everything will auto-update."
 msgstr ""
 
-#: src/app/pages/settings/automaticUpdates.js:37
+#: src/app/pages/settings/automaticUpdates.js:41
 msgid "Custom auto-update settings."
 msgstr ""
 
-#: src/app/pages/settings/automaticUpdates.js:41
+#: src/app/pages/settings/automaticUpdates.js:45
 msgid "Yay! Everything will automatically update."
 msgstr ""
 
-#: src/app/pages/settings/automaticUpdates.js:45
+#: src/app/pages/settings/automaticUpdates.js:49
 msgid "Custom automatic update settings."
 msgstr ""
 
-#: src/app/pages/settings/automaticUpdates.js:52
+#: src/app/pages/settings/automaticUpdates.js:53
 msgid "Core will auto-update."
 msgstr ""
 
-#: src/app/pages/settings/automaticUpdates.js:53
+#: src/app/pages/settings/automaticUpdates.js:54
 msgid "Core will not auto-update."
 msgstr ""
 
-#: src/app/pages/settings/automaticUpdates.js:57
+#: src/app/pages/settings/automaticUpdates.js:58
 msgid "WordPress will automatically update."
 msgstr ""
 
-#: src/app/pages/settings/automaticUpdates.js:61
+#: src/app/pages/settings/automaticUpdates.js:59
 msgid "WordPress must be manually updated."
 msgstr ""
 
-#: src/app/pages/settings/automaticUpdates.js:68
+#: src/app/pages/settings/automaticUpdates.js:63
 msgid "Plugins will auto-update."
 msgstr ""
 
-#: src/app/pages/settings/automaticUpdates.js:69
+#: src/app/pages/settings/automaticUpdates.js:64
 msgid "Plugins will not auto-update."
 msgstr ""
 
-#: src/app/pages/settings/automaticUpdates.js:76
+#: src/app/pages/settings/automaticUpdates.js:68
 msgid "All plugins will automatically update."
 msgstr ""
 
-#: src/app/pages/settings/automaticUpdates.js:80
+#: src/app/pages/settings/automaticUpdates.js:72
 msgid "Each plugin must be manually updated."
 msgstr ""
 
-#: src/app/pages/settings/automaticUpdates.js:87
+#: src/app/pages/settings/automaticUpdates.js:79
 msgid "Themes will auto-update."
 msgstr ""
 
-#: src/app/pages/settings/automaticUpdates.js:88
+#: src/app/pages/settings/automaticUpdates.js:80
 msgid "Theme will not auto-update."
 msgstr ""
 
-#: src/app/pages/settings/automaticUpdates.js:95
+#: src/app/pages/settings/automaticUpdates.js:84
 msgid "All themes will automatically update."
 msgstr ""
 
-#: src/app/pages/settings/automaticUpdates.js:99
+#: src/app/pages/settings/automaticUpdates.js:85
 msgid "Each theme must be manually updated."
 msgstr ""
 
-#: src/app/pages/settings/automaticUpdates.js:167
+#: src/app/pages/settings/automaticUpdates.js:162
 msgid "Automatic Updates"
 msgstr ""
 
-#: src/app/pages/settings/automaticUpdates.js:171
+#: src/app/pages/settings/automaticUpdates.js:166
 msgid "Allow your site to stay updated automatically."
 msgstr ""
 
-#: src/app/pages/settings/automaticUpdates.js:181
+#: src/app/pages/settings/automaticUpdates.js:174
 msgid "Everything"
 msgstr ""
 
-#: src/app/pages/settings/automaticUpdates.js:195
+#: src/app/pages/settings/automaticUpdates.js:190
 msgid "Core"
 msgstr ""
 
@@ -781,11 +781,11 @@ msgstr ""
 msgid "Coming soon page is not active and site is acessible."
 msgstr ""
 
-#: src/app/pages/settings/comingSoon.js:63
+#: src/app/pages/settings/comingSoon.js:62
 msgid "Not ready for your site to be live? Enable a \"Coming Soon\" page while you build your website for the public eye. This will disable all parts of your site and show visitors a \"coming soon\" landing page."
 msgstr ""
 
-#: src/app/pages/settings/comingSoon.js:82
+#: src/app/pages/settings/comingSoon.js:81
 msgid "Pro Tip: Begin collecting subscribers"
 msgstr ""
 
@@ -797,71 +797,71 @@ msgstr ""
 msgid "Comments on old posts are disabled."
 msgstr ""
 
-#: src/app/pages/settings/commentSettings.js:38
+#: src/app/pages/settings/commentSettings.js:35
 msgid "Comments are allowed on old posts."
 msgstr ""
 
-#: src/app/pages/settings/commentSettings.js:45
+#: src/app/pages/settings/commentSettings.js:39
 msgid "Old post comments disabled."
 msgstr ""
 
-#: src/app/pages/settings/commentSettings.js:46
+#: src/app/pages/settings/commentSettings.js:40
 msgid "Old post comments enabled."
 msgstr ""
 
-#: src/app/pages/settings/commentSettings.js:52
+#: src/app/pages/settings/commentSettings.js:46
 msgid "Close comments after "
 msgstr ""
 
-#: src/app/pages/settings/commentSettings.js:54
-#: src/app/pages/settings/commentSettings.js:72
-#: src/app/pages/settings/commentSettings.js:88
+#: src/app/pages/settings/commentSettings.js:48
+#: src/app/pages/settings/commentSettings.js:66
+#: src/app/pages/settings/commentSettings.js:82
 msgid " day."
 msgid_plural " days."
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/app/pages/settings/commentSettings.js:67
+#: src/app/pages/settings/commentSettings.js:61
 msgid "Comments on posts are disabled after "
 msgstr ""
 
-#: src/app/pages/settings/commentSettings.js:83
+#: src/app/pages/settings/commentSettings.js:77
 msgid "Disabled comments on posts older than "
 msgstr ""
 
-#: src/app/pages/settings/commentSettings.js:100
+#: src/app/pages/settings/commentSettings.js:89
 msgid "Display "
 msgstr ""
 
-#: src/app/pages/settings/commentSettings.js:102
+#: src/app/pages/settings/commentSettings.js:91
 msgid " comment per page."
 msgid_plural " comments per page."
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/app/pages/settings/commentSettings.js:115
+#: src/app/pages/settings/commentSettings.js:104
 msgid "Posts will display "
 msgstr ""
 
-#: src/app/pages/settings/commentSettings.js:117
+#: src/app/pages/settings/commentSettings.js:106
 msgid " comment at a time."
 msgid_plural " comments at a time."
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/app/pages/settings/commentSettings.js:127
+#: src/app/pages/settings/commentSettings.js:116
 msgid "Comments per page setting saved."
 msgstr ""
 
-#: src/app/pages/settings/commentSettings.js:171
+#: src/app/pages/settings/commentSettings.js:167
 msgid "Comments"
 msgstr ""
 
-#: src/app/pages/settings/commentSettings.js:175
+#: src/app/pages/settings/commentSettings.js:171
 msgid "Make blog post comments disabled on older posts and control how many to display."
 msgstr ""
 
-#: src/app/pages/settings/commentSettings.js:186
+#: src/app/pages/settings/commentSettings.js:180
 msgid "Disable comments for older posts"
 msgstr ""
 
@@ -890,20 +890,20 @@ msgid "Empty trash every "
 msgstr ""
 
 #: src/app/pages/settings/contentSettings.js:66
-#: src/app/pages/settings/contentSettings.js:84
+#: src/app/pages/settings/contentSettings.js:79
 msgid " week."
 msgid_plural " weeks."
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/app/pages/settings/contentSettings.js:79
+#: src/app/pages/settings/contentSettings.js:74
 msgid "The trash will automatically empty every "
 msgstr ""
 
-#: src/app/pages/settings/contentSettings.js:125
+#: src/app/pages/settings/contentSettings.js:119
 msgid "Content Options"
 msgstr ""
 
-#: src/app/pages/settings/contentSettings.js:129
+#: src/app/pages/settings/contentSettings.js:123
 msgid "Controls for content revisions and how often to empty the trash."
 msgstr ""
