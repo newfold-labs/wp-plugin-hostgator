@@ -66,7 +66,7 @@ msgstr ""
 
 #: inc/Admin.php:46
 #: src/app/data/routes.js:75
-#: src/app/pages/home/webHostingSection.js:121
+#: src/app/pages/home/webHostingSection.js:119
 msgid "Help"
 msgstr ""
 
@@ -149,7 +149,7 @@ msgid "There was an error with your submission and you were not subscribed. Plea
 msgstr ""
 
 #: inc/pages/coming-soon.php:239
-#: src/app/pages/home/webHostingSection.js:63
+#: src/app/pages/home/webHostingSection.js:61
 msgid "Email"
 msgstr ""
 
@@ -294,7 +294,7 @@ msgid "Find Answers"
 msgstr ""
 
 #: src/app/data/help.js:59
-#: src/app/pages/home/webContentSection.js:34
+#: src/app/pages/home/webContentSection.js:32
 msgid "Blog"
 msgstr ""
 
@@ -488,8 +488,8 @@ msgstr ""
 msgid "Settings and Performance"
 msgstr ""
 
-#: src/app/pages/home/settingsSection.js:27
-msgid "Manage your site within this dashboard"
+#: src/app/pages/home/settingsSection.js:26
+msgid "Customize & fine-tune your site."
 msgstr ""
 
 #: src/app/pages/home/settingsSection.js:36
@@ -522,39 +522,35 @@ msgstr ""
 msgid "Website Content"
 msgstr ""
 
-#: src/app/pages/home/webContentSection.js:24
-msgid "Manage website content easily with these shortcut links."
-msgstr ""
-
-#: src/app/pages/home/webContentSection.js:37
+#: src/app/pages/home/webContentSection.js:35
 msgid "Write a new blog post."
 msgstr ""
 
-#: src/app/pages/home/webContentSection.js:49
+#: src/app/pages/home/webContentSection.js:47
 msgid "New Post"
 msgstr ""
 
-#: src/app/pages/home/webContentSection.js:56
+#: src/app/pages/home/webContentSection.js:54
 msgid "Pages"
 msgstr ""
 
-#: src/app/pages/home/webContentSection.js:59
+#: src/app/pages/home/webContentSection.js:57
 msgid "Add fresh pages to your website."
 msgstr ""
 
-#: src/app/pages/home/webContentSection.js:70
+#: src/app/pages/home/webContentSection.js:68
 msgid "New Page"
 msgstr ""
 
-#: src/app/pages/home/webContentSection.js:77
+#: src/app/pages/home/webContentSection.js:75
 msgid "Categories"
 msgstr ""
 
-#: src/app/pages/home/webContentSection.js:80
+#: src/app/pages/home/webContentSection.js:78
 msgid "Organize existing content into categories."
 msgstr ""
 
-#: src/app/pages/home/webContentSection.js:91
+#: src/app/pages/home/webContentSection.js:89
 msgid "Manage Categories"
 msgstr ""
 
@@ -566,44 +562,44 @@ msgstr ""
 msgid "Web Hosting"
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:24
-msgid "Manage hosting in your HostGator portal account"
+#: src/app/pages/home/webHostingSection.js:22
+msgid "Access & manage your HostGator account."
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:34
-#: src/app/pages/home/webHostingSection.js:56
+#: src/app/pages/home/webHostingSection.js:32
+#: src/app/pages/home/webHostingSection.js:54
 msgid "Manage Sites"
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:37
+#: src/app/pages/home/webHostingSection.js:35
 msgid "Manage your site from the control panel. You can create backups, set security, and improve performance."
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:66
+#: src/app/pages/home/webHostingSection.js:64
 msgid "Create email accounts, compose, send, and receive your email from the control panel."
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:85
+#: src/app/pages/home/webHostingSection.js:83
 msgid "Manage Email"
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:92
+#: src/app/pages/home/webHostingSection.js:90
 msgid "Domains"
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:95
+#: src/app/pages/home/webHostingSection.js:93
 msgid "Find a new domain and assign it to your site or start a new site with a fresh domain."
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:114
+#: src/app/pages/home/webHostingSection.js:112
 msgid "Find a Domain"
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:123
+#: src/app/pages/home/webHostingSection.js:121
 msgid "24/7/365 support. We work when you work."
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:131
+#: src/app/pages/home/webHostingSection.js:129
 msgid "Get Help"
 msgstr ""
 
@@ -794,7 +790,7 @@ msgid "Pro Tip: Begin collecting subscribers"
 msgstr ""
 
 #: src/app/pages/settings/comingSoon.js:87
-msgid "First, activate the \"Jetpack\" plugin, connect your site, and enable the \"Subscriptions\" module. Then, users can subsribe to be notified when you launch and publish new content."
+msgid "First, activate the \"Jetpack\" plugin, connect your site, and enable the \"Subscriptions\" module. Then, users can subscribe to be notified when you launch and publish new content."
 msgstr ""
 
 #: src/app/pages/settings/commentSettings.js:34
