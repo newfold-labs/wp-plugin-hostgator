@@ -54,7 +54,7 @@
         "bluehost/endurance-wp-module-loader": "^1.1",
         "endurance/wp-module-data": "^1.8.3",
         "newfold-labs/wp-module-loader": "^1.0",
-        "newfold-labs/wp-module-coming-soon": "^1.0",
+        "newfold-labs/wp-module-coming-soon": "^1.0.5",
         "wp-forge/wp-update-handler": "^1.0"
     }
 }
