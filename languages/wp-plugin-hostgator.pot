@@ -2,7 +2,7 @@
 # This file is distributed under the GPL 2.0 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: HostGator 1.0.2\n"
+"Project-Id-Version: HostGator 1.0.3\n"
 "Report-Msgid-Bugs-To: https://github.com/newfold-labs/wp-plugin-hostgator/issues\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,8 +16,8 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #. Author of the plugin
-#: inc/Admin.php:73
-#: inc/Admin.php:74
+#: inc/Admin.php:70
+#: inc/Admin.php:71
 msgid "HostGator"
 msgstr ""
 
@@ -54,7 +54,7 @@ msgid "Your site is currently displaying a %3$sComing Soon page%4$s. Once you ar
 msgstr ""
 
 #: inc/Admin.php:42
-#: inc/Admin.php:175
+#: inc/Admin.php:172
 #: src/app/data/routes.js:52
 msgid "Home"
 msgstr ""
@@ -75,7 +75,7 @@ msgid "Performance"
 msgstr ""
 
 #: inc/Admin.php:45
-#: inc/Admin.php:176
+#: inc/Admin.php:173
 #: src/app/data/routes.js:70
 #: src/app/pages/home/settingsSection.js:52
 #: src/app/pages/performance/settingsCallout.js:16
@@ -89,19 +89,19 @@ msgstr ""
 msgid "Help"
 msgstr ""
 
-#: inc/Admin.php:113
+#: inc/Admin.php:110
 msgid "Please update to a newer WordPress version."
 msgstr ""
 
-#: inc/Admin.php:114
+#: inc/Admin.php:111
 msgid "There are new WordPress components which this plugin requires in order to render the interface."
 msgstr ""
 
-#: inc/Admin.php:115
+#: inc/Admin.php:112
 msgid "Please update now"
 msgstr ""
 
-#: inc/Admin.php:189
+#: inc/Admin.php:186
 msgid "Thank you for creating with <a href=\"https://wordpress.org/\">WordPress</a> and <a href=\"https://hostgator.com/about\">HostGator</a>."
 msgstr ""
 
