@@ -47,11 +47,9 @@ $nfd_module_container->set(
 $nfd_module_container->set(
 	'comingsoon',
 	array(
-		'option_name'         => 'mm_coming_soon',
-		'admin_screen_id'     => 'hostgator',
 		'admin_app_url'       => admin_url( 'admin.php?page=hostgator#/home' ),
-		'template_h1'         => 'A New WordPress Site',
-		'template_h2'         => 'Coming Soon!',
+		'template_h1'         => __( 'A New WordPress Site', 'wp-plugin-hostgator' ),
+		'template_h2'         => __( 'Coming Soon!', 'wp-plugin-hostgator' ),
 		'template_footer_t'   => sprintf(
 			/* translators: %1$s is replaced with opening link tag taking you to hostgator.com/wordpress, %2$s is replaced with closing link tag, %3$s is replaced with opening link tag taking you to login page, %4$s is replaced with closing link tag, %5$s is replaced with opening link tag taking you to portal.hostgator.com, %6$s is replaced with closing link tag */
 			esc_html__( 'A %1$sHostGator%2$s powered website. Is this your website? Log in to %3$sWordPress%4$s or %5$sHostgator%6$s.', 'wp-plugin-hostgator' ) . '&nbsp;',
@@ -70,10 +68,10 @@ $nfd_module_container->set(
 		'admin_bar_text'      => '<div style="background-color: #ffcf00; color: #191936; padding: 0 1rem;">' . __( 'Coming Soon Active', 'wp-plugin-hostgator' ) . '</div>',
 		'admin_notice_text'   => sprintf(
 			/* translators: %1$s is replaced with the opening link tag and %2$s is replaced with the closing link tag, %3$s is the opening link tag to preview the page, %4$s is the closing link tag. */
-			__( 'Your site is currently displaying a %3$sComing Soon page%4$s. Once you are ready, %1$slaunch your site%2$s.', 'wp-plugin-hostgator' ),
-			'<a href="' . esc_url( admin_url( 'admin.php?page=hostgator#/home' ) ) . '">',
+			__( 'Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s.', 'wp-plugin-hostgator' ),
+			'<a href="' . get_home_url() . '?preview=coming_soon" title="' . __( 'Preview the coming soon landing page', 'wp-plugin-hostgator' ) . '">',
 			'</a>',
-			'<a href="' . get_home_url() . '?preview=coming_soon" title="Preview the Coming Soon landing page">',
+			'<a href="' . esc_url( admin_url( 'admin.php?page=hostgator#/home' ) ) . '">',
 			'</a>'
 		),
 		'template_styles'     => esc_url( HOSTGATOR_PLUGIN_URL . 'assets/styles/coming-soon.css' ),
