@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f314746e77a03fc267b440166e12dc4c",
+    "content-hash": "ebdf677a0ba208c7fc57f9e7dbb3c4f9",
     "packages": [
         {
             "name": "bluehost/endurance-wp-module-loader",
