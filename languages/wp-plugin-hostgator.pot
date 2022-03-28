@@ -2,7 +2,7 @@
 # This file is distributed under the GPL 2.0 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: HostGator 1.0.2\n"
+"Project-Id-Version: HostGator 1.0.3\n"
 "Report-Msgid-Bugs-To: https://github.com/newfold-labs/wp-plugin-hostgator/issues\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,8 +16,8 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #. Author of the plugin
-#: inc/Admin.php:73
-#: inc/Admin.php:74
+#: inc/Admin.php:70
+#: inc/Admin.php:71
 msgid "HostGator"
 msgstr ""
 
@@ -30,12 +30,43 @@ msgstr ""
 msgid "WordPress plugin that integrates a WordPress site with the HostGator control panel, including performance, security, and update features."
 msgstr ""
 
-#: bootstrap.php:18
+#: bootstrap.php:21
 msgid "Please install the HostGator Plugin dependencies."
 msgstr ""
 
+#: bootstrap.php:51
+msgid "A New WordPress Site"
+msgstr ""
+
+#: bootstrap.php:52
+msgid "Coming Soon!"
+msgstr ""
+
+#. translators: %1$s is replaced with opening link tag taking you to hostgator.com/wordpress, %2$s is replaced with closing link tag, %3$s is replaced with opening link tag taking you to login page, %4$s is replaced with closing link tag, %5$s is replaced with opening link tag taking you to portal.hostgator.com, %6$s is replaced with closing link tag
+#: bootstrap.php:55
+msgid "A %1$sHostGator%2$s powered website. Is this your website? Log in to %3$sWordPress%4$s or %5$sHostgator%6$s."
+msgstr ""
+
+#. translators: %s: Blog name
+#: bootstrap.php:65
+msgid "%s &mdash; Coming Soon"
+msgstr ""
+
+#: bootstrap.php:68
+msgid "Coming Soon Active"
+msgstr ""
+
+#. translators: %1$s is replaced with the opening link tag and %2$s is replaced with the closing link tag, %3$s is the opening link tag to preview the page, %4$s is the closing link tag.
+#: bootstrap.php:71
+msgid "Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s."
+msgstr ""
+
+#: bootstrap.php:72
+msgid "Preview the coming soon landing page"
+msgstr ""
+
 #: inc/Admin.php:42
-#: inc/Admin.php:175
+#: inc/Admin.php:172
 #: src/app/data/routes.js:52
 msgid "Home"
 msgstr ""
@@ -56,7 +87,7 @@ msgid "Performance"
 msgstr ""
 
 #: inc/Admin.php:45
-#: inc/Admin.php:176
+#: inc/Admin.php:173
 #: src/app/data/routes.js:70
 #: src/app/pages/home/settingsSection.js:52
 #: src/app/pages/performance/settingsCallout.js:16
@@ -70,19 +101,19 @@ msgstr ""
 msgid "Help"
 msgstr ""
 
-#: inc/Admin.php:113
+#: inc/Admin.php:110
 msgid "Please update to a newer WordPress version."
 msgstr ""
 
-#: inc/Admin.php:114
+#: inc/Admin.php:111
 msgid "There are new WordPress components which this plugin requires in order to render the interface."
 msgstr ""
 
-#: inc/Admin.php:115
+#: inc/Admin.php:112
 msgid "Please update now"
 msgstr ""
 
-#: inc/Admin.php:189
+#: inc/Admin.php:186
 msgid "Thank you for creating with <a href=\"https://wordpress.org/\">WordPress</a> and <a href=\"https://hostgator.com/about\">HostGator</a>."
 msgstr ""
 
@@ -92,83 +123,6 @@ msgstr ""
 
 #: inc/AdminBar.php:38
 msgid "We're here for you!"
-msgstr ""
-
-#. translators: %1$s is replaced with the opening link tag and %2$s is replaced with the closing link tag.
-#: inc/coming-soon.php:25
-msgid "Your site is currently displaying a \"Coming Soon\" page. Once you are ready, %1$slaunch your site%2$s."
-msgstr ""
-
-#: inc/coming-soon.php:49
-msgid "Coming Soon Active"
-msgstr ""
-
-#: inc/coming-soon.php:51
-msgid "Launch Your Site"
-msgstr ""
-
-#: inc/coming-soon.php:93
-msgid "Gotcha!"
-msgstr ""
-
-#: inc/coming-soon.php:100
-msgid "Please provide a valid email address"
-msgstr ""
-
-#: inc/coming-soon.php:123
-msgid "There was an error with the subscription"
-msgstr ""
-
-#: inc/coming-soon.php:128
-msgid "Subscription successful"
-msgstr ""
-
-#. translators: %s: Blog name
-#: inc/pages/coming-soon.php:17
-msgid "%s &mdash; Coming Soon"
-msgstr ""
-
-#: inc/pages/coming-soon.php:222
-msgid "A New WordPress Site"
-msgstr ""
-
-#: inc/pages/coming-soon.php:223
-msgid "Coming Soon!"
-msgstr ""
-
-#: inc/pages/coming-soon.php:226
-msgid "Be the first to know when we launch, enter your email address and we will let you know when we go live and any future website updates we have."
-msgstr ""
-
-#: inc/pages/coming-soon.php:229
-msgid "Thank you, please check your email to confirm your subscription."
-msgstr ""
-
-#: inc/pages/coming-soon.php:232
-msgid "There was an error with your submission and you were not subscribed. Please try again with a different email address."
-msgstr ""
-
-#: inc/pages/coming-soon.php:239
-#: src/app/pages/home/webHostingSection.js:65
-msgid "Email"
-msgstr ""
-
-#. translators: %1$s is replaced with opening link tag taking you to hostgator.com/wordpress, %2$s is replaced with closing link tag
-#: inc/pages/coming-soon.php:265
-msgid "A %1$sHostGator%2$s powered website."
-msgstr ""
-
-#. translators: %1$s is replaced with opening link tag taking you to login page, %2$s is replaced with opening link tag taking you to my.hostgator.com, %3$s is replaced with closing link tag
-#: inc/pages/coming-soon.php:271
-msgid "Is this your website? Log in to %1$sWordPress%3$s or %2$sHostGator%3$s."
-msgstr ""
-
-#: inc/pages/coming-soon.php:305
-msgid "Your email address is already subscribed to this website. Stay tuned to your inbox for our updates or try a different email address."
-msgstr ""
-
-#: inc/pages/coming-soon.php:307
-msgid "There was an error with your submission and you were not subscribed. Please try again with a valid email address."
 msgstr ""
 
 #. translators: 1: plugin name 2: incompatible plugin name
@@ -573,6 +527,10 @@ msgstr ""
 
 #: src/app/pages/home/webHostingSection.js:39
 msgid "Manage your site from the control panel. You can create backups, set security, and improve performance."
+msgstr ""
+
+#: src/app/pages/home/webHostingSection.js:65
+msgid "Email"
 msgstr ""
 
 #: src/app/pages/home/webHostingSection.js:68
