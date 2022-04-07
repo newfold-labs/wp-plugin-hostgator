@@ -18,7 +18,7 @@ const MarketplaceItem = ({ item }) => {
 			)}
 			<CardHeader>
 				<Heading level="4">{item.title}</Heading>
-				{item.price && <em className="price">${item.price}</em>}
+				{item.price && <em className="price">{item.price}</em>}
 			</CardHeader>
 			{item.description && <CardBody>{item.description}</CardBody>}
 			<CardFooter>
