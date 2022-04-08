@@ -97,7 +97,7 @@ msgstr ""
 
 #: inc/Admin.php:46
 #: src/app/data/routes.js:76
-#: src/app/pages/home/webHostingSection.js:123
+#: src/app/pages/home/webHostingSection.js:127
 msgid "Help"
 msgstr ""
 
@@ -282,7 +282,7 @@ msgstr ""
 
 #: src/app/data/plugins.js:7
 #: src/app/data/plugins.js:19
-#: src/app/data/plugins.js:34
+#: src/app/data/plugins.js:33
 #: src/app/data/themes.js:13
 #: src/app/data/themes.js:28
 #: src/app/data/themes.js:43
@@ -508,56 +508,59 @@ msgstr ""
 msgid "Manage Categories"
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:18
+#: src/app/pages/home/webHostingSection.js:19
 msgid "Hosting illustration"
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:23
+#: src/app/pages/home/webHostingSection.js:24
 msgid "Web Hosting"
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:26
+#: src/app/pages/home/webHostingSection.js:27
 msgid "Access & manage your HostGator account."
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:36
-#: src/app/pages/home/webHostingSection.js:58
+#: src/app/pages/home/webHostingSection.js:38
+#: src/app/pages/home/webHostingSection.js:53
+#: src/app/pages/home/webHostingSection.js:59
 msgid "Manage Sites"
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:39
+#: src/app/pages/home/webHostingSection.js:41
 msgid "Manage your site from the control panel. You can create backups, set security, and improve performance."
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:65
+#: src/app/pages/home/webHostingSection.js:68
 msgid "Email"
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:68
+#: src/app/pages/home/webHostingSection.js:71
 msgid "Create email accounts, compose, send, and receive your email from the control panel."
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:87
+#: src/app/pages/home/webHostingSection.js:83
+#: src/app/pages/home/webHostingSection.js:89
+#: src/app/pages/home/webHostingSection.js:113
 msgid "Manage Email"
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:94
+#: src/app/pages/home/webHostingSection.js:98
 msgid "Domains"
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:97
+#: src/app/pages/home/webHostingSection.js:101
 msgid "Find a new domain and assign it to your site or start a new site with a fresh domain."
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:116
+#: src/app/pages/home/webHostingSection.js:119
 msgid "Find a Domain"
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:126
+#: src/app/pages/home/webHostingSection.js:130
 msgid "24/7/365 support. We work when you work."
 msgstr ""
 
-#: src/app/pages/home/webHostingSection.js:138
+#: src/app/pages/home/webHostingSection.js:142
 msgid "Get Help"
 msgstr ""
 
