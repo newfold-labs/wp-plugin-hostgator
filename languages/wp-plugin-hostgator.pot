@@ -282,7 +282,7 @@ msgstr ""
 
 #: src/app/data/plugins.js:7
 #: src/app/data/plugins.js:19
-#: src/app/data/plugins.js:34
+#: src/app/data/plugins.js:33
 #: src/app/data/themes.js:13
 #: src/app/data/themes.js:28
 #: src/app/data/themes.js:43
