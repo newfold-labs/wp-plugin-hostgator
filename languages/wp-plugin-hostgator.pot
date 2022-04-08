@@ -540,7 +540,6 @@ msgstr ""
 
 #: src/app/pages/home/webHostingSection.js:83
 #: src/app/pages/home/webHostingSection.js:89
-#: src/app/pages/home/webHostingSection.js:113
 msgid "Manage Email"
 msgstr ""
 
@@ -552,6 +551,7 @@ msgstr ""
 msgid "Find a new domain and assign it to your site or start a new site with a fresh domain."
 msgstr ""
 
+#: src/app/pages/home/webHostingSection.js:113
 #: src/app/pages/home/webHostingSection.js:119
 msgid "Find a Domain"
 msgstr ""
