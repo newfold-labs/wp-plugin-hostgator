@@ -110,7 +110,7 @@ const WebHostingSection = () => {
 								getLinkPerRegion(
 									'home_find_domain', 
 									null, 
-									__('Manage Email', 'wp-plugin-hostgator')
+									__('Find a Domain', 'wp-plugin-hostgator')
 								)
 							}
 							target="_blank"
