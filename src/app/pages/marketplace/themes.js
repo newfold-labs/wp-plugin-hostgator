@@ -1,5 +1,5 @@
 import { Heading, MarketplaceItem } from '../../components';
-import themes from '../../data/themes';
+import themes from '../../data/marketplace/themes';
 
 const Themes = () => {
 	return (

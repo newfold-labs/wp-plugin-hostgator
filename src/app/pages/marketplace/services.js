@@ -1,5 +1,5 @@
 import { Heading, MarketplaceItem } from '../../components';
-import services from '../../data/services';
+import services from '../../data/marketplace/services';
 
 const Services = () => {
 	return (

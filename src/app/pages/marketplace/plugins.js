@@ -1,5 +1,5 @@
 import { Heading, MarketplaceItem } from '../../components';
-import plugins from '../../data/plugins';
+import plugins from '../../data/marketplace/plugins';
 
 const Plugins = () => {
 	return (
