@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import apiFetch from '@wordpress/api-fetch';
 import { getJSONPathPerRegion } from '../../util/helpers';
-import { Heading, MarketplaceItem } from '../../components';
+import { Heading, ErrorCard, MarketplaceItem } from '../../components';
 
 const Plugins = () => {
 	const [plugins, setPlugins] = useState([]);
