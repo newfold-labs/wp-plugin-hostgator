@@ -5,15 +5,21 @@ import { Heading, MarketplaceItem } from '../../components';
 
 const Services = () => {
 	const [services, setServices] = useState([]);
+	const [isError, setError] = useState(false);
 	
 	useEffect(() => {
 		apiFetch({
 			url: getJSONPathPerRegion( 'services' )
 		}).then((response) => {
 			setServices(response);
+		}).catch((error) => {
+			setError(error);
 		});
 	}, []);
 
+	if (isError) {
+		return <ErrorCard error={isError} />;
+	}
 	return (
 		<div className="hgwp-services grid col2">
 			<Heading level="3" className="screen-reader-text">

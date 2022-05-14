@@ -2,20 +2,24 @@ import { useEffect } from 'react';
 import apiFetch from '@wordpress/api-fetch';
 import { getJSONPathPerRegion } from '../../util/helpers';
 import { Heading, MarketplaceItem } from '../../components';
- 
-// import plugins from '../../data/marketplace/plugins';
 
 const Plugins = () => {
 	const [plugins, setPlugins] = useState([]);
+	const [isError, setError] = useState(false);
 	
 	useEffect(() => {
 		apiFetch({
 			url: getJSONPathPerRegion( 'plugins' )
 		}).then((response) => {
 			setPlugins(response);
+		}).catch((error) => {
+			setError(error);
 		});
 	}, []);
 
+	if (isError) {
+		return <ErrorCard error={isError} />;
+	}
 	return (
 		<div className="hgwp-plugins grid col2">
 			<Heading level="3" className="screen-reader-text">

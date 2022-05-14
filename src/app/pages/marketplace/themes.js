@@ -1,19 +1,25 @@
-import { Heading, MarketplaceItem } from '../../components';
 import { useEffect } from 'react';
 import apiFetch from '@wordpress/api-fetch';
 import { getJSONPathPerRegion } from '../../util/helpers';
+import { Heading, MarketplaceItem } from '../../components';
 
 const Themes = () => {
 	const [themes, setThemes] = useState([]);
+	const [isError, setError] = useState(false);
 	
 	useEffect(() => {
 		apiFetch({
 			url: getJSONPathPerRegion( 'themes' )
 		}).then((response) => {
 			setThemes(response);
+		}).catch((error) => {
+			setError(error);
 		});
 	}, []);
 
+	if (isError) {
+		return <ErrorCard error={isError} />;
+	}
 	return (
 		<div className="hgwp-themes grid col2">
 			<Heading level="3" className="screen-reader-text">
