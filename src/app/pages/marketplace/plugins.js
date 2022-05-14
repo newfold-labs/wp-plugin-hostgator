@@ -17,14 +17,12 @@ const Plugins = () => {
 		});
 	}, []);
 
-	if (isError) {
-		return <ErrorCard error={isError} />;
-	}
 	return (
 		<div className="hgwp-plugins grid col2">
 			<Heading level="3" className="screen-reader-text">
 				{__('Plugins', 'wp-plugin-hostgator')}
 			</Heading>
+			{ isError && <ErrorCard error={isError} /> }
 			{plugins.map((item) => (
 				<MarketplaceItem key={item.url} item={item} />
 			))}

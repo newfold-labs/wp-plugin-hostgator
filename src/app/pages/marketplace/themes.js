@@ -17,14 +17,12 @@ const Themes = () => {
 		});
 	}, []);
 
-	if (isError) {
-		return <ErrorCard error={isError} />;
-	}
 	return (
 		<div className="hgwp-themes grid col2">
 			<Heading level="3" className="screen-reader-text">
 				{__('Themes', 'wp-plugin-hostgator')}
 			</Heading>
+			{ isError && <ErrorCard error={isError} /> }
 			{themes.map((item) => (
 				<MarketplaceItem key={item.url} item={item} />
 			))}
