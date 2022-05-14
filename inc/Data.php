@@ -28,6 +28,7 @@ final class Data {
 			'wpversion' => $wp_version,
 			'admin'     => \admin_url(),
 			'assets'    => HOSTGATOR_PLUGIN_URL . 'assets/',
+			'region'    => get_option('mm_brand', false)
 		);
 
 		return $runtime;

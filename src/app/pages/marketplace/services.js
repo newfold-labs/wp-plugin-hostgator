@@ -1,7 +1,19 @@
+import { useEffect } from 'react';
+import apiFetch from '@wordpress/api-fetch';
+import { getJSONPathPerRegion } from '../../util/helpers';
 import { Heading, MarketplaceItem } from '../../components';
-import services from '../../data/marketplace/services';
 
 const Services = () => {
+	const [services, setServices] = useState([]);
+	
+	useEffect(() => {
+		apiFetch({
+			url: getJSONPathPerRegion( 'services' )
+		}).then((response) => {
+			setServices(response);
+		});
+	}, []);
+
 	return (
 		<div className="hgwp-services grid col2">
 			<Heading level="3" className="screen-reader-text">

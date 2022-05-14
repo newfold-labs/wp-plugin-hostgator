@@ -1,0 +1,26 @@
+[
+    {
+        "name": "codeguard",
+        "title": "CodeGuard",
+        "description": "Protect your website with a daily, automatic backup!",
+        "cta": "Learn More",
+        "url": "https://www.hostgator.com/codeguard",
+        "img": "/images/services-codeguard.png"
+    },
+    {
+        "name": "ppc",
+        "title": "PPC Management",
+        "description": "PPC advertising can increase performance and drive more revenue!",
+        "cta": "Get More Leads",
+        "url": "https://www.hostgator.com/services/ppc",
+        "img": "/images/services-ppc.png"
+    },
+    {
+        "name": "webdesign",
+        "title": "Web Design Services",
+        "description": "Impress potential clients with a professionally-designed website!",
+        "cta": "Learn More",
+        "url": "https://www.hostgator.com/services/web-design",
+        "img": "/images/services-webdesign.png"
+    }
+]

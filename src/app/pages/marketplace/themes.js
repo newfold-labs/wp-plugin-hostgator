@@ -1,7 +1,19 @@
 import { Heading, MarketplaceItem } from '../../components';
-import themes from '../../data/marketplace/themes';
+import { useEffect } from 'react';
+import apiFetch from '@wordpress/api-fetch';
+import { getJSONPathPerRegion } from '../../util/helpers';
 
 const Themes = () => {
+	const [themes, setThemes] = useState([]);
+	
+	useEffect(() => {
+		apiFetch({
+			url: getJSONPathPerRegion( 'themes' )
+		}).then((response) => {
+			setThemes(response);
+		});
+	}, []);
+
 	return (
 		<div className="hgwp-themes grid col2">
 			<Heading level="3" className="screen-reader-text">

@@ -39,14 +39,11 @@ const region = {
     },
     help_phone_number: {
         default: 'tel:8669642867',
-        BR: 'false',
-        MX: false,
-        CL: false,
-        CO: false,
+        BR: 'false', // a string false value will remove this section
     },
     help_chat: {
         default: 'https://helpchat.hostgator.com/',
-        BR: 'https://financeiro.hostgator.com.br/chat/?country=br&department=technical', // Needs to be open in a popup, not new tab
+        BR: 'https://financeiro.hostgator.com.br/chat/?country=br&department=technical', // ideally to be open in a popup, not new tab
     },
     help_twitter: {
         default: 'https://twitter.com/hgsupport',

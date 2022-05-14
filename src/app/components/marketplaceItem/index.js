@@ -9,11 +9,15 @@ import {
 } from '@wordpress/components';
 
 const MarketplaceItem = ({ item }) => {
+	let imgpath = false;
+	if ( item.img ) {
+		imgpath = item.img.startsWith('http') ? item.img : window.HGWP.assets + item.img;
+	}
 	return (
 		<Card className={`marketplace-item-${item.name}`}>
-			{item.img && (
+			{imgpath && (
 				<CardMedia>
-					<img src={item.img} alt={item.title + ' thumbnail'} />
+					<img src={imgpath} alt={item.title + ' thumbnail'} />
 				</CardMedia>
 			)}
 			<CardHeader>

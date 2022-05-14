@@ -48,8 +48,7 @@ const WebHostingSection = () => {
 							variant="primary"
 							href={
 								getLinkPerRegion(
-									'home_manage_sites', 
-									null, 
+									'home_manage_sites',
 									__('Manage Sites', 'wp-plugin-hostgator')
 								)
 							}
@@ -78,8 +77,7 @@ const WebHostingSection = () => {
 							variant="primary"
 							href={
 								getLinkPerRegion(
-									'home_manage_email', 
-									null, 
+									'home_manage_email',
 									__('Manage Email', 'wp-plugin-hostgator')
 								)
 							}
@@ -108,8 +106,7 @@ const WebHostingSection = () => {
 							variant="secondary"
 							href={
 								getLinkPerRegion(
-									'home_find_domain', 
-									null, 
+									'home_find_domain',
 									__('Find a Domain', 'wp-plugin-hostgator')
 								)
 							}

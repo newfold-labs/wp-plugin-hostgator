@@ -134,14 +134,49 @@ export const comingSoonAdminbarToggle = (comingSoon) => {
 };
 
 /**
+ * Get the current region value
+ * @returns string - 2 char country code for region - or empty string for default region
+ */
+export const getRegionValue = () => {
+	// region comes form mm_brand value?
+	switch ( window.HGWP.region ) {
+		case 'BR':
+			return window.HGWP.region;
+			break;
+		case 'MX':
+		case 'CO':
+		case 'CL':
+		case false:
+		default:
+			return '';
+	}
+};
+
+/**
+ * Get region specific path to marketplace items
+ * @param {*} bucket specify type of markeplace listings: plugins, themes, or services
+ * @returns 
+ */
+export const getJSONPathPerRegion = ( bucket ) => {
+	let path = window.HGWP.assets + 'json/marketplace/';
+	let region_code = getRegionValue();
+	if ( region_code !== '' ) {
+		path += region_code + '/';
+	}
+	path += bucket + '.json';
+	return path;
+};
+
+/**
  * Get region specific link value
  * 
  * @param {*} link_name - name for link in regions object
  * @param {*} region_code  - region code for reference
  * @returns region specific href value for specified link or default
  */
- export const getLinkPerRegion = (link_name = 'main', region_code = 'default', link_text) => {
-	
+export const getLinkPerRegion = (link_name = 'main', link_text) => {
+	let region_code = getRegionValue();
+
 	// ensure there's a link value match
 	if ( region[link_name] && region[link_name][region_code] ) {
 		// automatically add utm params
@@ -166,14 +201,14 @@ export const comingSoonAdminbarToggle = (comingSoon) => {
  * @param {*} region_code  - region code for reference
  * @returns boolean value of whether the region link is present or missing, or is false
  */
-export const supportsLinkPerRegion = (link_name = 'main', region_code = 'default') => {
-	
+export const supportsLinkPerRegion = (link_name = 'main') => {
+	let region_code = getRegionValue();
 	// ensure there's a link value to check
 	if ( region[link_name] && region[link_name][region_code] ) {
 		// if value exists return true - unless value itself is false, then return false
 		return region[link_name][region_code] !== 'false';
 	} else {
-		// if no match, we'll return default which
+		// if no match, we'll return default
 		return true;
 	}
 

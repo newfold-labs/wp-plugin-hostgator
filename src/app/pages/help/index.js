@@ -33,7 +33,7 @@ const Help = () => {
 						<CardFooter>
 							<Button
 								variant="primary"
-								href={ getLinkPerRegion( item.url, null, item.cta ) }
+								href={ getLinkPerRegion( item.url, item.cta ) }
 								target="_blank"
 								icon={<Dashicon icon={item.icon} />}
 							>
