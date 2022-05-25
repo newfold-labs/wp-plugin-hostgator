@@ -168,7 +168,11 @@ final class Admin {
 		}
 	}
 
-	
+	/**
+	 * Load text domain for plugin
+	 *
+	 * @return void
+	 */
 	public static function load_text_domain() {
 
 		\load_plugin_textdomain(
