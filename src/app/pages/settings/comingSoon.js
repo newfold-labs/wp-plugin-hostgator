@@ -21,20 +21,28 @@ const ComingSoon = () => {
 	const [isError, setError] = useState(false);
 
 	const getComingSoonNoticeText = () => {
-		return comingSoon
-			? __('Coming soon activated.', 'wp-plugin-hostgator')
-			: __('Coming soon deactivated.', 'wp-plugin-hostgator');
+		/* array of text values - helps build step not obfuscate i18n
+			text[0] - text when value is false
+			text[1] - text when value is true
+		*/
+		const text = [
+			__('Coming soon activated.', 'wp-plugin-hostgator'),
+			__('Coming soon deactivated.', 'wp-plugin-hostgator'),
+		];
+		return text[comingSoon ? 1 : 0];
 	};
 	const getComingSoonHelpText = () => {
-		return comingSoon
-			? __(
-					'Coming soon page is active and site is protected.',
-					'wp-plugin-hostgator'
-			  )
-			: __(
-					'Coming soon page is not active and site is acessible.',
-					'wp-plugin-hostgator'
-			  );
+		const text = [
+			__(
+				'Coming soon page is not active and site is acessible.',
+				'wp-plugin-hostgator'
+			),
+			__(
+				'Coming soon page is active and site is protected.',
+				'wp-plugin-hostgator'
+			),
+		];
+		return text[comingSoon ? 1 : 0];
 	};
 
 	useUpdateEffect(() => {

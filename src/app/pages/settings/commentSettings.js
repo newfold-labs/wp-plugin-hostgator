@@ -30,14 +30,22 @@ const CommentSettings = () => {
 	const [isError, setError] = useState(false);
 
 	const disableCommentsHelpText = () => {
-		return disableCommentsOldPosts
-			? __('Comments on old posts are disabled.', 'wp-plugin-hostgator')
-			: __('Comments are allowed on old posts.', 'wp-plugin-hostgator');
+		/* array of text values - helps build step not obfuscate i18n
+			text[0] - text when value is false
+			text[1] - text when value is true
+		*/
+		const text = [
+			__('Comments are allowed on old posts.', 'wp-plugin-hostgator'),
+			__('Comments on old posts are disabled.', 'wp-plugin-hostgator'),
+		];
+		return text[disableCommentsOldPosts ? 1 : 0];
 	};
 	const disableCommentsNoticeText = () => {
-		return disableCommentsOldPosts
-			? __('Old post comments disabled.', 'wp-plugin-hostgator')
-			: __('Old post comments enabled.', 'wp-plugin-hostgator');
+		const text = [
+			__('Old post comments enabled.', 'wp-plugin-hostgator'),
+			__('Old post comments disabled.', 'wp-plugin-hostgator'),
+		];
+		return text[disableCommentsOldPosts ? 1 : 0];
 	};
 	const closeCommentsLabelText = () => {
 		// `Close comments after ${closeCommentsDays} day(s)`

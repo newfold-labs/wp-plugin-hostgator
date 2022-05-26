@@ -23,20 +23,28 @@ const ComingSoonSection = () => {
 	const [wasComingSoon, setWasComingSoon] = useState(false);
 
 	const getComingSoonHeadline = () => {
-		return comingSoon
-			? __('Coming Soon', 'wp-plugin-hostgator')
-			: __('Site Launched!', 'wp-plugin-hostgator');
+		/* array of text values - helps build step not obfuscate i18n
+			text[0] - text when value is false
+			text[1] - text when value is true
+		*/
+		const text = [
+			__('Site Launched!', 'wp-plugin-hostgator'),
+			__('Coming Soon', 'wp-plugin-hostgator'),
+		];
+		return text[comingSoon ? 1 : 0];
 	};
 	const getComingSoonBody = () => {
-		return comingSoon
-			? __(
-					'Your site currently displays a coming soon page to visitors. Once you have finished setting up your site, be sure to launch it so your visitors can reach it.',
-					'wp-plugin-hostgator'
-			  )
-			: __(
-					'Congratulations! You just successfully launched your site! Visitors will now see the site, you can easily undo this and restore the coming soon page if you are not ready.',
-					'wp-plugin-hostgator'
-			  );
+		const text = [
+			__(
+				'Congratulations! You just successfully launched your site! Visitors will now see the site, you can easily undo this and restore the coming soon page if you are not ready.',
+				'wp-plugin-hostgator'
+			),
+			__(
+				'Your site currently displays a coming soon page to visitors. Once you have finished setting up your site, be sure to launch it so your visitors can reach it.',
+				'wp-plugin-hostgator'
+			),
+		];
+		return text[comingSoon ? 1 : 0];
 	};
 	const getComingSoonGraphicClass = () => {
 		return comingSoon ? 'section-graphic' : 'section-graphic reverse';
@@ -78,9 +86,11 @@ const ComingSoonSection = () => {
 		);
 	};
 	const getComingSoonNoticeText = () => {
-		return comingSoon
-			? __('Coming soon activated.', 'wp-plugin-hostgator')
-			: __('Coming soon deactivated.', 'wp-plugin-hostgator');
+		const text = [
+			__('Coming soon deactivated.', 'wp-plugin-hostgator'),
+			__('Coming soon activated.', 'wp-plugin-hostgator'),
+		];
+		return text[comingSoon ? 1 : 0];
 	};
 
 	useUpdateEffect(() => {

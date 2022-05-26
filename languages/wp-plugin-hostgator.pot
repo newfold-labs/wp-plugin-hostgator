@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-05-25T21:34:49+00:00\n"
+"POT-Creation-Date: 2022-05-26T18:50:32+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: wp-plugin-hostgator\n"
@@ -267,6 +267,30 @@ msgid "There's nothing here!"
 msgstr ""
 
 #: build/1.1.0/index.js:1
+msgid "Coming soon deactivated."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Coming soon activated."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Site Launched!"
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Coming Soon"
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Congratulations! You just successfully launched your site! Visitors will now see the site, you can easily undo this and restore the coming soon page if you are not ready."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Your site currently displays a coming soon page to visitors. Once you have finished setting up your site, be sure to launch it so your visitors can reach it."
+msgstr ""
+
+#: build/1.1.0/index.js:1
 msgid "Launch Site"
 msgstr ""
 
@@ -463,6 +487,22 @@ msgid "Recommended for portfolios, brochure sites, and sites that update monthly
 msgstr ""
 
 #: build/1.1.0/index.js:1
+msgid "Caching disabled."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Cache enabled for assets only."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Cache enabled for assets and pages."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Cache enabled for assets and pages (extended)."
+msgstr ""
+
+#: build/1.1.0/index.js:1
 msgid "Cache Level"
 msgstr ""
 
@@ -491,6 +531,38 @@ msgid "Performance illustration"
 msgstr ""
 
 #: build/1.1.0/index.js:1
+msgid "Custom auto-update settings."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Everything will auto-update."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Core will not auto-update."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Core will auto-update."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Plugins will not auto-update."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Plugins will auto-update."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Theme will not auto-update."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Themes will auto-update."
+msgstr ""
+
+#: build/1.1.0/index.js:1
 msgid "Automatic Updates"
 msgstr ""
 
@@ -503,15 +575,51 @@ msgid "Everything"
 msgstr ""
 
 #: build/1.1.0/index.js:1
+msgid "Custom automatic update settings."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Yay! Everything will automatically update."
+msgstr ""
+
+#: build/1.1.0/index.js:1
 msgid "Core"
 msgstr ""
 
 #: build/1.1.0/index.js:1
-msgid "Coming Soon"
+msgid "WordPress must be manually updated."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "WordPress will automatically update."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Each plugin must be manually updated."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "All plugins will automatically update."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Each theme must be manually updated."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "All themes will automatically update."
 msgstr ""
 
 #: build/1.1.0/index.js:1
 msgid "Not ready for your site to be live? Enable a \"Coming Soon\" page while you build your website for the public eye. This will disable all parts of your site and show visitors a \"coming soon\" landing page."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Coming soon page is not active and site is acessible."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Coming soon page is active and site is protected."
 msgstr ""
 
 #: build/1.1.0/index.js:1
@@ -520,6 +628,14 @@ msgstr ""
 
 #: build/1.1.0/index.js:1
 msgid "First, activate the \"Jetpack\" plugin, connect your site, and enable the \"Subscriptions\" module. Then, users can subscribe to be notified when you launch and publish new content."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Old post comments enabled."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Old post comments disabled."
 msgstr ""
 
 #: build/1.1.0/index.js:1
@@ -546,6 +662,14 @@ msgstr ""
 
 #: build/1.1.0/index.js:1
 msgid "Disable comments for older posts"
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Comments are allowed on old posts."
+msgstr ""
+
+#: build/1.1.0/index.js:1
+msgid "Comments on old posts are disabled."
 msgstr ""
 
 #: build/1.1.0/index.js:1
