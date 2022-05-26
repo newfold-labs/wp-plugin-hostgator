@@ -28,7 +28,8 @@ final class Data {
 			'wpversion' => $wp_version,
 			'admin'     => \admin_url(),
 			'assets'    => HOSTGATOR_PLUGIN_URL . 'assets/',
-			'region'    => get_option( 'mm_brand', false ),
+			'brand'     => get_option( 'mm_brand', false ),
+			'region'    => get_option( 'hg_region', false ),
 		);
 
 		return $runtime;

@@ -138,7 +138,11 @@ export const comingSoonAdminbarToggle = (comingSoon) => {
  * @returns string - 2 char country code for region - or empty string for default region
  */
 export const getRegionValue = () => {
-	// region comes form mm_brand value?
+	// bail if not hostgator-latam brand
+	if ( window.HGWP.brand !== 'hostgator-latam' ){
+		return '';
+	}
+	// qualify region setting and return region code
 	switch ( window.HGWP.region ) {
 		case 'BR':
 			return window.HGWP.region;
