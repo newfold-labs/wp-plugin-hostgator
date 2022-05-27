@@ -26,8 +26,8 @@ const ComingSoon = () => {
 			text[1] - text when value is true
 		*/
 		const text = [
-			__('Coming soon activated.', 'wp-plugin-hostgator'),
 			__('Coming soon deactivated.', 'wp-plugin-hostgator'),
+			__('Coming soon activated.', 'wp-plugin-hostgator'),
 		];
 		return text[comingSoon ? 1 : 0];
 	};
