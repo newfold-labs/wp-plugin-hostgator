@@ -40,7 +40,7 @@
         "php-deps": "composer install --no-dev --optimize-autoloader",
         "create:zip": "cd ./wp-plugin-hostgator && zip -r -9 ../wp-plugin-hostgator.zip . && ls -lh ../wp-plugin-hostgator.zip",
         "prebuild:cleanup": "rm -rf ./build ./wp-plugin-hostgator ./wp-plugin-hostgator.zip ./vendor",
-        "simulate-runner-build": "npm run prebuild:cleanup && npm i && npm run build && npm run php-deps && npm run create:dist && npm run create:zip",
+        "simulate-runner-build": "npm run prebuild:cleanup && npm i && npm run php-deps && npm run build && npm run create:dist && npm run create:zip",
         "srb": "npm run simulate-runner-build"
     },
     "dependencies": {
