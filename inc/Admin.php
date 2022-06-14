@@ -20,6 +20,8 @@ final class Admin {
 		\add_action( 'admin_menu', array( __CLASS__, 'page' ) );
 		/* Load Page Scripts & Styles. */
 		\add_action( 'load-toplevel_page_hostgator', array( __CLASS__, 'assets' ) );
+		/* Load i18 files */
+		\add_action( 'init', array( __CLASS__, 'load_text_domain' ), 100 );
 		/* Add Links to WordPress Plugins list item. */
 		\add_filter( 'plugin_action_links_wp-plugin-hostgator/wp-plugin-hostgator.php', array( __CLASS__, 'actions' ) );
 		/* Add inline style to hide subnav link */
@@ -139,6 +141,12 @@ final class Admin {
 			true
 		);
 
+		\wp_set_script_translations(
+			'hostgator-script',
+			'wp-plugin-hostgator',
+			HOSTGATOR_PLUGIN_DIR . '/languages'
+		);
+
 		include HOSTGATOR_PLUGIN_DIR . '/inc/Data.php';
 		\wp_add_inline_script(
 			'hostgator-script',
@@ -158,6 +166,20 @@ final class Admin {
 			\wp_enqueue_script( 'hostgator-script' );
 			\wp_enqueue_style( 'hostgator-style' );
 		}
+	}
+
+	/**
+	 * Load text domain for plugin
+	 *
+	 * @return void
+	 */
+	public static function load_text_domain() {
+
+		\load_plugin_textdomain(
+			'wp-plugin-hostgator',
+			false,
+			HOSTGATOR_PLUGIN_DIR . '/languages'
+		);
 	}
 
 	/**

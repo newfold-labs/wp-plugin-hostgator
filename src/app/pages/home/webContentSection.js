@@ -25,7 +25,7 @@ const WebContentSection = () => {
 					<p>
 						{__(
 							'Create, manage & sort your story.',
-							'wp-plugin-web'
+							'wp-plugin-hostgator'
 						)}
 					</p>
 				</CardHeader>

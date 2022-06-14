@@ -1,5 +1,7 @@
+import { addQueryArgs } from '@wordpress/url';
 import { dispatch } from '@wordpress/data';
 import apiFetch from '@wordpress/api-fetch';
+import region from '../data/region';
 
 let lastNoticeId;
 const HG_NAV = document.querySelector('#toplevel_page_hostgator .wp-submenu');
@@ -129,4 +131,107 @@ export const comingSoonAdminbarToggle = (comingSoon) => {
 	} else {
 		comingsoonadminbar.classList.remove('hideme');
 	}
+};
+
+/**
+ * Get the current region value
+ * @returns string - 2 char country code for region - or empty string for default region
+ */
+export const getRegionValue = () => {
+	// bail if not hostgator-latam brand
+	if ( window.HGWP.brand !== 'hostgator-latam' ){
+		return '';
+	}
+	// qualify region setting and return region code
+	switch ( window.HGWP.region ) {
+		case 'BR':
+			return window.HGWP.region;
+			break;
+		case 'MX':
+		case 'CO':
+		case 'CL':
+		case false:
+		default:
+			return '';
+	}
+};
+
+/**
+ * Get region specific path to marketplace items
+ * @param {*} bucket specify type of markeplace listings: plugins, themes, or services
+ * @returns 
+ */
+export const getJSONPathPerRegion = ( bucket ) => {
+	let path = window.HGWP.assets + 'json/marketplace/';
+	let region_code = getRegionValue();
+	if ( region_code !== '' ) {
+		path += region_code + '/';
+	}
+	path += bucket + '.json';
+	return path;
+};
+
+/**
+ * Get region specific link value
+ * 
+ * @param {*} link_name - name for link in regions object
+ * @param {*} region_code  - region code for reference
+ * @returns region specific href value for specified link or default
+ */
+export const getLinkPerRegion = (link_name = 'main', link_text) => {
+	let region_code = getRegionValue();
+
+	// ensure there's a link value match
+	if ( region[link_name] && region[link_name][region_code] ) {
+		// automatically add utm params
+		return addUtmParams( region[link_name][region_code], {
+			utm_term: link_text,
+			utm_content: link_name
+		});
+	} else {
+		// if no match return default and automatically add utm params
+		return addUtmParams( region[link_name]['default'], {
+			utm_term: link_text,
+			utm_content: link_name
+		});
+	}
+
+};
+
+/**
+ * Supports or can get region specific link value
+ * 
+ * @param {*} link_name - name for link in regions object
+ * @param {*} region_code  - region code for reference
+ * @returns boolean value of whether the region link is present or missing, or is false
+ */
+export const supportsLinkPerRegion = (link_name = 'main') => {
+	let region_code = getRegionValue();
+	// ensure there's a link value to check
+	if ( region[link_name] && region[link_name][region_code] ) {
+		// if value exists return true - unless value itself is false, then return false
+		return region[link_name][region_code] !== 'false';
+	} else {
+		// if no match, we'll return default
+		return true;
+	}
+
+};
+
+/**
+ * Decorates an external link URL with UTM params.
+ *
+ * The utm_term, if passed, should be the link anchor text.
+ * The utm_content, if passed, should be the unique identifier for the link.
+ * The utm_campaign is optional and reserved for special occasions.
+ *
+ * @param {string} url The original URL.
+ * @param {Object} params The URL parameters to add.
+ *
+ * @return {string} The new URL.
+ */
+ export const addUtmParams = (url, params = {})  => {
+	params.utm_source = `wp-admin/admin.php?page=hostgator${ window.location.hash }`;
+	params.utm_medium = 'hostgator_plugin';
+	return addQueryArgs(url, params);
 };

@@ -1,6 +1,8 @@
 import './stylesheet.scss';
 import { Heading } from '../../components';
 import help from '../../data/help';
+import { getLinkPerRegion, supportsLinkPerRegion } from '../../util/helpers';
+
 import {
 	Button,
 	Card,
@@ -15,6 +17,7 @@ const Help = () => {
 		<div className="hgwp-help">
 			<div className="help grid col3">
 				{help.map((item) => (
+					supportsLinkPerRegion( item.url ) &&
 					<Card
 						size="small"
 						className={`card-help card-help-${item.name}`}
@@ -30,7 +33,7 @@ const Help = () => {
 						<CardFooter>
 							<Button
 								variant="primary"
-								href={item.url}
+								href={ getLinkPerRegion( item.url, item.cta ) }
 								target="_blank"
 								icon={<Dashicon icon={item.icon} />}
 							>

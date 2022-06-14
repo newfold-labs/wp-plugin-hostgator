@@ -36,53 +36,74 @@ const AutomaticUpdates = () => {
 	const [isError, setError] = useState(false);
 
 	const getAllNoticeText = () => {
-		return autoUpdatesAll
-			? __('Everything will auto-update.', 'wp-plugin-hostgator')
-			: __('Custom auto-update settings.', 'wp-plugin-hostgator');
+		/* array of text values - helps build step not obfuscate i18n
+			text[0] - text when value is false
+			text[1] - text when value is true
+		*/
+		const text = [
+			__('Custom auto-update settings.', 'wp-plugin-hostgator'),
+			__('Everything will auto-update.', 'wp-plugin-hostgator'),
+		];
+		// caste
+		return text[autoUpdatesAll ? 1 : 0];
 	};
 	const getAllHelpText = () => {
-		return autoUpdatesAll
-			? __(
-					'Yay! Everything will automatically update.',
-					'wp-plugin-hostgator'
-			  )
-			: __('Custom automatic update settings.', 'wp-plugin-hostgator');
+		const text = [
+			__('Custom automatic update settings.', 'wp-plugin-hostgator'),
+			__(
+				'Yay! Everything will automatically update.',
+				'wp-plugin-hostgator'
+			),
+		];
+		return text[autoUpdatesAll ? 1 : 0];
 	};
 	const getCoreNoticeText = () => {
-		return autoUpdatesMajorCore
-			? __('Core will auto-update.', 'wp-plugin-hostgator')
-			: __('Core will not auto-update.', 'wp-plugin-hostgator');
+		const text = [
+			__('Core will not auto-update.', 'wp-plugin-hostgator'),
+			__('Core will auto-update.', 'wp-plugin-hostgator'),
+		];
+		return text[autoUpdatesMajorCore ? 1 : 0];
 	};
 	const getCoreHelpText = () => {
-		return autoUpdatesMajorCore
-			? __('WordPress will automatically update.', 'wp-plugin-hostgator')
-			: __('WordPress must be manually updated.', 'wp-plugin-hostgator');
+		const text = [
+			__('WordPress must be manually updated.', 'wp-plugin-hostgator'),
+			__('WordPress will automatically update.', 'wp-plugin-hostgator'),
+		];
+		return text[autoUpdatesMajorCore ? 1 : 0];
 	};
 	const getPluginsNoticeText = () => {
-		return autoUpdatesPlugins
-			? __('Plugins will auto-update.', 'wp-plugin-hostgator')
-			: __('Plugins will not auto-update.', 'wp-plugin-hostgator');
+		const text = [
+			__('Plugins will not auto-update.', 'wp-plugin-hostgator'),
+			__('Plugins will auto-update.', 'wp-plugin-hostgator'),
+		];
+		return text[autoUpdatesPlugins ? 1 : 0];
 	};
 	const getPluginsHelpText = () => {
-		return autoUpdatesPlugins
-			? __(
-					'All plugins will automatically update.',
-					'wp-plugin-hostgator'
-			  )
-			: __(
-					'Each plugin must be manually updated.',
-					'wp-plugin-hostgator'
-			  );
+		const text = [
+			__(
+				'Each plugin must be manually updated.',
+				'wp-plugin-hostgator'
+			),
+			__(
+				'All plugins will automatically update.',
+				'wp-plugin-hostgator'
+			),
+		];
+		return text[autoUpdatesPlugins ? 1 : 0];
 	};
 	const getThemesNoticeText = () => {
-		return autoUpdatesThemes
-			? __('Themes will auto-update.', 'wp-plugin-hostgator')
-			: __('Theme will not auto-update.', 'wp-plugin-hostgator');
+		const text = [
+			__('Theme will not auto-update.', 'wp-plugin-hostgator'),
+			__('Themes will auto-update.', 'wp-plugin-hostgator'),
+		];
+		return text[autoUpdatesThemes ? 1 : 0];
 	};
 	const getThemesHelpText = () => {
-		return autoUpdatesThemes
-			? __('All themes will automatically update.', 'wp-plugin-hostgator')
-			: __('Each theme must be manually updated.', 'wp-plugin-hostgator');
+		const text = [
+			__('Each theme must be manually updated.', 'wp-plugin-hostgator'),
+			__('All themes will automatically update.', 'wp-plugin-hostgator'),
+		];
+		return text[autoUpdatesThemes ? 1 : 0];
 	};
 
 	useEffect(() => {

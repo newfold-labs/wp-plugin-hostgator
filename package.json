@@ -2,18 +2,20 @@
     "name": "wp-plugin-hostgator",
     "description": "WordPress plugin that integrates your WordPress site with the HostGator control panel, including performance, security, and update features.",
     "license": "GPL-2.0-or-later",
-    "version": "1.0.3",
+    "version": "1.1.1",
     "private": true,
     "author": {
         "name": "Evan Mullins",
         "email": "evanrm@gmail.com"
     },
     "devDependencies": {
+        "@automattic/babel-plugin-preserve-i18n": "^1.0.0",
         "@testing-library/cypress": "^7.0.6",
         "@wordpress/env": "^4.1.3",
         "@wordpress/scripts": "^19.2.2",
         "cypress": "^9.5.0",
-        "cypress-axe": "^0.12.2"
+        "cypress-axe": "^0.12.2",
+        "node-wp-i18n": "^1.2.6"
     },
     "scripts": {
         "build": "wp-scripts build",
@@ -28,17 +30,22 @@
         "lint:pkg-json": "wp-scripts lint-pkg-json",
         "lint:yml": "yamllint --ignore=node_modules/** --ignore=vendor/** **/*.yml",
         "i18n": "wpi18n addtextdomain && composer run i18n",
+        "i18n-pot": "wpi18n make-pot . languages/wp-plugin-hostgator.pot --exclude=assets,storybook,tests,src,wp-plugin-hostgator",
+        "i18n-mo": "cd languages && for file in `find . -name \"*.po\"` ; do msgfmt -o ${file/.po/.mo} $file ; done",
+        "i18n-json": "wpi18n make-json languages/ --no-purge",
+        "i18n-json-rename": "cd languages && renamer '/wp-plugin-hostgator-[a-zA-Z_]+-[^\\.]*\\.json/' replace '/$1hostgator-script$2/'",
         "start": "NODE_ENV=develop wp-scripts start",
         "start:analyzer": "npm run start --webpack-bundle-analyzer",
         "storybook:dev": "start-storybook -c ./storybook",
         "storybook:build": "build-storybook -c ./storybook -o ./.docs",
         "test:e2e": "npx cypress run",
         "test:unit": "wp-scripts test-unit-js",
-        "create:dist": "rsync -r --exclude-from=.distignore . ./wp-plugin-hostgator",
+        "create:dist": "rsync -r --exclude-from=.distignore --include-from=.distinclude . ./wp-plugin-hostgator",
         "php-deps": "composer install --no-dev --optimize-autoloader",
         "create:zip": "cd ./wp-plugin-hostgator && zip -r -9 ../wp-plugin-hostgator.zip . && ls -lh ../wp-plugin-hostgator.zip",
         "prebuild:cleanup": "rm -rf ./build ./wp-plugin-hostgator ./wp-plugin-hostgator.zip ./vendor",
-        "simulate-runner-build": "npm run prebuild:cleanup && npm i && npm run build && npm run php-deps && npm run create:dist && npm run create:zip"
+        "simulate-runner-build": "npm run prebuild:cleanup && npm i && npm run php-deps && npm run build && npm run create:dist && npm run create:zip",
+        "srb": "npm run simulate-runner-build"
     },
     "dependencies": {
         "@wordpress/a11y": "^2.5.1",

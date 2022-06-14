@@ -30,7 +30,6 @@ const CacheSettings = () => {
 				</span>
 			),
 			value: 0,
-			notice: 'Caching disabled.',
 		},
 		{
 			label: (
@@ -51,7 +50,6 @@ const CacheSettings = () => {
 				</span>
 			),
 			value: 1,
-			notice: 'Cache enabled for assets only.',
 		},
 		{
 			label: (
@@ -74,7 +72,6 @@ const CacheSettings = () => {
 				</span>
 			),
 			value: 2,
-			notice: 'Cache enabled for assets and pages.',
 		},
 		{
 			label: (
@@ -100,12 +97,19 @@ const CacheSettings = () => {
 				</span>
 			),
 			value: 3,
-			notice: 'Cache enabled for assets and pages (extended).',
 		},
 	];
 
 	const getCacheLevelNoticeText = () => {
-		return cacheOptions[cacheLevel].notice;
+		/* array of text values - helps build step not obfuscate i18n
+		*/
+		const text = [
+			__('Caching disabled.', 'wp-plugin-hostgator'),
+			__('Cache enabled for assets only.', 'wp-plugin-hostgator'),
+			__('Cache enabled for assets and pages.', 'wp-plugin-hostgator'),
+			__('Cache enabled for assets and pages (extended).', 'wp-plugin-hostgator'),
+		];
+		return text[cacheLevel];
 	};
 
 	useUpdateEffect(() => {
