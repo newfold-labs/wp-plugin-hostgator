@@ -11,7 +11,7 @@
  * Plugin Name:       HostGator
  * Plugin URI:        https://hostgator.com
  * Description:       WordPress plugin that integrates a WordPress site with the HostGator control panel, including performance, security, and update features.
- * Version:           1.1.1
+ * Version:           1.2.0
  * Requires at least: 4.7
  * Requires PHP:      5.6
  * Tested up to:      5.9
@@ -31,12 +31,12 @@ if ( defined( 'HOSTGATOR_PLUGIN_VERSION' ) ) {
 }
 
 // Define constants
-define( 'HOSTGATOR_PLUGIN_VERSION', '1.1.1' );
+define( 'HOSTGATOR_PLUGIN_VERSION', '1.2.0' );
 define( 'HOSTGATOR_PLUGIN_FILE', __FILE__ );
 define( 'HOSTGATOR_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'HOSTGATOR_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-if ( ! defined( 'BH_HUB_URL' ) ) {
-	define( 'BH_HUB_URL', 'https://hiive.cloud/api' );
+if ( ! defined( 'NFD_HIIVE_URL' ) ) {
+	define( 'NFD_HIIVE_URL', 'https://hiive.cloud/api' );
 }
 
 define( 'HOSTGATOR_BUILD_DIR', HOSTGATOR_PLUGIN_DIR . 'build/' . HOSTGATOR_PLUGIN_VERSION );
