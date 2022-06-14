@@ -1,8 +1,8 @@
 <?php
 /**
- * Handle updates for version 0.9.1
+ * Handle updates for version 1.0.3
  *
- * Sync the plugin's auto-update settings with the new, WordPress Core options.
+ * Update the plugin legacy coming soon option.
  *
  * @package HostGatorWordPressPlugin
  */
