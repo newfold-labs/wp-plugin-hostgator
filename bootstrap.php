@@ -25,7 +25,7 @@ if ( is_readable( __DIR__ . '/vendor/autoload.php' ) ) {
 
 
 /*
- * Initialize coming soon module via container
+ * Initialize data module via container
  */
 $nfd_module_container = new Container();
 // Set plugin to container
@@ -79,7 +79,7 @@ $nfd_module_container->set(
 );
 setContainer( $nfd_module_container );
 
-
+// Set up the updater endpoint and map values
 $updateurl     = 'https://hiive.cloud/workers/release-api/plugins/newfold-labs/wp-plugin-hostgator'; // Custom API GET endpoint
 $pluginUpdater = new PluginUpdater( HOSTGATOR_PLUGIN_FILE, $updateurl );
 $pluginUpdater->setDataMap(
