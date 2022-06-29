@@ -51,10 +51,9 @@
         "i18n": "Generate a .pot file for translation."
     },
     "require": {
-        "bluehost/endurance-wp-module-loader": "^1.1",
-        "endurance/wp-module-data": "^1.8.3",
-        "newfold-labs/wp-module-loader": "^1.0",
         "newfold-labs/wp-module-coming-soon": "^1.0.7",
+        "newfold-labs/wp-module-data": "^2.0",
+        "newfold-labs/wp-module-loader": "^1.0",
         "wp-forge/wp-update-handler": "^1.0"
     }
 }
