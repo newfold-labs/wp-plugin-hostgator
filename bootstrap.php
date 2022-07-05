@@ -42,6 +42,14 @@ $nfd_module_container->set(
 		}
 	)
 );
+// Set brand and region to container
+if ( get_option( 'mm_brand', false ) ) {
+	$nfd_module_container->set( 'brand', get_option( 'mm_brand' ) );
+
+	if ( get_option( 'hg_region', false ) ) {
+		$nfd_module_container->set( 'region', get_option( 'hg_region' ) );
+	}
+}
 
 // Set coming soon values
 $nfd_module_container->set(
