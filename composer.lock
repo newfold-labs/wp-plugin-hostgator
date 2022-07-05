@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6f48329db5bb05c1b33405c0daaf9c11",
+    "content-hash": "4a712aec921eb0a265eed7d3da8ff5ff",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -245,16 +245,16 @@
         },
         {
             "name": "newfold-labs/wp-module-marketplace",
-            "version": "1.1.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-marketplace.git",
-                "reference": "4d2360a26db4ffeb8e0d1434571dc7a8178b22bc"
+                "reference": "874347ae163d1c9a52cdc9d83c01fe8cddc8a036"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-marketplace/zipball/4d2360a26db4ffeb8e0d1434571dc7a8178b22bc",
-                "reference": "4d2360a26db4ffeb8e0d1434571dc7a8178b22bc",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-marketplace/zipball/874347ae163d1c9a52cdc9d83c01fe8cddc8a036",
+                "reference": "874347ae163d1c9a52cdc9d83c01fe8cddc8a036",
                 "shasum": ""
             },
             "require": {
@@ -284,10 +284,10 @@
             ],
             "description": "A module for rendering product data and interacting with the Hiive marketplace API.",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-marketplace/tree/1.1.0",
+                "source": "https://github.com/newfold-labs/wp-module-marketplace/tree/1.2.1",
                 "issues": "https://github.com/newfold-labs/wp-module-marketplace/issues"
             },
-            "time": "2022-06-29T14:24:15+00:00"
+            "time": "2022-07-05T19:34:02+00:00"
         },
         {
             "name": "psr/container",
