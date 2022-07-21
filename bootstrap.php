@@ -42,13 +42,13 @@ $nfd_module_container->set(
 		}
 	)
 );
-// Set brand and region to container
-if ( get_option( 'mm_brand', false ) ) {
-	$nfd_module_container->set( 'brand', get_option( 'mm_brand' ) );
 
-	if ( get_option( 'hg_region', false ) ) {
-		$nfd_module_container->set( 'region', get_option( 'hg_region' ) );
-	}
+// Set marketplace brand from mm_brand and hg_region values in container
+if ( get_option( 'mm_brand', false ) && get_option( 'hg_region', false ) ) {
+	$nfd_module_container->set(
+		'marketplace_brand',
+		get_option( 'mm_brand', false ) . '_' . get_option( 'hg_region', false )
+	);
 }
 
 // Set coming soon values
