@@ -1,0 +1,525 @@
+{
+    "current_page": 1,
+    "data": [
+        {
+            "id": "2a1dadb5-f58d-4ae4-a26b-27efb09136eb",
+            "name": "Highend",
+            "version": null,
+            "description": "The Ultimate WordPress Theme allows you to build stunning websites without any coding skills.",
+            "productThumbnailUrl": "https:\/\/marketplace-assets-production.s3-us-west-2.amazonaws.com\/vault\/items\/preview-5f1ab073-c768-4a90-9bdb-63370a14153a-HSGIn.png",
+            "primaryUrl": "https:\/\/www.mojomarketplace.com\/cart?item_id=5377b431-d8a8-431b-a711-50c10a141528",
+            "primaryCallToAction": "Buy Now",
+            "secondaryUrl": null,
+            "secondaryCallToAction": null,
+            "clickToBuyId": null,
+            "type": "theme",
+            "price": "59.00",
+            "vendor_id": null,
+            "priority": 40,
+            "createdAt": "2022-06-28T17:23:11.000000Z",
+            "updatedAt": "2022-07-11T16:10:10.000000Z",
+            "categories": [
+                "Themes"
+            ],
+            "vendor": null,
+            "price_formatted": "$59.00"
+        },
+        {
+            "id": "eb286761-d1b7-47ec-8cbd-d8109e65cee9",
+            "name": "Creativo",
+            "version": null,
+            "description": "Use Creativo to create pixel perfect websites without coding.",
+            "productThumbnailUrl": "https:\/\/marketplace-assets-production.s3-us-west-2.amazonaws.com\/vault\/items\/preview-5f58a759-a740-4706-a41d-71a90a14153a-9etrI.jpg",
+            "primaryUrl": "https:\/\/www.mojomarketplace.com\/cart?item_id=518048d9-ae08-4939-93ac-0a000a140b1e",
+            "primaryCallToAction": "Buy Now",
+            "secondaryUrl": null,
+            "secondaryCallToAction": null,
+            "clickToBuyId": null,
+            "type": "theme",
+            "price": "59.00",
+            "vendor_id": null,
+            "priority": 30,
+            "createdAt": "2022-06-28T17:30:45.000000Z",
+            "updatedAt": "2022-07-11T16:10:26.000000Z",
+            "categories": [
+                "Themes"
+            ],
+            "vendor": null,
+            "price_formatted": "$59.00"
+        },
+        {
+            "id": "00c3eae2-9f6c-4e13-8674-599fe4a05cc0",
+            "name": "Yoast Local SEO",
+            "version": null,
+            "description": "If you own a local business, this is a crucial moment to increase your online presence on a local level. Because now more than ever, your customers\u2019 search focuses on local results. So, that makes ranking high in their local search results of the utmost importance.",
+            "productThumbnailUrl": "https:\/\/cdn.hiive.space\/products\/thumbs\/Yoast-Local.webp",
+            "primaryUrl": "https:\/\/yoast.com\/cart\/?add-to-cart=883408#utm_source=bh-marketplace&utm_medium=software&utm_campaign=wordpress-ad&utm_term=premium",
+            "primaryCallToAction": "Buy Now",
+            "secondaryUrl": "https:\/\/yoast.com\/wordpress\/plugins\/local-seo\/",
+            "secondaryCallToAction": "Learn More",
+            "clickToBuyId": null,
+            "type": "plugin",
+            "price": "79.00",
+            "vendor_id": "03e93b44-9a95-400f-bc0b-f53c2bfa91cf",
+            "priority": 10,
+            "createdAt": "2022-07-11T18:06:49.000000Z",
+            "updatedAt": "2022-07-20T19:07:14.000000Z",
+            "categories": [
+                "SEO"
+            ],
+            "vendor": {
+                "name": "Yoast",
+                "url": "https:\/\/yoast.com\/"
+            },
+            "price_formatted": "$79.00"
+        },
+        {
+            "id": "4e97f285-5b62-4bd1-8b72-a12bf3190cd2",
+            "name": "Yoast Video SEO",
+            "version": null,
+            "description": "The Yoast Video SEO plugin helps you drive search traffic to videos on your website. It automates technical SEO for video to improve your video\u2019s performance and findability!",
+            "productThumbnailUrl": "https:\/\/cdn.hiive.space\/products\/thumbs\/Yoast-Video.webp",
+            "primaryUrl": "https:\/\/yoast.com\/cart\/?add-to-cart=883404#utm_source=bh-marketplace&utm_medium=software&utm_campaign=wordpress-ad&utm_term=premium",
+            "primaryCallToAction": "Buy Now",
+            "secondaryUrl": "https:\/\/yoast.com\/wordpress\/plugins\/video-seo\/",
+            "secondaryCallToAction": "Learn More",
+            "clickToBuyId": null,
+            "type": "plugin",
+            "price": "79.00",
+            "vendor_id": "03e93b44-9a95-400f-bc0b-f53c2bfa91cf",
+            "priority": 10,
+            "createdAt": "2022-07-11T16:59:09.000000Z",
+            "updatedAt": "2022-07-20T19:11:57.000000Z",
+            "categories": [
+                "SEO"
+            ],
+            "vendor": {
+                "name": "Yoast",
+                "url": "https:\/\/yoast.com\/"
+            },
+            "price_formatted": "$79.00"
+        },
+        {
+            "id": "c1f47ba4-655c-412b-8447-a38fda6024ac",
+            "name": "Yoast WooCommerce SEO",
+            "version": null,
+            "description": "If you use WooCommerce and you\u2019re serious about selling and competing online, you need the Yoast WooCommerce SEO plugin to unlock extra tools, features, and SEO for your WooCommerce store.",
+            "productThumbnailUrl": "https:\/\/cdn.hiive.space\/products\/thumbs\/Yoast-Woo.webp",
+            "primaryUrl": "https:\/\/yoast.com\/cart\/?add-to-cart=883410#utm_source=bh-marketplace&utm_medium=software&utm_campaign=wordpress-ad&utm_term=premium",
+            "primaryCallToAction": "Buy Now",
+            "secondaryUrl": "https:\/\/yoast.com\/wordpress\/plugins\/yoast-woocommerce-seo\/",
+            "secondaryCallToAction": "Learn More",
+            "clickToBuyId": null,
+            "type": "plugin",
+            "price": "79.00",
+            "vendor_id": "03e93b44-9a95-400f-bc0b-f53c2bfa91cf",
+            "priority": 10,
+            "createdAt": "2022-07-11T18:21:39.000000Z",
+            "updatedAt": "2022-07-20T19:12:15.000000Z",
+            "categories": [
+                "SEO"
+            ],
+            "vendor": {
+                "name": "Yoast",
+                "url": "https:\/\/yoast.com\/"
+            },
+            "price_formatted": "$79.00"
+        },
+        {
+            "id": "cf025ad6-22d2-4283-92c5-31d07abf26c0",
+            "name": "Yoast News SEO",
+            "version": null,
+            "description": "Aim for that top spot in Google\u2019s news carousel with Yoast News SEO by adding relevant schema data to your articles.",
+            "productThumbnailUrl": "https:\/\/cdn.hiive.space\/products\/thumbs\/Yoast-News.webp",
+            "primaryUrl": "https:\/\/yoast.com\/cart\/?add-to-cart=883406#utm_source=bh-marketplace&utm_medium=software&utm_campaign=wordpress-ad&utm_term=premium",
+            "primaryCallToAction": "Buy Now",
+            "secondaryUrl": "https:\/\/yoast.com\/wordpress\/plugins\/news-seo\/",
+            "secondaryCallToAction": "Learn More",
+            "clickToBuyId": null,
+            "type": "plugin",
+            "price": "79.00",
+            "vendor_id": "03e93b44-9a95-400f-bc0b-f53c2bfa91cf",
+            "priority": 10,
+            "createdAt": "2022-07-11T18:14:28.000000Z",
+            "updatedAt": "2022-07-20T19:10:37.000000Z",
+            "categories": [
+                "SEO"
+            ],
+            "vendor": {
+                "name": "Yoast",
+                "url": "https:\/\/yoast.com\/"
+            },
+            "price_formatted": "$79.00"
+        },
+        {
+            "id": "4f17bd36-4a10-4324-89ec-b0c0bf951c6b",
+            "name": "YITH WooCommerce Wishlist",
+            "version": null,
+            "description": "Allow your customers to create lists of products they want and share them with family and friends.",
+            "productThumbnailUrl": "https:\/\/cdn.hiive.space\/products\/thumbs\/Yith-Wishlist.webp",
+            "primaryUrl": "https:\/\/yithemes.com\/themes\/plugins\/yith-woocommerce-wishlist\/",
+            "primaryCallToAction": "Buy Now",
+            "secondaryUrl": null,
+            "secondaryCallToAction": null,
+            "clickToBuyId": null,
+            "type": "plugin",
+            "price": "94.99",
+            "vendor_id": "390d41f9-82a1-45e8-a1d9-6358e63388be",
+            "priority": 0,
+            "createdAt": "2022-06-21T22:02:25.000000Z",
+            "updatedAt": "2022-07-20T19:19:53.000000Z",
+            "categories": [
+                "eCommerce"
+            ],
+            "vendor": {
+                "name": "YITH",
+                "url": "https:\/\/yithemes.com\/"
+            },
+            "price_formatted": "$94.99"
+        },
+        {
+            "id": "4ff38ef5-7798-40e1-b760-48af71f48def",
+            "name": "YITH WooCommerce Membership",
+            "version": null,
+            "description": "Activate some sections of your e-commerce with restricted access so as to create memberships in your store.",
+            "productThumbnailUrl": "https:\/\/cdn.hiive.space\/products\/thumbs\/Yith-Membership.webp",
+            "primaryUrl": "https:\/\/yithemes.com\/themes\/plugins\/yith-woocommerce-membership\/",
+            "primaryCallToAction": "Buy Now",
+            "secondaryUrl": null,
+            "secondaryCallToAction": null,
+            "clickToBuyId": null,
+            "type": "plugin",
+            "price": "149.99",
+            "vendor_id": "390d41f9-82a1-45e8-a1d9-6358e63388be",
+            "priority": 0,
+            "createdAt": "2022-06-21T22:00:37.000000Z",
+            "updatedAt": "2022-07-20T19:17:44.000000Z",
+            "categories": [
+                "eCommerce"
+            ],
+            "vendor": {
+                "name": "YITH",
+                "url": "https:\/\/yithemes.com\/"
+            },
+            "price_formatted": "$149.99"
+        },
+        {
+            "id": "55dcf7e9-da24-4b7d-ba74-04de777025cb",
+            "name": "YITH Stripe Connect for WooCommerce",
+            "version": null,
+            "description": "Manage complex transactions such as splitting payments both for a single product and for the whole store automatically.",
+            "productThumbnailUrl": "https:\/\/cdn.hiive.space\/products\/thumbs\/Yith-Stripe-Connect.webp",
+            "primaryUrl": "https:\/\/yithemes.com\/themes\/plugins\/yith-woocommerce-stripe-connect\/",
+            "primaryCallToAction": "Buy Now",
+            "secondaryUrl": null,
+            "secondaryCallToAction": null,
+            "clickToBuyId": null,
+            "type": "plugin",
+            "price": "79.99",
+            "vendor_id": "390d41f9-82a1-45e8-a1d9-6358e63388be",
+            "priority": 0,
+            "createdAt": "2022-06-21T22:07:49.000000Z",
+            "updatedAt": "2022-07-20T19:16:49.000000Z",
+            "categories": [
+                "eCommerce"
+            ],
+            "vendor": {
+                "name": "YITH",
+                "url": "https:\/\/yithemes.com\/"
+            },
+            "price_formatted": "$79.99"
+        },
+        {
+            "id": "9e851eb3-e511-4edc-aef9-939693c5a369",
+            "name": "YITH WooCommerce PDF Invoices & Packing Slips",
+            "version": null,
+            "description": "The complete solution to automatically generate and manage your invoices and create packing slips to speed up your shipping process.",
+            "productThumbnailUrl": "https:\/\/cdn.hiive.space\/products\/thumbs\/Yith-Invoice.webp",
+            "primaryUrl": "https:\/\/yithemes.com\/themes\/plugins\/yith-woocommerce-pdf-invoice\/",
+            "primaryCallToAction": "Buy Now",
+            "secondaryUrl": null,
+            "secondaryCallToAction": null,
+            "clickToBuyId": null,
+            "type": "plugin",
+            "price": "79.99",
+            "vendor_id": "390d41f9-82a1-45e8-a1d9-6358e63388be",
+            "priority": 0,
+            "createdAt": "2022-06-21T22:03:45.000000Z",
+            "updatedAt": "2022-07-20T19:19:19.000000Z",
+            "categories": [
+                "eCommerce"
+            ],
+            "vendor": {
+                "name": "YITH",
+                "url": "https:\/\/yithemes.com\/"
+            },
+            "price_formatted": "$79.99"
+        },
+        {
+            "id": "dbd75129-e223-4ba7-bec3-6636ec6aa9e3",
+            "name": "YITH WooCommerce Multi Vendor \/ Marketplace",
+            "version": null,
+            "description": "Turn your e-commerce into a marketplace with multiple vendors and start now to earn from their sales.",
+            "productThumbnailUrl": "https:\/\/cdn.hiive.space\/products\/thumbs\/Yith--Vendors-1.webp",
+            "primaryUrl": "https:\/\/yithemes.com\/themes\/plugins\/yith-woocommerce-multi-vendor\/",
+            "primaryCallToAction": "Buy Now",
+            "secondaryUrl": null,
+            "secondaryCallToAction": null,
+            "clickToBuyId": null,
+            "type": "plugin",
+            "price": "99.99",
+            "vendor_id": "390d41f9-82a1-45e8-a1d9-6358e63388be",
+            "priority": 0,
+            "createdAt": "2022-06-21T22:06:34.000000Z",
+            "updatedAt": "2022-07-20T19:18:32.000000Z",
+            "categories": [
+                "eCommerce"
+            ],
+            "vendor": {
+                "name": "YITH",
+                "url": "https:\/\/yithemes.com\/"
+            },
+            "price_formatted": "$99.99"
+        },
+        {
+            "id": "faf0acf9-b5a0-479d-9cde-20fb5fa530f9",
+            "name": "YITH WooCommerce Booking",
+            "version": null,
+            "description": "Enable a booking\/appointment system to manage renting or booking of services, rooms, houses, cars, accommodation facilities and so on.",
+            "productThumbnailUrl": "https:\/\/cdn.hiive.space\/products\/thumbs\/Yith-Booking.webp",
+            "primaryUrl": "https:\/\/yithemes.com\/themes\/plugins\/yith-woocommerce-booking\/",
+            "primaryCallToAction": "Buy Now",
+            "secondaryUrl": null,
+            "secondaryCallToAction": null,
+            "clickToBuyId": null,
+            "type": "plugin",
+            "price": "249.99",
+            "vendor_id": "390d41f9-82a1-45e8-a1d9-6358e63388be",
+            "priority": 0,
+            "createdAt": "2022-06-21T21:57:40.000000Z",
+            "updatedAt": "2022-07-20T19:17:17.000000Z",
+            "categories": [
+                "eCommerce"
+            ],
+            "vendor": {
+                "name": "YITH",
+                "url": "https:\/\/yithemes.com\/"
+            },
+            "price_formatted": "$249.99"
+        },
+        {
+            "id": "003c9022-348b-4754-b27c-9452dd6eac62",
+            "name": "Web Design Services",
+            "version": null,
+            "description": "Impress potential clients with a professionally-designed website!",
+            "productThumbnailUrl": "https:\/\/cdn.hiive.space\/products\/hostgator-service-services-webdesign.png",
+            "primaryUrl": "https:\/\/www.hostgator.com\/services\/web-design",
+            "primaryCallToAction": "Learn More",
+            "secondaryUrl": null,
+            "secondaryCallToAction": null,
+            "clickToBuyId": null,
+            "type": "service",
+            "price": "0.00",
+            "vendor_id": null,
+            "priority": null,
+            "createdAt": "2022-06-30T19:10:43.000000Z",
+            "updatedAt": "2022-06-30T19:10:43.000000Z",
+            "categories": [
+                "Services",
+                "Featured"
+            ],
+            "vendor": null,
+            "price_formatted": "$0.00"
+        },
+        {
+            "id": "386c6b45-4814-4d48-bba0-71e86a3f7c37",
+            "name": "Daisy",
+            "version": null,
+            "description": "Daisy is the #1 blog theme on the marketplace!",
+            "productThumbnailUrl": "https:\/\/marketplace-assets-production.s3-us-west-2.amazonaws.com\/vault\/items\/preview-5ddd3b10-2e7c-4248-b740-0d300a14153b-B0mxt.jpg",
+            "primaryUrl": "https:\/\/www.mojomarketplace.com\/cart?item_id=55f82a3d-0ab8-49c6-a224-1a220a141f38&#038;utm_source=mojo_wp_plugin",
+            "primaryCallToAction": "Buy Now",
+            "secondaryUrl": null,
+            "secondaryCallToAction": null,
+            "clickToBuyId": null,
+            "type": "theme",
+            "price": "59.00",
+            "vendor_id": null,
+            "priority": null,
+            "createdAt": "2022-06-28T19:24:01.000000Z",
+            "updatedAt": "2022-06-28T19:24:01.000000Z",
+            "categories": [
+                "Themes"
+            ],
+            "vendor": null,
+            "price_formatted": "$59.00"
+        },
+        {
+            "id": "39f64e8b-8981-418d-807f-81c85947e2d9",
+            "name": "Atrium",
+            "version": null,
+            "description": "This theme is beautifully designed, using the browser space entirely to make your website easy to read and focus.",
+            "productThumbnailUrl": "https:\/\/marketplace-assets-production.s3-us-west-2.amazonaws.com\/vault\/items\/preview-600ed234-12d0-41e3-a192-23020a141537-iqLpC.jpg",
+            "primaryUrl": "https:\/\/www.mojomarketplace.com\/cart?item_id=600ed234-47f8-4e2a-921f-23020a141537",
+            "primaryCallToAction": "Buy Now",
+            "secondaryUrl": null,
+            "secondaryCallToAction": null,
+            "clickToBuyId": null,
+            "type": "plugin",
+            "price": "49.00",
+            "vendor_id": null,
+            "priority": null,
+            "createdAt": "2022-06-28T19:14:04.000000Z",
+            "updatedAt": "2022-06-28T19:14:04.000000Z",
+            "categories": [
+                "Themes"
+            ],
+            "vendor": null,
+            "price_formatted": "$49.00"
+        },
+        {
+            "id": "4a1559ee-5e1e-445b-9d0e-1b13fc6f8d35",
+            "name": "Mike + Jane",
+            "version": null,
+            "description": "Forget about complex frameworks and confusing required plugins - working with this theme is easy and fun!",
+            "productThumbnailUrl": "https:\/\/marketplace-assets-production.s3-us-west-2.amazonaws.com\/vault\/items\/preview-6072a76b-0bc4-407b-995a-3cdb0a141538-O5NNE.png",
+            "primaryUrl": "https:\/\/www.mojomarketplace.com\/cart?item_id=6072a76b-a7a8-412c-9c65-3cdb0a141538",
+            "primaryCallToAction": "Buy Now",
+            "secondaryUrl": null,
+            "secondaryCallToAction": null,
+            "clickToBuyId": null,
+            "type": "plugin",
+            "price": "69.00",
+            "vendor_id": null,
+            "priority": null,
+            "createdAt": "2022-06-28T19:16:13.000000Z",
+            "updatedAt": "2022-06-28T19:16:36.000000Z",
+            "categories": [
+                "Themes"
+            ],
+            "vendor": null,
+            "price_formatted": "$69.00"
+        },
+        {
+            "id": "72463d0b-5c72-47e5-bd32-4ec225e53718",
+            "name": "Constant Contact Forms",
+            "version": null,
+            "description": "Capture visitor information right from your site.",
+            "productThumbnailUrl": "https:\/\/marketplace-assets-production.s3-us-west-2.amazonaws.com\/vault\/items\/preview-57fc0ac0-d508-4ece-b096-041e0a14153b-4iVnr.jpg",
+            "primaryUrl": "https:\/\/www.mojomarketplace.com\/cart?item_id=57fc0ac0-d508-4ece-b096-041e0a14153b",
+            "primaryCallToAction": "Learn More",
+            "secondaryUrl": null,
+            "secondaryCallToAction": null,
+            "clickToBuyId": null,
+            "type": "plugin",
+            "price": "0.00",
+            "vendor_id": null,
+            "priority": null,
+            "createdAt": "2022-06-28T21:10:29.000000Z",
+            "updatedAt": "2022-06-28T21:10:29.000000Z",
+            "categories": [
+                "Services"
+            ],
+            "vendor": null,
+            "price_formatted": "$0.00"
+        },
+        {
+            "id": "81357ab8-49fc-4a9e-a01d-7d33fdf3f058",
+            "name": "PPC Management",
+            "version": null,
+            "description": "PPC advertising can increase performance and drive more revenue!",
+            "productThumbnailUrl": "https:\/\/cdn.hiive.space\/products\/hostgator-service-services-ppc.png",
+            "primaryUrl": "https:\/\/www.hostgator.com\/services\/ppc",
+            "primaryCallToAction": "Get More Leads",
+            "secondaryUrl": null,
+            "secondaryCallToAction": null,
+            "clickToBuyId": null,
+            "type": "service",
+            "price": "0.00",
+            "vendor_id": null,
+            "priority": null,
+            "createdAt": "2022-06-30T19:11:46.000000Z",
+            "updatedAt": "2022-06-30T19:11:46.000000Z",
+            "categories": [
+                "Services",
+                "Featured"
+            ],
+            "vendor": null,
+            "price_formatted": "$0.00"
+        },
+        {
+            "id": "8efb0146-59ba-4d62-a9bd-90cdaa70be89",
+            "name": "Chia",
+            "version": null,
+            "description": "Chia is a modern responsive WordPress theme ideal for creating a deli or cafe website as well as a food-based blog.",
+            "productThumbnailUrl": "https:\/\/marketplace-assets-production.s3-us-west-2.amazonaws.com\/vault\/items\/preview-60858bab-966c-4817-a7a9-59770a141536-IXbL7.jpg",
+            "primaryUrl": "https:\/\/www.mojomarketplace.com\/cart?item_id=60858bab-c640-409e-912a-59770a141536",
+            "primaryCallToAction": "Buy Now",
+            "secondaryUrl": null,
+            "secondaryCallToAction": null,
+            "clickToBuyId": null,
+            "type": "plugin",
+            "price": "59.00",
+            "vendor_id": null,
+            "priority": null,
+            "createdAt": "2022-06-28T19:15:25.000000Z",
+            "updatedAt": "2022-06-28T19:15:25.000000Z",
+            "categories": [
+                "Themes"
+            ],
+            "vendor": null,
+            "price_formatted": "$59.00"
+        },
+        {
+            "id": "923b485f-2d3e-40f0-a0d5-e80a84fd4444",
+            "name": "CodeGuard",
+            "version": null,
+            "description": "Protect your website with a daily, automatic backup!",
+            "productThumbnailUrl": "https:\/\/cdn.hiive.space\/products\/hostgator-service-services-codeguard.png",
+            "primaryUrl": "https:\/\/www.hostgator.com\/codeguard",
+            "primaryCallToAction": "Learn More",
+            "secondaryUrl": null,
+            "secondaryCallToAction": null,
+            "clickToBuyId": null,
+            "type": "service",
+            "price": "0.00",
+            "vendor_id": null,
+            "priority": null,
+            "createdAt": "2022-06-29T23:07:09.000000Z",
+            "updatedAt": "2022-06-29T23:07:09.000000Z",
+            "categories": [
+                "Services",
+                "Featured"
+            ],
+            "vendor": null,
+            "price_formatted": "$0.00"
+        }
+    ],
+    "first_page_url": "https:\/\/hiive.cloud\/api\/marketplace\/v1\/products?brand=hostgator&per_page=24&page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https:\/\/hiive.cloud\/api\/marketplace\/v1\/products?brand=hostgator&per_page=24&page=1",
+    "links": [
+        {
+            "url": null,
+            "label": "&laquo; Previous",
+            "active": false
+        },
+        {
+            "url": "https:\/\/hiive.cloud\/api\/marketplace\/v1\/products?brand=hostgator&per_page=24&page=1",
+            "label": "1",
+            "active": true
+        },
+        {
+            "url": null,
+            "label": "Next &raquo;",
+            "active": false
+        }
+    ],
+    "next_page_url": null,
+    "path": "https:\/\/hiive.cloud\/api\/marketplace\/v1\/products",
+    "per_page": "24",
+    "prev_page_url": null,
+    "to": 21,
+    "total": 21
+}

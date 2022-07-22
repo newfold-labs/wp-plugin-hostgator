@@ -26,7 +26,7 @@ describe('Coming Soon', function () {
 		cy.get('.coming-soon-protip summary').click();
 		cy.wait(100);
 		cy.get('.coming-soon-protip').should('have.attr', 'open');
-		// cy.get('.coming-soon-protip .accordion-content p').should('be.visible');
+		cy.get('.coming-soon-protip .accordion-content').should('be.visible');
 	});
 
 	it('Has Coming Soon Section on Home', () => {
@@ -47,7 +47,16 @@ describe('Coming Soon', function () {
 			.should('be.visible');
 	});
 
+	it('Displays admin coming soon notice', () => {
+		cy.visit('/wp-admin/index.php');
+		cy
+			.get('.notice-warning')
+			.contains('p', 'coming')
+			.should('be.visible');
+	});
+
 	it('Home Coming Soon Section Launches', () => {
+		cy.visit('/wp-admin/admin.php?page=hostgator#/home');
 		cy.get('.hgwp-section-coming-soon button.is-primary').click();
 		cy.wait(500);
 		cy
@@ -68,14 +77,6 @@ describe('Coming Soon', function () {
 			.get('.hgwp-section-coming-soon')
 			.scrollIntoView()
 			.contains('h3', 'Coming Soon')
-			.should('be.visible');
-	});
-
-	it('Displays admin coming soon notice', () => {
-		cy.visit('/wp-admin/index.php');
-		cy
-			.get('.notice-warning')
-			.contains('p', 'coming')
 			.should('be.visible');
 	});
 

@@ -1,66 +1,63 @@
 import './stylesheet.scss';
-import { TabPanel, Spinner } from '@wordpress/components';
-import Themes from './themes';
-import Plugins from './plugins';
-import Services from './services';
 
-const Marketplace = () => {
-	const [isLoading, setIsLoading] = useState(true);
-	const [initialTab, setInitialTab] = useState('plugins');
-	const location = useLocation();
-	const navigate = useNavigate();
+// to pass to marketplace module
+import apiFetch from '@wordpress/api-fetch'; 
+import classnames from 'classnames';
+import { useState } from '@wordpress/element';
+// import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+import {
+	Button,
+	Card,
+	CardBody,
+	CardHeader,
+	CardFooter,
+	CardMedia,
+    TabPanel,
+    Spinner
+} from '@wordpress/components';
 
-	const onTabNavigate = (tabName) =>
-		navigate('/marketplace/' + tabName, { replace: true });
+// component sourced from marketplace module
+import { default as NewfoldMarketplace } from '../../../../vendor/newfold-labs/wp-module-marketplace/components/marketplace/';
 
-	useEffect(() => {
-		if (location.pathname.includes('/services')) {
-			setInitialTab('services');
-		} else if (location.pathname.includes('/themes')) {
-			setInitialTab('themes');
-		} else if (!location.pathname.includes('/plugins')) {
-			navigate('/marketplace/plugins', { replace: true });
-		}
-		setIsLoading(false);
-	}, [location]);
-
-	if (isLoading) {
-		return <Spinner />;
-	}
+const MarketplacePage = () => {
+	
+    // Components to pass to module
+    const moduleComponents = {
+        Button,
+        Card,
+        CardBody,
+        CardFooter,
+        CardHeader,
+        CardMedia,
+        TabPanel,
+        Spinner
+    };
+    // methods to pass to module
+    const moduleMethods = {
+        apiFetch,
+        classnames,
+        useState,
+        useEffect,
+        // module doesn't yet support these
+        // useNavigate,
+        // useLocation
+    };
+    // constants to pass to module
+    const moduleConstants = {
+        'resturl': window.HGWP.resturl,
+        'eventendpoint': '/newfold-data/v1/events/',
+        'perPage': 12,
+        'supportsCTB': false, // not needed, but explicity setting to false anyway
+    }
 
 	return (
-		<div className="hgwp-marketplace">
-			<TabPanel
-				className="hgwp-marketplace-tabs"
-				activeClass="current-tab"
-				orientation="vertical"
-				initialTabName={initialTab}
-				onSelect={onTabNavigate}
-				tabs={[
-					{
-						name: 'plugins',
-						className: 'plugins',
-						title: 'Plugins',
-						Component: Plugins,
-					},
-					{
-						name: 'services',
-						className: 'services',
-						title: 'Services',
-						Component: Services,
-					},
-					{
-						name: 'themes',
-						className: 'themes',
-						title: 'Themes',
-						Component: Themes,
-					},
-				]}
-			>
-				{(tab) => <tab.Component />}
-			</TabPanel>
-		</div>
+        <NewfoldMarketplace 
+            Components={moduleComponents}
+            methods={moduleMethods}
+            constants={moduleConstants}
+        />
 	);
 };
 
-export default Marketplace;
+export default MarketplacePage;

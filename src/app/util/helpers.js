@@ -157,21 +157,6 @@ export const getRegionValue = () => {
 };
 
 /**
- * Get region specific path to marketplace items
- * @param {*} bucket specify type of markeplace listings: plugins, themes, or services
- * @returns 
- */
-export const getJSONPathPerRegion = ( bucket ) => {
-	let path = window.HGWP.assets + 'json/marketplace/';
-	let region_code = getRegionValue();
-	if ( region_code !== '' ) {
-		path += region_code + '/';
-	}
-	path += bucket + '.json';
-	return path;
-};
-
-/**
  * Get region specific link value
  * 
  * @param {*} link_name - name for link in regions object

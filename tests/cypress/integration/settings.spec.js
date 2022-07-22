@@ -58,8 +58,8 @@ describe('Settings Page', function () {
 		cy.get('.autoupdate-all-toggle input[type="checkbox"]').should('not.be.checked');
 		cy.wait(100);
 		cy
-			.get('.edit-site-notices .components-snackbar__content')
-			.contains('div', 'Core')
+			.get('.edit-site-notices ')
+			.contains('.components-snackbar__content', 'Core')
 			.should('be.visible');
 
 		cy.get('.autoupdate-plugin-toggle input[type="checkbox"]').uncheck();
@@ -67,16 +67,16 @@ describe('Settings Page', function () {
 		cy.get('.autoupdate-all-toggle input[type="checkbox"]').should('not.be.checked');
 		cy.wait(100);
 		cy
-			.get('.edit-site-notices .components-snackbar__content')
-			.contains('div', 'Plugins')
+			.get('.edit-site-notices')
+			.contains('.components-snackbar__content', 'Plugins')
 			.should('be.visible');
 
 		cy.get('.autoupdate-plugin-toggle input[type="checkbox"]').check();
 		cy.get('.autoupdate-core-toggle input[type="checkbox"]').check();
 		cy.wait(100);
 		cy
-			.get('.edit-site-notices .components-snackbar__content')
-			.contains('div', 'Everything')
+			.get('.edit-site-notices')
+			.contains('.components-snackbar__content', 'Everything')
 			.should('be.visible');
 
 		cy.get('.autoupdate-all-toggle input[type="checkbox"]').should('be.checked');
@@ -91,8 +91,8 @@ describe('Settings Page', function () {
 		cy.get('.content-revisions-select select').select('1');
 		cy.wait(100);
 		cy
-			.get('.edit-site-notices .components-snackbar__content')
-			.contains('div', 'Post revision setting saved')
+			.get('.edit-site-notices')
+			.contains('.components-snackbar__content', 'Post revision setting saved')
 			.should('be.visible');
 		cy
 			.get('.content-revisions-select label')
@@ -107,8 +107,8 @@ describe('Settings Page', function () {
 		cy.get('.content-revisions-select select').select('40');
 		cy.wait(100);
 		cy
-			.get('.edit-site-notices .components-snackbar__content')
-			.contains('div', 'Post revision setting saved')
+			.get('.edit-site-notices')
+			.contains('.components-snackbar__content', 'Post revision setting saved')
 			.should('be.visible');
 		cy.get('.content-revisions-select label').contains('span', '40').should('be.visible');
 	});
@@ -119,8 +119,8 @@ describe('Settings Page', function () {
 		cy.get('.disable-comments-toggle input[type="checkbox"]').check();
 		cy.wait(100);
 		cy
-			.get('.edit-site-notices .components-snackbar__content')
-			.contains('div', 'Old post comments')
+			.get('.edit-site-notices')
+			.contains('.components-snackbar__content', 'Old post comments')
 			.should('be.visible');
 
 		cy.get('.close-comments-days-select select').should('not.be.disabled');
@@ -128,8 +128,8 @@ describe('Settings Page', function () {
 		cy.get('.close-comments-days-select label').contains('span', '3').should('be.visible');
 		cy.wait(100);
 		cy
-			.get('.edit-site-notices .components-snackbar__content')
-			.contains('div', 'comments')
+			.get('.edit-site-notices')
+			.contains('.components-snackbar__content', 'comments')
 			.should('be.visible');
 
 		cy.get('.comments-per-page-select select').select('10');
