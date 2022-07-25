@@ -43,6 +43,14 @@ $nfd_module_container->set(
 	)
 );
 
+// Set marketplace brand from mm_brand and hg_region values in container
+if ( get_option( 'mm_brand', false ) && get_option( 'hg_region', false ) ) {
+	$nfd_module_container->set(
+		'marketplace_brand',
+		get_option( 'mm_brand', false ) . '_' . get_option( 'hg_region', false )
+	);
+}
+
 // Set coming soon values
 $nfd_module_container->set(
 	'comingsoon',
