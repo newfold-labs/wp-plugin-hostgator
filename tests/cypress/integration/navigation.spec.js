@@ -31,7 +31,7 @@ describe('Navigation', function () {
 			should('not.have.class', 'active');
 		cy.get('.link-Marketplace').click();
 		cy.wait(500);
-		cy.hash().should('eq', '#/marketplace/plugins');
+		cy.hash().should('eq', '#/marketplace');
 		cy
 			.get('.link-Marketplace')
 			.should('have.class', 'active');

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d43c05945a840989d397c5183a68c9a0",
+    "content-hash": "4a712aec921eb0a265eed7d3da8ff5ff",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -242,6 +242,52 @@
                 "issues": "https://github.com/newfold-labs/wp-module-loader/issues"
             },
             "time": "2022-03-18T19:26:08+00:00"
+        },
+        {
+            "name": "newfold-labs/wp-module-marketplace",
+            "version": "1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/newfold-labs/wp-module-marketplace.git",
+                "reference": "7668d2e1d674fd5f5387e2f99d3bd1da511dc772"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-marketplace/zipball/7668d2e1d674fd5f5387e2f99d3bd1da511dc772",
+                "reference": "7668d2e1d674fd5f5387e2f99d3bd1da511dc772",
+                "shasum": ""
+            },
+            "require": {
+                "newfold-labs/wp-module-data": "^2.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NewfoldLabs\\WP\\Module\\Marketplace\\": "includes"
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Micah Wood",
+                    "email": "micah@wpscholar.com"
+                },
+                {
+                    "name": "Evan Mullins",
+                    "email": "evanrm@gmail.com"
+                }
+            ],
+            "description": "A module for rendering product data and interacting with the Hiive marketplace API.",
+            "support": {
+                "source": "https://github.com/newfold-labs/wp-module-marketplace/tree/1.2.3",
+                "issues": "https://github.com/newfold-labs/wp-module-marketplace/issues"
+            },
+            "time": "2022-07-25T18:54:20+00:00"
         },
         {
             "name": "psr/container",
