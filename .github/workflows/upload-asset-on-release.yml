@@ -23,11 +23,14 @@ jobs:
           taggedVersion=${{ env.VERSION }}
           pluginHeaderVersion=`grep "Version:" wp-plugin-hostgator.php | grep -Eo "[0-9\.]*"`
           pluginConstantVersion=`grep "_PLUGIN_VERSION" wp-plugin-hostgator.php | grep -Eo "[0-9\.]*"`
+          pluginPackageVersion=`grep "version:" package.json | grep -Eo "[0-9\.]*"`
           echo "Tagged version: $taggedVersion"
           echo "Plugin header version: $pluginHeaderVersion"
           echo "Plugin constant version: $pluginConstantVersion"
+          echo "Plugin package version: $pluginPackageVersion"
           [[ "$taggedVersion" == "$pluginHeaderVersion" ]] || exit 1
           [[ "$taggedVersion" == "$pluginConstantVersion" ]] || exit 1
+          [[ "$taggedVersion" == "$pluginPackageVersion" ]] || exit 1
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
