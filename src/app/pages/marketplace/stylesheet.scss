@@ -119,8 +119,9 @@
             }
 
             .price {
-                background-color: rgba(31, 32, 68, .13);
-                border-radius: 0.5rem;
+                background-color: var(--hgbrand-color-yellow);
+                clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+                border-radius: 0.25rem;
                 color: var(--hgbrand-color-primary);
                 font-size: .95rem;
                 font-weight: 800;
