@@ -6,6 +6,13 @@ on:
       - created
       - updated
 
+env:
+  VERSION: ${GITHUB_REF#refs/tags/*}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.head_ref || github.sha }}
+  cancel-in-progress: true
+
 jobs:
   build:
     name: On Release
@@ -15,10 +22,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Validate version number
+        run: |
+          taggedVersion=${{ env.VERSION }}
+          pluginHeaderVersion=`grep "Version:" wp-plugin-hostgator.php | grep -Eo "[0-9\.]*"`
+          pluginConstantVersion=`grep "_PLUGIN_VERSION" wp-plugin-hostgator.php | grep -Eo "[0-9\.]*"`
+          pluginPackageVersion=`grep "version:" package.json | grep -Eo "[0-9\.]*"`
+          echo "Tagged version: $taggedVersion"
+          echo "Plugin header version: $pluginHeaderVersion"
+          echo "Plugin constant version: $pluginConstantVersion"
+          echo "Plugin package version: $pluginPackageVersion"
+          [[ "$taggedVersion" == "$pluginHeaderVersion" ]] || exit 1
+          [[ "$taggedVersion" == "$pluginConstantVersion" ]] || exit 1
+          [[ "$taggedVersion" == "$pluginPackageVersion" ]] || exit 1
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '7.4'
+          php-version: '8.1'
           coverage: none
           tools: composer, cs2pr
 
@@ -31,19 +52,11 @@ jobs:
           mkdir dist
           echo ::set-output name=DIST::${PWD}/dist
           echo ::set-output name=PACKAGE::${REPO##*/}
-      - name: PHP version
-        run: php --version
 
-      - name: Set Node.js 14.x
+      - name: Use Node.js 16.x
         uses: actions/setup-node@v1
         with:
-          node-version: 14.x
-
-      - name: Node version
-        run: node --version
-
-      - name: NPM version
-        run: npm --version
+          node-version: 16.x
 
       - name: Get npm cache directory
         id: npm-cache
@@ -56,11 +69,6 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: npm install
-        run: npm install
-
-      - name: Validate composer.json and composer.lock
-        run: composer validate
 
       - name: Get Composer Cache Directory
         id: composer-cache
@@ -73,13 +81,27 @@ jobs:
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
           restore-keys: |
             ${{ runner.os }}-composer-
+
+      - name: Show versions
+        run: |
+          php --version
+          composer --version
+          node --version
+          npm --version
+
+      - name: Validate composer.json and composer.lock
+        run: composer validate
+
       - name: Install PHP Dependencies
         run: composer install --no-progress --no-dev --optimize-autoloader --prefer-dist
+
+      - name: NPM Install
+        run: npm install --legacy-peer-deps
 
       - name: Build JavaScript
         run: npm run build
 
-      - name: Prepare files
+      - name: Create Distribution Copy
         run: rsync -r --exclude-from=.distignore . ${{ steps.workflow.outputs.DIST }}/${{ steps.workflow.outputs.PACKAGE }}
 
       - name: List Files
@@ -99,3 +121,10 @@ jobs:
           asset_path: ${{ steps.workflow.outputs.DIST }}/${{ steps.workflow.outputs.PACKAGE }}.zip
           asset_name: ${{ steps.workflow.outputs.PACKAGE }}.zip
           asset_content_type: application/zip
+
+      - name: Clear cache for release API
+        run: |
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
+               -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+               -H "Content-Type: application/json" \
+               --data '{"files":["https://hiive.cloud/workers/release-api/plugins/newfold-labs/wp-plugin-hostgator"]}'

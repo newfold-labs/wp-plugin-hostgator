@@ -30,9 +30,9 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '7.4'
+          php-version: '8.1'
           coverage: none
-          tools: composer
+          tools: composer, cs2pr
 
       - name: Get Composer cache directory
         id: composer-cache
@@ -49,7 +49,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: 16
 
       - name: Log debug information
         run: |

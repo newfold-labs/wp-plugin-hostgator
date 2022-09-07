@@ -4,7 +4,7 @@ import './stylesheet.scss';
 import apiFetch from '@wordpress/api-fetch'; 
 import classnames from 'classnames';
 import { useState } from '@wordpress/element';
-// import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import {
 	Button,
@@ -39,9 +39,8 @@ const MarketplacePage = () => {
         classnames,
         useState,
         useEffect,
-        // module doesn't yet support these
-        // useNavigate,
-        // useLocation
+        useNavigate,
+        useLocation
     };
     // constants to pass to module
     const moduleConstants = {
