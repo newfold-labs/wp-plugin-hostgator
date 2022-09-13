@@ -97,17 +97,24 @@ describe('Marketplace Page', function () {
 		
 		cy.findByRole('tab', { name: 'Services' } ).click();
 		cy.get('.marketplace-item').should('have.length', 4);
-		cy.get('#marketplace-item-003c9022-348b-4754-b27c-9452dd6eac62 h3')
+		cy.get('#marketplace-item-003c9022-348b-4754-b27c-9452dd6eac62 h2')
 			.scrollIntoView()
 			.should('be.visible')
 			.should('have.text', 'Web Design Services');
 		
 		cy.findByRole('tab', { name: 'SEO' } ).click();
 		cy.get('.marketplace-item').should('have.length', 4);
-		cy.get('#marketplace-item-00c3eae2-9f6c-4e13-8674-599fe4a05cc0 h3')
+		cy.get('#marketplace-item-00c3eae2-9f6c-4e13-8674-599fe4a05cc0 h2')
 			.scrollIntoView()
 			.should('be.visible')
 			.should('have.text', 'Yoast Local SEO');
+	});
+
+	it('Category tabs update path', () => {
+		cy.findByRole('tab', {name: 'Services'}).click();
+		cy.location().should((loc) => {
+			expect(loc.hash).to.eq('#/marketplace/services')
+		});
 	});
 
 	// CTB Not supported yet

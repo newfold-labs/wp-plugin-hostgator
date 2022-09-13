@@ -14,6 +14,9 @@
     "config": {
         "optimize-autoloader": true,
         "sort-packages": true,
+        "platform": {
+            "php": "7.0.0"
+        },
         "platform-check": false,
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true
@@ -51,6 +54,7 @@
         "i18n": "Generate a .pot file for translation."
     },
     "require": {
+        "doctrine/inflector": "1.2.0 as 1.3.1",
         "newfold-labs/wp-module-coming-soon": "^1.0.7",
         "newfold-labs/wp-module-data": "^2.0",
         "newfold-labs/wp-module-loader": "^1.0",
