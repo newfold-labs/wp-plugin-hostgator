@@ -23,11 +23,12 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Validate version number
+        if: ${{ github.repository == 'newfold-labs/wp-plugin-hostgator' }}
         run: |
           taggedVersion=${{ env.VERSION }}
           pluginHeaderVersion=`grep "Version:" wp-plugin-hostgator.php | grep -Eo "[0-9\.]*"`
-          pluginConstantVersion=`grep "_PLUGIN_VERSION" wp-plugin-hostgator.php | grep -Eo "[0-9\.]*"`
-          pluginPackageVersion=`grep "version:" package.json | grep -Eo "[0-9\.]*"`
+          pluginConstantVersion=`grep "'HOSTGATOR_PLUGIN_VERSION'" wp-plugin-hostgator.php | grep -Eo "[0-9\.]*"`
+          pluginPackageVersion=`grep "version" package.json | grep -Eo "[0-9\.]*"`
           echo "Tagged version: $taggedVersion"
           echo "Plugin header version: $pluginHeaderVersion"
           echo "Plugin constant version: $pluginConstantVersion"
