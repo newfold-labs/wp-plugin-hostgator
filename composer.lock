@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e809419e159f6c21578f89663b5144e",
+    "content-hash": "a484c7015f89a003ff82ce0f959a1424",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -303,6 +303,48 @@
                 "issues": "https://github.com/newfold-labs/wp-module-marketplace/issues"
             },
             "time": "2022-09-02T16:22:35+00:00"
+        },
+        {
+            "name": "newfold-labs/wp-module-sso",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/newfold-labs/wp-module-sso.git",
+                "reference": "ce753f809939971b1d3437c6545309680a59327f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-sso/zipball/ce753f809939971b1d3437c6545309680a59327f",
+                "reference": "ce753f809939971b1d3437c6545309680a59327f",
+                "shasum": ""
+            },
+            "require": {
+                "newfold-labs/wp-module-data": ">=2.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NewFoldLabs\\WP\\Module\\SSO\\": "includes"
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Micah Wood",
+                    "email": "micah@bluehost.com"
+                }
+            ],
+            "description": "Single sign-on functionality for Newfold WordPress sites.",
+            "support": {
+                "source": "https://github.com/newfold-labs/wp-module-sso/tree/1.0.3",
+                "issues": "https://github.com/newfold-labs/wp-module-sso/issues"
+            },
+            "time": "2022-07-15T18:33:14+00:00"
         },
         {
             "name": "wp-forge/fluent",
@@ -907,16 +949,16 @@
         },
         {
             "name": "mck89/peast",
-            "version": "v1.14.0",
+            "version": "v1.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mck89/peast.git",
-                "reference": "70a728d598017e237118652b2fa30fbaa9d4ef6d"
+                "reference": "733cd8f62dcb8239094688063a92766bbfcbf523"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mck89/peast/zipball/70a728d598017e237118652b2fa30fbaa9d4ef6d",
-                "reference": "70a728d598017e237118652b2fa30fbaa9d4ef6d",
+                "url": "https://api.github.com/repos/mck89/peast/zipball/733cd8f62dcb8239094688063a92766bbfcbf523",
+                "reference": "733cd8f62dcb8239094688063a92766bbfcbf523",
                 "shasum": ""
             },
             "require": {
@@ -929,7 +971,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.14.0-dev"
+                    "dev-master": "1.15.0-dev"
                 }
             },
             "autoload": {
@@ -951,9 +993,9 @@
             "description": "Peast is PHP library that generates AST for JavaScript code",
             "support": {
                 "issues": "https://github.com/mck89/peast/issues",
-                "source": "https://github.com/mck89/peast/tree/v1.14.0"
+                "source": "https://github.com/mck89/peast/tree/v1.15.0"
             },
-            "time": "2022-05-01T15:09:54+00:00"
+            "time": "2022-09-13T15:56:53+00:00"
         },
         {
             "name": "mustache/mustache",
