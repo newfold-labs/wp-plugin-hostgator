@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e74057b6c61cc78f2f2ef2630ca3579b",
+    "content-hash": "c8706f3ad372ab6fdda69396554d1a62",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -303,6 +303,50 @@
                 "issues": "https://github.com/newfold-labs/wp-module-marketplace/issues"
             },
             "time": "2022-09-02T16:22:35+00:00"
+        },
+        {
+            "name": "newfold-labs/wp-module-notifications",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/newfold-labs/wp-module-notifications.git",
+                "reference": "ddf3b79e6901189abf26a3939c1eb591ab3f7dd8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-notifications/zipball/ddf3b79e6901189abf26a3939c1eb591ab3f7dd8",
+                "reference": "ddf3b79e6901189abf26a3939c1eb591ab3f7dd8",
+                "shasum": ""
+            },
+            "require": {
+                "newfold-labs/wp-module-data": "^2.0.0",
+                "wp-forge/helpers": "^1.1.0",
+                "wpscholar/url": "^1.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NewFoldLabs\\WP\\Module\\Notifications\\": "includes"
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Micah Wood",
+                    "email": "micah@wpscholar.com"
+                }
+            ],
+            "description": "A module for managing Newfold in-site notifications.",
+            "support": {
+                "source": "https://github.com/newfold-labs/wp-module-notifications/tree/1.0.1",
+                "issues": "https://github.com/newfold-labs/wp-module-notifications/issues"
+            },
+            "time": "2022-04-06T21:46:41+00:00"
         },
         {
             "name": "newfold-labs/wp-module-secure-passwords",
