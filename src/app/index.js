@@ -14,6 +14,12 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { store as noticesStore } from '@wordpress/notices';
 import { setActiveSubnav } from './util/helpers';
 
+// component sourced from module
+import { default as NewfoldNotifications } from '../../vendor/newfold-labs/wp-module-notifications/assets/js/components/notifications/'; 
+// to pass to notifications module
+import apiFetch from '@wordpress/api-fetch'; 
+import { useState } from '@wordpress/element';
+
 const Notices = () => {
 	if ('undefined' === typeof noticesStore) {
 		return null;
@@ -62,6 +68,16 @@ const AppBody = (props) => {
 			)}
 		>
 			<Header />
+			<NewfoldNotifications
+				apiFetch={apiFetch}
+				classnames={classnames} 
+				context='web-plugin'
+				filter={filter}
+				page={hashedPath}
+				resturl={window.WPPW.resturl}
+				useEffect={useEffect}
+				useState={useState}
+			/>
 			<div className="hgwp-app-body">
 				<div className="hgwp-app-body-inner">
 					<ErrorBoundary FallbackComponent={<ErrorCard />}>
