@@ -13,6 +13,7 @@ import { useEffect } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import { store as noticesStore } from '@wordpress/notices';
 import { setActiveSubnav } from './util/helpers';
+import { filter } from 'lodash';
 
 // component sourced from module
 import { default as NewfoldNotifications } from '../../vendor/newfold-labs/wp-module-notifications/assets/js/components/notifications/'; 
@@ -54,6 +55,8 @@ const handlePageLoad = () => {
 };
 
 const AppBody = (props) => {
+	const location = useLocation();
+	const hashedPath = '#' + location.pathname;
 	const { booted, hasError } = useContext(AppStore);
 
 	handlePageLoad();
@@ -71,10 +74,10 @@ const AppBody = (props) => {
 			<NewfoldNotifications
 				apiFetch={apiFetch}
 				classnames={classnames} 
-				context='web-plugin'
+				context='hostgator-plugin'
 				filter={filter}
 				page={hashedPath}
-				resturl={window.WPPW.resturl}
+				resturl={window.HGWP.resturl}
 				useEffect={useEffect}
 				useState={useState}
 			/>
