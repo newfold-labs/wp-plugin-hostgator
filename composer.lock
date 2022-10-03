@@ -214,23 +214,23 @@
         },
         {
             "name": "newfold-labs/wp-module-loader",
-            "version": "1.0.8",
+            "version": "1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-loader.git",
-                "reference": "eea4e9755d3f82b8b7ba3974217d80fe5e945e2b"
+                "reference": "97a3c90b06f224581cd119d3a5cf0e064518c311"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-loader/zipball/eea4e9755d3f82b8b7ba3974217d80fe5e945e2b",
-                "reference": "eea4e9755d3f82b8b7ba3974217d80fe5e945e2b",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-loader/zipball/97a3c90b06f224581cd119d3a5cf0e064518c311",
+                "reference": "97a3c90b06f224581cd119d3a5cf0e064518c311",
                 "shasum": ""
             },
             "require": {
                 "newfold-labs/container": "^1.2",
+                "wp-forge/collection": "^1.0",
                 "wp-forge/fluent": "^1.0",
-                "wp-forge/wp-options": "^1.0",
-                "wpscholar/collection": "^1.0"
+                "wp-forge/wp-options": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -253,10 +253,10 @@
             ],
             "description": "A module that handles registration and management of Newfold modules used within our WordPress plugins.",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-loader/tree/1.0.8",
+                "source": "https://github.com/newfold-labs/wp-module-loader/tree/1.0.9",
                 "issues": "https://github.com/newfold-labs/wp-module-loader/issues"
             },
-            "time": "2022-08-10T15:08:33+00:00"
+            "time": "2022-09-30T20:32:35+00:00"
         },
         {
             "name": "newfold-labs/wp-module-marketplace",
@@ -392,7 +392,8 @@
             ],
             "description": "Prevents passwords exposed in data breaches from being used and encourages better password hygiene.",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-secure-passwords/tree/1.1.0"
+                "source": "https://github.com/newfold-labs/wp-module-secure-passwords/tree/1.1.0",
+                "issues": "https://github.com/newfold-labs/wp-module-secure-passwords/issues"
             },
             "time": "2022-09-27T15:14:06+00:00"
         },
@@ -437,6 +438,43 @@
                 "issues": "https://github.com/newfold-labs/wp-module-sso/issues"
             },
             "time": "2022-07-15T18:33:14+00:00"
+        },
+        {
+            "name": "wp-forge/collection",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wp-forge/collection.git",
+                "reference": "e304ddc0130d466dcc55e3a8dee79f0d745ca47a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wp-forge/collection/zipball/e304ddc0130d466dcc55e3a8dee79f0d745ca47a",
+                "reference": "e304ddc0130d466dcc55e3a8dee79f0d745ca47a",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "WP_Forge\\Collection\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Micah Wood",
+                    "email": "micah@wpscholar.com"
+                }
+            ],
+            "description": "A PHP utility class for manipulating collections.",
+            "support": {
+                "issues": "https://github.com/wp-forge/collection/issues",
+                "source": "https://github.com/wp-forge/collection/tree/1.0.2"
+            },
+            "time": "2022-08-26T17:42:31+00:00"
         },
         {
             "name": "wp-forge/fluent",
@@ -635,44 +673,6 @@
                 "source": "https://github.com/wp-forge/wp-upgrade-handler/tree/1.0"
             },
             "time": "2020-05-21T00:04:44+00:00"
-        },
-        {
-            "name": "wpscholar/collection",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/wpscholar/collection.git",
-                "reference": "3011b28e5e627ea6bc131ecfa93d78210d107415"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/wpscholar/collection/zipball/3011b28e5e627ea6bc131ecfa93d78210d107415",
-                "reference": "3011b28e5e627ea6bc131ecfa93d78210d107415",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "wpscholar\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Micah Wood",
-                    "email": "micah@wpscholar.com"
-                }
-            ],
-            "description": "A PHP utility class for manipulating collections.",
-            "support": {
-                "issues": "https://github.com/wpscholar/collection/issues",
-                "source": "https://github.com/wpscholar/collection/tree/1.0.1"
-            },
-            "abandoned": true,
-            "time": "2022-03-22T10:54:37+00:00"
         },
         {
             "name": "wpscholar/url",
