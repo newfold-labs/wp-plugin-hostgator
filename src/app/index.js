@@ -13,6 +13,13 @@ import { useEffect } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import { store as noticesStore } from '@wordpress/notices';
 import { setActiveSubnav } from './util/helpers';
+import { filter } from 'lodash';
+
+// component sourced from module
+import { default as NewfoldNotifications } from '../../vendor/newfold-labs/wp-module-notifications/assets/js/components/notifications/'; 
+// to pass to notifications module
+import apiFetch from '@wordpress/api-fetch'; 
+import { useState } from '@wordpress/element';
 
 const Notices = () => {
 	if ('undefined' === typeof noticesStore) {
@@ -48,6 +55,8 @@ const handlePageLoad = () => {
 };
 
 const AppBody = (props) => {
+	const location = useLocation();
+	const hashedPath = '#' + location.pathname;
 	const { booted, hasError } = useContext(AppStore);
 
 	handlePageLoad();
@@ -62,6 +71,16 @@ const AppBody = (props) => {
 			)}
 		>
 			<Header />
+			<NewfoldNotifications
+				apiFetch={apiFetch}
+				classnames={classnames} 
+				context='hostgator-plugin'
+				filter={filter}
+				page={hashedPath}
+				resturl={window.HGWP.resturl}
+				useEffect={useEffect}
+				useState={useState}
+			/>
 			<div className="hgwp-app-body">
 				<div className="hgwp-app-body-inner">
 					<ErrorBoundary FallbackComponent={<ErrorCard />}>
