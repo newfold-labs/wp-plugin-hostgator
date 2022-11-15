@@ -77,23 +77,6 @@ describe('Marketplace Page', function () {
 			.and('include', '_blank');
 	});
 
-	// Not enough products in fixture to require load more button.
-	it.skip('Load more button loads more products', () => {
-
-		cy.findByRole('tab', { name: 'Services' } ).click();
-		cy.wait(300);
-
-		cy.get('.marketplace-item').should('have.length', 12);
-		cy.contains('button', 'Load More');
-		cy.get('.marketplaceList button')
-			.scrollIntoView()
-			.click();
-		cy.wait(300);
-
-		cy.get('.marketplace-item').should('have.length', 13);
-	});
-
-	// Test passes locally but fails in github action
 	it('Category Tab Filters properly', () => {
 		
 		cy.findByRole('tab', { name: 'Services' } ).click();
@@ -111,6 +94,21 @@ describe('Marketplace Page', function () {
 			.scrollIntoView()
 			.should('be.visible')
 			.should('have.text', 'Yoast Local SEO');
+	});
+
+	it('Load more button loads more products', () => {
+
+		cy.findByRole('tab', { name: 'Services' } ).click();
+		cy.wait(300);
+
+		cy.get('.marketplace-item').should('have.length', 12);
+		cy.contains('button', 'Load More');
+		cy.get('.marketplace-list button')
+			.scrollIntoView()
+			.click();
+		cy.wait(300);
+
+		cy.get('.marketplace-item').should('have.length', 13);
 	});
 
 	it('Category tabs update path', () => {
