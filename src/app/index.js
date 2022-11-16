@@ -72,14 +72,18 @@ const AppBody = (props) => {
 		>
 			<Header />
 			<NewfoldNotifications
-				apiFetch={apiFetch}
-				classnames={classnames} 
-				context='hostgator-plugin'
-				filter={filter}
-				page={hashedPath}
-				resturl={window.HGWP.resturl}
-				useEffect={useEffect}
-				useState={useState}
+				constants={{
+					context: 'hostgator-plugin',
+					page: hashedPath,
+					resturl: window.HGWP.resturl
+				}}
+				methods={{
+					apiFetch,
+					classnames,
+					filter,
+					useState,
+					useEffect
+				}}
 			/>
 			<div className="hgwp-app-body">
 				<div className="hgwp-app-body-inner">
