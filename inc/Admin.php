@@ -55,7 +55,7 @@ final class Admin {
 	/**
 	 * Filter locale for plugin
 	 * This updates php l10n to use pt_BR for all pt
-	 * 
+	 *
 	 * @param  string $locale - locale string
 	 * @return string updated locale
 	 */
@@ -66,7 +66,7 @@ final class Admin {
 	/**
 	 * Filter locale for plugin script
 	 * This updates js l10n to use pt_BR for all pt
-	 * 
+	 *
 	 * @param  string $file - file script is loading
 	 * @param  string $handle - script handle
 	 * @param  string $domain - text domain
@@ -75,8 +75,8 @@ final class Admin {
 	public static function load_script_locale_filter( $file, $handle, $domain ) {
 		// scope to just our script or our text-domain
 		if (
-			$handle === 'hostgator-script' ||
-			$domain === 'wp-plugin-hostgator'
+			'hostgator-script' === $handle ||
+			'wp-plugin-hostgator' === $domain
 		) {
 			$file = self::force_BR_for_pt( $file );
 		}
@@ -85,7 +85,7 @@ final class Admin {
 
 	/**
 	 * Replace all pt locales with brazil
-	 * 
+	 *
 	 * @param  string $locale - locale string
 	 * @return string updated locale
 	 */
