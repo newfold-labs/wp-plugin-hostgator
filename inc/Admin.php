@@ -55,25 +55,22 @@ final class Admin {
 	/**
 	 * Filter locale for plugin
 	 * This updates php l10n to use pt_BR for all pt
+	 * 
+	 * @param  string $locale - locale string
+	 * @return string updated locale
 	 */
 	public static function locale_filter( $locale ) {
-
-		switch ($locale){
-			// set all Portuguese locales to use Brazil Portuguese
-			// until we have more specific translation files per locale
-			case 'pt_PT':
-			case 'pt_AO':
-			case 'pt_PT_ao90':
-				$locale = 'pt_BR';
-				break;
-		}
-
-		return $locale;
+		return self::force_BR_for_pt( $locale );
 	}
 
 	/**
 	 * Filter locale for plugin script
 	 * This updates js l10n to use pt_BR for all pt
+	 * 
+	 * @param  string $file - file script is loading
+	 * @param  string $handle - script handle
+	 * @param  string $domain - text domain
+	 * @return string updated locale
 	 */
 	public static function load_script_locale_filter( $file, $handle, $domain ) {
 		// scope to just our script or our text-domain
@@ -81,13 +78,23 @@ final class Admin {
 			$handle === 'hostgator-script' ||
 			$domain === 'wp-plugin-hostgator'
 		) {
-			$file = str_replace(
-				array( 'pt_PT', 'pt_AO', 'pt_PT_ao90' ),
-				'pt_BR',
-				$file
-			);
+			$file = self::force_BR_for_pt( $file );
 		}
 		return $file;
+	}
+
+	/**
+	 * Replace all pt locales with brazil
+	 * 
+	 * @param  string $locale - locale string
+	 * @return string updated locale
+	 */
+	public static function force_BR_for_pt( $locale ) {
+		return str_replace(
+			array( 'pt_PT', 'pt_AO', 'pt_PT_ao90' ),
+			'pt_BR',
+			$locale
+		);
 	}
 
 	/**
@@ -248,7 +255,7 @@ final class Admin {
 	/**
 	 * Filter WordPress Admin Footer Text "Thank you for creating with..."
 	 *
-	 * @param string $footer_text footer text
+	 * @param  string $footer_text footer text
 	 * @return string
 	 */
 	public static function add_brand_to_admin_footer( $footer_text ) {
