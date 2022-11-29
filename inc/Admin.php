@@ -26,6 +26,9 @@ final class Admin {
 		\add_filter( 'plugin_action_links_wp-plugin-hostgator/wp-plugin-hostgator.php', array( __CLASS__, 'actions' ) );
 		/* Add inline style to hide subnav link */
 		\add_action( 'admin_head', array( __CLASS__, 'admin_nav_style' ) );
+		/* Filter plugin locale */
+		\add_filter( 'plugin_locale', array( __CLASS__, 'locale_filter' ) );
+		\add_filter( 'load_script_translation_file', array( __CLASS__, 'load_script_locale_filter' ), 10, 3 );
 
 		if ( isset( $_GET['page'] ) && strpos( filter_input( INPUT_GET, 'page', FILTER_SANITIZE_STRING ), 'hostgator' ) >= 0 ) { // phpcs:ignore
 			\add_action( 'admin_footer_text', array( __CLASS__, 'add_brand_to_admin_footer' ) );
@@ -47,6 +50,44 @@ final class Admin {
 			'hostgator#/settings'    => __( 'Settings', 'wp-plugin-hostgator' ),
 			'hostgator#/help'        => __( 'Help', 'wp-plugin-hostgator' ),
 		);
+	}
+
+	/**
+	 * Filter locale for plugin
+	 * This updates php l10n to use pt_BR for all pt
+	 */
+	public static function locale_filter( $locale ) {
+
+		switch ($locale){
+			// set all Portuguese locales to use Brazil Portuguese
+			// until we have more specific translation files per locale
+			case 'pt_PT':
+			case 'pt_AO':
+			case 'pt_PT_ao90':
+				$locale = 'pt_BR';
+				break;
+		}
+
+		return $locale;
+	}
+
+	/**
+	 * Filter locale for plugin script
+	 * This updates js l10n to use pt_BR for all pt
+	 */
+	public static function load_script_locale_filter( $file, $handle, $domain ) {
+		// scope to just our script or our text-domain
+		if (
+			$handle === 'hostgator-script' ||
+			$domain === 'wp-plugin-hostgator'
+		) {
+			$file = str_replace(
+				array( 'pt_PT', 'pt_AO', 'pt_PT_ao90' ),
+				'pt_BR',
+				$file
+			);
+		}
+		return $file;
 	}
 
 	/**
@@ -178,6 +219,12 @@ final class Admin {
 		\load_plugin_textdomain(
 			'wp-plugin-hostgator',
 			false,
+			HOSTGATOR_PLUGIN_DIR . '/languages'
+		);
+
+		\load_script_textdomain(
+			'hostgator-script',
+			'wp-plugin-hostgator',
 			HOSTGATOR_PLUGIN_DIR . '/languages'
 		);
 	}
