@@ -26,6 +26,9 @@ final class Admin {
 		\add_filter( 'plugin_action_links_wp-plugin-hostgator/wp-plugin-hostgator.php', array( __CLASS__, 'actions' ) );
 		/* Add inline style to hide subnav link */
 		\add_action( 'admin_head', array( __CLASS__, 'admin_nav_style' ) );
+		/* Filter plugin locale */
+		\add_filter( 'plugin_locale', array( __CLASS__, 'locale_filter' ) );
+		\add_filter( 'load_script_translation_file', array( __CLASS__, 'load_script_locale_filter' ), 10, 3 );
 
 		if ( isset( $_GET['page'] ) && strpos( filter_input( INPUT_GET, 'page', FILTER_SANITIZE_STRING ), 'hostgator' ) >= 0 ) { // phpcs:ignore
 			\add_action( 'admin_footer_text', array( __CLASS__, 'add_brand_to_admin_footer' ) );
@@ -46,6 +49,51 @@ final class Admin {
 			'hostgator#/performance' => __( 'Performance', 'wp-plugin-hostgator' ),
 			'hostgator#/settings'    => __( 'Settings', 'wp-plugin-hostgator' ),
 			'hostgator#/help'        => __( 'Help', 'wp-plugin-hostgator' ),
+		);
+	}
+
+	/**
+	 * Filter locale for plugin
+	 * This updates php l10n to use pt_BR for all pt
+	 *
+	 * @param  string $locale - locale string
+	 * @return string updated locale
+	 */
+	public static function locale_filter( $locale ) {
+		return self::force_BR_for_pt( $locale );
+	}
+
+	/**
+	 * Filter locale for plugin script
+	 * This updates js l10n to use pt_BR for all pt
+	 *
+	 * @param  string $file - file script is loading
+	 * @param  string $handle - script handle
+	 * @param  string $domain - text domain
+	 * @return string updated locale
+	 */
+	public static function load_script_locale_filter( $file, $handle, $domain ) {
+		// scope to just our script or our text-domain
+		if (
+			'hostgator-script' === $handle ||
+			'wp-plugin-hostgator' === $domain
+		) {
+			$file = self::force_BR_for_pt( $file );
+		}
+		return $file;
+	}
+
+	/**
+	 * Replace all pt locales with brazil
+	 *
+	 * @param  string $locale - locale string
+	 * @return string updated locale
+	 */
+	public static function force_BR_for_pt( $locale ) {
+		return str_replace(
+			array( 'pt_PT', 'pt_AO', 'pt_PT_ao90' ),
+			'pt_BR',
+			$locale
 		);
 	}
 
@@ -180,6 +228,12 @@ final class Admin {
 			false,
 			HOSTGATOR_PLUGIN_DIR . '/languages'
 		);
+
+		\load_script_textdomain(
+			'hostgator-script',
+			'wp-plugin-hostgator',
+			HOSTGATOR_PLUGIN_DIR . '/languages'
+		);
 	}
 
 	/**
@@ -201,7 +255,7 @@ final class Admin {
 	/**
 	 * Filter WordPress Admin Footer Text "Thank you for creating with..."
 	 *
-	 * @param string $footer_text footer text
+	 * @param  string $footer_text footer text
 	 * @return string
 	 */
 	public static function add_brand_to_admin_footer( $footer_text ) {
