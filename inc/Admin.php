@@ -87,7 +87,7 @@ final class Admin {
 
 	/**
 	 * Wrapper function for locale overrides
-	 * 
+	 *
 	 * @param  string $locale - locale string
 	 * @return string updated locale
 	 */
@@ -107,10 +107,10 @@ final class Admin {
 	 */
 	public static function force_BR_for_pt( $locale ) {
 		return str_replace(
-			array( 
+			array(
 				'pt_PT', // Portugal
 				'pt_AO', // Angola
-				'pt_PT_ao90' // AO90
+				'pt_PT_ao90', // AO90
 			),
 			'pt_BR', // Brazil
 			$locale
@@ -125,7 +125,7 @@ final class Admin {
 	 */
 	public static function force_MX_for_es( $locale ) {
 		return str_replace(
-			array( 
+			array(
 				'es_AR', // Argentina
 				'es_CO', // Colombia
 				'es_EC', // Ecuador
