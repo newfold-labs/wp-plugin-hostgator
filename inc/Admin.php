@@ -61,11 +61,7 @@ final class Admin {
 	 * @return string updated locale
 	 */
 	public static function locale_filter( $locale ) {
-		return self::force_MX_for_es(
-			self::force_BR_for_pt(
-				$locale
-			)
-		);
+		return self::locale_overrides( $locale );
 	}
 
 	/**
@@ -84,13 +80,23 @@ final class Admin {
 			'hostgator-script' === $handle ||
 			'wp-plugin-hostgator' === $domain
 		) {
-			$file = self::force_MX_for_es(
-				self::force_BR_for_pt(
-					$file
-				)
-			);
+			$file = self::locale_overrides( $file );
 		}
 		return $file;
+	}
+
+	/**
+	 * Wrapper function for locale overrides
+	 * 
+	 * @param  string $locale - locale string
+	 * @return string updated locale
+	 */
+	public static function locale_overrides( $locale ) {
+		return self::force_MX_for_es(
+			self::force_BR_for_pt(
+				$locale
+			)
+		);
 	}
 
 	/**
