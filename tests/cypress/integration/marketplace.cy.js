@@ -23,8 +23,8 @@ describe('Marketplace Page', function () {
 		cy.checkA11y('.hgwp-app-body');
 	});
 
-	it('Product grid has 6 items', () => {
-		cy.get('.marketplace-item').should('have.length', 3);
+	it('Product grid has 5 items', () => {
+		cy.get('.marketplace-item').should('have.length', 5);
 	});
 
 	it('First product card renders correctly', () => {
@@ -77,37 +77,38 @@ describe('Marketplace Page', function () {
 			.and('include', '_blank');
 	});
 
-	// Not enough products in fixture to require load more button.
-	it.skip('Load more button loads more products', () => {
-		cy.get('.marketplace-item').should('have.length', 12);
-
-		cy.contains('button', 'Load More');
-
-		cy.get('.marketplaceList button')
-			.scrollIntoView()
-			.click();
-
-		cy.wait(300);
-
-		cy.get('.marketplace-item').should('have.length', 19);
-	});
-
-	// Test passes locally but fails in github action
 	it('Category Tab Filters properly', () => {
 		
 		cy.findByRole('tab', { name: 'Services' } ).click();
-		cy.get('.marketplace-item').should('have.length', 4);
+		cy.get('.marketplace-item').should('have.length', 12);
+		cy.wait(300);
 		cy.get('#marketplace-item-003c9022-348b-4754-b27c-9452dd6eac62 h2')
 			.scrollIntoView()
 			.should('be.visible')
 			.should('have.text', 'Web Design Services');
 		
 		cy.findByRole('tab', { name: 'SEO' } ).click();
-		cy.get('.marketplace-item').should('have.length', 4);
+		cy.get('.marketplace-item').should('have.length', 5);
+		cy.wait(300);
 		cy.get('#marketplace-item-00c3eae2-9f6c-4e13-8674-599fe4a05cc0 h2')
 			.scrollIntoView()
 			.should('be.visible')
 			.should('have.text', 'Yoast Local SEO');
+	});
+
+	it('Load more button loads more products', () => {
+
+		cy.findByRole('tab', { name: 'Services' } ).click();
+		cy.wait(300);
+
+		cy.get('.marketplace-item').should('have.length', 12);
+		cy.contains('button', 'Load More');
+		cy.get('.marketplace-list button')
+			.scrollIntoView()
+			.click();
+		cy.wait(300);
+
+		cy.get('.marketplace-item').should('have.length', 13);
 	});
 
 	it('Category tabs update path', () => {

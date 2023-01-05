@@ -2,7 +2,7 @@
     <img src="https://www.hostgator.com/static/cs/img/logos/nav-for-light.svg" alt="HostGator Logo" title="HostGator" align="right" height="32" />
 </a>
 
-[![Version Number](https://img.shields.io/github/v/release/newfold-labs/wp-plugin-hostgator?color=21a0ed&labelColor=333333)](https://github.com/newfold/wp-plugin-hostgator/releases)
+[![Version Number](https://img.shields.io/github/v/release/newfold-labs/wp-plugin-hostgator?color=21a0ed&labelColor=333333)](https://github.com/newfold-labs/wp-plugin-hostgator/releases)
 [![Lint PHP](https://github.com/newfold-labs/wp-plugin-hostgator/actions/workflows/lint-php.yml/badge.svg?branch=main)](https://github.com/newfold-labs/wp-plugin-hostgator/actions/workflows/lint-php.yml)
 [![Lint YML](https://github.com/newfold-labs/wp-plugin-hostgator/actions/workflows/lint-yml.yml/badge.svg?branch=main)](https://github.com/newfold-labs/wp-plugin-hostgator/actions/workflows/lint-yml.yml)
 [![WP Internationalization](https://github.com/newfold-labs/wp-plugin-hostgator/actions/workflows/wp-i18n.yml/badge.svg?branch=main)](https://github.com/newfold-labs/wp-plugin-hostgator/actions/workflows/wp-i18n.yml)
