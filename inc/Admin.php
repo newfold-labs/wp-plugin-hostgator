@@ -92,11 +92,16 @@ final class Admin {
 	 * @return string updated locale
 	 */
 	public static function locale_overrides( $locale ) {
-		return self::force_MX_for_es(
-			self::force_BR_for_pt(
-				$locale
-			)
-		);
+		// Check for Spanish locale
+		if ( false !== strpos( $locale, 'es_' ) ) {
+			return self::force_MX_for_es( $locale );
+		}
+		// Check for Portuguese locale
+		if ( false !== strpos( $locale, 'pt_' ) ) {
+			return self::force_BR_for_pt( $locale );
+		}
+		// Return unchanged locale if not already updated
+		return $locale;
 	}
 
 	/**
