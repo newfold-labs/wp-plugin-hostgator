@@ -29,14 +29,10 @@
             "only": [
                 "newfold-labs/*"
             ]
-        },
-        "bluehost-satis": {
-            "type": "composer",
-            "url": "https://bluehost.github.io/satis/"
         }
     },
     "require-dev": {
-        "bluehost/wp-php-standards": "^1.1",
+        "newfold-labs/wp-php-standards": "^1.2",
         "wp-cli/i18n-command": "^2.2",
         "wp-phpunit/wp-phpunit": "^5.8"
     },

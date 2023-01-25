@@ -55,7 +55,7 @@ const ContentSettings = () => {
 		);
 	};
 	const contentRevisionsNoticeText = () => {
-		return 'Post revision setting saved';
+		return __('Post revision setting saved', 'wp-plugin-hostgator');
 	};
 	const emptyTrashDaysLabelText = () => {
 		// `Empty trash every ${numTrashWeeks} week(s).`
@@ -81,7 +81,7 @@ const ContentSettings = () => {
 		);
 	};
 	const emptyTrashDaysNoticeText = () => {
-		return 'Trash setting saved';
+		return __('Trash setting saved', 'wp-plugin-hostgator');
 	};
 
 	useUpdateEffect(() => {

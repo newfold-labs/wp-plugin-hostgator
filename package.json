@@ -2,7 +2,7 @@
     "name": "wp-plugin-hostgator",
     "description": "WordPress plugin that integrates your WordPress site with the HostGator control panel, including performance, security, and update features.",
     "license": "GPL-2.0-or-later",
-    "version": "1.2.4",
+    "version": "1.2.5",
     "private": true,
     "author": {
         "name": "Evan Mullins",

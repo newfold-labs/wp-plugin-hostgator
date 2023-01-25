@@ -54,18 +54,20 @@ final class Admin {
 
 	/**
 	 * Filter locale for plugin
-	 * This updates php l10n to use pt_BR for all pt
+	 * This updates php l10n to use pt_BR for all pt (Portuguese)
+	 * or es_MX for all es (Spanish)
 	 *
 	 * @param  string $locale - locale string
 	 * @return string updated locale
 	 */
 	public static function locale_filter( $locale ) {
-		return self::force_BR_for_pt( $locale );
+		return self::locale_overrides( $locale );
 	}
 
 	/**
 	 * Filter locale for plugin script
-	 * This updates js l10n to use pt_BR for all pt
+	 * This updates js l10n to use pt_BR for all pt (Portuguese)
+	 * or es_MX for all es (Spanish)
 	 *
 	 * @param  string $file - file script is loading
 	 * @param  string $handle - script handle
@@ -78,21 +80,71 @@ final class Admin {
 			'hostgator-script' === $handle ||
 			'wp-plugin-hostgator' === $domain
 		) {
-			$file = self::force_BR_for_pt( $file );
+			$file = self::locale_overrides( $file );
 		}
 		return $file;
 	}
 
 	/**
-	 * Replace all pt locales with brazil
+	 * Wrapper function for locale overrides
+	 *
+	 * @param  string $locale - locale string
+	 * @return string updated locale
+	 */
+	public static function locale_overrides( $locale ) {
+		// Check for Spanish locale
+		if ( false !== strpos( $locale, 'es_' ) ) {
+			return self::force_MX_for_es( $locale );
+		}
+		// Check for Portuguese locale
+		if ( false !== strpos( $locale, 'pt_' ) ) {
+			return self::force_BR_for_pt( $locale );
+		}
+		// Return unchanged locale if not already updated
+		return $locale;
+	}
+
+	/**
+	 * Replace all Portuguese locales with Brazil
 	 *
 	 * @param  string $locale - locale string
 	 * @return string updated locale
 	 */
 	public static function force_BR_for_pt( $locale ) {
 		return str_replace(
-			array( 'pt_PT', 'pt_AO', 'pt_PT_ao90' ),
-			'pt_BR',
+			array(
+				'pt_PT', // Portugal
+				'pt_AO', // Angola
+				'pt_PT_ao90', // AO90
+			),
+			'pt_BR', // Brazil
+			$locale
+		);
+	}
+
+	/**
+	 * Replace all Spanish locales with Mexico
+	 *
+	 * @param  string $locale - locale string
+	 * @return string updated locale
+	 */
+	public static function force_MX_for_es( $locale ) {
+		return str_replace(
+			array(
+				'es_AR', // Argentina
+				'es_CO', // Colombia
+				'es_EC', // Ecuador
+				'es_DO', // Dominican Republic
+				'es_PE', // Peru
+				'es_CL', // Chile
+				'es_UY', // Uruguay
+				'es_PR', // Puerto Rico
+				'es_GT', // Guatemala
+				'es_ES', // Espanol / Spain
+				'es_CR', // Costa Rica
+				'es_VE', // Venezuela
+			),
+			'es_MX', // Mexico
 			$locale
 		);
 	}
