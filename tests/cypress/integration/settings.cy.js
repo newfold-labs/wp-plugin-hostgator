@@ -42,6 +42,8 @@ describe('Settings Page', function () {
 	});
 
 	it('Everything Auto Update Toggle Works', () => {
+		cy.intercept('POST', /hostgator(\/|%2F)v1(\/|%2F)settings/).as('update');
+
 		cy.get('.autoupdate-all-toggle input[type="checkbox"]').check();
 		cy.get('.autoupdate-all-toggle input[type="checkbox"]').should('be.checked');
 		cy.get('.autoupdate-core-toggle input[type="checkbox"]').should('be.disabled').should('be.checked');
@@ -56,7 +58,7 @@ describe('Settings Page', function () {
 		cy.get('.autoupdate-core-toggle input[type="checkbox"]').uncheck();
 		cy.get('.autoupdate-core-toggle input[type="checkbox"]').should('not.be.disabled').should('not.be.checked');
 		cy.get('.autoupdate-all-toggle input[type="checkbox"]').should('not.be.checked');
-		cy.wait(100);
+		cy.wait('@update');
 		cy
 			.get('.edit-site-notices ')
 			.contains('.components-snackbar__content', 'Core')
@@ -65,15 +67,23 @@ describe('Settings Page', function () {
 		cy.get('.autoupdate-plugin-toggle input[type="checkbox"]').uncheck();
 		cy.get('.autoupdate-plugin-toggle input[type="checkbox"]').should('not.be.disabled').should('not.be.checked');
 		cy.get('.autoupdate-all-toggle input[type="checkbox"]').should('not.be.checked');
-		cy.wait(100);
+		cy.wait('@update');
 		cy
 			.get('.edit-site-notices')
 			.contains('.components-snackbar__content', 'Plugins')
 			.should('be.visible');
 
-		cy.get('.autoupdate-plugin-toggle input[type="checkbox"]').check();
-		cy.get('.autoupdate-core-toggle input[type="checkbox"]').check();
-		cy.wait(100);
+		cy.get('.autoupdate-theme-toggle input[type="checkbox"]').uncheck();
+		cy.get('.autoupdate-theme-toggle input[type="checkbox"]').should('not.be.disabled').should('not.be.checked');
+		cy.get('.autoupdate-all-toggle input[type="checkbox"]').should('not.be.checked');
+		cy.wait('@update');
+		cy
+			.get('.edit-site-notices')
+			.contains('.components-snackbar__content', 'Theme')
+			.should('be.visible');
+		
+		cy.get('.autoupdate-all-toggle input[type="checkbox"]').check();
+		cy.wait('@update');
 		cy
 			.get('.edit-site-notices')
 			.contains('.components-snackbar__content', 'Everything')
@@ -87,9 +97,11 @@ describe('Settings Page', function () {
 	});
 
 	it('Content Settings Work', () => {
+		cy.intercept('POST', /hostgator(\/|%2F)v1(\/|%2F)settings/).as('update');
+
 		cy.get('.content-revisions-select select').select('20');
 		cy.get('.content-revisions-select select').select('1');
-		cy.wait(100);
+		cy.wait('@update');
 		cy
 			.get('.edit-site-notices')
 			.contains('.components-snackbar__content', 'Post revision setting saved')
@@ -105,7 +117,7 @@ describe('Settings Page', function () {
 			.should('be.visible');
 
 		cy.get('.content-revisions-select select').select('40');
-		cy.wait(100);
+		cy.wait('@update');
 		cy
 			.get('.edit-site-notices')
 			.contains('.components-snackbar__content', 'Post revision setting saved')
@@ -114,10 +126,12 @@ describe('Settings Page', function () {
 	});
 
 	it('Comment Settings Work', () => {
+		cy.intercept('POST', /hostgator(\/|%2F)v1(\/|%2F)settings/).as('update');
+		
 		cy.get('.disable-comments-toggle input[type="checkbox"]').uncheck();
 		cy.get('.close-comments-days-select select').should('be.disabled');
 		cy.get('.disable-comments-toggle input[type="checkbox"]').check();
-		cy.wait(100);
+		cy.wait('@update');
 		cy
 			.get('.edit-site-notices')
 			.contains('.components-snackbar__content', 'Old post comments')
@@ -126,7 +140,7 @@ describe('Settings Page', function () {
 		cy.get('.close-comments-days-select select').should('not.be.disabled');
 		cy.get('.close-comments-days-select select').select('3');
 		cy.get('.close-comments-days-select label').contains('span', '3').should('be.visible');
-		cy.wait(100);
+		cy.wait('@update');
 		cy
 			.get('.edit-site-notices')
 			.contains('.components-snackbar__content', 'comments')
