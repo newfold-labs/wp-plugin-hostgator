@@ -5,7 +5,7 @@ describe('Plugins Premium Tab', () => {
 	before(() => {
 		cy.intercept({
 			method: 'GET',
-			url: '**/newfold-marketplace/**'
+			url: /newfold-marketplace(\/|%2F)v1(\/|%2F)marketplace/
 		}, {
 			fixture: 'products'
 		}).as('products');
@@ -62,19 +62,14 @@ describe('Plugins Premium Tab', () => {
             .should('be.visible')
             .should('have.attr', 'href')
 
-        // secondary action (if present)
-        cy.get('.plugin-card:nth-child(1)')
-            .find('.nfd-plugin-card-actions').then((actions) => {
-                if (actions.children().length > 1) {
-                    cy.get(actions.children('a:last-of-type'))
-                        .scrollIntoView()
-                        .should('be.visible')
-                        .should('have.text', 'More Details')
-                        .should('have.attr', 'href');
-                } else {
-                    cy.log("There's no secondary action in this product");
-                }
-            })
+        // secondary action
+        cy.get('.plugin-card:first-of-type')
+            .find('.nfd-plugin-card-actions a:last-of-type')
+            .scrollIntoView()
+            .should('be.visible')
+            .should('have.text', 'More Details')
+            .should('have.attr', 'href')
+
     })
 
 })
