@@ -6,6 +6,8 @@ describe('Plugins Premium Tab', () => {
 		cy.intercept({
 			method: 'GET',
 			url: '**/newfold-marketplace/**'
+		}, {
+			fixture: 'products'
 		}).as('products');
         cy.visit('/wp-admin/plugin-install.php?tab=premium-marketplace');
 		cy.wait('@products');
