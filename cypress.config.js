@@ -5,6 +5,7 @@ module.exports = defineConfig({
     wpUsername: 'admin',
     wpPassword: 'password',
   },
+	experimentalFetchPolyfill: true,
   fixturesFolder: 'tests/cypress/fixtures',
   screenshotsFolder: 'tests/cypress/screenshots',
   video: false,
