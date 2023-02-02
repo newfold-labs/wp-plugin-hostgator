@@ -8,8 +8,9 @@ describe('Marketplace Page', function () {
 			url: '**newfold-marketplace**'
 		}, {
 			fixture: 'products'
-		}).as('marketplace');
+		}).as('products');
 		cy.visit('/wp-admin/admin.php?page=hostgator#/marketplace');
+		cy.wait('@products');
 	});
 	
 	it('Exists', () => {
