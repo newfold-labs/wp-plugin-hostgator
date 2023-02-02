@@ -2,7 +2,7 @@
 
 describe('Plugins Premium Tab', () => {
 
-    before(() => {
+	before(() => {
 		cy.intercept({
 			method: 'GET',
 			url: '**/newfold-marketplace/**'
