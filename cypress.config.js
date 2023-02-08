@@ -11,6 +11,13 @@ module.exports = defineConfig({
   videosFolder: 'tests/cypress/videos',
   videoUploadOnPasses: false,
   chromeWebSecurity: false,
+	viewportWidth: 1024,
+	viewportHeight: 768,
+	blockHosts: [
+		'*doubleclick.net',
+		'*jnn-pa.googleapis.com',
+		'*youtube.com',
+	],
   e2e: {
     // We've imported your old cypress plugins here.
     // You may want to clean this up later by importing these.
@@ -20,5 +27,6 @@ module.exports = defineConfig({
     baseUrl: 'http://localhost:8880',
     specPattern: 'tests/cypress/integration/**/*.cy.{js,jsx,ts,tsx}',
     supportFile: 'tests/cypress/support/index.js',
+    testIsolation: false,
   },
 })

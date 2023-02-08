@@ -3,22 +3,22 @@
 describe('Marketplace Page', function () {
 
 	before(() => {
-		cy.server();
 		cy.intercept({
 			method: 'GET',
-			url: '**newfold-marketplace**'
+			url: /newfold-marketplace(\/|%2F)v1(\/|%2F)marketplace/
 		}, {
-			fixture: 'products.json'
-		}).as('marketplace');
+			fixture: 'products'
+		}).as('products');
 		cy.visit('/wp-admin/admin.php?page=hostgator#/marketplace');
-		cy.injectAxe();
+		cy.wait('@products');
 	});
-
+	
 	it('Exists', () => {
 		cy.contains('button', 'Featured');
 	});
-
+	
 	it('Is Accessible', () => {
+		cy.injectAxe();
 		cy.wait(1000);
 		cy.checkA11y('.hgwp-app-body');
 	});
@@ -79,7 +79,7 @@ describe('Marketplace Page', function () {
 
 	it('Category Tab Filters properly', () => {
 		
-		cy.findByRole('tab', { name: 'Services' } ).click();
+		cy.get('.newfold-marketplace-tab-services').click();
 		cy.get('.marketplace-item').should('have.length', 12);
 		cy.wait(300);
 		cy.get('#marketplace-item-003c9022-348b-4754-b27c-9452dd6eac62 h2')
@@ -87,7 +87,7 @@ describe('Marketplace Page', function () {
 			.should('be.visible')
 			.should('have.text', 'Web Design Services');
 		
-		cy.findByRole('tab', { name: 'SEO' } ).click();
+			cy.get('.newfold-marketplace-tab-seo').click();
 		cy.get('.marketplace-item').should('have.length', 5);
 		cy.wait(300);
 		cy.get('#marketplace-item-00c3eae2-9f6c-4e13-8674-599fe4a05cc0 h2')
@@ -98,7 +98,7 @@ describe('Marketplace Page', function () {
 
 	it('Load more button loads more products', () => {
 
-		cy.findByRole('tab', { name: 'Services' } ).click();
+		cy.get('.newfold-marketplace-tab-services').click();
 		cy.wait(300);
 
 		cy.get('.marketplace-item').should('have.length', 12);
@@ -112,7 +112,7 @@ describe('Marketplace Page', function () {
 	});
 
 	it('Category tabs update path', () => {
-		cy.findByRole('tab', {name: 'Services'}).click();
+		cy.get('.newfold-marketplace-tab-services').click();
 		cy.location().should((loc) => {
 			expect(loc.hash).to.eq('#/marketplace/services')
 		});

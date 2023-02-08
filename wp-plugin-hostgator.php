@@ -4,14 +4,14 @@
  *
  * @package           HostGatorWordPressPlugin
  * @author            Newfold Digital
- * @copyright         Copyright 2021 by Newfold Digital - All rights reserved.
+ * @copyright         Copyright 2023 by Newfold Digital - All rights reserved.
  * @license           GPL-2.0-or-later
  *
  * @wordpress-plugin
- * Plugin Name:       HostGator
+ * Plugin Name:       The HostGator Plugin
  * Plugin URI:        https://hostgator.com
  * Description:       WordPress plugin that integrates a WordPress site with the HostGator control panel, including performance, security, and update features.
- * Version:           1.2.5
+ * Version:           1.2.6
  * Requires at least: 4.7
  * Requires PHP:      5.6
  * Tested up to:      6.1.1
@@ -31,7 +31,7 @@ if ( defined( 'HOSTGATOR_PLUGIN_VERSION' ) ) {
 }
 
 // Define constants
-define( 'HOSTGATOR_PLUGIN_VERSION', '1.2.5' );
+define( 'HOSTGATOR_PLUGIN_VERSION', '1.2.6' );
 define( 'HOSTGATOR_PLUGIN_FILE', __FILE__ );
 define( 'HOSTGATOR_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'HOSTGATOR_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
@@ -57,10 +57,18 @@ if ( 'plugins.php' === $pagenow ) {
 
 // Check NFD plugin incompaatibilities
 require_once HOSTGATOR_PLUGIN_DIR . '/inc/plugin-nfd-compat-check.php';
-$nfd_plugins_check                       = new NFD_Plugin_Compat_Check( HOSTGATOR_PLUGIN_FILE );
-$nfd_plugins_check->incompatible_plugins = array( 'Bluehost' => 'bluehost-wordpress-plugin/bluehost-wordpress-plugin.php' );
-$nfd_plugins_check->legacy_plugins       = array( 'MOJO Marketplace' => 'mojo-marketplace-wp-plugin/mojo-marketplace.php' );
-$pass_nfd_check                          = $nfd_plugins_check->check_plugin_requirements();
+$nfd_plugins_check = new NFD_Plugin_Compat_Check( HOSTGATOR_PLUGIN_FILE );
+// Defer to Incompatible plugin, self-deactivate
+$nfd_plugins_check->incompatible_plugins = array(
+	'The Bluehost Plugin' => 'bluehost-wordpress-plugin/bluehost-wordpress-plugin.php',
+);
+// Deactivate legacy plugin
+$nfd_plugins_check->legacy_plugins = array(
+	'The MOJO Marketplace' => 'mojo-marketplace-wp-plugin/mojo-marketplace.php',
+	'The MOJO Plugin'      => 'wp-plugin-mojo/wp-plugin-mojo.php',
+	'The Web.com Plugin'   => 'wp-plugin-web/wp-plugin-web.php',
+);
+$pass_nfd_check = $nfd_plugins_check->check_plugin_requirements();
 
 // Check PHP version before initializing to prevent errors if plugin is incompatible.
 if ( $pass_nfd_check && version_compare( PHP_VERSION, '5.3', '>=' ) ) {
