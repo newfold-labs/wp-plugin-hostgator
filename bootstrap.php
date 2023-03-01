@@ -35,8 +35,11 @@ $nfd_module_container->set(
 		function() {
 			return new Plugin(
 				array(
-					'id'   => 'hostgator',
-					'file' => HOSTGATOR_PLUGIN_FILE,
+					'id'           => 'hostgator',
+					'file'         => HOSTGATOR_PLUGIN_FILE,
+					'brand'        => get_option( 'mm_brand', 'hostgator' ),
+					'region'       => get_option( 'hg_region', 'US' ),
+					'install_date' => get_option( 'hg_plugin_install_date', false ),
 				)
 			);
 		}
