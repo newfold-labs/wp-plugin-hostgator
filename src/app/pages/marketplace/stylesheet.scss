@@ -31,13 +31,13 @@
             margin-bottom: 1.5rem;
             padding: 0rem .8rem 0 .8rem;
             border-radius: 1px;
-            background-color: var(--hgbrand-color-white);
+            background-color: var(--color-white);
             box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, .1);
 
             @media screen and (max-width: 600px) {
                 min-width: initial;
                 overflow-y: scroll;
-              }
+            }
         }
 
         .components-tab-panel__tabs-item {
@@ -47,7 +47,7 @@
             transition: all .15s ease-in-out;
 
             &:hover {
-                color: var(--hgbrand-color-secondary);
+                color: var(--color-primary-light);
             }
 
             &:last-child {
@@ -56,7 +56,7 @@
 
             &.current-tab {
                 border-bottom: 2.5px solid;
-                border-color: var(--hgbrand-color-secondary);
+                border-color: var(--color-primary-light);
                 cursor: default;
             }
 
@@ -118,16 +118,26 @@
                 margin: 0;
             }
 
+            .has-full-price {
+                .price {
+                    margin-top: 6px;
+                }
+            }
+
             .price {
-                background-color: var(--hgbrand-color-yellow);
+                background-color: var(--color-secondary);
                 clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
-                border-radius: 0.25rem;
-                color: var(--hgbrand-color-primary);
+                color: var(--color-primary);
                 font-size: .95rem;
                 font-weight: 800;
                 min-width: max-content;
                 margin-left: 0;
-                padding: 0.25rem 0.75rem;
+                padding: 0.25rem 0.85rem;
+            }
+
+            .full-price {
+                filter: grayscale(.5);
+                font-size: .8rem !important;
             }
         }
 
@@ -135,6 +145,7 @@
             flex-grow: 1;
             padding-top: 4px;
             padding-bottom: 22px;
+            line-height: 1.45;
         }
 
         .components-card__footer {

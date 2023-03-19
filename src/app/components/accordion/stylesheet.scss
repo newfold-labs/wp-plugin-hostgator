@@ -1,5 +1,5 @@
 .hgwpp .accordion {
-    border: 1px solid var(--hgbrand-color-secondary);
+    border: 1px solid var(--color-primary-light);
     margin-bottom: .6em;
     margin-top: .6em;
     opacity: .8;
@@ -12,7 +12,7 @@
     }
 
     .accordion-summary {
-        background: var(--hgbrand-color-background);
+        background: var(--color-off-white);
         cursor: pointer;
         font-weight: 700;
         padding: 10px 15px;
