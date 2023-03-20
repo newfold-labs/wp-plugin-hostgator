@@ -6,7 +6,7 @@
     "private": true,
     "author": {
         "name": "Evan Mullins",
-        "email": "evan@bluehost.com"
+        "url": "https://evanmullins.com"
     },
     "devDependencies": {
         "@automattic/babel-plugin-preserve-i18n": "^1.0.0",
