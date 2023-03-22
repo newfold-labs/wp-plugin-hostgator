@@ -14,7 +14,7 @@
  * Version:           1.2.7
  * Requires at least: 4.7
  * Requires PHP:      5.6
- * Tested up to:      6.1.1
+ * Tested up to:      6.2
  * Author:            HostGator
  * Author URI:        https://hostgator.com
  * Text Domain:       wp-plugin-hostgator
