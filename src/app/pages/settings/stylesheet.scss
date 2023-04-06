@@ -9,6 +9,13 @@
     }
 }
 
+.components-base-control  .components-base-control__help {
+    color: var(--color-text);
+    opacity: .8;
+    margin-top: .85rem;
+    font-size: .9rem;
+}
+
 .hgwpp .components-select-control__input {
     max-width: 100%;
 }
