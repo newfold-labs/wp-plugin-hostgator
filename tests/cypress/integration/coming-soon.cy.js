@@ -73,8 +73,8 @@ describe('Coming Soon', function () {
 	});
 
 	it('Displays Coming Soon on Frontend', () => {
+		cy.get('#wp-admin-bar-logout a').click({ force: true });
 		cy.logout();
-		// cy.get('#wp-admin-bar-logout a').click({ force: true });
 		cy.visit('/');
 		cy.get('body')
 			.contains('h2', 'Coming Soon')
@@ -84,7 +84,7 @@ describe('Coming Soon', function () {
 	it('Coming soon page is Accessible', () => {
 		cy.injectAxe();
 		cy.wait(500);
-		cy.checkA11y('body');
+		cy.a11y('body');
 	});
 
 	it('Launching launches site', () => {

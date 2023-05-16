@@ -10,7 +10,7 @@ describe('Settings Page', function () {
 
 	it('Is Accessible', () => {
 		cy.wait(500);
-		cy.checkA11y('.hgwp-app-body');
+		cy.a11y('.hgwp-app-body');
 	});
 
 	it('Has Auto Updates Settings', () => {
