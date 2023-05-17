@@ -24,7 +24,7 @@ describe('Plugins Premium Tab', () => {
     it('Is Accessible', () => {
 		cy.injectAxe();
 		cy.wait(1000);
-		cy.checkA11y('.nfd-premium-plugins-marketplace');
+		cy.a11y('.nfd-premium-plugins-marketplace');
 	});
 
     it('Should have products', () => {

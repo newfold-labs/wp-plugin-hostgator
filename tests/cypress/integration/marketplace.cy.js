@@ -20,7 +20,7 @@ describe('Marketplace Page', function () {
 	it('Is Accessible', () => {
 		cy.injectAxe();
 		cy.wait(1000);
-		cy.checkA11y('.hgwp-app-body');
+		cy.a11y('.hgwp-app-body');
 	});
 
 	it('Product grid has 5 items', () => {
