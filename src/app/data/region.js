@@ -40,7 +40,7 @@ const region = {
         CO: 'https://cliente.hostgator.co/emails-list',
     },
     home_find_domain: {
-        default: 'https://portal.hostgator.com/email',
+        default: 'https://portal.hostgator.com/domain/purchase/registration',
         BR: 'https://www.hostgator.com.br/registro-de-dominio/',
         MX: 'https://www.hostgator.mx/dominios/',
         CL: 'https://www.hostgator.cl/dominios/',

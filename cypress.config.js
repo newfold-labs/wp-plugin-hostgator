@@ -1,6 +1,7 @@
 const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
+  projectId: "kuks2q",
   env: {
     wpUsername: 'admin',
     wpPassword: 'password',

@@ -17,7 +17,7 @@ describe('Home Page', function () {
 
 	it('Is Accessible', () => {
 		cy.wait(500);
-		cy.checkA11y('.hgwp-app-body');
+		cy.a11y('.hgwp-app-body');
 	});
 
 	it('Web Content Section Exists', () => {

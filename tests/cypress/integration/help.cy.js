@@ -9,7 +9,7 @@ describe('Help Page', function () {
 	it('Is Accessible', () => {
 		cy.injectAxe();
 		cy.wait(500);
-		cy.checkA11y('.hgwp-app-body');
+		cy.a11y('.hgwp-app-body');
 	});
 
 	it('Phone Card Exists', () => {
