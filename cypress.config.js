@@ -1,5 +1,5 @@
 const { defineConfig } = require('cypress')
-const cypressReplay = require("@replayio/cypress");
+const cypressReplay = require("@replayio/cypress")
 const { phpVersion, core } = require('./.wp-env.json')
 const wpVersion = /[^/]*$/.exec(core)[0]
 
