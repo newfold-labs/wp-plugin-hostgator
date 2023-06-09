@@ -11,6 +11,7 @@
     "devDependencies": {
         "@automattic/babel-plugin-preserve-i18n": "^1.0.0",
         "@testing-library/cypress": "^9.0.0",
+        "@replayio/cypress": "^0.5.10",
         "@wordpress/env": "^5.16.0",
         "@wordpress/scripts": "^26.4.0",
         "cypress": "^12.12.0",
@@ -21,6 +22,8 @@
         "build": "wp-scripts build",
         "check-engines": "wp-scripts check-engines",
         "check-licenses": "wp-scripts check-licenses --production",
+        "cypress": "npm cypress open",
+        "cypress:record": "RECORD_ALL_CONTENT=1 RECORD_REPLAY_METADATA_FILE=$(mktemp) npx cypress run --browser 'Replay Chromium'",
         "develop": "npm run start",
         "develop:analyzer": "npm run start:analyzer",
         "format": "wp-scripts format ./src",
