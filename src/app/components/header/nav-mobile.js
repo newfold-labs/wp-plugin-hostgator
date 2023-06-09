@@ -31,7 +31,7 @@ const NavMobile = () => {
 				className="mobile-toggle"
 			/>
 			{isOpen && (
-				<Modal onRequestClose={() => setIsOpen(false)}>
+				<Modal onRequestClose={() => setIsOpen(false)} closeButtonLabel='Close Navigation'>
 					<MobileMenu />
 				</Modal>
 			)}
