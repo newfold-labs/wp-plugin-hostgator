@@ -109,7 +109,26 @@ jobs:
         run: npx @wordpress/env@latest start
 
       - name: Run Cypress Tests
-        run: npm run test:e2e
+        env:
+          RECORD_REPLAY_API_KEY: ${{ secrets.RECORD_REPLAY_API_KEY }}
+        if: ${{ github.repository != 'newfold-labs/wp-plugin-hostgator' || env.RECORD_REPLAY_API_KEY == '' }}
+        run: npx cypress run
+
+      - name: Run Cypress Tests
+        uses: replayio/action-cypress@v0.2.8
+        env:
+          RECORD_REPLAY_API_KEY: ${{ secrets.RECORD_REPLAY_API_KEY }}
+        if: ${{ github.repository == 'newfold-labs/wp-plugin-hostgator' && env.RECORD_REPLAY_API_KEY != '' }}
+        with:
+          api-key: ${{ secrets.RECORD_REPLAY_API_KEY }}
+          browser: 'replay-chromium'
+          command: npm run test:e2e -- --record --key ${{ secrets.CYPRESS_RECORD_KEY }} --tag hostgator
+          upload-all: false
+
+      - name: List Replays
+        if: always()
+        shell: bash
+        run: npx @replayio/replay ls --json
 
       - name: Store screenshots of test failures
         if: ${{ failure() }}
