@@ -115,8 +115,8 @@ describe('Navigation', function () {
 		cy.get('.mobile-toggle').click();
 		cy.wait(500);
 		cy.get('.mobile-link-Home').should('be.visible');
-		cy.get('button[aria-label="Close dialog"]').should('be.visible')
-		cy.get('button[aria-label="Close dialog"]').click();
+		cy.get('button[aria-label="Close"]').should('be.visible')
+		cy.get('button[aria-label="Close"]').click();
 		cy.get('.mobile-link-Home').should('not.exist');
 	});
 });
