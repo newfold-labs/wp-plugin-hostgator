@@ -11,7 +11,7 @@
     "devDependencies": {
         "@automattic/babel-plugin-preserve-i18n": "^1.0.0",
         "@testing-library/cypress": "^9.0.0",
-        "@replayio/cypress": "^1.0.0",
+        "@replayio/cypress": "^1.0.2",
         "@wordpress/env": "^8.1.0",
         "@wordpress/scripts": "^26.6.0",
         "cypress": "^12.14.0",
@@ -60,7 +60,7 @@
         "jquery": "^3.7.0",
         "lodash": "^4.17.21",
         "react": "^18.2.0",
-        "react-error-boundary": "^4.0.3",
+        "react-error-boundary": "^4.0.10",
         "react-router-dom": "^6.12.1",
         "react-use": "^17.4.0"
     }
