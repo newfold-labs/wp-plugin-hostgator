@@ -3,8 +3,9 @@ import { Route, Routes } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
 import Home from '../pages/home';
 import Marketplace from '../pages/marketplace';
-import Settings from '../pages/settings';
 import Performance from '../pages/performance';
+import Settings from '../pages/settings';
+import Staging from '../pages/staging';
 import Help from '../pages/help';
 
 export const AppRoutes = () => {
@@ -42,6 +43,7 @@ const topRoutePaths = [
 	'/marketplace',
 	'/performance',
 	'/settings',
+	'/staging',
 	'/help',
 ];
 const utilityRoutePaths = ['/performance', '/settings', '/help'];
@@ -70,6 +72,12 @@ export const routes = [
 		title: __('Settings', 'wp-plugin-hostgator'),
 		Component: Settings,
 		Icon: settings,
+	},
+	{
+		name: '/staging',
+		title: __('Staging', 'wp-plugin-hostgator'),
+		Component: Staging,
+		Dashicon: 'tools',
 	},
 	{
 		name: '/help',

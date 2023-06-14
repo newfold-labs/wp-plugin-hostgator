@@ -48,6 +48,7 @@ final class Admin {
 			'hostgator#/marketplace' => __( 'Marketplace', 'wp-plugin-hostgator' ),
 			'hostgator#/performance' => __( 'Performance', 'wp-plugin-hostgator' ),
 			'hostgator#/settings'    => __( 'Settings', 'wp-plugin-hostgator' ),
+			'hostgator#/staging'     => __( 'Staging', 'wp-plugin-hostgator' ),
 			'hostgator#/help'        => __( 'Help', 'wp-plugin-hostgator' ),
 		);
 	}
