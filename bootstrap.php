@@ -104,6 +104,19 @@ $pluginUpdater->setDataMap(
 	)
 );
 
+$pluginUpdater->setDataOverrides(
+	[
+		'banners' => [
+			'2x' => 'https://cdn.hiive.space/marketplace/vendors-assets/hostgator-banner.svg',
+			'1x' => 'https://cdn.hiive.space/marketplace/vendors-assets/hostgator-banner.svg',
+		],
+		'icons' => [
+			'2x' => 'https://cdn.hiive.space/marketplace/vendors-assets/hostgator-icon.svg',
+			'1x' => 'https://cdn.hiive.space/marketplace/vendors-assets/hostgator-icon.svg',
+		],
+	]
+);
+
 // Handle any upgrade routines (only in the admin)
 if ( is_admin() ) {
 

@@ -131,25 +131,26 @@ describe('Settings Page', function () {
 		cy.intercept('POST', /hostgator(\/|%2F)v1(\/|%2F)settings/).as('update');
 		
 		cy.get('.disable-comments-toggle input[type="checkbox"]').uncheck();
+		cy.wait('@update');
 		cy.get('.close-comments-days-select select').should('be.disabled');
+		cy.get('.disable-comments-toggle')
+			.contains('.components-base-control__help', 'Comments are allowed on old posts.');
 		cy.get('.disable-comments-toggle input[type="checkbox"]').check();
 		cy.wait('@update');
-		cy
-			.get('.edit-site-notices')
-			.contains('.components-snackbar__content', 'Old post comments')
-			.should('be.visible');
-
 		cy.get('.close-comments-days-select select').should('not.be.disabled');
+		cy.get('.disable-comments-toggle')
+			.contains('.components-base-control__help', 'Comments on old posts are disabled.');
+		
 		cy.get('.close-comments-days-select select').select('3');
-		cy.get('.close-comments-days-select label').contains('span', '3').should('be.visible');
 		cy.wait('@update');
-		cy
-			.get('.edit-site-notices')
-			.contains('.components-snackbar__content', 'comments')
-			.should('be.visible');
+		cy.get('.close-comments-days-select label').contains('span', '3').should('be.visible');
+		cy.get('.close-comments-days-setting')
+			.contains('.components-base-control__help', 'Comments on posts are disabled after 3 days.');
 
 		cy.get('.comments-per-page-select select').select('10');
 		cy.get('.comments-per-page-select label').contains('span', '10').should('be.visible');
+		cy.get('.comments-per-page-setting')
+			.contains('.components-base-control__help', 'Posts will display 10 comments at a time.');
 
 	});
 
