@@ -10,13 +10,16 @@
     },
     "devDependencies": {
         "@automattic/babel-plugin-preserve-i18n": "^1.0.0",
-        "@testing-library/cypress": "^9.0.0",
         "@replayio/cypress": "^1.0.2",
+        "@tailwindcss/forms": "^0.5.3",
+        "@testing-library/cypress": "^9.0.0",
         "@wordpress/env": "^5.16.0",
         "@wordpress/scripts": "^26.6.0",
+        "@yoast/tailwindcss-preset": "^2.2.0",
         "cypress": "^12.14.0",
         "cypress-axe": "1.4.0",
-        "node-wp-i18n": "^1.2.7"
+        "node-wp-i18n": "^1.2.7",
+        "tailwindcss": "^3.3.2"
     },
     "scripts": {
         "build": "wp-scripts build",
@@ -51,11 +54,14 @@
         "srb": "npm run simulate-runner-build"
     },
     "dependencies": {
+        "@heroicons/react": "^2.0.18",
+        "@reduxjs/toolkit": "^1.9.5",
         "@wordpress/compose": "^6.12.0",
         "@wordpress/dom-ready": "^3.35.0",
         "@wordpress/element": "^5.12.0",
         "@wordpress/i18n": "^4.35.0",
         "@wordpress/icons": "^9.26.0",
+        "@yoast/ui-library": "^3.1.0",
         "classnames": "^2.3.2",
         "jquery": "^3.7.0",
         "lodash": "^4.17.21",

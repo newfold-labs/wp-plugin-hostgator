@@ -1,6 +1,8 @@
+import './tailwind.css';
 import './stylesheet.scss';
 
 import AppStore, { AppStoreProvider } from './data/store';
+import { Root, Alert } from "@yoast/ui-library";
 import { useLocation, HashRouter as Router } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
 import { SnackbarList, Spinner } from '@wordpress/components';
@@ -104,9 +106,14 @@ const AppBody = (props) => {
 
 export const App = () => (
 	<AppStoreProvider>
-		<Router>
-			<AppBody />
-		</Router>
+		<Root context={{ isRtl: false }}>
+			<Alert variant="success">
+				Congrats! You've successfully setup the UI library.
+			</Alert>
+			<Router>
+				<AppBody />
+			</Router>
+		</Root>
 	</AppStoreProvider>
 );
 
