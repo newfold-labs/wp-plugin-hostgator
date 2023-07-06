@@ -1,4 +1,12 @@
-import { settings, trendingUp, help, grid, store } from '@wordpress/icons';
+import { 
+	HomeIcon,
+	ShoppingBagIcon,
+	WrenchScrewdriverIcon,
+	BoltIcon, 
+	AdjustmentsHorizontalIcon,
+	BuildingStorefrontIcon,
+	QuestionMarkCircleIcon } 
+from '@heroicons/react/24/outline';
 import { Route, Routes } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
 import Home from '../pages/home';
@@ -42,40 +50,66 @@ const topRoutePaths = [
 	'/marketplace',
 	'/performance',
 	'/settings',
-	'/help',
 ];
-const utilityRoutePaths = ['/performance', '/settings', '/help'];
+const utilityRoutePaths = ['/help'];
 
 export const routes = [
 	{
 		name: '/home',
 		title: __('Home', 'wp-plugin-hostgator'),
 		Component: Home,
-		Icon: grid,
+		Icon: HomeIcon,
 	},
 	{
 		name: '/marketplace',
 		title: __('Marketplace', 'wp-plugin-hostgator'),
 		Component: Marketplace,
-		Icon: store,
+		Icon: ShoppingBagIcon,
+		subRoutes: [
+			{
+				name: '/marketplace/featured',
+				title: __( 'Featured', 'wp-plugin-bluehost' ),
+			},
+			{
+				name: '/marketplace/services',
+				title: __( 'Services', 'wp-plugin-bluehost' ),
+			},
+			{
+				name: '/marketplace/ecommerce',
+				title: __( 'eCommerce', 'wp-plugin-bluehost' ),
+			},
+			{
+				name: '/marketplace/seo',
+				title: __( 'SEO', 'wp-plugin-bluehost' ),
+			},
+			{
+				name: '/marketplace/security',
+				title: __( 'Security', 'wp-plugin-bluehost' ),
+			},
+			{
+				name: '/marketplace/themes',
+				title: __( 'Themes', 'wp-plugin-bluehost' ),
+			},
+
+		],
 	},
 	{
 		name: '/performance',
 		title: __('Performance', 'wp-plugin-hostgator'),
 		Component: Performance,
-		Dashicon: 'performance',
+		Icon: BoltIcon,
 	},
 	{
 		name: '/settings',
 		title: __('Settings', 'wp-plugin-hostgator'),
 		Component: Settings,
-		Icon: settings,
+		Icon: AdjustmentsHorizontalIcon,
 	},
 	{
 		name: '/help',
 		title: __('Help', 'wp-plugin-hostgator'),
 		Component: Help,
-		Icon: help,
+		Icon: QuestionMarkCircleIcon,
 	},
 ];
 

@@ -39,7 +39,7 @@ body.toplevel_page_hostgator {
     --wp-admin-theme-color-darker-10: var(--color-primary-dark);
     --wp-admin-theme-color-darker-20: var(--color-text);
     --wp-admin-border-width-focus: 2px;
-    --hgbrand-focus: inset 0 0 0 1px var(--color-white), 0 0 0 var(--wp-admin-border-width-focus) var(--color-primary-light);
+    --hgbrand-focus: inset 0 0 0 1px var(--color-white), 0 0 0 var(--wp-admin-border-width-focus) var(--color-primary);
 
     a {
         color: var(--color-link);
@@ -82,26 +82,25 @@ body.toplevel_page_hostgator {
 }
 
 .hgwpp {
-    color: #363636;
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    .hgwp-nav a {
-        font-weight: 800;
-        color: var(--color-primary);
-    }
-
-    p,
-    .hgwp-nav a,
-    div {
-        font-size: 15px;
-        color: var(--color-text);
-    }
-
+    // color: #363636;
+    
+    //     h1,
+    //     h2,
+    //     h3,
+    //     h4,
+    //     h5,
+    //     h6,
+    //     .hgwp-nav a {
+    //         font-weight: 800;
+    //         color: var(--color-primary);
+    //     }
+    
+    //     p,
+    //     .hgwp-nav a,
+    //     div {
+    //         font-size: 15px;
+    //         color: var(--color-text);
+    //     }
     .components-card__body .components-toggle-control .components-base-control__field .components-toggle-control__label,
     .components-card__body .components-input-control__label,
     .components-card__body .components-input-control__label *,
@@ -170,20 +169,20 @@ body.toplevel_page_hostgator {
     box-sizing: border-box;
 }
 
-.hgwp-app-body {
-    padding: 3.25rem 24px 1rem;
+// .hgwp-app-body {
+//     padding: 3.25rem 24px 1rem;
 
-    &-inner {
-        max-width: 1290px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-    }
+//     &-inner {
+//         max-width: 1290px;
+//         margin-left: auto;
+//         margin-right: auto;
+//         width: 100%;
+//     }
 
-    @media screen and (max-width:782px) {
-        padding-top: 2.5rem;
-    }
-}
+//     @media screen and (max-width:782px) {
+//         padding-top: 2.5rem;
+//     }
+// }
 
 .components-snackbar__content {
     color: var(--color-canvas) !important;
