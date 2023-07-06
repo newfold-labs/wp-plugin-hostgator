@@ -15,7 +15,6 @@ const PerformancePage = () => {
 				<SectionContent className={'hgwp-app-settings-performance'}>
 					<Performance />
 				</SectionContent>
-
 			</SectionContainer>
 		</Page>
 	);
