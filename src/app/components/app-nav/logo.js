@@ -14,7 +14,7 @@ const Mark = () => {
 	};
 	return (
 		<Button
-			icon={ <Brand className="wppbh-logo" /> }
+			icon={ <Brand className="hgwp-logo" /> }
 			style={ { width: '160px', height: 'auto' } }
 			onMouseUp={ defocus }
 			className="logo-mark yst-p-0"
@@ -25,10 +25,10 @@ const Mark = () => {
 
 const Logo = () => {
 	return (
-		<div className="wppbh-logo-wrap">
+		<div className="hgwp-logo-wrap">
 			<Mark />
 			<Heading level="2" className="screen-reader-text">
-				{ __( 'Bluehost WordPress Plugin', 'wp-plugin-bluehost' ) }
+				{ __( 'hostgator WordPress Plugin', 'wp-plugin-hostgator' ) }
 			</Heading>
 		</div>
 	);

@@ -259,7 +259,7 @@
 @layer components {
 	.yst-root {
 		/* mobile menu modal */
-		.wppbh-app-sidenav-mobile {
+		.hgwp-app-sidenav-mobile {
             .yst-modal__close {
                 @apply 
                 yst-flex

@@ -68,27 +68,27 @@ export const routes = [
 		subRoutes: [
 			{
 				name: '/marketplace/featured',
-				title: __( 'Featured', 'wp-plugin-bluehost' ),
+				title: __( 'Featured', 'wp-plugin-hostgator' ),
 			},
 			{
 				name: '/marketplace/services',
-				title: __( 'Services', 'wp-plugin-bluehost' ),
+				title: __( 'Services', 'wp-plugin-hostgator' ),
 			},
 			{
 				name: '/marketplace/ecommerce',
-				title: __( 'eCommerce', 'wp-plugin-bluehost' ),
+				title: __( 'eCommerce', 'wp-plugin-hostgator' ),
 			},
 			{
 				name: '/marketplace/seo',
-				title: __( 'SEO', 'wp-plugin-bluehost' ),
+				title: __( 'SEO', 'wp-plugin-hostgator' ),
 			},
 			{
 				name: '/marketplace/security',
-				title: __( 'Security', 'wp-plugin-bluehost' ),
+				title: __( 'Security', 'wp-plugin-hostgator' ),
 			},
 			{
 				name: '/marketplace/themes',
-				title: __( 'Themes', 'wp-plugin-bluehost' ),
+				title: __( 'Themes', 'wp-plugin-hostgator' ),
 			},
 
 		],

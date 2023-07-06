@@ -4,7 +4,7 @@ export const Page = ({ className, children }) => {
     return (
         <div className={
             classNames(
-                "wppbh-page", 
+                "hgwp-page", 
                 className,
                 "yst-flex yst-flex-col yst-gap-8",
             )
