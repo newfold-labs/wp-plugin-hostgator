@@ -63,8 +63,8 @@ const MarketplacePage = () => {
 		<Page className={"hgwp-app-marketplace-page"}>
 			<SectionContainer className={'hgwp-app-marketplace-container'}>
 				<SectionHeader
-					title={__('Marketplace', 'wp-plugin-bluehost')}
-					subTitle={__('Explore our featured collection of tools and services.', 'wp-plugin-bluehost')}
+					title={__('Marketplace', 'wp-plugin-hostgator')}
+					subTitle={__('Explore our featured collection of tools and services.', 'wp-plugin-hostgator')}
 					className={'hgwp-app-marketplace-header'}
 				/>
 

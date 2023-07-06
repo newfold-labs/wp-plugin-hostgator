@@ -48,6 +48,7 @@
 			yst-text-primary
 
 			hover:yst-text-primary-dark
+			focus:yst-ring-primary-600
 			visited:yst-text-primary-dark
 			visited:hover:yst-text-primary-dark;
 		}
@@ -95,7 +96,7 @@
 			yst-border-primary
 
 			hover:yst-text-black
-			hover:yst-bg-primary-light
+			hover:yst-bg-primary-100
 			focus:yst-text-title
 			focus:yst-ring-primary
 			visited:yst-text-black

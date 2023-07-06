@@ -31,7 +31,7 @@ const MarketplaceItem = ({ product }) => {
 	};
 
 	return (
-		<Card className="wppbh-app-marketplace-item marketplace-item" id={`marketplace-item-${ product.id }`}>
+		<Card className="hgwp-app-marketplace-item marketplace-item" id={`marketplace-item-${ product.id }`}>
 			<Card.Header className="yst-h-auto yst-p-0">
 				<img src={product.productThumbnailUrl} alt={product.name + ' thumbnail'} className="yst-w-full yst-aspect-video marketplace-item-image" />
 			</Card.Header>

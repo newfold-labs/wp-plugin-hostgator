@@ -112,6 +112,7 @@ export const hostgatorPurgeCacheApiFetch = (data, passError, thenCallback) => {
 			thenCallback(response);
 		})
 		.catch((error) => {
+			console.log(error);
 			passError(error);
 		});
 };
