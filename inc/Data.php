@@ -27,6 +27,8 @@ final class Data {
 			'resturl'   => \get_home_url() . '/index.php?rest_route=',
 			'wpversion' => $wp_version,
 			'admin'     => \admin_url(),
+			'siteurl'   => \get_site_url(),
+			'sitetitle' => htmlspecialchars_decode( \get_bloginfo( 'name' ) ),
 			'assets'    => HOSTGATOR_PLUGIN_URL . 'assets/',
 			'brand'     => get_option( 'mm_brand', false ),
 			'region'    => get_option( 'hg_region', false ),

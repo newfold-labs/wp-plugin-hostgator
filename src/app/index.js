@@ -16,6 +16,7 @@ import { store as noticesStore } from '@wordpress/notices';
 import { setActiveSubnav } from './util/helpers';
 import { kebabCase, filter } from 'lodash';
 import { AppNav } from './components/app-nav';
+import { SiteInfoBar } from './components/site-info';
 import { NotificationFeed } from './components/notifications/feed';
 
 // component sourced from module
@@ -93,6 +94,7 @@ const AppBody = (props) => {
 				<div className="hgwp-app-body-inner">
 					<ErrorBoundary FallbackComponent={<ErrorCard />}>
 						{hasError && <ErrorCard error={hasError} />}
+						<SiteInfoBar />
 						{(true === booted && <AppRoutes />) ||
 							(!hasError && <Spinner />)}
 					</ErrorBoundary>
