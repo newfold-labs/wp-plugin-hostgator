@@ -166,16 +166,16 @@
         },
         {
             "name": "newfold-labs/wp-module-data",
-            "version": "2.3.4",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-data.git",
-                "reference": "72baac2c82671b59c19e14d0fc68e8ee39a01db6"
+                "reference": "0beb5f1ff46373e1b982bee52b70ceed0c00584b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-data/zipball/72baac2c82671b59c19e14d0fc68e8ee39a01db6",
-                "reference": "72baac2c82671b59c19e14d0fc68e8ee39a01db6",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-data/zipball/0beb5f1ff46373e1b982bee52b70ceed0c00584b",
+                "reference": "0beb5f1ff46373e1b982bee52b70ceed0c00584b",
                 "shasum": ""
             },
             "require": {
@@ -208,10 +208,10 @@
             ],
             "description": "Newfold Data Module",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-data/tree/2.3.4",
+                "source": "https://github.com/newfold-labs/wp-module-data/tree/2.4.0",
                 "issues": "https://github.com/newfold-labs/wp-module-data/issues"
             },
-            "time": "2023-05-15T18:39:48+00:00"
+            "time": "2023-07-06T15:44:09+00:00"
         },
         {
             "name": "newfold-labs/wp-module-loader",
