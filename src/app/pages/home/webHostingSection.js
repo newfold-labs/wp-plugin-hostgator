@@ -1,146 +1,69 @@
-import { Heading } from '../../components';
-import graphicUrl from '../../../../assets/svg/a-illustration__testenvironment.svg';
-import {
-	Button,
-	Card,
-	CardBody,
-	CardHeader,
-	CardFooter,
-	Dashicon,
-} from '@wordpress/components';
+import ActionField from "../../components/action-field";
+import { SectionSettings } from "../../components/section";
 import { getLinkPerRegion, supportsLinkPerRegion } from '../../util/helpers';
 
 const WebHostingSection = () => {
 	return (
-		<section className="hgwp-section hgwp-section-home-hosting">
-			<img
-				src={graphicUrl}
-				className="section-graphic"
-				alt={__('Hosting illustration', 'wp-plugin-hostgator')}
-			/>
-			<Card size="large" className="hgwp-section-card">
-				<CardHeader>
-					<Heading level="3">
-						{__('Web Hosting', 'wp-plugin-hostgator')}
-					</Heading>
-					<p>
-						{__(
-							'Access & manage your HostGator account.',
-							'wp-plugin-hostgator'
+		<SectionSettings
+			title={__('Web Hosting', 'wp-plugin-hostgator')}
+			description={__('Access & manage your HostGator account.', 'wp-plugin-hostgator')}
+		>
+			<div className="yst-flex yst-flex-col yst-gap-5">
+				{supportsLinkPerRegion('home_manage_sites') &&
+					<ActionField
+						label={__("Manage Sites", "wp-plugin-hostgator")}
+						buttonLabel={__("Manage Sites", "wp-plugin-hostgator")}
+						href={getLinkPerRegion(
+							'home_manage_sites',
+							__('Manage Sites', 'wp-plugin-hostgator')
 						)}
-					</p>
-				</CardHeader>
-				{ supportsLinkPerRegion( 'home_manage_sites' ) &&
-					<CardFooter>
-						<div className="hgwp-cardlist-content">
-							<Heading level="4">
-								<Dashicon icon="desktop" />{' '}
-								{__('Manage Sites', 'wp-plugin-hostgator')}
-							</Heading>
-							<p>
-								{__(
-									'Manage your site from the control panel. You can create backups, set security, and improve performance.',
-									'wp-plugin-hostgator'
-								)}
-							</p>
-						</div>
-						<Button
-							variant="primary"
-							href={
-								getLinkPerRegion(
-									'home_manage_sites',
-									__('Manage Sites', 'wp-plugin-hostgator')
-								)
-							}
-							target="_blank"
-							icon="desktop"
-						>
-							{__('Manage Sites', 'wp-plugin-hostgator')}
-						</Button>
-					</CardFooter>
-				}
-				{ supportsLinkPerRegion( 'home_manage_email' ) &&
-					<CardFooter>
-						<div className="hgwp-cardlist-content">
-							<Heading level="4">
-								<Dashicon icon="email" />{' '}
-								{__('Email', 'wp-plugin-hostgator')}
-							</Heading>
-							<p>
-								{__(
-									'Create email accounts, compose, send, and receive your email from the control panel.',
-									'wp-plugin-hostgator'
-								)}
-							</p>
-						</div>
-						<Button
-							variant="primary"
-							href={
-								getLinkPerRegion(
-									'home_manage_email',
-									__('Manage Email', 'wp-plugin-hostgator')
-								)
-							}
-							target="_blank"
-							icon="email"
-						>
-							{__('Manage Email', 'wp-plugin-hostgator')}
-						</Button>
-					</CardFooter> 
-				}
-				{ supportsLinkPerRegion( 'home_find_domain' ) &&
-					<CardFooter>
-						<div className="hgwp-cardlist-content">
-							<Heading level="4">
-								<Dashicon icon="admin-site" />{' '}
-								{__('Domains', 'wp-plugin-hostgator')}
-							</Heading>
-							<p>
-								{__(
-									'Find a new domain and assign it to your site or start a new site with a fresh domain.',
-									'wp-plugin-hostgator'
-								)}
-							</p>
-						</div>
-						<Button
-							variant="secondary"
-							href={
-								getLinkPerRegion(
-									'home_find_domain',
-									__('Find a Domain', 'wp-plugin-hostgator')
-								)
-							}
-							target="_blank"
-							icon="admin-site"
-						>
-							{__('Find a Domain', 'wp-plugin-hostgator')}
-						</Button>
-					</CardFooter>
-				}
-				<CardFooter>
-					<div className="hgwp-cardlist-content">
-						<Heading level="4">
-							<Dashicon icon="sos" />{' '}
-							{__('Help', 'wp-plugin-hostgator')}
-						</Heading>
-						<p>
-							{__(
-								'24/7/365 support. We work when you work.',
-								'wp-plugin-hostgator'
-							)}
-						</p>
-					</div>
-					<Button
-						variant="secondary"
-						href="#/help"
-						icon="sos"
-						className="callout-link-help"
+						target="_blank"
+						className={"hgwp-app-home-sites-action"}
 					>
-						{__('Get Help', 'wp-plugin-hostgator')}
-					</Button>
-				</CardFooter>
-			</Card>
-		</section>
+						{__('Manage your site from the control panel. You can create backups, set security, and improve performance.', 'wp-plugin-hostgator')}
+					</ActionField>
+				}
+
+				{supportsLinkPerRegion('home_manage_email') &&
+					<ActionField
+						label={__("Email", "wp-plugin-hostgator")}
+						buttonLabel={__("Manage Email", "wp-plugin-hostgator")}
+						href={getLinkPerRegion(
+							'home_manage_email',
+							__('Manage Email', 'wp-plugin-hostgator')
+						)}
+						target="_blank"
+						className={"hgwp-app-home-emails-action"}
+					>
+						{__('Create email accounts, compose, send, and receive your email from the control panel.', 'wp-plugin-hostgator')}
+					</ActionField>
+				}
+
+				{supportsLinkPerRegion('home_find_domain') &&
+					<ActionField
+						label={__("Domains", "wp-plugin-hostgator")}
+						buttonLabel={__("Manage Email", "wp-plugin-hostgator")}
+						href={getLinkPerRegion(
+							'home_find_domain',
+							__('Find a Domain', 'wp-plugin-hostgator')
+						)}
+						target="_blank"
+						className={"hgwp-app-home-domains-action"}
+					>
+						{__('Find a new domain and assign it to your site or start a new site with a fresh domain.', 'wp-plugin-hostgator')}
+					</ActionField>
+				}
+
+				<ActionField
+					label={__("Help", "wp-plugin-hostgator")}
+					buttonLabel={__("Get Help", "wp-plugin-hostgator")}
+					href={"#/help"}
+					className={"hgwp-app-home-help-action"}
+				>
+					{__('24/7/365 support. We work when you work.', 'wp-plugin-hostgator')}
+				</ActionField>
+			</div>
+		</SectionSettings >
 	);
 };
 

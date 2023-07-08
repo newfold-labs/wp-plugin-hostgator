@@ -96,7 +96,7 @@
 			yst-border-primary
 
 			hover:yst-text-black
-			hover:yst-bg-primary-100
+			hover:yst-bg-primary-50
 			focus:yst-text-title
 			focus:yst-ring-primary
 			visited:yst-text-black

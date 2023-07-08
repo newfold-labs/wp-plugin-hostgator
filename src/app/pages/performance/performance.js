@@ -151,7 +151,6 @@ const ClearCache = ({ setError, notify }) => {
 					__("as you work (creating content, changing settings, installing plugins and more). But you can manually clear it here to be confident it's fresh.", 'wp-plugin-hostgator')
 				}
 			</p>
-
 		</div>
 	);
 }
