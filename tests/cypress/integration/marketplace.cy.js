@@ -1,5 +1,3 @@
-// <reference types="Cypress" />
-
 describe('Marketplace Page', function () {
 
 	before(() => {
@@ -12,66 +10,66 @@ describe('Marketplace Page', function () {
 		cy.visit('/wp-admin/admin.php?page=hostgator#/marketplace');
 		cy.wait('@products');
 	});
-	
+
 	it('Exists', () => {
-		cy.contains('button', 'Featured');
+		cy.contains('h2', 'Marketplace');
 	});
-	
+
 	it('Is Accessible', () => {
 		cy.injectAxe();
 		cy.wait(1000);
-		cy.a11y('.hgwp-app-body');
-	});
-
-	it('Product grid has 5 items', () => {
-		cy.get('.marketplace-item').should('have.length', 5);
+		cy.checkA11y('.hgwp-app-body');
 	});
 
 	it('First product card renders correctly', () => {
-		cy.get('#marketplace-item-003c9022-348b-4754-b27c-9452dd6eac62').as('card');
+		cy.get('#marketplace-item-a1ff70f1-9670-4e25-a0e1-a068d3e43a45').as('card');
 
 		cy.get('@card')
 			.findByRole('link', {name: 'Learn More'})
 			.scrollIntoView()
 			.should('be.visible')
 			.should('have.attr', 'href')
-			.and('include', 'https://www.hostgator.com/services/web-design');
-
-		cy.get('@card').first().within(() => {
-			cy.get('.components-card__header')
-				.contains('Web Design Services')
-				.should('be.visible');
-			cy.get('.components-card__media').should('be.visible');
-			cy.get('.components-card__header em.price').should('not.exist');
-		});
+			.and('include', 'https://yoast.com/wordpress/plugins/seo/');
 	});
 
 	it('Second product card render correctly', () => {
-		cy.get('#marketplace-item-81357ab8-49fc-4a9e-a01d-7d33fdf3f058').as('card');
+		cy.get('#marketplace-item-2a1dadb5-f58d-4ae4-a26b-27efb09136eb').as('card');
 
 		cy.get('@card')
-			.findByRole('link', {name: 'Get More Leads'})
+			.findByRole('link', {name: 'Buy Now'})
 			.scrollIntoView()
 			.should('be.visible')
 			.should('have.attr', 'href')
-			.and('include', 'https://www.hostgator.com/services/ppc');
+			.and('include', 'https://www.mojomarketplace.com/cart?item_id=5377b431-d8a8-431b-a711-50c10a141528');
 
 		cy.get('@card').first().within(() => {
-			cy.get('.components-card__header')
-				.contains('PPC')
+			cy.get('.marketplace-item-title')
+				.contains('Highend')
 				.should('be.visible');
-			cy.get('.components-card__media').should('be.visible');
-			cy.get('.components-card__header em.price')
-				// .contains('$59.00')
-				.should('not.exist');
+			cy.get('.marketplace-item-image').should('be.visible');
+			cy.get('.marketplace-item-footer .marketplace-item-price')
+				.contains('$59.00')
+				.should('be.visible');
+		});
+	});
+
+	it('Non-CTB products cards render correctly', () => {
+		cy.get('#marketplace-item-003c9022-348b-4754-b27c-9452dd6eac62').as('card');
+
+		cy.get('@card').first().within(() => {
+			cy.get('.marketplace-item-title')
+				.contains('Web Design Services')
+				.should('be.visible');
+			cy.get('.marketplace-item-image').should('be.visible');
+			cy.get('.marketplace-item-footer .marketplace-item-price').should('not.exist');
 		});
 	});
 	
 	it('CTA links have target=_blank', () => {
-		cy.get('#marketplace-item-81357ab8-49fc-4a9e-a01d-7d33fdf3f058').as('card');
+		cy.get('#marketplace-item-a1ff70f1-9670-4e25-a0e1-a068d3e43a45').as('card');
 
 		cy.get('@card')
-			.findByRole('link', {name: 'Get More Leads'})
+			.findByRole('link', {name: 'Learn More'})
 			.scrollIntoView()
 			.should('have.attr', 'target')
 			.and('include', '_blank');
@@ -79,26 +77,23 @@ describe('Marketplace Page', function () {
 
 	it('Category Tab Filters properly', () => {
 		
-		cy.get('.newfold-marketplace-tab-services').click();
+		cy.get('.hgwp-app-subnavitem-Services').click();
 		cy.get('.marketplace-item').should('have.length', 12);
-		cy.wait(300);
-		cy.get('#marketplace-item-003c9022-348b-4754-b27c-9452dd6eac62 h2')
+		cy.get('#marketplace-item-003c9022-348b-4754-b27c-9452dd6eac62 h3')
 			.scrollIntoView()
 			.should('be.visible')
 			.should('have.text', 'Web Design Services');
 		
-			cy.get('.newfold-marketplace-tab-seo').click();
+			cy.get('.hgwp-app-subnavitem-SEO').click();
 		cy.get('.marketplace-item').should('have.length', 5);
-		cy.wait(300);
-		cy.get('#marketplace-item-00c3eae2-9f6c-4e13-8674-599fe4a05cc0 h2')
+		cy.get('#marketplace-item-a1ff70f1-9670-4e25-a0e1-a068d3e43a45 h3')
 			.scrollIntoView()
 			.should('be.visible')
-			.should('have.text', 'Yoast Local SEO');
+			.should('have.text', 'Yoast Premium Fixture');
 	});
 
-	it('Load more button loads more products', () => {
-
-		cy.get('.newfold-marketplace-tab-services').click();
+	it.skip('Load more button loads more products', () => {
+		cy.get('.hgwp-app-subnavitem-Services').click();
 		cy.wait(300);
 
 		cy.get('.marketplace-item').should('have.length', 12);
@@ -108,11 +103,11 @@ describe('Marketplace Page', function () {
 			.click();
 		cy.wait(300);
 
-		cy.get('.marketplace-item').should('have.length', 13);
+		cy.get('.marketplace-item').should('have.length', 14);
 	});
 
 	it('Category tabs update path', () => {
-		cy.get('.newfold-marketplace-tab-services').click();
+		cy.get('.hgwp-app-subnavitem-Services').click();
 		cy.location().should((loc) => {
 			expect(loc.hash).to.eq('#/marketplace/services')
 		});

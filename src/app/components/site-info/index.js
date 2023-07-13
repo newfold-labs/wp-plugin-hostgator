@@ -18,7 +18,7 @@ export const SiteInfoBar = () => {
     }
 
     return (
-        <div className="wppbh-app-site-info yst-bg-[#25253C] yst-w-full yst-py-6 yst-px-8 yst-mb-8 yst-border yst-border-line yst-rounded-lg">
+        <div className="hgwp-app-site-info yst-bg-[#25253C] yst-w-full yst-py-6 yst-px-8 yst-mb-8 yst-border yst-border-line yst-rounded-lg">
             <div className="yst-flex yst-justify-between yst-items-center yst-flex-wrap yst-gap-4">
 
                 <div className="yst-w-max yst-flex yst-flex-col yst-gap-1.5">
