@@ -27,14 +27,20 @@ describe('Coming Soon', function () {
 				// if already checked, turn off
 				cy.get('[data-id="coming-soon-toggle"]').click();
 				// wait
-				cy.wait(100);
+				cy.wait(200);
 			}
 			// turn on
 			cy.get('[data-id="coming-soon-toggle"]').click();
+			cy.wait(200);
 		});
+
+		cy.get('.hgwp-app-settings-coming-soon .yst-alert--info').scrollIntoView()
+			.contains('Coming Soon')
+			.should('be.visible');
 	});
 
 	it('Displays Coming Soon in Site Status Admin Toolbar', () => {
+		cy.reload();
 		cy.get('#wp-toolbar #wp-admin-bar-hostgator-coming_soon')
 			.contains('a', 'Coming Soon Active')
 			.should('be.visible');
