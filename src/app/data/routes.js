@@ -14,6 +14,10 @@ import Marketplace from '../pages/marketplace';
 import Settings from '../pages/settings';
 import Performance from '../pages/performance';
 import Help from '../pages/help';
+import Store from '../pages/ecommerce/page';
+import { NewfoldRuntime } from '@newfold-labs/wp-module-runtime';
+
+const addPartialMatch = (prefix, path) => prefix === path ? `${prefix}/*` : path; 
 
 export const AppRoutes = () => {
 	return (
@@ -23,9 +27,7 @@ export const AppRoutes = () => {
 					end
 					key={page.name}
 					path={
-						'/marketplace' === page.name
-							? '/marketplace/*'
-							: page.name
+						addPartialMatch("/marketplace", addPartialMatch("/store", page.name))
 					}
 					element={<page.Component />}
 				/>
@@ -47,6 +49,7 @@ export const AppRoutes = () => {
 
 const topRoutePaths = [
 	'/home',
+	'/store',
 	'/marketplace',
 	'/performance',
 	'/settings',
@@ -59,6 +62,28 @@ export const routes = [
 		title: __('Home', 'wp-plugin-hostgator'),
 		Component: Home,
 		Icon: HomeIcon,
+	},
+	{
+		name: '/store',
+		title: __('Store', 'wp-plugin-hostgator'),
+		Component: Store,
+		Icon: BuildingStorefrontIcon,
+		subRoutes: [
+			{
+				name: '/store/products',
+				title: __( 'Products', 'wp-plugin-hostgator' ),
+			},
+			NewfoldRuntime.hasCapability( 'hasYithExtended' )
+			? {
+				name: "/store/sales_discounts",
+				title: __("Sales & Discounts", "wp-plugin-hostgator"),
+			}
+			: null,
+			{
+				name: '/store/details',
+				title: __( 'Store Details', 'wp-plugin-hostgator' ),
+			}
+		].filter(Boolean),
 	},
 	{
 		name: '/marketplace',

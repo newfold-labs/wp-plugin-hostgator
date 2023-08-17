@@ -68,6 +68,8 @@
         "react": "^18.2.0",
         "react-error-boundary": "^4.0.10",
         "react-router-dom": "^6.12.1",
-        "react-use": "^17.4.0"
+        "react-use": "^17.4.0",
+        "@newfold-labs/wp-module-ecommerce": "github:newfold-labs/wp-module-ecommerce#v1.0.8",
+        "@newfold-labs/wp-module-runtime": "^1.0.1"
     }
 }

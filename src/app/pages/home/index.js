@@ -1,9 +1,11 @@
 import { Page } from '../../components/page';
 import { SectionContainer, SectionHeader, SectionContent } from '../../components/section';
 import ComingSoon from '../settings/comingSoon';
+import FreePluginsSection from './freeAddonsSection';
 import SettingsSection from './settingsSection';
 import WebContentSection from './webContentSection';
 import WebHostingSection from './webHostingSection';
+import WelcomeSection from './welcomeSection';
 
 const Home = () => {
 	return (
@@ -13,7 +15,12 @@ const Home = () => {
 					title={__('Home', 'wp-plugin-hostgator')}
 					className={'hgwp-app-home-header'}
 				/>
-
+				<SectionContent separator={true} className={'hgwp-app-home-welcome'}>
+					<WelcomeSection />
+				</SectionContent>
+				<SectionContent separator={true} className={'hgwp-app-home-free-plugins'}>
+					<FreePluginsSection />
+				</SectionContent>
 				<SectionContent separator={true} className={'hgwp-app-home-coming-soon'}>
 					<ComingSoon />
 				</SectionContent>
