@@ -1,4 +1,4 @@
-import { Button, Label } from "@yoast/ui-library";
+import { Button, Label } from "@newfold/ui-component-library";
 import classNames from "classnames";
 
 const ActionField = ({
@@ -12,11 +12,11 @@ const ActionField = ({
 }) => {
 	return (
 		<div className={classNames(
-			"yst-flex yst-flex-col yst-gap-1",
+			"nfd--flex nfd--flex-col nfd--gap-1",
 			className
 		)}>
-			<div className="yst-flex yst-justify-between yst-items-center">
-				<Label className={"yst-cursor-default"}>{label}</Label>
+			<div className="nfd--flex nfd--justify-between nfd--items-center">
+				<Label className={"nfd--cursor-default"}>{label}</Label>
 				<Button
 					variant="secondary"
 					as="a"
@@ -27,7 +27,7 @@ const ActionField = ({
 					{buttonLabel}
 				</Button>
 			</div>
-			<p className="lg:yst-mr-[10.5rem]">
+			<p className="lg:nfd--mr-[10.5rem]">
 				{children}
 			</p>
 		</div>

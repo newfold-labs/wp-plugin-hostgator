@@ -1,6 +1,6 @@
 import { Fragment, useState } from '@wordpress/element';
 import { useUpdateEffect } from 'react-use';
-import { Alert, Button, Label, RadioGroup } from "@yoast/ui-library";
+import { Alert, Button, Label, RadioGroup } from "@newfold/ui-component-library";
 import AppStore from '../../data/store';
 import { hostgatorSettingsApiFetch, hostgatorPurgeCacheApiFetch } from '../../util/helpers';
 import { useNotification } from '../../components/notifications/feed';
@@ -100,7 +100,7 @@ const CacheSettings = ({ setError, notify }) => {
 							name="cache-level"
 							onChange={handleCacheLevelChange}
 						/>
-						<div className="yst-radio__description">
+						<div className="nfd--radio__description">
 							{option.description}
 						</div>
 					</Fragment>
@@ -132,8 +132,8 @@ const ClearCache = ({ setError, notify }) => {
 	};
 
 	return (
-		<div className="yst-flex yst-flex-col yst-gap-4 clear-cache">
-			<div className="yst-flex yst-justify-between yst-items-center">
+		<div className="nfd--flex nfd--flex-col nfd--gap-4 clear-cache">
+			<div className="nfd--flex nfd--justify-between nfd--items-center">
 				<Label>{__('Clear Cache', 'wp-plugin-hostgator')}</Label>
 				<Button
 					variant="secondary"
@@ -144,7 +144,7 @@ const ClearCache = ({ setError, notify }) => {
 					{__('Clear All Cache Now', 'wp-plugin-hostgator')}
 				</Button>
 			</div>
-			<p className="lg:yst-mr-[10.5rem]">
+			<p className="lg:nfd--mr-[10.5rem]">
 				{
 					__('We automatically clear your cache', 'wp-plugin-hostgator') +
 					', ' +
@@ -166,10 +166,10 @@ const Performance = () => {
 			description={__('Boost speed and performance by storing a copy of your website content, files, and images online so the pages of your website load faster for your visitors.',
 				'wp-plugin-hostgator')}
 		>
-			<div className="yst-flex yst-flex-col yst-gap-4">
+			<div className="nfd--flex nfd--flex-col nfd--gap-4">
 				<Label>{__('Caching', 'wp-plugin-hostgator')}</Label>
 
-				<div className="yst-flex yst-flex-col yst-gap-6">
+				<div className="nfd--flex nfd--flex-col nfd--gap-6">
 					<CacheSettings setError={setError} notify={notify} />
 					<ClearCache setError={setError} notify={notify} />
 

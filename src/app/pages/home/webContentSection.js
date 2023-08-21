@@ -7,7 +7,7 @@ const WebContentSection = () => {
 			title={__('Website Content', 'wp-plugin-hostgator')}
 			description={__('Create, manage & sort your story.', 'wp-plugin-hostgator')}
 		>
-			<div className="yst-flex yst-flex-col yst-gap-5">
+			<div className="nfd--flex nfd--flex-col nfd--gap-5">
 				<ActionField
 					label={__("Blog", "wp-plugin-hostgator")}
 					buttonLabel={__("New Post", "wp-plugin-hostgator")}
