@@ -10,7 +10,7 @@ const HelpCard = ({ item }) => {
 				<Title 
 					as="h3" 
 					size="4"
-					className="nfd--mb-2"	
+					className="nfd-mb-2"	
 				>{item.title}</Title>
 				<p>{item.description}</p>
 			</Card.Content>
@@ -19,7 +19,7 @@ const HelpCard = ({ item }) => {
 				<Button
 					variant="secondary"
 					as="a"
-					className="nfd--w-full"
+					className="nfd-w-full"
 					href={item.url}
 					target="_blank"
 				>
@@ -35,7 +35,7 @@ const Help = () => {
 		const helpItems = help;
 
 		return (
-			<div className="nfd--grid nfd--gap-6 nfd--grid-cols-1 sm:nfd--grid-cols-2 xl:nfd--grid-cols-3 2xl:nfd--grid-cols-4">
+			<div className="nfd-grid nfd-gap-6 nfd-grid-cols-1 sm:nfd-grid-cols-2 xl:nfd-grid-cols-3 2xl:nfd-grid-cols-4">
 				{helpItems.map((item) => (
 					<HelpCard key={item.name} item={item} />
 				))}

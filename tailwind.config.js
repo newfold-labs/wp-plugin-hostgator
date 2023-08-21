@@ -5,7 +5,7 @@ module.exports = {
     content: [
         // Include all JS files inside the UI library in your content.
         ...TAILWINDCSS_PRESET.content,
-        "./node_modules/@newfold-labs/wp-module-ecommerce/build/index.js",
+        // "./node_modules/@newfold-labs/wp-module-ecommerce/build/index.js",
         "./src/**/*.js",        
     ],
     theme: {

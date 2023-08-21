@@ -7,7 +7,7 @@ const SettingsSection = () => {
 			title={__('Settings and Performance', 'wp-plugin-hostgator')}
 			description={__('Customize & fine-tune your site.', 'wp-plugin-hostgator')}
 		>
-			<div className="nfd--flex nfd--flex-col nfd--gap-5">
+			<div className="nfd-flex nfd-flex-col nfd-gap-5">
 				<ActionField
 					label={__("Manage Settings", "wp-plugin-hostgator")}
 					buttonLabel={__("Settings", "wp-plugin-hostgator")}

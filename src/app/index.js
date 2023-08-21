@@ -73,7 +73,7 @@ const AppBody = (props) => {
 				`hgwp-wp-${HGWP.wpversion}`,
 				`hgwp-page-${ kebabCase( location.pathname ) }`,
 				props.className,
-				'nfd--w-full nfd--p-4 min-[783px]:nfd--p-0'
+				'nfd-w-full nfd-p-4 min-[783px]:nfd-p-0'
 			)}
 		>
 			<NewfoldNotifications
@@ -113,7 +113,7 @@ export const App = () => (
 		<Root context={{ isRtl: false }}>
 			<NotificationFeed>
 				<Router>
-					<div className="hgwp-app-container min-[783px]:nfd--p-8 min-[783px]:nfd--flex nfd--gap-6 nfd--max-w-full xl:nfd--max-w-screen-xl 2xl:nfd--max-w-screen-2xl nfd--my-0">
+					<div className="hgwp-app-container min-[783px]:nfd-p-8 min-[783px]:nfd-flex nfd-gap-6 nfd-max-w-full xl:nfd-max-w-screen-xl 2xl:nfd-max-w-screen-2xl nfd-my-0">
 						<AppNav />
 						<AppBody />
 					</div>

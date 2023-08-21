@@ -660,10 +660,10 @@ const MarketplaceError = () => {
 		);
 	}
 	return (
-		<div className="nfd--h-96 nfd--flex nfd--justify-center nfd--items-center">
-			<div className="nfd--max-w-[400px] nfd--max-h-full nfd--flex nfd--flex-col nfd--items-center nfd--gap-3">
+		<div className="nfd-h-96 nfd-flex nfd-justify-center nfd-items-center">
+			<div className="nfd-max-w-[400px] nfd-max-h-full nfd-flex nfd-flex-col nfd-items-center nfd-gap-3">
 				{errorFigure()}
-				<Title as="h4" size="2" className="nfd--text-center">
+				<Title as="h4" size="2" className="nfd-text-center">
 					Oops! Our Marketplace is currently unavailable. Please try again later.
 				</Title>
 			</div>

@@ -6,7 +6,7 @@ export const Page = ({ className, children }) => {
             classNames(
                 "hgwp-page", 
                 className,
-                "nfd--flex nfd--flex-col nfd--gap-8",
+                "nfd-flex nfd-flex-col nfd-gap-8",
             )
         }>
             {children}

@@ -9,7 +9,7 @@ import { Bars3Icon } from "@heroicons/react/24/outline";
 
 export const SideNavHeader = () => {
 	return (
-		<header className="nfd--pt-2 nfd--px-3 nfd--mb-6 nfd--space-y-6">
+		<header className="nfd-pt-2 nfd-px-3 nfd-mb-6 nfd-space-y-6">
 			<Logo />
 		</header>
 	);
@@ -18,7 +18,7 @@ export const SideNavHeader = () => {
 export const SideNavMenu = () => {
 	const primaryMenu = () => {
 		return (
-			<ul className="nfd--flex nfd--flex-col nfd--gap-1.5">
+			<ul className="nfd-flex nfd-flex-col nfd-gap-1.5">
 				{topRoutes.map((page) => (
 
 					<SideNavMenuItem
@@ -38,7 +38,7 @@ export const SideNavMenu = () => {
 
 	const secondaryMenu = () => {
 		return (
-			<ul className="nfd--flex nfd--flex-col nfd--gap-1.5 nfd--mt-4 nfd--pt-4 nfd--border-t nfd--border-[#D8DEE4]">
+			<ul className="nfd-flex nfd-flex-col nfd-gap-1.5 nfd-mt-4 nfd-pt-4 nfd-border-t nfd-border-[#D8DEE4]">
 				{utilityRoutes.map((page) => (
 
 					<SideNavMenuItem
@@ -60,13 +60,13 @@ export const SideNavMenu = () => {
 		// close any open submenus
 		const subMenus = document.querySelectorAll('.hgwp-app-navitem-submenu');
 		subMenus.forEach((subMenu) => {
-			subMenu.classList.add('nfd--hidden');
+			subMenu.classList.add('nfd-hidden');
 		});
 
 		// open active's submenu if it exists
 		const activeMenu = document.querySelector('.hgwp-app-sidenav .active');
 		if (activeMenu && null !== activeMenu.nextSibling && activeMenu.nextSibling.classList.contains('hgwp-app-navitem-submenu')) {
-			activeMenu.nextSibling.classList.toggle('nfd--hidden');
+			activeMenu.nextSibling.classList.toggle('nfd-hidden');
 		}
 	}
 
@@ -76,7 +76,7 @@ export const SideNavMenu = () => {
 	});
 
 	return (
-		<div className="nfd--px-0.5 nfd--space-y-6">
+		<div className="nfd-px-0.5 nfd-space-y-6">
 			{primaryMenu()}
 			{secondaryMenu()}
 		</div>
@@ -85,20 +85,20 @@ export const SideNavMenu = () => {
 
 export const SideNavMenuItem = ({ label, name, icon: Icon = null, path, action, subItems }) => {
 	return (
-		<li className="nfd--mb-0">
+		<li className="nfd-mb-0">
 			<NavLink
 				onClick={(action && action instanceof Function) ? action : null}
 				to={path}
-				className={`hgwp-app-navitem hgwp-app-navitem-${label} nfd--flex nfd--items-center nfd--gap-3 nfd--px-3 nfd--py-2 nfd--rounded-md nfd--text-sm nfd--font-medium nfd--text-title leading-none hover:nfd--bg-slate-50 [&.active]:nfd--bg-[#E2E8F0]`}
+				className={`hgwp-app-navitem hgwp-app-navitem-${label} nfd-flex nfd-items-center nfd-gap-3 nfd-px-3 nfd-py-2 nfd-rounded-md nfd-text-sm nfd-font-medium nfd-text-title leading-none hover:nfd-bg-slate-50 [&.active]:nfd-bg-[#E2E8F0]`}
 			>
 				{Icon &&
-					<Icon className="nfd--flex-shrink-0 nfd---ml-1 nfd--h-6 nfd--w-6" />
+					<Icon className="nfd-flex-shrink-0 nfd--ml-1 nfd-h-6 nfd-w-6" />
 				}
 				{label}
 			</NavLink>
 
 			{subItems && subItems.length > 0 &&
-				<ul className="hgwp-app-navitem-submenu nfd--hidden nfd--ml-8 nfd--m-2 nfd--space-y-1.5">
+				<ul className="hgwp-app-navitem-submenu nfd-hidden nfd-ml-8 nfd-m-2 nfd-space-y-1.5">
 					{subItems.map((subItem) => (
 						<SideNavMenuSubItem
 							key={subItem.name}
@@ -116,11 +116,11 @@ export const SideNavMenuItem = ({ label, name, icon: Icon = null, path, action, 
 
 export const SideNavMenuSubItem = ({ label, name, path, action }) => {
 	return (
-		<li className="nfd--m-0 nfd--pb-1">
+		<li className="nfd-m-0 nfd-pb-1">
 			<NavLink
 				onClick={(action && action instanceof Function) ? action : null}
 				to={path} 
-				className={`hgwp-app-subnavitem hgwp-app-subnavitem-${label} nfd--flex nfd--items-center nfd--gap-3 nfd--px-3 nfd--py-2 nfd--rounded-md nfd--text-sm nfd--font-medium nfd--text-body leading-none hover:nfd--bg-slate-50 [&.active]:nfd--bg-[#E2E8F0] [&.active]:nfd--text-title`}
+				className={`hgwp-app-subnavitem hgwp-app-subnavitem-${label} nfd-flex nfd-items-center nfd-gap-3 nfd-px-3 nfd-py-2 nfd-rounded-md nfd-text-sm nfd-font-medium nfd-text-body leading-none hover:nfd-bg-slate-50 [&.active]:nfd-bg-[#E2E8F0] [&.active]:nfd-text-title`}
 			>
 				{label}
 			</NavLink>
@@ -130,7 +130,7 @@ export const SideNavMenuSubItem = ({ label, name, path, action }) => {
 
 export const SideNav = () => {
 	return (
-		<aside className="hgwp-app-sidenav nfd--shrink-0 nfd--hidden min-[783px]:nfd--block nfd--pb-6 nfd--bottom-0 nfd--w-56">
+		<aside className="hgwp-app-sidenav nfd-shrink-0 nfd-hidden min-[783px]:nfd-block nfd-pb-6 nfd-bottom-0 nfd-w-56">
 			<SidebarNavigation>
 				<SidebarNavigation.Sidebar>
 					<SideNavHeader />
@@ -151,29 +151,29 @@ export const MobileNav = () => {
 	}, [location]);
 
 	return (
-		<header className="nfd--sticky nfd--z-30 nfd--top-0 min-[600px]:nfd--top-[46px] nfd--border-b nfd--border-line">
-			<div className="nfd--flex nfd--justify-between nfd--items-center nfd--bg-white">
+		<header className="nfd-sticky nfd-z-30 nfd-top-0 min-[600px]:nfd-top-[46px] nfd-border-b nfd-border-line">
+			<div className="nfd-flex nfd-justify-between nfd-items-center nfd-bg-white">
 
-				<div className="nfd--px-4">
+				<div className="nfd-px-4">
 					<Logo />
 				</div>
 				<button
 					role="button"
-					className="nfd--h-16 nfd--px-4 nfd--text-body nfd--flex nfd--items-center focus:nfd--outline-none focus:nfd--ring-2 focus:nfd--ring-inset focus:nfd--ring-primary"
+					className="nfd-h-16 nfd-px-4 nfd-text-body nfd-flex nfd-items-center focus:nfd-outline-none focus:nfd-ring-2 focus:nfd-ring-inset focus:nfd-ring-primary"
 					onClick={() => { setIsOpen(true) }}
 				>
-					<span className="nfd--sr-only">Open Navingation Menu</span>
-					<Bars3Icon className="nfd--w-6 nfd--h-6" />
+					<span className="nfd-sr-only">Open Navingation Menu</span>
+					<Bars3Icon className="nfd-w-6 nfd-h-6" />
 				</button>
 
 				<Modal
 					isOpen={isOpen}
 					onClose={() => setIsOpen(false)}
-					className="hgwp-app-sidenav-mobile nfd--z-40"
+					className="hgwp-app-sidenav-mobile nfd-z-40"
 					initialFocus
 				>
-					<Modal.Panel className="nfd--p-0 nfd--overflow-visible">
-						<div className="hgwp-app-sidenav nfd--p-5 nfd--max-h-[70vh] nfd--overflow-y-auto">
+					<Modal.Panel className="nfd-p-0 nfd-overflow-visible">
+						<div className="hgwp-app-sidenav nfd-p-5 nfd-max-h-[70vh] nfd-overflow-y-auto">
 							<SideNavMenu />
 						</div>
 					</Modal.Panel>

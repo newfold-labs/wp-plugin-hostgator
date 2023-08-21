@@ -266,7 +266,7 @@ const AutomaticUpdates = () => {
 			title={__('Automatic Updates', 'wp-plugin-hostgator')}
 			description={__('Keeping automatic updates on ensures timely security fixes and the latest features.', 'wp-plugin-hostgator')}
 		>
-			<div className="nfd--flex nfd--flex-col nfd--gap-4">
+			<div className="nfd-flex nfd-flex-col nfd-gap-4">
 				<AutomaticUpdatesAll setError={setError} notify={notify} />
 				<AutomaticUpdatesMajorCore setError={setError} notify={notify} />
 				<AutomaticUpdatesPlugins setError={setError} notify={notify} />

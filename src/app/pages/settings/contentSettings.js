@@ -77,7 +77,7 @@ const ContentRevisions = ({ setError, notify }) => {
 				{ label: '40', value: '40' },
 			]}
 			onChange={handleContentRevisionsChange}
-			className="nfd--select-field__spaced"
+			className="nfd-select-field__spaced"
 		/>
 	);
 }
@@ -150,7 +150,7 @@ const EmptyTrash = ({ setError, notify }) => {
 				{ label: '4', value: '30' },
 			]}
 			onChange={handleEmptyTrashDaysChange}
-			className="nfd--select-field__spaced"
+			className="nfd-select-field__spaced"
 		/>
 	);
 }
@@ -164,7 +164,7 @@ const ContentSettings = () => {
 			title={__('Content Options', 'wp-plugin-hostgator')}
 			description={__('Controls for content revisions and how often to empty the trash.', 'wp-plugin-hostgator')}
 		>
-			<div className="nfd--flex nfd--flex-col nfd--gap-4">
+			<div className="nfd-flex nfd-flex-col nfd-gap-4">
 				<ContentRevisions setError={setError} notify={notify} />
 				<EmptyTrash setError={setError} notify={notify} />
 				

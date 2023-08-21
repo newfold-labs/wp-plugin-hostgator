@@ -61,7 +61,7 @@ const OldPostsComments = ({ setError, notify }) => {
 			)}
 			checked={disableCommentsOldPosts}
 			onChange={toggleDisableCommentsOldPosts}
-			className="nfd--mb-2"
+			className="nfd-mb-2"
 		/>
 	);
 }
@@ -145,7 +145,7 @@ const CloseCommentsDays = ({ setError, notify }) => {
 				{ label: '100', value: '100' },
 			]}
 			onChange={handleCloseCommentsDaysChange}
-			className="nfd--select-field__spaced"
+			className="nfd-select-field__spaced"
 		/>
 	);
 }
@@ -217,7 +217,7 @@ const CommentsPerPage = ({ setError, notify }) => {
 				{ label: '50', value: '50' },
 			]}
 			onChange={handleCommentsPerPageChange}
-			className="nfd--select-field__spaced"
+			className="nfd-select-field__spaced"
 		/>
 	);
 }
@@ -231,7 +231,7 @@ const CommentSettings = () => {
 			title={__('Comments', 'wp-plugin-hostgator')}
 			description={__('Comments allow visitors to provide feedback and respond to your posts or pages.', 'wp-plugin-hostgator')}
 		>
-			<div className="nfd--flex nfd--flex-col nfd--gap-4">
+			<div className="nfd-flex nfd-flex-col nfd-gap-4">
 				<OldPostsComments setError={setError} notify={notify} />
 				<CloseCommentsDays setError={setError} notify={notify} />
 				<CommentsPerPage setError={setError} notify={notify} />

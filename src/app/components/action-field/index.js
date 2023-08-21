@@ -12,11 +12,11 @@ const ActionField = ({
 }) => {
 	return (
 		<div className={classNames(
-			"nfd--flex nfd--flex-col nfd--gap-1",
+			"nfd-flex nfd-flex-col nfd-gap-1",
 			className
 		)}>
-			<div className="nfd--flex nfd--justify-between nfd--items-center">
-				<Label className={"nfd--cursor-default"}>{label}</Label>
+			<div className="nfd-flex nfd-justify-between nfd-items-center">
+				<Label className={"nfd-cursor-default"}>{label}</Label>
 				<Button
 					variant="secondary"
 					as="a"
@@ -27,7 +27,7 @@ const ActionField = ({
 					{buttonLabel}
 				</Button>
 			</div>
-			<p className="lg:nfd--mr-[10.5rem]">
+			<p className="lg:nfd-mr-[10.5rem]">
 				{children}
 			</p>
 		</div>
