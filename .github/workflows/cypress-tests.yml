@@ -115,7 +115,7 @@ jobs:
         run: npx cypress run
 
       - name: Run Cypress Tests
-        uses: replayio/action-cypress@v0.3.0
+        uses: replayio/action-cypress@v0.3.1
         env:
           RECORD_REPLAY_API_KEY: ${{ secrets.RECORD_REPLAY_API_KEY }}
         if: ${{ github.repository == 'newfold-labs/wp-plugin-hostgator' && env.RECORD_REPLAY_API_KEY != '' }}
