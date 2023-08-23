@@ -14,24 +14,19 @@ namespace HostGator;
 final class Data {
 
 	/**
-	 * Data loaded onto window.HGWP
+	 * Data loaded onto window.NewfoldRuntime
 	 *
 	 * @return array
 	 */
 	public static function runtime() {
-		global $wp_version;
+		global $nfd_module_container;
 
 		$runtime = array(
 			'url'       => HOSTGATOR_BUILD_URL,
 			'version'   => HOSTGATOR_PLUGIN_VERSION,
-			'resturl'   => \get_home_url() . '/index.php?rest_route=',
-			'wpversion' => $wp_version,
-			'admin'     => \admin_url(),
-			'siteurl'   => \get_site_url(),
-			'sitetitle' => htmlspecialchars_decode( \get_bloginfo( 'name' ) ),
 			'assets'    => HOSTGATOR_PLUGIN_URL . 'assets/',
-			'brand'     => get_option( 'mm_brand', false ),
-			'region'    => get_option( 'hg_region', false ),
+			'brand'     => $nfd_module_container->plugin()->brand,
+			'region'    => $nfd_module_container->plugin()->region,
 		);
 
 		return $runtime;

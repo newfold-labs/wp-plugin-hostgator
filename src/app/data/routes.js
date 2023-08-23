@@ -7,6 +7,7 @@ import {
 	BuildingStorefrontIcon,
 	QuestionMarkCircleIcon } 
 from '@heroicons/react/24/outline';
+import { NewfoldRuntime } from "@newfold-labs/wp-module-runtime";
 import { Route, Routes } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
 import Home from '../pages/home';

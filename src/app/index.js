@@ -3,6 +3,7 @@ import './stylesheet.scss';
 
 import AppStore, { AppStoreProvider } from './data/store';
 import { Root } from "@newfold/ui-component-library";
+import { NewfoldRuntime } from "@newfold-labs/wp-module-runtime";
 import { useLocation, HashRouter as Router } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
 import { SnackbarList, Spinner } from '@wordpress/components';
@@ -70,7 +71,7 @@ const AppBody = (props) => {
 			id="hgwp-app-rendered"
 			className={classnames(
 				'wpadmin-brand-hostgator',
-				`hgwp-wp-${HGWP.wpversion}`,
+				`wppbh-wp-${ NewfoldRuntime.sdk.wpversion }`,
 				`hgwp-page-${ kebabCase( location.pathname ) }`,
 				props.className,
 				'nfd-w-full nfd-p-4 min-[783px]:nfd-p-0'
@@ -80,7 +81,7 @@ const AppBody = (props) => {
 				constants={{
 					context: 'hostgator-plugin',
 					page: hashedPath,
-					resturl: window.HGWP.resturl
+					resturl: NewfoldRuntime.createApiUrl('')
 				}}
 				methods={{
 					apiFetch,

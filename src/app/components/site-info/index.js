@@ -1,11 +1,12 @@
 import { LockClosedIcon, LockOpenIcon } from "@heroicons/react/24/outline";
+import { NewfoldRuntime } from "@newfold-labs/wp-module-runtime";
 import { Button } from "@newfold/ui-component-library";
 import { HostgatorIcon, WordPressIcon } from "../icons";
 import { addUtmParams } from "../../util/helpers";
 
 export const SiteInfoBar = () => {
-    const { siteurl, sitetitle } = window.HGWP;
-    const parsedUrl = new URL(siteurl);
+    const { url, title } = NewfoldRuntime.siteDetails;
+    const parsedUrl = new URL(url);
     const siteDomain = parsedUrl.hostname;
     const hasSSL = parsedUrl.protocol.includes("https");
 
@@ -22,7 +23,7 @@ export const SiteInfoBar = () => {
             <div className="nfd-flex nfd-justify-between nfd-items-center nfd-flex-wrap nfd-gap-4">
 
                 <div className="nfd-w-max nfd-flex nfd-flex-col nfd-gap-1.5">
-                    <h3 className="nfd-text-white nfd-text-2xl nfd-font-semibold">{sitetitle}</h3>
+                    <h3 className="nfd-text-white nfd-text-2xl nfd-font-semibold">{title}</h3>
                     <div className="nfd-flex nfd-items-center nfd-gap-3 nfd-font-medium">
                         <div className="nfd-flex nfd-items-center nfd-gap-1">
                             {renderPadLock()}
@@ -43,7 +44,7 @@ export const SiteInfoBar = () => {
                     </Button>
                     <Button 
                         as="a" 
-                        href={siteurl} 
+                        href={url} 
                         target="_blank" 
                         variant="primary" 
                         className="nfd-bg-white nfd-text-[#212936] nfd-text-tiny nfd-w-full min-[400px]:nfd-w-auto"
