@@ -3,8 +3,8 @@ import './stylesheet.scss';
 
 import AppStore, { AppStoreProvider } from './data/store';
 import { Root } from "@newfold/ui-component-library";
-import { NewfoldRuntime } from "@newfold-labs/wp-module-runtime";
 import { useLocation, HashRouter as Router } from 'react-router-dom';
+import { NewfoldRuntime } from '@newfold-labs/wp-module-runtime';
 import { __ } from '@wordpress/i18n';
 import { SnackbarList, Spinner } from '@wordpress/components';
 import classnames from 'classnames';
