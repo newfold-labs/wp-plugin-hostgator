@@ -12,9 +12,14 @@ const MarketplacePage = () => {
 
 	// constants to pass to module
 	const moduleConstants = {
-		'eventendpoint': '/newfold-data/v1/events/',
-		'perPage': 12,
-		'supportsCTB': false, // not needed, but explicity setting to false anyway
+		'supportsCTB': false,
+		'text': {
+			'title': __('Marketplace', 'wp-plugin-hostgator'),
+			'subTitle': __('Explore our featured collection of tools and services.', 'wp-plugin-hostgator'),
+			'error': __('Oops, there was an error loading the marketplace, please try again later.', 'wp-plugin-hostgator'),
+			'noProducts': __('Sorry, no marketplace items. Please, try again later.', 'wp-plugin-hostgator'),
+			'loadMore': __('Load More', 'wp-plugin-hostgator'),
+		}
 	};
 
     // methods to pass to module
@@ -27,22 +32,21 @@ const MarketplacePage = () => {
         NewfoldRuntime,
     };
 
+	const moduleComponents = {
+		SectionHeader,
+		SectionContent,
+	}
+
 	return (
 		<Page className={"hgwp-app-marketplace-page"}>
 			<SectionContainer className={'hgwp-app-marketplace-container'}>
-				<SectionHeader
-					title={__('Marketplace', 'wp-plugin-hostgator')}
-					subTitle={__('Explore our featured collection of tools and services.', 'wp-plugin-hostgator')}
-					className={'hgwp-app-marketplace-header'}
-				/>
-				<SectionContent className={'hgwp-app-marketplace-content'}>
-					
-					<NewfoldMarketplace 
-                        methods={moduleMethods}
-                        constants={moduleConstants}
-                    />
 
-				</SectionContent>
+				<NewfoldMarketplace 
+					methods={moduleMethods}
+					constants={moduleConstants}
+					Components={moduleComponents}
+				/>
+
 			</SectionContainer>
 		</Page>
 	);
