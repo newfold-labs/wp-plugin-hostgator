@@ -1,5 +1,5 @@
-import './tailwind.css';
 import './stylesheet.scss';
+import './tailwind.pcss';
 
 import AppStore, { AppStoreProvider } from './data/store';
 import { Root } from "@newfold/ui-component-library";
