@@ -13,33 +13,30 @@ const CacheSettings = ({ setError, notify }) => {
 	const cacheOptions = [
 		{
 			label: __('Disabled', 'wp-plugin-hostgator'),
-			description: __('No cache enabled. Every page load is fresh.', 'wp-plugin-hostgator') +
-				' ' +
+			description: __('No cache enabled.', 'wp-plugin-hostgator') + ' ' +
+				__('Every page load is fresh.', 'wp-plugin-hostgator') + ' ' +
 				__('Not recommended.', 'wp-plugin-hostgator'),
 			value: 0,
 			notice: __('Caching disabled.', 'wp-plugin-hostgator'),
 		},
 		{
 			label: __('Assets Only', 'wp-plugin-hostgator'),
-			description: __('Cache static assets like images and the appearance of your site for 1 hour.', 'wp-plugin-hostgator') +
-				' ' +
-				__('Tuned for online stores and member sites that need to be fresh.', 'wp-plugin-hostgator'),
+			description: __('Cache static assets like images and the appearance of your site for 1 hour.', 'wp-plugin-hostgator') + ' ' +
+				__('Recommended for ecommerce and sites that update frequently or display info in real-time.', 'wp-plugin-hostgator'),
 			value: 1,
 			notice: __('Cache enabled for assets only.', 'wp-plugin-hostgator'),
 		},
 		{
 			label: __('Assets & Web Pages', 'wp-plugin-hostgator'),
-			description: __('Cache static assets for 24 hours and web pages for 2 hours.', 'wp-plugin-hostgator') +
-				' ' +
-				__('Tuned for sites that change at least weekly.', 'wp-plugin-hostgator'),
+			description: __('Cache static assets for 24 hours and web pages for 2 hours.', 'wp-plugin-hostgator') + ' ' +
+				__('Recommended for blogs, educational sites, and sites that update at least weekly.', 'wp-plugin-hostgator'),
 			value: 2,
 			notice: __('Cache enabled for assets and pages.', 'wp-plugin-hostgator'),
 		},
 		{
 			label: __('Assets & Web Pages - Extended', 'wp-plugin-hostgator'),
-			description: __('Assets & Web Pages - Extended', 'wp-plugin-hostgator') +
-				' ' +
-				__('Tuned for sites that update a few times a month or less.', 'wp-plugin-hostgator'),
+			description: __('Assets & Web Pages - Extended', 'wp-plugin-hostgator') + ' ' +
+				__('Recommended for portfolios, brochure sites, and sites that update monthly or less often.', 'wp-plugin-hostgator'),
 			value: 3,
 			notice: __('Cache enabled for assets and pages (extended).', 'wp-plugin-hostgator'),
 		},

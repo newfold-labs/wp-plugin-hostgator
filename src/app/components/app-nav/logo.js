@@ -28,7 +28,7 @@ const Logo = () => {
 		<div className="hgwp-logo-wrap">
 			<Mark />
 			<Heading level="2" className="screen-reader-text">
-				{ __( 'hostgator WordPress Plugin', 'wp-plugin-hostgator' ) }
+				{ __( 'Hostgator WordPress Plugin', 'wp-plugin-hostgator' ) }
 			</Heading>
 		</div>
 	);
