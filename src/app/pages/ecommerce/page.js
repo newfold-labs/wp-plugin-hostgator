@@ -5,6 +5,7 @@ import { useNotification } from "../../components/notifications/feed";
 import AppStore from "../../data/store";
 import {useContext } from "@wordpress/element";
 import { hostgatorSettingsApiFetch } from "../../util/helpers";
+import "@newfold-labs/wp-module-ecommerce/hostgator.css";
 
 const EcomerceStore = () => {
     const {store, setStore} = useContext(AppStore)
