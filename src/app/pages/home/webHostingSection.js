@@ -8,7 +8,7 @@ const WebHostingSection = () => {
 			title={__('Web Hosting', 'wp-plugin-hostgator')}
 			description={__('Access & manage your HostGator account.', 'wp-plugin-hostgator')}
 		>
-			<div className="yst-flex yst-flex-col yst-gap-5">
+			<div className="nfd-flex nfd-flex-col nfd-gap-5">
 				{supportsLinkPerRegion('home_manage_sites') &&
 					<ActionField
 						label={__("Manage Sites", "wp-plugin-hostgator")}

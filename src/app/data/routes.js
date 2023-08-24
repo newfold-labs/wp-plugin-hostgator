@@ -7,6 +7,7 @@ import {
 	BuildingStorefrontIcon,
 	QuestionMarkCircleIcon } 
 from '@heroicons/react/24/outline';
+import { NewfoldRuntime } from "@newfold-labs/wp-module-runtime";
 import { Route, Routes } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
 import Home from '../pages/home';
@@ -15,7 +16,6 @@ import Settings from '../pages/settings';
 import Performance from '../pages/performance';
 import Help from '../pages/help';
 import Store from '../pages/ecommerce/page';
-import { NewfoldRuntime } from '@newfold-labs/wp-module-runtime';
 
 const addPartialMatch = (prefix, path) => prefix === path ? `${prefix}/*` : path; 
 

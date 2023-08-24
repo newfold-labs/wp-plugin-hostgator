@@ -1,11 +1,13 @@
-const yoastPreset = require("@yoast/tailwindcss-preset");
-/** @type {import('tailwindcss').Config} */
+import { TAILWINDCSS_PRESET } from "@newfold/ui-component-library";
+
 module.exports = {
-    presets: [yoastPreset],
+    presets: [TAILWINDCSS_PRESET],
     content: [
-        ...yoastPreset.content,
-        "./node_modules/@newfold-labs/wp-module-ecommerce/build/index.js",
-        "./src/**/*.js",
+        // Include all JS files inside the UI library in your content.
+        ...TAILWINDCSS_PRESET.content,
+        "./src/**/*.js", // all source files
+        "./node_modules/@newfold-labs/wp-module-*/build/index.js", // all npm sourced module builds
+        "./vendor/newfold-labs/wp-module-*/components/**/*.js", // all composer sourced module components
     ],
     theme: {
         extend: {

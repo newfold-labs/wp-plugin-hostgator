@@ -26,6 +26,8 @@ final class Admin {
 		\add_filter( 'plugin_action_links_wp-plugin-hostgator/wp-plugin-hostgator.php', array( __CLASS__, 'actions' ) );
 		/* Add inline style to hide subnav link */
 		\add_action( 'admin_head', array( __CLASS__, 'admin_nav_style' ) );
+		/* Add runtime for data store */
+		\add_filter('newfold-runtime', array( __CLASS__, 'add_to_runtime' ) );
 		/* Filter plugin locale */
 		\add_filter( 'plugin_locale', array( __CLASS__, 'locale_filter' ) );
 		\add_filter( 'load_script_translation_file', array( __CLASS__, 'load_script_locale_filter' ), 10, 3 );
@@ -33,6 +35,14 @@ final class Admin {
 		if ( isset( $_GET['page'] ) && strpos( filter_input( INPUT_GET, 'page', FILTER_SANITIZE_STRING ), 'hostgator' ) >= 0 ) { // phpcs:ignore
 			\add_action( 'admin_footer_text', array( __CLASS__, 'add_brand_to_admin_footer' ) );
 		}
+	}
+
+	/**
+	 * Add to runtime
+	 */
+	public static function add_to_runtime( $sdk ) {
+		include HOSTGATOR_PLUGIN_DIR . '/inc/Data.php';
+		return array_merge( $sdk, Data::runtime() );
 	}
 
 	/**
@@ -246,13 +256,6 @@ final class Admin {
 			'hostgator-script',
 			'wp-plugin-hostgator',
 			HOSTGATOR_PLUGIN_DIR . '/languages'
-		);
-
-		include HOSTGATOR_PLUGIN_DIR . '/inc/Data.php';
-		\wp_add_inline_script(
-			'hostgator-script',
-			'var HGWP =' . \wp_json_encode( Data::runtime() ) . ';',
-			'before'
 		);
 
 		\wp_register_style(

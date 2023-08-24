@@ -1,9 +1,10 @@
-import './tailwind.css';
 import './stylesheet.scss';
+import './tailwind.pcss';
 
 import AppStore, { AppStoreProvider } from './data/store';
-import { Root } from "@yoast/ui-library";
+import { Root } from "@newfold/ui-component-library";
 import { useLocation, HashRouter as Router } from 'react-router-dom';
+import { NewfoldRuntime } from '@newfold-labs/wp-module-runtime';
 import { __ } from '@wordpress/i18n';
 import { SnackbarList, Spinner } from '@wordpress/components';
 import classnames from 'classnames';
@@ -70,17 +71,17 @@ const AppBody = (props) => {
 			id="hgwp-app-rendered"
 			className={classnames(
 				'wpadmin-brand-hostgator',
-				`hgwp-wp-${HGWP.wpversion}`,
+				`wppbh-wp-${ NewfoldRuntime.sdk.wpversion }`,
 				`hgwp-page-${ kebabCase( location.pathname ) }`,
 				props.className,
-				'yst-w-full yst-p-4 min-[783px]:yst-p-0'
+				'nfd-w-full nfd-p-4 min-[783px]:nfd-p-0'
 			)}
 		>
 			<NewfoldNotifications
 				constants={{
 					context: 'hostgator-plugin',
 					page: hashedPath,
-					resturl: window.HGWP.resturl
+					resturl: NewfoldRuntime.createApiUrl('')
 				}}
 				methods={{
 					apiFetch,
@@ -113,7 +114,7 @@ export const App = () => (
 		<Root context={{ isRtl: false }}>
 			<NotificationFeed>
 				<Router>
-					<div className="hgwp-app-container min-[783px]:yst-p-8 min-[783px]:yst-flex yst-gap-6 yst-max-w-full xl:yst-max-w-screen-xl 2xl:yst-max-w-screen-2xl yst-my-0">
+					<div className="hgwp-app-container min-[783px]:nfd-p-8 min-[783px]:nfd-flex nfd-gap-6 nfd-max-w-full xl:nfd-max-w-screen-xl 2xl:nfd-max-w-screen-2xl nfd-my-0">
 						<AppNav />
 						<AppBody />
 					</div>

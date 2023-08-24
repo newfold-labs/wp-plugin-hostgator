@@ -1,78 +1,52 @@
 import apiFetch from '@wordpress/api-fetch';
 import { useState, useEffect } from '@wordpress/element';
 import { useLocation } from 'react-router-dom';
+import classnames from 'classnames';
 import { Page } from "../../components/page";
 import { SectionContainer, SectionHeader, SectionContent } from "../../components/section";
-import MarketplaceList from './MarketplaceList';
-import MarketplaceLoading from './MarketplaceLoading';
-import MarketplaceError from './MarketplaceError';
+import { NewfoldRuntime } from "@newfold-labs/wp-module-runtime";
+// component sourced from marketplace module
+import { default as NewfoldMarketplace } from '../../../../vendor/newfold-labs/wp-module-marketplace/components/marketplace/';
 
 const MarketplacePage = () => {
-	const [isLoading, setIsLoading] = useState(true);
-	const [isError, setIsError] = useState(false);
-	const [marketplaceItems, setMarketplaceItems] = useState([]);
-	const [products, setProducts] = useState([]);
-
-	let location = useLocation();
 
 	// constants to pass to module
 	const moduleConstants = {
-		'resturl': window.HGWP.resturl,
-		'eventendpoint': '/newfold-data/v1/events/',
-		'perPage': 12,
-		'supportsCTB': false, // not needed, but explicity setting to false anyway
-	}
-
-	useEffect(() => {
-		apiFetch({
-			url: `${moduleConstants.resturl}/newfold-marketplace/v1/marketplace`
-		}).then((response) => {
-			// check response for data
-			if (!response.hasOwnProperty('categories') || !response.hasOwnProperty('products')) {
-				setIsError(true);
-			} else {
-				setMarketplaceItems(response.products.data);
-			}
-		})
-	}, []);
-
-	useEffect(() => {
-		if (marketplaceItems.length > 0) {
-			filterProducts();
+		'supportsCTB': false,
+		'text': {
+			'title': __('Marketplace', 'wp-plugin-hostgator'),
+			'subTitle': __('Explore our featured collection of tools and services.', 'wp-plugin-hostgator'),
+			'error': __('Oops, there was an error loading the marketplace, please try again later.', 'wp-plugin-hostgator'),
+			'noProducts': __('Sorry, no marketplace items. Please, try again later.', 'wp-plugin-hostgator'),
+			'loadMore': __('Load More', 'wp-plugin-hostgator'),
 		}
-	}, [marketplaceItems, location]);
-
-	const filterProducts = () => {
-		const urlpath = location.pathname.substring(
-			location.pathname.lastIndexOf('/') + 1
-		);
-		const category = urlpath === 'marketplace' ? 'featured' : urlpath;
-
-		const filterdProducts = marketplaceItems.filter((product) => {
-			return product.categories.some(element => {
-				return element.toLowerCase() === category.toLowerCase();
-			});
-
-		});
-
-		setProducts(filterdProducts);
-		setIsLoading(false);
 	};
+
+    // methods to pass to module
+    const moduleMethods = {
+        apiFetch,
+        classnames,
+        useState,
+        useEffect,
+        useLocation,
+        NewfoldRuntime,
+    };
+
+	const moduleComponents = {
+		SectionHeader,
+		SectionContent,
+	}
 
 	return (
 		<Page className={"hgwp-app-marketplace-page"}>
 			<SectionContainer className={'hgwp-app-marketplace-container'}>
-				<SectionHeader
-					title={__('Marketplace', 'wp-plugin-hostgator')}
-					subTitle={__('Explore our featured collection of tools and services.', 'wp-plugin-hostgator')}
-					className={'hgwp-app-marketplace-header'}
+
+				<NewfoldMarketplace 
+					methods={moduleMethods}
+					constants={moduleConstants}
+					Components={moduleComponents}
 				/>
 
-				<SectionContent className={'hgwp-app-marketplace-content'}>
-					{isLoading && <MarketplaceLoading />}
-					{isError && <MarketplaceError />}
-					{!isLoading && !isError && <MarketplaceList products={products} />}
-				</SectionContent>
 			</SectionContainer>
 		</Page>
 	);

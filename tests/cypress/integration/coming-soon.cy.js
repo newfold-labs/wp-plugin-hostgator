@@ -23,7 +23,7 @@ describe('Coming Soon', function () {
 
 	it('Coming Soon Toggle Works', () => {
 		cy.get('[data-id="coming-soon-toggle"]').then(toggle => {
-			if (toggle.hasClass('yst-toggle--checked')) {
+			if (toggle.hasClass('nfd-toggle--checked')) {
 				// if already checked, turn off
 				cy.get('[data-id="coming-soon-toggle"]').click();
 				// wait
@@ -34,7 +34,7 @@ describe('Coming Soon', function () {
 			cy.wait(200);
 		});
 
-		cy.get('.hgwp-app-settings-coming-soon .yst-alert--info').scrollIntoView()
+		cy.get('.hgwp-app-settings-coming-soon .nfd-alert--info').scrollIntoView()
 			.contains('Coming Soon')
 			.should('be.visible');
 	});
@@ -48,7 +48,7 @@ describe('Coming Soon', function () {
 
 	it('Has Coming Soon Section on Home', () => {
 		cy.visit('/wp-admin/admin.php?page=hostgator#/home');
-		cy.get('.hgwp-app-home-coming-soon .yst-alert--info').scrollIntoView()
+		cy.get('.hgwp-app-home-coming-soon .nfd-alert--info').scrollIntoView()
 			.contains('Coming Soon')
 			.should('be.visible');
 	});
@@ -76,7 +76,7 @@ describe('Coming Soon', function () {
 		cy.get('[data-id="coming-soon-toggle"]').click();
 		cy.wait(100);
 		
-		cy.get('.hgwp-page .hgwp-app-settings-coming-soon .yst-alert--info').should('not.exist');
+		cy.get('.hgwp-page .hgwp-app-settings-coming-soon .nfd-alert--info').should('not.exist');
 
 		cy.logout();
 		cy.visit('/');
