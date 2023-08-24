@@ -1,10 +1,3 @@
-import { ReactComponent as Phone } from '../../../assets/svg/a-icon__mobilephone_-blue-50.svg';
-import { ReactComponent as Chat } from '../../../assets/svg/a-icon__chat_-orange-50.svg';
-import { ReactComponent as Tweet } from '../../../assets/svg/a-icon__tweet_-yellow-50.svg';
-import { ReactComponent as Book } from '../../../assets/svg/a-icon__book_-orange-50.svg';
-import { ReactComponent as Site } from '../../../assets/svg/a-icon__website_-blue-50.svg';
-import { ReactComponent as Video } from '../../../assets/svg/a-icon__youtube_-orange-50.svg';
-
 const help = [
 	{
 		name: 'phone',
@@ -13,10 +6,9 @@ const help = [
 			'Give us a ring at (866) 96-GATOR',
 			'wp-plugin-hostgator'
 		),
-		icon: 'phone',
-		Svg: Phone,
+		icon: false,
 		cta: __('Call Us', 'wp-plugin-hostgator'),
-		url: 'help_phone_number', //'tel:8669642867',
+		url: 'tel:18669642867',
 	},
 	{
 		name: 'chat',
@@ -25,10 +17,9 @@ const help = [
 			"Have a question? We're here 24/7/365",
 			'wp-plugin-hostgator'
 		),
-		icon: 'format-chat',
-		Svg: Chat,
+		icon: false,
 		cta: __('Live Chat', 'wp-plugin-hostgator'),
-		url: 'help_chat', //'https://helpchat.hostgator.com/?utm_campaign=&utm_content=help_chat_link&utm_term=live_chat&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=hostgator#/help',
+		url: 'https://helpchat.hostgator.com/?utm_campaign=&utm_content=help_chat_link&utm_term=live_chat&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=hostgator#/help'
 	},
 	{
 		name: 'twitter',
@@ -37,19 +28,17 @@ const help = [
 			'Tweet us at @hgsupport for support',
 			'wp-plugin-hostgator'
 		),
-		icon: 'twitter',
-		Svg: Tweet,
+		icon: false,
 		cta: __('Tweet Us', 'wp-plugin-hostgator'),
-		url: 'help_twitter', //'https://twitter.com/hgsupport',
+		url: 'https://twitter.com/hgsupport',
 	},
 	{
 		name: 'kb',
 		title: __('Knowledge Base', 'wp-plugin-hostgator'),
 		description: __('Know what the pros know.', 'wp-plugin-hostgator'),
-		icon: 'book',
-		Svg: Book,
+		icon: false,
 		cta: __('Find Answers', 'wp-plugin-hostgator'),
-		url: 'help_kb', //'https://www.hostgator.com/help?utm_campaign=&utm_content=help_kb_link&utm_term=find_answers&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=hostgator#/help',
+		url: 'https://www.hostgator.com/help?utm_campaign=&utm_content=help_kb_link&utm_term=find_answers&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=hostgator#/help',
 	},
 	{
 		name: 'blog',
@@ -58,10 +47,9 @@ const help = [
 			'Get our tips and in-depth articles.',
 			'wp-plugin-hostgator'
 		),
-		icon: 'text-page',
-		Svg: Site,
+		icon: false,
 		cta: __('Learn Stuff', 'wp-plugin-hostgator'),
-		url: 'help_blog', //'https://www.hostgator.com/blog/?utm_campaign=&utm_content=help_blog_link&utm_term=learn_stuff&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=hostgator#/help',
+		url: 'https://www.hostgator.com/blog/?utm_campaign=&utm_content=help_blog_link&utm_term=learn_stuff&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=hostgator#/help',
 	},
 	{
 		name: 'video',
@@ -70,10 +58,9 @@ const help = [
 			'Step-by-step tutorials and additional guides.',
 			'wp-plugin-hostgator'
 		),
-		icon: 'format-video',
-		Svg: Video,
+		icon: false,
 		cta: __('Watch Now', 'wp-plugin-hostgator'),
-		url: 'help_youtube', //'https://www.youtube.com/c/hostgatorUS',
+		url: 'https://www.youtube.com/c/hostgatorUS',
 	},
 ];
 

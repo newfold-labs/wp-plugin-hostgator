@@ -1,100 +1,41 @@
-import { Heading } from '../../components';
-import graphicUrl from '../../../../assets/svg/a-illustration__gator-scales-image-3_-notext.svg';
-import {
-	Button,
-	Card,
-	CardBody,
-	CardHeader,
-	CardFooter,
-	Dashicon,
-} from '@wordpress/components';
+import ActionField from "../../components/action-field";
+import { SectionSettings } from "../../components/section";
 
 const WebContentSection = () => {
 	return (
-		<section className="hgwp-section hgwp-section-home-content">
-			<img
-				src={graphicUrl}
-				className="section-graphic"
-				alt={__('Website illustration', 'wp-plugin-hostgator')}
-			/>
-			<Card size="large" className="hgwp-section-card">
-				<CardHeader>
-					<Heading level="3">
-						{__('Website Content', 'wp-plugin-hostgator')}
-					</Heading>
-					<p>
-						{__(
-							'Create, manage & sort your story.',
-							'wp-plugin-hostgator'
-						)}
-					</p>
-				</CardHeader>
-				<CardFooter>
-					<div className="hgwp-cardlist-content">
-						<Heading level="4">
-							<Dashicon icon="admin-post" />{' '}
-							{__('Blog', 'wp-plugin-hostgator')}
-						</Heading>
-						<p>
-							{__(
-								'Write a new blog post.',
-								'wp-plugin-hostgator'
-							)}
-						</p>
-					</div>
-					<Button
-						variant="primary"
-						href={HGWP.admin + 'post-new.php'}
-						icon="admin-post"
-					>
-						{' '}
-						{__('New Post', 'wp-plugin-hostgator')}{' '}
-					</Button>
-				</CardFooter>
-				<CardFooter>
-					<div className="hgwp-cardlist-content">
-						<Heading level="4">
-							<Dashicon icon="welcome-add-page" />{' '}
-							{__('Pages', 'wp-plugin-hostgator')}
-						</Heading>
-						<p>
-							{__(
-								'Add fresh pages to your website.',
-								'wp-plugin-hostgator'
-							)}
-						</p>
-					</div>
-					<Button
-						variant="primary"
-						href={HGWP.admin + 'post-new.php?post_type=page'}
-						icon="welcome-add-page"
-					>
-						{__('New Page', 'wp-plugin-hostgator')}
-					</Button>
-				</CardFooter>
-				<CardFooter>
-					<div className="hgwp-cardlist-content">
-						<Heading level="4">
-							<Dashicon icon="category" />{' '}
-							{__('Categories', 'wp-plugin-hostgator')}
-						</Heading>
-						<p>
-							{__(
-								'Organize existing content into categories.',
-								'wp-plugin-hostgator'
-							)}
-						</p>
-					</div>
-					<Button
-						variant="secondary"
-						href={HGWP.admin + 'edit-tags.php?taxonomy=category'}
-						icon="category"
-					>
-						{__('Manage Categories', 'wp-plugin-hostgator')}
-					</Button>
-				</CardFooter>
-			</Card>
-		</section>
+		<SectionSettings
+			title={__('Website Content', 'wp-plugin-hostgator')}
+			description={__('Create, manage & sort your story.', 'wp-plugin-hostgator')}
+		>
+			<div className="nfd-flex nfd-flex-col nfd-gap-5">
+				<ActionField
+					label={__("Blog", "wp-plugin-hostgator")}
+					buttonLabel={__("New Post", "wp-plugin-hostgator")}
+					href={window.NewfoldRuntime.admin_url + 'post-new.php'}
+					className={"hgwp-app-home-blog-action"}
+				>
+					{__('Write a new blog post.', 'wp-plugin-hostgator')}
+				</ActionField>
+
+				<ActionField
+					label={__("Pages", "wp-plugin-hostgator")}
+					buttonLabel={__("New Page", "wp-plugin-hostgator")}
+					href={window.NewfoldRuntime.admin_url + 'post-new.php?post_type=page'}
+					className={"hgwp-app-home-pages-action"}
+				>
+					{__('Add fresh pages to your website.', 'wp-plugin-hostgator')}
+				</ActionField>
+
+				<ActionField
+					label={__("Categories", "wp-plugin-hostgator")}
+					buttonLabel={__("Manage Categories", "wp-plugin-hostgator")}
+					href={window.NewfoldRuntime.admin_url + 'edit-tags.php?taxonomy=category'}
+					className={"hgwp-app-home-categories-action"}
+				>
+					{__('Organize existing content into categories.', 'wp-plugin-hostgator')}
+				</ActionField>
+			</div>
+		</SectionSettings >
 	);
 };
 
