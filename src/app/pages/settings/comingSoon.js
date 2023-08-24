@@ -73,7 +73,7 @@ const ComingSoon = () => {
 					id="coming-soon-toggle"
 					label="Coming soon page"
 					description={__(
-						'Your hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen.',
+						'Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen.',
 						'wp-plugin-hostgator'
 					)}
 					checked={comingSoon}

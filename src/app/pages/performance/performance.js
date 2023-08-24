@@ -143,9 +143,7 @@ const ClearCache = ({ setError, notify }) => {
 			</div>
 			<p className="lg:nfd-mr-[10.5rem]">
 				{
-					__('We automatically clear your cache', 'wp-plugin-hostgator') +
-					', ' +
-					__("as you work (creating content, changing settings, installing plugins and more). But you can manually clear it here to be confident it's fresh.", 'wp-plugin-hostgator')
+					__("We automatically clear your cache as you work (creating content, changing settings, installing plugins and more). But you can manually clear it here to be confident it's fresh.", 'wp-plugin-hostgator')
 				}
 			</p>
 		</div>
