@@ -5,40 +5,48 @@ describe('Home Page', function () {
 	before(() => {
 		cy.visit('/wp-admin/admin.php?page=hostgator#/home');
 		cy.injectAxe();
-		
 	});
 
-	it('Header Exists', () => {
-		cy
-			.get('.hgwp-header').contains('h2', 'HostGator')
+	it('Site Info Exists', () => {
+		cy.window().then((win) => {
+			const siteTitle = win.NewfoldRuntime.site.title;
+
+			cy.get('.hgwp-app-site-info').contains('h3', siteTitle)
 			.scrollIntoView()
 			.should('be.visible');
+		  })
 	});
 
 	it('Is Accessible', () => {
 		cy.wait(500);
-		cy.a11y('.hgwp-app-body');
+		cy.checkA11y('.hgwp-app-body');
 	});
 
-	it('Web Content Section Exists', () => {
+	it('Maintenance Mode Section Exists', () => {
 		cy
-			.get('.hgwp-section-home-content').contains('h3', 'Content')
+			.get('.hgwp-app-home-coming-soon').contains('h3', 'Maintenance Mode')
 			.scrollIntoView()
 			.should('be.visible');
 	});
 
-	it('Settings Section Exists', () => {
+	it('Website Content Section Exists', () => {
 		cy
-			.get('.hgwp-section-home-settings').contains('h3', 'Settings')
+			.get('.hgwp-app-home-content').contains('h3', 'Website Content')
 			.scrollIntoView()
 			.should('be.visible');
 	});
 
-	it('Hosting Section Exists', () => {
+	it('Settings and Performance Section Exists', () => {
 		cy
-			.get('.hgwp-section-home-hosting').contains('h3', 'Hosting')
+			.get('.hgwp-app-home-settings').contains('h3', 'Settings and Performance')
 			.scrollIntoView()
 			.should('be.visible');
 	});
 
+	it('Web Hosting Section Exists', () => {
+		cy
+			.get('.hgwp-app-home-hosting').contains('h3', 'Web Hosting')
+			.scrollIntoView()
+			.should('be.visible');
+	});
 });

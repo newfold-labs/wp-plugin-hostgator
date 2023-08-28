@@ -10,7 +10,10 @@ module.exports = defineConfig({
     wpPassword: 'password',
 		wpVersion,
 		phpVersion,
+    pluginId: 'hostgator',
+    appId: 'hgwp',
   },
+  downloadsFolder: 'tests/cypress/downloads',
   fixturesFolder: 'tests/cypress/fixtures',
   screenshotsFolder: 'tests/cypress/screenshots',
   video: true,
@@ -34,8 +37,14 @@ module.exports = defineConfig({
       return require('./tests/cypress/plugins/index.js')(on, config)
     },
     baseUrl: 'http://localhost:8880',
-    specPattern: 'tests/cypress/integration/**/*.cy.{js,jsx,ts,tsx}',
+    specPattern: [
+      'tests/cypress/integration/**/*.cy.{js,jsx,ts,tsx}',
+      'vendor/newfold-labs/**/tests/cypress/integration/**/*.cy.{js,jsx,ts,tsx}',
+    ],
     supportFile: 'tests/cypress/support/index.js',
     testIsolation: false,
+		excludeSpecPattern: [
+      'vendor/newfold-labs/wp-module-coming-soon/tests/cypress/integration/coming-soon.cy.{js,jsx,ts,tsx}', // omit until ecommerce module is added
+		],
   },
 })

@@ -1,32 +1,23 @@
-import './stylesheet.scss';
-import graphicUrl from '../../../../assets/svg/a-illustration__checklist.svg';
-import CacheSettings from './cacheSettings';
-import ClearCache from './clearCache';
-import SettingsCallout from './settingsCallout';
-import { useViewportMatch } from '@wordpress/compose';
+import Performance from './performance';
+import { Page } from '../../components/page';
+import { SectionContainer, SectionHeader, SectionContent } from '../../components/section';
 
-const Performance = () => {
-	const isWideViewport = useViewportMatch('large');
-
+const PerformancePage = () => {
 	return (
-		<div className="hgwp-Performance grid col2 has-page-graphic">
-			<CacheSettings />
-			{isWideViewport && (
-				<div>
-					<img
-						src={graphicUrl}
-						style={{ float: 'right' }}
-						alt={__(
-							'Performance illustration',
-							'wp-plugin-hostgator'
-						)}
-					/>
-				</div>
-			)}
-			<ClearCache />
-			<SettingsCallout />
-		</div>
+		<Page title="Performance" className={"hgwp-app-settings-page"}>
+			<SectionContainer className={'hgwp-app-settings-container'}>
+				<SectionHeader
+					title={__('Performance', 'wp-plugin-hostgator')}
+					subTitle={__('This is where you can manage cache settings for your website.', 'wp-plugin-hostgator')}
+					className={'hgwp-app-settings-header'}
+				/>
+
+				<SectionContent className={'hgwp-app-settings-performance'}>
+					<Performance />
+				</SectionContent>
+			</SectionContainer>
+		</Page>
 	);
 };
 
-export default Performance;
+export default PerformancePage;
