@@ -46,7 +46,7 @@ export const SiteInfoBar = () => {
                     </Button>
                     <Button 
                         as="a" 
-                        href={url} 
+                        href={(isEcommerce && isStore) ? `${url}/shop` : url}
                         target="_blank" 
                         variant="primary" 
                         className="nfd-bg-white nfd-text-[#212936] nfd-text-tiny nfd-w-full min-[400px]:nfd-w-auto"
