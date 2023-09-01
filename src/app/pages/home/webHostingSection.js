@@ -42,7 +42,7 @@ const WebHostingSection = () => {
 				{supportsLinkPerRegion('home_find_domain') &&
 					<ActionField
 						label={__("Domains", "wp-plugin-hostgator")}
-						buttonLabel={__("Manage Email", "wp-plugin-hostgator")}
+						buttonLabel={__("Manage Domain", "wp-plugin-hostgator")}
 						href={getLinkPerRegion(
 							'home_find_domain',
 							__('Find a Domain', 'wp-plugin-hostgator')
