@@ -6,8 +6,8 @@ const wpVersion = /[^/]*$/.exec(core)[0]
 module.exports = defineConfig({
   projectId: "kuks2q",
   env: {
-    wpUsername: 'Alani',
-    wpPassword: 'Admin@123',
+    wpUsername: 'admin',
+    wpPassword: 'password',
 		wpVersion,
 		phpVersion,
     pluginId: 'hostgator',
@@ -35,7 +35,7 @@ module.exports = defineConfig({
 
       return require('./tests/cypress/plugins/index.js')(on, config)
     },
-    baseUrl: 'http://localhost:10013',
+    baseUrl: 'http://localhost:8880',
     specPattern: [
       'tests/cypress/integration/**/*.cy.{js,jsx,ts,tsx}',
       'vendor/newfold-labs/**/tests/cypress/integration/**/*.cy.{js,jsx,ts,tsx}',
