@@ -9,6 +9,8 @@ export const SiteInfoBar = () => {
     const parsedUrl = new URL(url);
     const siteDomain = parsedUrl.hostname;
     const hasSSL = parsedUrl.protocol.includes("https");
+    const isEcommerce = NewfoldRuntime.hasCapability("isEcommerce");
+    const isStore = window.location.href?.includes("store");
 
     const renderPadLock = () => {
         if (hasSSL) {
@@ -44,13 +46,13 @@ export const SiteInfoBar = () => {
                     </Button>
                     <Button 
                         as="a" 
-                        href={url} 
+                        href={(isEcommerce && isStore) ? `${url}/shop` : url}
                         target="_blank" 
                         variant="primary" 
                         className="nfd-bg-white nfd-text-[#212936] nfd-text-tiny nfd-w-full min-[400px]:nfd-w-auto"
                     >
                         <WordPressIcon />
-                        View Site
+                       { (isEcommerce && isStore) ? "View Store" : "View Site" }
                     </Button>
                 </div>
                 
