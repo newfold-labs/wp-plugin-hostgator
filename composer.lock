@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d231e344ee012a71a00c778f72088322",
+    "content-hash": "4edf918e6f5c95bc5f25549063998e9a",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -212,6 +212,106 @@
                 "issues": "https://github.com/newfold-labs/wp-module-data/issues"
             },
             "time": "2023-08-08T20:32:34+00:00"
+        },
+        {
+            "name": "newfold-labs/wp-module-ecommerce",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/newfold-labs/wp-module-ecommerce.git",
+                "reference": "a8eabc3a10e69bc21bc43af7484207f4cd273d90"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/a8eabc3a10e69bc21bc43af7484207f4cd273d90",
+                "reference": "a8eabc3a10e69bc21bc43af7484207f4cd273d90",
+                "shasum": ""
+            },
+            "require": {
+                "newfold-labs/wp-module-installer": "^1.1"
+            },
+            "require-dev": {
+                "newfold-labs/wp-php-standards": "@stable",
+                "wp-cli/i18n-command": "@stable",
+                "wp-cli/wp-cli-bundle": "@stable"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NewfoldLabs\\WP\\Module\\ECommerce\\": "includes"
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "scripts": {
+                "i18n": [
+                    "vendor/bin/wp i18n make-pot . ./languages/wp-module-ecommerce.pot --headers='{\"Report-Msgid-Bugs-To\":\"https://github.com/aulisius/bluehost-wordpress-plugin/issues\",\"POT-Creation-Date\":null}' --exclude=node_modules,src,tests"
+                ],
+                "fix": [
+                    "vendor/bin/phpcbf --standard=phpcs.xml ."
+                ],
+                "lint": [
+                    "vendor/bin/phpcs --standard=phpcs.xml -s ."
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Beyond",
+                    "email": "team-spartans@newfold.com"
+                }
+            ],
+            "description": "Brand Agnostic eCommerce Experience",
+            "support": {
+                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/v1.2.0",
+                "issues": "https://github.com/newfold-labs/wp-module-ecommerce/issues"
+            },
+            "time": "2023-08-29T20:48:08+00:00"
+        },
+        {
+            "name": "newfold-labs/wp-module-installer",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/newfold-labs/wp-module-installer.git",
+                "reference": "ed7a5da84f008e6df7a02f2698d90dbc5867b6ff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-installer/zipball/ed7a5da84f008e6df7a02f2698d90dbc5867b6ff",
+                "reference": "ed7a5da84f008e6df7a02f2698d90dbc5867b6ff",
+                "shasum": ""
+            },
+            "require-dev": {
+                "newfold-labs/wp-php-standards": "^1.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NewfoldLabs\\WP\\Module\\Installer\\": "includes"
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Micah Wood",
+                    "email": "micah.wood@newfold.com"
+                }
+            ],
+            "description": "An installer for WordPress plugins and themes.",
+            "support": {
+                "source": "https://github.com/newfold-labs/wp-module-installer/tree/1.1.1",
+                "issues": "https://github.com/newfold-labs/wp-module-installer/issues"
+            },
+            "time": "2023-08-10T10:59:26+00:00"
         },
         {
             "name": "newfold-labs/wp-module-loader",
@@ -1427,16 +1527,16 @@
         },
         {
             "name": "phpcsstandards/phpcsextra",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCSStandards/PHPCSExtra.git",
-                "reference": "61a9be9f74a53735f7c421d7de8dc64fa80488e6"
+                "reference": "98bcdbacbda14b1db85f710b1853125726795bbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCSStandards/PHPCSExtra/zipball/61a9be9f74a53735f7c421d7de8dc64fa80488e6",
-                "reference": "61a9be9f74a53735f7c421d7de8dc64fa80488e6",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHPCSExtra/zipball/98bcdbacbda14b1db85f710b1853125726795bbc",
+                "reference": "98bcdbacbda14b1db85f710b1853125726795bbc",
                 "shasum": ""
             },
             "require": {
@@ -1486,7 +1586,7 @@
                 "issues": "https://github.com/PHPCSStandards/PHPCSExtra/issues",
                 "source": "https://github.com/PHPCSStandards/PHPCSExtra"
             },
-            "time": "2023-07-19T19:40:11+00:00"
+            "time": "2023-08-26T04:46:45+00:00"
         },
         {
             "name": "phpcsstandards/phpcsutils",
@@ -1984,7 +2084,7 @@
         },
         {
             "name": "wp-phpunit/wp-phpunit",
-            "version": "6.3.0",
+            "version": "6.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-phpunit/wp-phpunit.git",
