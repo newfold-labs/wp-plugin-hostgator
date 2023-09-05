@@ -69,7 +69,7 @@ msgstr "Ativo Em Breve"
 #. translators: %1$s is replaced with the opening link tag and %2$s is replaced with the closing link tag, %3$s is the opening link tag to preview the page, %4$s is the closing link tag.
 #: bootstrap.php:82
 msgid "Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s."
-msgstr "Seu site está exibindo uma %1$spágina em breve%2$s. Assim que estiver pronto, %3$lance seu site%4$s."
+msgstr "Seu site está exibindo uma %1$spágina em breve%2$s. Assim que estiver pronto, %3$slance seu site%4$s."
 
 #: bootstrap.php:83
 msgid "Preview the coming soon landing page"
