@@ -10,13 +10,9 @@ import WelcomeSection from './welcomeSection';
 const Home = () => {
 	return (
 		<Page title="Settings" className={"hgwp-app-home-page"}>
+			<WelcomeSection />
+			<FreePluginsSection />
 			<SectionContainer className={'hgwp-app-home-container'}>
-				<SectionContent separator={true} className={'hgwp-app-home-welcome'}>
-					<WelcomeSection />
-				</SectionContent>
-				<SectionContent separator={true} className={'hgwp-app-home-free-plugins'}>
-					<FreePluginsSection />
-				</SectionContent>
 				<SectionHeader
 					title={__('More', 'wp-plugin-hostgator')}
 					className={'hgwp-app-home-header display-none'}
