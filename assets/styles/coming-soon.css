@@ -22,14 +22,14 @@ input {
     padding: 210px 0 0;
 }
 
-#wrap h1 {
+#wrap h2 {
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 1px;
     margin-bottom: 0;
 }
 
-#wrap h2 {
+#wrap h1 {
     color: #FE3E15;
     font-size: 35px;
     font-weight: 700;
