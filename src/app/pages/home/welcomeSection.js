@@ -9,7 +9,7 @@ const WelcomeSection = () => {
     const notify= useNotification();
     const toggleComingSoon = hostgatorSettingsApiFetch(!store?.comingSoon, console.error, (response) => setStore(() => ({ ...store, comingSoon: !store?.comingSoon})));
 
-    return <OnboardingScreen notify={notify} showShadowBox={false} />
+    return <OnboardingScreen notify={notify} showShadowBox={false} comingSoon={toggleComingSoon} />
 }
 
 export default WelcomeSection;
