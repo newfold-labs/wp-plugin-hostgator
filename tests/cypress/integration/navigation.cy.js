@@ -63,11 +63,13 @@ describe('Navigation', function () {
 			.and('match', /settings/);
 	});
 	
-	it.skip('Subnav links properly navigates', () => {
+	it('Subnav links properly navigates', () => {
 		cy
-			.get('.hgwp-app-navitem-Marketplace').
-			should('not.have.class', 'active');
+			.get('.hgwp-app-navitem-Marketplace')
+			.scrollIntoView()
+			.should('not.have.class', 'active');
 		cy.get('.hgwp-app-navitem-Marketplace').click();
+
 		cy.wait(500);
 		cy.hash().should('eq', '#/marketplace');
 		cy
