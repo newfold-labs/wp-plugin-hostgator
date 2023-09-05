@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4edf918e6f5c95bc5f25549063998e9a",
+    "content-hash": "0dc9e55c40de0e17f32e02a49a94f4ce",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -462,6 +462,51 @@
             "time": "2023-08-24T20:04:45+00:00"
         },
         {
+            "name": "newfold-labs/wp-module-performance",
+            "version": "1.2.0-beta.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/newfold-labs/wp-module-performance.git",
+                "reference": "331b6a49bae35e7e0f0c4a2227e107d7a051e13c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-performance/zipball/331b6a49bae35e7e0f0c4a2227e107d7a051e13c",
+                "reference": "331b6a49bae35e7e0f0c4a2227e107d7a051e13c",
+                "shasum": ""
+            },
+            "require": {
+                "wp-forge/collection": "^1.0",
+                "wp-forge/wp-htaccess-manager": "^1.0",
+                "wpscholar/url": "^1.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NewfoldLabs\\WP\\Module\\Performance\\": "includes"
+                },
+                "files": [
+                    "includes/functions.php",
+                    "bootstrap.php"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Micah Wood",
+                    "email": "micah@wpscholar.com"
+                }
+            ],
+            "description": "A module for managing caching functionality.",
+            "support": {
+                "source": "https://github.com/newfold-labs/wp-module-performance/tree/1.2.0-beta.2",
+                "issues": "https://github.com/newfold-labs/wp-module-performance/issues"
+            },
+            "time": "2023-08-31T21:44:07+00:00"
+        },
+        {
             "name": "newfold-labs/wp-module-runtime",
             "version": "v1.0.2",
             "source": {
@@ -721,6 +766,46 @@
                 "source": "https://github.com/wp-forge/helpers/tree/1.1.1"
             },
             "time": "2021-07-15T11:41:27+00:00"
+        },
+        {
+            "name": "wp-forge/wp-htaccess-manager",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wp-forge/wp-htaccess-manager.git",
+                "reference": "f1fac7af85c0d75a211a5d0e73cd43a7d62debe8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wp-forge/wp-htaccess-manager/zipball/f1fac7af85c0d75a211a5d0e73cd43a7d62debe8",
+                "reference": "f1fac7af85c0d75a211a5d0e73cd43a7d62debe8",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "includes/functions.php"
+                ],
+                "psr-4": {
+                    "WP_Forge\\WP_Htaccess_Manager\\": "includes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Micah Wood",
+                    "email": "micah@wpscholar.com"
+                }
+            ],
+            "description": "A helper library for making changes to .htaccess files in WordPress.",
+            "support": {
+                "issues": "https://github.com/wp-forge/wp-htaccess-manager/issues",
+                "source": "https://github.com/wp-forge/wp-htaccess-manager/tree/1.0"
+            },
+            "time": "2022-04-01T16:21:01+00:00"
         },
         {
             "name": "wp-forge/wp-options",
@@ -2140,7 +2225,9 @@
         }
     ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "newfold-labs/wp-module-performance": 10
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
