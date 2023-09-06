@@ -67,16 +67,16 @@ describe('Coming Soon', function () {
 
 	it('Has Coming Soon Section on Home', () => {
 		cy.visit('/wp-admin/admin.php?page=' + Cypress.env('pluginId') + '#/home');
-		cy.get( appClass + '-app-home-page .wppb-app-section-content').first()
+		cy.get( appClass + '-app-home-page .nfd-app-section-content').first()
 			.scrollIntoView()
 			.contains('h1', 'Ready to go live?')
 			.should('be.visible');
 
-		cy.get( appClass + '-app-home-page .wppb-app-section-content')
+		cy.get( appClass + '-app-home-page .nfd-app-section-content')
 			.contains('a.nfd-button', 'Preview your').first()
 			.should('exist');
 
-		cy.get( appClass + '-app-home-page .wppb-app-section-content').first()
+		cy.get( appClass + '-app-home-page .nfd-app-section-content').first()
 			.contains('button', 'Launch your')
 			.should('exist');
 		
@@ -104,12 +104,12 @@ describe('Coming Soon', function () {
 		
 		cy.visit('/wp-admin/admin.php?page=' + Cypress.env('pluginId') + '#/home');
 
-		cy.get( appClass + '-app-home-page .wppb-app-section-content').first()
+		cy.get( appClass + '-app-home-page .nfd-app-section-content').first()
 			.contains('button', 'Launch your')
 			.click();
 		cy.wait(100);
 		
-		cy.get( appClass + '-app-home-page .wppb-app-section-content').first()
+		cy.get( appClass + '-app-home-page .nfd-app-section-content').first()
 			.contains('button', 'Launch your')
 			.should('not.exist');
 
