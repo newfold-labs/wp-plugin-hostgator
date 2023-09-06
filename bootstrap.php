@@ -59,8 +59,8 @@ $nfd_module_container->set(
 	'comingsoon',
 	array(
 		'admin_app_url'       => admin_url( 'admin.php?page=hostgator#/home' ),
-		'template_h1'         => __( 'Coming Soon!', 'wp-plugin-hostgator' ),
-		'template_h2'         => __( 'A New WordPress Site', 'wp-plugin-hostgator' ),
+		'template_h1'         => __( 'A New WordPress Site', 'wp-plugin-hostgator' ),
+		'template_h2'         => __( 'Coming Soon!', 'wp-plugin-hostgator' ),
 		'template_footer_t'   => sprintf(
 			/* translators: %1$s is replaced with opening link tag taking you to hostgator.com/wordpress, %2$s is replaced with closing link tag, %3$s is replaced with opening link tag taking you to login page, %4$s is replaced with closing link tag, %5$s is replaced with opening link tag taking you to portal.hostgator.com, %6$s is replaced with closing link tag */
 			esc_html__( 'A %1$sHostGator%2$s powered website. Is this your website? Log in to %3$sWordPress%4$s or %5$sHostgator%6$s.', 'wp-plugin-hostgator' ) . '&nbsp;',

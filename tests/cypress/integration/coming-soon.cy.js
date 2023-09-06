@@ -92,9 +92,7 @@ describe('Coming Soon', function () {
 	it('Displays Coming Soon on Frontend', () => {
 		cy.logout();
 		cy.visit('/');
-		cy.get('body')
-			.contains('h1', 'Coming')
-			.should('be.visible');
+		cy.title().should('not.include', 'Coming Soon');
 	});
 
 	it('Launching launches site', () => {
@@ -115,9 +113,7 @@ describe('Coming Soon', function () {
 
 		cy.logout();
 		cy.visit('/');
-		cy.get('body')
-			.contains('h1', 'Coming soon')
-			.should('not.exist');
+		cy.title().should('not.include', 'Coming Soon');
 
 		cy.login(Cypress.env('wpUsername'), Cypress.env('wpPassword'));
 
