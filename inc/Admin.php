@@ -55,6 +55,7 @@ final class Admin {
 	public static function subpages() {
 		return array(
 			'hostgator#/home'        => __( 'Home', 'wp-plugin-hostgator' ),
+			'hostgator#/store'        => __( 'Store', 'wp-plugin-hostgator' ),
 			'hostgator#/marketplace' => __( 'Marketplace', 'wp-plugin-hostgator' ),
 			'hostgator#/performance' => __( 'Performance', 'wp-plugin-hostgator' ),
 			'hostgator#/settings'    => __( 'Settings', 'wp-plugin-hostgator' ),

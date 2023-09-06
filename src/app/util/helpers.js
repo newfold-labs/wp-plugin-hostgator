@@ -120,17 +120,19 @@ export const hostgatorPurgeCacheApiFetch = (data, passError, thenCallback) => {
 /**
  * Coming soon admin bar
  */
-export const comingSoonAdminbarToggle = (comingSoon) => {
+export const comingSoonAdminbarToggle = ( comingSoon ) => {
 	const comingsoonadminbar = document.getElementById(
-		'wp-admin-bar-hostgator-coming_soon'
+		'nfd-site-status-text'
 	);
-	if (!comingsoonadminbar) {
+	if ( ! comingsoonadminbar ) {
 		return;
 	}
-	if (!comingSoon) {
-		comingsoonadminbar.classList.add('hideme');
+	if ( ! comingSoon ) {
+		comingsoonadminbar.style.color = "#048200";
+		comingsoonadminbar.textContent = "Live";
 	} else {
-		comingsoonadminbar.classList.remove('hideme');
+		comingsoonadminbar.style.color = "#E01C1C";
+		comingsoonadminbar.textContent = "Coming Soon";
 	}
 };
 

@@ -16,6 +16,8 @@ export const SideNavHeader = () => {
 }
 
 export const SideNavMenu = () => {
+	let location = useLocation();
+
 	const primaryMenu = () => {
 		return (
 			<ul className="nfd-flex nfd-flex-col nfd-gap-1.5">
@@ -66,14 +68,14 @@ export const SideNavMenu = () => {
 		// open active's submenu if it exists
 		const activeMenu = document.querySelector('.hgwp-app-sidenav .active');
 		if (activeMenu && null !== activeMenu.nextSibling && activeMenu.nextSibling.classList.contains('hgwp-app-navitem-submenu')) {
-			activeMenu.nextSibling.classList.toggle('nfd-hidden');
+			activeMenu.nextSibling.classList.remove('nfd-hidden');
 		}
 	}
 
 	useEffect(() => {
 		SubMenusManager();
 		document.onclick = SubMenusManager;
-	});
+	}, [location]);
 
 	return (
 		<div className="nfd-px-0.5 nfd-space-y-6">
