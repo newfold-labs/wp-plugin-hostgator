@@ -92,7 +92,7 @@ describe('Coming Soon', function () {
 	it('Displays Coming Soon on Frontend', () => {
 		cy.logout();
 		cy.visit('/');
-		cy.title().should('not.include', 'Coming Soon');
+		cy.title().should('include', 'Coming Soon');
 	});
 
 	it('Launching launches site', () => {
