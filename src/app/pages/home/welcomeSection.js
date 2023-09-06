@@ -7,9 +7,9 @@ import { hostgatorSettingsApiFetch } from "../../util/helpers";
 const WelcomeSection = () => {
     const {store, setStore} = useContext(AppStore)
     const notify= useNotification();
-    const toggleComingSoon = hostgatorSettingsApiFetch(!store?.comingSoon, console.error, (response) => setStore(() => ({ ...store, comingSoon: !store?.comingSoon})));
+    const toggleComingSoon = () => hostgatorSettingsApiFetch(!store?.comingSoon, console.error, (response) => setStore(() => ({ ...store, comingSoon: !store?.comingSoon})));
 
-    return <OnboardingScreen notify={notify} showShadowBox={false} comingSoon={toggleComingSoon} />
+    return <OnboardingScreen notify={notify} showShadowBox={false} toggleComingSoon={toggleComingSoon}  comingSoon={store.comingSoon} />
 }
 
 export default WelcomeSection;
