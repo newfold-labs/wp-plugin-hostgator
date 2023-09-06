@@ -9,7 +9,7 @@ import WelcomeSection from './welcomeSection';
 
 const Home = () => {
 	return (
-		<Page title="Settings" className={"hgwp-app-home-page"}>
+		<Page title="Settings" className={"hgwp-app-home-page hgwp-home"}>
 			<WelcomeSection />
 			<FreePluginsSection />
 			<SectionContainer className={'hgwp-app-home-container'}>

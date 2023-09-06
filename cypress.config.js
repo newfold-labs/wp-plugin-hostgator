@@ -42,8 +42,6 @@ module.exports = defineConfig({
     ],
     supportFile: 'tests/cypress/support/index.js',
     testIsolation: false,
-		excludeSpecPattern: [
-      'vendor/newfold-labs/wp-module-coming-soon/tests/cypress/integration/coming-soon.cy.{js,jsx,ts,tsx}', // omit until coming soon components and tests support multi-brand 
-		],
+		excludeSpecPattern: [],
   },
 })
