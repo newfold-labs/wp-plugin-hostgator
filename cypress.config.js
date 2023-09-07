@@ -18,7 +18,6 @@ module.exports = defineConfig({
   screenshotsFolder: 'tests/cypress/screenshots',
   video: true,
   videosFolder: 'tests/cypress/videos',
-  videoUploadOnPasses: false,
   chromeWebSecurity: false,
 	viewportWidth: 1024,
 	viewportHeight: 768,
@@ -43,8 +42,6 @@ module.exports = defineConfig({
     ],
     supportFile: 'tests/cypress/support/index.js',
     testIsolation: false,
-		excludeSpecPattern: [
-      'vendor/newfold-labs/wp-module-coming-soon/tests/cypress/integration/coming-soon.cy.{js,jsx,ts,tsx}', // omit until ecommerce module is added
-		],
+		excludeSpecPattern: [],
   },
 })
