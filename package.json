@@ -28,7 +28,7 @@
         "react-error-boundary": "^4.0.11",
         "react-router-dom": "^6.15.0",
         "react-use": "^17.4.0",
-        "@newfold-labs/wp-module-ecommerce": "^1.2.3"
+        "@newfold-labs/wp-module-ecommerce": "^1.2.4"
         },
     "devDependencies": {
         "@automattic/babel-plugin-preserve-i18n": "^1.0.0",
