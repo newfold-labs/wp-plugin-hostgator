@@ -13,8 +13,7 @@
     ],    
     "dependencies": {
         "@heroicons/react": "^2.0.18",
-        "@newfold-labs/wp-module-ecommerce": "^1.2.1",
-        "@newfold-labs/wp-module-runtime": "^1.0.2",
+        "@newfold-labs/wp-module-runtime": "^1.0.3",
         "@newfold/ui-component-library": "^1.0.0",
         "@reduxjs/toolkit": "^1.9.5",
         "@wordpress/compose": "^6.18.0",
@@ -28,7 +27,8 @@
         "react": "^18.2.0",
         "react-error-boundary": "^4.0.11",
         "react-router-dom": "^6.15.0",
-        "react-use": "^17.4.0"
+        "react-use": "^17.4.0",
+        "@newfold-labs/wp-module-ecommerce": "^1.2.3"
         },
     "devDependencies": {
         "@automattic/babel-plugin-preserve-i18n": "^1.0.0",
