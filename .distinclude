@@ -1,5 +1,7 @@
 # Directories
 
 # Files
+/vendor/newfold-labs/wp-module-data/src/Data/Static/site-classification-en-US.json
+/vendor/newfold-labs/wp-module-data/src/Data/Static/site-classification-pt-BR.json
 
 # File Types
