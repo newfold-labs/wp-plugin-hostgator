@@ -67,7 +67,7 @@
         "storybook:build": "build-storybook -c ./storybook -o ./.docs",
         "test:e2e": "npx cypress run",
         "test:unit": "wp-scripts test-unit-js",
-        "create:dist": "rsync -r --exclude-from=.distignore --include-from=.distinclude . ./wp-plugin-hostgator",
+        "create:dist": "rsync -r --include-from=.distinclude --exclude-from=.distignore . ./wp-plugin-hostgator",
         "php-deps": "composer install --no-dev --optimize-autoloader",
         "create:zip": "cd ./wp-plugin-hostgator && zip -r -9 ../wp-plugin-hostgator.zip . && ls -lh ../wp-plugin-hostgator.zip",
         "prebuild:cleanup": "rm -rf ./build ./wp-plugin-hostgator ./wp-plugin-hostgator.zip ./vendor",
