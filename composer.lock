@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a4d620f4599338c19ba67faef5effaaa",
+    "content-hash": "d9a67137f885a7cd886ff2bf84c9f90d",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -216,16 +216,16 @@
         },
         {
             "name": "newfold-labs/wp-module-data",
-            "version": "2.4.3",
+            "version": "2.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-data.git",
-                "reference": "3bacb2ae6610d25b1920fa1289bf0438f5673d05"
+                "reference": "2fc2a4c9201e81f93a71a8774e66bab3c7199039"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-data/zipball/3bacb2ae6610d25b1920fa1289bf0438f5673d05",
-                "reference": "3bacb2ae6610d25b1920fa1289bf0438f5673d05",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-data/zipball/2fc2a4c9201e81f93a71a8774e66bab3c7199039",
+                "reference": "2fc2a4c9201e81f93a71a8774e66bab3c7199039",
                 "shasum": ""
             },
             "require": {
@@ -258,23 +258,23 @@
             ],
             "description": "Newfold Data Module",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-data/tree/2.4.3",
+                "source": "https://github.com/newfold-labs/wp-module-data/tree/2.4.5",
                 "issues": "https://github.com/newfold-labs/wp-module-data/issues"
             },
-            "time": "2023-08-08T20:32:34+00:00"
+            "time": "2023-09-18T18:44:23+00:00"
         },
         {
             "name": "newfold-labs/wp-module-ecommerce",
-            "version": "v1.2.3",
+            "version": "v1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-ecommerce.git",
-                "reference": "9a6fa36362c5e26fa21df83f6fea299732a0d5d3"
+                "reference": "b12626874f2261822da42400fd4df4783f38fb3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/9a6fa36362c5e26fa21df83f6fea299732a0d5d3",
-                "reference": "9a6fa36362c5e26fa21df83f6fea299732a0d5d3",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/b12626874f2261822da42400fd4df4783f38fb3a",
+                "reference": "b12626874f2261822da42400fd4df4783f38fb3a",
                 "shasum": ""
             },
             "require": {
@@ -316,23 +316,23 @@
             ],
             "description": "Brand Agnostic eCommerce Experience",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/v1.2.3",
+                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/v1.2.4",
                 "issues": "https://github.com/newfold-labs/wp-module-ecommerce/issues"
             },
-            "time": "2023-09-12T10:56:18+00:00"
+            "time": "2023-09-15T09:47:05+00:00"
         },
         {
             "name": "newfold-labs/wp-module-installer",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-installer.git",
-                "reference": "ed7a5da84f008e6df7a02f2698d90dbc5867b6ff"
+                "reference": "a5a683c2b6d2422a4e18c50919bdb8fd4bd89a5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-installer/zipball/ed7a5da84f008e6df7a02f2698d90dbc5867b6ff",
-                "reference": "ed7a5da84f008e6df7a02f2698d90dbc5867b6ff",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-installer/zipball/a5a683c2b6d2422a4e18c50919bdb8fd4bd89a5c",
+                "reference": "a5a683c2b6d2422a4e18c50919bdb8fd4bd89a5c",
                 "shasum": ""
             },
             "require-dev": {
@@ -358,10 +358,10 @@
             ],
             "description": "An installer for WordPress plugins and themes.",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-installer/tree/1.1.1",
+                "source": "https://github.com/newfold-labs/wp-module-installer/tree/1.1.2",
                 "issues": "https://github.com/newfold-labs/wp-module-installer/issues"
             },
-            "time": "2023-08-10T10:59:26+00:00"
+            "time": "2023-09-18T06:42:43+00:00"
         },
         {
             "name": "newfold-labs/wp-module-loader",
@@ -2177,16 +2177,16 @@
         },
         {
             "name": "wp-coding-standards/wpcs",
-            "version": "3.0.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress-Coding-Standards.git",
-                "reference": "bb792cb331472b82c5d7f28fb9b8ec2d20f68826"
+                "reference": "b4caf9689f1a0e4a4c632679a44e638c1c67aff1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress/WordPress-Coding-Standards/zipball/bb792cb331472b82c5d7f28fb9b8ec2d20f68826",
-                "reference": "bb792cb331472b82c5d7f28fb9b8ec2d20f68826",
+                "url": "https://api.github.com/repos/WordPress/WordPress-Coding-Standards/zipball/b4caf9689f1a0e4a4c632679a44e638c1c67aff1",
+                "reference": "b4caf9689f1a0e4a4c632679a44e638c1c67aff1",
                 "shasum": ""
             },
             "require": {
@@ -2233,7 +2233,13 @@
                 "source": "https://github.com/WordPress/WordPress-Coding-Standards",
                 "wiki": "https://github.com/WordPress/WordPress-Coding-Standards/wiki"
             },
-            "time": "2023-08-21T14:28:38+00:00"
+            "funding": [
+                {
+                    "url": "https://opencollective.com/thewpcc/contribute/wp-php-63406",
+                    "type": "custom"
+                }
+            ],
+            "time": "2023-09-14T07:06:09+00:00"
         },
         {
             "name": "wp-phpunit/wp-phpunit",
