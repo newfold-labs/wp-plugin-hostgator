@@ -31,7 +31,7 @@ if ( defined( 'HOSTGATOR_PLUGIN_VERSION' ) ) {
 }
 
 // Define constants
-define( 'HOSTGATOR_PLUGIN_VERSION', '2.1.1' );
+define( 'HOSTGATOR_PLUGIN_VERSION', '2.2.0' );
 define( 'HOSTGATOR_PLUGIN_FILE', __FILE__ );
 define( 'HOSTGATOR_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'HOSTGATOR_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
