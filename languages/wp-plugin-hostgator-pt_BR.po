@@ -81,10 +81,14 @@ msgstr "Visualize a página de destino em breve"
 msgid "Home"
 msgstr "Início"
 
+#: build/2.0.0/index.js:1
+msgid "Store"
+msgstr "Loja Virtual"
+
 #: inc/Admin.php:58
 #: build/2.0.0/index.js:1
 msgid "Marketplace"
-msgstr "Loja"
+msgstr "Aplicativos"
 
 #: inc/Admin.php:59
 #: build/2.0.0/index.js:1
@@ -290,7 +294,7 @@ msgstr "SEO"
 
 #: build/2.0.0/index.js:1
 msgid "Security"
-msgstr "Seguridad"
+msgstr "Segurança"
 
 #: build/2.0.0/index.js:1
 msgid "Themes"
@@ -542,7 +546,7 @@ msgstr "Gerenciar Todas as Atualizações"
 
 #: build/2.0.0/index.js:1
 msgid "WordPress Core"
-msgstr "Núcleo de WordPress"
+msgstr "WordPress"
 
 #: build/2.0.0/index.js:1
 msgid "Plugins"
@@ -682,3 +686,46 @@ msgstr "Controles para revisões de conteúdo e com que frequência esvaziar a l
 msgid "This is where you can manage common settings for your website."
 msgstr "Aqui é onde você pode gerenciar as configurações comuns para o seu site."
 
+#: build/2.0.0/index.js:1
+msgid "HostGator Account"
+msgstr "Conta HostGator"
+
+#: build/2.0.0/index.js:1
+msgid "View Site"
+msgstr "Ver Site"
+
+#: build/2.0.0/index.js:1
+msgid "View Store"
+msgstr "Ver Site"
+
+#: build/2.0.0/index.js:1
+msgid "More"
+msgstr "Mais"
+
+#: build/2.0.0/index.js:1
+msgid "Coming soon page"
+msgstr "Página em construção"
+
+#: build/2.0.0/index.js:1
+msgid "Coming soon activated"
+msgstr "Página em construção ativada"
+
+#: build/2.0.0/index.js:1
+msgid "Coming soon page is active. Site requires login."
+msgstr "A página em construção foi ativada. Apenas usuários com senha poderão entrar."
+
+#: build/2.0.0/index.js:1
+msgid "Coming soon deactivated"
+msgstr "A página em construção foi ativada. Apenas usuários com senha poderão entrar."
+
+#: build/2.0.0/index.js:1
+msgid "Coming soon page is not active. Site is live to visitors."
+msgstr "A página em construção foi desativada. O site está ativo para visitantes."
+
+#: build/2.0.0/index.js:1
+msgid "Products"
+msgstr "Produtos"
+
+#: build/2.0.0/index.js:1
+msgid "Store Details"
+msgstr "Detalhes da Loja"

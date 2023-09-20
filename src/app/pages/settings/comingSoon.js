@@ -71,7 +71,7 @@ const ComingSoon = () => {
 			<div className="nfd-flex nfd-flex-col nfd-gap-6">
 				<ToggleField
 					id="coming-soon-toggle"
-					label="Coming soon page"
+					label={__('Coming soon page', 'wp-plugin-hostgator')}
 					description={__(
 						'Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen.',
 						'wp-plugin-hostgator'
