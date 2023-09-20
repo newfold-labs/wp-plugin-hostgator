@@ -3,14 +3,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The HostGator Plugin 2.2.0\n"
-"Report-Msgid-Bugs-To: https://github.com/newfold-labs/wp-plugin-hostgator\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-plugin-hostgator\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2023-01-11T20:21:44+00:00\n"
-"PO-Revision-Date: 2023-09-19T18:56:17+00:00\n"
+"PO-Revision-Date: 2023-09-20T16:40:23+00:00\n"
 "X-Generator: WP-CLI 2.8.1\n"
 "X-Domain: wp-plugin-hostgator\n"
 
@@ -37,34 +37,34 @@ msgstr ""
 msgid "Please install the HostGator Plugin dependencies."
 msgstr ""
 
-#: bootstrap.php:62
+#: bootstrap.php:68
 msgid "A New WordPress Site"
 msgstr ""
 
-#: bootstrap.php:63
+#: bootstrap.php:69
 msgid "Coming Soon!"
 msgstr ""
 
 #. translators: %1$s is replaced with opening link tag taking you to hostgator.com/wordpress, %2$s is replaced with closing link tag, %3$s is replaced with opening link tag taking you to login page, %4$s is replaced with closing link tag, %5$s is replaced with opening link tag taking you to portal.hostgator.com, %6$s is replaced with closing link tag
-#: bootstrap.php:66
+#: bootstrap.php:72
 msgid "A %1$sHostGator%2$s powered website. Is this your website? Log in to %3$sWordPress%4$s or %5$sHostgator%6$s."
 msgstr ""
 
 #. translators: %s: Blog name
-#: bootstrap.php:76
+#: bootstrap.php:82
 msgid "%s &mdash; Coming Soon"
 msgstr ""
 
-#: bootstrap.php:79
+#: bootstrap.php:85
 msgid "Coming Soon Active"
 msgstr ""
 
 #. translators: %1$s is replaced with the opening link tag and %2$s is replaced with the closing link tag, %3$s is the opening link tag to preview the page, %4$s is the closing link tag.
-#: bootstrap.php:82
+#: bootstrap.php:88
 msgid "Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s."
 msgstr ""
 
-#: bootstrap.php:83
+#: bootstrap.php:89
 msgid "Preview the coming soon landing page"
 msgstr ""
 
@@ -158,11 +158,7 @@ msgstr ""
 msgid "The \"%s\" plugin has been deactivated."
 msgstr ""
 
-#: inc/RestApi/CachingController.php:47
-msgid "Endurance Page Cache plugin is not installed."
-msgstr ""
-
-#: inc/RestApi/CachingController.php:67
+#: inc/RestApi/CachingController.php:65
 #: inc/RestApi/SettingsController.php:201
 msgid "Sorry, you are not allowed to access this endpoint."
 msgstr ""
@@ -459,14 +455,6 @@ msgid "Load More"
 msgstr ""
 
 #: build/2.2.0/index.js:1
-msgid "This is where you can manage cache settings for your website."
-msgstr ""
-
-#: build/2.2.0/index.js:1
-msgid "Disabled"
-msgstr ""
-
-#: build/2.2.0/index.js:1
 msgid "No cache enabled."
 msgstr ""
 
@@ -475,15 +463,11 @@ msgid "Every page load is fresh."
 msgstr ""
 
 #: build/2.2.0/index.js:1
+msgid "Disabled"
+msgstr ""
+
+#: build/2.2.0/index.js:1
 msgid "Not recommended."
-msgstr ""
-
-#: build/2.2.0/index.js:1
-msgid "Caching disabled."
-msgstr ""
-
-#: build/2.2.0/index.js:1
-msgid "Assets Only"
 msgstr ""
 
 #: build/2.2.0/index.js:1
@@ -491,7 +475,7 @@ msgid "Cache static assets like images and the appearance of your site for 1 hou
 msgstr ""
 
 #: build/2.2.0/index.js:1
-msgid "Recommended for ecommerce and sites that update frequently or display info in real-time."
+msgid "Assets Only"
 msgstr ""
 
 #: build/2.2.0/index.js:1
@@ -499,7 +483,7 @@ msgid "Cache enabled for assets only."
 msgstr ""
 
 #: build/2.2.0/index.js:1
-msgid "Assets & Web Pages"
+msgid "Recommended for ecommerce and sites that update frequently or display info in real-time."
 msgstr ""
 
 #: build/2.2.0/index.js:1
@@ -507,7 +491,7 @@ msgid "Cache static assets for 24 hours and web pages for 2 hours."
 msgstr ""
 
 #: build/2.2.0/index.js:1
-msgid "Recommended for blogs, educational sites, and sites that update at least weekly."
+msgid "Assets & Web Pages"
 msgstr ""
 
 #: build/2.2.0/index.js:1
@@ -515,11 +499,15 @@ msgid "Cache enabled for assets and pages."
 msgstr ""
 
 #: build/2.2.0/index.js:1
-msgid "Assets & Web Pages - Extended"
+msgid "Recommended for blogs, educational sites, and sites that update at least weekly."
 msgstr ""
 
 #: build/2.2.0/index.js:1
-msgid "Recommended for portfolios, brochure sites, and sites that update monthly or less often."
+msgid "Cache static assets for 1 week and web pages for 8 hours."
+msgstr ""
+
+#: build/2.2.0/index.js:1
+msgid "Assets & Web Pages - Extended"
 msgstr ""
 
 #: build/2.2.0/index.js:1
@@ -527,15 +515,19 @@ msgid "Cache enabled for assets and pages (extended)."
 msgstr ""
 
 #: build/2.2.0/index.js:1
+msgid "Recommended for sites that update a few times a month or less like porfolios or brochure sites."
+msgstr ""
+
+#: build/2.2.0/index.js:1
+msgid "Boost speed and performance by storing a copy of your website content, files, and images online so the pages of your website load faster for your visitors."
+msgstr ""
+
+#: build/2.2.0/index.js:1
 msgid "Cache setting saved"
 msgstr ""
 
 #: build/2.2.0/index.js:1
-msgid "Clear Cache"
-msgstr ""
-
-#: build/2.2.0/index.js:1
-msgid "Cache cleared"
+msgid "Cache Level"
 msgstr ""
 
 #: build/2.2.0/index.js:1
@@ -547,15 +539,15 @@ msgid "We automatically clear your cache as you work (creating content, changing
 msgstr ""
 
 #: build/2.2.0/index.js:1
-msgid "Boost speed and performance by storing a copy of your website content, files, and images online so the pages of your website load faster for your visitors."
+msgid "Cache cleared"
 msgstr ""
 
 #: build/2.2.0/index.js:1
-msgid "Caching"
+msgid "Clear Cache"
 msgstr ""
 
 #: build/2.2.0/index.js:1
-msgid "Oops! Something went wrong. Please try again."
+msgid "This is where you can manage cache settings for your website."
 msgstr ""
 
 #: build/2.2.0/index.js:1
@@ -576,6 +568,10 @@ msgstr ""
 
 #: build/2.2.0/index.js:1
 msgid "Keeping automatic updates on ensures timely security fixes and the latest features."
+msgstr ""
+
+#: build/2.2.0/index.js:1
+msgid "Oops! Something went wrong. Please try again."
 msgstr ""
 
 #: build/2.2.0/index.js:1
