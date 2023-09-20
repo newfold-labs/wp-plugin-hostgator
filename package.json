@@ -10,7 +10,7 @@
         "Jonathan Desrosiers (https://jonathandesrosiers.com)",
         "Micah Wood (https://wpscholar.com)",
         "William Earnhardt (https://wearnhardt.com)"
-    ],    
+    ],
     "dependencies": {
         "@heroicons/react": "^2.0.18",
         "@newfold-labs/wp-module-ecommerce": "^1.2.4",
