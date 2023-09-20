@@ -44,4 +44,5 @@ module.exports = defineConfig({
     testIsolation: false,
 		excludeSpecPattern: [],
   },
+  retries: 1,
 })
