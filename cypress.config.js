@@ -47,4 +47,5 @@ module.exports = defineConfig({
     ],
   },
   retries: 1,
+  experimentalMemoryManagement: true,
 })
