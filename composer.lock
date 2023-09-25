@@ -216,16 +216,16 @@
         },
         {
             "name": "newfold-labs/wp-module-data",
-            "version": "2.4.5",
+            "version": "2.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-data.git",
-                "reference": "2fc2a4c9201e81f93a71a8774e66bab3c7199039"
+                "reference": "03bc7b42c7957ee983944721f8251d772985abee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-data/zipball/2fc2a4c9201e81f93a71a8774e66bab3c7199039",
-                "reference": "2fc2a4c9201e81f93a71a8774e66bab3c7199039",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-data/zipball/03bc7b42c7957ee983944721f8251d772985abee",
+                "reference": "03bc7b42c7957ee983944721f8251d772985abee",
                 "shasum": ""
             },
             "require": {
@@ -258,10 +258,10 @@
             ],
             "description": "Newfold Data Module",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-data/tree/2.4.5",
+                "source": "https://github.com/newfold-labs/wp-module-data/tree/2.4.6",
                 "issues": "https://github.com/newfold-labs/wp-module-data/issues"
             },
-            "time": "2023-09-18T18:44:23+00:00"
+            "time": "2023-09-22T19:59:31+00:00"
         },
         {
             "name": "newfold-labs/wp-module-ecommerce",
