@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "43a0d4b63b69fd1b8069c2d421a45440",
+    "content-hash": "6a029b1e90f3dcd538e5abe5b2e3a5c7",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -216,16 +216,16 @@
         },
         {
             "name": "newfold-labs/wp-module-data",
-            "version": "2.4.5",
+            "version": "2.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-data.git",
-                "reference": "2fc2a4c9201e81f93a71a8774e66bab3c7199039"
+                "reference": "03bc7b42c7957ee983944721f8251d772985abee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-data/zipball/2fc2a4c9201e81f93a71a8774e66bab3c7199039",
-                "reference": "2fc2a4c9201e81f93a71a8774e66bab3c7199039",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-data/zipball/03bc7b42c7957ee983944721f8251d772985abee",
+                "reference": "03bc7b42c7957ee983944721f8251d772985abee",
                 "shasum": ""
             },
             "require": {
@@ -258,23 +258,23 @@
             ],
             "description": "Newfold Data Module",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-data/tree/2.4.5",
+                "source": "https://github.com/newfold-labs/wp-module-data/tree/2.4.6",
                 "issues": "https://github.com/newfold-labs/wp-module-data/issues"
             },
-            "time": "2023-09-18T18:44:23+00:00"
+            "time": "2023-09-22T19:59:31+00:00"
         },
         {
             "name": "newfold-labs/wp-module-ecommerce",
-            "version": "v1.2.4",
+            "version": "v1.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-ecommerce.git",
-                "reference": "b12626874f2261822da42400fd4df4783f38fb3a"
+                "reference": "bf058c635edab19dde69d52ad3ce89dd78dc89cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/b12626874f2261822da42400fd4df4783f38fb3a",
-                "reference": "b12626874f2261822da42400fd4df4783f38fb3a",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/bf058c635edab19dde69d52ad3ce89dd78dc89cc",
+                "reference": "bf058c635edab19dde69d52ad3ce89dd78dc89cc",
                 "shasum": ""
             },
             "require": {
@@ -316,10 +316,10 @@
             ],
             "description": "Brand Agnostic eCommerce Experience",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/v1.2.4",
+                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/v1.2.5",
                 "issues": "https://github.com/newfold-labs/wp-module-ecommerce/issues"
             },
-            "time": "2023-09-15T09:47:05+00:00"
+            "time": "2023-09-26T10:16:53+00:00"
         },
         {
             "name": "newfold-labs/wp-module-installer",
@@ -667,16 +667,16 @@
         },
         {
             "name": "newfold-labs/wp-module-runtime",
-            "version": "v1.0.5",
+            "version": "v1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-runtime.git",
-                "reference": "8e7430e41dcf9997008c618884a65ff24fd6b74e"
+                "reference": "5b88eef8f550023dbd5010dfa3f147205cb44483"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-runtime/zipball/8e7430e41dcf9997008c618884a65ff24fd6b74e",
-                "reference": "8e7430e41dcf9997008c618884a65ff24fd6b74e",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-runtime/zipball/5b88eef8f550023dbd5010dfa3f147205cb44483",
+                "reference": "5b88eef8f550023dbd5010dfa3f147205cb44483",
                 "shasum": ""
             },
             "require-dev": {
@@ -712,10 +712,10 @@
             ],
             "description": "Runtime for Newfold WP modules and plugins",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-runtime/tree/v1.0.5",
+                "source": "https://github.com/newfold-labs/wp-module-runtime/tree/v1.0.6",
                 "issues": "https://github.com/newfold-labs/wp-module-runtime/issues"
             },
-            "time": "2023-09-18T19:15:21+00:00"
+            "time": "2023-09-26T09:56:33+00:00"
         },
         {
             "name": "newfold-labs/wp-module-secure-passwords",
@@ -1765,16 +1765,16 @@
         },
         {
             "name": "phpcsstandards/phpcsextra",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCSStandards/PHPCSExtra.git",
-                "reference": "98bcdbacbda14b1db85f710b1853125726795bbc"
+                "reference": "746c3190ba8eb2f212087c947ba75f4f5b9a58d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCSStandards/PHPCSExtra/zipball/98bcdbacbda14b1db85f710b1853125726795bbc",
-                "reference": "98bcdbacbda14b1db85f710b1853125726795bbc",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHPCSExtra/zipball/746c3190ba8eb2f212087c947ba75f4f5b9a58d5",
+                "reference": "746c3190ba8eb2f212087c947ba75f4f5b9a58d5",
                 "shasum": ""
             },
             "require": {
@@ -1824,7 +1824,7 @@
                 "issues": "https://github.com/PHPCSStandards/PHPCSExtra/issues",
                 "source": "https://github.com/PHPCSStandards/PHPCSExtra"
             },
-            "time": "2023-08-26T04:46:45+00:00"
+            "time": "2023-09-20T22:06:18+00:00"
         },
         {
             "name": "phpcsstandards/phpcsutils",
