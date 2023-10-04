@@ -43,7 +43,7 @@ module.exports = defineConfig({
     supportFile: 'tests/cypress/support/index.js',
     testIsolation: false,
 		excludeSpecPattern: [
-      'vendor/newfold-labs/wp-module-onboarding/tests/cypress/integration/'
+      'vendor/newfold-labs/wp-module-onboarding/tests/cypress/integration/' // skipping onboarding tests until they add multi-lingual support or onboarding is activated for all lanugages
     ],
   },
   retries: 1,
