@@ -55,15 +55,21 @@ Cypress.Commands.add('setPermalinkStructure', ((structure = '/%postname%/') => {
 
 Cypress.Commands.add('setRegion', ((region = null) => {
 	if ( region === null ) {
-		cy.exec(`npx wp-env run cli wp option delete hg_region`);
+		cy.exec(`npx wp-env run cli wp option delete hg_region`).then((result)=>{
+			cy.log(result.stdout);
+		});
 	} else {
-    	cy.exec(`npx wp-env run cli wp option update hg_region "${region}"`);
+    	cy.exec(`npx wp-env run cli wp option update hg_region "${region}"`).then((result)=>{
+			cy.log(result.stdout);
+		});
 	}
 }));
 
 Cypress.Commands.add('setLanguage', ((language = '') => {
 	// pt_BR, en_US (default)
-    cy.exec(`npx wp-env run cli wp option update WPLANG "${language}"`);
+    cy.exec(`npx wp-env run cli wp option update WPLANG "${language}"`).then((result)=>{
+		cy.log(result.stdout);
+	});
 }));
 
 Cypress.Commands.add('logout', () => {
