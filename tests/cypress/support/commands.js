@@ -42,9 +42,29 @@ Cypress.Commands.add('login', (username, password) => {
 				cy.visit('/wp-login.php').wait(1000);
 				cy.get('#user_login').type(username);
 				cy.get('#user_pass').type(`${ password }{enter}`);
+
+                // Speed up tests by setting permalink structure once
+                cy.setPermalinkStructure();
 			}
 		});
 });
+
+Cypress.Commands.add('setPermalinkStructure', ((structure = '/%postname%/') => {
+    cy.exec(`npx wp-env run cli wp rewrite structure "${structure}"`);
+}));
+
+Cypress.Commands.add('setRegion', ((region = null) => {
+	if ( region === null ) {
+		cy.exec(`npx wp-env run cli wp option delete hg_region`);
+	} else {
+    	cy.exec(`npx wp-env run cli wp option update hg_region "${region}"`);
+	}
+}));
+
+Cypress.Commands.add('setLanguage', ((language = '') => {
+	// pt_BR, en_US (default)
+    cy.exec(`npx wp-env run cli wp option update WPLANG "${language}"`);
+}));
 
 Cypress.Commands.add('logout', () => {
 	cy
