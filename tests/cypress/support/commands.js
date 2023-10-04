@@ -67,6 +67,10 @@ Cypress.Commands.add('setRegion', ((region = null) => {
 
 Cypress.Commands.add('setLanguage', ((language = '') => {
 	// pt_BR, en_US (default)
+	if ( language !== '') {
+		cy.exec(`npx wp-env run cli wp language core install "${language}"`);
+		cy.exec(`npx wp-env run cli wp language core activate "${language}"`);
+	}
     cy.exec(`npx wp-env run cli wp option update WPLANG "${language}"`).then((result)=>{
 		cy.log(result.stdout);
 	});
