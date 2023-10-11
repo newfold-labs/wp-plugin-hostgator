@@ -37,6 +37,7 @@ export const SiteInfoBar = () => {
                 <div className="nfd-w-max nfd-flex nfd-items-center nfd-flex-wrap nfd-gap-3">
                     <Button 
                         as="a"
+                        id="site_info_portal_button"
                         href={ getLinkPerRegion( 'site_info_portal', __("HostGator Account", "wp-plugin-hostgator") ) }
                         target="_blank"
                         variant="primary" 
@@ -46,6 +47,7 @@ export const SiteInfoBar = () => {
                     </Button>
                     <Button 
                         as="a" 
+                        id="site_info_site_button"
                         href={(isEcommerce && isStore) ? `${url}/shop` : url}
                         target="_blank" 
                         variant="primary" 

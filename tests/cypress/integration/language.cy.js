@@ -1,6 +1,6 @@
 // <reference types="Cypress" />
 
-describe('Language updated on Help Page', function () {
+describe('Language updates on Help Page', function () {
 
 	before(() => {
 		cy.visit('/wp-admin/admin.php?page=hostgator#/help');
