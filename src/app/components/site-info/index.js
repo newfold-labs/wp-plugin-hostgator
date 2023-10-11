@@ -2,7 +2,7 @@ import { LockClosedIcon, LockOpenIcon } from "@heroicons/react/24/outline";
 import { NewfoldRuntime } from "@newfold-labs/wp-module-runtime";
 import { Button } from "@newfold/ui-component-library";
 import { HostgatorIcon, WordPressIcon } from "../icons";
-import { addUtmParams } from "../../util/helpers";
+import { getLinkPerRegion } from '../../util/helpers';
 
 export const SiteInfoBar = () => {
     const { url, title } = NewfoldRuntime.siteDetails;
@@ -37,7 +37,7 @@ export const SiteInfoBar = () => {
                 <div className="nfd-w-max nfd-flex nfd-items-center nfd-flex-wrap nfd-gap-3">
                     <Button 
                         as="a"
-                        href={addUtmParams( 'https://portal.hostgator.com/login' )}
+                        href={ getLinkPerRegion( 'site_info_portal', __("HostGator Account", "wp-plugin-hostgator") ) }
                         target="_blank"
                         variant="primary" 
                         className="nfd-bg-primary-400 nfd-text-tiny nfd-w-full min-[400px]:nfd-w-auto">

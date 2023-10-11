@@ -1,6 +1,7 @@
 import { Page } from '../../components/page';
 import { SectionContainer, SectionContent, SectionHeader } from '../../components/section';
 import help from '../../data/help';
+import { getLinkPerRegion, supportsLinkPerRegion } from '../../util/helpers';
 import { Button, Card, Title } from "@newfold/ui-component-library";
 
 const HelpCard = ({ item }) => {
@@ -20,7 +21,7 @@ const HelpCard = ({ item }) => {
 					variant="secondary"
 					as="a"
 					className="nfd-w-full"
-					href={item.url}
+					href={ getLinkPerRegion( item.id, item.cta )}
 					target="_blank"
 				>
 					{item.cta}
@@ -37,6 +38,7 @@ const Help = () => {
 		return (
 			<div className="nfd-grid nfd-gap-6 nfd-grid-cols-1 sm:nfd-grid-cols-2 xl:nfd-grid-cols-3 2xl:nfd-grid-cols-4">
 				{helpItems.map((item) => (
+					supportsLinkPerRegion(item.id) &&
 					<HelpCard key={item.name} item={item} />
 				))}
 			</div>
