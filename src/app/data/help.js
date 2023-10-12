@@ -8,6 +8,7 @@ const help = [
 		),
 		icon: false,
 		cta: __('Call Us', 'wp-plugin-hostgator'),
+		id: 'help_phone_number',
 		url: 'tel:18669642867',
 	},
 	{
@@ -19,6 +20,7 @@ const help = [
 		),
 		icon: false,
 		cta: __('Live Chat', 'wp-plugin-hostgator'),
+		id: 'help_chat',
 		url: 'https://helpchat.hostgator.com/?utm_campaign=&utm_content=help_chat_link&utm_term=live_chat&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=hostgator#/help'
 	},
 	{
@@ -30,6 +32,7 @@ const help = [
 		),
 		icon: false,
 		cta: __('Tweet Us', 'wp-plugin-hostgator'),
+		id: 'help_twitter',
 		url: 'https://twitter.com/hgsupport',
 	},
 	{
@@ -38,6 +41,7 @@ const help = [
 		description: __('Know what the pros know.', 'wp-plugin-hostgator'),
 		icon: false,
 		cta: __('Find Answers', 'wp-plugin-hostgator'),
+		id: 'help_kb',
 		url: 'https://www.hostgator.com/help?utm_campaign=&utm_content=help_kb_link&utm_term=find_answers&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=hostgator#/help',
 	},
 	{
@@ -49,6 +53,7 @@ const help = [
 		),
 		icon: false,
 		cta: __('Learn Stuff', 'wp-plugin-hostgator'),
+		id: 'help_blog',
 		url: 'https://www.hostgator.com/blog/?utm_campaign=&utm_content=help_blog_link&utm_term=learn_stuff&utm_medium=brand_plugin&utm_source=wp-admin/admin.php?page=hostgator#/help',
 	},
 	{
@@ -60,6 +65,7 @@ const help = [
 		),
 		icon: false,
 		cta: __('Watch Now', 'wp-plugin-hostgator'),
+		id: 'help_youtube',
 		url: 'https://www.youtube.com/c/hostgatorUS',
 	},
 ];
