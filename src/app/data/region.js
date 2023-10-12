@@ -25,6 +25,13 @@ const region = {
         CL: 'https://www.hostgator.cl',
         CO: 'https://www.hostgator.co',
     },
+    site_info_portal: {
+        default: 'https://portal.hostgator.com/login',
+        BR: 'https://financeiro.hostgator.com.br/',
+        MX: 'https://cliente.hostgator.mx',
+        CL: 'https://cliente.hostgator.cl',
+        CO: 'https://cliente.hostgator.co',
+    },
     home_manage_sites: {
         default: 'https://portal.hostgator.com/packages',
         BR: 'https://cliente.hostgator.com.br/',
@@ -49,23 +56,23 @@ const region = {
     help_phone_number: {
         default: 'tel:8669642867',
         BR: 'false', // a string false value will remove this section
-        MX: 'false', // a string false value will remove this section
-        CL: 'false', // a string false value will remove this section
-        CO: 'false', // a string false value will remove this section
+        MX: 'false',
+        CL: 'false',
+        CO: 'false',
     },
     help_chat: {
         default: 'https://helpchat.hostgator.com/',
-        BR: 'https://financeiro.hostgator.com.br/chat/?country=br&department=technical', // ideally to be open in a popup, not new tab
+        BR: 'https://suporte.hostgator.com.br/',
         MX: 'https://billing.hostgator.mx/chat/?country=mx&department=technical',
         CL: 'https://billing.hostgator.mx/chat/?country=cl&department=technical',
         CO: 'https://billing.hostgator.mx/chat/?country=co&department=technical',
     },
     help_twitter: {
         default: 'https://twitter.com/hgsupport',
-        BR: 'https://twitter.com/hostgatorbrasil',
-        MX: 'https://twitter.com/HostGatorES',
-        CL: 'https://twitter.com/HostGatorES',
-        CO: 'https://twitter.com/HostGatorES',
+        BR: 'false', // a string false value will remove this section
+        MX: 'false',
+        CL: 'false',
+        CO: 'false',
     },
     help_kb: {
         default: 'https://www.hostgator.com/help',
@@ -83,7 +90,7 @@ const region = {
     },
     help_youtube: {
         default: 'https://www.youtube.com/c/hostgatorUS',
-        BR: 'https://www.youtube.com/c/HostGatorBrasil',
+        BR: 'https://www.youtube.com/user/HostGatorBRTV',
         MX: 'https://www.youtube.com/c/HostGatorM%C3%A9xico',
         CL: 'https://www.youtube.com/c/HostGatorM%C3%A9xico',
         CO: 'https://www.youtube.com/c/HostGatorM%C3%A9xico',
