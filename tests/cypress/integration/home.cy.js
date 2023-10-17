@@ -24,7 +24,7 @@ describe('Home Page', function () {
 
 	it('Maintenance Mode Section Exists', () => {
 		cy
-			.get('.hgwp-app-home-coming-soon').contains('h3', 'Maintenance Mode')
+			.get('.hgwp-app-home-coming-soon').contains('h3', 'Site Status')
 			.scrollIntoView()
 			.should('be.visible');
 	});
