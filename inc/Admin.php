@@ -28,6 +28,7 @@ final class Admin {
 		\add_action( 'admin_head', array( __CLASS__, 'admin_nav_style' ) );
 		/* Add runtime for data store */
 		\add_filter('newfold-runtime', array( __CLASS__, 'add_to_runtime' ) );
+		\add_filter('newfold_runtime', array( __CLASS__, 'add_to_runtime' ) );
 		/* Filter plugin locale */
 		\add_filter( 'plugin_locale', array( __CLASS__, 'locale_filter' ) );
 		\add_filter( 'load_script_translation_file', array( __CLASS__, 'load_script_locale_filter' ), 10, 3 );
@@ -41,7 +42,7 @@ final class Admin {
 	 * Add to runtime
 	 */
 	public static function add_to_runtime( $sdk ) {
-		include HOSTGATOR_PLUGIN_DIR . '/inc/Data.php';
+		include_once HOSTGATOR_PLUGIN_DIR . '/inc/Data.php';
 		return array_merge( $sdk, Data::runtime() );
 	}
 
@@ -247,7 +248,7 @@ final class Admin {
 		\wp_register_script(
 			'hostgator-script',
 			HOSTGATOR_BUILD_URL . '/index.js',
-			array_merge( $asset['dependencies'] ),
+			array_merge( $asset['dependencies'], [ 'nfd-runtime' ] ),
 			$asset['version'],
 			true
 		);
