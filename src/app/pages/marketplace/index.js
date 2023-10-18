@@ -12,7 +12,6 @@ const MarketplacePage = () => {
 
 	// constants to pass to module
 	const moduleConstants = {
-		'supportsCTB': false,
 		'text': {
 			'title': __('Marketplace', 'wp-plugin-hostgator'),
 			'subTitle': __('Explore our featured collection of tools and services.', 'wp-plugin-hostgator'),

@@ -33,6 +33,20 @@ const ComingSoon = () => {
 				'wp-plugin-hostgator'
 			);
 	};
+	
+	const getComingSoonSectionTitle = () => {
+		const getStatus = () => {
+			return (
+				comingSoon 
+				? <span className="nfd-text-[#e10001]">{__('Coming Soon', 'wp-plugin-hostgator')}</span>
+				: <span className="nfd-text-[#008112]">{__('Live', 'wp-plugin-hostgator')}</span>
+			);
+		};
+
+		return (
+			<span>{__('Site Status', 'wp-plugin-hostgator')}: {getStatus()}</span>
+		)
+	};
 
 	const toggleComingSoon = () => {
 		hostgatorSettingsApiFetch({ comingSoon: !comingSoon }, setError, (response) => {
@@ -65,7 +79,7 @@ const ComingSoon = () => {
 
 	return (
 		<SectionSettings
-			title={__('Maintenance Mode', 'wp-plugin-hostgator')}
+			title={getComingSoonSectionTitle()}
 			description={__('Still building your site? Need to make a big change?', 'wp-plugin-hostgator')}
 		>
 			<div className="nfd-flex nfd-flex-col nfd-gap-6">

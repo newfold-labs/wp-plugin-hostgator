@@ -55,11 +55,11 @@ Cypress.Commands.add('setPermalinkStructure', ((structure = '/%postname%/') => {
 
 Cypress.Commands.add('setBrand', ((brand = null) => {
 	if ( brand === null ) {
-		cy.exec(`npx wp-env run cli wp option delete nfd_brand`).then((result)=>{
+		cy.exec(`npx wp-env run cli wp option delete mm_brand`).then((result)=>{
 			cy.log(result.stdout);
 		});
 	} else {
-    	cy.exec(`npx wp-env run cli wp option update nfd_brand "${brand}"`).then((result)=>{
+    	cy.exec(`npx wp-env run cli wp option update mm_brand "${brand}"`).then((result)=>{
 			cy.log(result.stdout);
 		});
 	}
