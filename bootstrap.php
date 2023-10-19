@@ -38,7 +38,7 @@ $nfd_module_container->set(
 					'id'           => 'hostgator',
 					'file'         => HOSTGATOR_PLUGIN_FILE,
 					'brand'        => get_option( 'mm_brand', 'hostgator' ),
-					'region'       => get_option( 'hg_region', 'US' ),
+					'region'       => strtoupper( get_option( 'hg_region', 'US' ) ),
 					'install_date' => get_option( 'hg_plugin_install_date', false ),
 				)
 			);
@@ -50,7 +50,7 @@ $nfd_module_container->set(
 if ( get_option( 'mm_brand', false ) && get_option( 'hg_region', false ) ) {
 	$nfd_module_container->set(
 		'marketplace_brand',
-		get_option( 'mm_brand', false ) . '_' . get_option( 'hg_region', false )
+		get_option( 'mm_brand', false ) . '_' . strtoupper( get_option( 'hg_region', false ) )
 	);
 }
 

@@ -142,7 +142,7 @@ export const comingSoonAdminbarToggle = ( comingSoon ) => {
  */
 export const getRegionValue = () => {
 	const brand  = NewfoldRuntime.sdk.plugin.brand;
-	const region = NewfoldRuntime.sdk.plugin.region;
+	const region =  NewfoldRuntime.sdk.plugin.region.toUpperCase();
 
 	// bail if not hostgator-latam brand
 	if ( brand !== 'hostgator-latam' ){
