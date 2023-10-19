@@ -151,16 +151,15 @@ export const getRegionValue = () => {
 	// qualify region setting and return region code
 	switch ( region ) {
 		case 'BR':
-			return region;
-			break;
 		case 'MX':
 		case 'CO':
 		case 'CL':
 			return region;
 			break;
+		case 'US':
 		case false:
 		default:
-			return '';
+			return 'default';
 	}
 };
 
