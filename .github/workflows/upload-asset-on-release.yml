@@ -101,6 +101,15 @@ jobs:
       - name: NPM Install
         run: npm install --legacy-peer-deps
 
+      - name: Validate WP Versions
+        if: ${{ (github.repository == 'newfold-labs/wp-plugin-hostgator') && (github.event.release.prerelease == false) }}
+        run: |
+          wpEnvVersion=`grep "WordPress/WordPress#tags/" .wp-env.json | grep -Eo "[0-9\.]*"`
+          pluginHeaderTestedVersion=`grep "Tested up to:" wp-plugin-hostgator.php | grep -Eo "[0-9\.]*"`
+          echo "wp-env version: $wpEnvVersion"
+          echo "Plugin header tested version: $pluginHeaderTestedVersion"
+          [[ "$wpEnvVersion" == "$pluginHeaderTestedVersion" ]] || exit 1
+
       - name: Build JavaScript
         run: npm run build
 
