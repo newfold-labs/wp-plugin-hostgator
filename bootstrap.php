@@ -148,7 +148,6 @@ require HOSTGATOR_PLUGIN_DIR . '/inc/AdminBar.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/base.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/jetpack.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/partners.php';
-require HOSTGATOR_PLUGIN_DIR . '/inc/performance.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/CachingController.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/SettingsController.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/rest-api.php';
