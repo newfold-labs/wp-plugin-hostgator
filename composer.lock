@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3fd36c293fb0c0df6239284d02705df0",
+    "content-hash": "6f5ed6a78d8b3d1d4bff4cf9143d8784",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -326,16 +326,16 @@
         },
         {
             "name": "newfold-labs/wp-module-ecommerce",
-            "version": "V1.3.3",
+            "version": "v1.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-ecommerce.git",
-                "reference": "d3600ffeb38b580f7b7fe57881c05af3be9cd0e3"
+                "reference": "45a8fc7164cf10830fcb1da3254bdea79e0857b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/d3600ffeb38b580f7b7fe57881c05af3be9cd0e3",
-                "reference": "d3600ffeb38b580f7b7fe57881c05af3be9cd0e3",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/45a8fc7164cf10830fcb1da3254bdea79e0857b8",
+                "reference": "45a8fc7164cf10830fcb1da3254bdea79e0857b8",
                 "shasum": ""
             },
             "require": {
@@ -378,23 +378,23 @@
             ],
             "description": "Brand Agnostic eCommerce Experience",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/V1.3.3",
+                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/v1.3.6",
                 "issues": "https://github.com/newfold-labs/wp-module-ecommerce/issues"
             },
-            "time": "2023-10-17T14:40:40+00:00"
+            "time": "2023-10-30T12:37:15+00:00"
         },
         {
             "name": "newfold-labs/wp-module-global-ctb",
-            "version": "1.0.7",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-global-ctb.git",
-                "reference": "d5aab07f1a9d9ddc8759c83310365da1612a8147"
+                "reference": "45b67e7b42a3d44d0a188263b65c355ef8661fa8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-global-ctb/zipball/d5aab07f1a9d9ddc8759c83310365da1612a8147",
-                "reference": "d5aab07f1a9d9ddc8759c83310365da1612a8147",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-global-ctb/zipball/45b67e7b42a3d44d0a188263b65c355ef8661fa8",
+                "reference": "45b67e7b42a3d44d0a188263b65c355ef8661fa8",
                 "shasum": ""
             },
             "require-dev": {
@@ -428,10 +428,10 @@
             ],
             "description": "Newfold module for 'Click to Buy' functionality in brand plugins",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-global-ctb/tree/1.0.7",
+                "source": "https://github.com/newfold-labs/wp-module-global-ctb/tree/1.0.8",
                 "issues": "https://github.com/newfold-labs/wp-module-global-ctb/issues"
             },
-            "time": "2023-10-17T22:48:10+00:00"
+            "time": "2023-10-27T22:31:46+00:00"
         },
         {
             "name": "newfold-labs/wp-module-installer",
@@ -775,16 +775,16 @@
         },
         {
             "name": "newfold-labs/wp-module-performance",
-            "version": "1.2.1",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-performance.git",
-                "reference": "b341bb7dbdf6a5b9038d670deffc5df1f2029973"
+                "reference": "f5cf5924aa6aaceebdf0b5d8b5ea7e004eb1d1a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-performance/zipball/b341bb7dbdf6a5b9038d670deffc5df1f2029973",
-                "reference": "b341bb7dbdf6a5b9038d670deffc5df1f2029973",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-performance/zipball/f5cf5924aa6aaceebdf0b5d8b5ea7e004eb1d1a8",
+                "reference": "f5cf5924aa6aaceebdf0b5d8b5ea7e004eb1d1a8",
                 "shasum": ""
             },
             "require": {
@@ -813,10 +813,10 @@
             ],
             "description": "A module for managing caching functionality.",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-performance/tree/1.2.1",
+                "source": "https://github.com/newfold-labs/wp-module-performance/tree/1.2.2",
                 "issues": "https://github.com/newfold-labs/wp-module-performance/issues"
             },
-            "time": "2023-09-11T18:50:56+00:00"
+            "time": "2023-10-30T13:02:28+00:00"
         },
         {
             "name": "newfold-labs/wp-module-runtime",
@@ -2345,16 +2345,16 @@
         },
         {
             "name": "wp-cli/wp-cli",
-            "version": "v2.8.1",
+            "version": "v2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-cli/wp-cli.git",
-                "reference": "5dd2340b9a01c3cfdbaf5e93a140759fdd190eee"
+                "reference": "8a3befba2d947fbf5cc6d1941edf2dd99da4d4b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/wp-cli/zipball/5dd2340b9a01c3cfdbaf5e93a140759fdd190eee",
-                "reference": "5dd2340b9a01c3cfdbaf5e93a140759fdd190eee",
+                "url": "https://api.github.com/repos/wp-cli/wp-cli/zipball/8a3befba2d947fbf5cc6d1941edf2dd99da4d4b7",
+                "reference": "8a3befba2d947fbf5cc6d1941edf2dd99da4d4b7",
                 "shasum": ""
             },
             "require": {
@@ -2371,7 +2371,7 @@
                 "wp-cli/entity-command": "^1.2 || ^2",
                 "wp-cli/extension-command": "^1.1 || ^2",
                 "wp-cli/package-command": "^1 || ^2",
-                "wp-cli/wp-cli-tests": "^3.1.6"
+                "wp-cli/wp-cli-tests": "^4.0.1"
             },
             "suggest": {
                 "ext-readline": "Include for a better --prompt implementation",
@@ -2411,7 +2411,7 @@
                 "issues": "https://github.com/wp-cli/wp-cli/issues",
                 "source": "https://github.com/wp-cli/wp-cli"
             },
-            "time": "2023-06-05T06:55:55+00:00"
+            "time": "2023-10-25T09:06:37+00:00"
         },
         {
             "name": "wp-coding-standards/wpcs",
