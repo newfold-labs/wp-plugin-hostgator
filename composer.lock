@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6f5ed6a78d8b3d1d4bff4cf9143d8784",
+    "content-hash": "d31c2be5635fea431b72fc373828cabf",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -326,16 +326,16 @@
         },
         {
             "name": "newfold-labs/wp-module-ecommerce",
-            "version": "v1.3.6",
+            "version": "v1.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-ecommerce.git",
-                "reference": "45a8fc7164cf10830fcb1da3254bdea79e0857b8"
+                "reference": "9174011f62e995ec3b4b92bf9d7014b0a947f9cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/45a8fc7164cf10830fcb1da3254bdea79e0857b8",
-                "reference": "45a8fc7164cf10830fcb1da3254bdea79e0857b8",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/9174011f62e995ec3b4b92bf9d7014b0a947f9cb",
+                "reference": "9174011f62e995ec3b4b92bf9d7014b0a947f9cb",
                 "shasum": ""
             },
             "require": {
@@ -378,10 +378,10 @@
             ],
             "description": "Brand Agnostic eCommerce Experience",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/v1.3.6",
+                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/v1.3.7",
                 "issues": "https://github.com/newfold-labs/wp-module-ecommerce/issues"
             },
-            "time": "2023-10-30T12:37:15+00:00"
+            "time": "2023-10-31T15:19:39+00:00"
         },
         {
             "name": "newfold-labs/wp-module-global-ctb",
@@ -2543,7 +2543,7 @@
     "platform": [],
     "platform-dev": [],
     "platform-overrides": {
-        "php": "7.0.0"
+        "php": "7.1.0"
     },
     "plugin-api-version": "2.3.0"
 }
