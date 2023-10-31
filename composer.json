@@ -15,11 +15,15 @@
         "optimize-autoloader": true,
         "sort-packages": true,
         "platform": {
-            "php": "7.0.0"
+            "php": "7.1.0"
         },
         "platform-check": false,
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true
+        },
+        "preferred-install": {
+            "newfold-labs/*": "source",
+            "*": "dist"
         }
     },
     "repositories": {
