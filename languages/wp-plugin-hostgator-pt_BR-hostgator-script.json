@@ -1,1 +1,265 @@
-{"translation-revision-date":"2023-09-20 18:16","generator":"WP-CLI\/2.8.1","source":"build\/2.2.0\/index.js","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","lang":"pt_BR","plural-forms":"nplurals=2; plural=(n != 1);"},"Home":["In\u00edcio"],"Store":["Loja Virtual"],"Marketplace":["Aplicativos"],"Performance":["Desempenho"],"Settings":["Configura\u00e7\u00f5es"],"Help":["Ajuda"],"Hostgator WordPress Plugin":["Plugin do HostGator para WordPress"],"Oh No, An Error!":["Oh, N\u00e3o, Um Erro!"],"You found an error, please refresh the page and try again!":["Voc\u00ea encontrou um erro, por favor atualize a p\u00e1gina e tente novamente!"],"If the error persists, please contact support.":["Se o erro persistir, por favor contate o suporte."]," Error code: ":[" C\u00f3digo de erro: "],"Phone":["Telefone"],"Give us a ring at (866) 96-GATOR":["Ligue para n\u00f3s"],"Call Us":["Ligue para n\u00f3s"],"Chat":["Chat"],"Have a question? We're here 24\/7\/365":["Tem uma d\u00favida? Estamos aqui 24\/7"],"Live Chat":["Chat ao Vivo"],"Tweet":["Tweet"],"Tweet us at @hgsupport for support":["Envie um tweet para @hgsupport para suporte"],"Tweet Us":["Tweet-nos"],"Knowledge Base":["Base de Conhecimento"],"Know what the pros know.":["Saiba o que os profissionais sabem."],"Find Answers":["Encontre Respostas"],"Blog":["Blog"],"Get our tips and in-depth articles.":["Receba nossas dicas e artigos detalhados."],"Learn Stuff":["Aprenda Coisas"],"Video Tutorials":["V\u00eddeos Tutoriais"],"Step-by-step tutorials and additional guides.":["Tutoriais passo a passo e guias adicionais."],"Watch Now":["Assista Agora"],"Featured":["Destaques"],"Services":["Servi\u00e7os"],"eCommerce":["eCommerce"],"SEO":["SEO"],"Security":["Seguran\u00e7a"],"Themes":["Temas"],"There's nothing here!":["N\u00e3o h\u00e1 nada aqui!"],"We are available 24\/7 to help answer questions and solve your problems.":["Estamos dispon\u00edveis 24\/7 para ajudar a responder perguntas e resolver seus problemas."],"Settings and Performance":["Configura\u00e7\u00f5es e Desempenho"],"Customize & fine-tune your site.":["Personalize & ajuste seu site."],"Manage Settings":["Gerenciar Configura\u00e7\u00f5es"],"Manage your site settings. You can ajdust automatic updates, comments, revisions and more.":["Gerencie as configura\u00e7\u00f5es do seu site. Voc\u00ea pode ajustar atualiza\u00e7\u00f5es autom\u00e1ticas, coment\u00e1rios, revis\u00f5es e muito mais."],"Manage site performance and caching settings as well as clear the site cache.":["Gerencie o desempenho do site e as configura\u00e7\u00f5es de cache, bem como limpe o cache do site."],"Visit Marketplace":["Visite a Loja"],"Add site services, themes or plugins from the marketplace.":["Adicione servi\u00e7os de site, temas ou plugins da loja."],"Website Content":["Conte\u00fado do Site"],"Create, manage & sort your story.":["Crie, gerencie e classifique seu conte\u00fado."],"New Post":["Nova postagem"],"Write a new blog post.":["Escreva uma nova postagem no blog."],"Pages":["P\u00e1ginas"],"New Page":["Nova P\u00e1gina"],"Add fresh pages to your website.":["Adicione novas p\u00e1ginas ao seu site."],"Categories":["Categorias"],"Manage Categories":["Gerenciar Categorias"],"Organize existing content into categories.":["Organize o conte\u00fado existente em categorias."],"Web Hosting":["Hospedagem de Sites"],"Access & manage your HostGator account.":["Acesse & gerencie sua conta HostGator."],"Manage Sites":["Gerenciar Sites"],"Manage your site from the control panel. You can create backups, set security, and improve performance.":["Gerencie seu site a partir do painel de controle. Voc\u00ea pode criar backups, definir a seguran\u00e7a e melhorar o desempenho."],"Email":["E-mail"],"Manage Email":["Gerenciar E-mail"],"Create email accounts, compose, send, and receive your email from the control panel.":["Crie contas de e-mail, componha, envie e receba seu e-mail no painel de controle."],"Domains":["Dom\u00ednios"],"Find a Domain":["Encontre um Dom\u00ednio"],"Find a new domain and assign it to your site or start a new site with a fresh domain.":["Encontre um novo dom\u00ednio e atribua-o ao seu site ou inicie um novo site com um novo dom\u00ednio."],"Get Help":["Obter Ajuda"],"24\/7\/365 support. We work when you work.":["Suporte 24\/7\/365. N\u00f3s trabalhamos quando voc\u00ea trabalha."],"Explore our featured collection of tools and services.":["Explore nossa cole\u00e7\u00e3o em destaque de ferramentas e servi\u00e7os."],"Oops, there was an error loading the marketplace, please try again later.":["Oops, ocorreu um erro ao carregar. Por favor, tente novamente mais tarde."],"Sorry, no marketplace items. Please, try again later.":["Desculpe, sem itens no mercado. Por favor, tente novamente mais tarde."],"Load More":["Carregar mais"],"This is where you can manage cache settings for your website.":["Aqui \u00e9 onde voc\u00ea pode gerenciar as configura\u00e7\u00f5es de cache para o seu site."],"Disabled":["Desativado"],"No cache enabled.":["Nenhum cache ativado."],"Every page load is fresh.":["Cada carregamento de p\u00e1gina \u00e9 novo\/fresco."],"Not recommended.":["N\u00e3o recomendado."],"Caching disabled.":["Cache desativado."],"Assets Only":["Somente Recursos"],"Cache static assets like images and the appearance of your site for 1 hour.":["Recurso de caches est\u00e1ticos, como imagens e a apar\u00eancia do seu site, por 1 hora."],"Cache static assets for 1 week and web pages for 8 hours.":["Recurso de caches est\u00e1ticos por 1 semana e p\u00e1ginas da web por 8 horas."],"Recommended for ecommerce and sites that update frequently or display info in real-time.":["Recomendado para com\u00e9rcio eletr\u00f4nico e sites que s\u00e3o atualizados com frequ\u00eancia ou exibem informa\u00e7\u00f5es em tempo real."],"Cache enabled for assets only.":["Cache ativado apenas para recursos."],"Assets & Web Pages":["Recursos & P\u00e1ginas da Web"],"Cache static assets for 24 hours and web pages for 2 hours.":["Recurso de caches est\u00e1ticos por 24 horas e p\u00e1ginas da web por 2 horas."],"Recommended for blogs, educational sites, and sites that update at least weekly.":["Recomendado para blogs, sites educacionais e sites que s\u00e3o atualizados pelo menos uma vez por semana."],"Cache enabled for assets and pages.":["Cache ativado para ativos e p\u00e1ginas."],"Assets & Web Pages - Extended":["Recursos & P\u00e1ginas da Web - Estendido"],"Recommended for sites that update a few times a month or less like porfolios or brochure sites.":["Recomendado para portf\u00f3lios, sites de brochuras e sites que s\u00e3o atualizados mensalmente ou com menos frequ\u00eancia."],"Cache enabled for assets and pages (extended).":["Cache ativado para recursos e p\u00e1ginas (estendido)."],"Cache setting saved":["Configura\u00e7\u00f5es de cache salvas"],"Clear Cache":["Limpar Cache"],"Cache cleared":["Cache limpo"],"Clear All Cache Now":["Limpar Todo o Cache Agora"],"We automatically clear your cache as you work (creating content, changing settings, installing plugins and more). But you can manually clear it here to be confident it's fresh.":["Limpamos automaticamente o seu cache enquanto voc\u00ea trabalha (criando conte\u00fado, alterando configura\u00e7\u00f5es, instalando plugins e mais). Mas voc\u00ea pode limp\u00e1-lo manualmente aqui para ter certeza de que est\u00e1 atualizado."],"Boost speed and performance by storing a copy of your website content, files, and images online so the pages of your website load faster for your visitors.":["Aumente a velocidade e o desempenho armazenando uma c\u00f3pia do conte\u00fado, arquivos e imagens do seu site on-line para que as p\u00e1ginas do seu site sejam carregadas mais rapidamente para seus visitantes."],"Caching":["Cache"],"Oops! Something went wrong. Please try again.":["Oops! Algo deu errado. Por favor, tente novamente."],"Manage All Updates":["Gerenciar Todas as Atualiza\u00e7\u00f5es"],"WordPress Core":["WordPress"],"Plugins":["Plugins"],"Automatic Updates":["Atualiza\u00e7\u00f5es Autom\u00e1ticas"],"Keeping automatic updates on ensures timely security fixes and the latest features.":["Mantendo as atualiza\u00e7\u00f5es autom\u00e1ticas ativadas, voc\u00ea garante corre\u00e7\u00f5es de seguran\u00e7a oportunas e os recursos mais recentes."],"Maintenance Mode":["Modo de Manuten\u00e7\u00e3o"],"Still building your site? Need to make a big change?":["Ainda construindo seu site? Precisa fazer uma grande mudan\u00e7a?"],"Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen.":["Sua p\u00e1gina de 'Em Breve' da Hostgator permite ocultar seu site dos visitantes enquanto voc\u00ea faz a m\u00e1gica acontecer."],"Your website is currently displaying a \"Coming Soon\" page.":["Seu site est\u00e1 atualmente exibindo uma p\u00e1gina de \"Em Breve\"."],"Disable comments for older posts":["Desabilitar coment\u00e1rios de postagens mais antigas"],"Comments setting saved ":["Configura\u00e7\u00e3o de coment\u00e1rios salva "],"Comments on posts are disabled after ":["Os coment\u00e1rios em postagens s\u00e3o desativados ap\u00f3s "]," day.":[" dia."," dias."],"Close comments after ":["Fechar coment\u00e1rios ap\u00f3s "],"Comments setting saved.":["Configura\u00e7\u00e3o de coment\u00e1rios salva."],"Posts will display ":["As postagens ser\u00e3o exibidas "]," comment at a time.":[" coment\u00e1rio por vez."," coment\u00e1rios por vez."],"Display ":["Exibir "]," comments per page.":[" coment\u00e1rios por p\u00e1gina."],"Comments":["Coment\u00e1rios"],"Comments allow visitors to provide feedback and respond to your posts or pages.":["Os coment\u00e1rios permitem que os visitantes forne\u00e7am feedback e respondam \u00e0s suas postagens ou p\u00e1ginas."],"Post revision setting saved ":["Configura\u00e7\u00e3o de revis\u00e3o de post salvo "],"Posts will save  ":["Posts ser\u00e3o salvos  "]," revision.":[" revis\u00e3o."," revis\u00f5es."],"Number of revisions posts can save ":["N\u00famero de posts de revis\u00f5es pode salvar "],"Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take ":["Salvar rascunhos e atualizar conte\u00fado publicado cria revis\u00f5es. Fa\u00e7a altera\u00e7\u00f5es com confian\u00e7a, sabendo que voc\u00ea pode "]," step back.":[" passo de volta."," passos de volta."],"Trash setting saved ":["Configura\u00e7\u00e3o de Lixeira salva "],"The trash will automatically empty every ":["A lixeira ser\u00e1 automaticamente vazia a cada "]," week.":[" semana."," semanas."],"Trash emptying frequency ":["Frequ\u00eancia da lixeira vazia "],"Content Options":["Op\u00e7\u00f5es de Conte\u00fado"],"Controls for content revisions and how often to empty the trash.":["Controles para revis\u00f5es de conte\u00fado e com que frequ\u00eancia esvaziar a lixeira."],"This is where you can manage common settings for your website.":["Aqui \u00e9 onde voc\u00ea pode gerenciar as configura\u00e7\u00f5es comuns para o seu site."],"HostGator Account":["Conta HostGator"],"View Site":["Ver Site"],"View Store":["Ver Site"],"More":["Mais"],"Coming soon page":["P\u00e1gina em constru\u00e7\u00e3o"],"Coming soon activated":["P\u00e1gina em constru\u00e7\u00e3o ativada"],"Coming soon page is active. Site requires login.":["A p\u00e1gina em constru\u00e7\u00e3o foi ativada. Apenas usu\u00e1rios com senha poder\u00e3o entrar."],"Coming soon deactivated":["A p\u00e1gina em constru\u00e7\u00e3o foi ativada. Apenas usu\u00e1rios com senha poder\u00e3o entrar."],"Coming soon page is not active. Site is live to visitors.":["A p\u00e1gina em constru\u00e7\u00e3o foi desativada. O site est\u00e1 ativo para visitantes."],"Products":["Produtos"],"Store Details":["Detalhes da Loja"]}}}
+{
+  "translation-revision-date": "2023-09-20 18:16",
+  "generator": "WP-CLI/2.8.1",
+  "source": "build/2.2.0/index.js",
+  "domain": "messages",
+  "locale_data": {
+    "messages": {
+      "": {
+        "domain": "messages",
+        "lang": "pt_BR",
+        "plural-forms": "nplurals=2; plural=(n != 1);"
+      },
+      "Home": ["In\u00edcio"],
+      "Store": ["Loja Virtual"],
+      "Marketplace": ["Aplicativos"],
+      "Performance": ["Desempenho"],
+      "Settings": ["Configura\u00e7\u00f5es"],
+      "Help": ["Ajuda"],
+      "Hostgator WordPress Plugin": ["Plugin do HostGator para WordPress"],
+      "Oh No, An Error!": ["Oh, N\u00e3o, Um Erro!"],
+      "You found an error, please refresh the page and try again!": [
+        "Voc\u00ea encontrou um erro, por favor atualize a p\u00e1gina e tente novamente!"
+      ],
+      "If the error persists, please contact support.": [
+        "Se o erro persistir, por favor contate o suporte."
+      ],
+      " Error code: ": [" C\u00f3digo de erro: "],
+      "Phone": ["Telefone"],
+      "Give us a ring at (866) 96-GATOR": ["Ligue para n\u00f3s"],
+      "Call Us": ["Ligue para n\u00f3s"],
+      "Chat": ["Chat"],
+      "Have a question? We're here 24/7/365": [
+        "Tem uma d\u00favida? Estamos aqui 24/7"
+      ],
+      "Live Chat": ["Chat ao Vivo"],
+      "Tweet": ["Tweet"],
+      "Tweet us at @hgsupport for support": [
+        "Envie um tweet para @hgsupport para suporte"
+      ],
+      "Tweet Us": ["Tweet-nos"],
+      "Knowledge Base": ["Base de Conhecimento"],
+      "Know what the pros know.": ["Saiba o que os profissionais sabem."],
+      "Find Answers": ["Encontre Respostas"],
+      "Blog": ["Blog"],
+      "Get our tips and in-depth articles.": [
+        "Receba nossas dicas e artigos detalhados."
+      ],
+      "Learn Stuff": ["Aprenda Coisas"],
+      "Video Tutorials": ["V\u00eddeos Tutoriais"],
+      "Step-by-step tutorials and additional guides.": [
+        "Tutoriais passo a passo e guias adicionais."
+      ],
+      "Watch Now": ["Assista Agora"],
+      "Featured": ["Destaques"],
+      "Services": ["Servi\u00e7os"],
+      "eCommerce": ["eCommerce"],
+      "SEO": ["SEO"],
+      "Security": ["Seguran\u00e7a"],
+      "Themes": ["Temas"],
+      "There's nothing here!": ["N\u00e3o h\u00e1 nada aqui!"],
+      "We are available 24/7 to help answer questions and solve your problems.": [
+        "Estamos dispon\u00edveis 24/7 para ajudar a responder perguntas e resolver seus problemas."
+      ],
+      "Settings and Performance": ["Configura\u00e7\u00f5es e Desempenho"],
+      "Customize & fine-tune your site.": ["Personalize & ajuste seu site."],
+      "Manage Settings": ["Gerenciar Configura\u00e7\u00f5es"],
+      "Manage your site settings. You can ajdust automatic updates, comments, revisions and more.": [
+        "Gerencie as configura\u00e7\u00f5es do seu site. Voc\u00ea pode ajustar atualiza\u00e7\u00f5es autom\u00e1ticas, coment\u00e1rios, revis\u00f5es e muito mais."
+      ],
+      "Manage site performance and caching settings as well as clear the site cache.": [
+        "Gerencie o desempenho do site e as configura\u00e7\u00f5es de cache, bem como limpe o cache do site."
+      ],
+      "Visit Marketplace": ["Visite a Loja"],
+      "Add site services, themes or plugins from the marketplace.": [
+        "Adicione servi\u00e7os de site, temas ou plugins da loja."
+      ],
+      "Website Content": ["Conte\u00fado do Site"],
+      "Create, manage & sort your story.": [
+        "Crie, gerencie e classifique seu conte\u00fado."
+      ],
+      "New Post": ["Nova postagem"],
+      "Write a new blog post.": ["Escreva uma nova postagem no blog."],
+      "Pages": ["P\u00e1ginas"],
+      "New Page": ["Nova P\u00e1gina"],
+      "Add fresh pages to your website.": [
+        "Adicione novas p\u00e1ginas ao seu site."
+      ],
+      "Categories": ["Categorias"],
+      "Manage Categories": ["Gerenciar Categorias"],
+      "Organize existing content into categories.": [
+        "Organize o conte\u00fado existente em categorias."
+      ],
+      "Web Hosting": ["Hospedagem de Sites"],
+      "Access & manage your HostGator account.": [
+        "Acesse & gerencie sua conta HostGator."
+      ],
+      "Manage Sites": ["Gerenciar Sites"],
+      "Manage your site from the control panel. You can create backups, set security, and improve performance.": [
+        "Gerencie seu site a partir do painel de controle. Voc\u00ea pode criar backups, definir a seguran\u00e7a e melhorar o desempenho."
+      ],
+      "Email": ["E-mail"],
+      "Manage Email": ["Gerenciar E-mail"],
+      "Create email accounts, compose, send, and receive your email from the control panel.": [
+        "Crie contas de e-mail, componha, envie e receba seu e-mail no painel de controle."
+      ],
+      "Domains": ["Dom\u00ednios"],
+      "Find a Domain": ["Encontre um Dom\u00ednio"],
+      "Find a new domain and assign it to your site or start a new site with a fresh domain.": [
+        "Encontre um novo dom\u00ednio e atribua-o ao seu site ou inicie um novo site com um novo dom\u00ednio."
+      ],
+      "Get Help": ["Obter Ajuda"],
+      "24/7/365 support. We work when you work.": [
+        "Suporte 24/7/365. N\u00f3s trabalhamos quando voc\u00ea trabalha."
+      ],
+      "Explore our featured collection of tools and services.": [
+        "Explore nossa cole\u00e7\u00e3o em destaque de ferramentas e servi\u00e7os."
+      ],
+      "Oops, there was an error loading the marketplace, please try again later.": [
+        "Oops, ocorreu um erro ao carregar. Por favor, tente novamente mais tarde."
+      ],
+      "Sorry, no marketplace items. Please, try again later.": [
+        "Desculpe, sem itens no mercado. Por favor, tente novamente mais tarde."
+      ],
+      "Load More": ["Carregar mais"],
+      "This is where you can manage cache settings for your website.": [
+        "Aqui \u00e9 onde voc\u00ea pode gerenciar as configura\u00e7\u00f5es de cache para o seu site."
+      ],
+      "Disabled": ["Desativado"],
+      "No cache enabled.": ["Nenhum cache ativado."],
+      "Every page load is fresh.": [
+        "Cada carregamento de p\u00e1gina \u00e9 novo/fresco."
+      ],
+      "Not recommended.": ["N\u00e3o recomendado."],
+      "Caching disabled.": ["Cache desativado."],
+      "Assets Only": ["Somente Recursos"],
+      "Cache static assets like images and the appearance of your site for 1 hour.": [
+        "Recurso de caches est\u00e1ticos, como imagens e a apar\u00eancia do seu site, por 1 hora."
+      ],
+      "Cache static assets for 1 week and web pages for 8 hours.": [
+        "Recurso de caches est\u00e1ticos por 1 semana e p\u00e1ginas da web por 8 horas."
+      ],
+      "Recommended for ecommerce and sites that update frequently or display info in real-time.": [
+        "Recomendado para com\u00e9rcio eletr\u00f4nico e sites que s\u00e3o atualizados com frequ\u00eancia ou exibem informa\u00e7\u00f5es em tempo real."
+      ],
+      "Cache enabled for assets only.": ["Cache ativado apenas para recursos."],
+      "Assets & Web Pages": ["Recursos & P\u00e1ginas da Web"],
+      "Cache static assets for 24 hours and web pages for 2 hours.": [
+        "Recurso de caches est\u00e1ticos por 24 horas e p\u00e1ginas da web por 2 horas."
+      ],
+      "Recommended for blogs, educational sites, and sites that update at least weekly.": [
+        "Recomendado para blogs, sites educacionais e sites que s\u00e3o atualizados pelo menos uma vez por semana."
+      ],
+      "Cache enabled for assets and pages.": [
+        "Cache ativado para ativos e p\u00e1ginas."
+      ],
+      "Assets & Web Pages - Extended": [
+        "Recursos & P\u00e1ginas da Web - Estendido"
+      ],
+      "Recommended for sites that update a few times a month or less like porfolios or brochure sites.": [
+        "Recomendado para portf\u00f3lios, sites de brochuras e sites que s\u00e3o atualizados mensalmente ou com menos frequ\u00eancia."
+      ],
+      "Cache enabled for assets and pages (extended).": [
+        "Cache ativado para recursos e p\u00e1ginas (estendido)."
+      ],
+      "Cache setting saved": ["Configura\u00e7\u00f5es de cache salvas"],
+      "Clear Cache": ["Limpar Cache"],
+      "Cache cleared": ["Cache limpo"],
+      "Clear All Cache Now": ["Limpar Todo o Cache Agora"],
+      "We automatically clear your cache as you work (creating content, changing settings, installing plugins and more). But you can manually clear it here to be confident it's fresh.": [
+        "Limpamos automaticamente o seu cache enquanto voc\u00ea trabalha (criando conte\u00fado, alterando configura\u00e7\u00f5es, instalando plugins e mais). Mas voc\u00ea pode limp\u00e1-lo manualmente aqui para ter certeza de que est\u00e1 atualizado."
+      ],
+      "Boost speed and performance by storing a copy of your website content, files, and images online so the pages of your website load faster for your visitors.": [
+        "Aumente a velocidade e o desempenho armazenando uma c\u00f3pia do conte\u00fado, arquivos e imagens do seu site on-line para que as p\u00e1ginas do seu site sejam carregadas mais rapidamente para seus visitantes."
+      ],
+      "Caching": ["Cache"],
+      "Oops! Something went wrong. Please try again.": [
+        "Oops! Algo deu errado. Por favor, tente novamente."
+      ],
+      "Manage All Updates": ["Gerenciar Todas as Atualiza\u00e7\u00f5es"],
+      "WordPress Core": ["WordPress"],
+      "Plugins": ["Plugins"],
+      "Automatic Updates": ["Atualiza\u00e7\u00f5es Autom\u00e1ticas"],
+      "Keeping automatic updates on ensures timely security fixes and the latest features.": [
+        "Mantendo as atualiza\u00e7\u00f5es autom\u00e1ticas ativadas, voc\u00ea garante corre\u00e7\u00f5es de seguran\u00e7a oportunas e os recursos mais recentes."
+      ],
+      "Maintenance Mode": ["Modo de Manuten\u00e7\u00e3o"],
+      "Still building your site? Need to make a big change?": [
+        "Ainda construindo seu site? Precisa fazer uma grande mudan\u00e7a?"
+      ],
+      "Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen.": [
+        "Sua p\u00e1gina de 'Em Breve' da Hostgator permite ocultar seu site dos visitantes enquanto voc\u00ea faz a m\u00e1gica acontecer."
+      ],
+      "Your website is currently displaying a \"Coming Soon\" page.": [
+        "Seu site est\u00e1 atualmente exibindo uma p\u00e1gina de \"Em Breve\"."
+      ],
+      "Disable comments for older posts": [
+        "Desabilitar coment\u00e1rios de postagens mais antigas"
+      ],
+      "Comments setting saved ": [
+        "Configura\u00e7\u00e3o de coment\u00e1rios salva "
+      ],
+      "Comments on posts are disabled after ": [
+        "Os coment\u00e1rios em postagens s\u00e3o desativados ap\u00f3s "
+      ],
+      " day.": [" dia.", " dias."],
+      "Close comments after ": ["Fechar coment\u00e1rios ap\u00f3s "],
+      "Comments setting saved.": [
+        "Configura\u00e7\u00e3o de coment\u00e1rios salva."
+      ],
+      "Posts will display ": ["As postagens ser\u00e3o exibidas "],
+      " comment at a time.": [
+        " coment\u00e1rio por vez.",
+        " coment\u00e1rios por vez."
+      ],
+      "Display ": ["Exibir "],
+      " comments per page.": [" coment\u00e1rios por p\u00e1gina."],
+      "Comments": ["Coment\u00e1rios"],
+      "Comments allow visitors to provide feedback and respond to your posts or pages.": [
+        "Os coment\u00e1rios permitem que os visitantes forne\u00e7am feedback e respondam \u00e0s suas postagens ou p\u00e1ginas."
+      ],
+      "Post revision setting saved ": [
+        "Configura\u00e7\u00e3o de revis\u00e3o de post salvo "
+      ],
+      "Posts will save  ": ["Posts ser\u00e3o salvos  "],
+      " revision.": [" revis\u00e3o.", " revis\u00f5es."],
+      "Number of revisions posts can save ": [
+        "N\u00famero de posts de revis\u00f5es pode salvar "
+      ],
+      "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take ": [
+        "Salvar rascunhos e atualizar conte\u00fado publicado cria revis\u00f5es. Fa\u00e7a altera\u00e7\u00f5es com confian\u00e7a, sabendo que voc\u00ea pode "
+      ],
+      " step back.": [" passo de volta.", " passos de volta."],
+      "Trash setting saved ": ["Configura\u00e7\u00e3o de Lixeira salva "],
+      "The trash will automatically empty every ": [
+        "A lixeira ser\u00e1 automaticamente vazia a cada "
+      ],
+      " week.": [" semana.", " semanas."],
+      "Trash emptying frequency ": ["Frequ\u00eancia da lixeira vazia "],
+      "Content Options": ["Op\u00e7\u00f5es de Conte\u00fado"],
+      "Controls for content revisions and how often to empty the trash.": [
+        "Controles para revis\u00f5es de conte\u00fado e com que frequ\u00eancia esvaziar a lixeira."
+      ],
+      "This is where you can manage common settings for your website.": [
+        "Aqui \u00e9 onde voc\u00ea pode gerenciar as configura\u00e7\u00f5es comuns para o seu site."
+      ],
+      "HostGator Account": ["Conta HostGator"],
+      "View Site": ["Ver Site"],
+      "View Store": ["Ver Loja"],
+      "More": ["Mais"],
+      "Coming soon page": ["P\u00e1gina em constru\u00e7\u00e3o"],
+      "Coming soon activated": ["P\u00e1gina em constru\u00e7\u00e3o ativada"],
+      "Coming soon page is active. Site requires login.": [
+        "A p\u00e1gina em constru\u00e7\u00e3o foi ativada. Apenas usu\u00e1rios com senha poder\u00e3o entrar."
+      ],
+      "Coming soon deactivated": [
+        "A p\u00e1gina em constru\u00e7\u00e3o foi ativada. Apenas usu\u00e1rios com senha poder\u00e3o entrar."
+      ],
+      "Coming soon page is not active. Site is live to visitors.": [
+        "A p\u00e1gina em constru\u00e7\u00e3o foi desativada. O site est\u00e1 ativo para visitantes."
+      ],
+      "Products": ["Produtos"],
+      "Store Details": ["Detalhes da Loja"]
+    }
+  }
+}
