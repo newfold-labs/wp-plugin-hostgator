@@ -25,6 +25,7 @@ import { default as NewfoldNotifications } from '../../vendor/newfold-labs/wp-mo
 // to pass to notifications module
 import apiFetch from '@wordpress/api-fetch'; 
 import { useState } from '@wordpress/element';
+import { addQueryArgs } from '@wordpress/url';
 
 const Notices = () => {
 	if ('undefined' === typeof noticesStore) {
@@ -85,6 +86,7 @@ const AppBody = (props) => {
 				}}
 				methods={{
 					apiFetch,
+					addQueryArgs,
 					classnames,
 					filter,
 					useState,
