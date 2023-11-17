@@ -3,7 +3,13 @@
 describe('Navigation', function () {
 
 	before(() => {
-		cy.visit('/wp-admin/admin.php?page=hostgator');
+		cy.visit('/wp-admin/admin.php?page=hostgator', {
+			onBeforeLoad() {
+				cy.window().then((win) => {
+                    win.NewfoldRuntime.restUrl = "http://localhost:8880/index.php?rest_route=/";
+				});
+			}
+		});
 		cy.injectAxe();
 		
 	});

@@ -3,7 +3,13 @@
 describe('Settings Page', function () {
 
 	before(() => {
-		cy.visit('/wp-admin/admin.php?page=hostgator#/settings');
+		cy.visit('/wp-admin/admin.php?page=hostgator#/settings', {
+			onBeforeLoad() {
+				cy.window().then((win) => {
+                    win.NewfoldRuntime.restUrl = "http://localhost:8880/index.php?rest_route=/";
+				});
+			}
+		});
 		
 	});
 

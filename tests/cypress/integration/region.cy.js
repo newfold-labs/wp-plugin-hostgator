@@ -18,8 +18,10 @@ describe('Regional Adjustments', function () {
                     // this is redundant now that the commands are in place
                     win.NewfoldRuntime.sdk.plugin.brand = 'hostgator-latam';
                     win.NewfoldRuntime.sdk.plugin.region = 'BR';
+                    win.NewfoldRuntime.restUrl = "http://localhost:8880/index.php?rest_route=/";
 				});
 			}
+            
 		});
 
         cy.get('#site_info_portal_button').should('have.attr', 'href')
@@ -35,6 +37,7 @@ describe('Regional Adjustments', function () {
 				cy.window().then((win) => {
                     win.NewfoldRuntime.sdk.plugin.brand = 'hostgator-latam';
                     win.NewfoldRuntime.sdk.plugin.region = 'BR';
+                    win.NewfoldRuntime.restUrl = "http://localhost:8880/index.php?rest_route=/";
 				});
 			}
 		});
@@ -53,6 +56,7 @@ describe('Regional Adjustments', function () {
 				cy.window().then((win) => {
                     win.NewfoldRuntime.sdk.plugin.brand = 'hostgator-latam';
                     win.NewfoldRuntime.sdk.plugin.region = 'BR';
+                    win.NewfoldRuntime.restUrl = "http://localhost:8880/index.php?rest_route=/";
 				});
 			}
 		});

@@ -3,7 +3,13 @@
 describe('Help Page', function () {
 
 	before(() => {
-		cy.visit('/wp-admin/admin.php?page=hostgator#/help');
+		cy.visit('/wp-admin/admin.php?page=hostgator#/help', {
+			onBeforeLoad() {
+				cy.window().then((win) => {
+                    win.NewfoldRuntime.restUrl = "http://localhost:8880/index.php?rest_route=/";
+				});
+			}
+		});
 	});
 	
 	it('Is Accessible', () => {
