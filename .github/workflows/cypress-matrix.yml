@@ -29,9 +29,9 @@ jobs:
           - '8.1'
           - '8.2'
         wpVersion:
-          - '6.1'
           - '6.2'
           - '6.3'
+          - '6.4'
 
     steps:
 
@@ -56,7 +56,7 @@ jobs:
           echo "PACKAGE=${REPO##*/}" >> $GITHUB_OUTPUT
 
       - name: Use Node.js 16.x
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 16.x
           cache: 'npm'
