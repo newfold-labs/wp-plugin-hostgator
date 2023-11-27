@@ -38,7 +38,7 @@ $nfd_module_container->set(
 					'id'           => 'hostgator',
 					'file'         => HOSTGATOR_PLUGIN_FILE,
 					'brand'        => get_option( 'mm_brand', 'hostgator' ),
-					'region'       => get_option( 'hg_region', 'US' ),
+					'region'       => strtoupper( get_option( 'hg_region', 'US' ) ),
 					'install_date' => get_option( 'hg_plugin_install_date', false ),
 				)
 			);
@@ -50,9 +50,15 @@ $nfd_module_container->set(
 if ( get_option( 'mm_brand', false ) && get_option( 'hg_region', false ) ) {
 	$nfd_module_container->set(
 		'marketplace_brand',
-		get_option( 'mm_brand', false ) . '_' . get_option( 'hg_region', false )
+		get_option( 'mm_brand', false ) . '_' . strtoupper( get_option( 'hg_region', false ) )
 	);
 }
+
+// Performance/cache settings
+$nfd_module_container->set(
+		'cache_types',
+		array( 'browser', 'file', 'skip404' )
+);
 
 // Set coming soon values
 $nfd_module_container->set(
@@ -142,7 +148,6 @@ require HOSTGATOR_PLUGIN_DIR . '/inc/AdminBar.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/base.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/jetpack.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/partners.php';
-require HOSTGATOR_PLUGIN_DIR . '/inc/performance.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/CachingController.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/SettingsController.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/rest-api.php';

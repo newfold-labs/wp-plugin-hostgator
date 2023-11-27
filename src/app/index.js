@@ -1,11 +1,13 @@
 import './stylesheet.scss';
+import './tailwind.pcss';
 
 import AppStore, { AppStoreProvider } from './data/store';
+import { Root } from "@newfold/ui-component-library";
 import { useLocation, HashRouter as Router } from 'react-router-dom';
+import { NewfoldRuntime } from '@newfold-labs/wp-module-runtime';
 import { __ } from '@wordpress/i18n';
 import { SnackbarList, Spinner } from '@wordpress/components';
 import classnames from 'classnames';
-import Header from './components/header';
 import AppRoutes from './data/routes';
 import ErrorCard from './components/errorCard';
 import { useDispatch, useSelect } from '@wordpress/data';
@@ -13,7 +15,10 @@ import { useEffect } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import { store as noticesStore } from '@wordpress/notices';
 import { setActiveSubnav } from './util/helpers';
-import { filter } from 'lodash';
+import { kebabCase, filter } from 'lodash';
+import { AppNav } from './components/app-nav';
+import { SiteInfoBar } from './components/site-info';
+import { NotificationFeed } from './components/notifications/feed';
 
 // component sourced from module
 import { default as NewfoldNotifications } from '../../vendor/newfold-labs/wp-module-notifications/assets/js/components/notifications/'; 
@@ -65,17 +70,18 @@ const AppBody = (props) => {
 		<main
 			id="hgwp-app-rendered"
 			className={classnames(
-				'wpadmin-brand-web',
-				`hgwp-wp-${HGWP.wpversion}`,
-				props.className
+				'wpadmin-brand-hostgator',
+				`wppbh-wp-${ NewfoldRuntime.sdk.wpversion }`,
+				`hgwp-page-${ kebabCase( location.pathname ) }`,
+				props.className,
+				'nfd-w-full nfd-p-4 min-[783px]:nfd-p-0'
 			)}
 		>
-			<Header />
 			<NewfoldNotifications
 				constants={{
 					context: 'hostgator-plugin',
 					page: hashedPath,
-					resturl: window.HGWP.resturl
+					resturl: NewfoldRuntime.createApiUrl('')
 				}}
 				methods={{
 					apiFetch,
@@ -89,6 +95,7 @@ const AppBody = (props) => {
 				<div className="hgwp-app-body-inner">
 					<ErrorBoundary FallbackComponent={<ErrorCard />}>
 						{hasError && <ErrorCard error={hasError} />}
+						<SiteInfoBar />
 						{(true === booted && <AppRoutes />) ||
 							(!hasError && <Spinner />)}
 					</ErrorBoundary>
@@ -104,9 +111,16 @@ const AppBody = (props) => {
 
 export const App = () => (
 	<AppStoreProvider>
-		<Router>
-			<AppBody />
-		</Router>
+		<Root context={{ isRtl: false }}>
+			<NotificationFeed>
+				<Router>
+					<div className="hgwp-app-container min-[783px]:nfd-p-8 min-[783px]:nfd-flex nfd-gap-6 nfd-max-w-full xl:nfd-max-w-screen-xl 2xl:nfd-max-w-screen-2xl nfd-my-0">
+						<AppNav />
+						<AppBody />
+					</div>
+				</Router>
+			</NotificationFeed>
+		</Root>
 	</AppStoreProvider>
 );
 

@@ -1,6 +1,7 @@
 import { addQueryArgs } from '@wordpress/url';
 import { dispatch } from '@wordpress/data';
 import apiFetch from '@wordpress/api-fetch';
+import { NewfoldRuntime } from "@newfold-labs/wp-module-runtime";
 import region from '../data/region';
 
 let lastNoticeId;
@@ -81,8 +82,7 @@ export const dispatchUpdateSnackbar = (text = 'Settings Saved') => {
  */
 export const hostgatorSettingsApiFetch = (data, passError, thenCallback) => {
 	return apiFetch({
-		// path: 'hostgator/v1/settings', //  can't use path bacause it breaks on temp domains
-		url: window.HGWP.resturl + '/hostgator/v1/settings',
+		url: NewfoldRuntime.createApiUrl( '/hostgator/v1/settings' ),
 		method: 'POST',
 		data,
 	})
@@ -104,7 +104,7 @@ export const hostgatorSettingsApiFetch = (data, passError, thenCallback) => {
  */
 export const hostgatorPurgeCacheApiFetch = (data, passError, thenCallback) => {
 	return apiFetch({
-		url: window.HGWP.resturl + '/hostgator/v1/caching',
+		url: NewfoldRuntime.createApiUrl( '/hostgator/v1/caching' ),
 		method: 'DELETE',
 		data,
 	})
@@ -112,6 +112,7 @@ export const hostgatorPurgeCacheApiFetch = (data, passError, thenCallback) => {
 			thenCallback(response);
 		})
 		.catch((error) => {
+			console.log(error);
 			passError(error);
 		});
 };
@@ -119,17 +120,19 @@ export const hostgatorPurgeCacheApiFetch = (data, passError, thenCallback) => {
 /**
  * Coming soon admin bar
  */
-export const comingSoonAdminbarToggle = (comingSoon) => {
+export const comingSoonAdminbarToggle = ( comingSoon ) => {
 	const comingsoonadminbar = document.getElementById(
-		'wp-admin-bar-hostgator-coming_soon'
+		'nfd-site-status-text'
 	);
-	if (!comingsoonadminbar) {
+	if ( ! comingsoonadminbar ) {
 		return;
 	}
-	if (!comingSoon) {
-		comingsoonadminbar.classList.add('hideme');
+	if ( ! comingSoon ) {
+		comingsoonadminbar.style.color = "#048200";
+		comingsoonadminbar.textContent = "Live";
 	} else {
-		comingsoonadminbar.classList.remove('hideme');
+		comingsoonadminbar.style.color = "#E01C1C";
+		comingsoonadminbar.textContent = "Coming Soon";
 	}
 };
 
@@ -138,21 +141,25 @@ export const comingSoonAdminbarToggle = (comingSoon) => {
  * @returns string - 2 char country code for region - or empty string for default region
  */
 export const getRegionValue = () => {
+	const brand  = NewfoldRuntime.sdk.plugin.brand;
+	const region =  NewfoldRuntime.sdk.plugin.region.toUpperCase();
+
 	// bail if not hostgator-latam brand
-	if ( window.HGWP.brand !== 'hostgator-latam' ){
+	if ( brand !== 'hostgator-latam' ){
 		return '';
 	}
 	// qualify region setting and return region code
-	switch ( window.HGWP.region ) {
+	switch ( region ) {
 		case 'BR':
-			return window.HGWP.region;
-			break;
 		case 'MX':
 		case 'CO':
 		case 'CL':
+			return region;
+			break;
+		case 'US':
 		case false:
 		default:
-			return '';
+			return 'default';
 	}
 };
 

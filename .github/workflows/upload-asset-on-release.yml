@@ -19,7 +19,7 @@ jobs:
     steps:
 
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Validate version number
         if: ${{ (github.repository == 'newfold-labs/wp-plugin-hostgator') && (github.event.release.prerelease == false) }}
@@ -27,7 +27,7 @@ jobs:
           taggedVersion=${{ env.VERSION }}
           pluginHeaderVersion=`grep "Version:" wp-plugin-hostgator.php | grep -Eo "[0-9\.]*"`
           pluginConstantVersion=`grep "'HOSTGATOR_PLUGIN_VERSION'" wp-plugin-hostgator.php | grep -Eo "[0-9\.]*"`
-          pluginPackageVersion=`grep "version" package.json | grep -Eo "[0-9\.]*"`
+          pluginPackageVersion=`grep '"version"' package.json | grep -Eo "[0-9\.]*"`
           echo "Tagged version: $taggedVersion"
           echo "Plugin header version: $pluginHeaderVersion"
           echo "Plugin constant version: $pluginConstantVersion"
@@ -50,17 +50,17 @@ jobs:
           REPO: ${{ github.repository }}
         run: |
           mkdir dist
-          echo ::set-output name=DIST::${PWD}/dist
-          echo ::set-output name=PACKAGE::${REPO##*/}
+          echo "DIST=${PWD}/dist" >> $GITHUB_OUTPUT
+          echo "PACKAGE=${REPO##*/}" >> $GITHUB_OUTPUT
 
       - name: Use Node.js 16.x
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 16.x
 
       - name: Get npm cache directory
         id: npm-cache
-        run: echo "::set-output name=dir::$(npm config get cache)"
+        run: echo "dir=$(npm config get cache)" >> $GITHUB_OUTPUT
 
       - name: Cache node modules
         uses: actions/cache@v3
@@ -72,7 +72,7 @@ jobs:
 
       - name: Get Composer Cache Directory
         id: composer-cache
-        run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
 
       - name: Cache Composer vendor directory
         uses: actions/cache@v3
@@ -95,14 +95,26 @@ jobs:
       - name: Install PHP Dependencies
         run: composer install --no-progress --no-dev --optimize-autoloader --prefer-dist
 
+      - name: Setup Registry
+        run: printf "\n//npm.pkg.github.com/:_authToken=${{ secrets.NEWFOLD_ACCESS_TOKEN }}" >> .npmrc
+
       - name: NPM Install
         run: npm install --legacy-peer-deps
+
+      - name: Validate WP Versions
+        if: ${{ (github.repository == 'newfold-labs/wp-plugin-hostgator') && (github.event.release.prerelease == false) }}
+        run: |
+          wpEnvVersion=`grep "WordPress/WordPress#tags/" .wp-env.json | grep -Eo "[0-9\.]*"`
+          pluginHeaderTestedVersion=`grep "Tested up to:" wp-plugin-hostgator.php | grep -Eo "[0-9\.]*"`
+          echo "wp-env version: $wpEnvVersion"
+          echo "Plugin header tested version: $pluginHeaderTestedVersion"
+          [[ "$wpEnvVersion" == "$pluginHeaderTestedVersion" ]] || exit 1
 
       - name: Build JavaScript
         run: npm run build
 
       - name: Create Distribution Copy
-        run: rsync -r --exclude-from=.distignore . ${{ steps.workflow.outputs.DIST }}/${{ steps.workflow.outputs.PACKAGE }}
+        run: rsync -r --include-from=.distinclude --exclude-from=.distignore . ${{ steps.workflow.outputs.DIST }}/${{ steps.workflow.outputs.PACKAGE }}
 
       - name: List Files
         working-directory: ${{ steps.workflow.outputs.DIST }}

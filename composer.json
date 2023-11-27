@@ -15,11 +15,15 @@
         "optimize-autoloader": true,
         "sort-packages": true,
         "platform": {
-            "php": "7.0.0"
+            "php": "7.1.0"
         },
         "platform-check": false,
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true
+        },
+        "preferred-install": {
+            "newfold-labs/*": "source",
+            "*": "dist"
         }
     },
     "repositories": {
@@ -33,8 +37,8 @@
     },
     "require-dev": {
         "newfold-labs/wp-php-standards": "^1.2",
-        "wp-cli/i18n-command": "^2.4.3",
-        "wp-phpunit/wp-phpunit": "^6.2"
+        "wp-cli/i18n-command": "^2.4.4",
+        "wp-phpunit/wp-phpunit": "^6.3.1"
     },
     "scripts": {
         "fix": "vendor/bin/phpcbf --standard=phpcs.xml .",
@@ -51,14 +55,20 @@
     },
     "require": {
         "doctrine/inflector": "1.2.0 as 1.3.1",
-        "newfold-labs/wp-module-coming-soon": "^1.1.3",
-        "newfold-labs/wp-module-data": "^2.3.4",
+        "newfold-labs/wp-module-coming-soon": "^1.1.12",
+        "newfold-labs/wp-module-data": "^2.4.9",
+        "newfold-labs/wp-module-deactivation": "^1.0.2",
+        "newfold-labs/wp-module-ecommerce": "^1.3.9",
+        "newfold-labs/wp-module-global-ctb": "^1.0.9",
         "newfold-labs/wp-module-loader": "^1.0.10",
-        "newfold-labs/wp-module-marketplace": "^1.5.1",
-        "newfold-labs/wp-module-notifications": "^1.1.2",
+        "newfold-labs/wp-module-marketplace": "^2.0.2",
+        "newfold-labs/wp-module-notifications": "^1.1.6",
+        "newfold-labs/wp-module-onboarding": "^1.11.8",
+        "newfold-labs/wp-module-performance": "^1.2.2",
+        "newfold-labs/wp-module-runtime": "^1.0.7",
         "newfold-labs/wp-module-secure-passwords": "^1.1",
         "newfold-labs/wp-module-sso": "^1.0.4",
-        "newfold-labs/wp-module-staging": "^1.0.2",
+        "newfold-labs/wp-module-staging": "^1.1",
         "wp-forge/wp-update-handler": "^1.0",
         "wp-forge/wp-upgrade-handler": "^1.0"
     }

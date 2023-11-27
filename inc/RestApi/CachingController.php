@@ -2,6 +2,8 @@
 
 namespace HostGator\RestApi;
 
+use function NewfoldLabs\WP\ModuleLoader\container;
+
 /**
  * Class CachingController
  */
@@ -43,12 +45,8 @@ class CachingController extends \WP_REST_Controller {
 	 * Clears the entire cache
 	 */
 	public function purge_all() {
-		if ( ! class_exists( 'Endurance_Page_Cache' ) ) {
-			return new \WP_Error( 'epc_not_installed', __( 'Endurance Page Cache plugin is not installed.', 'wp-plugin-hostgator' ), array( 'status' => 500 ) );
-		}
-
-		$epc = new \Endurance_Page_Cache();
-		$epc->purge_all();
+		
+		container()->get( 'cachePurger' )->purgeAll();
 
 		return array(
 			'status'  => 'success',

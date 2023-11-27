@@ -1,4 +1,5 @@
 import { createContext, useMemo } from '@wordpress/element';
+import { NewfoldRuntime } from '@newfold-labs/wp-module-runtime';
 
 import apiFetch from '@wordpress/api-fetch';
 
@@ -11,7 +12,7 @@ const AppStore = createContext(DEFAULT);
 
 export const hgApiFetchSettings = async (options = {}) => {
 	return await apiFetch({
-		url: window.HGWP.resturl + '/hostgator/v1/settings',
+		url: NewfoldRuntime.createApiUrl('/hostgator/v1/settings'),
 		...options,
 	});
 };
@@ -38,7 +39,6 @@ export const AppStoreProvider = ({ children }) => {
 			hgApiFetchSettings()
 				.then((settings) => {
 					setStore({ ...store, ...window.HGWP, ...settings });
-					window.HGWP.migrated = true;
 					setBooted(true);
 				})
 				.catch((error) => {

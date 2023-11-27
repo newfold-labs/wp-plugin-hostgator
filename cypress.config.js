@@ -10,12 +10,14 @@ module.exports = defineConfig({
     wpPassword: 'password',
 		wpVersion,
 		phpVersion,
+    pluginId: 'hostgator',
+    appId: 'hgwp',
   },
+  downloadsFolder: 'tests/cypress/downloads',
   fixturesFolder: 'tests/cypress/fixtures',
   screenshotsFolder: 'tests/cypress/screenshots',
   video: true,
   videosFolder: 'tests/cypress/videos',
-  videoUploadOnPasses: false,
   chromeWebSecurity: false,
 	viewportWidth: 1024,
 	viewportHeight: 768,
@@ -34,8 +36,16 @@ module.exports = defineConfig({
       return require('./tests/cypress/plugins/index.js')(on, config)
     },
     baseUrl: 'http://localhost:8880',
-    specPattern: 'tests/cypress/integration/**/*.cy.{js,jsx,ts,tsx}',
+    specPattern: [
+      'tests/cypress/integration/**/*.cy.{js,jsx,ts,tsx}',
+      'vendor/newfold-labs/**/tests/cypress/integration/**/*.cy.{js,jsx,ts,tsx}',
+    ],
     supportFile: 'tests/cypress/support/index.js',
     testIsolation: false,
+		excludeSpecPattern: [
+      'vendor/newfold-labs/wp-module-onboarding/tests/cypress/integration/' // skipping onboarding tests until they add multi-lingual support or onboarding is activated for all lanugages
+    ],
   },
+  retries: 1,
+  experimentalMemoryManagement: true,
 })

@@ -1,107 +1,115 @@
 import AppStore from '../../data/store';
-import { Heading, ErrorCard, Accordion } from '../../components';
 import {
 	hostgatorSettingsApiFetch,
-	dispatchUpdateSnackbar,
 	comingSoonAdminbarToggle,
 } from '../../util/helpers';
-import {
-	Card,
-	CardBody,
-	CardHeader,
-	CardDivider,
-	ToggleControl,
-} from '@wordpress/components';
 import { useState } from '@wordpress/element';
 import { useUpdateEffect } from 'react-use';
+import { Alert, ToggleField } from "@newfold/ui-component-library";
+import { SectionSettings } from "../../components/section";
+import { useNotification } from '../../components/notifications/feed';
 
 const ComingSoon = () => {
 	const { store, setStore } = useContext(AppStore);
 	const [comingSoon, setComingSoon] = useState(store.comingSoon);
 	const [isError, setError] = useState(false);
 
-	const getComingSoonNoticeText = () => {
-		/* array of text values - helps build step not obfuscate i18n
-			text[0] - text when value is false
-			text[1] - text when value is true
-		*/
-		const text = [
-			__('Coming soon deactivated.', 'wp-plugin-hostgator'),
-			__('Coming soon activated.', 'wp-plugin-hostgator'),
-		];
-		return text[comingSoon ? 1 : 0];
+	let notify = useNotification();
+
+	const getComingSoonNoticeTitle = () => {
+		return comingSoon
+			? __('Coming soon activated', 'wp-plugin-hostgator')
+			: __('Coming soon deactivated', 'wp-plugin-hostgator');
 	};
-	const getComingSoonHelpText = () => {
-		const text = [
-			__(
-				'Coming soon page is not active and site is acessible.',
+
+	const getComingSoonNoticeText = () => {
+		return comingSoon
+			? __(
+				'Coming soon page is active. Site requires login.',
 				'wp-plugin-hostgator'
-			),
-			__(
-				'Coming soon page is active and site is protected.',
+			)
+			: __(
+				'Coming soon page is not active. Site is live to visitors.',
 				'wp-plugin-hostgator'
+			);
+	};
+	
+	const getComingSoonSectionTitle = () => {
+		const getStatus = () => {
+			return (
+				comingSoon 
+				? <span className="nfd-text-[#e10001]">{__('Coming Soon', 'wp-plugin-hostgator')}</span>
+				: <span className="nfd-text-[#008112]">{__('Live', 'wp-plugin-hostgator')}</span>
+			);
+		};
+
+		return (
+			<span>{__('Site Status', 'wp-plugin-hostgator')}: {getStatus()}</span>
+		)
+	};
+
+	const toggleComingSoon = () => {
+		hostgatorSettingsApiFetch({ comingSoon: !comingSoon }, setError, (response) => {
+			setComingSoon(!comingSoon);
+		});
+	};
+
+	const notifySuccess = () => {
+		notify.push("coming-soon-toggle-notice", {
+			title: getComingSoonNoticeTitle(),
+			description: (
+				<span>
+					{getComingSoonNoticeText()}
+				</span>
 			),
-		];
-		return text[comingSoon ? 1 : 0];
+			variant: "success",
+			autoDismiss: 5000,
+		});
 	};
 
 	useUpdateEffect(() => {
-		hostgatorSettingsApiFetch({ comingSoon }, setError, (response) => {
-			setStore({
-				...store,
-				comingSoon,
-			});
-			dispatchUpdateSnackbar(getComingSoonNoticeText());
-			comingSoonAdminbarToggle();
+		setStore({
+			...store,
+			comingSoon,
 		});
+
+		notifySuccess();
+		comingSoonAdminbarToggle(comingSoon);
 	}, [comingSoon]);
 
-	if (isError) {
-		return <ErrorCard error={isError} />;
-	}
 	return (
-		<Card className="card-coming-soon">
-			<CardHeader>
-				<Heading level="3">
-					{__('Coming Soon', 'wp-plugin-hostgator')}
-				</Heading>
-			</CardHeader>
-			<CardBody>
-				{__(
-					'Not ready for your site to be live? Enable a "Coming Soon" page while you build your website for the public eye. This will disable all parts of your site and show visitors a "coming soon" landing page.',
-					'wp-plugin-hostgator'
-				)}
-			</CardBody>
-			<CardDivider />
-			<CardBody className="coming-soon-setting">
-				<ToggleControl
-					label={__('Coming Soon', 'wp-plugin-hostgator')}
-					className="coming-soon-toggle"
+		<SectionSettings
+			title={getComingSoonSectionTitle()}
+			description={__('Still building your site? Need to make a big change?', 'wp-plugin-hostgator')}
+		>
+			<div className="nfd-flex nfd-flex-col nfd-gap-6">
+				<ToggleField
+					id="coming-soon-toggle"
+					label={__('Coming soon page', 'wp-plugin-hostgator')}
+					description={__(
+						'Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen.',
+						'wp-plugin-hostgator'
+					)}
 					checked={comingSoon}
-					help={getComingSoonHelpText()}
 					onChange={() => {
-						setComingSoon((value) => !value);
+						toggleComingSoon();
 					}}
 				/>
-				{comingSoon && (
-					<Accordion
-						className="coming-soon-protip"
-						summary={__(
-							'Pro Tip: Begin collecting subscribers',
-							'wp-plugin-hostgator'
-						)}
-					>
-						<p>
-							{__(
-								'First, activate the "Jetpack" plugin, connect your site, and enable the "Subscriptions" module. Then, users can subscribe to be notified when you launch and publish new content.',
-								'wp-plugin-hostgator'
-							)}
-						</p>
-					</Accordion>
-				)}
-			</CardBody>
-		</Card>
+
+				{comingSoon &&
+					<Alert variant="info">
+						{__('Your website is currently displaying a "Coming Soon" page.', 'wp-plugin-hostgator')}
+					</Alert>
+				}
+
+				{isError &&
+					<Alert variant="error">
+						{__('Oops! Something went wrong. Please try again.', 'wp-plugin-hostgator')}
+					</Alert>
+				}
+			</div>
+		</SectionSettings>
 	);
-};
+}
 
 export default ComingSoon;
