@@ -142,7 +142,7 @@ export const routes = [
 		name: '/staging',
 		title: __('Staging', 'wp-plugin-hostgator'),
 		Component: Staging,
-		Dashicon: 'tools',
+		Icon: WrenchScrewdriverIcon,
 	},
 	{
 		name: '/help',
