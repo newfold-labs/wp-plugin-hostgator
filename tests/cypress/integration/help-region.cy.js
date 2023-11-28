@@ -24,13 +24,8 @@ describe('Language updates on Help Page', function () {
         cy.setLanguage('pt_BR');
 		cy.reload();
 
-		cy.get('.card-help-phone')
-			.scrollIntoView()
-			.should('not.exist');
-
-		cy.get('.card-help-twitter')
-			.scrollIntoView()
-			.should('not.exist');
+		cy.get('.card-help-phone').should('not.exist');
+		cy.get('.card-help-twitter').should('not.exist');
 	});
 
 	it('Chat Card Exists', () => {
