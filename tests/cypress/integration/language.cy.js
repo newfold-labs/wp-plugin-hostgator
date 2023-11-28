@@ -3,7 +3,13 @@
 describe('Language updates on Help Page', function () {
 
 	before(() => {
-		cy.visit('/wp-admin/admin.php?page=hostgator#/help');
+		cy.visit('/wp-admin/admin.php?page=hostgator#/help', {
+			onBeforeLoad() {
+				cy.window().then((win) => {
+                    win.NewfoldRuntime.restUrl = "http://localhost:8880/index.php?rest_route=/";
+				});
+			}
+		});
 	});
 
 	it('Is Accessible', () => {
@@ -21,7 +27,13 @@ describe('Language updates on Help Page', function () {
 	it('Language Change to pt_BR updates text', () => {
         // cy.setRegion('BR');
         cy.setLanguage('pt_BR');
-		cy.reload();
+		cy.visit('/wp-admin/admin.php?page=hostgator#/help', {
+			onBeforeLoad() {
+				cy.window().then((win) => {
+                    win.NewfoldRuntime.restUrl = "http://localhost:8880/index.php?rest_route=/";
+				});
+			}
+		});
 
 		cy.get('.card-help-phone').contains('h3', 'Telefone')
 			.scrollIntoView()
@@ -49,7 +61,13 @@ describe('Language updates on Help Page', function () {
 	it('Language change back to en_US updates text back', () => {
         // cy.setRegion();
         cy.setLanguage();
-        cy.reload();
+        cy.visit('/wp-admin/admin.php?page=hostgator#/help', {
+			onBeforeLoad() {
+				cy.window().then((win) => {
+                    win.NewfoldRuntime.restUrl = "http://localhost:8880/index.php?rest_route=/";
+				});
+			}
+		});
 
 		cy.get('.card-help-kb').contains('h3', 'Knowledge Base')
 			.scrollIntoView()
