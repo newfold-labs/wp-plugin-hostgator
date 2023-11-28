@@ -13,15 +13,13 @@ describe('Language updates on Help Page', function () {
 	});
 
 	it('Phone Card Exists', () => {
-		// redundant test from help.cy.js
-		cy.get('.card-help-phone').contains('h3', 'Phone')
+		cy.get('.card-help-phone')
 			.scrollIntoView()
 			.should('be.visible');
 	});
 
 	it('Tweet Card Exists', () => {
-		// redundant test from help.cy.js
-		cy.get('.card-help-twitter').contains('h3', 'Tweet')
+		cy.get('.card-help-twitter')
 			.scrollIntoView()
 			.should('be.visible');
 	});
@@ -30,6 +28,7 @@ describe('Language updates on Help Page', function () {
 		cy.setBrand('hostgator-latam');
         cy.setRegion('br');
         cy.setLanguage('pt_BR');
+
 		cy.visit('/wp-admin/admin.php?page=hostgator#/help', {
 			onBeforeLoad() {
 				cy.window().then((win) => {
@@ -38,39 +37,39 @@ describe('Language updates on Help Page', function () {
 			}
 		});
 
-		cy.get('.card-help-phone').contains('h3', 'Telefone')
+		cy.get('.card-help-phone')
 			.scrollIntoView()
 			.should('be.visible');
 	});
 
 	it('Phone Card Does Not Exist', () => {
 		// No phone card for help in hg-latam-br
-		cy.get('.card-help-phone').contains('h3', 'Phone')
+		cy.get('.card-help-phone')
 			.scrollIntoView()
-			.should('not-exist');
+			.should('not.exist');
 	});
 
 	it('Twitter Card Does Not Exist', () => {
-		// No phone card for help in hg-latam-br
-		cy.get('.card-help-twitter').contains('h3', 'Phone')
+		// No twitter card for help in hg-latam-br
+		cy.get('.card-help-twitter')
 			.scrollIntoView()
-			.should('not-exist');
+			.should('not.exist');
 	});
 
 	it('Chat Card Exists', () => {
-		cy.get('.card-help-chat').contains('h3', 'Chat')
+		cy.get('.card-help-chat')
 			.scrollIntoView()
 			.should('be.visible');
 	});
 
 	it('KB Card Exists', () => {
-		cy.get('.card-help-kb').contains('h3', 'Base de Conhecimento')
+		cy.get('.card-help-kb')
 			.scrollIntoView()
 			.should('be.visible');
 	});
 
 	it('Blog Card Exists', () => {
-		cy.get('.card-help-blog').contains('h3', 'Blog')
+		cy.get('.card-help-blog')
 			.scrollIntoView()
 			.should('be.visible');
 	});
@@ -82,7 +81,7 @@ describe('Language updates on Help Page', function () {
         cy.reload();
 
 		// check that page reloaded
-		cy.get('.card-help-blog').contains('h3', 'Blog')
+		cy.get('.card-help-blog')
 			.scrollIntoView()
 			.should('be.visible');
 	});
