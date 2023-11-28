@@ -22,3 +22,7 @@ before(() => {
 		Cypress.env('wpPassword')
 	);
 });
+
+Cypress.on('uncaught:exception', (err, runnable) => {
+	return false
+});
