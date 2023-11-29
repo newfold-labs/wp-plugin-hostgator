@@ -5,7 +5,7 @@ namespace HostGator;
 /**
  * Class LoginRedirect
  *
- * @package HostGatorWordPressPlugin
+ * @package HostHostGatorWordPressPluginGator
  */
 class LoginRedirect {
 
@@ -28,7 +28,7 @@ class LoginRedirect {
 	 * @return string
 	 */
 	public static function get_default_redirect_url( $url ) {
-		return current_user_can( 'manage_options' ) ? self::get_bluehost_dashboard_url() : $url;
+		return current_user_can( 'manage_options' ) ? self::get_plugin_dashboard_url() : $url;
 	}
 
 	/**
@@ -37,7 +37,7 @@ class LoginRedirect {
 	 */
 	public static function on_login_init() {
 		if ( ! isset( $_REQUEST['redirect_to'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$_REQUEST['redirect_to'] = self::get_bluehost_dashboard_url();
+			$_REQUEST['redirect_to'] = self::get_plugin_dashboard_url();
 		}
 	}
 
@@ -49,7 +49,7 @@ class LoginRedirect {
 	 * @return array
 	 */
 	public static function filter_login_form_defaults( array $defaults ) {
-		$defaults['redirect'] = self::get_bluehost_dashboard_url();
+		$defaults['redirect'] = self::get_plugin_dashboard_url();
 
 		return $defaults;
 	}
@@ -66,13 +66,13 @@ class LoginRedirect {
 	public static function on_login_redirect( $redirect_to, $requested_redirect_to, $user ) {
 
 		if ( self::is_user( $user ) ) {
-			// If no redirect is defined and the user is an administrator, redirect to the Bluehost dashboard.
+			// If no redirect is defined and the user is an administrator, redirect to the Plugin dashboard.
 			if ( (empty( $requested_redirect_to ) || admin_url( '/' ) === $requested_redirect_to ) && self::is_administrator( $user ) ) {
-				return self::get_bluehost_dashboard_url();
+				return self::get_plugin_dashboard_url();
 			}
 
-			// If the user isn't an admin and the redirect is to the Bluehost dashboard, point them to the WP dashboard instead.
-			if ( ! self::is_administrator( $user ) && self::is_bluehost_redirect( $requested_redirect_to ) ) {
+			// If the user isn't an admin and the redirect is to the Plugin dashboard, point them to the WP dashboard instead.
+			if ( ! self::is_administrator( $user ) && self::is_plugin_redirect( $requested_redirect_to ) ) {
 				return admin_url( '/' );
 			}
 		}
@@ -112,23 +112,27 @@ class LoginRedirect {
 	}
 
 	/**
-	 * Check if the current redirect is to the Bluehost plugin.
+	 * Check if the current redirect is to the Plugin plugin.
 	 *
 	 * @param string $redirect The current redirect URL.
 	 *
 	 * @return bool
 	 */
-	public static function is_bluehost_redirect( $redirect ) {
-		return false !== strpos( $redirect, admin_url( 'admin.php?page=bluehost' ) );
+	public static function is_plugin_redirect( $redirect ) {
+		global $nfd_module_container;
+        $plugin_id = $nfd_module_container->plugin()->id;
+		return false !== strpos( $redirect, admin_url( 'admin.php?page={$plugin_id}' ) );
 	}
 
 	/**
-	 * Get the Bluehost dashboard URL.
+	 * Get the Plugin dashboard URL.
 	 *
 	 * @return string
 	 */
-	public static function get_bluehost_dashboard_url() {
-		return admin_url( 'admin.php?page=bluehost#/home' );
+	public static function get_plugin_dashboard_url() {
+		global $nfd_module_container;
+        $plugin_id = $nfd_module_container->plugin()->id;
+		return admin_url( 'admin.php?page={$plugin_id}#/home' );
 	}
 
 }
