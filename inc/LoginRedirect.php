@@ -47,7 +47,7 @@ class LoginRedirect {
 	 * WordPress automatically defaults it to the WordPress dashboard URL.
 	 */
 	public static function on_login_init() {
-		if ( ! isset( $_REQUEST['redirect_to'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! isset( $_REQUEST['redirect_to'] ) && self::should_redirect() ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			$_REQUEST['redirect_to'] = self::get_plugin_dashboard_url();
 		}
 	}
@@ -60,8 +60,10 @@ class LoginRedirect {
 	 * @return array
 	 */
 	public static function filter_login_form_defaults( array $defaults ) {
-		$defaults['redirect'] = self::get_plugin_dashboard_url();
-
+        if ( self::should_redirect() ) {
+		    $defaults['redirect'] = self::get_plugin_dashboard_url();
+        }
+        
 		return $defaults;
 	}
 
@@ -76,7 +78,7 @@ class LoginRedirect {
 	 */
 	public static function on_login_redirect( $redirect_to, $requested_redirect_to, $user ) {
 
-		if ( self::is_user( $user ) ) {
+		if ( self::is_user( $user ) && self::should_redirect() ) {
 			// If no redirect is defined and the user is an administrator, redirect to the Plugin dashboard.
 			if ( (empty( $requested_redirect_to ) || admin_url( '/' ) === $requested_redirect_to ) && self::is_administrator( $user ) ) {
 				return self::get_plugin_dashboard_url();
@@ -95,7 +97,7 @@ class LoginRedirect {
      * Disable Yoast onboarding redirect.
      */
     public static function disable_yoast_onboarding_redirect() {
-        if ( class_exists( 'WPSEO_Options' ) ) {
+        if ( class_exists( 'WPSEO_Options' ) && self::should_redirect() ) {
 			\WPSEO_Options::set( 'should_redirect_after_install_free', false );
 		}
     }
