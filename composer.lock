@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d6b7f377892dba7d89f42a10503ab0c1",
+    "content-hash": "77453e0234eb98734afa891ade5c41cd",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -326,16 +326,16 @@
         },
         {
             "name": "newfold-labs/wp-module-ecommerce",
-            "version": "v1.3.11",
+            "version": "v1.3.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-ecommerce.git",
-                "reference": "dd26012e02a1c0984addbe5bc5522c19d8e80a96"
+                "reference": "28a7c2346215f4d46d54a0b93e05e663f6a8d74b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/dd26012e02a1c0984addbe5bc5522c19d8e80a96",
-                "reference": "dd26012e02a1c0984addbe5bc5522c19d8e80a96",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/28a7c2346215f4d46d54a0b93e05e663f6a8d74b",
+                "reference": "28a7c2346215f4d46d54a0b93e05e663f6a8d74b",
                 "shasum": ""
             },
             "require": {
@@ -378,10 +378,10 @@
             ],
             "description": "Brand Agnostic eCommerce Experience",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/v1.3.11",
+                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/v1.3.12",
                 "issues": "https://github.com/newfold-labs/wp-module-ecommerce/issues"
             },
-            "time": "2023-11-20T15:58:37+00:00"
+            "time": "2023-11-29T22:39:02+00:00"
         },
         {
             "name": "newfold-labs/wp-module-global-ctb",
@@ -1003,16 +1003,16 @@
         },
         {
             "name": "newfold-labs/wp-module-staging",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-staging.git",
-                "reference": "442ea23b57ea759f322ec63af2160cd9a4ad3b28"
+                "reference": "3fd2ad5f815edcd227e45ec23badb076c617fb50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-staging/zipball/442ea23b57ea759f322ec63af2160cd9a4ad3b28",
-                "reference": "442ea23b57ea759f322ec63af2160cd9a4ad3b28",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-staging/zipball/3fd2ad5f815edcd227e45ec23badb076c617fb50",
+                "reference": "3fd2ad5f815edcd227e45ec23badb076c617fb50",
                 "shasum": ""
             },
             "require-dev": {
@@ -1046,10 +1046,10 @@
             ],
             "description": "Newfold module for staging functionality in brand plugins",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-staging/tree/1.2.0",
+                "source": "https://github.com/newfold-labs/wp-module-staging/tree/1.2.1",
                 "issues": "https://github.com/newfold-labs/wp-module-staging/issues"
             },
-            "time": "2023-11-27T19:01:38+00:00"
+            "time": "2023-11-29T20:57:06+00:00"
         },
         {
             "name": "wp-cli/wp-config-transformer",
