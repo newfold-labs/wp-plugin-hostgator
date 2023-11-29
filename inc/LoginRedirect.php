@@ -119,9 +119,8 @@ class LoginRedirect {
 	 * @return bool
 	 */
 	public static function is_plugin_redirect( $redirect ) {
-		global $nfd_module_container;
-        $plugin_id = $nfd_module_container->plugin()->id;
-		return false !== strpos( $redirect, admin_url( 'admin.php?page={$plugin_id}' ) );
+        $plugin_id = self::get_plugin_id();
+		return false !== strpos( $redirect, admin_url( 'admin.php?page=' . $plugin_id ) );
 	}
 
 	/**
@@ -130,9 +129,18 @@ class LoginRedirect {
 	 * @return string
 	 */
 	public static function get_plugin_dashboard_url() {
+		$plugin_id = self::get_plugin_id();
+		return admin_url( 'admin.php?page=' . $plugin_id . '#/home' );
+	}
+
+	/**
+	 * Get the Plugin dashboard URL.
+	 *
+	 * @return string
+	 */
+	public static function get_plugin_id() {
 		global $nfd_module_container;
-        $plugin_id = $nfd_module_container->plugin()->id;
-		return admin_url( 'admin.php?page={$plugin_id}#/home' );
+        return $nfd_module_container->plugin()->id;
 	}
 
 }
