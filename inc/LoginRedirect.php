@@ -20,6 +20,17 @@ class LoginRedirect {
 		add_filter( 'newfold_sso_success_url_default', array( __CLASS__, 'get_default_redirect_url' ) );
 	}
 
+    /**
+     * Check if we should redirect.
+     * Redirect only if abTestPluginHome capability is true
+     * 
+     * @return boolean
+     */
+    public static function should_redirect() {
+        global $nfd_module_container;
+        return $nfd_module_container->get( 'capabilities' )->get('abTestPluginHome');
+    }
+
 	/**
 	 * Get default redirect URL.
 	 *
