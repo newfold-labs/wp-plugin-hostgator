@@ -12,10 +12,12 @@ import { Route, Routes } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
 import Home from '../pages/home';
 import Marketplace from '../pages/marketplace';
-import Settings from '../pages/settings';
 import Performance from '../pages/performance';
+import Settings from '../pages/settings';
+import Staging from '../pages/staging';
 import Help from '../pages/help';
 import Store from '../pages/ecommerce/page';
+import { getMarketplaceSubnavRoutes } from '../../../vendor/newfold-labs/wp-module-marketplace/components/marketplaceSubnav';
 
 const addPartialMatch = (prefix, path) => prefix === path ? `${prefix}/*` : path; 
 
@@ -53,6 +55,7 @@ const topRoutePaths = [
 	'/marketplace',
 	'/performance',
 	'/settings',
+	'/staging',
 ];
 const utilityRoutePaths = ['/help'];
 
@@ -96,33 +99,7 @@ export const routes = [
 		title: __('Marketplace', 'wp-plugin-hostgator'),
 		Component: Marketplace,
 		Icon: ShoppingBagIcon,
-		subRoutes: [
-			{
-				name: '/marketplace/featured',
-				title: __( 'Featured', 'wp-plugin-hostgator' ),
-			},
-			{
-				name: '/marketplace/services',
-				title: __( 'Services', 'wp-plugin-hostgator' ),
-			},
-			{
-				name: '/marketplace/ecommerce',
-				title: __( 'eCommerce', 'wp-plugin-hostgator' ),
-			},
-			{
-				name: '/marketplace/seo',
-				title: __( 'SEO', 'wp-plugin-hostgator' ),
-			},
-			{
-				name: '/marketplace/security',
-				title: __( 'Security', 'wp-plugin-hostgator' ),
-			},
-			{
-				name: '/marketplace/themes',
-				title: __( 'Themes', 'wp-plugin-hostgator' ),
-			},
-
-		],
+		subRoutes: await getMarketplaceSubnavRoutes(),
 	},
 	{
 		name: '/performance',
@@ -135,6 +112,12 @@ export const routes = [
 		title: __('Settings', 'wp-plugin-hostgator'),
 		Component: Settings,
 		Icon: AdjustmentsHorizontalIcon,
+	},
+	{
+		name: '/staging',
+		title: __('Staging', 'wp-plugin-hostgator'),
+		Component: Staging,
+		Icon: WrenchScrewdriverIcon,
 	},
 	{
 		name: '/help',

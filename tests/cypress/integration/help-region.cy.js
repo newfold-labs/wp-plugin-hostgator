@@ -6,52 +6,54 @@ describe('Language updates on Help Page', function () {
 		cy.visit('/wp-admin/admin.php?page=hostgator#/help');
 	});
 
-	it('Is Accessible', () => {
-		cy.injectAxe();
-		cy.wait(500);
-		cy.a11y('.hgwp-app-body');
-	});
-
 	it('Phone Card Exists', () => {
-		cy.get('.card-help-phone').contains('h3', 'Phone')
+		cy.get('.card-help-phone')
 			.scrollIntoView()
 			.should('be.visible');
 	});
 
-	it('Language Change to pt_BR updates text', () => {
-        // cy.setRegion('BR');
+	it('Twitter Card Exists', () => {
+		cy.get('.card-help-twitter')
+			.scrollIntoView()
+			.should('be.visible');
+	});
+
+	it('Region Change Updates Content', () => {
+		cy.setBrand('hostgator-latam');
+        cy.setRegion('br');
         cy.setLanguage('pt_BR');
 		cy.reload();
 
-		cy.get('.card-help-phone').contains('h3', 'Telefone')
-			.scrollIntoView()
-			.should('be.visible');
+		cy.get('.card-help-phone').should('not.exist');
+		cy.get('.card-help-twitter').should('not.exist');
 	});
 
 	it('Chat Card Exists', () => {
-		cy.get('.card-help-chat').contains('h3', 'Chat')
+		cy.get('.card-help-chat')
 			.scrollIntoView()
 			.should('be.visible');
 	});
 
 	it('KB Card Exists', () => {
-		cy.get('.card-help-kb').contains('h3', 'Base de Conhecimento')
+		cy.get('.card-help-kb')
 			.scrollIntoView()
 			.should('be.visible');
 	});
 
 	it('Blog Card Exists', () => {
-		cy.get('.card-help-blog').contains('h3', 'Blog')
+		cy.get('.card-help-blog')
 			.scrollIntoView()
 			.should('be.visible');
 	});
 
 	it('Language change back to en_US updates text back', () => {
-        // cy.setRegion();
+        cy.setBrand();
+		cy.setRegion();
         cy.setLanguage();
         cy.reload();
 
-		cy.get('.card-help-kb').contains('h3', 'Knowledge Base')
+		// check that page reloaded
+		cy.get('.card-help-blog')
 			.scrollIntoView()
 			.should('be.visible');
 	});

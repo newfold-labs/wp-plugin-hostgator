@@ -66,7 +66,7 @@ describe('Regional Adjustments', function () {
         
         // Reset Options to defaults
         cy.setRegion();
-        cy.setBrand('hostgator');
+        cy.setBrand();
         cy.setLanguage();
 
     });
