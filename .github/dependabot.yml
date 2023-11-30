@@ -9,12 +9,6 @@ updates:
       - dependency-type: direct
     schedule:
       interval: "daily"
-    assignees:
-      - "wpscholar"
-    reviewers:
-      - "wpalani"
-      - "circlecube"
-      - "wpscholar"
     commit-message:
       prefix: "GitHub Actions"
       include: "scope"
@@ -30,12 +24,6 @@ updates:
     schedule:
       interval: "daily"
     versioning-strategy: increase
-    assignees:
-      - "wpscholar"
-    reviewers:
-      - "wpalani"
-      - "circlecube"
-      - "wpscholar"
     commit-message:
       prefix: "NPM"
       prefix-development: "NPM Dev"
@@ -53,12 +41,6 @@ updates:
     allow:
       - dependency-type: direct
     versioning-strategy: increase
-    assignees:
-      - "wpscholar"
-    reviewers:
-      - "wpalani"
-      - "circlecube"
-      - "wpscholar"
     commit-message:
       prefix: "Composer"
       prefix-development: "Composer Dev"
