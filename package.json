@@ -29,10 +29,9 @@
         "react-error-boundary": "^4.0.11",
         "react-router-dom": "^6.20.0",
         "react-use": "^17.4.1"
-        },
+    },
     "devDependencies": {
         "@automattic/babel-plugin-preserve-i18n": "^1.0.0",
-        "@replayio/cypress": "^1.7.6",
         "@tailwindcss/forms": "^0.5.7",
         "@testing-library/cypress": "^10.0.1",
         "@wordpress/env": "^8.11.0",
@@ -49,7 +48,6 @@
         "create:dist": "rsync -r --include-from=.distinclude --exclude-from=.distignore . ./wp-plugin-hostgator",
         "create:zip": "cd ./wp-plugin-hostgator && zip -r -9 ../wp-plugin-hostgator.zip . && ls -lh ../wp-plugin-hostgator.zip",
         "cypress": "npm cypress open",
-        "cypress:record": "RECORD_ALL_CONTENT=1 RECORD_REPLAY_METADATA_FILE=$(mktemp) npx cypress run --browser 'Replay Chromium'",
         "develop": "npm run start",
         "develop:analyzer": "npm run start:analyzer",
         "format": "wp-scripts format ./src",

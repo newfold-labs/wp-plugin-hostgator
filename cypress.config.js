@@ -1,5 +1,4 @@
 const { defineConfig } = require('cypress')
-const cypressReplay = require("@replayio/cypress")
 const { phpVersion, core } = require('./.wp-env.json')
 const wpVersion = /[^/]*$/.exec(core)[0]
 
@@ -30,9 +29,6 @@ module.exports = defineConfig({
     // We've imported your old cypress plugins here.
     // You may want to clean this up later by importing these.
     setupNodeEvents(on, config) {
-			// Setup Replay
-			cypressReplay.default(on, config);
-
       return require('./tests/cypress/plugins/index.js')(on, config)
     },
     baseUrl: 'http://localhost:8880',
