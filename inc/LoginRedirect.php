@@ -10,12 +10,22 @@ namespace HostGator;
 class LoginRedirect {
 
 	/**
+	 * @var \NewfoldLabs\WP\ModuleLoader\Container
+	 */
+	public static $container;
+
+	/**
 	 * Initialize the login redirect functionality.
 	 */
 	public static function init() {
+
+		global $nfd_module_container;
+		self::$container = $nfd_module_container;
+
 		add_action( 'login_redirect', array( __CLASS__, 'on_login_redirect' ), 10, 3 );
 		add_action( 'login_init', array( __CLASS__, 'on_login_init' ), 10, 3 );
 		add_action( 'admin_init', array( __CLASS__, 'disable_yoast_onboarding_redirect' ), 2 );
+
 		add_filter( 'login_form_defaults', array( __CLASS__, 'filter_login_form_defaults' ) );
 		add_filter( 'newfold_sso_success_url_default', array( __CLASS__, 'get_default_redirect_url' ) );
 	}
@@ -27,9 +37,7 @@ class LoginRedirect {
 	 * @return boolean
 	 */
 	public static function should_redirect() {
-		global $nfd_module_container;
-
-		return $nfd_module_container->get( 'capabilities' )->get( 'abTestPluginHome' );
+		return current_user_can( 'manage_options' ) && self::$container->get( 'capabilities' )->get( 'abTestPluginHome' );
 	}
 
 	/**
@@ -40,7 +48,7 @@ class LoginRedirect {
 	 * @return string
 	 */
 	public static function get_default_redirect_url( $url ) {
-		return current_user_can( 'manage_options' ) ? self::get_plugin_dashboard_url() : $url;
+		return self::should_redirect() ? self::get_plugin_dashboard_url() : $url;
 	}
 
 	/**
@@ -155,9 +163,7 @@ class LoginRedirect {
 	 * @return string
 	 */
 	public static function get_plugin_id() {
-		global $nfd_module_container;
-
-		return $nfd_module_container->plugin()->id;
+		return self::$container->plugin()->id;
 	}
 
 }
