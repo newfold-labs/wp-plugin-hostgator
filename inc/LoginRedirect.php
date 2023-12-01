@@ -15,21 +15,22 @@ class LoginRedirect {
 	public static function init() {
 		add_action( 'login_redirect', array( __CLASS__, 'on_login_redirect' ), 10, 3 );
 		add_action( 'login_init', array( __CLASS__, 'on_login_init' ), 10, 3 );
-        add_action( 'admin_init', array( __CLASS__, 'disable_yoast_onboarding_redirect' ), 2 );
+		add_action( 'admin_init', array( __CLASS__, 'disable_yoast_onboarding_redirect' ), 2 );
 		add_filter( 'login_form_defaults', array( __CLASS__, 'filter_login_form_defaults' ) );
 		add_filter( 'newfold_sso_success_url_default', array( __CLASS__, 'get_default_redirect_url' ) );
 	}
 
-    /**
-     * Check if we should redirect.
-     * Redirect only if abTestPluginHome capability is true
-     * 
-     * @return boolean
-     */
-    public static function should_redirect() {
-        global $nfd_module_container;
-        return $nfd_module_container->get( 'capabilities' )->get('abTestPluginHome');
-    }
+	/**
+	 * Check if we should redirect.
+	 * Redirect only if abTestPluginHome capability is true
+	 *
+	 * @return boolean
+	 */
+	public static function should_redirect() {
+		global $nfd_module_container;
+
+		return $nfd_module_container->get( 'capabilities' )->get( 'abTestPluginHome' );
+	}
 
 	/**
 	 * Get default redirect URL.
@@ -60,19 +61,19 @@ class LoginRedirect {
 	 * @return array
 	 */
 	public static function filter_login_form_defaults( array $defaults ) {
-        if ( self::should_redirect() ) {
-		    $defaults['redirect'] = self::get_plugin_dashboard_url();
-        }
-        
+		if ( self::should_redirect() ) {
+			$defaults['redirect'] = self::get_plugin_dashboard_url();
+		}
+
 		return $defaults;
 	}
 
 	/**
 	 * Customize the login redirect URL if one hasn't already been set.
 	 *
-	 * @param string   $redirect_to           Current redirect URL.
-	 * @param string   $requested_redirect_to Requested redirect URL.
-	 * @param \WP_User $user                  WordPress user.
+	 * @param string $redirect_to Current redirect URL.
+	 * @param string $requested_redirect_to Requested redirect URL.
+	 * @param \WP_User $user WordPress user.
 	 *
 	 * @return string
 	 */
@@ -80,7 +81,7 @@ class LoginRedirect {
 
 		if ( self::is_user( $user ) && self::should_redirect() ) {
 			// If no redirect is defined and the user is an administrator, redirect to the Plugin dashboard.
-			if ( (empty( $requested_redirect_to ) || admin_url( '/' ) === $requested_redirect_to ) && self::is_administrator( $user ) ) {
+			if ( ( empty( $requested_redirect_to ) || admin_url( '/' ) === $requested_redirect_to ) && self::is_administrator( $user ) ) {
 				return self::get_plugin_dashboard_url();
 			}
 
@@ -93,14 +94,14 @@ class LoginRedirect {
 		return $redirect_to;
 	}
 
-    /**
-     * Disable Yoast onboarding redirect.
-     */
-    public static function disable_yoast_onboarding_redirect() {
-        if ( class_exists( 'WPSEO_Options' ) && self::should_redirect() ) {
+	/**
+	 * Disable Yoast onboarding redirect.
+	 */
+	public static function disable_yoast_onboarding_redirect() {
+		if ( class_exists( 'WPSEO_Options' ) && self::should_redirect() ) {
 			\WPSEO_Options::set( 'should_redirect_after_install_free', false );
 		}
-    }
+	}
 
 	/**
 	 * Check if we have a valid user.
@@ -132,7 +133,8 @@ class LoginRedirect {
 	 * @return bool
 	 */
 	public static function is_plugin_redirect( $redirect ) {
-        $plugin_id = self::get_plugin_id();
+		$plugin_id = self::get_plugin_id();
+
 		return false !== strpos( $redirect, admin_url( 'admin.php?page=' . $plugin_id ) );
 	}
 
@@ -143,6 +145,7 @@ class LoginRedirect {
 	 */
 	public static function get_plugin_dashboard_url() {
 		$plugin_id = self::get_plugin_id();
+
 		return admin_url( 'admin.php?page=' . $plugin_id . '#/home' );
 	}
 
@@ -153,7 +156,8 @@ class LoginRedirect {
 	 */
 	public static function get_plugin_id() {
 		global $nfd_module_container;
-        return $nfd_module_container->plugin()->id;
+
+		return $nfd_module_container->plugin()->id;
 	}
 
 }
