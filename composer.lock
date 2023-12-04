@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c8c8116b4d663cae654d8deffa97b2f2",
+    "content-hash": "d02984cf9ad1e0d628d92970ff149af7",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -326,16 +326,16 @@
         },
         {
             "name": "newfold-labs/wp-module-ecommerce",
-            "version": "v1.3.12",
+            "version": "v1.3.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-ecommerce.git",
-                "reference": "28a7c2346215f4d46d54a0b93e05e663f6a8d74b"
+                "reference": "81be77c59780688861190096947525d1c3bc074a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/28a7c2346215f4d46d54a0b93e05e663f6a8d74b",
-                "reference": "28a7c2346215f4d46d54a0b93e05e663f6a8d74b",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/81be77c59780688861190096947525d1c3bc074a",
+                "reference": "81be77c59780688861190096947525d1c3bc074a",
                 "shasum": ""
             },
             "require": {
@@ -378,10 +378,10 @@
             ],
             "description": "Brand Agnostic eCommerce Experience",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/v1.3.12",
+                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/v1.3.13",
                 "issues": "https://github.com/newfold-labs/wp-module-ecommerce/issues"
             },
-            "time": "2023-11-29T22:39:02+00:00"
+            "time": "2023-12-01T10:50:14+00:00"
         },
         {
             "name": "newfold-labs/wp-module-global-ctb",
@@ -2604,5 +2604,5 @@
     "platform-overrides": {
         "php": "7.1.0"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
