@@ -89,7 +89,7 @@ msgstr "Loja"
 #: inc/Admin.php:60
 #: build/2.5.0/index.js:1
 msgid "Marketplace"
-msgstr "Loja"
+msgstr "Mercado"
 
 #: inc/Admin.php:61
 #: build/2.5.0/index.js:1
@@ -328,7 +328,7 @@ msgstr "Gerencie o desempenho do site e as configurações de cache, bem como li
 
 #: build/2.5.0/index.js:1
 msgid "Visit Marketplace"
-msgstr "Visite a Loja"
+msgstr "Visite o Mercado"
 
 #: build/2.5.0/index.js:1
 msgid "Add site services, themes or plugins from the marketplace."
