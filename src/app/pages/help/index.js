@@ -1,8 +1,12 @@
-import { Page } from '../../components/page';
-import { SectionContainer, SectionContent, SectionHeader } from '../../components/section';
 import help from '../../data/help';
 import { getLinkPerRegion, supportsLinkPerRegion } from '../../util/helpers';
-import { Button, Card, Title } from "@newfold/ui-component-library";
+import { 
+	Button,
+	Card,
+	Title,
+	Container,
+	Page
+} from "@newfold/ui-component-library";
 
 const HelpCard = ({ item }) => {
 	return ( 
@@ -46,17 +50,17 @@ const Help = () => {
 	};
 	return (
 		<Page className={"hgwp-app-help-page"}>
-			<SectionContainer className={'hgwp-app-help-container'}>
-				<SectionHeader
+			<Container className={'hgwp-app-help-container'}>
+				<Container.Header
 					title={__('Help', 'wp-plugin-hostgator')}
-					subTitle={__('We are available 24/7 to help answer questions and solve your problems.',
+					description={__('We are available 24/7 to help answer questions and solve your problems.',
 					'wp-plugin-hostgator')}
 				/>
 
-				<SectionContent>
+				<Container.Block>
 					{renderHelpCards()}
-				</SectionContent>
-			</SectionContainer>
+				</Container.Block>
+			</Container>
 		</Page>
 	);
 };

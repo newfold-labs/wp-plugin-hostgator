@@ -2,8 +2,7 @@ import AppStore from '../../data/store';
 import { hostgatorSettingsApiFetch } from '../../util/helpers';
 import { useUpdateEffect } from 'react-use';
 import { useState } from '@wordpress/element';
-import { Alert, SelectField } from "@newfold/ui-component-library";
-import { SectionSettings } from "../../components/section";
+import { Alert, Container, SelectField } from "@newfold/ui-component-library";
 import { useNotification } from '../../components/notifications/feed';
 
 const ContentRevisions = ({ setError, notify }) => {
@@ -160,7 +159,7 @@ const ContentSettings = () => {
 
 	let notify = useNotification();
 	return (
-		<SectionSettings
+		<Container.SettingsField
 			title={__('Content Options', 'wp-plugin-hostgator')}
 			description={__('Controls for content revisions and how often to empty the trash.', 'wp-plugin-hostgator')}
 		>
@@ -174,7 +173,7 @@ const ContentSettings = () => {
 					</Alert>
 				}
 			</div>
-		</SectionSettings >
+		</Container.SettingsField>
 	);
 }
 
