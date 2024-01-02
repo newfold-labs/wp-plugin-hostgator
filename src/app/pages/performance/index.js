@@ -1,11 +1,10 @@
 import AppStore from '../../data/store';
-import { Page } from '../../components/page';
+import { Container, Page } from '@newfold/ui-component-library';
 import { useState, useEffect, useContext, Fragment } from '@wordpress/element';
 import apiFetch from '@wordpress/api-fetch';
 import classnames from 'classnames';
 import { useUpdateEffect } from 'react-use';
 import { NewfoldRuntime } from "@newfold-labs/wp-module-runtime";
-import { SectionContainer, SectionHeader, SectionContent, SectionSettings } from '../../components/section';
 import { useNotification } from '../../components/notifications/feed';
 import { 
     hostgatorSettingsApiFetch as newfoldSettingsApiFetch, 
@@ -61,20 +60,15 @@ const PerformancePage = () => {
     };
 
 	const moduleComponents = {
-		Page,
-        SectionHeader,
-		SectionContent,
-        SectionSettings,
-        SectionContainer,
         Fragment,
 	}
 
 	return (
 		<Page title="Performance" className={"hgwp-app-settings-page"}>
-			<SectionContainer className={'hgwp-app-settings-container'}>
-                <SectionHeader
+			<Container className={'hgwp-app-settings-container'}>
+                <Container.Header
                     title={__('Performance', 'wp-plugin-hostgator')}
-                    subTitle={__('This is where you can manage cache settings for your website.', 'wp-plugin-hostgator')}
+                    description={__('This is where you can manage cache settings for your website.', 'wp-plugin-hostgator')}
                     className={'hgwp-app-settings-header'}
                 />
                 <NewfoldPerformance
@@ -82,7 +76,7 @@ const PerformancePage = () => {
                     methods={moduleMethods}
                     Components={moduleComponents}
                 />
-            </SectionContainer>
+            </Container>
 		</Page>
 	);
 };

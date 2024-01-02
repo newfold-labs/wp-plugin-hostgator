@@ -1,9 +1,9 @@
-import { Page } from "../../components/page"
-import {NewfoldECommerce} from "@newfold-labs/wp-module-ecommerce";
+import { Page } from "@newfold/ui-component-library";
+import { NewfoldECommerce } from "@newfold-labs/wp-module-ecommerce";
 import { useNavigate, useLocation, useSearchParams } from "react-router-dom";
 import { useNotification } from "../../components/notifications/feed";
 import AppStore from "../../data/store";
-import {useContext } from "@wordpress/element";
+import { useContext } from "@wordpress/element";
 import { hostgatorSettingsApiFetch } from "../../util/helpers";
 import "@newfold-labs/wp-module-ecommerce/hostgator.css";
 

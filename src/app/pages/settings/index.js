@@ -1,37 +1,36 @@
+import { Container, Page } from '@newfold/ui-component-library';
 import AutomaticUpdates from './automaticUpdates';
 import ComingSoon from './comingSoon';
 import CommentSettings from './commentSettings';
 import ContentSettings from './contentSettings';
-import { Page } from '../../components/page';
-import { SectionContainer, SectionHeader, SectionContent } from '../../components/section';
 
 const Settings = () => {
 	return (
 		<Page title="Settings" className={"hgwp-app-settings-page"}>
-			<SectionContainer className={'hgwp-app-settings-container'}>
-				<SectionHeader
+			<Container className={'hgwp-app-settings-container'}>
+				<Container.Header
 					title={__('Settings', 'wp-plugin-hostgator')}
-					subTitle={__('This is where you can manage common settings for your website.', 'wp-plugin-hostgator')}
+					description={__('This is where you can manage common settings for your website.', 'wp-plugin-hostgator')}
 					className={'hgwp-app-settings-header'}
 				/>
 
-				<SectionContent separator={true} className={'hgwp-app-settings-coming-soon'}>
+				<Container.Block separator={true} className={'hgwp-app-settings-coming-soon'}>
 					<ComingSoon />
-				</SectionContent>
+				</Container.Block>
 
-				<SectionContent separator={true} className={'hgwp-app-settings-update'}>
+				<Container.Block separator={true} className={'hgwp-app-settings-update'}>
 					<AutomaticUpdates />
-				</SectionContent>
+				</Container.Block>
 
-				<SectionContent separator={true} className={'hgwp-app-settings-content'}>
+				<Container.Block separator={true} className={'hgwp-app-settings-content'}>
 					<ContentSettings />
-				</SectionContent>
+				</Container.Block>
 
-				<SectionContent className={'hgwp-app-settings-comments'}>
+				<Container.Block className={'hgwp-app-settings-comments'}>
 					<CommentSettings />
-				</SectionContent>
+				</Container.Block>
 
-			</SectionContainer>
+			</Container>
 		</Page>
 	);
 };
