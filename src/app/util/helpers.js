@@ -227,3 +227,26 @@ export const supportsLinkPerRegion = (link_name = 'main') => {
 	params.utm_medium = 'hostgator_plugin';
 	return addQueryArgs(url, params);
 };
+
+/**
+ * Handles help center links click, will open help center slide if user has access
+ * or navigate to help page if user doesn't have access
+ */
+export const handleHelpLinksClick = () => {
+	if (
+		NewfoldRuntime.hasCapability( 'canAccessHelpCenter' ) &&
+		window.newfoldEmbeddedHelp &&
+		! window.newfoldEmbeddedHelp.hasListeners
+	) {
+		const helpLinks = document.querySelectorAll( '[href*="#/help"]' );
+		if ( helpLinks ) {
+			helpLinks.forEach( ( el ) =>
+				el.addEventListener( 'click', ( e ) => {
+					e.preventDefault();
+					window.newfoldEmbeddedHelp.toggleNFDLaunchedEmbeddedHelp();
+				} )
+			);
+			window.newfoldEmbeddedHelp.hasListeners = true;
+		}
+	}
+};

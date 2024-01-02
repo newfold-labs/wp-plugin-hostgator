@@ -19,7 +19,12 @@ import Help from '../pages/help';
 import Store from '../pages/ecommerce/page';
 import { getMarketplaceSubnavRoutes } from '../../../vendor/newfold-labs/wp-module-marketplace/components/marketplaceSubnav';
 
-const addPartialMatch = (prefix, path) => prefix === path ? `${prefix}/*` : path; 
+const addPartialMatch = (prefix, path) => prefix === path ? `${prefix}/*` : path;
+
+const HelpCenterAI = ( e ) => {
+	e.preventDefault();
+	window.newfoldEmbeddedHelp.toggleNFDLaunchedEmbeddedHelp();
+};
 
 export const AppRoutes = () => {
 	return (
@@ -124,6 +129,9 @@ export const routes = [
 		title: __('Help', 'wp-plugin-hostgator'),
 		Component: Help,
 		Icon: QuestionMarkCircleIcon,
+		action: NewfoldRuntime.hasCapability( 'canAccessHelpCenter' )
+			? HelpCenterAI
+			: false,
 	},
 ];
 
