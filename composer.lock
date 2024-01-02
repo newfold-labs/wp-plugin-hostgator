@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5a1628c8b104a625a2153da5616d8062",
+    "content-hash": "c95cd0f16e44af373cc18be7f7af5959",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -989,16 +989,16 @@
         },
         {
             "name": "newfold-labs/wp-module-staging",
-            "version": "1.2.1",
+            "version": "1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-staging.git",
-                "reference": "3fd2ad5f815edcd227e45ec23badb076c617fb50"
+                "reference": "87a8f2659ad256fa03a0ae2932950cb6d745dfa4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-staging/zipball/3fd2ad5f815edcd227e45ec23badb076c617fb50",
-                "reference": "3fd2ad5f815edcd227e45ec23badb076c617fb50",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-staging/zipball/87a8f2659ad256fa03a0ae2932950cb6d745dfa4",
+                "reference": "87a8f2659ad256fa03a0ae2932950cb6d745dfa4",
                 "shasum": ""
             },
             "require-dev": {
@@ -1032,10 +1032,10 @@
             ],
             "description": "Newfold module for staging functionality in brand plugins",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-staging/tree/1.2.1",
+                "source": "https://github.com/newfold-labs/wp-module-staging/tree/1.2.3",
                 "issues": "https://github.com/newfold-labs/wp-module-staging/issues"
             },
-            "time": "2023-11-29T20:57:06+00:00"
+            "time": "2023-12-05T18:18:33+00:00"
         },
         {
             "name": "wp-cli/wp-config-transformer",

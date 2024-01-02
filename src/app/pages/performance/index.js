@@ -60,11 +60,6 @@ const PerformancePage = () => {
     };
 
 	const moduleComponents = {
-		Page,
-        SectionHeader,
-		SectionContent,
-        SectionSettings,
-        SectionContainer,
         Fragment,
 	}
 
