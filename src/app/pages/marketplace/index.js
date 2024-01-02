@@ -30,11 +30,6 @@ const MarketplacePage = () => {
         NewfoldRuntime,
     };
 
-	const moduleComponents = {
-		SectionHeader,
-		SectionContent,
-	}
-
 	return (
 		<Page className={"hgwp-app-marketplace-page"}>
 			<Container className={'hgwp-app-marketplace-container'}>
@@ -42,7 +37,6 @@ const MarketplacePage = () => {
 				<NewfoldMarketplace 
 					methods={moduleMethods}
 					constants={moduleConstants}
-					Components={moduleComponents}
 				/>
 
 			</Container>
