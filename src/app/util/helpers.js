@@ -5,50 +5,6 @@ import { NewfoldRuntime } from "@newfold-labs/wp-module-runtime";
 import region from '../data/region';
 
 let lastNoticeId;
-const HG_NAV = document.querySelector('#toplevel_page_hostgator .wp-submenu');
-/**
- * Set active nav in wp admin sub pages.
- *
- * @param  path
- */
-export const setActiveSubnav = (path) => {
-	if (HG_NAV) {
-		const HG_NAV_LIS = HG_NAV.children;
-		if (HG_NAV_LIS) {
-			for (let i = 0; i < HG_NAV_LIS.length; i++) {
-				// get all children li elements
-				const link = HG_NAV_LIS[i].children[0];
-				if (link) {
-					const href = link.getAttribute('href');
-					// check each child a href for match with path
-					if (
-						href.endsWith(path) || // match
-						(path.includes('/marketplace/') &&
-							href.endsWith('marketplace')) ||
-						(path === '/' && href.endsWith('home'))
-					) {
-						// highlight home subnav for root page
-						// update li class when match
-						HG_NAV_LIS[i].classList.add('current');
-					} else {
-						HG_NAV_LIS[i].classList.remove('current');
-					}
-					// highlight our home nav for root level access
-					const HG_HOME_NAV = document.querySelector(
-						'.hgwp-nav a[href="#/home"]'
-					);
-					if (HG_HOME_NAV) {
-						if (path === '/' || path === '/home') {
-							HG_HOME_NAV.classList.add('active');
-						} else {
-							HG_HOME_NAV.classList.remove('active');
-						}
-					}
-				}
-			}
-		}
-	}
-};
 
 /**
  * Wrapper method to dispatch snackbar notice
