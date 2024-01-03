@@ -194,6 +194,7 @@ export const handleHelpLinksClick = () => {
 		window.newfoldEmbeddedHelp &&
 		! window.newfoldEmbeddedHelp.hasListeners
 	) {
+		// add listener to all help links
 		const helpLinks = document.querySelectorAll( '[href*="#/help"]' );
 		if ( helpLinks ) {
 			helpLinks.forEach( ( el ) =>
@@ -203,6 +204,11 @@ export const handleHelpLinksClick = () => {
 				} )
 			);
 			window.newfoldEmbeddedHelp.hasListeners = true;
+		}
+
+		// if on help page already, open help center
+		if( window.location.hash === '#/help') {
+			window.newfoldEmbeddedHelp.toggleNFDLaunchedEmbeddedHelp();
 		}
 	}
 };
