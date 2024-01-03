@@ -17,7 +17,7 @@
         "@newfold-labs/wp-module-runtime": "^1.0.7",
         "@newfold/ui-component-library": "^1.0.1",
         "@reduxjs/toolkit": "^2.0.1",
-        "@wordpress/compose": "^6.24.0",
+        "@wordpress/compose": "^6.25.0",
         "@wordpress/dom-ready": "^3.47.0",
         "@wordpress/element": "^5.21.0",
         "@wordpress/i18n": "^4.46.0",
