@@ -1,5 +1,9 @@
 import help from '../../data/help';
-import { getLinkPerRegion, supportsLinkPerRegion } from '../../util/helpers';
+import {
+	getLinkPerRegion,
+	supportsLinkPerRegion,
+	handleHelpLinksClick
+} from '../../util/helpers';
 import { 
 	Button,
 	Card,
@@ -36,6 +40,7 @@ const HelpCard = ({ item }) => {
 }
 
 const Help = () => {
+	handleHelpLinksClick();
 	const renderHelpCards = () => {
 		const helpItems = help;
 
