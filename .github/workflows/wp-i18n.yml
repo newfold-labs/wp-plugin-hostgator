@@ -73,28 +73,31 @@ jobs:
       - name: Build JavaScript
         run: npm run build
 
+      - name: Remove token
+        run: git checkout -- '.npmrc'
+
       - name: Get current timestamp for .pot header
         id: date
-        run: echo "TIMESTAMP=date('%Y-%m-%dT%H:%M:%S')" >> $GITHUB_OUTPUT
+        run: echo "NOW=$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_OUTPUT
 
       - name: Add text domains
         run: npx node-wp-i18n addtextdomain
 
       - name: Generate POT file
-        run: vendor/bin/wp i18n make-pot . ./languages/${{ github.event.repository.name }}.pot --headers='{"Report-Msgid-Bugs-To":"https://github.com/${{ github.repository }}/issues","POT-Creation-Date":${{ steps.date.outputs.TIMESTAMP }}+00:00' --exclude=assets,tests,src
+        run: vendor/bin/wp i18n make-pot . ./languages/${{ github.event.repository.name }}.pot --headers='{"Report-Msgid-Bugs-To":"https://github.com/${{ github.repository }}/issues" --exclude=assets,tests,src
 
       - name: Check if there are file changes
         id: changes
         continue-on-error: true
         run: git diff --exit-code
 
-      - name: Commit web files
+      - name: Commit updated .pot file
         if: steps.changes.outcome == 'failure'
         run: |
           git config --local user.name "${{ github.event.head_commit.author.name }}"
           git config --local user.email "${{ github.event.head_commit.author.email }}"
           git remote -v
-          git add -A
+          git add '*.pot'
           git commit -m "WordPress I18N triggered by commit ${{ github.sha }}"
           git status
 
