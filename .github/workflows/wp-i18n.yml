@@ -82,14 +82,15 @@ jobs:
       - name: Generate language files
         run: composer run-script i18n
 
-      - name: Rename language json files
-        shell: bash
-        run: composer run-script i18n-json-rename
-
       - name: Check if there are file changes
         id: changes
         continue-on-error: true
         run: git diff --exit-code
+
+      - name: Rename language json files
+        if: steps.changes.outcome == 'failure'
+        shell: bash
+        run: composer run-script i18n-json-rename
 
       - name: Commit updated language files
         if: steps.changes.outcome == 'failure'
