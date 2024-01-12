@@ -75,13 +75,13 @@ jobs:
 
       - name: Get current timestamp for .pot header
         id: date
-        run: echo "TIMESTAMP=${date('%Y-%m-%dT%H:%M:%S')}+00:00" >> $GITHUB_OUTPUT
+        run: echo "TIMESTAMP=date('%Y-%m-%dT%H:%M:%S')" >> $GITHUB_OUTPUT
 
       - name: Add text domains
         run: npx node-wp-i18n addtextdomain
 
       - name: Generate POT file
-        run: vendor/bin/wp i18n make-pot . ./languages/${{ github.event.repository.name }}.pot --headers='{"Report-Msgid-Bugs-To":"https://github.com/${{ github.repository }}/issues","POT-Creation-Date":${{ steps.date.outputs.TIMESTAMP }}}' --exclude=assets,tests,src
+        run: vendor/bin/wp i18n make-pot . ./languages/${{ github.event.repository.name }}.pot --headers='{"Report-Msgid-Bugs-To":"https://github.com/${{ github.repository }}/issues","POT-Creation-Date":${{ steps.date.outputs.TIMESTAMP }}+00:00' --exclude=assets,tests,src
 
       - name: Check if there are file changes
         id: changes
