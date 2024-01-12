@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7cafd2bf8f8ea623c09e3db4b13c81ab",
+    "content-hash": "b6278cade44bfe616ed3206e2ec9acab",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -192,17 +192,20 @@
         },
         {
             "name": "newfold-labs/wp-module-coming-soon",
-            "version": "1.1.12",
+            "version": "1.1.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-coming-soon.git",
-                "reference": "65e6437b7b6a1e1c6775d8e54d91d26fce804a0f"
+                "reference": "98f13af0aeccab8b3d387c4bc731a48c6cf49668"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-coming-soon/zipball/65e6437b7b6a1e1c6775d8e54d91d26fce804a0f",
-                "reference": "65e6437b7b6a1e1c6775d8e54d91d26fce804a0f",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-coming-soon/zipball/98f13af0aeccab8b3d387c4bc731a48c6cf49668",
+                "reference": "98f13af0aeccab8b3d387c4bc731a48c6cf49668",
                 "shasum": ""
+            },
+            "require": {
+                "wp-forge/wp-upgrade-handler": "^1.0"
             },
             "require-dev": {
                 "newfold-labs/wp-php-standards": "^1.2"
@@ -235,23 +238,23 @@
             ],
             "description": "Coming Soon module for WordPress sites.",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-coming-soon/tree/1.1.12",
+                "source": "https://github.com/newfold-labs/wp-module-coming-soon/tree/1.1.14",
                 "issues": "https://github.com/newfold-labs/wp-module-coming-soon/issues"
             },
-            "time": "2023-11-02T16:42:03+00:00"
+            "time": "2024-01-11T20:19:06+00:00"
         },
         {
             "name": "newfold-labs/wp-module-data",
-            "version": "2.4.15",
+            "version": "2.4.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-data.git",
-                "reference": "1bfc538c2f7c282175ddcd9b4513bcbe85facbbe"
+                "reference": "633712f1d717c564f62bd6cfc4e70d56959d8a22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-data/zipball/1bfc538c2f7c282175ddcd9b4513bcbe85facbbe",
-                "reference": "1bfc538c2f7c282175ddcd9b4513bcbe85facbbe",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-data/zipball/633712f1d717c564f62bd6cfc4e70d56959d8a22",
+                "reference": "633712f1d717c564f62bd6cfc4e70d56959d8a22",
                 "shasum": ""
             },
             "require": {
@@ -284,10 +287,10 @@
             ],
             "description": "Newfold Data Module",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-data/tree/2.4.15",
+                "source": "https://github.com/newfold-labs/wp-module-data/tree/2.4.16",
                 "issues": "https://github.com/newfold-labs/wp-module-data/issues"
             },
-            "time": "2023-12-12T21:28:52+00:00"
+            "time": "2024-01-08T20:37:18+00:00"
         },
         {
             "name": "newfold-labs/wp-module-deactivation",
@@ -352,21 +355,21 @@
         },
         {
             "name": "newfold-labs/wp-module-ecommerce",
-            "version": "v1.3.15",
+            "version": "v1.3.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-ecommerce.git",
-                "reference": "16f5a33aa16611124c42ad076a7f059512d2c58c"
+                "reference": "d3999bad6e8ac64660f2e272895219674e2bc2b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/16f5a33aa16611124c42ad076a7f059512d2c58c",
-                "reference": "16f5a33aa16611124c42ad076a7f059512d2c58c",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/d3999bad6e8ac64660f2e272895219674e2bc2b3",
+                "reference": "d3999bad6e8ac64660f2e272895219674e2bc2b3",
                 "shasum": ""
             },
             "require": {
                 "newfold-labs/wp-module-installer": "^1.1",
-                "newfold-labs/wp-module-onboarding-data": "^0.0"
+                "newfold-labs/wp-module-onboarding-data": "^0.1"
             },
             "require-dev": {
                 "newfold-labs/wp-php-standards": "@stable",
@@ -404,10 +407,10 @@
             ],
             "description": "Brand Agnostic eCommerce Experience",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/v1.3.15",
+                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/v1.3.19",
                 "issues": "https://github.com/newfold-labs/wp-module-ecommerce/issues"
             },
-            "time": "2023-12-15T12:33:14+00:00"
+            "time": "2024-01-12T13:10:30+00:00"
         },
         {
             "name": "newfold-labs/wp-module-global-ctb",
@@ -690,23 +693,23 @@
         },
         {
             "name": "newfold-labs/wp-module-onboarding",
-            "version": "1.11.13",
+            "version": "1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-onboarding.git",
-                "reference": "94c856b967980edf92819163c1333f79394b87a3"
+                "reference": "3e70ee408c75f6d139682402f928332ee52bc2c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-onboarding/zipball/94c856b967980edf92819163c1333f79394b87a3",
-                "reference": "94c856b967980edf92819163c1333f79394b87a3",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-onboarding/zipball/3e70ee408c75f6d139682402f928332ee52bc2c2",
+                "reference": "3e70ee408c75f6d139682402f928332ee52bc2c2",
                 "shasum": ""
             },
             "require": {
                 "mustache/mustache": "^2.14",
                 "newfold-labs/wp-module-install-checker": "^1.0",
-                "newfold-labs/wp-module-onboarding-data": "^0.0.9",
-                "newfold-labs/wp-module-patterns": "^0.1.9",
+                "newfold-labs/wp-module-onboarding-data": "^0.1.0",
+                "newfold-labs/wp-module-patterns": "^0.1.12",
                 "wp-cli/wp-config-transformer": "^1.3"
             },
             "require-dev": {
@@ -743,27 +746,28 @@
             ],
             "description": "Next-generation WordPress Onboarding for WordPress sites at Newfold Digital.",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-onboarding/tree/1.11.13",
+                "source": "https://github.com/newfold-labs/wp-module-onboarding/tree/1.12.0",
                 "issues": "https://github.com/newfold-labs/wp-module-onboarding/issues"
             },
-            "time": "2024-01-02T07:41:41+00:00"
+            "time": "2024-01-11T10:41:47+00:00"
         },
         {
             "name": "newfold-labs/wp-module-onboarding-data",
-            "version": "0.0.9",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-onboarding-data.git",
-                "reference": "fddabb8dbdd8a717f6efb215d3a1f47d7ecd7c43"
+                "reference": "ebe0ef43930b7bf86dac7f6dc12fb9d6d4c962c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-onboarding-data/zipball/fddabb8dbdd8a717f6efb215d3a1f47d7ecd7c43",
-                "reference": "fddabb8dbdd8a717f6efb215d3a1f47d7ecd7c43",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-onboarding-data/zipball/ebe0ef43930b7bf86dac7f6dc12fb9d6d4c962c6",
+                "reference": "ebe0ef43930b7bf86dac7f6dc12fb9d6d4c962c6",
                 "shasum": ""
             },
             "require": {
-                "newfold-labs/wp-module-data": "^2.4.3",
+                "newfold-labs/wp-module-coming-soon": "^1.1.13",
+                "newfold-labs/wp-module-data": "^2.4.16",
                 "newfold-labs/wp-module-installer": "^1.1",
                 "wp-forge/wp-upgrade-handler": "^1.0"
             },
@@ -784,23 +788,23 @@
             ],
             "description": "A non-toggleable module containing a standardized interface for interacting with Onboarding data.",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-onboarding-data/tree/0.0.9",
+                "source": "https://github.com/newfold-labs/wp-module-onboarding-data/tree/0.1.0",
                 "issues": "https://github.com/newfold-labs/wp-module-onboarding-data/issues"
             },
-            "time": "2023-12-08T20:29:27+00:00"
+            "time": "2024-01-11T09:45:56+00:00"
         },
         {
             "name": "newfold-labs/wp-module-patterns",
-            "version": "0.1.10",
+            "version": "0.1.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-patterns.git",
-                "reference": "0f459d2df5a44eec4dd39bc216187e36e9931cba"
+                "reference": "6f4189c97a9e37f24531af8cfae986041d4b613b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-patterns/zipball/0f459d2df5a44eec4dd39bc216187e36e9931cba",
-                "reference": "0f459d2df5a44eec4dd39bc216187e36e9931cba",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-patterns/zipball/6f4189c97a9e37f24531af8cfae986041d4b613b",
+                "reference": "6f4189c97a9e37f24531af8cfae986041d4b613b",
                 "shasum": ""
             },
             "require-dev": {
@@ -834,10 +838,10 @@
             ],
             "description": "WordPress Cloud Patterns",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-patterns/tree/0.1.10",
+                "source": "https://github.com/newfold-labs/wp-module-patterns/tree/0.1.12",
                 "issues": "https://github.com/newfold-labs/wp-module-patterns/issues"
             },
-            "time": "2023-11-29T19:06:10+00:00"
+            "time": "2024-01-03T21:56:57+00:00"
         },
         {
             "name": "newfold-labs/wp-module-performance",
@@ -1079,16 +1083,16 @@
         },
         {
             "name": "wp-cli/wp-config-transformer",
-            "version": "v1.3.4",
+            "version": "v1.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-cli/wp-config-transformer.git",
-                "reference": "1f80df413c0d779a813223d9dd5dd58358eee60c"
+                "reference": "202aa80528939159d52bc4026cee5453aec382db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/wp-config-transformer/zipball/1f80df413c0d779a813223d9dd5dd58358eee60c",
-                "reference": "1f80df413c0d779a813223d9dd5dd58358eee60c",
+                "url": "https://api.github.com/repos/wp-cli/wp-config-transformer/zipball/202aa80528939159d52bc4026cee5453aec382db",
+                "reference": "202aa80528939159d52bc4026cee5453aec382db",
                 "shasum": ""
             },
             "require": {
@@ -1117,9 +1121,9 @@
             "homepage": "https://github.com/wp-cli/wp-config-transformer",
             "support": {
                 "issues": "https://github.com/wp-cli/wp-config-transformer/issues",
-                "source": "https://github.com/wp-cli/wp-config-transformer/tree/v1.3.4"
+                "source": "https://github.com/wp-cli/wp-config-transformer/tree/v1.3.5"
             },
-            "time": "2023-08-31T10:11:36+00:00"
+            "time": "2023-11-10T14:28:03+00:00"
         },
         {
             "name": "wp-forge/collection",
