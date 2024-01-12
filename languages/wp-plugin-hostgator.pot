@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-01-12T22:15:58+00:00\n"
+"POT-Creation-Date: 2024-01-12T22:30:06+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.9.0\n"
 "X-Domain: wp-plugin-hostgator\n"
@@ -69,7 +69,7 @@ msgid "Preview the coming soon landing page"
 msgstr ""
 
 #: inc/Admin.php:58
-#: inc/Admin.php:306
+#: inc/Admin.php:309
 #: build/2.5.1/index.js:1
 msgid "Home"
 msgstr ""
@@ -90,7 +90,7 @@ msgid "Performance"
 msgstr ""
 
 #: inc/Admin.php:62
-#: inc/Admin.php:307
+#: inc/Admin.php:310
 #: build/2.5.1/index.js:1
 msgid "Settings"
 msgstr ""
@@ -105,28 +105,20 @@ msgstr ""
 msgid "Help"
 msgstr ""
 
-#: inc/Admin.php:225
+#: inc/Admin.php:228
 msgid "Please update to a newer WordPress version."
 msgstr ""
 
-#: inc/Admin.php:226
+#: inc/Admin.php:229
 msgid "There are new WordPress components which this plugin requires in order to render the interface."
 msgstr ""
 
-#: inc/Admin.php:227
+#: inc/Admin.php:230
 msgid "Please update now"
 msgstr ""
 
-#: inc/Admin.php:320
+#: inc/Admin.php:323
 msgid "Thank you for creating with <a href=\"https://wordpress.org/\">WordPress</a> and <a href=\"https://hostgator.com/about\">HostGator</a>."
-msgstr ""
-
-#: inc/AdminBar.php:35
-msgid "Need help?"
-msgstr ""
-
-#: inc/AdminBar.php:38
-msgid "We're here for you!"
 msgstr ""
 
 #. translators: 1: plugin name 2: incompatible plugin name
