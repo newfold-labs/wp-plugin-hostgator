@@ -56,11 +56,6 @@ msgid "%s &mdash; Coming Soon"
 msgstr ""
 
 #: bootstrap.php:85
-#: build/2.5.1/index.js:1
-msgid "loremipsum"
-msgstr ""
-
-#: bootstrap.php:85
 msgid "Coming Soon Active"
 msgstr ""
 
