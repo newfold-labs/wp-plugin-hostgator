@@ -87,13 +87,6 @@ jobs:
         continue-on-error: true
         run: git diff --exit-code
 
-      - name: Rename language json files
-        if: steps.changes.outcome == 'failure'
-        shell: bash
-        run: |
-          composer run-script i18n-json
-          composer run-script i18n-json-rename
-
       - name: Commit updated language files
         if: steps.changes.outcome == 'failure'
         run: |
