@@ -51,8 +51,7 @@
         "i18n": [
             "@i18n-pot",
             "@i18n-po",
-            "@i18n-mo",
-            "@i18n-json"
+            "@i18n-mo"
         ]
     },
     "scripts-descriptions": {
@@ -85,4 +84,3 @@
         "wp-forge/wp-update-handler": "^1.0",
         "wp-forge/wp-upgrade-handler": "^1.0"
     }
-}
