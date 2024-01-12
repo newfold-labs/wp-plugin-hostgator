@@ -43,7 +43,7 @@
     "scripts": {
         "fix": "vendor/bin/phpcbf --standard=phpcs.xml .",
         "lint": "vendor/bin/phpcs --standard=phpcs.xml -s .",
-        "i18n": "vendor/bin/wp i18n make-pot . ./languages/wp-plugin-hostgator.pot --headers=Report-Msgid-Bugs-To:https://github.com/newfold-labs/wp-plugin-hostgator/issues --exclude=assets,storybook,tests,src"
+        "i18n": "vendor/bin/wp i18n make-pot . ./languages/wp-plugin-hostgator.pot --headers=Report-Msgid-Bugs-To:https://github.com/newfold-labs/wp-plugin-hostgator/issues --exclude=assets,tests,src"
     },
     "scripts-descriptions": {
         "fix": "Automatically fix coding standards issues where possible.",

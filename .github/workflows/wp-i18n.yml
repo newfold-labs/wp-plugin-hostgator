@@ -84,7 +84,7 @@ jobs:
         run: npx node-wp-i18n addtextdomain
 
       - name: Generate POT file
-        run: vendor/bin/wp i18n make-pot . ./languages/${{ github.event.repository.name }}.pot --headers='{"Report-Msgid-Bugs-To":"https://github.com/${{ github.repository }}/issues" --exclude=assets,tests,src
+        run: vendor/bin/wp i18n make-pot . ./languages/${{ github.event.repository.name }}.pot --headers='{"Report-Msgid-Bugs-To":"https://github.com/${{ github.repository }}/issues"}' --exclude=assets,tests,src
 
       - name: Check if there are file changes
         id: changes
