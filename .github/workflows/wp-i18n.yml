@@ -83,7 +83,7 @@ jobs:
       - name: Add text domains
         run: npx node-wp-i18n addtextdomain
 
-      - name: Generate POT file
+      - name: Generate language files
         run: composer run-script i18n
 
       - name: Check if there are file changes

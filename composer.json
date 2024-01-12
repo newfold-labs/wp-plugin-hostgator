@@ -52,16 +52,18 @@
             "@i18n-pot",
             "@i18n-po",
             "@i18n-mo",
-            "@i18n-json",
-            "@i18n-json-rename"
+            "@i18n-json"
         ]
     },
     "scripts-descriptions": {
         "fix": "Automatically fix coding standards issues where possible.",
         "lint": "Check files against coding standards.",
+        "i18n": "Generate new language files",
         "i18n-pot": "Generate a .pot file for translation.",
         "i18n-po": "Update existing .po files.",
-        "i18n": "Generate new .pot file and update .po files"
+        "i18n-mo": "Generate new language .mo files",
+        "i18n-json": "Generate new language .json files",
+        "i18n-json-rename": "Rename the language json files to remove the pesky hash"
     },
     "require": {
         "doctrine/inflector": "1.4.4 as 1.3.1",
