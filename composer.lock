@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b6278cade44bfe616ed3206e2ec9acab",
+    "content-hash": "5622b9429744d4dcd5555fddc7a5dff9",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -294,16 +294,16 @@
         },
         {
             "name": "newfold-labs/wp-module-deactivation",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-deactivation.git",
-                "reference": "5668c206ea868c0baaca201042ca7c24404c7be1"
+                "reference": "e88fb69221430cac57bc4e19db2a2637719d250c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-deactivation/zipball/5668c206ea868c0baaca201042ca7c24404c7be1",
-                "reference": "5668c206ea868c0baaca201042ca7c24404c7be1",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-deactivation/zipball/e88fb69221430cac57bc4e19db2a2637719d250c",
+                "reference": "e88fb69221430cac57bc4e19db2a2637719d250c",
                 "shasum": ""
             },
             "require": {
@@ -348,10 +348,10 @@
             ],
             "description": "A Module for handling WordPress brand plugins and modules deactivations",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-deactivation/tree/1.0.3",
+                "source": "https://github.com/newfold-labs/wp-module-deactivation/tree/1.0.4",
                 "issues": "https://github.com/newfold-labs/wp-module-deactivation/issues"
             },
-            "time": "2023-11-29T19:20:56+00:00"
+            "time": "2024-01-11T21:43:25+00:00"
         },
         {
             "name": "newfold-labs/wp-module-ecommerce",
