@@ -74,7 +74,7 @@ msgid "Preview the coming soon landing page"
 msgstr "Visualize a página de destino em breve"
 
 #: inc/Admin.php:58
-#: inc/Admin.php:306
+#: inc/Admin.php:309
 #: build/2.5.1/index.js:1
 msgid "Home"
 msgstr "Início"
@@ -95,7 +95,7 @@ msgid "Performance"
 msgstr "Desempenho"
 
 #: inc/Admin.php:62
-#: inc/Admin.php:307
+#: inc/Admin.php:310
 #: build/2.5.1/index.js:1
 msgid "Settings"
 msgstr "Configurações"
@@ -110,29 +110,21 @@ msgstr "Encenação"
 msgid "Help"
 msgstr "Ajuda"
 
-#: inc/Admin.php:225
+#: inc/Admin.php:228
 msgid "Please update to a newer WordPress version."
 msgstr "Por favor, atualize para uma versão mais recente do WordPress."
 
-#: inc/Admin.php:226
+#: inc/Admin.php:229
 msgid "There are new WordPress components which this plugin requires in order to render the interface."
 msgstr "Existem novos componentes do WordPress que este plugin precisa para renderizar a interface."
 
-#: inc/Admin.php:227
+#: inc/Admin.php:230
 msgid "Please update now"
 msgstr "Por favor, atualize agora"
 
-#: inc/Admin.php:320
+#: inc/Admin.php:323
 msgid "Thank you for creating with <a href=\"https://wordpress.org/\">WordPress</a> and <a href=\"https://hostgator.com/about\">HostGator</a>."
 msgstr "Obrigado por criar com <a href=\"https://wordpress.org/\">WordPress</a> e <a href=\"https://hostgator.com.br/\">HostGator</a>."
-
-#: inc/AdminBar.php:35
-msgid "Need help?"
-msgstr "Precisa de ajuda?"
-
-#: inc/AdminBar.php:38
-msgid "We're here for you!"
-msgstr "Estamos aqui para você!"
 
 #. translators: 1: plugin name 2: incompatible plugin name
 #: inc/plugin-nfd-compat-check.php:161
