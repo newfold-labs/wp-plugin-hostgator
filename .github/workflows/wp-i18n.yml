@@ -84,7 +84,7 @@ jobs:
         run: npx node-wp-i18n addtextdomain
 
       - name: Generate POT file
-        run: composer run i18n
+        run: composer run-script i18n
 
       - name: Check if there are file changes
         id: changes
