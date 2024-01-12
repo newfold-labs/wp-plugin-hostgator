@@ -91,13 +91,13 @@ jobs:
         continue-on-error: true
         run: git diff --exit-code
 
-      - name: Commit updated .pot file
+      - name: Commit updated language files
         if: steps.changes.outcome == 'failure'
         run: |
           git config --local user.name "${{ github.event.head_commit.author.name }}"
           git config --local user.email "${{ github.event.head_commit.author.email }}"
           git remote -v
-          git add '*.pot'
+          git add './languages'
           git commit -m "WordPress I18N triggered by commit ${{ github.sha }}"
           git status
 
