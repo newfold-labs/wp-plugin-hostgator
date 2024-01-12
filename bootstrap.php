@@ -144,7 +144,6 @@ if ( is_admin() ) {
 
 // Required files
 require HOSTGATOR_PLUGIN_DIR . '/inc/Admin.php';
-require HOSTGATOR_PLUGIN_DIR . '/inc/AdminBar.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/base.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/jetpack.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/LoginRedirect.php';
@@ -159,5 +158,3 @@ require HOSTGATOR_PLUGIN_DIR . '/inc/updates.php';
 if ( is_admin() ) {
 	new Admin();
 }
-
-AdminBar::init();

@@ -14,7 +14,6 @@ import { useDispatch, useSelect } from '@wordpress/data';
 import { useEffect } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import { store as noticesStore } from '@wordpress/notices';
-import { setActiveSubnav } from './util/helpers';
 import { kebabCase, filter } from 'lodash';
 import { AppNav } from './components/app-nav';
 import { SiteInfoBar } from './components/site-info';
@@ -52,7 +51,6 @@ const handlePageLoad = () => {
 	const location = useLocation();
 	const routeContents = document.querySelector('.hgwp-app-body-inner');
 	useEffect(() => {
-		setActiveSubnav(location.pathname);
 		window.scrollTo(0, 0);
 		if (routeContents) {
 			routeContents.focus({ preventScroll: true });
