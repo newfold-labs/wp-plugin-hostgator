@@ -82,7 +82,7 @@ $nfd_module_container->set(
 			__( '%s &mdash; Coming Soon', 'wp-plugin-hostgator' ),
 			esc_html( get_option( 'blogname' ) )
 		),
-		'admin_bar_text'      => '<div style="background-color: #ffcf00; color: #191936; padding: 0 1rem;">' . __( 'loremipsum', 'wp-plugin-hostgator' ) . __( 'Coming Soon Active', 'wp-plugin-hostgator' ) . '</div>',
+		'admin_bar_text'      => '<div style="background-color: #ffcf00; color: #191936; padding: 0 1rem;">' . __( 'Coming Soon Active', 'wp-plugin-hostgator' ) . '</div>',
 		'admin_notice_text'   => sprintf(
 			/* translators: %1$s is replaced with the opening link tag and %2$s is replaced with the closing link tag, %3$s is the opening link tag to preview the page, %4$s is the closing link tag. */
 			__( 'Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s.', 'wp-plugin-hostgator' ),
