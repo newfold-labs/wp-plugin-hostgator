@@ -29,7 +29,40 @@ module.exports = defineConfig({
     // We've imported your old cypress plugins here.
     // You may want to clean this up later by importing these.
     setupNodeEvents(on, config) {
-      return require('./tests/cypress/plugins/index.js')(on, config)
+
+			const semver = require( 'semver' );
+
+			// Ensure that the base URL is always properly set.
+			if ( config.env && config.env.baseUrl ) {
+				config.baseUrl = config.env.baseUrl;
+			}
+
+			// Ensure that we have a semantically correct WordPress version number for comparisons.
+			if ( config.env.wpVersion ) {
+				if ( config.env.wpVersion.split( '.' ).length !== 3 ) {
+					config.env.wpSemverVersion = `${ config.env.wpVersion }.0`;
+				} else {
+					config.env.wpSemverVersion = config.env.wpVersion;
+				}
+			}
+
+			// Ensure that we have a semantically correct PHP version number for comparisons.
+			if ( config.env.phpVersion ) {
+				if ( config.env.phpVersion.split( '.' ).length !== 3 ) {
+					config.env.phpSemverVersion = `${ config.env.phpVersion }.0`;
+				} else {
+					config.env.phpSemverVersion = config.env.phpVersion;
+				}
+			}
+			// Exclude onboarding/ecommerce tests for PHP lower than 7.3 (7.1 and 7.2)
+			if ( semver.satisfies( config.env.phpSemverVersion, '<7.3.0' ) ) {
+				config.excludeSpecPattern = config.excludeSpecPattern.concat( [
+					'vendor/newfold-labs/wp-module-onboarding/tests/cypress/integration/3-ecommerce-onboarding-flow/**',
+					'vendor/newfold-labs/wp-module-onboarding/tests/cypress/integration/2-general-onboarding-flow/top-priority.cy.js',
+				] );
+			}
+
+			return config;
     },
     baseUrl: 'http://localhost:8880',
     specPattern: [
@@ -40,7 +73,6 @@ module.exports = defineConfig({
     testIsolation: false,
 		excludeSpecPattern: [
       'vendor/newfold-labs/**/tests/cypress/integration/wp-module-support/*.cy.js', // skip any module's wp-module-support files
-      'vendor/newfold-labs/wp-module-onboarding/tests/cypress/integration/', // skipping onboarding tests until they add multi-lingual support or onboarding is activated for all lanugages
     ],
   },
   retries: 1,
