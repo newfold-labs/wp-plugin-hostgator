@@ -5,50 +5,6 @@ import { NewfoldRuntime } from "@newfold-labs/wp-module-runtime";
 import region from '../data/region';
 
 let lastNoticeId;
-const HG_NAV = document.querySelector('#toplevel_page_hostgator .wp-submenu');
-/**
- * Set active nav in wp admin sub pages.
- *
- * @param  path
- */
-export const setActiveSubnav = (path) => {
-	if (HG_NAV) {
-		const HG_NAV_LIS = HG_NAV.children;
-		if (HG_NAV_LIS) {
-			for (let i = 0; i < HG_NAV_LIS.length; i++) {
-				// get all children li elements
-				const link = HG_NAV_LIS[i].children[0];
-				if (link) {
-					const href = link.getAttribute('href');
-					// check each child a href for match with path
-					if (
-						href.endsWith(path) || // match
-						(path.includes('/marketplace/') &&
-							href.endsWith('marketplace')) ||
-						(path === '/' && href.endsWith('home'))
-					) {
-						// highlight home subnav for root page
-						// update li class when match
-						HG_NAV_LIS[i].classList.add('current');
-					} else {
-						HG_NAV_LIS[i].classList.remove('current');
-					}
-					// highlight our home nav for root level access
-					const HG_HOME_NAV = document.querySelector(
-						'.hgwp-nav a[href="#/home"]'
-					);
-					if (HG_HOME_NAV) {
-						if (path === '/' || path === '/home') {
-							HG_HOME_NAV.classList.add('active');
-						} else {
-							HG_HOME_NAV.classList.remove('active');
-						}
-					}
-				}
-			}
-		}
-	}
-};
 
 /**
  * Wrapper method to dispatch snackbar notice
@@ -121,19 +77,7 @@ export const hostgatorPurgeCacheApiFetch = (data, passError, thenCallback) => {
  * Coming soon admin bar
  */
 export const comingSoonAdminbarToggle = ( comingSoon ) => {
-	const comingsoonadminbar = document.getElementById(
-		'nfd-site-status-text'
-	);
-	if ( ! comingsoonadminbar ) {
-		return;
-	}
-	if ( ! comingSoon ) {
-		comingsoonadminbar.style.color = "#048200";
-		comingsoonadminbar.textContent = "Live";
-	} else {
-		comingsoonadminbar.style.color = "#E01C1C";
-		comingsoonadminbar.textContent = "Coming Soon";
-	}
+	window.NewfoldRuntime.comingSoon.toggleAdminBarSiteStatus( comingSoon );
 };
 
 /**
@@ -226,4 +170,33 @@ export const supportsLinkPerRegion = (link_name = 'main') => {
 	params.utm_source = `wp-admin/admin.php?page=hostgator${ window.location.hash }`;
 	params.utm_medium = 'hostgator_plugin';
 	return addQueryArgs(url, params);
+};
+
+/**
+ * Handles help center links click, will open help center slide if user has access
+ * or navigate to help page if user doesn't have access
+ */
+export const handleHelpLinksClick = () => {
+	if (
+		NewfoldRuntime.hasCapability( 'canAccessHelpCenter' ) &&
+		window.newfoldEmbeddedHelp &&
+		! window.newfoldEmbeddedHelp.hasListeners
+	) {
+		// add listener to all help links
+		const helpLinks = document.querySelectorAll( '[href*="#/help"]' );
+		if ( helpLinks ) {
+			helpLinks.forEach( ( el ) =>
+				el.addEventListener( 'click', ( e ) => {
+					e.preventDefault();
+					window.newfoldEmbeddedHelp.toggleNFDLaunchedEmbeddedHelp();
+				} )
+			);
+			window.newfoldEmbeddedHelp.hasListeners = true;
+		}
+
+		// if on help page already, open help center
+		if( window.location.hash === '#/help') {
+			window.newfoldEmbeddedHelp.toggleNFDLaunchedEmbeddedHelp();
+		}
+	}
 };
