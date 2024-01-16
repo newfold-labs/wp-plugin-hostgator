@@ -69,9 +69,9 @@ $nfd_plugins_check->legacy_plugins = array(
 	'The MOJO Plugin'      => 'wp-plugin-mojo/wp-plugin-mojo.php',
 	'The Web.com Plugin'   => 'wp-plugin-web/wp-plugin-web.php',
 );
-$pass_nfd_check = $nfd_plugins_check->check_plugin_requirements();
+$pass_nfd_check                    = $nfd_plugins_check->check_plugin_requirements();
 
 // Check PHP version before initializing to prevent errors if plugin is incompatible.
 if ( $pass_nfd_check && version_compare( PHP_VERSION, '5.3', '>=' ) ) {
-	require dirname( __FILE__ ) . '/bootstrap.php';
+	require __DIR__ . '/bootstrap.php';
 }

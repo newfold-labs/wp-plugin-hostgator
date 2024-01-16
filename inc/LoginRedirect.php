@@ -79,8 +79,8 @@ class LoginRedirect {
 	/**
 	 * Customize the login redirect URL if one hasn't already been set.
 	 *
-	 * @param string $redirect_to Current redirect URL.
-	 * @param string $requested_redirect_to Requested redirect URL.
+	 * @param string   $redirect_to Current redirect URL.
+	 * @param string   $requested_redirect_to Requested redirect URL.
 	 * @param \WP_User $user WordPress user.
 	 *
 	 * @return string
@@ -165,7 +165,6 @@ class LoginRedirect {
 	public static function get_plugin_id() {
 		return self::$container->plugin()->id;
 	}
-
 }
 
 LoginRedirect::init();
