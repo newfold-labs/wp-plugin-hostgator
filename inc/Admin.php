@@ -40,9 +40,9 @@ final class Admin {
 
 	/**
 	 * Add to runtime
-	 * 
+	 *
 	 * @param array $sdk - runtime properties from module
-	 * 
+	 *
 	 * @return array
 	 */
 	public static function add_to_runtime( $sdk ) {

@@ -10,6 +10,8 @@ namespace HostGator;
 class LoginRedirect {
 
 	/**
+	 * A reference to the Container
+	 *
 	 * @var \NewfoldLabs\WP\ModuleLoader\Container
 	 */
 	public static $container;
@@ -43,7 +45,7 @@ class LoginRedirect {
 	/**
 	 * Get default redirect URL.
 	 *
-	 * @param string $url
+	 * @param string $url - the redirect url
 	 *
 	 * @return string
 	 */
