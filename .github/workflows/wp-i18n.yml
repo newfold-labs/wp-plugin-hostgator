@@ -1,10 +1,9 @@
 name: WP Internationalization
 on:
-  push:
+  pull_request:
+    types: [ opened, edited, reopened, ready_for_review, synchronize ]
     branches:
-      - '**'
-    pull_request:
-      types: [ opened, edited, synchronize, reopened, ready_for_review ]
+      - 'main'
 concurrency:
   group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.head_ref || github.sha }}
   cancel-in-progress: true
@@ -64,24 +63,36 @@ jobs:
       - name: Install PHP Dependencies
         run: composer install --no-progress --optimize-autoloader
 
+      - name: Setup Registry
+        run: printf "\n//npm.pkg.github.com/:_authToken=${{ secrets.NEWFOLD_ACCESS_TOKEN }}" >> .npmrc
+
+      - name: NPM Install
+        run: npm install --legacy-peer-deps
+
+      - name: Build JavaScript
+        run: npm run build
+
+      - name: Remove token
+        run: git checkout -- '.npmrc'
+
       - name: Add text domains
         run: npx node-wp-i18n addtextdomain
 
-      - name: Generate POT file
-        run: vendor/bin/wp i18n make-pot . ./languages/${{ github.event.repository.name }}.pot --headers='{"Report-Msgid-Bugs-To":"https://github.com/${{ github.repository }}/issues","POT-Creation-Date":null}' --exclude=assets,storybook,tests,src
+      - name: Generate language files
+        run: composer run-script i18n
 
       - name: Check if there are file changes
         id: changes
         continue-on-error: true
         run: git diff --exit-code
 
-      - name: Commit web files
+      - name: Commit updated language files
         if: steps.changes.outcome == 'failure'
         run: |
           git config --local user.name "${{ github.event.head_commit.author.name }}"
           git config --local user.email "${{ github.event.head_commit.author.email }}"
           git remote -v
-          git add -A
+          git add './languages'
           git commit -m "WordPress I18N triggered by commit ${{ github.sha }}"
           git status
 
