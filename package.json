@@ -35,7 +35,7 @@
         "@tailwindcss/forms": "^0.5.7",
         "@testing-library/cypress": "^10.0.1",
         "@wordpress/env": "^9.1.0",
-        "@wordpress/scripts": "^26.19.0",
+        "@wordpress/scripts": "^27.0.0",
         "cypress": "^13.6.3",
         "cypress-axe": "1.5.0",
         "node-wp-i18n": "^1.2.7",
