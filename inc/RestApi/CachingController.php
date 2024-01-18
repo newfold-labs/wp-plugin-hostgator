@@ -38,21 +38,19 @@ class CachingController extends \WP_REST_Controller {
 				'permission_callback' => array( $this, 'check_permission' ),
 			)
 		);
-
 	}
 
 	/**
 	 * Clears the entire cache
 	 */
 	public function purge_all() {
-		
+
 		container()->get( 'cachePurger' )->purgeAll();
 
 		return array(
 			'status'  => 'success',
 			'message' => 'Cache purged',
 		);
-
 	}
 
 	/**
@@ -67,5 +65,4 @@ class CachingController extends \WP_REST_Controller {
 
 		return true;
 	}
-
 }

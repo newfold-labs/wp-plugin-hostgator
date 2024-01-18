@@ -8,20 +8,16 @@ describe('Navigation', function () {
 		
 	});
 
+	it( "Admin submenu shouldn't exist inside app", () => {
+		cy.get( '#adminmenu #toplevel_page_hostgator ul.wp-submenu' ).should(
+			'not.exist'
+		);
+	} );
+
 	it('Logo Links to home', () => {
 		cy.get('.hgwp-logo-wrap').click();
 		cy.wait(500);
 		cy.hash().should('eq', '#/home');
-	});
-	
-	it('Admin Subnav properly highlights', () => {
-		cy
-			.get('#adminmenu #toplevel_page_hostgator')
-			.should('have.class', 'wp-has-current-submenu');
-		cy
-			.get('#adminmenu #toplevel_page_hostgator ul.wp-submenu li.current a')
-			.should('have.attr', 'href')
-			.and('match', /home/);
 	});
 
 	// test main nav
@@ -35,10 +31,6 @@ describe('Navigation', function () {
 		cy
 			.get('.hgwp-app-navitem-Marketplace')
 			.should('have.class', 'active');
-		cy
-			.get('#adminmenu #toplevel_page_hostgator ul.wp-submenu li.current a')
-			.should('have.attr', 'href')
-			.and('match', /marketplace/);
 
 		cy.get('.hgwp-app-navitem-Performance').click();
 		cy.wait(500);
@@ -49,18 +41,10 @@ describe('Navigation', function () {
 		cy
 			.get('.hgwp-app-navitem-Marketplace')
 			.should('not.have.class', 'active');
-		cy
-			.get('#adminmenu #toplevel_page_hostgator ul.wp-submenu li.current a')
-			.should('have.attr', 'href')
-			.and('match', /performance/);
 
 		cy.get('.hgwp-app-navitem-Settings').click();
 		cy.wait(500);
 		cy.hash().should('eq', '#/settings');
-		cy
-			.get('#adminmenu #toplevel_page_hostgator ul.wp-submenu li.current a')
-			.should('have.attr', 'href')
-			.and('match', /settings/);
 	});
 	
 	it('Subnav links properly navigates', () => {
@@ -75,10 +59,6 @@ describe('Navigation', function () {
 		cy
 			.get('.hgwp-app-navitem-Marketplace')
 			.should('have.class', 'active');
-		cy
-			.get('#adminmenu #toplevel_page_hostgator ul.wp-submenu li.current a')
-			.should('have.attr', 'href')
-			.and('match', /marketplace/);
 
 			cy.get('.hgwp-app-subnavitem-Services').click();
 			cy.wait(500);
@@ -86,10 +66,6 @@ describe('Navigation', function () {
 			cy
 				.get('.hgwp-app-subnavitem-Services')
 				.should('have.class', 'active');
-			cy
-				.get('#adminmenu #toplevel_page_hostgator ul.wp-submenu li.current a')
-				.should('have.attr', 'href')
-				.and('match', /marketplace/);
 			cy
 				.get('.hgwp-app-navitem-Marketplace')
 				.should('have.class', 'active');
@@ -104,10 +80,6 @@ describe('Navigation', function () {
 		cy
 			.get('.hgwp-app-subnavitem-Services')
 			.should('not.have.class', 'active');
-		cy
-			.get('#adminmenu #toplevel_page_hostgator ul.wp-submenu li.current a')
-			.should('have.attr', 'href')
-			.and('match', /marketplace/);
 		cy
 			.get('.hgwp-app-navitem-Marketplace')
 			.should('have.class', 'active');

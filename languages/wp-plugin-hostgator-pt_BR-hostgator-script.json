@@ -1,7 +1,7 @@
 {
     "translation-revision-date": "2023-11-30 17:37",
-    "generator": "WP-CLI\/2.8.1",
-    "source": "build\/2.5.0\/index.js",
+    "generator": "WP-CLI\/2.9.0",
+    "source": "build\/2.6.0\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
@@ -17,7 +17,7 @@
                 "Loja"
             ],
             "Marketplace": [
-                "Loja"
+                "Mercado"
             ],
             "Performance": [
                 "Desempenho"
@@ -137,7 +137,7 @@
                 "Gerencie o desempenho do site e as configura\u00e7\u00f5es de cache, bem como limpe o cache do site."
             ],
             "Visit Marketplace": [
-                "Visite a Loja"
+                "Visite o Mercado"
             ],
             "Add site services, themes or plugins from the marketplace.": [
                 "Adicione servi\u00e7os de site, temas ou plugins da loja."

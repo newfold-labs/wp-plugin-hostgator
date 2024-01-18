@@ -4,6 +4,7 @@ import { Modal, SidebarNavigation } from "@newfold/ui-component-library"
 import { NavLink, useLocation } from 'react-router-dom';
 import Logo from "./logo";
 import { topRoutes, utilityRoutes } from "../../data/routes";
+import { handleHelpLinksClick } from '../../util/helpers';
 import { Bars3Icon } from "@heroicons/react/24/outline";
 
 
@@ -188,6 +189,7 @@ export const MobileNav = () => {
 
 export const AppNav = () => {
 	const isLargeViewport = useViewportMatch('medium');
+	handleHelpLinksClick();
 
 	return (
 		<>

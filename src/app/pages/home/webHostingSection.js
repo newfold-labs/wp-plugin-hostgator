@@ -1,10 +1,10 @@
 import ActionField from "../../components/action-field";
-import { SectionSettings } from "../../components/section";
+import { Container } from "@newfold/ui-component-library";
 import { getLinkPerRegion, supportsLinkPerRegion } from '../../util/helpers';
 
 const WebHostingSection = () => {
 	return (
-		<SectionSettings
+		<Container.SettingsField
 			title={__('Web Hosting', 'wp-plugin-hostgator')}
 			description={__('Access & manage your HostGator account.', 'wp-plugin-hostgator')}
 		>
@@ -63,7 +63,7 @@ const WebHostingSection = () => {
 					{__('24/7/365 support. We work when you work.', 'wp-plugin-hostgator')}
 				</ActionField>
 			</div>
-		</SectionSettings >
+		</Container.SettingsField>
 	);
 };
 

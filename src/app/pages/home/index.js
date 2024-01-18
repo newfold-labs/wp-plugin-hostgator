@@ -1,5 +1,4 @@
-import { Page } from '../../components/page';
-import { SectionContainer, SectionHeader, SectionContent } from '../../components/section';
+import { Container, Page } from "@newfold/ui-component-library";
 import ComingSoon from '../settings/comingSoon';
 import FreePluginsSection from './freeAddonsSection';
 import SettingsSection from './settingsSection';
@@ -12,27 +11,27 @@ const Home = () => {
 		<Page title="Settings" className={"hgwp-app-home-page hgwp-home"}>
 			<WelcomeSection />
 			<FreePluginsSection />
-			<SectionContainer className={'hgwp-app-home-container'}>
-				<SectionHeader
+			<Container className={'hgwp-app-home-container'}>
+				<Container.Header
 					title={__('More', 'wp-plugin-hostgator')}
 					className={'hgwp-app-home-header display-none'}
 				/>
-				<SectionContent separator={true} className={'hgwp-app-home-coming-soon'}>
+				<Container.Block separator={true} className={'hgwp-app-home-coming-soon'}>
 					<ComingSoon />
-				</SectionContent>
+				</Container.Block>
 
-				<SectionContent separator={true} className={'hgwp-app-home-content'}>
+				<Container.Block separator={true} className={'hgwp-app-home-content'}>
 					<WebContentSection />
-				</SectionContent>
+				</Container.Block>
 
-				<SectionContent separator={true} className={'hgwp-app-home-settings'}>
+				<Container.Block separator={true} className={'hgwp-app-home-settings'}>
 					<SettingsSection />
-				</SectionContent>
+				</Container.Block>
 
-				<SectionContent separator={false} className={'hgwp-app-home-hosting'}>
+				<Container.Block separator={false} className={'hgwp-app-home-hosting'}>
 					<WebHostingSection />
-				</SectionContent>
-			</SectionContainer>
+				</Container.Block>
+			</Container>
 		</Page>
 	);
 };

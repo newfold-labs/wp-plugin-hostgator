@@ -11,6 +11,7 @@ use WP_Forge\WPUpdateHandler\PluginUpdater;
 use WP_Forge\UpgradeHandler\UpgradeHandler;
 use NewfoldLabs\WP\ModuleLoader\Container;
 use NewfoldLabs\WP\ModuleLoader\Plugin;
+
 use function NewfoldLabs\WP\ModuleLoader\container as setContainer;
 
 // Composer autoloader
@@ -32,7 +33,7 @@ $nfd_module_container = new Container();
 $nfd_module_container->set(
 	'plugin',
 	$nfd_module_container->service(
-		function() {
+		function () {
 			return new Plugin(
 				array(
 					'id'           => 'hostgator',
@@ -56,8 +57,8 @@ if ( get_option( 'mm_brand', false ) && get_option( 'hg_region', false ) ) {
 
 // Performance/cache settings
 $nfd_module_container->set(
-		'cache_types',
-		array( 'browser', 'file', 'skip404' )
+	'cache_types',
+	array( 'browser', 'file', 'skip404' )
 );
 
 // Set coming soon values
@@ -111,16 +112,16 @@ $pluginUpdater->setDataMap(
 );
 
 $pluginUpdater->setDataOverrides(
-	[
-		'banners' => [
+	array(
+		'banners' => array(
 			'2x' => 'https://cdn.hiive.space/marketplace/vendors-assets/hostgator-banner.svg',
 			'1x' => 'https://cdn.hiive.space/marketplace/vendors-assets/hostgator-banner.svg',
-		],
-		'icons' => [
+		),
+		'icons'   => array(
 			'2x' => 'https://cdn.hiive.space/marketplace/vendors-assets/hostgator-icon.svg',
 			'1x' => 'https://cdn.hiive.space/marketplace/vendors-assets/hostgator-icon.svg',
-		],
-	]
+		),
+	)
 );
 
 // Handle any upgrade routines (only in the admin)
@@ -144,7 +145,6 @@ if ( is_admin() ) {
 
 // Required files
 require HOSTGATOR_PLUGIN_DIR . '/inc/Admin.php';
-require HOSTGATOR_PLUGIN_DIR . '/inc/AdminBar.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/base.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/jetpack.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/LoginRedirect.php';
@@ -159,5 +159,3 @@ require HOSTGATOR_PLUGIN_DIR . '/inc/updates.php';
 if ( is_admin() ) {
 	new Admin();
 }
-
-AdminBar::init();

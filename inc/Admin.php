@@ -27,8 +27,8 @@ final class Admin {
 		/* Add inline style to hide subnav link */
 		\add_action( 'admin_head', array( __CLASS__, 'admin_nav_style' ) );
 		/* Add runtime for data store */
-		\add_filter('newfold-runtime', array( __CLASS__, 'add_to_runtime' ) );
-		\add_filter('newfold_runtime', array( __CLASS__, 'add_to_runtime' ) );
+		\add_filter( 'newfold-runtime', array( __CLASS__, 'add_to_runtime' ) );
+		\add_filter( 'newfold_runtime', array( __CLASS__, 'add_to_runtime' ) );
 		/* Filter plugin locale */
 		\add_filter( 'plugin_locale', array( __CLASS__, 'locale_filter' ) );
 		\add_filter( 'load_script_translation_file', array( __CLASS__, 'load_script_locale_filter' ), 10, 3 );
@@ -40,6 +40,10 @@ final class Admin {
 
 	/**
 	 * Add to runtime
+	 *
+	 * @param array $sdk - runtime properties from module
+	 *
+	 * @return array
 	 */
 	public static function add_to_runtime( $sdk ) {
 		include_once HOSTGATOR_PLUGIN_DIR . '/inc/Data.php';
@@ -56,7 +60,7 @@ final class Admin {
 	public static function subpages() {
 		return array(
 			'hostgator#/home'        => __( 'Home', 'wp-plugin-hostgator' ),
-			'hostgator#/store'        => __( 'Store', 'wp-plugin-hostgator' ),
+			'hostgator#/store'       => __( 'Store', 'wp-plugin-hostgator' ),
 			'hostgator#/marketplace' => __( 'Marketplace', 'wp-plugin-hostgator' ),
 			'hostgator#/performance' => __( 'Performance', 'wp-plugin-hostgator' ),
 			'hostgator#/settings'    => __( 'Settings', 'wp-plugin-hostgator' ),
@@ -191,15 +195,18 @@ final class Admin {
 			0
 		);
 
-		foreach ( self::subpages() as $route => $title ) {
-			\add_submenu_page(
-				'hostgator',
-				$title,
-				$title,
-				'manage_options',
-				$route,
-				array( __CLASS__, 'render' )
-			);
+		// If we're outside of App, add subpages to App menu
+		if ( false === ( isset( $_GET['page'] ) && strpos( filter_input( INPUT_GET, 'page', FILTER_UNSAFE_RAW ), 'hostgator' ) >= 0 ) ) { // phpcs:ignore
+			foreach ( self::subpages() as $route => $title ) {
+				\add_submenu_page(
+					'hostgator',
+					$title,
+					$title,
+					'manage_options',
+					$route,
+					array( __CLASS__, 'render' )
+				);
+			}
 		}
 	}
 
@@ -229,7 +236,6 @@ final class Admin {
 		}
 
 		echo '<!-- /HostGator -->' . PHP_EOL;
-
 	}
 
 	/**
@@ -249,7 +255,7 @@ final class Admin {
 		\wp_register_script(
 			'hostgator-script',
 			HOSTGATOR_BUILD_URL . '/index.js',
-			array_merge( $asset['dependencies'], [ 'nfd-runtime' ] ),
+			array_merge( $asset['dependencies'], array( 'nfd-runtime' ) ),
 			$asset['version'],
 			true
 		);
