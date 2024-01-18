@@ -11,6 +11,7 @@ use WP_Forge\WPUpdateHandler\PluginUpdater;
 use WP_Forge\UpgradeHandler\UpgradeHandler;
 use NewfoldLabs\WP\ModuleLoader\Container;
 use NewfoldLabs\WP\ModuleLoader\Plugin;
+
 use function NewfoldLabs\WP\ModuleLoader\container as setContainer;
 
 // Composer autoloader
