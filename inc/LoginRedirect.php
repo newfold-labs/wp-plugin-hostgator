@@ -10,6 +10,8 @@ namespace HostGator;
 class LoginRedirect {
 
 	/**
+	 * A reference to the Container
+	 *
 	 * @var \NewfoldLabs\WP\ModuleLoader\Container
 	 */
 	public static $container;
@@ -43,7 +45,7 @@ class LoginRedirect {
 	/**
 	 * Get default redirect URL.
 	 *
-	 * @param string $url
+	 * @param string $url - the redirect url
 	 *
 	 * @return string
 	 */
@@ -79,8 +81,8 @@ class LoginRedirect {
 	/**
 	 * Customize the login redirect URL if one hasn't already been set.
 	 *
-	 * @param string $redirect_to Current redirect URL.
-	 * @param string $requested_redirect_to Requested redirect URL.
+	 * @param string   $redirect_to Current redirect URL.
+	 * @param string   $requested_redirect_to Requested redirect URL.
 	 * @param \WP_User $user WordPress user.
 	 *
 	 * @return string
@@ -165,7 +167,6 @@ class LoginRedirect {
 	public static function get_plugin_id() {
 		return self::$container->plugin()->id;
 	}
-
 }
 
 LoginRedirect::init();
