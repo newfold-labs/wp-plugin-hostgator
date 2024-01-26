@@ -1,7 +1,7 @@
 {
     "translation-revision-date": "2023-08-24 18:27",
     "generator": "WP-CLI\/2.9.0",
-    "source": "build\/2.6.0\/index.js",
+    "source": "build\/2.6.2\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
@@ -283,9 +283,6 @@
             "Keeping automatic updates on ensures timely security fixes and the latest features.": [
                 "Mantener las actualizaciones autom\u00e1ticas activadas garantiza correcciones de seguridad oportunas y las \u00faltimas funciones."
             ],
-            "Still building your site? Need to make a big change?": [
-                "\u00bfTodav\u00eda est\u00e1s construyendo tu sitio? \u00bfNecesitas hacer un cambio importante?"
-            ],
             "Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen.": [
                 "Tu p\u00e1gina de 'Pr\u00f3ximamente' de Hostgator te permite ocultar tu sitio a los visitantes mientras haces que la magia suceda."
             ],
@@ -408,13 +405,7 @@
             "Site Status": [
                 ""
             ],
-            "Coming Soon": [
-                ""
-            ],
             "Live": [
-                ""
-            ],
-            "Coming soon page": [
                 ""
             ],
             "Cancel": [
@@ -550,6 +541,12 @@
                 ""
             ],
             "Working...": [
+                ""
+            ],
+            "Not Live": [
+                ""
+            ],
+            "Coming Soon page": [
                 ""
             ]
         }
