@@ -37,8 +37,12 @@ const ComingSoon = () => {
 		const getStatus = () => {
 			return (
 				comingSoon 
-				? <span className="nfd-text-[#e10001]">{__('Coming Soon', 'wp-plugin-hostgator')}</span>
-				: <span className="nfd-text-[#008112]">{__('Live', 'wp-plugin-hostgator')}</span>
+				? <span className="nfd-text-[#e10001] coming-soon-status">
+					{__('Not Live', 'wp-plugin-hostgator')}
+				</span>
+				: <span className="nfd-text-[#008112] coming-soon-status">
+					{__('Live', 'wp-plugin-hostgator')}
+				</span>
 			);
 		};
 
@@ -52,6 +56,19 @@ const ComingSoon = () => {
 			setComingSoon(!comingSoon);
 		});
 	};
+
+	const getComingSoonSectionDescription = () => {
+		return comingSoon
+			? __(
+					'Turn off your "Coming Soon" page when you are ready to launch your website.',
+					'wp-plugin-bluehost'
+			  )
+			: __(
+					'Turn on your "Coming Soon" page when you need to make major changes to your website.',
+					'wp-plugin-bluehost'
+			  );
+	};
+
 
 	const notifySuccess = () => {
 		notify.push("coming-soon-toggle-notice", {
@@ -79,12 +96,12 @@ const ComingSoon = () => {
 	return (
 		<Container.SettingsField
 			title={getComingSoonSectionTitle()}
-			description={__('Still building your site? Need to make a big change?', 'wp-plugin-hostgator')}
+			description={getComingSoonSectionDescription()}
 		>
 			<div className="nfd-flex nfd-flex-col nfd-gap-6">
 				<ToggleField
 					id="coming-soon-toggle"
-					label={__('Coming soon page', 'wp-plugin-hostgator')}
+					label={__('Coming Soon page', 'wp-plugin-hostgator')}
 					description={__(
 						'Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen.',
 						'wp-plugin-hostgator'
