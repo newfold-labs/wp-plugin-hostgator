@@ -1,23 +1,23 @@
-const { defineConfig } = require('cypress')
-const { phpVersion, core } = require('./.wp-env.json')
+const {defineConfig} = require('cypress')
+const {phpVersion, core} = require('./.wp-env.json')
 const wpVersion = /[^/]*$/.exec(core)[0]
 
 module.exports = defineConfig({
-  projectId: "kuks2q",
-  env: {
-    wpUsername: 'admin',
-    wpPassword: 'password',
+	projectId: 'kuks2q',
+	env: {
+		wpUsername: 'admin',
+		wpPassword: 'password',
 		wpVersion,
 		phpVersion,
-    pluginId: 'hostgator',
-    appId: 'hgwp',
-  },
-  downloadsFolder: 'tests/cypress/downloads',
-  fixturesFolder: 'tests/cypress/fixtures',
-  screenshotsFolder: 'tests/cypress/screenshots',
-  video: true,
-  videosFolder: 'tests/cypress/videos',
-  chromeWebSecurity: false,
+		pluginId: 'hostgator',
+		appId: 'hgwp',
+	},
+	downloadsFolder: 'tests/cypress/downloads',
+	fixturesFolder: 'tests/cypress/fixtures',
+	screenshotsFolder: 'tests/cypress/screenshots',
+	video: true,
+	videosFolder: 'tests/cypress/videos',
+	chromeWebSecurity: false,
 	viewportWidth: 1024,
 	viewportHeight: 768,
 	blockHosts: [

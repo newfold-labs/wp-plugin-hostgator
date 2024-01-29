@@ -2,6 +2,8 @@
 
 namespace HostGator\RestApi;
 
+use function NewfoldLabs\WP\ModuleLoader\container;
+
 /**
  * Class SettingsController
  */
@@ -66,8 +68,11 @@ class SettingsController extends \WP_REST_Controller {
 				$new_value = $params[ $setting ];
 				switch ( $setting ) {
 					case 'comingSoon':
-						$new_value = ( $new_value ) ? 'true' : 'false';
-						update_option( 'nfd_coming_soon', $new_value );
+						if ( $new_value ) {
+							container()->get( 'comingSoon' )->enable();
+						} else {
+							container()->get( 'comingSoon' )->disable();
+						}
 						break;
 					case 'autoUpdatesMajorCore':
 						$new_value = ( $new_value ) ? 'true' : 'false';
@@ -168,7 +173,7 @@ class SettingsController extends \WP_REST_Controller {
 		}
 
 		$settings = array(
-			'comingSoon'              => ( 'true' === get_option( 'nfd_coming_soon', 'false' ) ),
+			'comingSoon'              => container()->get( 'comingSoon' )->is_enabled(),
 			'autoUpdatesAll'          => $major && $plugins && $themes,
 			'autoUpdatesMajorCore'    => $major,
 			'autoUpdatesMinorCore'    => $minor,

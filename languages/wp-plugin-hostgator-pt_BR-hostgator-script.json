@@ -1,7 +1,7 @@
 {
     "translation-revision-date": "2023-11-30 17:37",
     "generator": "WP-CLI\/2.9.0",
-    "source": "build\/2.6.0\/index.js",
+    "source": "build\/2.6.2\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
@@ -319,17 +319,8 @@
             "Site Status": [
                 "Status do Site"
             ],
-            "Coming Soon": [
-                "Em Breve"
-            ],
             "Live": [
                 "Ativa"
-            ],
-            "Still building your site? Need to make a big change?": [
-                "Ainda construindo seu site? Precisa fazer uma grande mudan\u00e7a?"
-            ],
-            "Coming soon page": [
-                "P\u00e1gina em breve"
             ],
             "Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen.": [
                 "Sua p\u00e1gina de 'Em Breve' da Hostgator permite ocultar seu site dos visitantes enquanto voc\u00ea faz a m\u00e1gica acontecer."
@@ -551,6 +542,12 @@
             ],
             "Working...": [
                 "Trabalhando..."
+            ],
+            "Not Live": [
+                ""
+            ],
+            "Coming Soon page": [
+                ""
             ]
         }
     }
