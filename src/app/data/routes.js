@@ -79,7 +79,7 @@ export const routes = [
 		subRoutes: [
 			{
 				name: '/store/products',
-				title: __( 'Products', 'wp-plugin-hostgator' ),
+				title: __( 'Products & Services', 'wp-plugin-hostgator' ),
 			},
 			NewfoldRuntime.hasCapability( 'hasYithExtended' )
 			? {
