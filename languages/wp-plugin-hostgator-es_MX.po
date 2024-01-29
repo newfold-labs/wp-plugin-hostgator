@@ -768,7 +768,6 @@ msgid "HostGator Account"
 msgstr ""
 
 #: build/2.6.0/index.js:1
-#: build/2.6.2/index.js:1
 msgid "Products"
 msgstr ""
 
@@ -1056,4 +1055,8 @@ msgstr ""
 
 #: build/2.6.2/index.js:1
 msgid "Coming Soon page"
+msgstr ""
+
+#: build/2.6.2/index.js:1
+msgid "Products & Services"
 msgstr ""

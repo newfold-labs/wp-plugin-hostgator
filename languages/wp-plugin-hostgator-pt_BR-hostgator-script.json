@@ -106,9 +106,6 @@
             "There's nothing here!": [
                 "N\u00e3o h\u00e1 nada aqui!"
             ],
-            "Products": [
-                "Produtos"
-            ],
             "Sales & Discounts": [
                 "Vendas & Descontos"
             ],
@@ -548,6 +545,9 @@
             ],
             "Coming Soon page": [
                 ""
+            ],
+            "Products & Services": [
+                "Produtos & Servi\u00e7os"
             ]
         }
     }

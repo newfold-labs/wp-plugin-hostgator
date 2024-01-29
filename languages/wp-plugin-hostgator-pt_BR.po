@@ -309,7 +309,6 @@ msgid "There's nothing here!"
 msgstr "Não há nada aqui!"
 
 #: build/2.6.0/index.js:1
-#: build/2.6.2/index.js:1
 msgid "Products"
 msgstr "Produtos"
 
@@ -1057,3 +1056,7 @@ msgstr ""
 #: build/2.6.2/index.js:1
 msgid "Coming Soon page"
 msgstr ""
+
+#: build/2.6.2/index.js:1
+msgid "Products & Services"
+msgstr "Produtos & Serviços"
