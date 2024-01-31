@@ -73,7 +73,7 @@ $nfd_module_container->set(
 		'template_h1'         => __( 'A New WordPress Site', 'wp-plugin-hostgator' ),
 		'template_h2'         => __( 'Coming Soon!', 'wp-plugin-hostgator' ),
 		'template_coming_soon_links'   => sprintf(
-			esc_html__( ' %1$sHow to build your WordPress Website%2$s   %3$sHow to Migrate a Website to Hostgator?%4$s  %5$sWhy choose HostGator for your WordPress site?%6$s.', 'wp-plugin-bluehost' ) . '&nbsp;',
+			esc_html__( ' %1$sHow to build your WordPress Website%2$s   %3$sHow to Migrate a Website to Hostgator?%4$s  %5$sWhy choose HostGator for your WordPress site?%6$s', 'wp-plugin-bluehost' ) . '&nbsp;',
 			'<a href="' . esc_url( $website_guide_link ) . '" target="_blank" rel="noopener noreferrer nofollow">',
 			'</a><span class="dashicons dashicons-wordpress"></span><br/>',
 			'<a href="' . esc_url( $migrate_link ) . '" target="_blank" rel="noopener noreferrer nofollow">',
