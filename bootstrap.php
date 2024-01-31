@@ -73,7 +73,6 @@ $nfd_module_container->set(
 		'template_h1'         => __( 'A New WordPress Site', 'wp-plugin-hostgator' ),
 		'template_h2'         => __( 'Coming Soon!', 'wp-plugin-hostgator' ),
 		'template_coming_soon_links'   => sprintf(
-			/* translators: %1$s is replaced with opening link tag taking you to bluehost.com/wordpress, %2$s is replaced with closing link tag, %3$s is replaced with opening link tag taking you to login page, %4$s is replaced with closing link tag, %5$s is replaced with opening link tag taking you to my.bluehost.com, %6$s is replaced with closing link tag */
 			esc_html__( ' %1$sHow to build your WordPress Website%2$s   %3$sHow to Migrate a Website to Hostgator?%4$s  %5$sWhy choose HostGator for your WordPress site?%6$s.', 'wp-plugin-bluehost' ) . '&nbsp;',
 			'<a href="' . esc_url( $website_guide_link ) . '" target="_blank" rel="noopener noreferrer nofollow">',
 			'</a><span class="dashicons dashicons-wordpress"></span><br/>',
