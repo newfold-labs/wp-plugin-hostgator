@@ -2,14 +2,13 @@
 const pluginNotificationsFixture = require( '../fixtures/plugin-notifications.json' );
 const pluginProductsFixture = require( '../fixtures/plugin-products.json' );
 
-describe('Help Page', function () {
+describe('Language updates on Help Page', function () {
 
 	before(() => {
-        cy.setRegion();
-        cy.setBrand();
-        cy.setLanguage();
+		cy.setBrand('hostgator-latam');
+        cy.setRegion('br');
+        cy.setLanguage('pt_BR');
 		cy.reload();
-
 		cy.intercept(
 			{
 				method: 'GET',
@@ -24,11 +23,12 @@ describe('Help Page', function () {
 			},
 			pluginNotificationsFixture
 		).as( 'pluginNotificationsFixture' );
+
 		cy.visit(
 			'/wp-admin/admin.php?page=' + Cypress.env( 'pluginId' ) + '#/help',
 			{
 				timeout: 30000,
-				onLoad: () => {
+				onLoad() {
 					cy.window().then((win) => {
 						win.NewfoldRuntime.restUrl = "http://localhost:8880/index.php?rest_route=/";
 					});
@@ -38,45 +38,40 @@ describe('Help Page', function () {
 		cy.injectAxe();
 
 	});
-	
-	it('Is Accessible', () => {
-		cy.injectAxe();
-		cy.wait(500);
-		cy.a11y('.hgwp-app-body');
-	});
 
-	it('Phone Card Exists', () => {
-		cy.get('.card-help-phone').contains('h3', 'Phone')
-			.scrollIntoView()
-			.should('be.visible');
+	it('Region Change Updates Content', () => {
+		
+
+		cy.get('.card-help-phone').should('not.exist');
+		cy.get('.card-help-twitter').should('not.exist');
 	});
 
 	it('Chat Card Exists', () => {
-		cy.get('.card-help-chat').contains('h3', 'Chat')
-			.scrollIntoView()
-			.should('be.visible');
-	});
-
-	it('Tweet Card Exists', () => {
-		cy.get('.card-help-twitter').contains('h3', 'Tweet')
+		cy.get('.card-help-chat')
 			.scrollIntoView()
 			.should('be.visible');
 	});
 
 	it('KB Card Exists', () => {
-		cy.get('.card-help-kb').contains('h3', 'Knowledge Base')
+		cy.get('.card-help-kb')
 			.scrollIntoView()
 			.should('be.visible');
 	});
 
 	it('Blog Card Exists', () => {
-		cy.get('.card-help-blog').contains('h3', 'Blog')
+		cy.get('.card-help-blog')
 			.scrollIntoView()
 			.should('be.visible');
 	});
 
-	it('Youtube Card Exists', () => {
-		cy.get('.card-help-video').contains('h3', 'Video')
+	after(() => {
+        cy.setBrand();
+		cy.setRegion();
+        cy.setLanguage();
+        cy.reload();
+
+		// check that page reloaded
+		cy.get('.card-help-blog')
 			.scrollIntoView()
 			.should('be.visible');
 	});

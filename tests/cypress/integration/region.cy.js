@@ -7,7 +7,7 @@ describe('Regional Adjustments', function () {
         cy.setRegion('BR');
         cy.setBrand('hostgator-latam');
         cy.setLanguage('pt_BR');
-
+        cy.reload();
 	});
 
 	it('Site info portal link adjusts for BR', () => {
@@ -63,11 +63,13 @@ describe('Regional Adjustments', function () {
             .then(href => {
                 expect(href).to.contain('suporte.hostgator.com.br')
             });
-        
+    });
+
+    after(() => {
         // Reset Options to defaults
         cy.setRegion();
         cy.setBrand();
         cy.setLanguage();
-
+        cy.reload();
     });
 });

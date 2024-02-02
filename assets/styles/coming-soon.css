@@ -131,3 +131,13 @@ footer p a:hover {
     background-color: #2E93EE;
     transition: all 0.1s ease;
 }
+
+.comingsoon_links {
+    font-size:13px;
+   }
+   
+.comingsoon_links a {
+    text-decoration: none;
+    line-height: 18px;
+    color: #3575D3;
+}
