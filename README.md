@@ -32,5 +32,8 @@ This plugin has version number set in 3 distinct places in 2 files:
   incremented in conjuction with new releases via github tagging.
   (In a perfect world, we have a runner increment and/or validate this)
 
+# Languages & Regions
+There are some parts to the hostgator plugin that adapt depending on the region and/or language which is chosen. This not only relies on the language setting (which is set automatically on installs in HostGator Latam Brazil for example), but also on the `mm_brand` value being set to `hostgator-latam` and an additional option `hg_region` being set to `BR` in the case of Brazil. Features should all function in both US and BR setups. See the `region.cy.js` and `region-help.cy.js` cypress integration tests for example.
+
 # Style Guide
 For color pallet and typography usage: https://www.figma.com/file/0lEpSwlDnJt6nFNTgv4VqD/WP-Plugin-HostGator?t=LXnkBwfedfM4FvHX-1
