@@ -3,9 +3,9 @@
 describe('Navigation', function () {
 
 	before(() => {
+		cy.exec( 'npx wp-env run cli wp transient delete newfold_marketplace' );
 		cy.visit('/wp-admin/admin.php?page=hostgator');
 		cy.injectAxe();
-		
 	});
 
 	it( "Admin submenu shouldn't exist inside app", () => {
