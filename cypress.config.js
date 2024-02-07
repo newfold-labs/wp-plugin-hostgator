@@ -11,6 +11,7 @@ module.exports = defineConfig({
 		phpVersion,
 		pluginId: 'hostgator',
 		appId: 'hgwp',
+		pluginSlug: 'wp-plugin-hostgator',
 	},
 	downloadsFolder: 'tests/cypress/downloads',
 	fixturesFolder: 'tests/cypress/fixtures',

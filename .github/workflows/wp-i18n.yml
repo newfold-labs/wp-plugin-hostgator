@@ -89,8 +89,8 @@ jobs:
       - name: Commit updated language files
         if: steps.changes.outcome == 'failure'
         run: |
-          git config --local user.name "${{ github.event.head_commit.author.name }}"
-          git config --local user.email "${{ github.event.head_commit.author.email }}"
+          git config --local user.name "${GITHUB_ACTOR} "
+          git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git remote -v
           git add './languages'
           git commit -m "WordPress I18N triggered by commit ${{ github.sha }}"
