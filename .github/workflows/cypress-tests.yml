@@ -109,7 +109,7 @@ jobs:
         run: echo '{"config":{"WP_DEBUG_DISPLAY":false},"plugins":["${{ steps.workflow.outputs.DIST }}/${{ steps.workflow.outputs.PACKAGE }}"]}' > .wp-env.override.json
 
       - name: Install WordPress
-        run: npx -y @wordpress/env start --debug
+        run: npx -y @wordpress/env@9.2.0 start --debug
 
       - name: Run Cypress Tests
         if: ${{ github.repository != 'newfold-labs/wp-plugin-hostgator' || github.actor == 'dependabot[bot]' }}
