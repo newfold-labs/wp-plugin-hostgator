@@ -10,6 +10,9 @@
   "plugins": [
     "."
   ],
+  "themes": [
+    "https://downloads.wordpress.org/theme/yith-wonder.latest-stable.zip"
+  ],
   "port": 8884,
   "testsPort": 8885,
   "env": {
