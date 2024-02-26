@@ -6,6 +6,7 @@ import {HostgatorIcon, WordPressIcon} from "../icons";
 import {getLinkPerRegion} from '../../util/helpers';
 
 export const SiteInfoBar = () => {
+	const homeUrl = NewfoldRuntime?.homeUrl;
 	const {url, title} = NewfoldRuntime.siteDetails;
 	const parsedUrl = new URL(url);
 	const siteDomain = parsedUrl.hostname;
@@ -50,7 +51,7 @@ export const SiteInfoBar = () => {
 					<Button
 						as="a"
 						id="site_info_site_button"
-						href={(isEcommerce && isStore) ? `${url}/shop` : url}
+						href={(isEcommerce && isStore) ? `${homeUrl}/shop` : homeUrl}
 						target="_blank"
 						variant="primary"
 						className="nfd-bg-white nfd-text-[#212936] nfd-text-tiny nfd-w-full min-[400px]:nfd-w-auto"
