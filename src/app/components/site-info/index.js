@@ -6,7 +6,7 @@ import {HostgatorIcon, WordPressIcon} from "../icons";
 import {getLinkPerRegion} from '../../util/helpers';
 
 export const SiteInfoBar = () => {
-	const homeUrl = NewfoldRuntime?.homeUrl;
+	const homeUrl = window.NewfoldRuntime.homeUrl;
 	const {url, title} = NewfoldRuntime.siteDetails;
 	const parsedUrl = new URL(url);
 	const siteDomain = parsedUrl.hostname;
