@@ -100,7 +100,7 @@ jobs:
 
       - name: Run Cypress Tests
         if: ${{ github.repository == 'newfold-labs/wp-plugin-hostgator' }}
-        run: npm run test:e2e -- --browser chrome --tag "hostgator, wp-beta"
+        run: npm run test:e2e -- --browser chrome
 
       - name: Store screenshots of test failures
         if: failure()
