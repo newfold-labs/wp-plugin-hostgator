@@ -12,9 +12,9 @@
  * Plugin URI:        https://hostgator.com
  * Update URI:        https://github.com/newfold-labs/wp-plugin-hostgator/
  * Description:       WordPress plugin that integrates a WordPress site with the HostGator control panel, including performance, security, and update features.
- * Version:           2.6.3
- * Requires at least: 6.0
- * Requires PHP:      7.1
+ * Version:           2.7.0
+ * Requires at least: 6.2
+ * Requires PHP:      7.3
  * Tested up to:      6.4.3
  * Author:            HostGator
  * Author URI:        https://hostgator.com
@@ -32,7 +32,7 @@ if ( defined( 'HOSTGATOR_PLUGIN_VERSION' ) ) {
 }
 
 // Define constants
-define( 'HOSTGATOR_PLUGIN_VERSION', '2.6.3' );
+define( 'HOSTGATOR_PLUGIN_VERSION', '2.7.0' );
 define( 'HOSTGATOR_PLUGIN_FILE', __FILE__ );
 define( 'HOSTGATOR_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'HOSTGATOR_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
@@ -50,8 +50,8 @@ if ( 'plugins.php' === $pagenow ) {
 
 	$plugin_check = new HG_Plugin_PHP_Compat_Check( __FILE__ );
 
-	$plugin_check->min_php_version = '7.1';
-	$plugin_check->min_wp_version  = '6.0';
+	$plugin_check->min_php_version = '7.3';
+	$plugin_check->min_wp_version  = '6.2';
 
 	$plugin_check->check_plugin_requirements();
 }
@@ -72,6 +72,6 @@ $nfd_plugins_check->legacy_plugins = array(
 $pass_nfd_check                    = $nfd_plugins_check->check_plugin_requirements();
 
 // Check PHP version before initializing to prevent errors if plugin is incompatible.
-if ( $pass_nfd_check && version_compare( PHP_VERSION, '7.1', '>=' ) ) {
+if ( $pass_nfd_check && version_compare( PHP_VERSION, '7.3', '>=' ) ) {
 	require __DIR__ . '/bootstrap.php';
 }
