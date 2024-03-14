@@ -9,45 +9,45 @@ import {
 	Dashicon,
 } from '@wordpress/components';
 
-const ErrorCard = ({ error, className, notice = 'Error!' }) => {
-	dispatchUpdateSnackbar(notice);
+const ErrorCard = ( { error, className, notice = 'Error!' } ) => {
+	dispatchUpdateSnackbar( notice );
 
 	return (
-		<Card className={classNames('error-card', className)}>
+		<Card className={ classNames( 'error-card', className ) }>
 			<CardHeader>
 				<Heading level="3">
 					<Dashicon
 						icon="warning"
-						style={{
+						style={ {
 							fontSize: '24px',
 							width: '24px',
 							height: '24px',
-						}}
-					/>{' '}
-					{__('Oh No, An Error!', 'wp-plugin-hostgator')}
+						} }
+					/>{ ' ' }
+					{ __( 'Oh No, An Error!', 'wp-plugin-hostgator' ) }
 				</Heading>
 			</CardHeader>
 			<CardBody>
 				<p>
-					{__(
+					{ __(
 						'You found an error, please refresh the page and try again!',
 						'wp-plugin-hostgator'
-					)}
+					) }
 				</p>
 				<p>
-					{__(
+					{ __(
 						'If the error persists, please contact support.',
 						'wp-plugin-hostgator'
-					)}
+					) }
 				</p>
 			</CardBody>
 			<CardFooter>
 				<p>
-					{error && error.message ? error.message : ''}
-					{error && error.data
-						? __(' Error code: ', 'wp-plugin-hostgator') +
+					{ error && error.message ? error.message : '' }
+					{ error && error.data
+						? __( ' Error code: ', 'wp-plugin-hostgator' ) +
 						  error.data.status
-						: ''}
+						: '' }
 				</p>
 			</CardFooter>
 		</Card>
