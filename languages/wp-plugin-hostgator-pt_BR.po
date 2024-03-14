@@ -281,10 +281,6 @@ msgid "There's nothing here!"
 msgstr "Não há nada aqui!"
 
 #: build/2.7.0/index.js:1
-msgid "Sales & Discounts"
-msgstr "Vendas & Descontos"
-
-#: build/2.7.0/index.js:1
 msgid "Store Details"
 msgstr "Detalhes da Loja"
 
@@ -873,3 +869,7 @@ msgstr ""
 #: build/2.7.0/index.js:1
 msgid "Products & Services"
 msgstr "Produtos & Serviços"
+
+#: build/2.7.0/index.js:1
+msgid "Sales & Promotions"
+msgstr "Vendas & Promoções"

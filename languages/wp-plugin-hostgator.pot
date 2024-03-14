@@ -280,7 +280,7 @@ msgid "Products & Services"
 msgstr ""
 
 #: build/2.7.0/index.js:1
-msgid "Sales & Discounts"
+msgid "Sales & Promotions"
 msgstr ""
 
 #: build/2.7.0/index.js:1
