@@ -1,7 +1,7 @@
 {
     "translation-revision-date": "2023-11-30 17:37",
     "generator": "WP-CLI\/2.10.0",
-    "source": "build\/2.7.0\/index.js",
+    "source": "build\/2.7.1\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
@@ -534,9 +534,6 @@
             "An unknown error has occurred.": [
                 "Um erro desconhecido ocorreu."
             ],
-            "Working...": [
-                "Trabalhando..."
-            ],
             "Not Live": [
                 ""
             ],
@@ -548,6 +545,9 @@
             ],
             "Sales & Promotions": [
                 "Vendas & Promo\u00e7\u00f5es"
+            ],
+            "Working\u2026": [
+                "Trabalhando\u2026"
             ]
         }
     }

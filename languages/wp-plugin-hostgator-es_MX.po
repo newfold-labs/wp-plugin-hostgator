@@ -79,28 +79,28 @@ msgstr "Obtener una vista previa de la próxima página de destino"
 
 #: inc/Admin.php:62
 #: inc/Admin.php:312
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Home"
 msgstr "Pagina principal"
 
 #: inc/Admin.php:64
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Marketplace"
 msgstr "Mercado en Línea"
 
 #: inc/Admin.php:65
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Performance"
 msgstr "Rendimiento"
 
 #: inc/Admin.php:66
 #: inc/Admin.php:313
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Settings"
 msgstr "Configuraciones"
 
 #: inc/Admin.php:68
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Help"
 msgstr "Ayuda"
 
@@ -170,706 +170,706 @@ msgstr "Actualizaciones automáticas habilitadas en la página Configuración</a
 msgid "Auto-updates enabled"
 msgstr "Actualizaciones automáticas habilitadas"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Hostgator WordPress Plugin"
 msgstr "Plugin de HostGator para WordPress"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Oh No, An Error!"
 msgstr "¡Oh no, un error!"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "You found an error, please refresh the page and try again!"
 msgstr "Ha encontrado un error, ¡actualice la página e inténtalo de nuevo!"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "If the error persists, please contact support."
 msgstr "Si persiste el error, póngase en contacto con el soporte."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid " Error code: "
 msgstr " Código de error: "
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Phone"
 msgstr "Teléfono"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Give us a ring at (866) 96-GATOR"
 msgstr "Llámenos al (866) 96-GATOR"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Call Us"
 msgstr "Llámenos"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Chat"
 msgstr "Chat"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Have a question? We're here 24/7/365"
 msgstr "¿Tiene alguna pregunta? Estamos aquí 24/7/365"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Live Chat"
 msgstr "Chat En Vivo"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Tweet"
 msgstr "Tweet"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Tweet us at @hgsupport for support"
 msgstr "Envíenos un tweet a @hgsupport para obtener ayuda"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Tweet Us"
 msgstr "Envíenos un tweet"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Knowledge Base"
 msgstr "Base de Conocimientos"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Know what the pros know."
 msgstr "Sepa lo que saben los profesionales."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Find Answers"
 msgstr "Encontre Respuestas"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Blog"
 msgstr "Blog"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Get our tips and in-depth articles."
 msgstr "Obtenga nuestros consejos y artículos detallados."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Learn Stuff"
 msgstr "Aprenda Cosas"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Video Tutorials"
 msgstr "Tutoriales en Vídeo"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Step-by-step tutorials and additional guides."
 msgstr "Tutoriales paso a paso y guías adicionales."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Watch Now"
 msgstr "Vea Ahora"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Themes"
 msgstr "Temas"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "There's nothing here!"
 msgstr "¡No hay nada aquí!"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "We are available 24/7 to help answer questions and solve your problems."
 msgstr "Estamos disponibles las 24 horas, los 7 días de la semana, para ayudar a responder preguntas y resolver tus problemas."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Settings and Performance"
 msgstr "Configuración y Rendimiento"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Customize & fine-tune your site."
 msgstr "Personalice y ajuste su sitio web."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Manage Settings"
 msgstr "Administrar Configuraciones"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Manage your site settings. You can ajdust automatic updates, comments, revisions and more."
 msgstr "Administre la configuración de su sitio web. Es posible ajustar actualizaciones automáticas, comentarios, revisiones y más."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Manage site performance and caching settings as well as clear the site cache."
 msgstr "Administre el rendimiento del sitio web y la configuración de almacenamiento en caché, así como borre el caché del sitio web."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Visit Marketplace"
 msgstr "Visite al Sitio de Comércio en Línea"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Add site services, themes or plugins from the marketplace."
 msgstr "Añada servicios de sitio web, temas o plugins desde el sitio de comércio en línea."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Website Content"
 msgstr "Contenido del Sitio Web"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Create, manage & sort your story."
 msgstr "Cree, administre y ordene su historia."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "New Post"
 msgstr "Nueva publicación"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Write a new blog post."
 msgstr "Escriba una nueva publicación de blog."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Pages"
 msgstr "Páginas"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "New Page"
 msgstr "Nueva Página"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Add fresh pages to your website."
 msgstr "Añada páginas nuevas a su sitio web."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Categories"
 msgstr "Categorías"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Manage Categories"
 msgstr "Administre las Categorías"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Organize existing content into categories."
 msgstr "Organice el contenido existente en categorías."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Web Hosting"
 msgstr "Hosting"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Access & manage your HostGator account."
 msgstr "Acceda y administre su cuenta HostGator."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Manage Sites"
 msgstr "Administre Sitios Web"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Manage your site from the control panel. You can create backups, set security, and improve performance."
 msgstr "Administre su sitio web desde el panel de control. Es posible crear copias de seguridad, configurar la seguridad y mejorar el rendimiento."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Email"
 msgstr "Correo Electrónico"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Manage Email"
 msgstr "Administre el Correo Electrónico"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Create email accounts, compose, send, and receive your email from the control panel."
 msgstr "Cree cuentas de correo electrónico, redacte, envíe y reciba su correo electrónico desde el panel de control."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Domains"
 msgstr "Dominios"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Find a Domain"
 msgstr "Encuentre un Dominio"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Find a new domain and assign it to your site or start a new site with a fresh domain."
 msgstr "Encuentre un nuevo dominio y asígnelo a su sitio web o inicie un nuevo sitio web con un dominio nuevo."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Get Help"
 msgstr "Obtenga Ayuda"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "24/7/365 support. We work when you work."
 msgstr "Soporte 24/7/365. Trabajamos cuando usted trabaja."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Explore our featured collection of tools and services."
 msgstr "Explora nuestra destacada colección de herramientas y servicios."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Oops, there was an error loading the marketplace, please try again later."
 msgstr "Ups, hubo un error al cargar. Por favor, inténtalo de nuevo más tarde."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Sorry, no marketplace items. Please, try again later."
 msgstr "Lo siento, no hay elementos en el mercado. Por favor, inténtalo de nuevo más tarde."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Load More"
 msgstr "Cargar más"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "This is where you can manage cache settings for your website."
 msgstr "Aquí es donde puedes gestionar la configuración de caché para tu sitio web."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Disabled"
 msgstr "Deshabilitado"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "No cache enabled."
 msgstr "Sin caché habilitado."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Every page load is fresh."
 msgstr "Cada carga de página es fresca."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Not recommended."
 msgstr "No recomendado."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Assets Only"
 msgstr "Solo activos"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Cache static assets like images and the appearance of your site for 1 hour."
 msgstr "Almacene en caché activos estáticos como imágenes y la apariencia de su sitio web durante 1 hora."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Recommended for ecommerce and sites that update frequently or display info in real-time."
 msgstr "Recomendado para comercio electrónico y sitios web que se actualizan con frecuencia o muestran información en tiempo real."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Cache enabled for assets only."
 msgstr "Caché habilitada solo para activos."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Assets & Web Pages"
 msgstr "Activos y Páginas Web"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Cache static assets for 24 hours and web pages for 2 hours."
 msgstr "Caché activos estáticos durante 24 horas y páginas web durante 2 horas."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Recommended for blogs, educational sites, and sites that update at least weekly."
 msgstr "Recomendado para blogs, sitios web educativos y sitios web que se actualizan al menos semanalmente."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Cache enabled for assets and pages."
 msgstr "Caché habilitada para activos y páginas."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Assets & Web Pages - Extended"
 msgstr "Activos y Páginas Web - Extendidos"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Cache enabled for assets and pages (extended)."
 msgstr "Caché habilitada para recursos y páginas (extendido)."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Cache setting saved"
 msgstr "Configuración de caché guardada"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Clear Cache"
 msgstr "Limpiar Caché"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Cache cleared"
 msgstr "Caché Borrado"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Clear All Cache Now"
 msgstr "Limpiar Todo Caché Ahora"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "We automatically clear your cache as you work (creating content, changing settings, installing plugins and more). But you can manually clear it here to be confident it's fresh."
 msgstr "Limpiamos automáticamente tu caché mientras trabajas (creando contenido, cambiando configuraciones, instalando complementos y más). Pero puedes borrarlo manualmente aquí para estar seguro de que está fresco."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Boost speed and performance by storing a copy of your website content, files, and images online so the pages of your website load faster for your visitors."
 msgstr "Aumente la velocidad y el rendimiento almacenando una copia del contenido, los archivos y las imágenes de su sitio web en línea para que las páginas de su sitio web se carguen más rápido para sus visitantes."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Oops! Something went wrong. Please try again."
 msgstr "¡Ups! Algo salió mal. Por favor, inténtalo de nuevo."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Manage All Updates"
 msgstr "Gestionar Todas las Actualizaciones"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "WordPress Core"
 msgstr "Núcleo de WordPress"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Plugins"
 msgstr "Plugins"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Automatic Updates"
 msgstr "Actualizaciones Automáticas"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Keeping automatic updates on ensures timely security fixes and the latest features."
 msgstr "Mantener las actualizaciones automáticas activadas garantiza correcciones de seguridad oportunas y las últimas funciones."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen."
 msgstr "Tu página de 'Próximamente' de Hostgator te permite ocultar tu sitio a los visitantes mientras haces que la magia suceda."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Your website is currently displaying a \"Coming Soon\" page."
 msgstr "Tu sitio web actualmente muestra una página de \"Próximamente\"."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Disable comments for older posts"
 msgstr "Deshabilitar comentarios para publicaciones antiguas"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Comments setting saved "
 msgstr "Configuración de comentarios guardada "
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Comments on posts are disabled after "
 msgstr "Los comentarios sobre los mensajes están desactivados después de "
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid " day."
 msgid_plural " days."
 msgstr[0] " día."
 msgstr[1] " días."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Close comments after "
 msgstr "Cerrar comentarios después de "
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Comments setting saved."
 msgstr "Configuración de comentarios guardada."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Posts will display "
 msgstr "Las publicaciones se mostrarán "
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid " comment at a time."
 msgid_plural " comments at a time."
 msgstr[0] " comentario a la vez."
 msgstr[1] " comentarios a la vez."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Display "
 msgstr "Mostrar "
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid " comments per page."
 msgstr " comentarios por página."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Comments"
 msgstr "Comentarios"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Comments allow visitors to provide feedback and respond to your posts or pages."
 msgstr "Los comentarios permiten a los visitantes proporcionar retroalimentación y responder a tus publicaciones o páginas."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Post revision setting saved "
 msgstr "Configuración de revisión de post guardado "
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Posts will save  "
 msgstr "Las publicaciones se guardarán  "
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid " revision."
 msgid_plural " revisions."
 msgstr[0] " revisión."
 msgstr[1] " revisiones."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Number of revisions posts can save "
 msgstr "Número de publicaciones de revisiones que pueden guardar "
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take "
 msgstr "Guardar borradores y actualizar contenido publicado crea revisiones. Realiza cambios con confianza, sabiendo que puedes tomar "
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid " step back."
 msgid_plural " steps back."
 msgstr[0] " paso atrás."
 msgstr[1] " pasos atrás."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Trash setting saved "
 msgstr "Configuración de papelera guardada "
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "The trash will automatically empty every "
 msgstr "La papelera se vacía automáticamente cada "
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid " week."
 msgid_plural " weeks."
 msgstr[0] " semana."
 msgstr[1] " semanas."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Trash emptying frequency "
 msgstr "Frecuencia de vaciado de basura "
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Content Options"
 msgstr "Opciones de Contenido"
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Controls for content revisions and how often to empty the trash."
 msgstr "Controles para revisiones de contenido y con qué frecuencia vaciar la papelera."
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "This is where you can manage common settings for your website."
 msgstr "Aquí es donde puedes gestionar las configuraciones comunes para tu sitio web."
 
 #: inc/Admin.php:63
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Store"
 msgstr ""
 
 #: inc/Admin.php:67
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Staging"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "HostGator Account"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Store Details"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "More"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Manage Domain"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Cache static assets for 1 week and web pages for 8 hours."
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Recommended for sites that update a few times a month or less like porfolios or brochure sites."
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Cache Level"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Site Status"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Live"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Cancel"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Clone"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Confirm Clone Action"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "This will overwrite anything in staging and update it to an exact clone of the current production site. Are you sure you want to proceed?"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Cloned to Staging"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Cloning production to staging, this should take about a minute."
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Clone to staging"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Created"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Staging Created"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Creating a staging site, this should take about a minute."
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Create staging site"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Currently editing"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Delete"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Confirm Delete"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "This will permanently delete staging site. Are you sure you want to proceed? You can recreate another staging site at any time, but any specific changes you've made to this staging site will be lost."
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Deleted Staging"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Deleting the staging site, this should take about a minute."
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Delete Staging Site"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Deploy"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Deploy all changes"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Confirm Deployment"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Deploy database only"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "This will deploy staging to production and overwrite current production site. Are you sure you want to proceed?"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Deploy files only"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Deployed"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Deploying from staging to production, this should take about a minute."
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Deploy Site"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Error"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Not currently editing"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Proceed"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Production Site"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Staging Site"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready."
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Switch"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Switching"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Switch to Production"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "This will navigate you to the production environment"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Loading the production environment now."
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Switching to the production environment, this should take about a minute."
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Switch to Staging"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "This will navigate you to the staging environment"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Loading the staging environment now."
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Switching to the staging environment, this should take about a minute."
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "An unknown error has occurred."
 msgstr ""
 
-#: build/2.7.0/index.js:1
-msgid "Working..."
-msgstr ""
-
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Not Live"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Coming Soon page"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Products & Services"
 msgstr ""
 
-#: build/2.7.0/index.js:1
+#: build/2.7.1/index.js:1
 msgid "Sales & Promotions"
+msgstr ""
+
+#: build/2.7.1/index.js:1
+msgid "Working…"
 msgstr ""
