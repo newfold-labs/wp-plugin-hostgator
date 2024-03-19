@@ -1,9 +1,9 @@
-const Heading = ({ level, className, children }) => {
+const Heading = ( { level, className, children } ) => {
 	const TagName = 'h' + level;
 
 	return (
-		<TagName className={classNames('heading', className)}>
-			{children}
+		<TagName className={ classNames( 'heading', className ) }>
+			{ children }
 		</TagName>
 	);
 };

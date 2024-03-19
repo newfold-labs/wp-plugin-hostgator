@@ -647,10 +647,6 @@ msgid "HostGator Account"
 msgstr ""
 
 #: build/2.7.0/index.js:1
-msgid "Sales & Discounts"
-msgstr ""
-
-#: build/2.7.0/index.js:1
 msgid "Store Details"
 msgstr ""
 
@@ -872,4 +868,8 @@ msgstr ""
 
 #: build/2.7.0/index.js:1
 msgid "Products & Services"
+msgstr ""
+
+#: build/2.7.0/index.js:1
+msgid "Sales & Promotions"
 msgstr ""

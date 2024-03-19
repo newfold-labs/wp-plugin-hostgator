@@ -151,6 +151,6 @@ const HostgatorIcon = () => {
 			></path>
 		</svg>
 	);
-}
+};
 
 export default HostgatorIcon;
