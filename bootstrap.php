@@ -72,17 +72,24 @@ $nfd_module_container->set(
 		'admin_app_url'              => admin_url( 'admin.php?page=hostgator#/home' ),
 		'template_h1'                => __( 'A New WordPress Site', 'wp-plugin-hostgator' ),
 		'template_h2'                => __( 'Coming Soon!', 'wp-plugin-hostgator' ),
-		'template_coming_soon_links' => sprintf(
-			esc_html__( ' %1$sHow to build your WordPress Website%2$s   %3$sHow to Migrate a Website to Hostgator?%4$s  %5$sWhy choose HostGator for your WordPress site?%6$s', 'wp-plugin-bluehost' ) . '&nbsp;',
-			'<a href="' . esc_url( $website_guide_link ) . '" target="_blank" rel="noopener noreferrer nofollow">',
-			'</a><span class="dashicons dashicons-wordpress"></span><br/>',
-			'<a href="' . esc_url( $migrate_link ) . '" target="_blank" rel="noopener noreferrer nofollow">',
-			'</a><br/>',
-			'<a href="' . esc_url( $hosting_link ) . '" target="_blank" rel="noopener noreferrer nofollow">',
-			'</a><br/> '
-		),
+		'template_coming_soon_links' =>  
+			'<a href="' . esc_url( $website_guide_link ) . '" target="_blank" rel="noopener noreferrer nofollow">' .
+			__( 'How to build your WordPress Website', 'wp-plugin-hostgator' ) .
+			'</a><br/>' .
+			'<a href="' . esc_url( $migrate_link ) . '" target="_blank" rel="noopener noreferrer nofollow">' .
+			__( 'How to Migrate a Website to Hostgator?', 'wp-plugin-hostgator' ) .
+			'</a><br/>' .
+			'<a href="' . esc_url( $hosting_link ) . '" target="_blank" rel="noopener noreferrer nofollow">' .
+			__( 'Why choose HostGator for your WordPress site?', 'wp-plugin-hostgator' ) .
+			'</a><br/>'
+		,
 		'template_footer_t'          => sprintf(
-			/* translators: %1$s is replaced with opening link tag taking you to hostgator.com/wordpress, %2$s is replaced with closing link tag, %3$s is replaced with opening link tag taking you to login page, %4$s is replaced with closing link tag, %5$s is replaced with opening link tag taking you to portal.hostgator.com, %6$s is replaced with closing link tag */
+			/* translators: %1$s is replaced with opening link tag taking you to hostgator.com/wordpress,
+							%2$s is replaced with closing link tag,
+							%3$s is replaced with opening link tag taking you to login page,
+							%4$s is replaced with closing link tag,
+							%5$s is replaced with opening link tag taking you to portal.hostgator.com,
+							%6$s is replaced with closing link tag. */
 			esc_html__( 'A %1$sHostGator%2$s powered website. Is this your website? Log in to %3$sWordPress%4$s or %5$sHostgator%6$s.', 'wp-plugin-hostgator' ) . '&nbsp;',
 			'<a href="' . esc_url( 'https://www.hostgator.com/managed-wordpress-hosting' ) . '" target="_blank" rel="noopener noreferrer nofollow">',
 			'</a>',
@@ -92,13 +99,16 @@ $nfd_module_container->set(
 			'</a>'
 		),
 		'template_page_title'        => sprintf(
-			/* translators: %s: Blog name */
+			/* translators: %s is Blog name */
 			__( '%s &mdash; Coming Soon', 'wp-plugin-hostgator' ),
 			esc_html( get_option( 'blogname' ) )
 		),
 		'admin_bar_text'             => '<div style="background-color: #ffcf00; color: #191936; padding: 0 1rem;">' . __( 'Coming Soon Active', 'wp-plugin-hostgator' ) . '</div>',
 		'admin_notice_text'          => sprintf(
-			/* translators: %1$s is replaced with the opening link tag and %2$s is replaced with the closing link tag, %3$s is the opening link tag to preview the page, %4$s is the closing link tag. */
+			/* translators: %1$s is replaced with the opening link tag,
+							%2$s is replaced with the closing link tag,
+							%3$s is the opening link tag to preview the page,
+							%4$s is the closing link tag. */
 			__( 'Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s.', 'wp-plugin-hostgator' ),
 			'<a href="' . get_home_url() . '?preview=coming_soon" title="' . __( 'Preview the coming soon landing page', 'wp-plugin-hostgator' ) . '">',
 			'</a>',
