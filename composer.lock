@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b249766c33852ba9bcfd3a027438c634",
+    "content-hash": "c4c39adc94aa5488d3e203aedbb56057",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -607,20 +607,20 @@
         },
         {
             "name": "newfold-labs/wp-module-help-center",
-            "version": "1.0.23",
+            "version": "1.0.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-help-center.git",
-                "reference": "a41e0126ed61bde0b494e4f242d99df0e81766b9"
+                "reference": "3dbab326c33ef692dc59eb45f1898631b4088b6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-help-center/zipball/a41e0126ed61bde0b494e4f242d99df0e81766b9",
-                "reference": "a41e0126ed61bde0b494e4f242d99df0e81766b9",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-help-center/zipball/3dbab326c33ef692dc59eb45f1898631b4088b6e",
+                "reference": "3dbab326c33ef692dc59eb45f1898631b4088b6e",
                 "shasum": ""
             },
             "require": {
-                "newfold-labs/wp-module-ai": "^1.0.3",
+                "newfold-labs/wp-module-ai": "^1.1.7",
                 "newfold-labs/wp-module-data": "^2.3.4"
             },
             "require-dev": {
@@ -646,10 +646,10 @@
             ],
             "description": "HelpCenter",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-help-center/tree/1.0.23",
+                "source": "https://github.com/newfold-labs/wp-module-help-center/tree/1.0.24",
                 "issues": "https://github.com/newfold-labs/wp-module-help-center/issues"
             },
-            "time": "2024-01-17T20:32:44+00:00"
+            "time": "2024-03-18T21:10:17+00:00"
         },
         {
             "name": "newfold-labs/wp-module-install-checker",
