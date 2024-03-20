@@ -1,7 +1,7 @@
 {
     "translation-revision-date": "2023-08-24 18:27",
     "generator": "WP-CLI\/2.10.0",
-    "source": "build\/2.7.0\/index.js",
+    "source": "build\/2.7.1\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
@@ -378,9 +378,6 @@
             "HostGator Account": [
                 ""
             ],
-            "Sales & Discounts": [
-                ""
-            ],
             "Store Details": [
                 ""
             ],
@@ -537,9 +534,6 @@
             "An unknown error has occurred.": [
                 ""
             ],
-            "Working...": [
-                ""
-            ],
             "Not Live": [
                 ""
             ],
@@ -547,6 +541,12 @@
                 ""
             ],
             "Products & Services": [
+                ""
+            ],
+            "Sales & Promotions": [
+                ""
+            ],
+            "Working\u2026": [
                 ""
             ]
         }

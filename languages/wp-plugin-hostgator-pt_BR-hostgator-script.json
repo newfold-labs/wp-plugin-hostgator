@@ -1,7 +1,7 @@
 {
     "translation-revision-date": "2023-11-30 17:37",
     "generator": "WP-CLI\/2.10.0",
-    "source": "build\/2.7.0\/index.js",
+    "source": "build\/2.7.1\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
@@ -105,9 +105,6 @@
             ],
             "There's nothing here!": [
                 "N\u00e3o h\u00e1 nada aqui!"
-            ],
-            "Sales & Promotions": [
-                "Vendas & Promoções"
             ],
             "Store Details": [
                 "Detalhes da Loja"
@@ -537,9 +534,6 @@
             "An unknown error has occurred.": [
                 "Um erro desconhecido ocorreu."
             ],
-            "Working...": [
-                "Trabalhando..."
-            ],
             "Not Live": [
                 ""
             ],
@@ -548,6 +542,12 @@
             ],
             "Products & Services": [
                 "Produtos & Servi\u00e7os"
+            ],
+            "Sales & Promotions": [
+                "Vendas & Promo\u00e7\u00f5es"
+            ],
+            "Working\u2026": [
+                "Trabalhando\u2026"
             ]
         }
     }

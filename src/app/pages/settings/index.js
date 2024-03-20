@@ -6,30 +6,41 @@ import ContentSettings from './contentSettings';
 
 const Settings = () => {
 	return (
-		<Page title="Settings" className={"hgwp-app-settings-page"}>
-			<Container className={'hgwp-app-settings-container'}>
+		<Page title="Settings" className={ 'hgwp-app-settings-page' }>
+			<Container className={ 'hgwp-app-settings-container' }>
 				<Container.Header
-					title={__('Settings', 'wp-plugin-hostgator')}
-					description={__('This is where you can manage common settings for your website.', 'wp-plugin-hostgator')}
-					className={'hgwp-app-settings-header'}
+					title={ __( 'Settings', 'wp-plugin-hostgator' ) }
+					description={ __(
+						'This is where you can manage common settings for your website.',
+						'wp-plugin-hostgator'
+					) }
+					className={ 'hgwp-app-settings-header' }
 				/>
 
-				<Container.Block separator={true} className={'hgwp-app-settings-coming-soon'}>
+				<Container.Block
+					separator={ true }
+					className={ 'hgwp-app-settings-coming-soon' }
+				>
 					<ComingSoon />
 				</Container.Block>
 
-				<Container.Block separator={true} className={'hgwp-app-settings-update'}>
+				<Container.Block
+					separator={ true }
+					className={ 'hgwp-app-settings-update' }
+				>
 					<AutomaticUpdates />
 				</Container.Block>
 
-				<Container.Block separator={true} className={'hgwp-app-settings-content'}>
+				<Container.Block
+					separator={ true }
+					className={ 'hgwp-app-settings-content' }
+				>
 					<ContentSettings />
 				</Container.Block>
 
-				<Container.Block className={'hgwp-app-settings-comments'}>
+				<Container.Block className={ 'hgwp-app-settings-comments' }>
 					<CommentSettings />
 				</Container.Block>
-
 			</Container>
 		</Page>
 	);
