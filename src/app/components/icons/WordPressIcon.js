@@ -14,6 +14,6 @@ const WordPressIcon = () => {
 			</g>
 		</svg>
 	);
-}
+};
 
 export default WordPressIcon;

@@ -8,47 +8,50 @@ const DEFAULT = {
 	setStore: () => {},
 };
 
-const AppStore = createContext(DEFAULT);
+const AppStore = createContext( DEFAULT );
 
-export const hgApiFetchSettings = async (options = {}) => {
-	return await apiFetch({
-		url: NewfoldRuntime.createApiUrl('/hostgator/v1/settings'),
+export const hgApiFetchSettings = async ( options = {} ) => {
+	return await apiFetch( {
+		url: NewfoldRuntime.createApiUrl( '/hostgator/v1/settings' ),
 		...options,
-	});
+	} );
 };
 
-export const reformStore = (store, endpoint, response) => {
+export const reformStore = ( store, endpoint, response ) => {
 	return {
 		...store,
-		[_camelCase(endpoint)]: response,
+		[ _camelCase( endpoint ) ]: response,
 	};
 };
 
-export const AppStoreProvider = ({ children }) => {
-	const [booted, setBooted] = useState(false);
-	const [hasError, setError] = useState(false);
-	const [store, setStore] = useState({});
+export const AppStoreProvider = ( { children } ) => {
+	const [ booted, setBooted ] = useState( false );
+	const [ hasError, setError ] = useState( false );
+	const [ store, setStore ] = useState( {} );
 
 	const contextStore = useMemo(
-		() => ({ store, setStore, booted, setBooted, hasError, setError }),
-		[store, booted, hasError]
+		() => ( { store, setStore, booted, setBooted, hasError, setError } ),
+		[ store, booted, hasError ]
 	);
 
-	useEffect(() => {
-		if (false === booted) {
+	useEffect( () => {
+		if ( false === booted ) {
 			hgApiFetchSettings()
-				.then((settings) => {
-					setStore({ ...store, ...window.HGWP, ...settings });
-					setBooted(true);
-				})
-				.catch((error) => {
-					setError(error);
-				});
+				.then( ( settings ) => {
+					setStore( { ...store, ...window.HGWP, ...settings } );
+					setBooted( true );
+				} )
+				.catch( ( error ) => {
+					setError( error );
+				} );
 		}
-	}, []);
+	}, [] );
 
 	return (
-		<AppStore.Provider value={contextStore}> {children} </AppStore.Provider>
+		<AppStore.Provider value={ contextStore }>
+			{ ' ' }
+			{ children }{ ' ' }
+		</AppStore.Provider>
 	);
 };
 

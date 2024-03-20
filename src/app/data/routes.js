@@ -1,13 +1,13 @@
-import { 
+import {
 	HomeIcon,
 	ShoppingBagIcon,
 	WrenchScrewdriverIcon,
-	BoltIcon, 
+	BoltIcon,
 	AdjustmentsHorizontalIcon,
 	BuildingStorefrontIcon,
-	QuestionMarkCircleIcon } 
-from '@heroicons/react/24/outline';
-import { NewfoldRuntime } from "@newfold-labs/wp-module-runtime";
+	QuestionMarkCircleIcon,
+} from '@heroicons/react/24/outline';
+import { NewfoldRuntime } from '@newfold-labs/wp-module-runtime';
 import { Route, Routes } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
 import Home from '../pages/home';
@@ -19,7 +19,8 @@ import Help from '../pages/help';
 import Store from '../pages/ecommerce/page';
 import { getMarketplaceSubnavRoutes } from '../../../vendor/newfold-labs/wp-module-marketplace/components/marketplaceSubnav';
 
-const addPartialMatch = (prefix, path) => prefix === path ? `${prefix}/*` : path;
+const addPartialMatch = ( prefix, path ) =>
+	prefix === path ? `${ prefix }/*` : path;
 
 const HelpCenterAI = ( e ) => {
 	e.preventDefault();
@@ -29,23 +30,27 @@ const HelpCenterAI = ( e ) => {
 export const AppRoutes = () => {
 	return (
 		<Routes>
-			{routes.map((page) => (
+			{ routes.map( ( page ) => (
 				<Route
 					end
-					key={page.name}
-					path={
-						addPartialMatch("/marketplace", addPartialMatch("/store", page.name))
-					}
-					element={<page.Component />}
+					key={ page.name }
+					path={ addPartialMatch(
+						'/marketplace',
+						addPartialMatch( '/store', page.name )
+					) }
+					element={ <page.Component /> }
 				/>
-			))}
-			<Route path="/" element={<Home />} />
+			) ) }
+			<Route path="/" element={ <Home /> } />
 			<Route
 				path="*"
 				element={
-					<main style={{ padding: '1rem' }}>
+					<main style={ { padding: '1rem' } }>
 						<p>
-							{__("There's nothing here!", 'wp-plugin-hostgator')}
+							{ __(
+								"There's nothing here!",
+								'wp-plugin-hostgator'
+							) }
 						</p>
 					</main>
 				}
@@ -62,18 +67,18 @@ const topRoutePaths = [
 	'/settings',
 	'/staging',
 ];
-const utilityRoutePaths = ['/help'];
+const utilityRoutePaths = [ '/help' ];
 
 export const routes = [
 	{
 		name: '/home',
-		title: __('Home', 'wp-plugin-hostgator'),
+		title: __( 'Home', 'wp-plugin-hostgator' ),
 		Component: Home,
 		Icon: HomeIcon,
 	},
 	{
 		name: '/store',
-		title: __('Store', 'wp-plugin-hostgator'),
+		title: __( 'Store', 'wp-plugin-hostgator' ),
 		Component: Store,
 		Icon: BuildingStorefrontIcon,
 		subRoutes: [
@@ -82,51 +87,54 @@ export const routes = [
 				title: __( 'Products & Services', 'wp-plugin-hostgator' ),
 			},
 			NewfoldRuntime.hasCapability( 'hasYithExtended' )
-			? {
-				name: "/store/sales_discounts",
-				title: __("Sales & Discounts", "wp-plugin-hostgator"),
-			}
-			: null,
+				? {
+						name: '/store/sales_discounts',
+						title: __(
+							'Sales & Promotions',
+							'wp-plugin-hostgator'
+						),
+				  }
+				: null,
 			NewfoldRuntime.isWoo
-			? {
-				name: '/store/payments',
-				title: __( 'Payments', 'wp-plugin-bluehost' ),
-			}
-			: null,
+				? {
+						name: '/store/payments',
+						title: __( 'Payments', 'wp-plugin-bluehost' ),
+				  }
+				: null,
 			{
 				name: '/store/details',
 				title: __( 'Store Details', 'wp-plugin-hostgator' ),
-			}
-		].filter(Boolean),
+			},
+		].filter( Boolean ),
 	},
 	{
 		name: '/marketplace',
-		title: __('Marketplace', 'wp-plugin-hostgator'),
+		title: __( 'Marketplace', 'wp-plugin-hostgator' ),
 		Component: Marketplace,
 		Icon: ShoppingBagIcon,
 		subRoutes: await getMarketplaceSubnavRoutes(),
 	},
 	{
 		name: '/performance',
-		title: __('Performance', 'wp-plugin-hostgator'),
+		title: __( 'Performance', 'wp-plugin-hostgator' ),
 		Component: Performance,
 		Icon: BoltIcon,
 	},
 	{
 		name: '/settings',
-		title: __('Settings', 'wp-plugin-hostgator'),
+		title: __( 'Settings', 'wp-plugin-hostgator' ),
 		Component: Settings,
 		Icon: AdjustmentsHorizontalIcon,
 	},
 	{
 		name: '/staging',
-		title: __('Staging', 'wp-plugin-hostgator'),
+		title: __( 'Staging', 'wp-plugin-hostgator' ),
 		Component: Staging,
 		Icon: WrenchScrewdriverIcon,
 	},
 	{
 		name: '/help',
-		title: __('Help', 'wp-plugin-hostgator'),
+		title: __( 'Help', 'wp-plugin-hostgator' ),
 		Component: Help,
 		Icon: QuestionMarkCircleIcon,
 		action: NewfoldRuntime.hasCapability( 'canAccessHelpCenter' )
@@ -135,12 +143,12 @@ export const routes = [
 	},
 ];
 
-export const topRoutes = _filter(routes, (route) =>
-	topRoutePaths.includes(route.name)
+export const topRoutes = _filter( routes, ( route ) =>
+	topRoutePaths.includes( route.name )
 );
 
-export const utilityRoutes = _filter(routes, (route) =>
-	utilityRoutePaths.includes(route.name)
+export const utilityRoutes = _filter( routes, ( route ) =>
+	utilityRoutePaths.includes( route.name )
 );
 
 export default AppRoutes;
