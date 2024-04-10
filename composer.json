@@ -38,7 +38,7 @@
     "require-dev": {
         "newfold-labs/wp-php-standards": "^1.2",
         "wp-cli/i18n-command": "^2.6.1",
-        "wp-phpunit/wp-phpunit": "^6.4.2"
+        "wp-phpunit/wp-phpunit": "^6.5.2"
     },
     "scripts": {
         "fix": "vendor/bin/phpcbf --standard=phpcs.xml .",
