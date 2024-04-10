@@ -33,7 +33,7 @@
             "only": [
                 "newfold-labs/*"
             ]
-            }
+        }
     },
     "require-dev": {
         "newfold-labs/wp-php-standards": "^1.2",
