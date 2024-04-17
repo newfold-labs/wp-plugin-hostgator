@@ -3,10 +3,10 @@ import { Button, Card, Title } from '@newfold/ui-component-library';
 const BlogPosts = () => {
 	return (
 		<Card
-			style={{
+			className="hover:nfd-bg-[#F9F5FE] wppbh-app-blog-posts"
+			style={ {
 				borderRadius: 0,
-				borderTop: 0,
-			}}
+			} }
 		>
 			<Card.Content>
 				<svg

@@ -36,12 +36,17 @@ const PagesAndPosts = () => {
           )}
         </Container.Header>
 
-        <div className="nfd-grid nfd-grid-cols-2 nfd-gap-0">
-          <SitePages />
-          <BlogPosts />
-          {window.NewfoldRuntime.isYithBookingActive && <BookingAndAppointments />}
-          <StorePages />
-        </div>
+        <div className="nfd-grid md:nfd-grid-cols-2 nfd-gap-0 sm:nfd-grid-cols-1">
+					<SitePages />
+					<BlogPosts />
+					{ window.NewfoldRuntime.isYithBookingActive &&
+						window.NewfoldRuntime.isWoocommerceActive && (
+							<BookingAndAppointments />
+						) }
+					{ window.NewfoldRuntime.isWoocommerceActive && (
+						<ProductsPages />
+					) }
+				</div>
       </Container>
     </Page>
   );
