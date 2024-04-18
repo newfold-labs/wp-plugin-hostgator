@@ -81,7 +81,7 @@ export const routes = [
 	},
 	{
 		name: '/pages&posts',
-		title: __('Pages & Posts', 'wp-plugin-bluehost'),
+		title: __('Pages & Posts', 'wp-plugin-hostgator'),
 		Component: PagesAndPosts,
 		Icon: DocumentDuplicateIcon,
 		condition: true,
@@ -108,7 +108,7 @@ export const routes = [
 			NewfoldRuntime.isWoo
 				? {
 					name: '/store/payments',
-					title: __('Payments', 'wp-plugin-bluehost'),
+					title: __('Payments', 'wp-plugin-hostgator'),
 				}
 				: null,
 			{

@@ -25,22 +25,22 @@ const SitePages = () => {
 					/>
 				</svg>
 				<Title size="4" className="nfd-leading-normal nfd-my-4">
-					{ __( 'Site Pages', 'wp-plugin-bluehost' ) }
+					{__('Site Pages', 'wp-plugin-hostgator')}
 				</Title>
 				<p>
-					{ __(
+					{__(
 						'Edit your homepage and other existing pages or add new pages to your site.',
-						'wp-plugin-bluehost'
-					) }
+						'wp-plugin-hostgator'
+					)}
 				</p>
 			</Card.Content>
 			<div className="nfd-flex nfd-justify-end nfd-gap-6 nfd-items-center">
 				<a href="edit.php?post_type=page">
-					{ __( 'view all', 'wp-plugin-bluehost' ) }
+					{__('View all ', 'wp-plugin-hostgator')}
 				</a>
 				<a href="post-new.php?post_type=page">
 					<Button onClick>
-						{ __( 'Add New', 'wp-plugin-bluehost' ) }
+						{__('Add New', 'wp-plugin-hostgator')}
 					</Button>
 				</a>
 			</div>

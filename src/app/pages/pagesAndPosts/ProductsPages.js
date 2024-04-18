@@ -25,21 +25,21 @@ const ProductsPages = () => {
 					/>
 				</svg>
 				<Title size="4" className="nfd-leading-normal nfd-my-4">
-					{ __( 'Products', 'wp-plugin-bluehost' ) }
+					{__('Products', 'wp-plugin-hostgator')}
 				</Title>
 				<p>
-					{ __(
+					{__(
 						'Showcase physical and digital goods, product variations, and custom configurations.',
-						'wp-plugin-bluehost'
-					) }
+						'wp-plugin-hostgator'
+					)}
 				</p>
 			</Card.Content>
 			<div className="nfd-flex nfd-justify-end nfd-gap-6 nfd-items-center">
 				<a href="edit.php?post_type=product">
-					{ __( 'view all', 'wp-plugin-bluehost' ) }
+					{__('View all ', 'wp-plugin-hostgator')}
 				</a>
 				<a href="post-new.php?post_type=product">
-					<Button>{ __( 'Add New', 'wp-plugin-bluehost' ) }</Button>
+					<Button>{__('Add New', 'wp-plugin-hostgator')}</Button>
 				</a>
 			</div>
 		</Card>

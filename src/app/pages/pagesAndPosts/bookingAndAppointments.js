@@ -25,21 +25,21 @@ const BookingAndAppointments = () => {
 					/>
 				</svg>
 				<Title size="4" className="nfd-leading-normal nfd-my-4">
-					{ __( 'Bookings & Appointments', 'wp-plugin-bluehost' ) }
+					{__('Bookings & Appointments', 'wp-plugin-hostgator')}
 				</Title>
 				<p>
-					{ __(
+					{__(
 						'Add your list of services, setup a booking calendar, and edit your bookings form.',
-						'wp-plugin-bluehost'
-					) }
+						'wp-plugin-hostgator'
+					)}
 				</p>
 			</Card.Content>
 			<div className="nfd-flex nfd-justify-end nfd-gap-6 nfd-items-center">
 				<a href="edit.php?post_type=yith_booking&yith-plugin-fw-panel-skip-redirect=1">
-					{ __( 'view all', 'wp-plugin-bluehost' ) }
+					{__('View all ', 'wp-plugin-hostgator')}
 				</a>
 				<a href="edit.php?post_type=yith_booking&yith-plugin-fw-panel-skip-redirect=1">
-					<Button>{ __( 'Add New', 'wp-plugin-bluehost' ) }</Button>
+					<Button>{__('Add New', 'wp-plugin-hostgator')}</Button>
 				</a>
 			</div>
 		</Card>

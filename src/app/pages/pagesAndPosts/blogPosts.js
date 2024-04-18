@@ -25,21 +25,21 @@ const BlogPosts = () => {
 					/>
 				</svg>
 				<Title size="4" className="nfd-leading-normal nfd-my-4">
-					{__('Blog Posts', 'wp-plugin-bluehost')}
+					{__('Blog Posts', 'wp-plugin-hostgator')}
 				</Title>
 				<p>
 					{__(
 						'Add a new blog post or edit your existing posts.',
-						'wp-plugin-bluehost'
+						'wp-plugin-hostgator'
 					)}
 				</p>
 			</Card.Content>
 			<div className="nfd-flex nfd-justify-end nfd-gap-6 nfd-items-center">
 				<a href="edit.php">
-					{__('view all', 'wp-plugin-bluehost')}
+					{__('View all ', 'wp-plugin-hostgator')}
 				</a>
 				<a href="post-new.php">
-					<Button>{__('Add New', 'wp-plugin-bluehost')}</Button>
+					<Button>{__('Add New', 'wp-plugin-hostgator')}</Button>
 				</a>
 			</div>
 		</Card>
