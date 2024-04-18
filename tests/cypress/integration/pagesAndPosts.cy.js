@@ -4,8 +4,8 @@ describe( 'Pages & Posts', function () {
 	before( () => {
 		cy.visit(
 			'/wp-admin/admin.php?page=' +
-				Cypress.env( 'pluginId' ) +
-				'#/pages&posts'
+			Cypress.env( 'pluginId' ) +
+			'#/pages&posts'
 		);
 		cy.window()
 			.its( 'NewfoldRuntime' )
@@ -86,8 +86,7 @@ describe( 'Pages & Posts', function () {
 			);
 			cy.go( 'back' );
 		} else {
-			cy.get( '.wppbh-app-bookings' )
-				.findByText( 'Bookings & Appointments' )
+			cy.findByText( 'Bookings & Appointments' )
 				.should( 'not.exist' );
 		}
 	} );
@@ -109,8 +108,7 @@ describe( 'Pages & Posts', function () {
 			cy.url().should( 'include', 'post-new.php?post_type=product' );
 			cy.go( 'back' );
 		} else {
-			cy.get( '.wppbh-app-products' )
-				.findByText( 'Products' )
+			cy.findByText( 'Products' )
 				.should( 'not.exist' );
 		}
 	} );
