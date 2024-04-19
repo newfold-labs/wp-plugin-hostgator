@@ -10,8 +10,8 @@ const PagesAndPosts = () => {
   const { store } = useContext(AppStore);
 
   return (
-    <Page title="Pages & Posts" className={'wppbh-app-settings-page'}>
-      <Container className={'wppbh-app-settings-container'}>
+    <Page title="Pages & Posts" className={'wppbh-app-pagesAndPosts-page'}>
+      <Container>
         <Container.Header
           title={__('Pages & Posts', 'wp-plugin-hostgator')}
           description={
