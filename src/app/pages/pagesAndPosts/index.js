@@ -41,14 +41,14 @@ const PagesAndPosts = () => {
           {store?.comingSoon ? (
             <p>
               {__(
-                'Visitors to your site will see your "Coming Soon" page and not your actual site. Visit',
+                'Visitors to your site will see your "Coming Soon" page and not your actual site. Visit ',
                 'wp-plugin-hostgator'
               )}
               <a href="#/settings">
                 {__('"Settings"', 'wp-plugin-hostgator')}
               </a>
               {__(
-                'to set your site live.',
+                ' to set your site live.',
                 'wp-plugin-hostgator'
               )}
             </p>
