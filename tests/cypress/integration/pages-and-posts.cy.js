@@ -5,7 +5,7 @@ describe( 'Pages & Posts', function () {
 		cy.visit(
 			'/wp-admin/admin.php?page=' +
 			Cypress.env( 'pluginId' ) +
-			'#/pages&posts'
+			'#/pages-and-posts'
 		);
 		cy.window()
 			.its( 'NewfoldRuntime' )
@@ -16,23 +16,23 @@ describe( 'Pages & Posts', function () {
 	} );
 
 	it( 'Pages & Posts Exists', () => {
-		cy.get( '.wppbh-app-pagesAndPosts-page' )
+		cy.get( '.hgwp-app-pagesAndPosts-page' )
 			.contains( 'Pages & Posts' )
 			.scrollIntoView()
 			.should( 'be.visible' );
 	} );
 
 	it( 'site pages Exists', () => {
-		cy.get( '.wppbh-app-site-page' )
+		cy.get( '.hgwp-app-site-page' )
 			.findByText( 'Site Pages' )
 			.should( 'exist' );
-		cy.get( '.wppbh-app-site-page' )
+		cy.get( '.hgwp-app-site-page' )
 			.find( 'a[href="edit.php?post_type=page"]' )
 			.click();
 		cy.url().should( 'include', 'edit.php?post_type=page' );
 		cy.go( 'back' );
 
-		cy.get( '.wppbh-app-site-page' )
+		cy.get( '.hgwp-app-site-page' )
 			.find( 'a[href="post-new.php?post_type=page"] Button' )
 			.click();
 		cy.url().should( 'include', 'post-new.php?post_type=page' );
@@ -40,14 +40,14 @@ describe( 'Pages & Posts', function () {
 	} );
 
 	it( 'Blog posts Exists', () => {
-		cy.get( '.wppbh-app-blog-posts' )
+		cy.get( '.hgwp-app-blog-posts' )
 			.findByText( 'Blog Posts' )
 			.should( 'exist' );
-		cy.get( '.wppbh-app-blog-posts' ).find( 'a[href="edit.php"]' ).click();
+		cy.get( '.hgwp-app-blog-posts' ).find( 'a[href="edit.php"]' ).click();
 		cy.url().should( 'include', 'edit.php' );
 		cy.go( 'back' );
 
-		cy.get( '.wppbh-app-blog-posts' )
+		cy.get( '.hgwp-app-blog-posts' )
 			.get( 'a[href="post-new.php"] Button' )
 			.click();
 		cy.url().should( 'include', 'post-new.php' );
@@ -59,10 +59,10 @@ describe( 'Pages & Posts', function () {
 			NewfoldRuntime.isYithBookingActive &&
 			NewfoldRuntime.isWoocommerceActive
 		) {
-			cy.get( '.wppbh-app-bookings' )
+			cy.get( '.hgwp-app-bookings' )
 				.findByText( 'Bookings & Appointments' )
 				.should( 'exist' );
-			cy.get( '.wppbh-app-bookings' )
+			cy.get( '.hgwp-app-bookings' )
 				.find(
 					'a[href="edit.php?post_type=yith_booking&yith-plugin-fw-panel-skip-redirect=1"]'
 				)
@@ -74,7 +74,7 @@ describe( 'Pages & Posts', function () {
 			);
 			cy.go( 'back' );
 
-			cy.get( '.wppbh-app-bookings' )
+			cy.get( '.hgwp-app-bookings' )
 				.find(
 					'a[href="edit.php?post_type=yith_booking&yith-plugin-fw-panel-skip-redirect=1"] Button'
 				)
@@ -93,16 +93,16 @@ describe( 'Pages & Posts', function () {
 
 	it( 'Products Exists', () => {
 		if ( NewfoldRuntime.isWoocommerceActive ) {
-			cy.get( '.wppbh-app-products' )
+			cy.get( '.hgwp-app-products' )
 				.findByText( 'Products' )
 				.should( 'exist' );
-			cy.get( '.wppbh-app-products' )
+			cy.get( '.hgwp-app-products' )
 				.find( 'a[href="edit.php?post_type=product"]' )
 				.click();
 			cy.url().should( 'include', 'edit.php?post_type=product' );
 			cy.go( 'back' );
 
-			cy.get( '.wppbh-app-products' )
+			cy.get( '.hgwp-app-products' )
 				.find( 'a[href="post-new.php?post_type=product"] Button' )
 				.click();
 			cy.url().should( 'include', 'post-new.php?post_type=product' );
