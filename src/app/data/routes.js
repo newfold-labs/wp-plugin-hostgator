@@ -18,7 +18,7 @@ import Settings from '../pages/settings';
 import Staging from '../pages/staging';
 import Help from '../pages/help';
 import Store from '../pages/ecommerce/page';
-import PagesAndPosts from '../pages/pagesAndPosts';
+import PagesAndPosts from '../pages/pages-and-posts';
 import { getMarketplaceSubnavRoutes } from '../../../vendor/newfold-labs/wp-module-marketplace/components/marketplaceSubnav';
 
 const addPartialMatch = (prefix, path) =>
@@ -63,7 +63,7 @@ export const AppRoutes = () => {
 
 const topRoutePaths = [
 	'/home',
-	'/pages&posts',
+	'/pages-and-posts',
 	'/store',
 	'/marketplace',
 	'/performance',
@@ -80,7 +80,7 @@ export const routes = [
 		Icon: HomeIcon,
 	},
 	{
-		name: '/pages&posts',
+		name: '/pages-and-posts',
 		title: __('Pages & Posts', 'wp-plugin-hostgator'),
 		Component: PagesAndPosts,
 		Icon: DocumentDuplicateIcon,

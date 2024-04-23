@@ -30,7 +30,7 @@ const PagesAndPosts = () => {
                 <span className="nfd-font-semibold nfd-text-black">
                   {__(
                     'Your site is live.',
-                    'wp-plugin-bluehost'
+                    'wp-plugin-hostgator'
                   )}
                 </span>
               </Alert>
