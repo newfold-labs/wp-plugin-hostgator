@@ -1,6 +1,11 @@
-import { useEffect } from '@wordpress/element';
+import { useEffect, useState } from '@wordpress/element';
+import apiFetch from '@wordpress/api-fetch';
 import { useViewportMatch } from '@wordpress/compose';
+import { addQueryArgs } from '@wordpress/url';
+import classnames from 'classnames';
+import { filter } from 'lodash';
 import { Modal, SidebarNavigation } from '@newfold/ui-component-library';
+import { default as NewfoldNotifications } from '@modules/wp-module-notifications/assets/js/components/notifications/';
 import { NavLink, useLocation } from 'react-router-dom';
 import Logo from './logo';
 import { topRoutes, utilityRoutes } from '../../data/routes';
@@ -144,6 +149,9 @@ export const SideNavMenuSubItem = ( { label, name, path, action } ) => {
 };
 
 export const SideNav = () => {
+	const location = useLocation();
+	const hashedPath = '#' + location.pathname;
+
 	return (
 		<aside className="hgwp-app-sidenav nfd-shrink-0 nfd-hidden min-[783px]:nfd-block nfd-pb-6 nfd-bottom-0 nfd-w-56">
 			<SidebarNavigation>
@@ -152,6 +160,20 @@ export const SideNav = () => {
 					<SideNavMenu />
 				</SidebarNavigation.Sidebar>
 			</SidebarNavigation>
+			<NewfoldNotifications
+				constants={ {
+					context: 'hostgator-app-nav',
+					page: hashedPath,
+				} }
+				methods={ {
+					apiFetch,
+					addQueryArgs,
+					classnames,
+					filter,
+					useState,
+					useEffect,
+				} }
+			/>
 		</aside>
 	);
 };
