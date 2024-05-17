@@ -90,5 +90,5 @@ jobs:
         if: steps.changes.outcome == 'failure'
         run: |
           echo "i18n files are out of date"
-          echo "Please run `composer run i18n` to update them locally and commit before releasing"
+          echo "Please run command (composer run i18n) locally to update them and commit before releasing"
           exit 1
