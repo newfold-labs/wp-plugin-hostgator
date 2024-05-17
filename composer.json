@@ -54,11 +54,11 @@
         "i18n-po": "vendor/bin/wp i18n update-po ./languages/wp-plugin-hostgator.pot ./languages",
         "i18n-mo": "vendor/bin/wp i18n make-mo ./languages",
         "i18n-json": "vendor/bin/wp i18n make-json ./languages --no-purge --pretty-print",
-        "i18n-json-rename": "for f in ./languages/*.json; do mv \"$f\" \"$(echo \"$f\" | sed 's/[0-9a-fA-F]\\{32\\}/hostgator-script/')\"; done",
         "i18n": [
             "@i18n-pot",
             "@i18n-po",
-            "@i18n-mo"
+            "@i18n-mo",
+            "@i18n-json"
         ]
     },
     "scripts-descriptions": {
@@ -68,8 +68,7 @@
         "i18n-pot": "Generate a .pot file for translation.",
         "i18n-po": "Update existing .po files.",
         "i18n-mo": "Generate new language .mo files.",
-        "i18n-json": "Generate new language .json files.",
-        "i18n-json-rename": "Rename the language json files to remove the pesky hash."
+        "i18n-json": "Generate new language .json files."
     },
     "require": {
         "doctrine/inflector": "1.4.4 as 1.3.1",
