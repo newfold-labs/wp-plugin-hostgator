@@ -58,7 +58,7 @@ if ( get_option( 'mm_brand', false ) && get_option( 'hg_region', false ) ) {
 // Performance/cache settings
 $nfd_module_container->set(
 	'cache_types',
-	array( 'browser', 'file', 'skip404' )
+	array( 'browser', 'skip404' )
 );
 
 $website_guide_link = 'https://www.hostgator.com/blog/build-wordpress-website-guide/';
