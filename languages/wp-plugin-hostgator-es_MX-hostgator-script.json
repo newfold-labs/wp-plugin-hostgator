@@ -1,7 +1,7 @@
 {
     "translation-revision-date": "2023-08-24 18:27",
     "generator": "WP-CLI\/2.10.0",
-    "source": "build\/2.7.1\/index.js",
+    "source": "build\/2.8.0\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
@@ -547,6 +547,60 @@
                 ""
             ],
             "Working\u2026": [
+                ""
+            ],
+            "Pages & Posts": [
+                ""
+            ],
+            "Payments": [
+                ""
+            ],
+            "Products": [
+                ""
+            ],
+            "Showcase physical and digital goods, product variations, and custom configurations.": [
+                ""
+            ],
+            "View all ": [
+                ""
+            ],
+            "Add New": [
+                ""
+            ],
+            "Blog Posts": [
+                ""
+            ],
+            "Add a new blog post or edit your existing posts.": [
+                ""
+            ],
+            "Bookings & Appointments": [
+                ""
+            ],
+            "Add your list of services, setup a booking calendar, and edit your bookings form.": [
+                ""
+            ],
+            "Your site is not live.": [
+                ""
+            ],
+            "Your site is live.": [
+                ""
+            ],
+            "Visitors to your site will see your \"Coming Soon\" page and not your actual site. Visit ": [
+                ""
+            ],
+            "\"Settings\"": [
+                ""
+            ],
+            " to set your site live.": [
+                ""
+            ],
+            "Visitors to your site will see all your publicly published pages.": [
+                ""
+            ],
+            "Site Pages": [
+                ""
+            ],
+            "Edit your homepage and other existing pages or add new pages to your site.": [
                 ""
             ]
         }
