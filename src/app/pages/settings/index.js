@@ -1,6 +1,8 @@
 import { Container, Page } from '@newfold/ui-component-library';
-import AutomaticUpdates from './automaticUpdates';
 import ComingSoon from './comingSoon';
+import AutomaticUpdates from './automaticUpdates';
+import HelpCenterSettings from './helpCenterSettings';
+import WonderBlocksSettings from './wonderBlocksSettings';
 import CommentSettings from './commentSettings';
 import ContentSettings from './contentSettings';
 
@@ -22,6 +24,18 @@ const Settings = () => {
 					className={ 'hgwp-app-settings-coming-soon' }
 				>
 					<ComingSoon />
+				</Container.Block>
+
+				<Container.Block
+					separator={ true }
+					className={ 'hgwp-app-settings-wonder-blocks' }
+				>
+					<Container.SettingsField
+						title={ __( 'Features', 'wp-plugin-hostgator' ) }
+					></Container.SettingsField>
+					<WonderBlocksSettings />
+					<br />
+					<HelpCenterSettings />
 				</Container.Block>
 
 				<Container.Block

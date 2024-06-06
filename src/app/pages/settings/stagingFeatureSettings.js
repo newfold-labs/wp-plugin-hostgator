@@ -66,7 +66,7 @@ const StagingFeatureSettings = () => {
 			staging,
 		} );
 		notifySuccess( getStagingNoticeTitle, getStagingNoticeText );
-		updateUI( '.wppbh-app-navitem-Staging', staging );
+		updateUI( '.hgwp-app-navitem-Staging', staging );
 	}, [ staging ] );
 
 	return (

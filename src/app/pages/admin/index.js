@@ -7,21 +7,21 @@ import { Container, Page } from '@newfold/ui-component-library';
 
 const Admin = () => {
 	return (
-		<Page title="Admin" className={ 'wppbh-app-settings-page' }>
-			<Container className={ 'wppbh-app-settings-container' }>
+		<Page title="Admin" className={ 'hgwp-app-settings-page' }>
+			<Container className={ 'hgwp-app-settings-container' }>
 				<Container.Header
 					title={ __( 'Admin', 'wp-plugin-hostgator' ) }
 					description={ __(
 						'Secret page to manage admin features and settings.',
 						'wp-plugin-hostgator'
 					) }
-					className={ 'wppbh-app-settings-header' }
+					className={ 'hgwp-app-settings-header' }
 				/>
 
 				<Container.Block
 					separator={ true }
 					id={ 'help-center' }
-					className={ classNames( 'wppbh-app-admin' ) }
+					className={ classNames( 'hgwp-app-admin' ) }
 				>
 					<Container.SettingsField
 						title="Features"
