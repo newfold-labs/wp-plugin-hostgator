@@ -7,6 +7,8 @@
 
 namespace HostGator;
 
+use function NewfoldLabs\WP\Module\Features\isEnabled;
+
 /**
  * \HostGator\Admin
  */
@@ -58,15 +60,46 @@ final class Admin {
 	 * @return array
 	 */
 	public static function subpages() {
-		return array(
-			'hostgator#/home'            => __( 'Home', 'wp-plugin-hostgator' ),
+		$home = array(
+			'hostgator#/home' => __( 'Home', 'wp-plugin-hostgator' ),
+		);
+		$pagesAndPosts = array(
 			'hostgator#/pages-and-posts' => __( 'Pages & Posts', 'wp-plugin-hostgator' ),
-			'hostgator#/store'           => __( 'Store', 'wp-plugin-hostgator' ),
-			'hostgator#/marketplace'     => __( 'Marketplace', 'wp-plugin-hostgator' ),
-			'hostgator#/performance'     => __( 'Performance', 'wp-plugin-hostgator' ),
-			'hostgator#/settings'        => __( 'Settings', 'wp-plugin-hostgator' ),
-			'hostgator#/staging'         => __( 'Staging', 'wp-plugin-hostgator' ),
-			'hostgator#/help'            => __( 'Help', 'wp-plugin-hostgator' ),
+		);
+		$store = array(
+			'hostgator#/store' => __( 'Store', 'wp-plugin-hostgator' ),
+		);
+		$marketplace = array(
+			'hostgator#/marketplace' => __( 'Marketplace', 'wp-plugin-hostgator' ),
+		);
+		// add performance if enabled
+		$performance = isEnabled( 'performance' )
+		? array(
+			'hostgator#/performance' => __( 'Performance', 'wp-plugin-hostgator' ),
+		)
+		: array();
+		$settings = array(
+			'hostgator#/settings' => __( 'Settings', 'wp-plugin-hostgator' ),
+		);
+		// add staging if enabled
+		$staging = isEnabled( 'staging' )
+			? array(
+				'hostgator#/staging' => __( 'Staging', 'wp-plugin-hostgator' ),
+			)
+			: array();
+		$help = array(
+			'hostgator#/help' => __( 'Help', 'wp-plugin-hostgator' ),
+		);
+
+		return array_merge(
+			$home,
+			$pagesAndPosts,
+			$store,
+			$marketplace,
+			$performance,
+			$settings,
+			$staging,
+			$help,
 		);
 	}
 
@@ -256,7 +289,7 @@ final class Admin {
 		\wp_register_script(
 			'hostgator-script',
 			HOSTGATOR_BUILD_URL . '/index.js',
-			array_merge( $asset['dependencies'], array( 'nfd-runtime' ) ),
+			array_merge( $asset['dependencies'], array( 'newfold-features', 'nfd-runtime' ) ),
 			$asset['version'],
 			true
 		);
