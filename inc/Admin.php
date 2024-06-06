@@ -60,16 +60,16 @@ final class Admin {
 	 * @return array
 	 */
 	public static function subpages() {
-		$home = array(
+		$home          = array(
 			'hostgator#/home' => __( 'Home', 'wp-plugin-hostgator' ),
 		);
 		$pagesAndPosts = array(
 			'hostgator#/pages-and-posts' => __( 'Pages & Posts', 'wp-plugin-hostgator' ),
 		);
-		$store = array(
+		$store         = array(
 			'hostgator#/store' => __( 'Store', 'wp-plugin-hostgator' ),
 		);
-		$marketplace = array(
+		$marketplace   = array(
 			'hostgator#/marketplace' => __( 'Marketplace', 'wp-plugin-hostgator' ),
 		);
 		// add performance if enabled
@@ -78,7 +78,7 @@ final class Admin {
 			'hostgator#/performance' => __( 'Performance', 'wp-plugin-hostgator' ),
 		)
 		: array();
-		$settings = array(
+		$settings    = array(
 			'hostgator#/settings' => __( 'Settings', 'wp-plugin-hostgator' ),
 		);
 		// add staging if enabled
@@ -87,7 +87,7 @@ final class Admin {
 				'hostgator#/staging' => __( 'Staging', 'wp-plugin-hostgator' ),
 			)
 			: array();
-		$help = array(
+		$help    = array(
 			'hostgator#/help' => __( 'Help', 'wp-plugin-hostgator' ),
 		);
 
