@@ -17,7 +17,7 @@ import { store as noticesStore } from '@wordpress/notices';
 import { kebabCase, filter } from 'lodash';
 import { AppNav } from './components/app-nav';
 import { SiteInfoBar } from './components/site-info';
-import { NotificationFeed } from './components/notifications/feed';
+import { NotificationFeed } from 'App/components/notifications';
 import { addQueryArgs } from '@wordpress/url';
 
 // component sourced from module
