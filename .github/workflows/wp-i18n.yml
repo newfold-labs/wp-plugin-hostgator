@@ -86,19 +86,9 @@ jobs:
         continue-on-error: true
         run: git diff --exit-code
 
-      - name: Commit updated language files
+      - name: Fail if language files have changes
         if: steps.changes.outcome == 'failure'
         run: |
-          git config --local user.name "${GITHUB_ACTOR} "
-          git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-          git remote -v
-          git add './languages'
-          git commit -m "WordPress I18N triggered by commit ${{ github.sha }}"
-          git status
-
-      - name: Push changes
-        if: steps.changes.outcome == 'failure'
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          echo "i18n files are out of date"
+          echo "Please run command (composer run i18n) locally to update them and commit before releasing"
+          exit 1
