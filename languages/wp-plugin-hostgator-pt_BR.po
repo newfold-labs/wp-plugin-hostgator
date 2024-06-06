@@ -37,96 +37,96 @@ msgstr "Plugin WordPress que integra um site WordPress com o painel de controle 
 
 #. Author of the plugin
 #: wp-plugin-hostgator.php
-#: inc/Admin.php:190
-#: inc/Admin.php:191
+#: inc/Admin.php:223
+#: inc/Admin.php:224
 msgid "HostGator"
 msgstr "HostGator"
 
-#: bootstrap.php:22
+#: bootstrap.php:23
 msgid "Please install the HostGator Plugin dependencies."
 msgstr "Por favor instale as dependências do Plugin HostGator."
 
-#: bootstrap.php:73
+#: bootstrap.php:74
 msgid "A New WordPress Site"
 msgstr "Um Novo Site WordPress"
 
-#: bootstrap.php:74
+#: bootstrap.php:75
 msgid "Coming Soon!"
 msgstr "Em Breve!"
 
 #. translators: %1$s is replaced with opening link tag taking you to hostgator.com/wordpress, %2$s is replaced with closing link tag, %3$s is replaced with opening link tag taking you to login page, %4$s is replaced with closing link tag, %5$s is replaced with opening link tag taking you to portal.hostgator.com, %6$s is replaced with closing link tag.
-#: bootstrap.php:87
+#: bootstrap.php:88
 msgid "A %1$sHostGator%2$s powered website. Is this your website? Log in to %3$sWordPress%4$s or %5$sHostgator%6$s."
 msgstr "Um site alimentado por %1$sHostGator%2$s. Este é o seu site? Inicie sessão em %3$sWordPress%4$s ou %5$sHostgator%6$s."
 
 #. translators: %s is Blog name
-#: bootstrap.php:97
+#: bootstrap.php:98
 msgid "%s &mdash; Coming Soon"
 msgstr "%s &mdash; Em Breve"
 
-#: bootstrap.php:100
+#: bootstrap.php:101
 msgid "Coming Soon Active"
 msgstr "Ativo Em Breve"
 
 #. translators: %1$s is replaced with the opening link tag, %2$s is replaced with the closing link tag, %3$s is the opening link tag to preview the page, %4$s is the closing link tag.
-#: bootstrap.php:103
+#: bootstrap.php:104
 msgid "Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s."
 msgstr "Seu site está exibindo uma %1$spágina em breve%2$s. Assim que estiver pronto, %3$slance seu site%4$s."
 
-#: bootstrap.php:104
+#: bootstrap.php:105
 msgid "Preview the coming soon landing page"
 msgstr "Visualize a página de destino em breve"
 
-#: inc/Admin.php:62
-#: inc/Admin.php:313
+#: inc/Admin.php:64
+#: inc/Admin.php:346
 #: build/2.8.0/index.js:1
 msgid "Home"
 msgstr "Início"
 
-#: inc/Admin.php:64
+#: inc/Admin.php:70
 #: build/2.8.0/index.js:1
 msgid "Store"
 msgstr "Loja"
 
-#: inc/Admin.php:65
+#: inc/Admin.php:73
 #: build/2.8.0/index.js:1
 msgid "Marketplace"
 msgstr "Mercado"
 
-#: inc/Admin.php:66
+#: inc/Admin.php:78
 #: build/2.8.0/index.js:1
 msgid "Performance"
 msgstr "Desempenho"
 
-#: inc/Admin.php:67
-#: inc/Admin.php:314
+#: inc/Admin.php:82
+#: inc/Admin.php:347
 #: build/2.8.0/index.js:1
 msgid "Settings"
 msgstr "Configurações"
 
-#: inc/Admin.php:68
+#: inc/Admin.php:87
 #: build/2.8.0/index.js:1
 msgid "Staging"
 msgstr "Encenação"
 
-#: inc/Admin.php:69
+#: inc/Admin.php:91
 #: build/2.8.0/index.js:1
 msgid "Help"
 msgstr "Ajuda"
 
-#: inc/Admin.php:233
+#: inc/Admin.php:266
 msgid "Please update to a newer WordPress version."
 msgstr "Por favor, atualize para uma versão mais recente do WordPress."
 
-#: inc/Admin.php:234
+#: inc/Admin.php:267
 msgid "There are new WordPress components which this plugin requires in order to render the interface."
 msgstr "Existem novos componentes do WordPress que este plugin precisa para renderizar a interface."
 
-#: inc/Admin.php:235
+#: inc/Admin.php:268
 msgid "Please update now"
 msgstr "Por favor, atualize agora"
 
-#: inc/Admin.php:327
+#: inc/Admin.php:360
 msgid "Thank you for creating with <a href=\"https://wordpress.org/\">WordPress</a> and <a href=\"https://hostgator.com/about\">HostGator</a>."
 msgstr "Obrigado por criar com <a href=\"https://wordpress.org/\">WordPress</a> e <a href=\"https://hostgator.com.br/\">HostGator</a>."
 
@@ -874,19 +874,19 @@ msgstr "Vendas & Promoções"
 msgid "Working…"
 msgstr "Trabalhando…"
 
-#: bootstrap.php:77
+#: bootstrap.php:78
 msgid "How to build your WordPress Website"
 msgstr ""
 
-#: bootstrap.php:80
+#: bootstrap.php:81
 msgid "How to Migrate a Website to Hostgator?"
 msgstr ""
 
-#: bootstrap.php:83
+#: bootstrap.php:84
 msgid "Why choose HostGator for your WordPress site?"
 msgstr ""
 
-#: inc/Admin.php:63
+#: inc/Admin.php:67
 #: build/2.8.0/index.js:1
 msgid "Pages & Posts"
 msgstr ""
@@ -957,4 +957,40 @@ msgstr ""
 
 #: build/2.8.0/index.js:1
 msgid "Edit your homepage and other existing pages or add new pages to your site."
+msgstr ""
+
+#: build/2.8.0/index.js:1
+msgid "Admin"
+msgstr ""
+
+#: build/2.8.0/index.js:1
+msgid "Secret page to manage admin features and settings."
+msgstr ""
+
+#: build/2.8.0/index.js:1
+msgid "The Help Center provides guided, step-by-step assistance as you build your site."
+msgstr ""
+
+#: build/2.8.0/index.js:1
+msgid "Sorry, that is not allowed."
+msgstr ""
+
+#: build/2.8.0/index.js:1
+msgid "This feature cannot currently be modified."
+msgstr ""
+
+#: build/2.8.0/index.js:1
+msgid "Features"
+msgstr ""
+
+#: build/2.8.0/index.js:1
+msgid "The performance feature provides improvements to loads faster for visitors including cache settings."
+msgstr ""
+
+#: build/2.8.0/index.js:1
+msgid "The staging feature provides a way to copy a site to test new updates, features or content."
+msgstr ""
+
+#: build/2.8.0/index.js:1
+msgid "Wonder Blocks provides a library of customizable block patterns and page templates."
 msgstr ""

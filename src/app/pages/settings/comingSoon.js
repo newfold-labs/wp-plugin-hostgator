@@ -6,7 +6,7 @@ import {
 import { useState } from '@wordpress/element';
 import { useUpdateEffect } from 'react-use';
 import { Alert, Container, ToggleField } from '@newfold/ui-component-library';
-import { useNotification } from '../../components/notifications/feed';
+import { useNotification } from 'App/components/notifications';
 
 const ComingSoon = () => {
 	const { store, setStore } = useContext( AppStore );

@@ -11,6 +11,7 @@ use WP_Forge\WPUpdateHandler\PluginUpdater;
 use WP_Forge\UpgradeHandler\UpgradeHandler;
 use NewfoldLabs\WP\ModuleLoader\Container;
 use NewfoldLabs\WP\ModuleLoader\Plugin;
+use NewfoldLabs\WP\Module\Features\Features;
 
 use function NewfoldLabs\WP\ModuleLoader\container as setContainer;
 
@@ -173,3 +174,6 @@ require HOSTGATOR_PLUGIN_DIR . '/inc/updates.php';
 if ( is_admin() ) {
 	new Admin();
 }
+
+// Instantiate the Features singleton
+Features::getInstance();

@@ -38,7 +38,13 @@ export const AppStoreProvider = ( { children } ) => {
 		if ( false === booted ) {
 			hgApiFetchSettings()
 				.then( ( settings ) => {
-					setStore( { ...store, ...window.HGWP, ...settings } );
+					setStore( { 
+						...store,
+						...window.HGWP,
+						...settings,
+						features: window.NewfoldFeatures.features,
+						toggleableFeatures: window.NewfoldFeatures.togglable,
+					} );
 					setBooted( true );
 				} )
 				.catch( ( error ) => {
