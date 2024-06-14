@@ -248,6 +248,11 @@ body.toplevel_page_hostgator {
     z-index: -1;
 }
 
+.nfd-disabled {
+    opacity: .5;
+    pointer-events: disabled;
+}
+
 .hgwpp {
 
     .components-card {

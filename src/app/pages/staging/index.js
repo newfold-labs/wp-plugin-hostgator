@@ -3,7 +3,7 @@ import { useState, useEffect } from '@wordpress/element';
 import apiFetch from '@wordpress/api-fetch';
 import classnames from 'classnames';
 import { NewfoldRuntime } from '@newfold-labs/wp-module-runtime';
-import { useNotification } from '../../components/notifications/feed';
+import { useNotification } from 'App/components/notifications';
 // component sourced from staging module
 import { default as NewfoldStaging } from '../../../../vendor/newfold-labs/wp-module-staging/components/staging/';
 
