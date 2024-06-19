@@ -8,7 +8,7 @@ import {
 	SelectField,
 	ToggleField,
 } from '@newfold/ui-component-library';
-import { useNotification } from '../../components/notifications/feed';
+import { useNotification } from 'App/components/notifications';
 
 const OldPostsComments = ( { setError, notify } ) => {
 	const { store, setStore } = useContext( AppStore );

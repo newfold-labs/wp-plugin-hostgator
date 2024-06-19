@@ -12,13 +12,14 @@ import { NewfoldRuntime } from '@newfold-labs/wp-module-runtime';
 import { Route, Routes } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
 import Home from '../pages/home';
+import PagesAndPosts from '../pages/pages-and-posts';
+import Store from '../pages/ecommerce/page';
 import Marketplace from '../pages/marketplace';
 import Performance from '../pages/performance';
 import Settings from '../pages/settings';
 import Staging from '../pages/staging';
 import Help from '../pages/help';
-import Store from '../pages/ecommerce/page';
-import PagesAndPosts from '../pages/pages-and-posts';
+import Admin from '../pages/admin';
 import { getMarketplaceSubnavRoutes } from '../../../vendor/newfold-labs/wp-module-marketplace/components/marketplaceSubnav';
 
 const addPartialMatch = (prefix, path) =>
@@ -78,6 +79,7 @@ export const routes = [
 		title: __('Home', 'wp-plugin-hostgator'),
 		Component: Home,
 		Icon: HomeIcon,
+		condition: true,
 	},
 	{
 		name: '/pages-and-posts',
@@ -91,6 +93,7 @@ export const routes = [
 		title: __('Store', 'wp-plugin-hostgator'),
 		Component: Store,
 		Icon: BuildingStorefrontIcon,
+		condition: true,
 		subRoutes: [
 			{
 				name: '/store/products',
@@ -123,33 +126,44 @@ export const routes = [
 		Component: Marketplace,
 		Icon: ShoppingBagIcon,
 		subRoutes: await getMarketplaceSubnavRoutes(),
+		condition: true,
 	},
 	{
 		name: '/performance',
 		title: __('Performance', 'wp-plugin-hostgator'),
 		Component: Performance,
 		Icon: BoltIcon,
+		condition: await window.NewfoldFeatures.isEnabled( 'performance' ),
 	},
 	{
 		name: '/settings',
 		title: __('Settings', 'wp-plugin-hostgator'),
 		Component: Settings,
 		Icon: AdjustmentsHorizontalIcon,
+		condition: true,
 	},
 	{
 		name: '/staging',
 		title: __('Staging', 'wp-plugin-hostgator'),
 		Component: Staging,
 		Icon: WrenchScrewdriverIcon,
+		condition: await window.NewfoldFeatures.isEnabled( 'staging' ),
 	},
 	{
 		name: '/help',
 		title: __('Help', 'wp-plugin-hostgator'),
 		Component: Help,
 		Icon: QuestionMarkCircleIcon,
+		condition: true,
 		action: NewfoldRuntime.hasCapability('canAccessHelpCenter')
 			? HelpCenterAI
 			: false,
+	},
+	{
+		name: '/admin',
+		title: __( 'Admin', 'wp-plugin-hostgator' ),
+		Component: Admin,
+		condition: true,
 	},
 ];
 

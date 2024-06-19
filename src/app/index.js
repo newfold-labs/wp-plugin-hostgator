@@ -17,7 +17,7 @@ import { store as noticesStore } from '@wordpress/notices';
 import { kebabCase, filter } from 'lodash';
 import { AppNav } from './components/app-nav';
 import { SiteInfoBar } from './components/site-info';
-import { NotificationFeed } from './components/notifications/feed';
+import { NotificationFeed } from 'App/components/notifications';
 import { addQueryArgs } from '@wordpress/url';
 
 // component sourced from module
@@ -70,7 +70,7 @@ const AppBody = ( props ) => {
 			id="hgwp-app-rendered"
 			className={ classnames(
 				'wpadmin-brand-hostgator',
-				`wppbh-wp-${ NewfoldRuntime.sdk.wpversion }`,
+				`hgwp-wp-${ NewfoldRuntime.sdk.wpversion }`,
 				`hgwp-page-${ kebabCase( location.pathname ) }`,
 				props.className,
 				'nfd-w-full nfd-p-4 min-[783px]:nfd-p-0'

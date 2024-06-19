@@ -1,5 +1,5 @@
 import { FreePlugins } from '@newfold-labs/wp-module-ecommerce';
-import { useNotification } from '../../components/notifications/feed';
+import { useNotification } from 'App/components/notifications';
 
 const FreePluginsSection = () => {
 	const notify = useNotification();

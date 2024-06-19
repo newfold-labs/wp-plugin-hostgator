@@ -5,7 +5,7 @@ import apiFetch from '@wordpress/api-fetch';
 import classnames from 'classnames';
 import { useUpdateEffect } from 'react-use';
 import { NewfoldRuntime } from '@newfold-labs/wp-module-runtime';
-import { useNotification } from '../../components/notifications/feed';
+import { useNotification } from 'App/components/notifications';
 import {
 	hostgatorSettingsApiFetch as newfoldSettingsApiFetch,
 	hostgatorPurgeCacheApiFetch as newfoldPurgeCacheApiFetch,
