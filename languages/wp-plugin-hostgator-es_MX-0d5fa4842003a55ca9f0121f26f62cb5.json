@@ -1,0 +1,635 @@
+{
+    "translation-revision-date": "2023-08-24 18:27",
+    "generator": "WP-CLI\/2.10.0",
+    "source": "build\/2.9.2\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "es_MX",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "Home": [
+                "Pagina principal"
+            ],
+            "Marketplace": [
+                "Mercado en L\u00ednea"
+            ],
+            "Performance": [
+                "Rendimiento"
+            ],
+            "Settings": [
+                "Configuraciones"
+            ],
+            "Help": [
+                "Ayuda"
+            ],
+            "Hostgator WordPress Plugin": [
+                "Plugin de HostGator para WordPress"
+            ],
+            "Oh No, An Error!": [
+                "\u00a1Oh no, un error!"
+            ],
+            "You found an error, please refresh the page and try again!": [
+                "Ha encontrado un error, \u00a1actualice la p\u00e1gina e int\u00e9ntalo de nuevo!"
+            ],
+            "If the error persists, please contact support.": [
+                "Si persiste el error, p\u00f3ngase en contacto con el soporte."
+            ],
+            " Error code: ": [
+                " C\u00f3digo de error: "
+            ],
+            "Phone": [
+                "Tel\u00e9fono"
+            ],
+            "Give us a ring at (866) 96-GATOR": [
+                "Ll\u00e1menos al (866) 96-GATOR"
+            ],
+            "Call Us": [
+                "Ll\u00e1menos"
+            ],
+            "Chat": [
+                "Chat"
+            ],
+            "Have a question? We're here 24\/7\/365": [
+                "\u00bfTiene alguna pregunta? Estamos aqu\u00ed 24\/7\/365"
+            ],
+            "Live Chat": [
+                "Chat En Vivo"
+            ],
+            "Tweet": [
+                "Tweet"
+            ],
+            "Tweet us at @hgsupport for support": [
+                "Env\u00edenos un tweet a @hgsupport para obtener ayuda"
+            ],
+            "Tweet Us": [
+                "Env\u00edenos un tweet"
+            ],
+            "Knowledge Base": [
+                "Base de Conocimientos"
+            ],
+            "Know what the pros know.": [
+                "Sepa lo que saben los profesionales."
+            ],
+            "Find Answers": [
+                "Encontre Respuestas"
+            ],
+            "Blog": [
+                "Blog"
+            ],
+            "Get our tips and in-depth articles.": [
+                "Obtenga nuestros consejos y art\u00edculos detallados."
+            ],
+            "Learn Stuff": [
+                "Aprenda Cosas"
+            ],
+            "Video Tutorials": [
+                "Tutoriales en V\u00eddeo"
+            ],
+            "Step-by-step tutorials and additional guides.": [
+                "Tutoriales paso a paso y gu\u00edas adicionales."
+            ],
+            "Watch Now": [
+                "Vea Ahora"
+            ],
+            "Themes": [
+                "Temas"
+            ],
+            "There's nothing here!": [
+                "\u00a1No hay nada aqu\u00ed!"
+            ],
+            "We are available 24\/7 to help answer questions and solve your problems.": [
+                "Estamos disponibles las 24 horas, los 7 d\u00edas de la semana, para ayudar a responder preguntas y resolver tus problemas."
+            ],
+            "Settings and Performance": [
+                "Configuraci\u00f3n y Rendimiento"
+            ],
+            "Customize & fine-tune your site.": [
+                "Personalice y ajuste su sitio web."
+            ],
+            "Manage Settings": [
+                "Administrar Configuraciones"
+            ],
+            "Manage your site settings. You can ajdust automatic updates, comments, revisions and more.": [
+                "Administre la configuraci\u00f3n de su sitio web. Es posible ajustar actualizaciones autom\u00e1ticas, comentarios, revisiones y m\u00e1s."
+            ],
+            "Manage site performance and caching settings as well as clear the site cache.": [
+                "Administre el rendimiento del sitio web y la configuraci\u00f3n de almacenamiento en cach\u00e9, as\u00ed como borre el cach\u00e9 del sitio web."
+            ],
+            "Visit Marketplace": [
+                "Visite al Sitio de Com\u00e9rcio en L\u00ednea"
+            ],
+            "Add site services, themes or plugins from the marketplace.": [
+                "A\u00f1ada servicios de sitio web, temas o plugins desde el sitio de com\u00e9rcio en l\u00ednea."
+            ],
+            "Website Content": [
+                "Contenido del Sitio Web"
+            ],
+            "Create, manage & sort your story.": [
+                "Cree, administre y ordene su historia."
+            ],
+            "New Post": [
+                "Nueva publicaci\u00f3n"
+            ],
+            "Write a new blog post.": [
+                "Escriba una nueva publicaci\u00f3n de blog."
+            ],
+            "Pages": [
+                "P\u00e1ginas"
+            ],
+            "New Page": [
+                "Nueva P\u00e1gina"
+            ],
+            "Add fresh pages to your website.": [
+                "A\u00f1ada p\u00e1ginas nuevas a su sitio web."
+            ],
+            "Categories": [
+                "Categor\u00edas"
+            ],
+            "Manage Categories": [
+                "Administre las Categor\u00edas"
+            ],
+            "Organize existing content into categories.": [
+                "Organice el contenido existente en categor\u00edas."
+            ],
+            "Web Hosting": [
+                "Hosting"
+            ],
+            "Access & manage your HostGator account.": [
+                "Acceda y administre su cuenta HostGator."
+            ],
+            "Manage Sites": [
+                "Administre Sitios Web"
+            ],
+            "Manage your site from the control panel. You can create backups, set security, and improve performance.": [
+                "Administre su sitio web desde el panel de control. Es posible crear copias de seguridad, configurar la seguridad y mejorar el rendimiento."
+            ],
+            "Email": [
+                "Correo Electr\u00f3nico"
+            ],
+            "Manage Email": [
+                "Administre el Correo Electr\u00f3nico"
+            ],
+            "Create email accounts, compose, send, and receive your email from the control panel.": [
+                "Cree cuentas de correo electr\u00f3nico, redacte, env\u00ede y reciba su correo electr\u00f3nico desde el panel de control."
+            ],
+            "Domains": [
+                "Dominios"
+            ],
+            "Find a Domain": [
+                "Encuentre un Dominio"
+            ],
+            "Find a new domain and assign it to your site or start a new site with a fresh domain.": [
+                "Encuentre un nuevo dominio y as\u00edgnelo a su sitio web o inicie un nuevo sitio web con un dominio nuevo."
+            ],
+            "Get Help": [
+                "Obtenga Ayuda"
+            ],
+            "24\/7\/365 support. We work when you work.": [
+                "Soporte 24\/7\/365. Trabajamos cuando usted trabaja."
+            ],
+            "Explore our featured collection of tools and services.": [
+                "Explora nuestra destacada colecci\u00f3n de herramientas y servicios."
+            ],
+            "Oops, there was an error loading the marketplace, please try again later.": [
+                "Ups, hubo un error al cargar. Por favor, int\u00e9ntalo de nuevo m\u00e1s tarde."
+            ],
+            "Sorry, no marketplace items. Please, try again later.": [
+                "Lo siento, no hay elementos en el mercado. Por favor, int\u00e9ntalo de nuevo m\u00e1s tarde."
+            ],
+            "Load More": [
+                "Cargar m\u00e1s"
+            ],
+            "This is where you can manage cache settings for your website.": [
+                "Aqu\u00ed es donde puedes gestionar la configuraci\u00f3n de cach\u00e9 para tu sitio web."
+            ],
+            "Disabled": [
+                "Deshabilitado"
+            ],
+            "No cache enabled.": [
+                "Sin cach\u00e9 habilitado."
+            ],
+            "Every page load is fresh.": [
+                "Cada carga de p\u00e1gina es fresca."
+            ],
+            "Not recommended.": [
+                "No recomendado."
+            ],
+            "Assets Only": [
+                "Solo activos"
+            ],
+            "Cache static assets like images and the appearance of your site for 1 hour.": [
+                "Almacene en cach\u00e9 activos est\u00e1ticos como im\u00e1genes y la apariencia de su sitio web durante 1 hora."
+            ],
+            "Recommended for ecommerce and sites that update frequently or display info in real-time.": [
+                "Recomendado para comercio electr\u00f3nico y sitios web que se actualizan con frecuencia o muestran informaci\u00f3n en tiempo real."
+            ],
+            "Cache enabled for assets only.": [
+                "Cach\u00e9 habilitada solo para activos."
+            ],
+            "Assets & Web Pages": [
+                "Activos y P\u00e1ginas Web"
+            ],
+            "Cache static assets for 24 hours and web pages for 2 hours.": [
+                "Cach\u00e9 activos est\u00e1ticos durante 24 horas y p\u00e1ginas web durante 2 horas."
+            ],
+            "Recommended for blogs, educational sites, and sites that update at least weekly.": [
+                "Recomendado para blogs, sitios web educativos y sitios web que se actualizan al menos semanalmente."
+            ],
+            "Cache enabled for assets and pages.": [
+                "Cach\u00e9 habilitada para activos y p\u00e1ginas."
+            ],
+            "Assets & Web Pages - Extended": [
+                "Activos y P\u00e1ginas Web - Extendidos"
+            ],
+            "Cache enabled for assets and pages (extended).": [
+                "Cach\u00e9 habilitada para recursos y p\u00e1ginas (extendido)."
+            ],
+            "Cache setting saved": [
+                "Configuraci\u00f3n de cach\u00e9 guardada"
+            ],
+            "Clear Cache": [
+                "Limpiar Cach\u00e9"
+            ],
+            "Cache cleared": [
+                "Cach\u00e9 Borrado"
+            ],
+            "Clear All Cache Now": [
+                "Limpiar Todo Cach\u00e9 Ahora"
+            ],
+            "We automatically clear your cache as you work (creating content, changing settings, installing plugins and more). But you can manually clear it here to be confident it's fresh.": [
+                "Limpiamos autom\u00e1ticamente tu cach\u00e9 mientras trabajas (creando contenido, cambiando configuraciones, instalando complementos y m\u00e1s). Pero puedes borrarlo manualmente aqu\u00ed para estar seguro de que est\u00e1 fresco."
+            ],
+            "Boost speed and performance by storing a copy of your website content, files, and images online so the pages of your website load faster for your visitors.": [
+                "Aumente la velocidad y el rendimiento almacenando una copia del contenido, los archivos y las im\u00e1genes de su sitio web en l\u00ednea para que las p\u00e1ginas de su sitio web se carguen m\u00e1s r\u00e1pido para sus visitantes."
+            ],
+            "Oops! Something went wrong. Please try again.": [
+                "\u00a1Ups! Algo sali\u00f3 mal. Por favor, int\u00e9ntalo de nuevo."
+            ],
+            "Manage All Updates": [
+                "Gestionar Todas las Actualizaciones"
+            ],
+            "WordPress Core": [
+                "N\u00facleo de WordPress"
+            ],
+            "Plugins": [
+                "Plugins"
+            ],
+            "Automatic Updates": [
+                "Actualizaciones Autom\u00e1ticas"
+            ],
+            "Keeping automatic updates on ensures timely security fixes and the latest features.": [
+                "Mantener las actualizaciones autom\u00e1ticas activadas garantiza correcciones de seguridad oportunas y las \u00faltimas funciones."
+            ],
+            "Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen.": [
+                "Tu p\u00e1gina de 'Pr\u00f3ximamente' de Hostgator te permite ocultar tu sitio a los visitantes mientras haces que la magia suceda."
+            ],
+            "Your website is currently displaying a \"Coming Soon\" page.": [
+                "Tu sitio web actualmente muestra una p\u00e1gina de \"Pr\u00f3ximamente\"."
+            ],
+            "Disable comments for older posts": [
+                "Deshabilitar comentarios para publicaciones antiguas"
+            ],
+            "Comments setting saved ": [
+                "Configuraci\u00f3n de comentarios guardada "
+            ],
+            "Comments on posts are disabled after ": [
+                "Los comentarios sobre los mensajes est\u00e1n desactivados despu\u00e9s de "
+            ],
+            " day.": [
+                " d\u00eda.",
+                " d\u00edas."
+            ],
+            "Close comments after ": [
+                "Cerrar comentarios despu\u00e9s de "
+            ],
+            "Comments setting saved.": [
+                "Configuraci\u00f3n de comentarios guardada."
+            ],
+            "Posts will display ": [
+                "Las publicaciones se mostrar\u00e1n "
+            ],
+            " comment at a time.": [
+                " comentario a la vez.",
+                " comentarios a la vez."
+            ],
+            "Display ": [
+                "Mostrar "
+            ],
+            " comments per page.": [
+                " comentarios por p\u00e1gina."
+            ],
+            "Comments": [
+                "Comentarios"
+            ],
+            "Comments allow visitors to provide feedback and respond to your posts or pages.": [
+                "Los comentarios permiten a los visitantes proporcionar retroalimentaci\u00f3n y responder a tus publicaciones o p\u00e1ginas."
+            ],
+            "Post revision setting saved ": [
+                "Configuraci\u00f3n de revisi\u00f3n de post guardado "
+            ],
+            "Posts will save  ": [
+                "Las publicaciones se guardar\u00e1n  "
+            ],
+            " revision.": [
+                " revisi\u00f3n.",
+                " revisiones."
+            ],
+            "Number of revisions posts can save ": [
+                "N\u00famero de publicaciones de revisiones que pueden guardar "
+            ],
+            "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take ": [
+                "Guardar borradores y actualizar contenido publicado crea revisiones. Realiza cambios con confianza, sabiendo que puedes tomar "
+            ],
+            " step back.": [
+                " paso atr\u00e1s.",
+                " pasos atr\u00e1s."
+            ],
+            "Trash setting saved ": [
+                "Configuraci\u00f3n de papelera guardada "
+            ],
+            "The trash will automatically empty every ": [
+                "La papelera se vac\u00eda autom\u00e1ticamente cada "
+            ],
+            " week.": [
+                " semana.",
+                " semanas."
+            ],
+            "Trash emptying frequency ": [
+                "Frecuencia de vaciado de basura "
+            ],
+            "Content Options": [
+                "Opciones de Contenido"
+            ],
+            "Controls for content revisions and how often to empty the trash.": [
+                "Controles para revisiones de contenido y con qu\u00e9 frecuencia vaciar la papelera."
+            ],
+            "This is where you can manage common settings for your website.": [
+                "Aqu\u00ed es donde puedes gestionar las configuraciones comunes para tu sitio web."
+            ],
+            "Store": [
+                ""
+            ],
+            "Staging": [
+                ""
+            ],
+            "HostGator Account": [
+                ""
+            ],
+            "Store Details": [
+                ""
+            ],
+            "More": [
+                ""
+            ],
+            "Manage Domain": [
+                ""
+            ],
+            "Cache static assets for 1 week and web pages for 8 hours.": [
+                ""
+            ],
+            "Recommended for sites that update a few times a month or less like porfolios or brochure sites.": [
+                ""
+            ],
+            "Cache Level": [
+                ""
+            ],
+            "Site Status": [
+                ""
+            ],
+            "Live": [
+                ""
+            ],
+            "Cancel": [
+                ""
+            ],
+            "Clone": [
+                ""
+            ],
+            "Confirm Clone Action": [
+                ""
+            ],
+            "This will overwrite anything in staging and update it to an exact clone of the current production site. Are you sure you want to proceed?": [
+                ""
+            ],
+            "Cloned to Staging": [
+                ""
+            ],
+            "Cloning production to staging, this should take about a minute.": [
+                ""
+            ],
+            "Clone to staging": [
+                ""
+            ],
+            "Created": [
+                ""
+            ],
+            "Staging Created": [
+                ""
+            ],
+            "Creating a staging site, this should take about a minute.": [
+                ""
+            ],
+            "Create staging site": [
+                ""
+            ],
+            "Currently editing": [
+                ""
+            ],
+            "Delete": [
+                ""
+            ],
+            "Confirm Delete": [
+                ""
+            ],
+            "This will permanently delete staging site. Are you sure you want to proceed? You can recreate another staging site at any time, but any specific changes you've made to this staging site will be lost.": [
+                ""
+            ],
+            "Deleted Staging": [
+                ""
+            ],
+            "Deleting the staging site, this should take about a minute.": [
+                ""
+            ],
+            "Delete Staging Site": [
+                ""
+            ],
+            "Deploy": [
+                ""
+            ],
+            "Deploy all changes": [
+                ""
+            ],
+            "Confirm Deployment": [
+                ""
+            ],
+            "Deploy database only": [
+                ""
+            ],
+            "This will deploy staging to production and overwrite current production site. Are you sure you want to proceed?": [
+                ""
+            ],
+            "Deploy files only": [
+                ""
+            ],
+            "Deployed": [
+                ""
+            ],
+            "Deploying from staging to production, this should take about a minute.": [
+                ""
+            ],
+            "Deploy Site": [
+                ""
+            ],
+            "Error": [
+                ""
+            ],
+            "Not currently editing": [
+                ""
+            ],
+            "Proceed": [
+                ""
+            ],
+            "Production Site": [
+                ""
+            ],
+            "Staging Site": [
+                ""
+            ],
+            "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready.": [
+                ""
+            ],
+            "Switch": [
+                ""
+            ],
+            "Switching": [
+                ""
+            ],
+            "Switch to Production": [
+                ""
+            ],
+            "This will navigate you to the production environment": [
+                ""
+            ],
+            "Loading the production environment now.": [
+                ""
+            ],
+            "Switching to the production environment, this should take about a minute.": [
+                ""
+            ],
+            "Switch to Staging": [
+                ""
+            ],
+            "This will navigate you to the staging environment": [
+                ""
+            ],
+            "Loading the staging environment now.": [
+                ""
+            ],
+            "Switching to the staging environment, this should take about a minute.": [
+                ""
+            ],
+            "An unknown error has occurred.": [
+                ""
+            ],
+            "Not Live": [
+                ""
+            ],
+            "Coming Soon page": [
+                ""
+            ],
+            "Products & Services": [
+                ""
+            ],
+            "Sales & Promotions": [
+                ""
+            ],
+            "Working\u2026": [
+                ""
+            ],
+            "Pages & Posts": [
+                ""
+            ],
+            "Payments": [
+                ""
+            ],
+            "Products": [
+                ""
+            ],
+            "Showcase physical and digital goods, product variations, and custom configurations.": [
+                ""
+            ],
+            "View all ": [
+                ""
+            ],
+            "Add New": [
+                ""
+            ],
+            "Blog Posts": [
+                ""
+            ],
+            "Add a new blog post or edit your existing posts.": [
+                ""
+            ],
+            "Bookings & Appointments": [
+                ""
+            ],
+            "Add your list of services, setup a booking calendar, and edit your bookings form.": [
+                ""
+            ],
+            "Your site is not live.": [
+                ""
+            ],
+            "Your site is live.": [
+                ""
+            ],
+            "Visitors to your site will see your \"Coming Soon\" page and not your actual site. Visit ": [
+                ""
+            ],
+            "\"Settings\"": [
+                ""
+            ],
+            " to set your site live.": [
+                ""
+            ],
+            "Visitors to your site will see all your publicly published pages.": [
+                ""
+            ],
+            "Site Pages": [
+                ""
+            ],
+            "Edit your homepage and other existing pages or add new pages to your site.": [
+                ""
+            ],
+            "Admin": [
+                ""
+            ],
+            "Secret page to manage admin features and settings.": [
+                ""
+            ],
+            "The Help Center provides guided, step-by-step assistance as you build your site.": [
+                ""
+            ],
+            "Sorry, that is not allowed.": [
+                ""
+            ],
+            "This feature cannot currently be modified.": [
+                ""
+            ],
+            "Features": [
+                ""
+            ],
+            "The performance feature provides improvements to loads faster for visitors including cache settings.": [
+                ""
+            ],
+            "The staging feature provides a way to copy a site to test new updates, features or content.": [
+                ""
+            ],
+            "Wonder Blocks provides a library of customizable block patterns and page templates.": [
+                ""
+            ]
+        }
+    }
+}
