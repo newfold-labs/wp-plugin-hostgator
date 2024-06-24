@@ -5,11 +5,13 @@ import SettingsSection from './settingsSection';
 import WebContentSection from './webContentSection';
 import WebHostingSection from './webHostingSection';
 import WelcomeSection from './welcomeSection';
+import WebinarsBanner from 'App/components/webinars-banner';
 
 const Home = () => {
 	return (
 		<Page title="Settings" className={ 'hgwp-app-home-page hgwp-home' }>
 			<WelcomeSection />
+			<WebinarsBanner />
 			<FreePluginsSection />
 			<Container className={ 'hgwp-app-home-container' }>
 				<Container.Header
