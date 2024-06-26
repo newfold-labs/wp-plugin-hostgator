@@ -1,42 +1,44 @@
 // <reference types="Cypress" />
 
 describe('Settings Page', function () {
+	const appId = Cypress.env( 'appId' );
+	const pluginId = Cypress.env( 'pluginId' );
 
 	before(() => {
-		cy.visit('/wp-admin/admin.php?page=hostgator#/settings');
+		cy.visit('/wp-admin/admin.php?page=' + pluginId + '#/settings');
 		
 	});
 
 	it('Is Accessible', () => {
 		cy.injectAxe();
 		cy.wait(500);
-		cy.checkA11y('.hgwp-app-body');
+		cy.checkA11y('.' + appId + '-app-body');
 	});
 
 	it('Has Coming Soon', () => {
 		cy
-			.get('.hgwp-app-settings-coming-soon')
+			.get('.' + appId + '-app-settings-coming-soon')
 			.scrollIntoView()
 			.should('be.visible');
 	});
 
 	it('Has Auto Updates Settings', () => {
 		cy
-			.get('.hgwp-app-settings-update')
+			.get('.' + appId + '-app-settings-update')
 			.scrollIntoView()
 			.should('be.visible');
 	});
 
 	it('Has Content Settings', () => {
 		cy
-			.get('.hgwp-app-settings-content')
+			.get('.' + appId + '-app-settings-content')
 			.scrollIntoView()
 			.should('be.visible');
 	});
 
 	it('Has Comments Settings', () => {
 		cy
-			.get('.hgwp-app-settings-comments')
+			.get('.' + appId + '-app-settings-comments')
 			.scrollIntoView()
 			.should('be.visible');
 	});
@@ -196,7 +198,7 @@ describe('Settings Page', function () {
 			.find('li:first')
 			.click(); // 10
 		cy.wait(100);
-		cy.get('.hgwp-app-settings-comments')
+		cy.get('.' + appId + '-app-settings-comments')
 			.contains('label', 'Display 10 comments per page.')
 			.should('be.visible');
 		
@@ -217,7 +219,7 @@ describe('Settings Page', function () {
 			.find('li:last')
 			.click(); // 100
 		cy.wait(100);
-		cy.get('.hgwp-app-settings-comments')
+		cy.get('.' + appId + '-app-settings-comments')
 			.contains('label', 'Close comments after 100 days.')
 			.should('be.visible');
 		
@@ -229,7 +231,7 @@ describe('Settings Page', function () {
 			.find('li:nth-child(6)')
 			.click(); // 14
 		cy.wait(100);
-		cy.get('.hgwp-app-settings-comments')
+		cy.get('.' + appId + '-app-settings-comments')
 			.contains('label', 'Close comments after 14 days.')
 			.should('be.visible');
 		

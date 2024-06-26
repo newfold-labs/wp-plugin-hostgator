@@ -1,21 +1,22 @@
 // <reference types="Cypress" />
 
 describe('Navigation', function () {
+	const appId = Cypress.env( 'appId' );
+	const pluginId = Cypress.env( 'pluginId' )
 
 	before(() => {
 		cy.exec( 'npx wp-env run cli wp transient delete newfold_marketplace' );
-		cy.visit('/wp-admin/admin.php?page=hostgator');
-		cy.injectAxe();
+		cy.visit('/wp-admin/admin.php?page=' + pluginId );
 	});
 
 	it( "Admin submenu shouldn't exist inside app", () => {
-		cy.get( '#adminmenu #toplevel_page_hostgator ul.wp-submenu' ).should(
+		cy.get( '#adminmenu #toplevel_page_' + pluginId + ' ul.wp-submenu' ).should(
 			'not.exist'
 		);
 	} );
 
 	it('Logo Links to home', () => {
-		cy.get('.hgwp-logo-wrap').click();
+		cy.get('.' + appId + '-logo-wrap').click();
 		cy.wait(500);
 		cy.hash().should('eq', '#/home');
 	});
@@ -23,81 +24,81 @@ describe('Navigation', function () {
 	// test main nav
 	it('Main nav links properly navigates', () => {
 		cy
-			.get('.hgwp-app-navitem-Marketplace').
+			.get('.' + appId + '-app-navitem-Marketplace').
 			should('not.have.class', 'active');
-		cy.get('.hgwp-app-navitem-Marketplace').click();
+		cy.get('.' + appId + '-app-navitem-Marketplace').click();
 		cy.wait(500);
 		cy.hash().should('eq', '#/marketplace');
 		cy
-			.get('.hgwp-app-navitem-Marketplace')
+			.get('.' + appId + '-app-navitem-Marketplace')
 			.should('have.class', 'active');
 
-		cy.get('.hgwp-app-navitem-Performance').click();
+		cy.get('.' + appId + '-app-navitem-Performance').click();
 		cy.wait(500);
 		cy.hash().should('eq', '#/performance');
 		cy
-			.get('.hgwp-app-navitem-Performance')
+			.get('.' + appId + '-app-navitem-Performance')
 			.should('have.class', 'active');
 		cy
-			.get('.hgwp-app-navitem-Marketplace')
+			.get('.' + appId + '-app-navitem-Marketplace')
 			.should('not.have.class', 'active');
 
-		cy.get('.hgwp-app-navitem-Settings').click();
+		cy.get('.' + appId + '-app-navitem-Settings').click();
 		cy.wait(500);
 		cy.hash().should('eq', '#/settings');
 	});
 	
 	it('Subnav links properly navigates', () => {
 		cy
-			.get('.hgwp-app-navitem-Marketplace')
+			.get('.' + appId + '-app-navitem-Marketplace')
 			.scrollIntoView()
 			.should('not.have.class', 'active');
-		cy.get('.hgwp-app-navitem-Marketplace').click();
+		cy.get('.' + appId + '-app-navitem-Marketplace').click();
 
 		cy.wait(500);
 		cy.hash().should('eq', '#/marketplace');
 		cy
-			.get('.hgwp-app-navitem-Marketplace')
+			.get('.' + appId + '-app-navitem-Marketplace')
 			.should('have.class', 'active');
 
-			cy.get('.hgwp-app-subnavitem-Services').click();
+			cy.get('.' + appId + '-app-subnavitem-Services').click();
 			cy.wait(500);
 			cy.hash().should('eq', '#/marketplace/services');
 			cy
-				.get('.hgwp-app-subnavitem-Services')
+				.get('.' + appId + '-app-subnavitem-Services')
 				.should('have.class', 'active');
 			cy
-				.get('.hgwp-app-navitem-Marketplace')
+				.get('.' + appId + '-app-navitem-Marketplace')
 				.should('have.class', 'active');
 		
 
-		cy.get('.hgwp-app-subnavitem-SEO').click();
+		cy.get('.' + appId + '-app-subnavitem-SEO').click();
 		cy.wait(500);
 		cy.hash().should('eq', '#/marketplace/seo');
 		cy
-			.get('.hgwp-app-subnavitem-SEO')
+			.get('.' + appId + '-app-subnavitem-SEO')
 			.should('have.class', 'active');
 		cy
-			.get('.hgwp-app-subnavitem-Services')
+			.get('.' + appId + '-app-subnavitem-Services')
 			.should('not.have.class', 'active');
 		cy
-			.get('.hgwp-app-navitem-Marketplace')
+			.get('.' + appId + '-app-navitem-Marketplace')
 			.should('have.class', 'active');
 			
-		cy.get('.hgwp-app-navitem-Performance').click();
+		cy.get('.' + appId + '-app-navitem-Performance').click();
 			cy.wait(500);
 		cy
-			.get('.hgwp-app-subnavitem-Services')
+			.get('.' + appId + '-app-subnavitem-Services')
 			.should('not.have.class', 'active');
 		cy
-			.get('.hgwp-app-subnavitem-SEO')
+			.get('.' + appId + '-app-subnavitem-SEO')
 			.should('not.have.class', 'active');
 		cy
-			.get('.hgwp-app-navitem-Marketplace')
+			.get('.' + appId + '-app-navitem-Marketplace')
 			.should('not.have.class', 'active');
 	});
 
-	// utility nav is no more, leaving this in place un case we bring it back anytime soon.
+	// utility nav is no more, leaving this in place in case we bring it back anytime soon.
 	it.skip('Utility nav links properly navigates', () => {
 		cy
 			.get('.utility-link-Performance')
