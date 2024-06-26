@@ -9,7 +9,7 @@ describe('Home Page', function () {
 
 	it('Site Info Exists', () => {
 		cy.window().then((win) => {
-			const siteTitle = win.NewfoldRuntime.site.title;
+			const siteTitle = win.NewfoldRuntime.siteTitle;
 
 			cy.get('.hgwp-app-site-info').contains('h3', siteTitle)
 			.scrollIntoView()
