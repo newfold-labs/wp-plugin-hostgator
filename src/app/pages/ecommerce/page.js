@@ -6,6 +6,7 @@ import AppStore from '../../data/store';
 import { useContext } from '@wordpress/element';
 import { hostgatorSettingsApiFetch } from '../../util/helpers';
 import '@newfold-labs/wp-module-ecommerce/hostgator.css';
+import { comingSoonAdminbarToggle } from '../../util/helpers';
 
 const EcomerceStore = () => {
 	const { store, setStore } = useContext( AppStore );
@@ -30,8 +31,10 @@ const EcomerceStore = () => {
 			hostgatorSettingsApiFetch(
 				{ comingSoon: ! store.comingSoon },
 				console.error,
-				( response ) =>
-					setStore( { ...store, comingSoon: ! store.comingSoon } )
+				( response ) => {
+					setStore( { ...store, comingSoon: ! store.comingSoon } );
+					comingSoonAdminbarToggle( ! store.comingSoon );
+				}
 			),
 	};
 	return (
