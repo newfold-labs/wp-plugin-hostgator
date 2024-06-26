@@ -461,6 +461,14 @@ msgid "Load More"
 msgstr ""
 
 #: build/2.9.3/index.js:1
+msgid "Oops! Something Went Wrong"
+msgstr ""
+
+#: build/2.9.3/index.js:1
+msgid "An error occurred while loading the content. Please try again later."
+msgstr ""
+
+#: build/2.9.3/index.js:1
 msgid "Products"
 msgstr ""
 

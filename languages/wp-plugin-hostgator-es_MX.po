@@ -994,3 +994,11 @@ msgstr ""
 #: build/2.9.3/index.js:1
 msgid "Wonder Blocks provides a library of customizable block patterns and page templates."
 msgstr ""
+
+#: build/2.9.3/index.js:1
+msgid "Oops! Something Went Wrong"
+msgstr ""
+
+#: build/2.9.3/index.js:1
+msgid "An error occurred while loading the content. Please try again later."
+msgstr ""
