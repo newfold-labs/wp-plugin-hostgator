@@ -1,5 +1,4 @@
 import { Button, Label } from '@newfold/ui-component-library';
-import classNames from 'classnames';
 
 const ActionField = ( {
 	label,
