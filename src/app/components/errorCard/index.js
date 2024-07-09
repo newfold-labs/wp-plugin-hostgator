@@ -1,5 +1,5 @@
 import './stylesheet.scss';
-import { Heading } from '../../components';
+import { Title } from '@newfold/ui-component-library';
 import { dispatchUpdateSnackbar } from '../../util/helpers';
 import {
 	Card,
@@ -15,7 +15,7 @@ const ErrorCard = ( { error, className, notice = 'Error!' } ) => {
 	return (
 		<Card className={ classNames( 'error-card', className ) }>
 			<CardHeader>
-				<Heading level="3">
+				<Title as="h3">
 					<Dashicon
 						icon="warning"
 						style={ {
@@ -25,7 +25,7 @@ const ErrorCard = ( { error, className, notice = 'Error!' } ) => {
 						} }
 					/>{ ' ' }
 					{ __( 'Oh No, An Error!', 'wp-plugin-hostgator' ) }
-				</Heading>
+				</Title>
 			</CardHeader>
 			<CardBody>
 				<p>

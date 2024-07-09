@@ -1,9 +1,8 @@
-import classNames from 'classnames';
+import { Container, Page } from '@newfold/ui-component-library';
 import HelpCenterSettings from '../settings/helpCenterSettings';
 import WonderBlocksSettings from '../settings/wonderBlocksSettings';
 import StagingFeatureSettings from '../settings/stagingFeatureSettings';
 import PerformanceFeatureSettings from '../settings/performanceFeatureSettings';
-import { Container, Page } from '@newfold/ui-component-library';
 
 const Admin = () => {
 	return (

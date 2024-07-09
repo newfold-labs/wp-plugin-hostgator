@@ -1,5 +1,5 @@
 import { Button } from '@wordpress/components';
-import { Heading } from '..';
+import { Title } from '@newfold/ui-component-library';
 import { ReactComponent as Brand } from '../../../../assets/svg/nav-for-light.svg';
 import { delay } from 'lodash';
 
@@ -27,9 +27,9 @@ const Logo = () => {
 	return (
 		<div className="hgwp-logo-wrap">
 			<Mark />
-			<Heading level="2" className="screen-reader-text">
+			<Title as="h2" className="screen-reader-text">
 				{ __( 'Hostgator WordPress Plugin', 'wp-plugin-hostgator' ) }
-			</Heading>
+			</Title>
 		</div>
 	);
 };

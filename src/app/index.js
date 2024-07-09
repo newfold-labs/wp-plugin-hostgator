@@ -7,7 +7,6 @@ import { useLocation, HashRouter as Router } from 'react-router-dom';
 import { NewfoldRuntime } from '@newfold-labs/wp-module-runtime';
 import { __ } from '@wordpress/i18n';
 import { SnackbarList, Spinner } from '@wordpress/components';
-import classnames from 'classnames';
 import AppRoutes from './data/routes';
 import ErrorCard from './components/errorCard';
 import { useDispatch, useSelect } from '@wordpress/data';
@@ -68,7 +67,7 @@ const AppBody = ( props ) => {
 	return (
 		<main
 			id="hgwp-app-rendered"
-			className={ classnames(
+			className={ classNames(
 				'wpadmin-brand-hostgator',
 				`hgwp-wp-${ NewfoldRuntime.wpversion }`,
 				`hgwp-page-${ kebabCase( location.pathname ) }`,
@@ -85,7 +84,6 @@ const AppBody = ( props ) => {
 				methods={ {
 					apiFetch,
 					addQueryArgs,
-					classnames,
 					filter,
 					useState,
 					useEffect,

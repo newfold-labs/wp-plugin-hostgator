@@ -1,11 +1,10 @@
 import apiFetch from '@wordpress/api-fetch';
 import { useState, useEffect } from '@wordpress/element';
-import { useLocation } from 'react-router-dom';
-import classnames from 'classnames';
+import { useLocation, useMatch, useNavigate } from 'react-router-dom';
 import { Container, Page } from '@newfold/ui-component-library';
 import { NewfoldRuntime } from '@newfold-labs/wp-module-runtime';
 // component sourced from marketplace module
-import { default as NewfoldMarketplace } from '../../../../vendor/newfold-labs/wp-module-marketplace/components/marketplace/';
+import { default as NewfoldMarketplace } from '@modules/wp-module-marketplace/components/';
 
 const MarketplacePage = () => {
 	// constants to pass to module
@@ -25,22 +24,36 @@ const MarketplacePage = () => {
 				'wp-plugin-hostgator'
 			),
 			loadMore: __( 'Load More', 'wp-plugin-hostgator' ),
+			productPage: {
+				error: {
+					title: __(
+						'Oops! Something Went Wrong',
+						'wp-plugin-hostgator'
+					),
+					description: __(
+						'An error occurred while loading the content. Please try again later.',
+						'wp-plugin-hostgator'
+					),
+				},
+			},
 		},
 	};
 
 	// methods to pass to module
 	const moduleMethods = {
 		apiFetch,
-		classnames,
+		classNames,
 		useState,
 		useEffect,
 		useLocation,
+		useMatch,
+		useNavigate,
 		NewfoldRuntime,
 	};
 
 	return (
 		<Page className={ 'hgwp-app-marketplace-page' }>
-			<Container className={ 'hgwp-app-marketplace-container' }>
+			<Container className={ 'hgwp-app-marketplace-container nfd-overflow-clip' }>
 				<NewfoldMarketplace
 					methods={ moduleMethods }
 					constants={ moduleConstants }
