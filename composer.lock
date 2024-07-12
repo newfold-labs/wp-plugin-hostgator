@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cda9807923a760702f4fd8ccb3d6ef1d",
+    "content-hash": "8f1719636dfa63423092218542d10531",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -240,16 +240,16 @@
         },
         {
             "name": "newfold-labs/wp-module-activation",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-activation.git",
-                "reference": "4f6affda709af0078c82ceb7ac308990f0abec5a"
+                "reference": "701a4416759799b2172578eb651a0774a94ecc4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-activation/zipball/4f6affda709af0078c82ceb7ac308990f0abec5a",
-                "reference": "4f6affda709af0078c82ceb7ac308990f0abec5a",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-activation/zipball/701a4416759799b2172578eb651a0774a94ecc4f",
+                "reference": "701a4416759799b2172578eb651a0774a94ecc4f",
                 "shasum": ""
             },
             "require-dev": {
@@ -291,10 +291,10 @@
             ],
             "description": "A Module for handling WordPress brand plugins activations",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-activation/tree/1.0.2",
+                "source": "https://github.com/newfold-labs/wp-module-activation/tree/1.0.3",
                 "issues": "https://github.com/newfold-labs/wp-module-activation/issues"
             },
-            "time": "2024-04-23T20:45:04+00:00"
+            "time": "2024-07-01T19:05:14+00:00"
         },
         {
             "name": "newfold-labs/wp-module-ai",
@@ -591,16 +591,16 @@
         },
         {
             "name": "newfold-labs/wp-module-deactivation",
-            "version": "1.2.1",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-deactivation.git",
-                "reference": "7aa6aa4e9b594929c9c4f3088320b5db6b537ee5"
+                "reference": "1ccd41696bc93e15a3bb8e28166e5164e9353021"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-deactivation/zipball/7aa6aa4e9b594929c9c4f3088320b5db6b537ee5",
-                "reference": "7aa6aa4e9b594929c9c4f3088320b5db6b537ee5",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-deactivation/zipball/1ccd41696bc93e15a3bb8e28166e5164e9353021",
+                "reference": "1ccd41696bc93e15a3bb8e28166e5164e9353021",
                 "shasum": ""
             },
             "require": {
@@ -645,23 +645,23 @@
             ],
             "description": "A Module for handling WordPress brand plugins and modules deactivations",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-deactivation/tree/1.2.1",
+                "source": "https://github.com/newfold-labs/wp-module-deactivation/tree/1.2.2",
                 "issues": "https://github.com/newfold-labs/wp-module-deactivation/issues"
             },
-            "time": "2024-06-19T18:29:23+00:00"
+            "time": "2024-07-09T16:30:13+00:00"
         },
         {
             "name": "newfold-labs/wp-module-ecommerce",
-            "version": "v1.3.35",
+            "version": "v1.3.37",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-ecommerce.git",
-                "reference": "3478b6e1a8ce2938ab2fc74229ea2707cbff7aac"
+                "reference": "6de1a4be520e0f82d8c23b2d2c11f2825f5a520a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/3478b6e1a8ce2938ab2fc74229ea2707cbff7aac",
-                "reference": "3478b6e1a8ce2938ab2fc74229ea2707cbff7aac",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/6de1a4be520e0f82d8c23b2d2c11f2825f5a520a",
+                "reference": "6de1a4be520e0f82d8c23b2d2c11f2825f5a520a",
                 "shasum": ""
             },
             "require": {
@@ -704,10 +704,10 @@
             ],
             "description": "Brand Agnostic eCommerce Experience",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/v1.3.35",
+                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/v1.3.37",
                 "issues": "https://github.com/newfold-labs/wp-module-ecommerce/issues"
             },
-            "time": "2024-06-27T15:00:00+00:00"
+            "time": "2024-07-10T13:06:32+00:00"
         },
         {
             "name": "newfold-labs/wp-module-facebook",
@@ -1652,16 +1652,16 @@
         },
         {
             "name": "wp-cli/wp-config-transformer",
-            "version": "v1.3.5",
+            "version": "v1.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-cli/wp-config-transformer.git",
-                "reference": "202aa80528939159d52bc4026cee5453aec382db"
+                "reference": "88f516f44dce1660fc4b780da513e3ca12d7d24f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/wp-config-transformer/zipball/202aa80528939159d52bc4026cee5453aec382db",
-                "reference": "202aa80528939159d52bc4026cee5453aec382db",
+                "url": "https://api.github.com/repos/wp-cli/wp-config-transformer/zipball/88f516f44dce1660fc4b780da513e3ca12d7d24f",
+                "reference": "88f516f44dce1660fc4b780da513e3ca12d7d24f",
                 "shasum": ""
             },
             "require": {
@@ -1690,9 +1690,9 @@
             "homepage": "https://github.com/wp-cli/wp-config-transformer",
             "support": {
                 "issues": "https://github.com/wp-cli/wp-config-transformer/issues",
-                "source": "https://github.com/wp-cli/wp-config-transformer/tree/v1.3.5"
+                "source": "https://github.com/wp-cli/wp-config-transformer/tree/v1.3.6"
             },
-            "time": "2023-11-10T14:28:03+00:00"
+            "time": "2024-05-23T06:32:14+00:00"
         },
         {
             "name": "wp-forge/collection",
@@ -3412,7 +3412,7 @@
         },
         {
             "name": "wp-phpunit/wp-phpunit",
-            "version": "6.5.4",
+            "version": "6.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-phpunit/wp-phpunit.git",
