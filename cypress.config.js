@@ -66,7 +66,7 @@ module.exports = defineConfig({
 			
 			return config;
 		},
-		baseUrl: 'https://wp.lndo.site/wp',
+		baseUrl: 'http://localhost:8884',
 		specPattern: [
 			'tests/cypress/integration/**/*.cy.{js,jsx,ts,tsx}',
 			'vendor/newfold-labs/**/tests/cypress/integration/**/*.cy.{js,jsx,ts,tsx}',
