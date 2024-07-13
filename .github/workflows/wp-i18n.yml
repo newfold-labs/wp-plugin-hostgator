@@ -102,9 +102,14 @@ jobs:
           git commit -m "WordPress i18n triggered by commit ${{ github.sha }}"
           git status
 
+      - name: Extract PR source branch
+        if: steps.changes.outcome == 'failure'
+        id: extract_branch
+        run: echo "PR_BRANCH=$(jq -r .pull_request.head.ref < $GITHUB_EVENT_PATH)" >> $GITHUB_ENV
+
       - name: Push changes
         if: steps.changes.outcome == 'failure'
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          branch: ${{ env.PR_BRANCH }}
