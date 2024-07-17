@@ -1,7 +1,7 @@
 {
     "translation-revision-date": "2023-11-30 17:37",
     "generator": "WP-CLI\/2.10.0",
-    "source": "build\/2.10.0\/index.js",
+    "source": "build\/2.10.1\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
@@ -31,9 +31,6 @@
             "Help": [
                 "Ajuda"
             ],
-            "Hostgator WordPress Plugin": [
-                "Plugin do HostGator para WordPress"
-            ],
             "Oh No, An Error!": [
                 "Oh, N\u00e3o, Um Erro!"
             ],
@@ -45,9 +42,6 @@
             ],
             " Error code: ": [
                 " C\u00f3digo de erro: "
-            ],
-            "HostGator Account": [
-                "Conta de HostGator"
             ],
             "Phone": [
                 "Telefone"
@@ -105,15 +99,6 @@
             ],
             "There's nothing here!": [
                 "N\u00e3o h\u00e1 nada aqui!"
-            ],
-            "Store Details": [
-                "Detalhes da Loja"
-            ],
-            "We are available 24\/7 to help answer questions and solve your problems.": [
-                "Estamos dispon\u00edveis 24\/7 para ajudar a responder perguntas e resolver seus problemas."
-            ],
-            "More": [
-                "Mais"
             ],
             "Settings and Performance": [
                 "Configura\u00e7\u00f5es e Desempenho"
@@ -190,9 +175,6 @@
             "Domains": [
                 "Dom\u00ednios"
             ],
-            "Manage Domain": [
-                "Gerenciar Dom\u00ednio"
-            ],
             "Find a Domain": [
                 "Encontre um Dom\u00ednio"
             ],
@@ -205,23 +187,8 @@
             "24\/7\/365 support. We work when you work.": [
                 "Suporte 24\/7\/365. N\u00f3s trabalhamos quando voc\u00ea trabalha."
             ],
-            "Explore our featured collection of tools and services.": [
-                "Explore nossa cole\u00e7\u00e3o em destaque de ferramentas e servi\u00e7os."
-            ],
-            "Oops, there was an error loading the marketplace, please try again later.": [
-                "Oops, ocorreu um erro ao carregar. Por favor, tente novamente mais tarde."
-            ],
-            "Sorry, no marketplace items. Please, try again later.": [
-                "Desculpe, sem itens no mercado. Por favor, tente novamente mais tarde."
-            ],
-            "Load More": [
-                "Carregar mais"
-            ],
             "No cache enabled.": [
                 "Nenhum cache ativado."
-            ],
-            "Every page load is fresh.": [
-                "Cada carregamento de p\u00e1gina \u00e9 novo\/fresco."
             ],
             "Disabled": [
                 "Desativado"
@@ -262,14 +229,8 @@
             "Cache enabled for assets and pages (extended).": [
                 "Cache ativado para recursos e p\u00e1ginas (estendido)."
             ],
-            "Recommended for sites that update a few times a month or less like porfolios or brochure sites.": [
-                "Recomendado para sites que atualizam algumas vezes por m\u00eas ou menos, como porf\u00f3lios ou sites de correio."
-            ],
             "Boost speed and performance by storing a copy of your website content, files, and images online so the pages of your website load faster for your visitors.": [
                 "Aumente a velocidade e o desempenho armazenando uma c\u00f3pia do conte\u00fado, arquivos e imagens do seu site on-line para que as p\u00e1ginas do seu site sejam carregadas mais rapidamente para seus visitantes."
-            ],
-            "Cache setting saved": [
-                "Configura\u00e7\u00f5es de cache salvas"
             ],
             "Cache Level": [
                 "Levels de Cache"
@@ -277,23 +238,11 @@
             "Clear All Cache Now": [
                 "Limpar Todo o Cache Agora"
             ],
-            "We automatically clear your cache as you work (creating content, changing settings, installing plugins and more). But you can manually clear it here to be confident it's fresh.": [
-                "Limpamos automaticamente o seu cache enquanto voc\u00ea trabalha (criando conte\u00fado, alterando configura\u00e7\u00f5es, instalando plugins e mais). Mas voc\u00ea pode limp\u00e1-lo manualmente aqui para ter certeza de que est\u00e1 atualizado."
-            ],
             "Cache cleared": [
                 "Cache limpo"
             ],
             "Clear Cache": [
                 "Limpar Cache"
-            ],
-            "This is where you can manage cache settings for your website.": [
-                "Aqui \u00e9 onde voc\u00ea pode gerenciar as configura\u00e7\u00f5es de cache para o seu site."
-            ],
-            "Manage All Updates": [
-                "Gerenciar Todas as Atualiza\u00e7\u00f5es"
-            ],
-            "WordPress Core": [
-                "N\u00facleo de WordPress"
             ],
             "Plugins": [
                 "Plugins"
@@ -304,29 +253,8 @@
             "Automatic Updates": [
                 "Atualiza\u00e7\u00f5es Autom\u00e1ticas"
             ],
-            "Keeping automatic updates on ensures timely security fixes and the latest features.": [
-                "Mantendo as atualiza\u00e7\u00f5es autom\u00e1ticas ativadas, voc\u00ea garante corre\u00e7\u00f5es de seguran\u00e7a oportunas e os recursos mais recentes."
-            ],
-            "Oops! Something went wrong. Please try again.": [
-                "Oops! Algo deu errado. Por favor, tente novamente."
-            ],
-            "Site Status": [
-                "Status do Site"
-            ],
-            "Live": [
-                "Ativa"
-            ],
-            "Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen.": [
-                "Sua p\u00e1gina de 'Em Breve' da Hostgator permite ocultar seu site dos visitantes enquanto voc\u00ea faz a m\u00e1gica acontecer."
-            ],
-            "Your website is currently displaying a \"Coming Soon\" page.": [
-                "Seu site est\u00e1 atualmente exibindo uma p\u00e1gina de \"Em Breve\"."
-            ],
             "Disable comments for older posts": [
                 "Desabilitar coment\u00e1rios de postagens mais antigas"
-            ],
-            "Comments setting saved ": [
-                "Configura\u00e7\u00e3o de coment\u00e1rios salva "
             ],
             "Comments on posts are disabled after ": [
                 "Os coment\u00e1rios em postagens s\u00e3o desativados ap\u00f3s "
@@ -338,9 +266,6 @@
             "Close comments after ": [
                 "Fechar coment\u00e1rios ap\u00f3s "
             ],
-            "Comments setting saved.": [
-                "Configura\u00e7\u00e3o de coment\u00e1rios salva."
-            ],
             "Posts will display ": [
                 "As postagens ser\u00e3o exibidas "
             ],
@@ -351,37 +276,12 @@
             "Display ": [
                 "Exibir "
             ],
-            " comments per page.": [
-                " coment\u00e1rios por p\u00e1gina."
-            ],
             "Comments": [
                 "Coment\u00e1rios"
-            ],
-            "Comments allow visitors to provide feedback and respond to your posts or pages.": [
-                "Os coment\u00e1rios permitem que os visitantes forne\u00e7am feedback e respondam \u00e0s suas postagens ou p\u00e1ginas."
-            ],
-            "Post revision setting saved ": [
-                "Configura\u00e7\u00e3o de revis\u00e3o de post salvo "
-            ],
-            "Posts will save  ": [
-                "Posts ser\u00e3o salvos  "
             ],
             " revision.": [
                 " revis\u00e3o.",
                 " revis\u00f5es."
-            ],
-            "Number of revisions posts can save ": [
-                "N\u00famero de posts de revis\u00f5es pode salvar "
-            ],
-            "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take ": [
-                "Salvar rascunhos e atualizar conte\u00fado publicado cria revis\u00f5es. Fa\u00e7a altera\u00e7\u00f5es com confian\u00e7a, sabendo que voc\u00ea pode "
-            ],
-            " step back.": [
-                " passo de volta.",
-                " passos de volta."
-            ],
-            "Trash setting saved ": [
-                "Configura\u00e7\u00e3o de Lixeira salva "
             ],
             "The trash will automatically empty every ": [
                 "A lixeira ser\u00e1 automaticamente vazia a cada "
@@ -390,169 +290,64 @@
                 " semana.",
                 " semanas."
             ],
-            "Trash emptying frequency ": [
-                "Frequ\u00eancia da lixeira vazia "
-            ],
             "Content Options": [
                 "Op\u00e7\u00f5es de Conte\u00fado"
             ],
             "Controls for content revisions and how often to empty the trash.": [
                 "Controles para revis\u00f5es de conte\u00fado e com que frequ\u00eancia esvaziar a lixeira."
             ],
-            "This is where you can manage common settings for your website.": [
-                "Aqui \u00e9 onde voc\u00ea pode gerenciar as configura\u00e7\u00f5es comuns para o seu site."
-            ],
-            "Cancel": [
-                "Cancelar"
-            ],
-            "Clone": [
-                "Clonar"
-            ],
-            "Confirm Clone Action": [
-                "Confirmar A\u00e7\u00e3o de Clonar"
-            ],
-            "This will overwrite anything in staging and update it to an exact clone of the current production site. Are you sure you want to proceed?": [
-                "Isto ir\u00e1 sobrescrever qualquer coisa em Staging e atualiz\u00e1-lo para um clone exato do site de produ\u00e7\u00e3o atual. Tem certeza que deseja continuar?"
-            ],
-            "Cloned to Staging": [
-                "Clonado para Encena\u00e7\u00e3o"
-            ],
-            "Cloning production to staging, this should take about a minute.": [
-                "A clonagem da produ\u00e7\u00e3o para a fase de estagna\u00e7\u00e3o, o que deve demorar cerca de um momento."
-            ],
-            "Clone to staging": [
-                "Clonado para Encena\u00e7\u00e3o"
-            ],
-            "Created": [
-                "Criado"
-            ],
-            "Staging Created": [
-                "Encena\u00e7\u00e3o criada"
-            ],
-            "Creating a staging site, this should take about a minute.": [
-                "Criando um encena\u00e7\u00e3o site, isso deve levar cerca de um minuto."
-            ],
-            "Create staging site": [
-                "Criar encena\u00e7\u00e3o site"
-            ],
-            "Currently editing": [
-                "Atualmente editando"
-            ],
-            "Delete": [
-                "Deletar"
-            ],
-            "Confirm Delete": [
-                "Confirme Deletar"
-            ],
-            "This will permanently delete staging site. Are you sure you want to proceed? You can recreate another staging site at any time, but any specific changes you've made to this staging site will be lost.": [
-                "Isto ir\u00e1 excluir o site de encena\u00e7\u00e3o permanentemente. Tem certeza que deseja continuar? Voc\u00ea pode recriar outro site de encena\u00e7\u00e3o a qualquer momento, mas quaisquer altera\u00e7\u00f5es espec\u00edficas feitas neste site ser\u00e3o perdidas."
-            ],
-            "Deleted Staging": [
-                "Deletado Encena\u00e7\u00e3o"
-            ],
-            "Deleting the staging site, this should take about a minute.": [
-                "Criando um encena\u00e7\u00e3o site, isso deve levar cerca de um minuto."
-            ],
-            "Delete Staging Site": [
-                "Deletar Encena\u00e7\u00e3o Site"
-            ],
-            "Deploy": [
-                "Implantar"
-            ],
-            "Deploy all changes": [
-                "Implementar todas as altera\u00e7\u00f5es"
-            ],
-            "Confirm Deployment": [
-                "Confirmar Implanta\u00e7\u00e3o"
-            ],
-            "Deploy database only": [
-                "Apenas implantar banco de dados"
-            ],
-            "This will deploy staging to production and overwrite current production site. Are you sure you want to proceed?": [
-                "Isto ir\u00e1 implantar o staging para produ\u00e7\u00e3o e sobrescrever o site de produ\u00e7\u00e3o atual. Tem certeza que deseja continuar?"
-            ],
-            "Deploy files only": [
-                "Implantar apenas arquivos"
-            ],
-            "Deployed": [
-                "Implantado"
-            ],
-            "Deploying from staging to production, this should take about a minute.": [
-                "Implantando da fase para a produ\u00e7\u00e3o, isto deve levar cerca de um minuto."
-            ],
-            "Deploy Site": [
-                "Site Implantar"
-            ],
-            "Error": [
-                "Erro"
-            ],
-            "Not currently editing": [
-                "N\u00e3o est\u00e1 editando atualmente"
-            ],
-            "Proceed": [
-                "Continuar"
-            ],
-            "Production Site": [
-                "Site de Produ\u00e7\u00e3o"
-            ],
-            "Staging Site": [
-                "Site Encena\u00e7\u00e3o"
-            ],
-            "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready.": [
-                "Um site encena\u00e7\u00e3o \u00e9 uma duplicata do seu site ao vivo, oferecendo um ambiente seguro para experimentar, testar atualiza\u00e7\u00f5es e implantar quando estiver pronto."
-            ],
-            "Switch": [
-                "Trocar"
-            ],
-            "Switching": [
-                "Trocando"
-            ],
-            "Switch to Production": [
-                "Trocar para Produ\u00e7\u00e3o"
-            ],
-            "This will navigate you to the production environment": [
-                "Isto ir\u00e1 navegar para o site de produ\u00e7\u00e3o"
-            ],
-            "Loading the production environment now.": [
-                "Carregando site de produ\u00e7\u00e3o agora."
-            ],
-            "Switching to the production environment, this should take about a minute.": [
-                "Troca para o site de produ\u00e7\u00e3o, isso deve levar cerca de um minuto."
-            ],
-            "Switch to Staging": [
-                "Trocar para Encena\u00e7\u00e3o"
-            ],
-            "This will navigate you to the staging environment": [
-                "Isto ir\u00e1 navegar para o site de encena\u00e7\u00e3o"
-            ],
-            "Loading the staging environment now.": [
-                "Carregando o site de encena\u00e7\u00e3o agora."
-            ],
-            "Switching to the staging environment, this should take about a minute.": [
-                "Troca para o site de encena\u00e7\u00e3o, isso deve levar cerca de um minuto."
-            ],
-            "An unknown error has occurred.": [
-                "Um erro desconhecido ocorreu."
-            ],
-            "Not Live": [
-                ""
-            ],
-            "Coming Soon page": [
-                ""
-            ],
-            "Products & Services": [
-                "Produtos & Servi\u00e7os"
-            ],
-            "Sales & Promotions": [
-                "Vendas & Promo\u00e7\u00f5es"
-            ],
-            "Working\u2026": [
-                "Trabalhando\u2026"
-            ],
             "Pages & Posts": [
                 ""
             ],
+            "Hostgator WordPress Plugin": [
+                ""
+            ],
+            "HostGator Account": [
+                ""
+            ],
+            "Products & Services": [
+                ""
+            ],
+            "Sales & Promotions": [
+                ""
+            ],
             "Payments": [
+                ""
+            ],
+            "Store Details": [
+                ""
+            ],
+            "Admin": [
+                ""
+            ],
+            "Secret page to manage admin features and settings.": [
+                ""
+            ],
+            "We are available 24\/7 to help answer questions and solve your problems.": [
+                ""
+            ],
+            "More": [
+                ""
+            ],
+            "Manage Domain": [
+                ""
+            ],
+            "Explore our featured collection of tools and services.": [
+                ""
+            ],
+            "Oops, there was an error loading the marketplace, please try again later.": [
+                ""
+            ],
+            "Sorry, no marketplace items. Please, try again later.": [
+                ""
+            ],
+            "Load More": [
+                ""
+            ],
+            "Oops! Something Went Wrong": [
+                ""
+            ],
+            "An error occurred while loading the content. Please try again later.": [
                 ""
             ],
             "Products": [
@@ -603,10 +398,82 @@
             "Edit your homepage and other existing pages or add new pages to your site.": [
                 ""
             ],
-            "Admin": [
+            "Every page load is fresh.": [
                 ""
             ],
-            "Secret page to manage admin features and settings.": [
+            "Recommended for sites that update a few times a month or less like porfolios or brochure sites.": [
+                ""
+            ],
+            "Cache setting saved": [
+                ""
+            ],
+            "We automatically clear your cache as you work (creating content, changing settings, installing plugins and more). But you can manually clear it here to be confident it's fresh.": [
+                ""
+            ],
+            "This is where you can manage cache settings for your website.": [
+                ""
+            ],
+            "Manage All Updates": [
+                ""
+            ],
+            "WordPress Core": [
+                ""
+            ],
+            "Keeping automatic updates on ensures timely security fixes and the latest features.": [
+                ""
+            ],
+            "Oops! Something went wrong. Please try again.": [
+                ""
+            ],
+            "Site Status": [
+                ""
+            ],
+            "Not Live": [
+                ""
+            ],
+            "Live": [
+                ""
+            ],
+            "Coming Soon page": [
+                ""
+            ],
+            "Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen.": [
+                ""
+            ],
+            "Your website is currently displaying a \"Coming Soon\" page.": [
+                ""
+            ],
+            "Comments setting saved ": [
+                ""
+            ],
+            "Comments setting saved.": [
+                ""
+            ],
+            " comments per page.": [
+                ""
+            ],
+            "Comments allow visitors to provide feedback and respond to your posts or pages.": [
+                ""
+            ],
+            "Post revision setting saved ": [
+                ""
+            ],
+            "Posts will save  ": [
+                ""
+            ],
+            "Number of revisions posts can save ": [
+                ""
+            ],
+            "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take ": [
+                ""
+            ],
+            " step back.": [
+                ""
+            ],
+            "Trash setting saved ": [
+                ""
+            ],
+            "Trash emptying frequency ": [
                 ""
             ],
             "The Help Center provides guided, step-by-step assistance as you build your site.": [
@@ -616,6 +483,9 @@
                 ""
             ],
             "This feature cannot currently be modified.": [
+                ""
+            ],
+            "This is where you can manage common settings for your website.": [
                 ""
             ],
             "Features": [
@@ -630,10 +500,139 @@
             "Wonder Blocks provides a library of customizable block patterns and page templates.": [
                 ""
             ],
-            "Oops! Something Went Wrong": [
+            "Cancel": [
                 ""
             ],
-            "An error occurred while loading the content. Please try again later.": [
+            "Clone": [
+                ""
+            ],
+            "Confirm Clone Action": [
+                ""
+            ],
+            "This will overwrite anything in staging and update it to an exact clone of the current production site. Are you sure you want to proceed?": [
+                ""
+            ],
+            "Cloned to Staging": [
+                ""
+            ],
+            "Cloning production to staging, this should take about a minute.": [
+                ""
+            ],
+            "Clone to staging": [
+                ""
+            ],
+            "Created": [
+                ""
+            ],
+            "Staging Created": [
+                ""
+            ],
+            "Creating a staging site, this should take about a minute.": [
+                ""
+            ],
+            "Create staging site": [
+                ""
+            ],
+            "Currently editing": [
+                ""
+            ],
+            "Delete": [
+                ""
+            ],
+            "Confirm Delete": [
+                ""
+            ],
+            "This will permanently delete staging site. Are you sure you want to proceed? You can recreate another staging site at any time, but any specific changes you've made to this staging site will be lost.": [
+                ""
+            ],
+            "Deleted Staging": [
+                ""
+            ],
+            "Deleting the staging site, this should take about a minute.": [
+                ""
+            ],
+            "Delete Staging Site": [
+                ""
+            ],
+            "Deploy": [
+                ""
+            ],
+            "Deploy all changes": [
+                ""
+            ],
+            "Confirm Deployment": [
+                ""
+            ],
+            "Deploy database only": [
+                ""
+            ],
+            "This will deploy staging to production and overwrite current production site. Are you sure you want to proceed?": [
+                ""
+            ],
+            "Deploy files only": [
+                ""
+            ],
+            "Deployed": [
+                ""
+            ],
+            "Deploying from staging to production, this should take about a minute.": [
+                ""
+            ],
+            "Deploy Site": [
+                ""
+            ],
+            "Error": [
+                ""
+            ],
+            "Not currently editing": [
+                ""
+            ],
+            "Proceed": [
+                ""
+            ],
+            "Production Site": [
+                ""
+            ],
+            "Staging Site": [
+                ""
+            ],
+            "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready.": [
+                ""
+            ],
+            "Switch": [
+                ""
+            ],
+            "Switching": [
+                ""
+            ],
+            "Switch to Production": [
+                ""
+            ],
+            "This will navigate you to the production environment": [
+                ""
+            ],
+            "Loading the production environment now.": [
+                ""
+            ],
+            "Switching to the production environment, this should take about a minute.": [
+                ""
+            ],
+            "Switch to Staging": [
+                ""
+            ],
+            "This will navigate you to the staging environment": [
+                ""
+            ],
+            "Loading the staging environment now.": [
+                ""
+            ],
+            "Switching to the staging environment, this should take about a minute.": [
+                ""
+            ],
+            "An unknown error has occurred.": [
+                ""
+            ],
+            "Working\u2026": [
                 ""
             ]
         }

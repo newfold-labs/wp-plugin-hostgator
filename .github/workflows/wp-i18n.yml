@@ -95,16 +95,23 @@ jobs:
       - name: Commit web files
         if: steps.changes.outcome == 'failure'
         run: |
-          git config --local user.name "${{ github.event.head_commit.author.name }}"
-          git config --local user.email "${{ github.event.head_commit.author.email }}"
+          git config --local user.name "${{ github.event.head_commit.author.name || 'GitHub Action' }}"
+          git config --local user.email "${{ github.event.head_commit.author.email || 'action@github.com' }}"
           git remote -v
           git add -A
           git commit -m "WordPress i18n triggered by commit ${{ github.sha }}"
           git status
 
+      - name: Pull latest changes from remote branch
+        if: steps.changes.outcome == 'failure'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git fetch origin
+          git rebase origin/${{ github.event.pull_request.head.ref }}
+
       - name: Push changes
         if: steps.changes.outcome == 'failure'
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: git push origin HEAD:${{ github.event.pull_request.head.ref }}
