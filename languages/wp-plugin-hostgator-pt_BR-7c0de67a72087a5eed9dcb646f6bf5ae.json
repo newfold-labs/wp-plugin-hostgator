@@ -1,7 +1,7 @@
 {
     "translation-revision-date": "2023-11-30 17:37",
     "generator": "WP-CLI\/2.10.0",
-    "source": "build\/2.8.0\/index.js",
+    "source": "build\/1.2.9\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
@@ -13,9 +13,6 @@
             "Home": [
                 "In\u00edcio"
             ],
-            "Store": [
-                "Loja"
-            ],
             "Marketplace": [
                 "Mercado"
             ],
@@ -24,9 +21,6 @@
             ],
             "Settings": [
                 "Configura\u00e7\u00f5es"
-            ],
-            "Staging": [
-                "Encena\u00e7\u00e3o"
             ],
             "Help": [
                 "Ajuda"
@@ -296,310 +290,169 @@
             "Controls for content revisions and how often to empty the trash.": [
                 "Controles para revis\u00f5es de conte\u00fado e com que frequ\u00eancia esvaziar a lixeira."
             ],
-            "Pages & Posts": [
+            "HostGator WordPress Plugin": [
                 ""
             ],
-            "Hostgator WordPress Plugin": [
+            "Coming soon deactivated.": [
                 ""
             ],
-            "HostGator Account": [
+            "Coming soon activated.": [
                 ""
             ],
-            "Products & Services": [
+            "Site Launched!": [
                 ""
             ],
-            "Sales & Promotions": [
+            "Coming Soon": [
                 ""
             ],
-            "Payments": [
+            "Congratulations! You just successfully launched your site! Visitors will now see the site, you can easily undo this and restore the coming soon page if you are not ready.": [
                 ""
             ],
-            "Store Details": [
+            "Your site currently displays a coming soon page to visitors. Once you have finished setting up your site, be sure to launch it so your visitors can reach it.": [
                 ""
             ],
-            "We are available 24\/7 to help answer questions and solve your problems.": [
+            "Launch Site": [
                 ""
             ],
-            "More": [
+            "Restore Coming Soon": [
                 ""
             ],
-            "Manage Domain": [
+            "Dismiss": [
                 ""
             ],
-            "Explore our featured collection of tools and services.": [
+            "Settings illustration": [
                 ""
             ],
-            "Oops, there was an error loading the marketplace, please try again later.": [
+            "Website illustration": [
                 ""
             ],
-            "Sorry, no marketplace items. Please, try again later.": [
+            "Hosting illustration": [
                 ""
             ],
-            "Load More": [
+            "Recommended for portfolios, brochure sites, and sites that update monthly or less often.": [
                 ""
             ],
-            "Products": [
+            "Caching disabled.": [
                 ""
             ],
-            "Showcase physical and digital goods, product variations, and custom configurations.": [
+            "If you\u2019ve recently updated your website, we recommend clearing the site cache. We\u2019ll fetch a fresh version of your site to cache.": [
                 ""
             ],
-            "View all ": [
+            "Performance illustration": [
                 ""
             ],
-            "Add New": [
+            "Custom auto-update settings.": [
                 ""
             ],
-            "Blog Posts": [
+            "Everything will auto-update.": [
                 ""
             ],
-            "Add a new blog post or edit your existing posts.": [
+            "Core will not auto-update.": [
                 ""
             ],
-            "Bookings & Appointments": [
+            "Core will auto-update.": [
                 ""
             ],
-            "Add your list of services, setup a booking calendar, and edit your bookings form.": [
+            "Plugins will not auto-update.": [
                 ""
             ],
-            "Your site is not live.": [
+            "Plugins will auto-update.": [
                 ""
             ],
-            "Your site is live.": [
+            "Theme will not auto-update.": [
                 ""
             ],
-            "Visitors to your site will see your \"Coming Soon\" page and not your actual site. Visit ": [
+            "Themes will auto-update.": [
                 ""
             ],
-            "\"Settings\"": [
+            "Allow your site to stay updated automatically.": [
                 ""
             ],
-            " to set your site live.": [
+            "Everything": [
                 ""
             ],
-            "Visitors to your site will see all your publicly published pages.": [
+            "Custom automatic update settings.": [
                 ""
             ],
-            "Site Pages": [
+            "Yay! Everything will automatically update.": [
                 ""
             ],
-            "Edit your homepage and other existing pages or add new pages to your site.": [
+            "Core": [
                 ""
             ],
-            "Every page load is fresh.": [
+            "WordPress must be manually updated.": [
                 ""
             ],
-            "Recommended for sites that update a few times a month or less like porfolios or brochure sites.": [
+            "WordPress will automatically update.": [
                 ""
             ],
-            "Cache setting saved": [
+            "Each plugin must be manually updated.": [
                 ""
             ],
-            "We automatically clear your cache as you work (creating content, changing settings, installing plugins and more). But you can manually clear it here to be confident it's fresh.": [
+            "All plugins will automatically update.": [
                 ""
             ],
-            "This is where you can manage cache settings for your website.": [
+            "Each theme must be manually updated.": [
                 ""
             ],
-            "Manage All Updates": [
+            "All themes will automatically update.": [
                 ""
             ],
-            "WordPress Core": [
+            "Not ready for your site to be live? Enable a \"Coming Soon\" page while you build your website for the public eye. This will disable all parts of your site and show visitors a \"coming soon\" landing page.": [
                 ""
             ],
-            "Keeping automatic updates on ensures timely security fixes and the latest features.": [
+            "Coming soon page is not active and site is acessible.": [
                 ""
             ],
-            "Oops! Something went wrong. Please try again.": [
+            "Coming soon page is active and site is protected.": [
                 ""
             ],
-            "Site Status": [
+            "Pro Tip: Begin collecting subscribers": [
                 ""
             ],
-            "Not Live": [
+            "First, activate the \"Jetpack\" plugin, connect your site, and enable the \"Subscriptions\" module. Then, users can subscribe to be notified when you launch and publish new content.": [
                 ""
             ],
-            "Live": [
+            "Old post comments enabled.": [
                 ""
             ],
-            "Coming Soon page": [
+            "Old post comments disabled.": [
                 ""
             ],
-            "Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen.": [
+            "Disabled comments on posts older than ": [
                 ""
             ],
-            "Your website is currently displaying a \"Coming Soon\" page.": [
+            "Comments per page setting saved.": [
                 ""
             ],
-            "Comments setting saved ": [
+            "Make blog post comments disabled on older posts and control how many to display.": [
                 ""
             ],
-            "Comments setting saved.": [
+            "Comments are allowed on old posts.": [
                 ""
             ],
-            " comments per page.": [
+            "Comments on old posts are disabled.": [
                 ""
             ],
-            "Comments allow visitors to provide feedback and respond to your posts or pages.": [
+            " comment per page.": [
                 ""
             ],
-            "Post revision setting saved ": [
+            "Post revision setting saved": [
                 ""
             ],
-            "Posts will save  ": [
+            "Trash setting saved": [
                 ""
             ],
-            "Number of revisions posts can save ": [
+            "Keep ": [
                 ""
             ],
-            "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take ": [
+            " latest revision": [
                 ""
             ],
-            " step back.": [
+            "Posts will save ": [
                 ""
             ],
-            "Trash setting saved ": [
-                ""
-            ],
-            "Trash emptying frequency ": [
-                ""
-            ],
-            "This is where you can manage common settings for your website.": [
-                ""
-            ],
-            "Cancel": [
-                ""
-            ],
-            "Clone": [
-                ""
-            ],
-            "Confirm Clone Action": [
-                ""
-            ],
-            "This will overwrite anything in staging and update it to an exact clone of the current production site. Are you sure you want to proceed?": [
-                ""
-            ],
-            "Cloned to Staging": [
-                ""
-            ],
-            "Cloning production to staging, this should take about a minute.": [
-                ""
-            ],
-            "Clone to staging": [
-                ""
-            ],
-            "Created": [
-                ""
-            ],
-            "Staging Created": [
-                ""
-            ],
-            "Creating a staging site, this should take about a minute.": [
-                ""
-            ],
-            "Create staging site": [
-                ""
-            ],
-            "Currently editing": [
-                ""
-            ],
-            "Delete": [
-                ""
-            ],
-            "Confirm Delete": [
-                ""
-            ],
-            "This will permanently delete staging site. Are you sure you want to proceed? You can recreate another staging site at any time, but any specific changes you've made to this staging site will be lost.": [
-                ""
-            ],
-            "Deleted Staging": [
-                ""
-            ],
-            "Deleting the staging site, this should take about a minute.": [
-                ""
-            ],
-            "Delete Staging Site": [
-                ""
-            ],
-            "Deploy": [
-                ""
-            ],
-            "Deploy all changes": [
-                ""
-            ],
-            "Confirm Deployment": [
-                ""
-            ],
-            "Deploy database only": [
-                ""
-            ],
-            "This will deploy staging to production and overwrite current production site. Are you sure you want to proceed?": [
-                ""
-            ],
-            "Deploy files only": [
-                ""
-            ],
-            "Deployed": [
-                ""
-            ],
-            "Deploying from staging to production, this should take about a minute.": [
-                ""
-            ],
-            "Deploy Site": [
-                ""
-            ],
-            "Error": [
-                ""
-            ],
-            "Not currently editing": [
-                ""
-            ],
-            "Proceed": [
-                ""
-            ],
-            "Production Site": [
-                ""
-            ],
-            "Staging Site": [
-                ""
-            ],
-            "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready.": [
-                ""
-            ],
-            "Switch": [
-                ""
-            ],
-            "Switching": [
-                ""
-            ],
-            "Switch to Production": [
-                ""
-            ],
-            "This will navigate you to the production environment": [
-                ""
-            ],
-            "Loading the production environment now.": [
-                ""
-            ],
-            "Switching to the production environment, this should take about a minute.": [
-                ""
-            ],
-            "Switch to Staging": [
-                ""
-            ],
-            "This will navigate you to the staging environment": [
-                ""
-            ],
-            "Loading the staging environment now.": [
-                ""
-            ],
-            "Switching to the staging environment, this should take about a minute.": [
-                ""
-            ],
-            "An unknown error has occurred.": [
-                ""
-            ],
-            "Working\u2026": [
+            "Empty trash every ": [
                 ""
             ]
         }
