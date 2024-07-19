@@ -1,300 +1,300 @@
 {
-    "translation-revision-date": "2023-11-30 17:37",
+    "translation-revision-date": "2023-08-24 18:27",
     "generator": "WP-CLI\/2.10.0",
-    "source": "build\/2.10.2\/index.js",
+    "source": "build\/2.10.3\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
             "": {
                 "domain": "messages",
-                "lang": "pt_BR",
+                "lang": "es_MX",
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
             "Home": [
-                "In\u00edcio"
-            ],
-            "Store": [
-                "Loja"
+                "Pagina principal"
             ],
             "Marketplace": [
-                "Mercado"
+                "Mercado en L\u00ednea"
             ],
             "Performance": [
-                "Desempenho"
+                "Rendimiento"
             ],
             "Settings": [
-                "Configura\u00e7\u00f5es"
-            ],
-            "Staging": [
-                "Encena\u00e7\u00e3o"
+                "Configuraciones"
             ],
             "Help": [
-                "Ajuda"
+                "Ayuda"
             ],
             "Oh No, An Error!": [
-                "Oh, N\u00e3o, Um Erro!"
+                "\u00a1Oh no, un error!"
             ],
             "You found an error, please refresh the page and try again!": [
-                "Voc\u00ea encontrou um erro, por favor atualize a p\u00e1gina e tente novamente!"
+                "Ha encontrado un error, \u00a1actualice la p\u00e1gina e int\u00e9ntalo de nuevo!"
             ],
             "If the error persists, please contact support.": [
-                "Se o erro persistir, por favor contate o suporte."
+                "Si persiste el error, p\u00f3ngase en contacto con el soporte."
             ],
             " Error code: ": [
-                " C\u00f3digo de erro: "
+                " C\u00f3digo de error: "
             ],
             "Phone": [
-                "Telefone"
+                "Tel\u00e9fono"
             ],
             "Give us a ring at (866) 96-GATOR": [
-                "Ligue para n\u00f3s"
+                "Ll\u00e1menos al (866) 96-GATOR"
             ],
             "Call Us": [
-                "Ligue para n\u00f3s"
+                "Ll\u00e1menos"
             ],
             "Chat": [
                 "Chat"
             ],
             "Have a question? We're here 24\/7\/365": [
-                "Tem uma d\u00favida? Estamos aqui 24\/7"
+                "\u00bfTiene alguna pregunta? Estamos aqu\u00ed 24\/7\/365"
             ],
             "Live Chat": [
-                "Chat ao Vivo"
+                "Chat En Vivo"
             ],
             "Tweet": [
                 "Tweet"
             ],
             "Tweet us at @hgsupport for support": [
-                "Envie um tweet para @hgsupport para suporte"
+                "Env\u00edenos un tweet a @hgsupport para obtener ayuda"
             ],
             "Tweet Us": [
-                "Tweet-nos"
+                "Env\u00edenos un tweet"
             ],
             "Knowledge Base": [
-                "Base de Conhecimento"
+                "Base de Conocimientos"
             ],
             "Know what the pros know.": [
-                "Saiba o que os profissionais sabem."
+                "Sepa lo que saben los profesionales."
             ],
             "Find Answers": [
-                "Encontre Respostas"
+                "Encontre Respuestas"
             ],
             "Blog": [
                 "Blog"
             ],
             "Get our tips and in-depth articles.": [
-                "Receba nossas dicas e artigos detalhados."
+                "Obtenga nuestros consejos y art\u00edculos detallados."
             ],
             "Learn Stuff": [
-                "Aprenda Coisas"
+                "Aprenda Cosas"
             ],
             "Video Tutorials": [
-                "V\u00eddeos Tutoriais"
+                "Tutoriales en V\u00eddeo"
             ],
             "Step-by-step tutorials and additional guides.": [
-                "Tutoriais passo a passo e guias adicionais."
+                "Tutoriales paso a paso y gu\u00edas adicionales."
             ],
             "Watch Now": [
-                "Assista Agora"
+                "Vea Ahora"
+            ],
+            "Themes": [
+                "Temas"
             ],
             "There's nothing here!": [
-                "N\u00e3o h\u00e1 nada aqui!"
+                "\u00a1No hay nada aqu\u00ed!"
             ],
             "Settings and Performance": [
-                "Configura\u00e7\u00f5es e Desempenho"
+                "Configuraci\u00f3n y Rendimiento"
             ],
             "Customize & fine-tune your site.": [
-                "Personalize & ajuste seu site."
+                "Personalice y ajuste su sitio web."
             ],
             "Manage Settings": [
-                "Gerenciar Configura\u00e7\u00f5es"
+                "Administrar Configuraciones"
             ],
             "Manage your site settings. You can ajdust automatic updates, comments, revisions and more.": [
-                "Gerencie as configura\u00e7\u00f5es do seu site. Voc\u00ea pode ajustar atualiza\u00e7\u00f5es autom\u00e1ticas, coment\u00e1rios, revis\u00f5es e muito mais."
+                "Administre la configuraci\u00f3n de su sitio web. Es posible ajustar actualizaciones autom\u00e1ticas, comentarios, revisiones y m\u00e1s."
             ],
             "Manage site performance and caching settings as well as clear the site cache.": [
-                "Gerencie o desempenho do site e as configura\u00e7\u00f5es de cache, bem como limpe o cache do site."
+                "Administre el rendimiento del sitio web y la configuraci\u00f3n de almacenamiento en cach\u00e9, as\u00ed como borre el cach\u00e9 del sitio web."
             ],
             "Visit Marketplace": [
-                "Visite o Mercado"
+                "Visite al Sitio de Com\u00e9rcio en L\u00ednea"
             ],
             "Add site services, themes or plugins from the marketplace.": [
-                "Adicione servi\u00e7os de site, temas ou plugins da loja."
+                "A\u00f1ada servicios de sitio web, temas o plugins desde el sitio de com\u00e9rcio en l\u00ednea."
             ],
             "Website Content": [
-                "Conte\u00fado do Site"
+                "Contenido del Sitio Web"
             ],
             "Create, manage & sort your story.": [
-                "Crie, gerencie e classifique seu conte\u00fado."
+                "Cree, administre y ordene su historia."
             ],
             "New Post": [
-                "Nova postagem"
+                "Nueva publicaci\u00f3n"
             ],
             "Write a new blog post.": [
-                "Escreva uma nova postagem no blog."
+                "Escriba una nueva publicaci\u00f3n de blog."
             ],
             "Pages": [
                 "P\u00e1ginas"
             ],
             "New Page": [
-                "Nova P\u00e1gina"
+                "Nueva P\u00e1gina"
             ],
             "Add fresh pages to your website.": [
-                "Adicione novas p\u00e1ginas ao seu site."
+                "A\u00f1ada p\u00e1ginas nuevas a su sitio web."
             ],
             "Categories": [
-                "Categorias"
+                "Categor\u00edas"
             ],
             "Manage Categories": [
-                "Gerenciar Categorias"
+                "Administre las Categor\u00edas"
             ],
             "Organize existing content into categories.": [
-                "Organize o conte\u00fado existente em categorias."
+                "Organice el contenido existente en categor\u00edas."
             ],
             "Web Hosting": [
-                "Hospedagem de Sites"
+                "Hosting"
             ],
             "Access & manage your HostGator account.": [
-                "Acesse & gerencie sua conta HostGator."
+                "Acceda y administre su cuenta HostGator."
             ],
             "Manage Sites": [
-                "Gerenciar Sites"
+                "Administre Sitios Web"
             ],
             "Manage your site from the control panel. You can create backups, set security, and improve performance.": [
-                "Gerencie seu site a partir do painel de controle. Voc\u00ea pode criar backups, definir a seguran\u00e7a e melhorar o desempenho."
+                "Administre su sitio web desde el panel de control. Es posible crear copias de seguridad, configurar la seguridad y mejorar el rendimiento."
             ],
             "Email": [
-                "E-mail"
+                "Correo Electr\u00f3nico"
             ],
             "Manage Email": [
-                "Gerenciar E-mail"
+                "Administre el Correo Electr\u00f3nico"
             ],
             "Create email accounts, compose, send, and receive your email from the control panel.": [
-                "Crie contas de e-mail, componha, envie e receba seu e-mail no painel de controle."
+                "Cree cuentas de correo electr\u00f3nico, redacte, env\u00ede y reciba su correo electr\u00f3nico desde el panel de control."
             ],
             "Domains": [
-                "Dom\u00ednios"
+                "Dominios"
             ],
             "Find a Domain": [
-                "Encontre um Dom\u00ednio"
+                "Encuentre un Dominio"
             ],
             "Find a new domain and assign it to your site or start a new site with a fresh domain.": [
-                "Encontre um novo dom\u00ednio e atribua-o ao seu site ou inicie um novo site com um novo dom\u00ednio."
+                "Encuentre un nuevo dominio y as\u00edgnelo a su sitio web o inicie un nuevo sitio web con un dominio nuevo."
             ],
             "Get Help": [
-                "Obter Ajuda"
+                "Obtenga Ayuda"
             ],
             "24\/7\/365 support. We work when you work.": [
-                "Suporte 24\/7\/365. N\u00f3s trabalhamos quando voc\u00ea trabalha."
-            ],
-            "No cache enabled.": [
-                "Nenhum cache ativado."
+                "Soporte 24\/7\/365. Trabajamos cuando usted trabaja."
             ],
             "Disabled": [
-                "Desativado"
+                "Deshabilitado"
+            ],
+            "No cache enabled.": [
+                "Sin cach\u00e9 habilitado."
             ],
             "Not recommended.": [
-                "N\u00e3o recomendado."
-            ],
-            "Cache static assets like images and the appearance of your site for 1 hour.": [
-                "Recurso de caches est\u00e1ticos, como imagens e a apar\u00eancia do seu site, por 1 hora."
+                "No recomendado."
             ],
             "Assets Only": [
-                "Somente Recursos"
+                "Solo activos"
             ],
-            "Cache enabled for assets only.": [
-                "Cache ativado apenas para recursos."
+            "Cache static assets like images and the appearance of your site for 1 hour.": [
+                "Almacene en cach\u00e9 activos est\u00e1ticos como im\u00e1genes y la apariencia de su sitio web durante 1 hora."
             ],
             "Recommended for ecommerce and sites that update frequently or display info in real-time.": [
-                "Recomendado para com\u00e9rcio eletr\u00f4nico e sites que s\u00e3o atualizados com frequ\u00eancia ou exibem informa\u00e7\u00f5es em tempo real."
+                "Recomendado para comercio electr\u00f3nico y sitios web que se actualizan con frecuencia o muestran informaci\u00f3n en tiempo real."
             ],
-            "Cache static assets for 24 hours and web pages for 2 hours.": [
-                "Recurso de caches est\u00e1ticos por 24 horas e p\u00e1ginas da web por 2 horas."
+            "Cache enabled for assets only.": [
+                "Cach\u00e9 habilitada solo para activos."
             ],
             "Assets & Web Pages": [
-                "Recursos & P\u00e1ginas da Web"
+                "Activos y P\u00e1ginas Web"
             ],
-            "Cache enabled for assets and pages.": [
-                "Cache ativado para ativos e p\u00e1ginas."
+            "Cache static assets for 24 hours and web pages for 2 hours.": [
+                "Cach\u00e9 activos est\u00e1ticos durante 24 horas y p\u00e1ginas web durante 2 horas."
             ],
             "Recommended for blogs, educational sites, and sites that update at least weekly.": [
-                "Recomendado para blogs, sites educacionais e sites que s\u00e3o atualizados pelo menos uma vez por semana."
+                "Recomendado para blogs, sitios web educativos y sitios web que se actualizan al menos semanalmente."
             ],
-            "Cache static assets for 1 week and web pages for 8 hours.": [
-                "Recurso de caches est\u00e1ticos por 1 semana e p\u00e1ginas da web por 8 horas."
+            "Cache enabled for assets and pages.": [
+                "Cach\u00e9 habilitada para activos y p\u00e1ginas."
             ],
             "Assets & Web Pages - Extended": [
-                "Recursos & P\u00e1ginas da Web - Estendido"
+                "Activos y P\u00e1ginas Web - Extendidos"
             ],
             "Cache enabled for assets and pages (extended).": [
-                "Cache ativado para recursos e p\u00e1ginas (estendido)."
-            ],
-            "Boost speed and performance by storing a copy of your website content, files, and images online so the pages of your website load faster for your visitors.": [
-                "Aumente a velocidade e o desempenho armazenando uma c\u00f3pia do conte\u00fado, arquivos e imagens do seu site on-line para que as p\u00e1ginas do seu site sejam carregadas mais rapidamente para seus visitantes."
-            ],
-            "Cache Level": [
-                "Levels de Cache"
-            ],
-            "Clear All Cache Now": [
-                "Limpar Todo o Cache Agora"
-            ],
-            "Cache cleared": [
-                "Cache limpo"
+                "Cach\u00e9 habilitada para recursos y p\u00e1ginas (extendido)."
             ],
             "Clear Cache": [
-                "Limpar Cache"
+                "Limpiar Cach\u00e9"
+            ],
+            "Cache cleared": [
+                "Cach\u00e9 Borrado"
+            ],
+            "Clear All Cache Now": [
+                "Limpiar Todo Cach\u00e9 Ahora"
+            ],
+            "Boost speed and performance by storing a copy of your website content, files, and images online so the pages of your website load faster for your visitors.": [
+                "Aumente la velocidad y el rendimiento almacenando una copia del contenido, los archivos y las im\u00e1genes de su sitio web en l\u00ednea para que las p\u00e1ginas de su sitio web se carguen m\u00e1s r\u00e1pido para sus visitantes."
             ],
             "Plugins": [
                 "Plugins"
             ],
-            "Themes": [
-                "Temas"
-            ],
             "Automatic Updates": [
-                "Atualiza\u00e7\u00f5es Autom\u00e1ticas"
+                "Actualizaciones Autom\u00e1ticas"
             ],
             "Disable comments for older posts": [
-                "Desabilitar coment\u00e1rios de postagens mais antigas"
+                "Deshabilitar comentarios para publicaciones antiguas"
             ],
             "Comments on posts are disabled after ": [
-                "Os coment\u00e1rios em postagens s\u00e3o desativados ap\u00f3s "
+                "Los comentarios sobre los mensajes est\u00e1n desactivados despu\u00e9s de "
             ],
             " day.": [
-                " dia.",
-                " dias."
+                " d\u00eda.",
+                " d\u00edas."
             ],
             "Close comments after ": [
-                "Fechar coment\u00e1rios ap\u00f3s "
+                "Cerrar comentarios despu\u00e9s de "
             ],
             "Posts will display ": [
-                "As postagens ser\u00e3o exibidas "
+                "Las publicaciones se mostrar\u00e1n "
             ],
             " comment at a time.": [
-                " coment\u00e1rio por vez.",
-                " coment\u00e1rios por vez."
+                " comentario a la vez.",
+                " comentarios a la vez."
             ],
             "Display ": [
-                "Exibir "
+                "Mostrar "
             ],
             "Comments": [
-                "Coment\u00e1rios"
+                "Comentarios"
             ],
             " revision.": [
-                " revis\u00e3o.",
-                " revis\u00f5es."
+                " revisi\u00f3n.",
+                " revisiones."
             ],
             "The trash will automatically empty every ": [
-                "A lixeira ser\u00e1 automaticamente vazia a cada "
+                "La papelera se vac\u00eda autom\u00e1ticamente cada "
             ],
             " week.": [
                 " semana.",
                 " semanas."
             ],
             "Content Options": [
-                "Op\u00e7\u00f5es de Conte\u00fado"
+                "Opciones de Contenido"
             ],
             "Controls for content revisions and how often to empty the trash.": [
-                "Controles para revis\u00f5es de conte\u00fado e com que frequ\u00eancia esvaziar a lixeira."
+                "Controles para revisiones de contenido y con qu\u00e9 frecuencia vaciar la papelera."
+            ],
+            "Store": [
+                ""
+            ],
+            "Staging": [
+                ""
+            ],
+            "Cache static assets for 1 week and web pages for 8 hours.": [
+                ""
+            ],
+            "Cache Level": [
+                ""
             ],
             "Pages & Posts": [
                 ""
