@@ -108,6 +108,13 @@ export const routes = [
 					),
 				}
 				: null,
+			NewfoldRuntime.hasCapability( 'hasYithExtended' ) &&
+			NewfoldRuntime.hasCapability( 'hasEcomdash' )
+				? {
+						name: '/store/sales_channel',
+						title: __( 'Sales Channel', 'wp-plugin-hostgator' ),
+					}
+				: null,
 			NewfoldRuntime.isWoo
 				? {
 					name: '/store/payments',
