@@ -1,7 +1,7 @@
 {
     "translation-revision-date": "2023-11-30 17:37",
     "generator": "WP-CLI\/2.10.0",
-    "source": "build\/2.10.1\/index.js",
+    "source": "build\/2.11.1\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
@@ -633,6 +633,9 @@
                 ""
             ],
             "Working\u2026": [
+                ""
+            ],
+            "Sales Channel": [
                 ""
             ]
         }
