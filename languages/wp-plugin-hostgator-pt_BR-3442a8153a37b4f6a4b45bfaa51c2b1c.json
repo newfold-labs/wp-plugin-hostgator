@@ -1,7 +1,7 @@
 {
     "translation-revision-date": "2023-11-30 17:37",
     "generator": "WP-CLI\/2.10.0",
-    "source": "build\/2.7.2\/index.js",
+    "source": "build\/2.11.2\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
@@ -317,6 +317,12 @@
             "Store Details": [
                 ""
             ],
+            "Admin": [
+                ""
+            ],
+            "Secret page to manage admin features and settings.": [
+                ""
+            ],
             "We are available 24\/7 to help answer questions and solve your problems.": [
                 ""
             ],
@@ -336,6 +342,12 @@
                 ""
             ],
             "Load More": [
+                ""
+            ],
+            "Oops! Something Went Wrong": [
+                ""
+            ],
+            "An error occurred while loading the content. Please try again later.": [
                 ""
             ],
             "Products": [
@@ -464,7 +476,28 @@
             "Trash emptying frequency ": [
                 ""
             ],
+            "The Help Center provides guided, step-by-step assistance as you build your site.": [
+                ""
+            ],
+            "Sorry, that is not allowed.": [
+                ""
+            ],
+            "This feature cannot currently be modified.": [
+                ""
+            ],
             "This is where you can manage common settings for your website.": [
+                ""
+            ],
+            "Features": [
+                ""
+            ],
+            "The performance feature provides improvements to loads faster for visitors including cache settings.": [
+                ""
+            ],
+            "The staging feature provides a way to copy a site to test new updates, features or content.": [
+                ""
+            ],
+            "Wonder Blocks provides a library of customizable block patterns and page templates.": [
                 ""
             ],
             "Cancel": [
@@ -600,6 +633,9 @@
                 ""
             ],
             "Working\u2026": [
+                ""
+            ],
+            "Sales Channel": [
                 ""
             ]
         }
