@@ -820,7 +820,7 @@ msgid "The staging feature provides a way to copy a site to test new updates, fe
 msgstr ""
 
 #: build/2.11.2/index.js:1
-msgid "Wonder Blocks provides a library of customizable block patterns and page templates."
+msgid "WonderBlocks provides a library of customizable block patterns and page templates."
 msgstr ""
 
 #: build/2.11.2/index.js:1
