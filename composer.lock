@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "98025a6f7005dfd13d01a5972e01b0c2",
+    "content-hash": "5c8783a86ef6d61dbf60bb2c6853675a",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -1102,16 +1102,16 @@
         },
         {
             "name": "newfold-labs/wp-module-migration",
-            "version": "v1.0.10",
+            "version": "v1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-migration.git",
-                "reference": "853d4fa02f83889ac3045c23a4e4744c85c49022"
+                "reference": "d84570b93abf5baade814bbb8d71871adff10e89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-migration/zipball/853d4fa02f83889ac3045c23a4e4744c85c49022",
-                "reference": "853d4fa02f83889ac3045c23a4e4744c85c49022",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-migration/zipball/d84570b93abf5baade814bbb8d71871adff10e89",
+                "reference": "d84570b93abf5baade814bbb8d71871adff10e89",
                 "shasum": ""
             },
             "require": {
@@ -1149,10 +1149,10 @@
             ],
             "description": "Initiates the migration process",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-migration/tree/v1.0.10",
+                "source": "https://github.com/newfold-labs/wp-module-migration/tree/v1.0.11",
                 "issues": "https://github.com/newfold-labs/wp-module-migration/issues"
             },
-            "time": "2024-08-20T13:34:22+00:00"
+            "time": "2024-08-21T14:04:06+00:00"
         },
         {
             "name": "newfold-labs/wp-module-notifications",
@@ -3493,5 +3493,5 @@
     "platform-overrides": {
         "php": "7.3.0"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
