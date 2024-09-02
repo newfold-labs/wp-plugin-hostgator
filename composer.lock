@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e64867f21eabe39f5fcf7c9c080b2ae3",
+    "content-hash": "a86423aedce4bbbd8036114abdd276aa",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -504,36 +504,36 @@
         },
         {
             "name": "newfold-labs/wp-module-data",
-            "version": "2.6.2",
+            "version": "2.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-data.git",
-                "reference": "91d1b03162f23b7b8bd3a41d9496eb8017df0051"
+                "reference": "f98dfabe6a4cb10aec6dcd6e81fc7d269238e9a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-data/zipball/91d1b03162f23b7b8bd3a41d9496eb8017df0051",
-                "reference": "91d1b03162f23b7b8bd3a41d9496eb8017df0051",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-data/zipball/f98dfabe6a4cb10aec6dcd6e81fc7d269238e9a4",
+                "reference": "f98dfabe6a4cb10aec6dcd6e81fc7d269238e9a4",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "newfold-labs/wp-module-loader": "^1.0",
+                "newfold-labs/wp-module-loader": "^1.0.10",
                 "wp-forge/helpers": "^2.0",
-                "wp-forge/wp-query-builder": "^1.0",
+                "wp-forge/wp-query-builder": "^1.0.4",
                 "wp-forge/wp-upgrade-handler": "^1.0",
-                "wpscholar/url": "^1.2"
+                "wpscholar/url": "^1.2.2"
             },
             "require-dev": {
                 "10up/wp_mock": "^0.4.2",
-                "bluehost/bluehost-wordpress-plugin": "*",
-                "brianhenryie/composer-phpstorm": "*",
-                "johnpbloch/wordpress": "*",
+                "bluehost/bluehost-wordpress-plugin": ">=3.1",
+                "brianhenryie/composer-phpstorm": ">=0.4",
+                "johnpbloch/wordpress": ">=6.5.3",
                 "kporras07/composer-symlinks": "^1.2",
-                "lucatume/wp-browser": "^3",
-                "newfold-labs/wp-php-standards": "^1.2",
+                "lucatume/wp-browser": "^3.5.8",
+                "newfold-labs/wp-php-standards": "^1.2.3",
                 "phpunit/phpcov": "^5.0",
-                "wpackagist-plugin/woocommerce": "*"
+                "wpackagist-plugin/woocommerce": ">=9"
             },
             "type": "library",
             "extra": {
@@ -595,10 +595,10 @@
             ],
             "description": "Newfold Data Module",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-data/tree/2.6.2",
+                "source": "https://github.com/newfold-labs/wp-module-data/tree/2.6.3",
                 "issues": "https://github.com/newfold-labs/wp-module-data/issues"
             },
-            "time": "2024-08-16T14:18:26+00:00"
+            "time": "2024-08-30T19:51:58+00:00"
         },
         {
             "name": "newfold-labs/wp-module-deactivation",
@@ -1315,16 +1315,16 @@
         },
         {
             "name": "newfold-labs/wp-module-patterns",
-            "version": "2.3.1",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-patterns.git",
-                "reference": "da1d39692ad3232baa7ee00166a336abf12b94a4"
+                "reference": "dabe7f8de5ee83400021e4e12374486086248eea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-patterns/zipball/da1d39692ad3232baa7ee00166a336abf12b94a4",
-                "reference": "da1d39692ad3232baa7ee00166a336abf12b94a4",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-patterns/zipball/dabe7f8de5ee83400021e4e12374486086248eea",
+                "reference": "dabe7f8de5ee83400021e4e12374486086248eea",
                 "shasum": ""
             },
             "require": {
@@ -1362,10 +1362,10 @@
             ],
             "description": "WordPress Cloud Patterns",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-patterns/tree/2.3.1",
+                "source": "https://github.com/newfold-labs/wp-module-patterns/tree/2.4.0",
                 "issues": "https://github.com/newfold-labs/wp-module-patterns/issues"
             },
-            "time": "2024-08-01T05:21:28+00:00"
+            "time": "2024-08-30T12:44:15+00:00"
         },
         {
             "name": "newfold-labs/wp-module-performance",
@@ -1902,16 +1902,16 @@
         },
         {
             "name": "wp-forge/wp-query-builder",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-forge/wp-query-builder.git",
-                "reference": "34959e5618969afd8350a8206744a7810d9f253b"
+                "reference": "131dcfee2d3ebf84cec9bd6ce07d3f2c854b4984"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-forge/wp-query-builder/zipball/34959e5618969afd8350a8206744a7810d9f253b",
-                "reference": "34959e5618969afd8350a8206744a7810d9f253b",
+                "url": "https://api.github.com/repos/wp-forge/wp-query-builder/zipball/131dcfee2d3ebf84cec9bd6ce07d3f2c854b4984",
+                "reference": "131dcfee2d3ebf84cec9bd6ce07d3f2c854b4984",
                 "shasum": ""
             },
             "require": {
@@ -1941,9 +1941,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wp-forge/wp-query-builder/issues",
-                "source": "https://github.com/wp-forge/wp-query-builder/tree/1.0.3"
+                "source": "https://github.com/wp-forge/wp-query-builder/tree/1.0.4"
             },
-            "time": "2023-04-29T19:26:54+00:00"
+            "time": "2024-08-22T21:49:41+00:00"
         },
         {
             "name": "wp-forge/wp-update-handler",
