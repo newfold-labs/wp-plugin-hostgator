@@ -26,6 +26,7 @@
     "@wordpress/element": "^6.7.0",
     "@wordpress/i18n": "^5.6.0",
     "@wordpress/icons": "^10.6.0",
+    "ajv": "^8.17.1",
     "classnames": "^2.5.1",
     "jquery": "^3.7.1",
     "lodash": "^4.17.21",
