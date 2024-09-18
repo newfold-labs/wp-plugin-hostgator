@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7e4a6f9d3e96e8bccfe4952dfad5ac9f",
+    "content-hash": "f58b38941bd4e916f7d90d70d91b16b9",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -3997,7 +3997,7 @@
         },
         {
             "name": "wp-phpunit/wp-phpunit",
-            "version": "6.6.1",
+            "version": "6.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-phpunit/wp-phpunit.git",
