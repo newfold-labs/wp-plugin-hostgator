@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cbe258aba70fbc14d0e2370886d3613d",
+    "content-hash": "7e4a6f9d3e96e8bccfe4952dfad5ac9f",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -989,16 +989,16 @@
         },
         {
             "name": "newfold-labs/wp-module-ecommerce",
-            "version": "v1.3.42",
+            "version": "v1.3.43",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-ecommerce.git",
-                "reference": "1aff908a8b97d2742ab26201b27d0d9d5e619e30"
+                "reference": "a4c7c46c83cf54cf99183d442d9abdcf0c90d77e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/1aff908a8b97d2742ab26201b27d0d9d5e619e30",
-                "reference": "1aff908a8b97d2742ab26201b27d0d9d5e619e30",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/a4c7c46c83cf54cf99183d442d9abdcf0c90d77e",
+                "reference": "a4c7c46c83cf54cf99183d442d9abdcf0c90d77e",
                 "shasum": ""
             },
             "require": {
@@ -1041,10 +1041,10 @@
             ],
             "description": "Brand Agnostic eCommerce Experience",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/v1.3.42",
+                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/v1.3.43",
                 "issues": "https://github.com/newfold-labs/wp-module-ecommerce/issues"
             },
-            "time": "2024-09-04T13:22:33+00:00"
+            "time": "2024-09-05T13:57:17+00:00"
         },
         {
             "name": "newfold-labs/wp-module-facebook",
@@ -1893,16 +1893,16 @@
         },
         {
             "name": "newfold-labs/wp-module-staging",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-staging.git",
-                "reference": "87116edaff795913173dd5d0dc4cb258d6cda8ef"
+                "reference": "bf00499e80ba23729dfe140e8211a325627c259c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-staging/zipball/87116edaff795913173dd5d0dc4cb258d6cda8ef",
-                "reference": "87116edaff795913173dd5d0dc4cb258d6cda8ef",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-staging/zipball/bf00499e80ba23729dfe140e8211a325627c259c",
+                "reference": "bf00499e80ba23729dfe140e8211a325627c259c",
                 "shasum": ""
             },
             "require": {
@@ -1940,10 +1940,10 @@
             ],
             "description": "Newfold module for staging functionality in brand plugins",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-staging/tree/2.1.0",
+                "source": "https://github.com/newfold-labs/wp-module-staging/tree/2.1.1",
                 "issues": "https://github.com/newfold-labs/wp-module-staging/issues"
             },
-            "time": "2024-07-03T17:28:16+00:00"
+            "time": "2024-09-03T18:35:49+00:00"
         },
         {
             "name": "newfold-labs/wp-module-survey",
@@ -3535,16 +3535,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v5.4.42",
+            "version": "v5.4.43",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "0724c51fa067b198e36506d2864e09a52180998a"
+                "reference": "ae25a9145a900764158d439653d5630191155ca0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/0724c51fa067b198e36506d2864e09a52180998a",
-                "reference": "0724c51fa067b198e36506d2864e09a52180998a",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/ae25a9145a900764158d439653d5630191155ca0",
+                "reference": "ae25a9145a900764158d439653d5630191155ca0",
                 "shasum": ""
             },
             "require": {
@@ -3578,7 +3578,7 @@
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/finder/tree/v5.4.42"
+                "source": "https://github.com/symfony/finder/tree/v5.4.43"
             },
             "funding": [
                 {
@@ -3594,7 +3594,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-07-22T08:53:29+00:00"
+            "time": "2024-08-13T14:03:51+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
