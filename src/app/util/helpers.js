@@ -147,10 +147,16 @@ export const getRegionValue = () => {
 	}
 	// qualify region setting and return region code
 	switch ( region ) {
-		case 'BR':
-		case 'MX':
-		case 'CO':
-		case 'CL':
+		case 'AR': // Argentina
+		case 'BO': // Bolivia
+		case 'BR': // Brazil
+		case 'CL': // Chile
+		case 'CO': // Colombia
+		case 'DO': // Dominican Republic
+		case 'EC': // Ecuador
+		case 'MX': // Mexico
+		case 'PR': // Peru
+		case 'UY': // Uruguay
 			return region;
 			break;
 		case 'US':
