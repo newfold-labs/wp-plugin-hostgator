@@ -175,7 +175,7 @@ final class Admin {
 
 	/**
 	 * Replace all Spanish locales with Mexico
-	 * 
+	 *
 	 * This is in order to have one Spanish translation used for all locales.
 	 *
 	 * @param  string $locale - locale string
