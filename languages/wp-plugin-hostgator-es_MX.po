@@ -37,8 +37,8 @@ msgstr "Plugin WordPress que integra un sitio web a WordPress con el panel de co
 
 #. Author of the plugin
 #: wp-plugin-hostgator.php
-#: inc/Admin.php:223
-#: inc/Admin.php:224
+#: inc/Admin.php:226
+#: inc/Admin.php:227
 msgid "HostGator"
 msgstr "HostGator"
 
@@ -78,7 +78,7 @@ msgid "Preview the coming soon landing page"
 msgstr "Obtener una vista previa de la próxima página de destino"
 
 #: inc/Admin.php:64
-#: inc/Admin.php:346
+#: inc/Admin.php:349
 #: build/2.11.8/index.js:1
 msgid "Home"
 msgstr "Pagina principal"
@@ -94,7 +94,7 @@ msgid "Performance"
 msgstr "Rendimiento"
 
 #: inc/Admin.php:82
-#: inc/Admin.php:347
+#: inc/Admin.php:350
 #: build/2.11.8/index.js:1
 msgid "Settings"
 msgstr "Configuraciones"
@@ -104,19 +104,19 @@ msgstr "Configuraciones"
 msgid "Help"
 msgstr "Ayuda"
 
-#: inc/Admin.php:266
+#: inc/Admin.php:269
 msgid "Please update to a newer WordPress version."
 msgstr "Por favor actualice a una versión más nueva de WordPress."
 
-#: inc/Admin.php:267
+#: inc/Admin.php:270
 msgid "There are new WordPress components which this plugin requires in order to render the interface."
 msgstr "Hay nuevos componentes de WordPress que este plugin requiere para renderizar la interfaz."
 
-#: inc/Admin.php:268
+#: inc/Admin.php:271
 msgid "Please update now"
 msgstr "Por favor actualice ahora"
 
-#: inc/Admin.php:360
+#: inc/Admin.php:363
 msgid "Thank you for creating with <a href=\"https://wordpress.org/\">WordPress</a> and <a href=\"https://hostgator.com/about\">HostGator</a>."
 msgstr "Gracias por crear con <a href=\"https://es-mx.wordpress.org/\">WordPress</a> y <a href=\"https://hostgator.mx/\">HostGator</a>."
 

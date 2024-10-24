@@ -32,8 +32,8 @@ msgstr ""
 
 #. Author of the plugin
 #: wp-plugin-hostgator.php
-#: inc/Admin.php:223
-#: inc/Admin.php:224
+#: inc/Admin.php:226
+#: inc/Admin.php:227
 msgid "HostGator"
 msgstr ""
 
@@ -85,7 +85,7 @@ msgid "Preview the coming soon landing page"
 msgstr ""
 
 #: inc/Admin.php:64
-#: inc/Admin.php:346
+#: inc/Admin.php:349
 #: build/2.11.8/index.js:1
 msgid "Home"
 msgstr ""
@@ -111,7 +111,7 @@ msgid "Performance"
 msgstr ""
 
 #: inc/Admin.php:82
-#: inc/Admin.php:347
+#: inc/Admin.php:350
 #: build/2.11.8/index.js:1
 msgid "Settings"
 msgstr ""
@@ -126,19 +126,19 @@ msgstr ""
 msgid "Help"
 msgstr ""
 
-#: inc/Admin.php:266
+#: inc/Admin.php:269
 msgid "Please update to a newer WordPress version."
 msgstr ""
 
-#: inc/Admin.php:267
+#: inc/Admin.php:270
 msgid "There are new WordPress components which this plugin requires in order to render the interface."
 msgstr ""
 
-#: inc/Admin.php:268
+#: inc/Admin.php:271
 msgid "Please update now"
 msgstr ""
 
-#: inc/Admin.php:360
+#: inc/Admin.php:363
 msgid "Thank you for creating with <a href=\"https://wordpress.org/\">WordPress</a> and <a href=\"https://hostgator.com/about\">HostGator</a>."
 msgstr ""
 
