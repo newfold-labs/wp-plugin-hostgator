@@ -176,6 +176,8 @@ final class Admin {
 	/**
 	 * Replace all Spanish locales with Mexico
 	 *
+	 * This is in order to have one Spanish translation used for all locales.
+	 *
 	 * @param  string $locale - locale string
 	 * @return string updated locale
 	 */
@@ -183,16 +185,17 @@ final class Admin {
 		return str_replace(
 			array(
 				'es_AR', // Argentina
-				'es_CO', // Colombia
-				'es_EC', // Ecuador
-				'es_DO', // Dominican Republic
-				'es_PE', // Peru
+				'es_BO', // Bolivia
 				'es_CL', // Chile
-				'es_UY', // Uruguay
-				'es_PR', // Puerto Rico
-				'es_GT', // Guatemala
-				'es_ES', // Espanol / Spain
+				'es_CO', // Colombia
 				'es_CR', // Costa Rica
+				'es_DO', // Dominican Republic
+				'es_EC', // Ecuador
+				'es_ES', // Espanol / Spain
+				'es_GT', // Guatemala
+				'es_PE', // Peru
+				'es_PR', // Puerto Rico
+				'es_UY', // Uruguay
 				'es_VE', // Venezuela
 			),
 			'es_MX', // Mexico
