@@ -24,7 +24,7 @@
  */
 
 const region = {
-	main: {
+	main: { // the main link the regional hostgator site. Used as a fallback or default link per region.
 		default: 'https://www.hostgator.com',
 		AR: 'https://www.hostgator.ar',
 		BO: 'https://www.hostgator.bo',
@@ -37,46 +37,46 @@ const region = {
 		PE: 'https://www.hostgator.pe',
 		UY: 'https://www.hostgator.uy',
 	},
-	site_info_portal: {
+	site_info_portal: { // site info portal link in plugin info section - big button with snappy icon.
 		default: 'https://www.hostgator.com/my-account/login',
-		AR: 'https://cliente.hostgator.ar',
-		BO: 'https://cliente.hostgator.bo',
+		AR: 'https://billing.hostgator.ar',
+		BO: 'https://billing.hostgator.bo',
 		BR: 'https://financeiro.hostgator.com.br',
-		CL: 'https://cliente.hostgator.cl',
-		CO: 'https://cliente.hostgator.co',
-		DO: 'https://cliente.hostgator.do',
-		EC: 'https://cliente.hostgator.net.ec',
-		MX: 'https://cliente.hostgator.mx',
-		PE: 'https://cliente.hostgator.pe',
-		UY: 'https://cliente.hostgator.uy',
+		CL: 'https://billing.hostgator.cl',
+		CO: 'https://billing.hostgator.co',
+		DO: 'https://billing.hostgator.do',
+		EC: 'https://billing.hostgator.net.ec',
+		MX: 'https://billing.hostgator.mx',
+		PE: 'https://billing.hostgator.pe',
+		UY: 'https://billing.hostgator.uy',
 	},
-	home_manage_sites: {
+	home_manage_sites: { // Manage Sites button to manage sites within control panel.
 		default: 'https://www.hostgator.com/my-account/hosting/details/sites',
-		AR: 'https://cliente.hostgator.ar/sitios-web',
-		BO: 'https://cliente.hostgator.bo/sitios-web',
+		AR: 'https://billing.hostgator.ar',
+		BO: 'https://billing.hostgator.bo',
 		BR: 'https://cliente.hostgator.com.br',
-		CL: 'https://cliente.hostgator.cl/sitios-web',
-		CO: 'https://cliente.hostgator.co/sitios-web',
-		DO: 'https://cliente.hostgator.do/sitios-web',
-		EC: 'https://cliente.hostgator.net.ec/sitios-web',
-		MX: 'https://cliente.hostgator.mx/sitios-web',
-		PE: 'https://cliente.hostgator.pe/sitios-web',
-		UY: 'https://cliente.hostgator.uy/sitios-web',
+		CL: 'https://billing.hostgator.cl',
+		CO: 'https://billing.hostgator.co',
+		DO: 'https://billing.hostgator.do',
+		EC: 'https://billing.hostgator.net.ec',
+		MX: 'https://billing.hostgator.mx',
+		PE: 'https://billing.hostgator.pe',
+		UY: 'https://billing.hostgator.uy',
 	},
-	home_manage_email: {
+	home_manage_email: { // Manage email button to manage email in control panel.
 		default: 'https://www.hostgator.com/my-account/google-workspace/google-workspace-list',
-		AR: 'https://cliente.hostgator.ar/e-mails',
-		BO: 'https://cliente.hostgator.bo/e-mails',
+		AR: 'https://cliente.hostgator.ar/emails-list',
+		BO: 'https://cliente.hostgator.bo/emails-list',
 		BR: 'https://cliente.hostgator.com.br/emails-list',
 		CL: 'https://cliente.hostgator.cl/emails-list',
 		CO: 'https://cliente.hostgator.co/emails-list',
-		DO: 'https://cliente.hostgator.do/e-mails',
-		EC: 'https://cliente.hostgator.net.ec/e-mails',
-		MX: 'https://cliente.hostgator.mx/e-mails',
-		PE: 'https://cliente.hostgator.pe/e-mails',
-		UY: 'https://cliente.hostgator.uy/e-mails',
+		DO: 'https://cliente.hostgator.do/emails-list',
+		EC: 'https://cliente.hostgator.net.ec/emails-list',
+		MX: 'https://cliente.hostgator.mx/emails-list',
+		PE: 'https://cliente.hostgator.pe/emails-list',
+		UY: 'https://cliente.hostgator.uy/emails-list',
 	},
-	home_find_domain: {
+	home_find_domain: { // Manage Domain button to manage domains in control panel.
 		default: 'https://www.hostgator.com/my-account/domain-center/domain-list',
 		AR: 'https://www.hostgator.ar/dominios',
 		BO: 'https://www.hostgator.bo/dominios',
@@ -89,7 +89,7 @@ const region = {
 		PE: 'https://www.hostgator.pe/dominios',
 		UY: 'https://www.hostgator.uy/dominios',
 	},
-	help_phone_number: { // a string false value will remove this section
+	help_phone_number: { // Support phone number. A string 'false' value will remove this section if there is no phone support in the region.
 		default: 'tel:8669642867',
 		AR: 'false',
 		BO: 'false',
@@ -102,7 +102,7 @@ const region = {
 		PE: 'false',
 		UY: 'false',
 	},
-	help_chat: {
+	help_chat: { // Support live chat link. 
 		default: 'https://helpchat.hostgator.com',
 		AR: 'https://cliente.hostgator.ar',
 		BO: 'https://cliente.hostgator.bo',
@@ -115,7 +115,7 @@ const region = {
 		PE: 'https://cliente.hostgator.pe',
 		UY: 'https://cliente.hostgator.uy',
 	},
-	help_twitter: { // a string false value will remove this section
+	help_twitter: { // Region-specific Twitter/X url for support. A string 'false' value will remove this section if it is not applicable to the region.
 		default: 'https://twitter.com/hgsupport',
 		AR: 'false',
 		BO: 'false',
@@ -128,7 +128,7 @@ const region = {
 		PE: 'false',
 		UY: 'false',
 	},
-	help_kb: {
+	help_kb: { // Region-specific Knowledgebase url.
 		default: 'https://www.hostgator.com/help',
 		AR: 'https://soporte.hostgator.mx/hc/es-419',
 		BO: 'https://soporte.hostgator.mx/hc/es-419',
@@ -141,7 +141,7 @@ const region = {
 		PE: 'https://soporte.hostgator.mx/hc/es-419',
 		UY: 'https://soporte.hostgator.mx/hc/es-419',
 	},
-	help_blog: {
+	help_blog: { // Region-specific Blog url.
 		default: 'https://www.hostgator.com/blog/',
 		AR: 'https://www.hostgator.mx/blog/',
 		BO: 'https://www.hostgator.mx/blog/',
@@ -154,7 +154,7 @@ const region = {
 		PE: 'https://www.hostgator.mx/blog/',
 		UY: 'https://www.hostgator.mx/blog/',
 	},
-	help_youtube: {
+	help_youtube: { // Region-specific YouTube url.
 		default: 'https://www.youtube.com/c/hostgatorUS',
 		AR: 'https://www.youtube.com/c/HostGatorMexico',
 		BO: 'https://www.youtube.com/c/HostGatorMexico',
