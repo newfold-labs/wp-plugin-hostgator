@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "49e5d6c79b401a087540463591ea28a7",
+    "content-hash": "11294c0e12c73d79e0b9cadb815bc8ab",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -830,16 +830,16 @@
         },
         {
             "name": "newfold-labs/wp-module-data",
-            "version": "2.6.5",
+            "version": "2.6.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-data.git",
-                "reference": "002cc3da70565af1708408f7d7604396d2af55e3"
+                "reference": "ddfeb6e4d3e74793fba9dac204db374f030e7a72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-data/zipball/002cc3da70565af1708408f7d7604396d2af55e3",
-                "reference": "002cc3da70565af1708408f7d7604396d2af55e3",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-data/zipball/ddfeb6e4d3e74793fba9dac204db374f030e7a72",
+                "reference": "ddfeb6e4d3e74793fba9dac204db374f030e7a72",
                 "shasum": ""
             },
             "require": {
@@ -922,10 +922,10 @@
             ],
             "description": "Newfold Data Module",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-data/tree/2.6.5",
+                "source": "https://github.com/newfold-labs/wp-module-data/tree/2.6.6",
                 "issues": "https://github.com/newfold-labs/wp-module-data/issues"
             },
-            "time": "2024-10-18T19:30:28+00:00"
+            "time": "2024-11-07T22:23:10+00:00"
         },
         {
             "name": "newfold-labs/wp-module-deactivation",
@@ -1285,16 +1285,16 @@
         },
         {
             "name": "newfold-labs/wp-module-installer",
-            "version": "1.2.1",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-installer.git",
-                "reference": "4c5b0e49c53eb34feb5b438175d114dd2570d013"
+                "reference": "4b994a784f1de5c80dcf274e51ab34f083e4a26d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-installer/zipball/4c5b0e49c53eb34feb5b438175d114dd2570d013",
-                "reference": "4c5b0e49c53eb34feb5b438175d114dd2570d013",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-installer/zipball/4b994a784f1de5c80dcf274e51ab34f083e4a26d",
+                "reference": "4b994a784f1de5c80dcf274e51ab34f083e4a26d",
                 "shasum": ""
             },
             "require": {
@@ -1324,10 +1324,10 @@
             ],
             "description": "An installer for WordPress plugins and themes.",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-installer/tree/1.2.1",
+                "source": "https://github.com/newfold-labs/wp-module-installer/tree/1.2.2",
                 "issues": "https://github.com/newfold-labs/wp-module-installer/issues"
             },
-            "time": "2024-10-23T23:13:54+00:00"
+            "time": "2024-10-25T14:26:52+00:00"
         },
         {
             "name": "newfold-labs/wp-module-loader",
@@ -1595,16 +1595,16 @@
         },
         {
             "name": "newfold-labs/wp-module-onboarding-data",
-            "version": "1.2.1",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-onboarding-data.git",
-                "reference": "6f7a785e9501942a54b947ad5c52f94c24fe0ef4"
+                "reference": "99d904704272aac4096873b157054d8f8f0e0fbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-onboarding-data/zipball/6f7a785e9501942a54b947ad5c52f94c24fe0ef4",
-                "reference": "6f7a785e9501942a54b947ad5c52f94c24fe0ef4",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-onboarding-data/zipball/99d904704272aac4096873b157054d8f8f0e0fbc",
+                "reference": "99d904704272aac4096873b157054d8f8f0e0fbc",
                 "shasum": ""
             },
             "require": {
@@ -1640,10 +1640,10 @@
             ],
             "description": "A non-toggleable module containing a standardized interface for interacting with Onboarding data.",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-onboarding-data/tree/1.2.1",
+                "source": "https://github.com/newfold-labs/wp-module-onboarding-data/tree/1.2.2",
                 "issues": "https://github.com/newfold-labs/wp-module-onboarding-data/issues"
             },
-            "time": "2024-10-23T09:51:12+00:00"
+            "time": "2024-10-28T17:39:42+00:00"
         },
         {
             "name": "newfold-labs/wp-module-patterns",
@@ -3593,16 +3593,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v5.4.43",
+            "version": "v5.4.45",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "ae25a9145a900764158d439653d5630191155ca0"
+                "reference": "63741784cd7b9967975eec610b256eed3ede022b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/ae25a9145a900764158d439653d5630191155ca0",
-                "reference": "ae25a9145a900764158d439653d5630191155ca0",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/63741784cd7b9967975eec610b256eed3ede022b",
+                "reference": "63741784cd7b9967975eec610b256eed3ede022b",
                 "shasum": ""
             },
             "require": {
@@ -3636,7 +3636,7 @@
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/finder/tree/v5.4.43"
+                "source": "https://github.com/symfony/finder/tree/v5.4.45"
             },
             "funding": [
                 {
@@ -3652,7 +3652,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-08-13T14:03:51+00:00"
+            "time": "2024-09-28T13:32:08+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
