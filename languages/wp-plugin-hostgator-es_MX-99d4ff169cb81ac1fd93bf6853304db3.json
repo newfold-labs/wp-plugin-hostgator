@@ -449,9 +449,6 @@
             "Number of revisions posts can save ": [
                 " N\u00famero de revisiones que las publicaciones pueden guardar"
             ],
-            "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take \nGuardar borradores y actualizar el contenido publicado genera revisiones. Realice cambios con confianza, sabiendo que puede realizarlos ": [
-                ""
-            ],
             " step back.": [
                 " paso atr\u00e1s. ",
                 " pasos atr\u00e1s. "
@@ -623,6 +620,24 @@
             ],
             "WonderBlocks provides a library of customizable block patterns and page templates.": [
                 "WonderBlocks proporciona una biblioteca de patrones de bloques y plantillas de p\u00e1ginas personalizables."
+            ],
+            "Phone": [
+                ""
+            ],
+            "Give us a ring at (866) 96-GATOR": [
+                ""
+            ],
+            "Call Us": [
+                ""
+            ],
+            "Tweet": [
+                ""
+            ],
+            "Every page load is fresh.": [
+                ""
+            ],
+            "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take ": [
+                ""
             ]
         }
     }

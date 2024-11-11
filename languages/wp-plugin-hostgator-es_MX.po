@@ -71,7 +71,7 @@ msgstr "Muy Pronto Activo"
 #. translators: %1$s is replaced with the opening link tag, %2$s is replaced with the closing link tag, %3$s is the opening link tag to preview the page, %4$s is the closing link tag.
 #: bootstrap.php:104
 msgid "Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s."
-msgstr "Tu sitio actualmente muestra una %1$próxima página%2$s. Una vez que esté listo, %3$inicie su sitio%4$s.”
+msgstr "Tu sitio actualmente muestra una %1$próxima página%2$s. Una vez que esté listo, %3$inicie su sitio%4$s.�"
 
 #: bootstrap.php:105
 msgid "Preview the coming soon landing page"
@@ -320,7 +320,7 @@ msgstr "Organiza el contenido existente en categorías."
 
 #: build/2.12.1/index.js:1
 msgid "Web Hosting"
-msgstr " Web Hosting
+msgstr " Web Hostin"
 
 #: build/2.12.1/index.js:1
 msgid "Access & manage your HostGator account."
@@ -522,7 +522,7 @@ msgstr "Nivel de caché"
 
 #: bootstrap.php:78
 msgid "How to build your WordPress Website"
-msgstr “Cómo construir tu sitio web de WordPress"
+msgstr "“Cómo construir tu sitio web de WordPress\""
 
 #: bootstrap.php:81
 msgid "How to Migrate a Website to Hostgator?"
@@ -670,9 +670,6 @@ msgid "Edit your homepage and other existing pages or add new pages to your site
 msgstr "Edita tu página de inicio y otras páginas existentes o agrega nuevas páginas a tu sitio."
 
 #: build/2.12.1/index.js:1
-msgid "Every page load is fresh."
-msgstr "Cada carga de página es nueva.” 
-#: build/2.12.1/index.js:1
 msgid "Recommended for sites that update a few times a month or less like porfolios or brochure sites."
 msgstr " Recomendado para sitios que se actualizan varias veces al mes o menos, como sitios de portafolios o folletos. "
 
@@ -757,10 +754,6 @@ msgid "Number of revisions posts can save "
 msgstr " Número de revisiones que las publicaciones pueden guardar"
 
 #: build/2.12.1/index.js:1
-msgid "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take "
-Msgstr "Guardar borradores y actualizar el contenido publicado genera revisiones. Realice cambios con confianza, sabiendo que puede realizarlos "
-
-#: build/2.12.1/index.js:1
 msgid " step back."
 msgid_plural " steps back."
 msgstr[0] " paso atrás. "
@@ -816,7 +809,7 @@ msgstr " Confirmar acción de clonación "
 
 #: build/2.12.1/index.js:1
 msgid "This will overwrite anything in staging and update it to an exact clone of the current production site. Are you sure you want to proceed?"
-msgstr "Esto sobrescribirá todo lo que esté en preparación y lo actualizará a un clon exacto del sitio de producción actual. ¿Estás seguro de que deseas continuar?" "
+msgstr "Esto sobrescribirá todo lo que esté en preparación y lo actualizará a un clon exacto del sitio de producción actual. ¿Estás seguro de que deseas continuar?\" "
 
 #: build/2.12.1/index.js:1
 msgid "Cloned to Staging"
@@ -989,3 +982,27 @@ msgstr "Canal de Ventas"
 #: build/2.12.1/index.js:1
 msgid "WonderBlocks provides a library of customizable block patterns and page templates."
 msgstr "WonderBlocks proporciona una biblioteca de patrones de bloques y plantillas de páginas personalizables."
+
+#: build/2.12.1/index.js:1
+msgid "Phone"
+msgstr ""
+
+#: build/2.12.1/index.js:1
+msgid "Give us a ring at (866) 96-GATOR"
+msgstr ""
+
+#: build/2.12.1/index.js:1
+msgid "Call Us"
+msgstr ""
+
+#: build/2.12.1/index.js:1
+msgid "Tweet"
+msgstr ""
+
+#: build/2.12.1/index.js:1
+msgid "Every page load is fresh."
+msgstr ""
+
+#: build/2.12.1/index.js:1
+msgid "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take "
+msgstr ""
