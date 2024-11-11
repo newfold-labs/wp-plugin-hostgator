@@ -521,488 +521,488 @@ msgstr "Controles para revisiones de contenido y con qué frecuencia vaciar la p
 #: inc/Admin.php:70
 #: build/2.12.1/index.js:1
 msgid "Store"
-msgstr ""
+msgstr "Almacenar"
 
 #: inc/Admin.php:87
 #: build/2.12.1/index.js:1
 msgid "Staging"
-msgstr ""
+msgstr "Preparación"
 
 #: build/2.12.1/index.js:1
 msgid "Cache static assets for 1 week and web pages for 8 hours."
-msgstr ""
+msgstr "Almacenar en caché los activos estáticos durante 1 semana y las páginas web durante 8 horas"
 
 #: build/2.12.1/index.js:1
 msgid "Cache Level"
-msgstr ""
+msgstr "Nivel de caché"
 
 #: bootstrap.php:78
 msgid "How to build your WordPress Website"
-msgstr ""
+msgstr "Cómo crear su sitio web de WordPress"
 
 #: bootstrap.php:81
 msgid "How to Migrate a Website to Hostgator?"
-msgstr ""
+msgstr "¿Cómo migrar un sitio web a Hostgator?"
 
 #: bootstrap.php:84
 msgid "Why choose HostGator for your WordPress site?"
-msgstr ""
+msgstr "¿Por qué elegir HostGator para su sitio de WordPress?"
 
 #: inc/Admin.php:67
 #: build/2.12.1/index.js:1
 msgid "Pages & Posts"
-msgstr ""
+msgstr "Páginas y Publicaciones"
 
 #: build/2.12.1/index.js:1
 msgid "Hostgator WordPress Plugin"
-msgstr ""
+msgstr "Plugin de WordPress de Hostgator"
 
 #: build/2.12.1/index.js:1
 msgid "HostGator Account"
-msgstr ""
+msgstr "Cuenta de HostGator"
 
 #: build/2.12.1/index.js:1
 msgid "Products & Services"
-msgstr ""
+msgstr "Productos y Servicios"
 
 #: build/2.12.1/index.js:1
 msgid "Sales & Promotions"
-msgstr ""
+msgstr "Ventas y Promociones"
 
 #: build/2.12.1/index.js:1
 msgid "Payments"
-msgstr ""
+msgstr "Pagos"
 
 #: build/2.12.1/index.js:1
 msgid "Store Details"
-msgstr ""
+msgstr "Detalles de la tienda"
 
 #: build/2.12.1/index.js:1
 msgid "Admin"
-msgstr ""
+msgstr "Administrador"
 
 #: build/2.12.1/index.js:1
 msgid "Secret page to manage admin features and settings."
-msgstr ""
+msgstr "Página secreta para administrar las funciones y configuraciones de administrador"
 
 #: build/2.12.1/index.js:1
 msgid "We are available 24/7 to help answer questions and solve your problems."
-msgstr ""
+msgstr "Estamos disponibles las 24 horas, los 7 días de la semana para ayudarlo a responder preguntas y resolver sus problemas"
 
 #: build/2.12.1/index.js:1
 msgid "More"
-msgstr ""
+msgstr "Más"
 
 #: build/2.12.1/index.js:1
 msgid "Manage Domain"
-msgstr ""
+msgstr "Administrar Dominio"
 
 #: build/2.12.1/index.js:1
 msgid "Explore our featured collection of tools and services."
-msgstr ""
+msgstr "Explora nuestra colección destacada de herramientas y servicios"
 
 #: build/2.12.1/index.js:1
 msgid "Oops, there was an error loading the marketplace, please try again later."
-msgstr ""
+msgstr "Oops, se produjo un error al cargar el mercado, inténtalo de nuevo más tarde"
 
 #: build/2.12.1/index.js:1
 msgid "Sorry, no marketplace items. Please, try again later."
-msgstr ""
+msgstr "Lo sentimos, no hay elementos del mercado. Inténtalo de nuevo más tarde"
 
 #: build/2.12.1/index.js:1
 msgid "Load More"
-msgstr ""
+msgstr "Cargar más"
 
 #: build/2.12.1/index.js:1
 msgid "Oops! Something Went Wrong"
-msgstr ""
+msgstr "Ups! Algo salió mal"
 
 #: build/2.12.1/index.js:1
 msgid "An error occurred while loading the content. Please try again later."
-msgstr ""
+msgstr "Se produjo un error al cargar el contenido. Inténtalo de nuevo más tarde."
 
 #: build/2.12.1/index.js:1
 msgid "Products"
-msgstr ""
+msgstr "Productos"
 
 #: build/2.12.1/index.js:1
 msgid "Showcase physical and digital goods, product variations, and custom configurations."
-msgstr ""
+msgstr "Muestre productos físicos y digitales, variaciones de productos y configuraciones personalizadas."
 
 #: build/2.12.1/index.js:1
 msgid "View all "
-msgstr ""
+msgstr "Ver todo "
 
 #: build/2.12.1/index.js:1
 msgid "Add New"
-msgstr ""
+msgstr "Agregar nuevo"
 
 #: build/2.12.1/index.js:1
 msgid "Blog Posts"
-msgstr ""
+msgstr "Entradas de blog"
 
 #: build/2.12.1/index.js:1
 msgid "Add a new blog post or edit your existing posts."
-msgstr ""
+msgstr "Agrega una nueva entrada de blog o edita tus entradas existentes"
 
 #: build/2.12.1/index.js:1
 msgid "Bookings & Appointments"
-msgstr ""
+msgstr "Reservas y Citas"
 
 #: build/2.12.1/index.js:1
 msgid "Add your list of services, setup a booking calendar, and edit your bookings form."
-msgstr ""
+msgstr "Agrega tu lista de servicios, configura un calendario de reservas y edita tu formulario de reservas"
 
 #: build/2.12.1/index.js:1
 msgid "Your site is not live."
-msgstr ""
+msgstr "Su sitio no está activo."
 
 #: build/2.12.1/index.js:1
 msgid "Your site is live."
-msgstr ""
+msgstr "Su sitio está activo."
 
 #: build/2.12.1/index.js:1
 msgid "Visitors to your site will see your \"Coming Soon\" page and not your actual site. Visit "
-msgstr ""
+msgstr "Los visitantes de su sitio verán su página \"Próximamente\" y no su sitio real. Visite "
 
 #: build/2.12.1/index.js:1
 msgid "\"Settings\""
-msgstr ""
+msgstr "\"Configuración\""
 
 #: build/2.12.1/index.js:1
 msgid " to set your site live."
-msgstr ""
+msgstr " para activar su sitio."
 
 #: build/2.12.1/index.js:1
 msgid "Visitors to your site will see all your publicly published pages."
-msgstr ""
+msgstr "Los visitantes de su sitio verán todas sus páginas publicadas públicamente."
 
 #: build/2.12.1/index.js:1
 msgid "Site Pages"
-msgstr ""
+msgstr "Páginas del sitio"
 
 #: build/2.12.1/index.js:1
 msgid "Edit your homepage and other existing pages or add new pages to your site."
-msgstr ""
+msgstr "Edite su página de inicio y otras páginas existentes o agregue nuevas páginas a su sitio."
 
 #: build/2.12.1/index.js:1
 msgid "Every page load is fresh."
-msgstr ""
+msgstr "Cada carga de página es nueva."
 
 #: build/2.12.1/index.js:1
 msgid "Recommended for sites that update a few times a month or less like porfolios or brochure sites."
-msgstr ""
+msgstr "Recomendado para sitios que se actualizan unas pocas veces al mes o menos, como sitios de portafolios o folletos."
 
 #: build/2.12.1/index.js:1
 msgid "Cache setting saved"
-msgstr ""
+msgstr "Configuración de caché guardada"
 
 #: build/2.12.1/index.js:1
 msgid "We automatically clear your cache as you work (creating content, changing settings, installing plugins and more). But you can manually clear it here to be confident it's fresh."
-msgstr ""
+msgstr "Limpiamos automáticamente su caché mientras trabaja (creando contenido, cambiando configuraciones, instalando complementos y más). Pero puede limpiarlo manualmente aquí para estar seguro de que está actualizado"
 
 #: build/2.12.1/index.js:1
 msgid "This is where you can manage cache settings for your website."
-msgstr ""
+msgstr "Aquí puede administrar la configuración de caché para su sitio web"
 
 #: build/2.12.1/index.js:1
 msgid "Manage All Updates"
-msgstr ""
+msgstr "Administrar Todas las Actualizaciones"
 
 #: build/2.12.1/index.js:1
 msgid "WordPress Core"
-msgstr ""
+msgstr "Núcleo de WordPress"
 
 #: build/2.12.1/index.js:1
 msgid "Keeping automatic updates on ensures timely security fixes and the latest features."
-msgstr ""
+msgstr "Mantener activadas las actualizaciones automáticas garantiza correcciones de seguridad oportunas y las funciones más recientes"
 
 #: build/2.12.1/index.js:1
 msgid "Oops! Something went wrong. Please try again."
-msgstr ""
+msgstr "¡Ups! Algo salió mal. Inténtalo de nuevo"
 
 #: build/2.12.1/index.js:1
 msgid "Site Status"
-msgstr ""
+msgstr "Estado del sitio"
 
 #: build/2.12.1/index.js:1
 msgid "Not Live"
-msgstr ""
+msgstr "No está activo"
 
 #: build/2.12.1/index.js:1
 msgid "Live"
-msgstr ""
+msgstr "Activo"
 
 #: build/2.12.1/index.js:1
 msgid "Coming Soon page"
-msgstr ""
+msgstr "Página de Próximamente"
 
 #: build/2.12.1/index.js:1
 msgid "Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen."
-msgstr ""
+msgstr "La página de Próximamente de Hostgator le permite ocultar su sitio a los visitantes mientras hace que la magia suceda"
 
 #: build/2.12.1/index.js:1
 msgid "Your website is currently displaying a \"Coming Soon\" page."
-msgstr ""
+msgstr "Su sitio web muestra actualmente una página de \"Próximamente\"."
 
 #: build/2.12.1/index.js:1
 msgid "Comments setting saved "
-msgstr ""
+msgstr "Configuración de comentarios guardada "
 
 #: build/2.12.1/index.js:1
 msgid "Comments setting saved."
-msgstr ""
+msgstr "Configuración de comentarios guardada."
 
 #: build/2.12.1/index.js:1
 msgid " comments per page."
-msgstr ""
+msgstr " comentarios por página."
 
 #: build/2.12.1/index.js:1
 msgid "Comments allow visitors to provide feedback and respond to your posts or pages."
-msgstr ""
+msgstr "Los comentarios permiten a los visitantes proporcionarde feedback y responder a tus publicaciones o páginas."
 
 #: build/2.12.1/index.js:1
 msgid "Post revision setting saved "
-msgstr ""
+msgstr "Configuración de revisión de publicación guardada"
 
 #: build/2.12.1/index.js:1
 msgid "Posts will save  "
-msgstr ""
+msgstr "Las publicaciones se guardarán  "
 
 #: build/2.12.1/index.js:1
 msgid "Number of revisions posts can save "
-msgstr ""
+msgstr "Número de revisiones que las publicaciones pueden guardar"
 
 #: build/2.12.1/index.js:1
 msgid "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take "
-msgstr ""
+msgstr "Al guardar borradores y actualizar el contenido publicado se crean revisiones. Realice cambios con confianza, sabiendo que puede tomar "
 
 #: build/2.12.1/index.js:1
 msgid " step back."
 msgid_plural " steps back."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] " dar un paso atrás."
+msgstr[1] " da un paso atrás."
 
 #: build/2.12.1/index.js:1
 msgid "Trash setting saved "
-msgstr ""
+msgstr "Configuración de la papelera guardada "
 
 #: build/2.12.1/index.js:1
 msgid "Trash emptying frequency "
-msgstr ""
+msgstr "Frecuencia de vaciado de la papelera "
 
 #: build/2.12.1/index.js:1
 msgid "The Help Center provides guided, step-by-step assistance as you build your site."
-msgstr ""
+msgstr "El Centro de ayuda proporciona asistencia guiada, paso a paso, mientras crea su sitio."
 
 #: build/2.12.1/index.js:1
 msgid "Sorry, that is not allowed."
-msgstr ""
+msgstr "Lo sentimos, eso no está permitido."
 
 #: build/2.12.1/index.js:1
 msgid "This feature cannot currently be modified."
-msgstr ""
+msgstr "Esta característica no se puede modificar actualmente."
 
 #: build/2.12.1/index.js:1
 msgid "This is where you can manage common settings for your website."
-msgstr ""
+msgstr "Aquí puede administrar las configuraciones comunes de su sitio web."
 
 #: build/2.12.1/index.js:1
 msgid "Features"
-msgstr ""
+msgstr "Características"
 
 #: build/2.12.1/index.js:1
 msgid "The performance feature provides improvements to loads faster for visitors including cache settings."
-msgstr ""
+msgstr "La característica de rendimiento proporciona mejoras para que las cargas sean más rápidas para los visitantes, incluidas las configuraciones de caché."
 
 #: build/2.12.1/index.js:1
 msgid "The staging feature provides a way to copy a site to test new updates, features or content."
-msgstr ""
+msgstr "La característica de ensayo proporciona una forma de copiar un sitio para probar nuevas actualizaciones, características o contenido."
 
 #: build/2.12.1/index.js:1
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: build/2.12.1/index.js:1
 msgid "Clone"
-msgstr ""
+msgstr "Clonar"
 
 #: build/2.12.1/index.js:1
 msgid "Confirm Clone Action"
-msgstr ""
+msgstr "Confirmar acción de clonación"
 
 #: build/2.12.1/index.js:1
 msgid "This will overwrite anything in staging and update it to an exact clone of the current production site. Are you sure you want to proceed?"
-msgstr ""
+msgstr "Esto sobrescribirá todo lo que esté en la etapa de prueba y lo actualizará a un clon exacto del sitio de producción actual. ¿Está seguro de que desea continuar?"
 
 #: build/2.12.1/index.js:1
 msgid "Cloned to Staging"
-msgstr ""
+msgstr "Clonado en staging"
 
 #: build/2.12.1/index.js:1
 msgid "Cloning production to staging, this should take about a minute."
-msgstr ""
+msgstr "Clonando producción en staging, esto debería tomar alrededor de un minuto."
 
 #: build/2.12.1/index.js:1
 msgid "Clone to staging"
-msgstr ""
+msgstr "Clonar en staging"
 
 #: build/2.12.1/index.js:1
 msgid "Created"
-msgstr ""
+msgstr "Creado"
 
 #: build/2.12.1/index.js:1
 msgid "Staging Created"
-msgstr ""
+msgstr "Staging creado"
 
 #: build/2.12.1/index.js:1
 msgid "Creating a staging site, this should take about a minute."
-msgstr ""
+msgstr "Creando un sitio de staging, esto debería tomar alrededor de un minuto"
 
 #: build/2.12.1/index.js:1
 msgid "Create staging site"
-msgstr ""
+msgstr "Crear sitio de prueba"
 
 #: build/2.12.1/index.js:1
 msgid "Currently editing"
-msgstr ""
+msgstr "Actualmente editando"
 
 #: build/2.12.1/index.js:1
 msgid "Delete"
-msgstr ""
+msgstr "Eliminar"
 
 #: build/2.12.1/index.js:1
 msgid "Confirm Delete"
-msgstr ""
+msgstr "Confirmar eliminación"
 
 #: build/2.12.1/index.js:1
 msgid "This will permanently delete staging site. Are you sure you want to proceed? You can recreate another staging site at any time, but any specific changes you've made to this staging site will be lost."
-msgstr ""
+msgstr "Esto eliminará permanentemente el sitio de prueba. ¿Está seguro de que desea continuar? Puede volver a crear otro sitio de ensayo en cualquier momento, pero se perderán todos los cambios específicos que haya realizado en este sitio de ensayo."
 
 #: build/2.12.1/index.js:1
 msgid "Deleted Staging"
-msgstr ""
+msgstr "Se ha eliminado el sitio de ensayo"
 
 #: build/2.12.1/index.js:1
 msgid "Deleting the staging site, this should take about a minute."
-msgstr ""
+msgstr "Se está eliminando el sitio de ensayo. Esto debería llevar alrededor de un minuto."
 
 #: build/2.12.1/index.js:1
 msgid "Delete Staging Site"
-msgstr ""
+msgstr "Eliminar sitio de ensayo"
 
 #: build/2.12.1/index.js:1
 msgid "Deploy"
-msgstr ""
+msgstr "Implementar"
 
 #: build/2.12.1/index.js:1
 msgid "Deploy all changes"
-msgstr ""
+msgstr "Implementar todos los cambios"
 
 #: build/2.12.1/index.js:1
 msgid "Confirm Deployment"
-msgstr ""
+msgstr "Confirmar implementación"
 
 #: build/2.12.1/index.js:1
 msgid "Deploy database only"
-msgstr ""
+msgstr "Implementar solo la base de datos"
 
 #: build/2.12.1/index.js:1
 msgid "This will deploy staging to production and overwrite current production site. Are you sure you want to proceed?"
-msgstr ""
+msgstr "Esto implementará el entorno de pruebas en producción y sobrescribirá el sitio de producción actual. ¿Está seguro de que desea continuar?"
 
 #: build/2.12.1/index.js:1
 msgid "Deploy files only"
-msgstr ""
+msgstr "Implementar solo archivos"
 
 #: build/2.12.1/index.js:1
 msgid "Deployed"
-msgstr ""
+msgstr "Implementado"
 
 #: build/2.12.1/index.js:1
 msgid "Deploying from staging to production, this should take about a minute."
-msgstr ""
+msgstr "Implementando desde el entorno de pruebas hasta el de producción, esto debería tardar alrededor de un minuto".
 
 #: build/2.12.1/index.js:1
 msgid "Deploy Site"
-msgstr ""
+msgstr "Implementar sitio"
 
 #: build/2.12.1/index.js:1
 msgid "Error"
-msgstr ""
+msgstr "Error"
 
 #: build/2.12.1/index.js:1
 msgid "Not currently editing"
-msgstr ""
+msgstr "No se está editando actualmente"
 
 #: build/2.12.1/index.js:1
 msgid "Proceed"
-msgstr ""
+msgstr "Continuar"
 
 #: build/2.12.1/index.js:1
 msgid "Production Site"
-msgstr ""
+msgstr "Sitio de producción"
 
 #: build/2.12.1/index.js:1
 msgid "Staging Site"
-msgstr ""
+msgstr "Sitio de ensayo"
 
 #: build/2.12.1/index.js:1
 msgid "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready."
-msgstr ""
+msgstr "Un sitio de ensayo es un duplicado de su sitio en vivo, que ofrece un entorno seguro para experimentar, probar actualizaciones e implementar cuando esté listo.".
 
 #: build/2.12.1/index.js:1
 msgid "Switch"
-msgstr ""
+msgstr "Cambiar"
 
 #: build/2.12.1/index.js:1
 msgid "Switching"
-msgstr ""
+msgstr "traspuesta"
 
 #: build/2.12.1/index.js:1
 msgid "Switch to Production"
-msgstr ""
+msgstr "Pasar a Producción"
 
 #: build/2.12.1/index.js:1
 msgid "This will navigate you to the production environment"
-msgstr ""
+msgstr "Esto lo llevará al entorno de producción"
 
 #: build/2.12.1/index.js:1
 msgid "Loading the production environment now."
-msgstr ""
+msgstr "Cargando el entorno de producción ahora".
 
 #: build/2.12.1/index.js:1
 msgid "Switching to the production environment, this should take about a minute."
-msgstr ""
+msgstr "Cambiando al entorno de producción, esto debería tomar alrededor de un minuto".
 
 #: build/2.12.1/index.js:1
 msgid "Switch to Staging"
-msgstr ""
+msgstr "Cambiar a ensayo"
 
 #: build/2.12.1/index.js:1
 msgid "This will navigate you to the staging environment"
-msgstr ""
+msgstr "Esto lo llevará al entorno de ensayo"
 
 #: build/2.12.1/index.js:1
 msgid "Loading the staging environment now."
-msgstr ""
+msgstr "Cargando el entorno de ensayo ahora."
 
 #: build/2.12.1/index.js:1
 msgid "Switching to the staging environment, this should take about a minute."
-msgstr ""
+msgstr "Cambiando al entorno de prueba, esto debería tomar alrededor de un minuto."
 
 #: build/2.12.1/index.js:1
 msgid "An unknown error has occurred."
-msgstr ""
+msgstr "Se ha producido un error desconocido."
 
 #: build/2.12.1/index.js:1
 msgid "Working…"
-msgstr ""
+msgstr "Trabajando…"
 
 #: build/2.12.1/index.js:1
 msgid "Sales Channel"
-msgstr ""
+msgstr "Canal de Ventas"
 
 #: build/2.12.1/index.js:1
 msgid "WonderBlocks provides a library of customizable block patterns and page templates."
-msgstr ""
+msgstr "WonderBlocks proporciona una biblioteca de patrones de bloques y plantillas de página personalizables."
