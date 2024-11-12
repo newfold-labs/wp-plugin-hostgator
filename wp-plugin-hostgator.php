@@ -13,9 +13,9 @@
  * Update URI:        https://github.com/newfold-labs/wp-plugin-hostgator/
  * Description:       WordPress plugin that integrates a WordPress site with the HostGator control panel, including performance, security, and update features.
  * Version:           2.12.1
- * Requires at least: 6.4
+ * Requires at least: 6.5
  * Requires PHP:      7.3
- * Tested up to:      6.6.2
+ * Tested up to:      6.7
  * Author:            HostGator
  * Author URI:        https://hostgator.com
  * Text Domain:       wp-plugin-hostgator
