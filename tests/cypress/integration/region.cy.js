@@ -1,8 +1,9 @@
 // <reference types="Cypress" />
 
-describe('Regional Adjustments', function () {
+describe('Regional Adjustments', { testIsolation: true }, () => {
 
-    before(() => {
+    beforeEach(() => {
+        cy.wpLogin();
         // Set up options
         cy.setRegion('BR');
         cy.setBrand('hostgator-latam');
