@@ -1,21 +1,26 @@
 // <reference types="Cypress" />
+const webinarsFixture = require( '../fixtures/webinars.json' );
+const webinarsPastFixture = require( '../fixtures/webinars-past.json' );
+const webinarsInactiveFixture = require( '../fixtures/webinars-inactive.json' );
 
-describe( 'Home page - Webinar Component', function () {
+describe( 'Home page - Webinar Component', { testIsolation: true }, () => {
     let webinarurl = 'https://cdn.hiive.space/resources/hostgator_US-webinars.json';
 
-	before( () => {
-		cy.visit(
-			'/wp-admin/admin.php?page=' + Cypress.env( 'pluginId' ) + '#/home'
-		);
+	beforeEach( () => {
+		cy.wpLogin();
+		cy.visit( `/wp-admin/admin.php?page=${ Cypress.env( 'pluginId' ) }#/home` );
 	} );
 
     it( 'Webinars section exists and renders properly', () => {
 		cy.intercept(
-			webinarurl,
-			{ fixture: 'webinars.json' }
-		);
+			{
+				method: 'GET',
+				url: webinarurl,
+			},
+			webinarsFixture
+		).as( 'webinarsFixture' );
 		cy.reload();
-
+		cy.wait( '@webinarsFixture' );
         // Section Exists
 		cy.get( '.wppbh-webinars-banner-section' )
 			.contains( 'h2', 'Build your brand with WordPress' )
@@ -69,19 +74,27 @@ describe( 'Home page - Webinar Component', function () {
 
 	it( "Webinars Section Doesn't Render When Active Propety is False", () => {
 		cy.intercept(
-			webinarurl,
-			{ fixture: 'webinars-inactive.json' }
-		);
+			{
+				method: 'GET',
+				url: webinarurl,
+			},
+			webinarsInactiveFixture
+		).as( 'webinarsInactiveFixture' );
 		cy.reload();
+		cy.wait( '@webinarsInactiveFixture' );
 		cy.get( '.wppbh-webinars-banner-section' ).should( 'not.exist' );
 	} );
 
 	it( "Webinars Section Doesn't Render Items Are in the Past", () => {
 		cy.intercept(
-			webinarurl,
-			{ fixture: 'webinars-past.json' }
-		);
+			{
+				method: 'GET',
+				url: webinarurl,
+			},
+			webinarsPastFixture
+		).as( 'webinarsPastFixture' );
 		cy.reload();
+		cy.wait( '@webinarsPastFixture' );
 		cy.get( '.wppbh-webinars-banner-section' ).should( 'not.exist' );
 	} );
 

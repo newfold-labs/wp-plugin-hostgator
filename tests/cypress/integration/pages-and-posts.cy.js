@@ -1,11 +1,10 @@
-describe( 'Pages & Posts', function () {
+describe( 'Pages & Posts', { testIsolation: true }, () => {
 	let NewfoldRuntime;
 
-	before( () => {
+	beforeEach( () => {
+		cy.wpLogin();
 		cy.visit(
-			'/wp-admin/admin.php?page=' +
-			Cypress.env( 'pluginId' ) +
-			'#/pages-and-posts'
+			`/wp-admin/admin.php?page=${ Cypress.env( 'pluginId' ) }#/pages-and-posts`
 		);
 		cy.window()
 			.its( 'NewfoldRuntime' )
