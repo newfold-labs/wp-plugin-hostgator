@@ -40,7 +40,7 @@
     "@tailwindcss/forms": "^0.5.7",
     "@testing-library/cypress": "^10.0.2",
     "@wordpress/env": "^10.12.0",
-    "@wordpress/scripts": "^30.4.0",
+    "@wordpress/scripts": "^30.6.0",
     "cypress": "^13.15.2",
     "cypress-axe": "1.5.0",
     "node-fetch": "^2.7.0",
