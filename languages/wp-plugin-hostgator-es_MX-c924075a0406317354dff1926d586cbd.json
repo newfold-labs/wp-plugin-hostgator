@@ -1,7 +1,7 @@
 {
     "translation-revision-date": "2023-08-24 18:27",
     "generator": "WP-CLI\/2.11.0",
-    "source": "build\/2.12.2\/index.js",
+    "source": "build\/2.12.3\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
