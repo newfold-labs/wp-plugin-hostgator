@@ -195,6 +195,7 @@ export const MobileNav = () => {
 					<Logo />
 				</div>
 				<button
+					id="nfd-app-mobile-nav"
 					role="button"
 					className="nfd-h-16 nfd-px-4 nfd-text-body nfd-flex nfd-items-center focus:nfd-outline-none focus:nfd-ring-2 focus:nfd-ring-inset focus:nfd-ring-primary"
 					onClick={ () => {

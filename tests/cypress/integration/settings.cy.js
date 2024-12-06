@@ -1,56 +1,56 @@
 // <reference types="Cypress" />
 
-describe('Settings Page', function () {
-	const appId = Cypress.env( 'appId' );
+describe('Settings Page', { testIsolation: true }, () => {
+	const appClass = '.' + Cypress.env( 'appId' );
 	const pluginId = Cypress.env( 'pluginId' );
 
-	before(() => {
-		cy.visit('/wp-admin/admin.php?page=' + pluginId + '#/settings');
-		
+	beforeEach( () => {
+		cy.wpLogin();
+		cy.visit( `/wp-admin/admin.php?page=${ Cypress.env( 'pluginId' ) }#/settings` );
 	});
 
 	it('Is Accessible', () => {
 		cy.injectAxe();
 		cy.wait(500);
-		cy.checkA11y('.' + appId + '-app-body');
+		cy.checkA11y( appClass + '-app-body');
 	});
 
-	it('Has Coming Soon', () => {
+	it('Has All Settings Sections', () => {
 		cy
-			.get('.' + appId + '-app-settings-coming-soon')
+			.get( appClass + '-app-settings-coming-soon')
+			.scrollIntoView()
+			.should('be.visible');
+	
+		// Has Auto Updates Settings
+		cy
+			.get( appClass + '-app-settings-update')
+			.scrollIntoView()
+			.should('be.visible');
+	
+		// Has Content Settings
+		cy
+			.get( appClass + '-app-settings-content')
+			.scrollIntoView()
+			.should('be.visible');
+	
+		// Has Comments Settings
+		cy
+			.get( appClass + '-app-settings-comments')
 			.scrollIntoView()
 			.should('be.visible');
 	});
 
-	it('Has Auto Updates Settings', () => {
+	it('Autoupdate Toggles function properly', () => {
 		cy
-			.get('.' + appId + '-app-settings-update')
+			.get( appClass + '-app-settings-update')
 			.scrollIntoView()
-			.should('be.visible');
-	});
-
-	it('Has Content Settings', () => {
-		cy
-			.get('.' + appId + '-app-settings-content')
-			.scrollIntoView()
-			.should('be.visible');
-	});
-
-	it('Has Comments Settings', () => {
-		cy
-			.get('.' + appId + '-app-settings-comments')
-			.scrollIntoView()
-			.should('be.visible');
-	});
-
-	it('On load update all is checked, which forces other updates to check and disabled state', () => {
+		// On load update all is checked, which forces other updates to check and disabled state
 		cy.get('[data-id="autoupdate-all-toggle"]').should('have.attr', 'aria-checked').and('include', 'true');
 		cy.get('[data-id="autoupdate-core-toggle"]').should('be.disabled').should('have.attr', 'aria-checked').and('include', 'true');
 		cy.get('[data-id="autoupdate-plugins-toggle"]').should('be.disabled').should('have.attr', 'aria-checked').and('include', 'true');
 		cy.get('[data-id="autoupdate-themes-toggle"]').should('be.disabled').should('have.attr', 'aria-checked').and('include', 'true');
-	});
-
-	it('Disable ALL toggle, leaves everything checked, but enables them', () => {
+		
+		// Disable ALL toggle, leaves everything checked, but enables them
 		cy.get('[data-id="autoupdate-all-toggle"]').click();
 		cy.wait(100);
         cy.get('.nfd-notifications')
@@ -60,9 +60,8 @@ describe('Settings Page', function () {
 		cy.get('[data-id="autoupdate-core-toggle"]').should('not.be.disabled').should('have.attr', 'aria-checked').and('include', 'true');
 		cy.get('[data-id="autoupdate-plugins-toggle"]').should('not.be.disabled').should('have.attr', 'aria-checked').and('include', 'true');
 		cy.get('[data-id="autoupdate-themes-toggle"]').should('not.be.disabled').should('have.attr', 'aria-checked').and('include', 'true');
-	});
-
-	it('Core toggle works', () => {
+	
+		// Core toggle works
 		cy.get('[data-id="autoupdate-core-toggle"]').should('not.be.disabled').should('have.attr', 'aria-checked').and('include', 'true');
 		cy.get('[data-id="autoupdate-core-toggle"]').click();
 		cy.wait(100);
@@ -71,9 +70,8 @@ describe('Settings Page', function () {
 			.contains('p', 'Disabled Core auto-updates')
 			.should('be.visible');
 		cy.get('[data-id="autoupdate-all-toggle"]').should('have.attr', 'aria-checked').and('include', 'false');
-	});
-
-	it('Plugins toggle works', () => {
+	
+		// Plugins toggle works
 		cy.get('[data-id="autoupdate-plugins-toggle"]').should('not.be.disabled').should('have.attr', 'aria-checked').and('include', 'true');
 		cy.get('[data-id="autoupdate-plugins-toggle"]').click();
 		cy.wait(100);
@@ -82,9 +80,8 @@ describe('Settings Page', function () {
 			.contains('p', 'Disabled Plugins auto-update')
 			.should('be.visible');
 		cy.get('[data-id="autoupdate-all-toggle"]').should('have.attr', 'aria-checked').and('include', 'false');
-	});
-
-	it('Themes toggle works', () => {
+	
+		// Themes toggle works
 		cy.get('[data-id="autoupdate-themes-toggle"]').should('not.be.disabled').should('have.attr', 'aria-checked').and('include', 'true');
 		cy.get('[data-id="autoupdate-themes-toggle"]').click();
 		cy.wait(100);
@@ -93,18 +90,16 @@ describe('Settings Page', function () {
 			.contains('p', 'Disabled Themes auto-update')
 			.should('be.visible');
 		cy.get('[data-id="autoupdate-all-toggle"]').should('have.attr', 'aria-checked').and('include', 'false');
-	});
-
-	it('All toggle activates all', () => {
+	
+		// All toggle activates all
 		cy.get('[data-id="autoupdate-all-toggle"]').click();
 		cy.wait(100);
 		cy.get('[data-id="autoupdate-all-toggle"]').should('have.attr', 'aria-checked').and('include', 'true');
 		cy.get('[data-id="autoupdate-core-toggle"]').should('be.disabled').should('have.attr', 'aria-checked').and('include', 'true');
 		cy.get('[data-id="autoupdate-plugins-toggle"]').should('be.disabled').should('have.attr', 'aria-checked').and('include', 'true');
 		cy.get('[data-id="autoupdate-themes-toggle"]').should('be.disabled').should('have.attr', 'aria-checked').and('include', 'true');
-	});
-
-	it('Disabling All toggle returns to previous state', () => {
+	
+		// Disabling All toggle returns to previous state
 		cy.get('[data-id="autoupdate-all-toggle"]').click();
 		cy.wait(100);
         cy.get('.nfd-notifications')
@@ -114,9 +109,8 @@ describe('Settings Page', function () {
 		cy.get('[data-id="autoupdate-core-toggle"]').should('not.be.disabled').should('have.attr', 'aria-checked').and('include', 'false');
 		cy.get('[data-id="autoupdate-plugins-toggle"]').should('not.be.disabled').should('have.attr', 'aria-checked').and('include', 'false');
 		cy.get('[data-id="autoupdate-themes-toggle"]').should('not.be.disabled').should('have.attr', 'aria-checked').and('include', 'false');
-	});
-
-	it('All Toggle takes over again when all are enabled', () => {
+		
+		// All Toggle takes over again when all are enabled
 		cy.get('[data-id="autoupdate-core-toggle"]').click();
 		cy.get('[data-id="autoupdate-plugins-toggle"]').click();
 		cy.get('[data-id="autoupdate-themes-toggle"]').click();
@@ -198,7 +192,7 @@ describe('Settings Page', function () {
 			.find('li:first')
 			.click(); // 10
 		cy.wait(100);
-		cy.get('.' + appId + '-app-settings-comments')
+		cy.get( appClass + '-app-settings-comments')
 			.contains('label', 'Display 10 comments per page.')
 			.should('be.visible');
 		
@@ -219,7 +213,7 @@ describe('Settings Page', function () {
 			.find('li:last')
 			.click(); // 100
 		cy.wait(100);
-		cy.get('.' + appId + '-app-settings-comments')
+		cy.get( appClass + '-app-settings-comments')
 			.contains('label', 'Close comments after 100 days.')
 			.should('be.visible');
 		
@@ -231,7 +225,7 @@ describe('Settings Page', function () {
 			.find('li:nth-child(6)')
 			.click(); // 14
 		cy.wait(100);
-		cy.get('.' + appId + '-app-settings-comments')
+		cy.get( appClass + '-app-settings-comments')
 			.contains('label', 'Close comments after 14 days.')
 			.should('be.visible');
 		
