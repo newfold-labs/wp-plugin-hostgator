@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f2ffcbc39cd52a5e3eaf565c4e4a848f",
+    "content-hash": "faf06fb7406017b575ef170b72795c29",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -1201,16 +1201,16 @@
         },
         {
             "name": "newfold-labs/wp-module-help-center",
-            "version": "2.2.1",
+            "version": "2.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-help-center.git",
-                "reference": "b13d4e79a68002ac628152aae4c48c1191037120"
+                "reference": "9ea76efb6f7eb7eef0fa6d20469fdd39e3419022"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-help-center/zipball/b13d4e79a68002ac628152aae4c48c1191037120",
-                "reference": "b13d4e79a68002ac628152aae4c48c1191037120",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-help-center/zipball/9ea76efb6f7eb7eef0fa6d20469fdd39e3419022",
+                "reference": "9ea76efb6f7eb7eef0fa6d20469fdd39e3419022",
                 "shasum": ""
             },
             "require": {
@@ -1242,10 +1242,10 @@
             ],
             "description": "HelpCenter",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-help-center/tree/2.2.1",
+                "source": "https://github.com/newfold-labs/wp-module-help-center/tree/2.2.2",
                 "issues": "https://github.com/newfold-labs/wp-module-help-center/issues"
             },
-            "time": "2024-11-13T13:27:22+00:00"
+            "time": "2024-12-05T14:17:46+00:00"
         },
         {
             "name": "newfold-labs/wp-module-install-checker",
@@ -1334,16 +1334,16 @@
         },
         {
             "name": "newfold-labs/wp-module-loader",
-            "version": "1.0.10",
+            "version": "1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-loader.git",
-                "reference": "8ab6725a6b3bc9ed10b89127f09bcb3e81f795c6"
+                "reference": "bb470f8c57b0bca62548e65b210df0a13ddce767"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-loader/zipball/8ab6725a6b3bc9ed10b89127f09bcb3e81f795c6",
-                "reference": "8ab6725a6b3bc9ed10b89127f09bcb3e81f795c6",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-loader/zipball/bb470f8c57b0bca62548e65b210df0a13ddce767",
+                "reference": "bb470f8c57b0bca62548e65b210df0a13ddce767",
                 "shasum": ""
             },
             "require": {
@@ -1373,10 +1373,10 @@
             ],
             "description": "A module that handles registration and management of Newfold modules used within our WordPress plugins.",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-loader/tree/1.0.10",
+                "source": "https://github.com/newfold-labs/wp-module-loader/tree/1.0.11",
                 "issues": "https://github.com/newfold-labs/wp-module-loader/issues"
             },
-            "time": "2022-10-03T20:07:41+00:00"
+            "time": "2024-12-11T18:25:14+00:00"
         },
         {
             "name": "newfold-labs/wp-module-marketplace",
@@ -2266,16 +2266,16 @@
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v2.5.3",
+            "version": "v2.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "80d075412b557d41002320b96a096ca65aa2c98d"
+                "reference": "605389f2a7e5625f273b53960dc46aeaf9c62918"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/80d075412b557d41002320b96a096ca65aa2c98d",
-                "reference": "80d075412b557d41002320b96a096ca65aa2c98d",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/605389f2a7e5625f273b53960dc46aeaf9c62918",
+                "reference": "605389f2a7e5625f273b53960dc46aeaf9c62918",
                 "shasum": ""
             },
             "require": {
@@ -2313,7 +2313,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v2.5.3"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v2.5.4"
             },
             "funding": [
                 {
@@ -2329,7 +2329,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-01-24T14:02:46+00:00"
+            "time": "2024-09-25T14:11:13+00:00"
         },
         {
             "name": "typesense/typesense-php",
