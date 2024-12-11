@@ -62,7 +62,7 @@ describe('Regional Adjustments', { testIsolation: true }, () => {
         cy.get('.card-help-chat').should('exist').contains('.nfd-button', 'Chat ao Vivo');
         cy.get('.card-help-chat .nfd-button').should('have.attr', 'href')
             .then(href => {
-                expect(href).to.contain('suporte.hostgator.com.br')
+                expect(href).to.contain('soporte.hostgator.mx')
             });
     });
 
