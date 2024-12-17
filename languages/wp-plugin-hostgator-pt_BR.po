@@ -8,11 +8,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2023-01-11T20:21:44+00:00\n"
-"PO-Revision-Date: 2023-11-30 17:37\n"
+"PO-Revision-Date: 2024-12-16 16:11+0000\n"
 "Language: pt_BR\n"
-"X-Generator: WP-CLI 2.8.1\n"
-"X-Domain: wp-plugin-hostgator\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Domain: wp-plugin-hostgator\n"
 "X-Crowdin-Project: hostgator-wordpress-plugin\n"
 "X-Crowdin-Project-ID: 610119\n"
 "X-Crowdin-Language: pt-BR\n"
@@ -95,17 +95,20 @@ msgstr "Mercado"
 
 #: inc/Admin.php:78
 #: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Performance"
 msgstr "Desempenho"
 
 #: inc/Admin.php:82
 #: inc/Admin.php:350
 #: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Settings"
 msgstr "Configurações"
 
 #: inc/Admin.php:87
 #: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Staging"
 msgstr "Encenação"
 
@@ -464,75 +467,75 @@ msgstr "Cache limpo"
 msgid "Clear Cache"
 msgstr "Limpar Cache"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Plugins"
 msgstr "Plugins"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Themes"
 msgstr "Temas"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Automatic Updates"
 msgstr "Atualizações Automáticas"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Disable comments for older posts"
 msgstr "Desabilitar comentários de postagens mais antigas"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Comments on posts are disabled after "
 msgstr "Os comentários em postagens são desativados após "
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid " day."
 msgid_plural " days."
 msgstr[0] " dia."
 msgstr[1] " dias."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Close comments after "
 msgstr "Fechar comentários após "
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Posts will display "
 msgstr "As postagens serão exibidas "
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid " comment at a time."
 msgid_plural " comments at a time."
 msgstr[0] " comentário por vez."
 msgstr[1] " comentários por vez."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Display "
 msgstr "Exibir "
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Comments"
 msgstr "Comentários"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid " revision."
 msgid_plural " revisions."
 msgstr[0] " revisão."
 msgstr[1] " revisões."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "The trash will automatically empty every "
 msgstr "A lixeira será automaticamente vazia a cada "
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid " week."
 msgid_plural " weeks."
 msgstr[0] " semana."
 msgstr[1] " semanas."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Content Options"
 msgstr "Opções de Conteúdo"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Controls for content revisions and how often to empty the trash."
 msgstr "Controles para revisões de conteúdo e com que frequência esvaziar a lixeira."
 
@@ -701,301 +704,301 @@ msgstr "Configuração de cache salva"
 msgid "We automatically clear your cache as you work (creating content, changing settings, installing plugins and more). But you can manually clear it here to be confident it's fresh."
 msgstr "Nós limpamos seu cache automaticamente conforme você trabalha (criando conteúdo, alterando configurações, instalando plugins e mais). Mas você pode limpá-lo manualmente aqui para ter certeza de que ele está atualizado."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "This is where you can manage cache settings for your website."
 msgstr "Aqui é onde você pode gerenciar as configurações de cache do seu site."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Manage All Updates"
 msgstr "Gerenciar todas as atualizações"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "WordPress Core"
 msgstr "WordPress Core"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Keeping automatic updates on ensures timely security fixes and the latest features."
 msgstr "Manter atualizações automáticas ativadas garante correções de segurança oportunas e os recursos mais recentes."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Oops! Something went wrong. Please try again."
 msgstr "Ops! Algo deu errado. Tente novamente."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Site Status"
 msgstr "Status do site"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Not Live"
 msgstr "Não ativo"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Live"
 msgstr "Ativo"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Coming Soon page"
 msgstr "Página em breve"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen."
 msgstr "Sua página em breve do Hostgator permite que você oculte seu site dos visitantes enquanto você faz a mágica acontecer."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Your website is currently displaying a \"Coming Soon\" page."
 msgstr "Seu site está exibindo uma página \"Em breve\"."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Comments setting saved "
-msgstr "Configuração de comentários salva"
+msgstr "Configuração de comentários salva "
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Comments setting saved."
 msgstr "Configuração de comentários salva."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid " comments per page."
 msgstr " comentários por página."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Comments allow visitors to provide feedback and respond to your posts or pages."
 msgstr "Os comentários permitem que os visitantes forneçam feedback e respondam às suas postagens ou páginas."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Post revision setting saved "
 msgstr "Post revision setting saved "
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Posts will save  "
 msgstr "Posts will save "
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Number of revisions posts can save "
 msgstr "Número de revisões que os posts podem salvar "
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take "
 msgstr "Salvar rascunhos e atualizar conteúdo publicado cria revisões. Faça alterações com confiança, sabendo que você pode "
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid " step back."
 msgid_plural " steps back."
-msgstr[0] " dê um passo para trás"
+msgstr[0] " dê um passo para trás."
 msgstr[1] " dá um passo para trás"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Trash setting saved "
 msgstr "Configuração de lixeira salva "
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Trash emptying frequency "
 msgstr "Frequência de esvaziamento de lixeira "
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "The Help Center provides guided, step-by-step assistance as you build your site."
 msgstr "A Central de Ajuda fornece assistência guiada passo a passo enquanto você cria seu site."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Sorry, that is not allowed."
 msgstr "Desculpe, isso não é permitido."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "This feature cannot currently be modified."
 msgstr "Este recurso não pode ser modificado no momento."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "This is where you can manage common settings for your website."
 msgstr "Aqui é onde você pode gerenciar as configurações comuns do seu site."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Features"
 msgstr "Recursos"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "The performance feature provides improvements to loads faster for visitors including cache settings."
 msgstr "O recurso de desempenho fornece melhorias para carregamentos mais rápidos para visitantes, incluindo configurações de cache."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "The staging feature provides a way to copy a site to test new updates, features or content."
 msgstr "O recurso de preparação fornece uma maneira de copiar um site para testar novas atualizações, recursos ou conteúdo."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Clone"
 msgstr "Clonar"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Confirm Clone Action"
 msgstr "Confirmar ação de clonagem"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "This will overwrite anything in staging and update it to an exact clone of the current production site. Are you sure you want to proceed?"
 msgstr "Isso substituirá qualquer coisa na preparação e a atualizará para um clone exato do site de produção atual. Tem certeza de que deseja prosseguir?"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Cloned to Staging"
 msgstr "Clonado para Staging"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Cloning production to staging, this should take about a minute."
 msgstr "Clonando produção para staging, isso deve levar cerca de um minuto."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Clone to staging"
 msgstr "Clone para staging"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Created"
 msgstr "Criado"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Staging Created"
 msgstr "Staging criado"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Creating a staging site, this should take about a minute."
 msgstr "Criando um site de staging, isso deve levar cerca de um minuto."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Create staging site"
 msgstr "Criar site de preparação"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Currently editing"
 msgstr "Editando atualmente"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Delete"
 msgstr "Excluir"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Confirm Delete"
 msgstr "Confirmar exclusão"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "This will permanently delete staging site. Are you sure you want to proceed? You can recreate another staging site at any time, but any specific changes you've made to this staging site will be lost."
 msgstr "Isso excluirá permanentemente o site de preparação. Tem certeza de que deseja prosseguir? Você pode recriar outro site de preparação a qualquer momento, mas quaisquer alterações específicas que você tenha feito neste site de preparação serão perdidas."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Deleted Staging"
 msgstr "Staging excluído"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Deleting the staging site, this should take about a minute."
 msgstr "Excluindo o site de staging, isso deve levar cerca de um minuto."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Delete Staging Site"
 msgstr "Excluir site de preparação"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Deploy"
 msgstr "Implementar"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Deploy all changes"
 msgstr "Implementar todas as alterações"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Confirm Deployment"
 msgstr "Confirmar implementação"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Deploy database only"
 msgstr "Implementar somente o banco de dados"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "This will deploy staging to production and overwrite current production site. Are you sure you want to proceed?"
 msgstr "Isso implementará a preparação na produção e substituirá o site de produção atual. Tem certeza de que deseja prosseguir?"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Deploy files only"
 msgstr "Implementar apenas arquivos"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Deployed"
 msgstr "Implementado"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Deploying from staging to production, this should take about a minute."
 msgstr "Implementando do staging para a produção, isso deve levar cerca de um minuto."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Deploy Site"
 msgstr "Implementar site"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Error"
 msgstr "Erro"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Not currently editing"
 msgstr "Não está editando no momento"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Proceed"
 msgstr "Continuar"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Production Site"
 msgstr "Site de produção"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Staging Site"
 msgstr "Site de preparação"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready."
 msgstr "Um site de preparação é uma duplicata do seu site ativo, oferecendo um ambiente seguro para experimentar, testar atualizações e implantar quando estiver pronto."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Switch"
 msgstr "Trocar"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Switching"
 msgstr "Trocar"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Switch to Production"
 msgstr "Trocar para produção"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "This will navigate you to the production environment"
 msgstr "Isso o levará ao ambiente de produção"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Loading the production environment now."
 msgstr "Carregando o ambiente de produção agora."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Switching to the production environment, this should take about a minute."
 msgstr "Alternando para o ambiente de produção, isso deve levar cerca de um minuto."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Switch to Staging"
 msgstr "Alternar para o ambiente de preparação"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "This will navigate you to the staging environment"
 msgstr "Isso o levará ao ambiente de preparação"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Loading the staging environment now."
 msgstr "Carregando o ambiente de preparação agora."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Switching to the staging environment, this should take about a minute."
 msgstr "Alternando para o ambiente de preparação, isso deve levar cerca de um minuto."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "An unknown error has occurred."
 msgstr "Ocorreu um erro desconhecido."
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "Working…"
 msgstr "Funcionando…"
 
@@ -1003,6 +1006,184 @@ msgstr "Funcionando…"
 msgid "Sales Channel"
 msgstr "Canal de vendas"
 
-#: build/2.12.3/index.js:1
+#: build/2.12.3/index.js:6
 msgid "WonderBlocks provides a library of customizable block patterns and page templates."
 msgstr "O WonderBlocks fornece uma biblioteca de padrões de blocos e modelos de página personalizáveis."
+
+#: build/2.12.3/index.js:1
+msgid "Asks the browser to download and cache links on the page ahead of them being clicked on, so that when they are clicked they load almost instantly. "
+msgstr "Solicita ao navegador que faça o download e armazene em cache os links na página antes de serem clicados, para que, quando forem clicados, carreguem quase instantaneamente."
+
+#: build/2.12.3/index.js:1
+msgid "Link prefetching setting saved"
+msgstr "Configurações de pré-carregamento de links salvas"
+
+#: build/2.12.3/index.js:1
+msgid "Link Prefetch"
+msgstr "Pré-carregamento de links"
+
+#: build/2.12.3/index.js:1
+msgid "Enable link prefetching on desktop"
+msgstr "Ativar o pré-carregamento de links no desktop"
+
+#: build/2.12.3/index.js:1
+msgid "Activate on desktop"
+msgstr "Ativar no desktop"
+
+#: build/2.12.3/index.js:1
+msgid "Behavior of the prefetch"
+msgstr "Comportamento do pré-carregamento"
+
+#: build/2.12.3/index.js:1
+msgid "Behavior"
+msgstr "Comportamento"
+
+#: build/2.12.3/index.js:1
+msgid "Prefetch on Mouse down"
+msgstr "Pré-carregar ao pressionar o mouse"
+
+#: build/2.12.3/index.js:1
+msgid "Prefetch on Mouse Down: Starts loading the page as soon as you click down, for faster response when you release the click."
+msgstr "Pré-carregar ao pressionar o mouse: começa a carregar a página assim que você pressiona o botão do mouse, para uma resposta mais rápida ao soltar o clique"
+
+#: build/2.12.3/index.js:1
+msgid "Prefetch on Mouse Hover (Recommended)"
+msgstr "Pré-carregar ao passar o mouse (Recomendado)"
+
+#: build/2.12.3/index.js:1
+msgid "Prefetch on Mouse Hover: Begins loading the page the moment your cursor hovers over a link"
+msgstr "Pré-carregar ao passar o mouse: começa a carregar a página no momento em que o cursor passa sobre um link"
+
+#: build/2.12.3/index.js:1
+msgid "Enable link prefetching on Mobile"
+msgstr "Ativar o pré-carregamento de links no mobile"
+
+#: build/2.12.3/index.js:1
+msgid "Activate on mobile"
+msgstr "Ativar no mobile"
+
+#: build/2.12.3/index.js:1
+msgid "Prefetch on Touchstart (Recommended)"
+msgstr "Pré-carregar ao tocar (Recomendado)"
+
+#: build/2.12.3/index.js:1
+msgid "Prefetch on Touch Start: Instantly starts loading the page as soon as you tap the screen, ensuring a quicker response when you lift your finger."
+msgstr "Pré-carregar ao tocar na tela: começa a carregar a página instantaneamente assim que você toca na tela, garantindo uma resposta mais rápida quando você levantar o dedo."
+
+#: build/2.12.3/index.js:1
+msgid "Prefetch Above the Fold"
+msgstr "Pré-carregar acima da dobra"
+
+#: build/2.12.3/index.js:1
+msgid "Prefetch Above the Fold: Loads links in your current view instantly, ensuring they're ready when you need them."
+msgstr "Pré-carregar acima da dobra: carrega os links na sua visão atual instantaneamente, garantindo que eles estejam prontos quando você precisar."
+
+#: build/2.12.3/index.js:1
+msgid "Exclude Keywords: A comma separated list of words or strings that will exclude a link from being prefetched. For example, excluding \"app\" will prevent https://example.com/apple from being prefetched."
+msgstr "Excluir palavras-chave: uma lista separada por vírgulas de palavras ou cadeias de caracteres que excluirão um link de ser pré-carregado. Por exemplo, excluir ‘app’ impedirá que https://example.com/apple seja pré-carregado."
+
+#: build/2.12.3/index.js:1
+msgid "Exclude keywords"
+msgstr "Excluir palavras-chave"
+
+#: build/2.12.3/index.js:1
+msgid "Advanced settings"
+msgstr "Configurações avançadas"
+
+#: build/2.12.3/index.js:1
+msgid "Additional speed and scalability features powered by Jetpack Boost to make your site as fast as it can be."
+msgstr "Recursos adicionais de velocidade e escalabilidade impulsionados pelo Jetpack Boost para tornar o seu site o mais rápido possível."
+
+#: build/2.12.3/index.js:1
+msgid "Optimize Critical CSS Loading (manual)"
+msgstr "Otimizar o carregamento de CSS crítico (manual)"
+
+#: build/2.12.3/index.js:1
+msgid "Move important styling information to the start of the page, which helps pages display your content sooner, so your users don’t have to wait for the entire page to load."
+msgstr "Mova as informações de estilo importantes para o início da página, o que ajuda as páginas a exibir seu conteúdo mais rapidamente, para que seus usuários não precisem esperar o carregamento de toda a página."
+
+#: build/2.12.3/index.js:1
+msgid "Optimize Critical CSS Loading (UPGRADED)"
+msgstr "Otimizar o carregamento de CSS crítico (ATUALIZADO)"
+
+#: build/2.12.3/index.js:1
+msgid "Generate Critical CSS Automatically"
+msgstr "Gerar CSS crítico automaticamente"
+
+#. translators: %1$s is a line break (<br>), %2$s is the opening <strong> tag, %3$s is the closing </strong> tag.
+#: build/2.12.3/index.js:4
+msgid "Move important styling information to the start of the page, which helps pages display your content sooner, so your users don’t have to wait for the entire page to load.%1$s %2$sBoost will automatically generate your Critical CSS%3$s whenever you make changes to the HTML or CSS structure of your site."
+msgstr "Mova as informações de estilo importantes para o início da página, o que ajuda as páginas a exibir seu conteúdo mais rapidamente, para que seus usuários não precisem esperar o carregamento de toda a página. %1$s %2$s O Boost gerará automaticamente seu CSS crítico %3$s sempre que você fizer alterações na estrutura HTML ou CSS do seu site."
+
+#: build/2.12.3/index.js:4
+msgid "Defer Non-Essential JavaScript"
+msgstr "Atrasar o carregamento de JavaScript não essencial"
+
+#: build/2.12.3/index.js:4
+msgid "Run non-essential JavaScript after the page has loaded so that styles and images can load more quickly."
+msgstr "Executar JavaScript não essencial após o carregamento da página, para que os estilos e as imagens possam carregar mais rapidamente."
+
+#: build/2.12.3/index.js:4
+msgid "Concatenate JS"
+msgstr "Concatenar JS"
+
+#: build/2.12.3/index.js:4
+msgid "Scripts are grouped by their original placement, concatenated and minified to reduce site loading time and reduce the number of requests."
+msgstr "Os scripts são agrupados conforme sua colocação original, concatenados e minificados para reduzir o tempo de carregamento do site e diminuir o número de requisições."
+
+#: build/2.12.3/index.js:4
+msgid "Exclude JS Strings"
+msgstr "Excluir strings de JS"
+
+#: build/2.12.3/index.js:4
+msgid "Concatenate CSS"
+msgstr "Concatenar CSS"
+
+#: build/2.12.3/index.js:4
+msgid "Styles are grouped by their original placement, concatenated and minified to reduce site loading time and reduce the number of requests."
+msgstr "Os estilos são agrupados conforme sua colocação original, concatenados e minificados para reduzir o tempo de carregamento do site e diminuir o número de requisições."
+
+#: build/2.12.3/index.js:4
+msgid "Exclude CSS Strings"
+msgstr "Excluir strings de CSS"
+
+#: build/2.12.3/index.js:4
+msgid "Show more"
+msgstr "Mostrar mais"
+
+#: build/2.12.3/index.js:4
+msgid "Show less"
+msgstr "Mostrar menos"
+
+#: build/2.12.3/index.js:4
+msgid "Discover More"
+msgstr "Descubra mais"
+
+#: build/2.12.3/index.js:4
+msgid "Install Jetpack Boost to unlock"
+msgstr "Instale o Jetpack Boost para desbloquear"
+
+#: build/2.12.3/index.js:4
+msgid "Installing Jetpack Boost…"
+msgstr "Instalando o Jetpack Boost…"
+
+#: build/2.12.3/index.js:4
+msgid "Jetpack Boost is now active"
+msgstr "O Jetpack Boost está agora ativo"
+
+#: build/2.12.3/index.js:4
+msgid "Activation failed"
+msgstr "Ativação falhou"
+
+#: build/2.12.3/index.js:6
+msgid "Option saved correctly"
+msgstr "Opção salva corretamente"
+
+#: build/2.12.3/index.js:6
+msgid "Error saving option"
+msgstr "Erro ao salvar opção"
+
+#. translators: %1$s is the opening <a> tag, %2$s is the closing </a> tag.
+#: build/2.12.3/index.js:6
+msgid "Discover more %1$shere%2$s"
+msgstr "Descubra mais %1$saqui%2$s"
