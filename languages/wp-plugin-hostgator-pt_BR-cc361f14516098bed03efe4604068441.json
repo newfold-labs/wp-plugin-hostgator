@@ -1,7 +1,7 @@
 {
     "translation-revision-date": "2024-12-16 16:11+0000",
     "generator": "WP-CLI\/2.11.0",
-    "source": "build\/2.12.3\/index.js",
+    "source": "build\/2.12.4\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
@@ -638,138 +638,6 @@
             ],
             "WonderBlocks provides a library of customizable block patterns and page templates.": [
                 "O WonderBlocks fornece uma biblioteca de padr\u00f5es de blocos e modelos de p\u00e1gina personaliz\u00e1veis."
-            ],
-            "Asks the browser to download and cache links on the page ahead of them being clicked on, so that when they are clicked they load almost instantly. ": [
-                "Solicita ao navegador que fa\u00e7a o download e armazene em cache os links na p\u00e1gina antes de serem clicados, para que, quando forem clicados, carreguem quase instantaneamente."
-            ],
-            "Link prefetching setting saved": [
-                "Configura\u00e7\u00f5es de pr\u00e9-carregamento de links salvas"
-            ],
-            "Link Prefetch": [
-                "Pr\u00e9-carregamento de links"
-            ],
-            "Enable link prefetching on desktop": [
-                "Ativar o pr\u00e9-carregamento de links no desktop"
-            ],
-            "Activate on desktop": [
-                "Ativar no desktop"
-            ],
-            "Behavior of the prefetch": [
-                "Comportamento do pr\u00e9-carregamento"
-            ],
-            "Behavior": [
-                "Comportamento"
-            ],
-            "Prefetch on Mouse down": [
-                "Pr\u00e9-carregar ao pressionar o mouse"
-            ],
-            "Prefetch on Mouse Down: Starts loading the page as soon as you click down, for faster response when you release the click.": [
-                "Pr\u00e9-carregar ao pressionar o mouse: come\u00e7a a carregar a p\u00e1gina assim que voc\u00ea pressiona o bot\u00e3o do mouse, para uma resposta mais r\u00e1pida ao soltar o clique"
-            ],
-            "Prefetch on Mouse Hover (Recommended)": [
-                "Pr\u00e9-carregar ao passar o mouse (Recomendado)"
-            ],
-            "Prefetch on Mouse Hover: Begins loading the page the moment your cursor hovers over a link": [
-                "Pr\u00e9-carregar ao passar o mouse: come\u00e7a a carregar a p\u00e1gina no momento em que o cursor passa sobre um link"
-            ],
-            "Enable link prefetching on Mobile": [
-                "Ativar o pr\u00e9-carregamento de links no mobile"
-            ],
-            "Activate on mobile": [
-                "Ativar no mobile"
-            ],
-            "Prefetch on Touchstart (Recommended)": [
-                "Pr\u00e9-carregar ao tocar (Recomendado)"
-            ],
-            "Prefetch on Touch Start: Instantly starts loading the page as soon as you tap the screen, ensuring a quicker response when you lift your finger.": [
-                "Pr\u00e9-carregar ao tocar na tela: come\u00e7a a carregar a p\u00e1gina instantaneamente assim que voc\u00ea toca na tela, garantindo uma resposta mais r\u00e1pida quando voc\u00ea levantar o dedo."
-            ],
-            "Prefetch Above the Fold": [
-                "Pr\u00e9-carregar acima da dobra"
-            ],
-            "Prefetch Above the Fold: Loads links in your current view instantly, ensuring they're ready when you need them.": [
-                "Pr\u00e9-carregar acima da dobra: carrega os links na sua vis\u00e3o atual instantaneamente, garantindo que eles estejam prontos quando voc\u00ea precisar."
-            ],
-            "Exclude Keywords: A comma separated list of words or strings that will exclude a link from being prefetched. For example, excluding \"app\" will prevent https:\/\/example.com\/apple from being prefetched.": [
-                "Excluir palavras-chave: uma lista separada por v\u00edrgulas de palavras ou cadeias de caracteres que excluir\u00e3o um link de ser pr\u00e9-carregado. Por exemplo, excluir \u2018app\u2019 impedir\u00e1 que https:\/\/example.com\/apple seja pr\u00e9-carregado."
-            ],
-            "Exclude keywords": [
-                "Excluir palavras-chave"
-            ],
-            "Advanced settings": [
-                "Configura\u00e7\u00f5es avan\u00e7adas"
-            ],
-            "Additional speed and scalability features powered by Jetpack Boost to make your site as fast as it can be.": [
-                "Recursos adicionais de velocidade e escalabilidade impulsionados pelo Jetpack Boost para tornar o seu site o mais r\u00e1pido poss\u00edvel."
-            ],
-            "Optimize Critical CSS Loading (manual)": [
-                "Otimizar o carregamento de CSS cr\u00edtico (manual)"
-            ],
-            "Move important styling information to the start of the page, which helps pages display your content sooner, so your users don\u2019t have to wait for the entire page to load.": [
-                "Mova as informa\u00e7\u00f5es de estilo importantes para o in\u00edcio da p\u00e1gina, o que ajuda as p\u00e1ginas a exibir seu conte\u00fado mais rapidamente, para que seus usu\u00e1rios n\u00e3o precisem esperar o carregamento de toda a p\u00e1gina."
-            ],
-            "Optimize Critical CSS Loading (UPGRADED)": [
-                "Otimizar o carregamento de CSS cr\u00edtico (ATUALIZADO)"
-            ],
-            "Generate Critical CSS Automatically": [
-                "Gerar CSS cr\u00edtico automaticamente"
-            ],
-            "Move important styling information to the start of the page, which helps pages display your content sooner, so your users don\u2019t have to wait for the entire page to load.%1$s %2$sBoost will automatically generate your Critical CSS%3$s whenever you make changes to the HTML or CSS structure of your site.": [
-                "Mova as informa\u00e7\u00f5es de estilo importantes para o in\u00edcio da p\u00e1gina, o que ajuda as p\u00e1ginas a exibir seu conte\u00fado mais rapidamente, para que seus usu\u00e1rios n\u00e3o precisem esperar o carregamento de toda a p\u00e1gina. %1$s %2$s O Boost gerar\u00e1 automaticamente seu CSS cr\u00edtico %3$s sempre que voc\u00ea fizer altera\u00e7\u00f5es na estrutura HTML ou CSS do seu site."
-            ],
-            "Defer Non-Essential JavaScript": [
-                "Atrasar o carregamento de JavaScript n\u00e3o essencial"
-            ],
-            "Run non-essential JavaScript after the page has loaded so that styles and images can load more quickly.": [
-                "Executar JavaScript n\u00e3o essencial ap\u00f3s o carregamento da p\u00e1gina, para que os estilos e as imagens possam carregar mais rapidamente."
-            ],
-            "Concatenate JS": [
-                "Concatenar JS"
-            ],
-            "Scripts are grouped by their original placement, concatenated and minified to reduce site loading time and reduce the number of requests.": [
-                "Os scripts s\u00e3o agrupados conforme sua coloca\u00e7\u00e3o original, concatenados e minificados para reduzir o tempo de carregamento do site e diminuir o n\u00famero de requisi\u00e7\u00f5es."
-            ],
-            "Exclude JS Strings": [
-                "Excluir strings de JS"
-            ],
-            "Concatenate CSS": [
-                "Concatenar CSS"
-            ],
-            "Styles are grouped by their original placement, concatenated and minified to reduce site loading time and reduce the number of requests.": [
-                "Os estilos s\u00e3o agrupados conforme sua coloca\u00e7\u00e3o original, concatenados e minificados para reduzir o tempo de carregamento do site e diminuir o n\u00famero de requisi\u00e7\u00f5es."
-            ],
-            "Exclude CSS Strings": [
-                "Excluir strings de CSS"
-            ],
-            "Show more": [
-                "Mostrar mais"
-            ],
-            "Show less": [
-                "Mostrar menos"
-            ],
-            "Discover More": [
-                "Descubra mais"
-            ],
-            "Install Jetpack Boost to unlock": [
-                "Instale o Jetpack Boost para desbloquear"
-            ],
-            "Installing Jetpack Boost\u2026": [
-                "Instalando o Jetpack Boost\u2026"
-            ],
-            "Jetpack Boost is now active": [
-                "O Jetpack Boost est\u00e1 agora ativo"
-            ],
-            "Activation failed": [
-                "Ativa\u00e7\u00e3o falhou"
-            ],
-            "Option saved correctly": [
-                "Op\u00e7\u00e3o salva corretamente"
-            ],
-            "Error saving option": [
-                "Erro ao salvar op\u00e7\u00e3o"
-            ],
-            "Discover more %1$shere%2$s": [
-                "Descubra mais %1$saqui%2$s"
             ]
         }
     }

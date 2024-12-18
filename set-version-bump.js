@@ -13,7 +13,7 @@ if ( fs.existsSync( packagefile ) && fs.existsSync( pluginfile ) ) {
 
 	const newVersion = semver.inc( packageData.version, type );
 	packageData.version = newVersion;
-	fs.writeFileSync( packagefile, JSON.stringify( packageData, null, 4 ) );
+	fs.writeFileSync( packagefile, JSON.stringify( packageData, null, 2 ) );
 
 	fs.readFile( pluginfile, 'utf8', function ( err, data ) {
 		if ( err ) {
