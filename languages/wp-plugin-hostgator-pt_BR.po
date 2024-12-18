@@ -8,11 +8,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2023-01-11T20:21:44+00:00\n"
-"PO-Revision-Date: 2023-11-30 17:37\n"
+"PO-Revision-Date: 2024-12-16 16:11+0000\n"
 "Language: pt_BR\n"
-"X-Generator: WP-CLI 2.8.1\n"
-"X-Domain: wp-plugin-hostgator\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Domain: wp-plugin-hostgator\n"
 "X-Crowdin-Project: hostgator-wordpress-plugin\n"
 "X-Crowdin-Project-ID: 610119\n"
 "X-Crowdin-Language: pt-BR\n"
@@ -747,7 +747,7 @@ msgstr "Seu site está exibindo uma página \"Em breve\"."
 
 #: build/2.12.4/index.js:1
 msgid "Comments setting saved "
-msgstr "Configuração de comentários salva"
+msgstr "Configuração de comentários salva "
 
 #: build/2.12.4/index.js:1
 msgid "Comments setting saved."
@@ -780,7 +780,7 @@ msgstr "Salvar rascunhos e atualizar conteúdo publicado cria revisões. Faça a
 #: build/2.12.4/index.js:1
 msgid " step back."
 msgid_plural " steps back."
-msgstr[0] " dê um passo para trás"
+msgstr[0] " dê um passo para trás."
 msgstr[1] " dá um passo para trás"
 
 #: build/2.12.4/index.js:1

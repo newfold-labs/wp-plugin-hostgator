@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2023-11-30 17:37",
+    "translation-revision-date": "2024-12-16 16:11+0000",
     "generator": "WP-CLI\/2.11.0",
     "source": "build\/2.12.4\/index.js",
     "domain": "messages",
@@ -444,7 +444,7 @@
                 "Seu site est\u00e1 exibindo uma p\u00e1gina \"Em breve\"."
             ],
             "Comments setting saved ": [
-                "Configura\u00e7\u00e3o de coment\u00e1rios salva"
+                "Configura\u00e7\u00e3o de coment\u00e1rios salva "
             ],
             "Comments setting saved.": [
                 "Configura\u00e7\u00e3o de coment\u00e1rios salva."
@@ -468,7 +468,7 @@
                 "Salvar rascunhos e atualizar conte\u00fado publicado cria revis\u00f5es. Fa\u00e7a altera\u00e7\u00f5es com confian\u00e7a, sabendo que voc\u00ea pode "
             ],
             " step back.": [
-                " d\u00ea um passo para tr\u00e1s",
+                " d\u00ea um passo para tr\u00e1s.",
                 " d\u00e1 um passo para tr\u00e1s"
             ],
             "Trash setting saved ": [
