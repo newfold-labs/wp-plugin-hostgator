@@ -1,7 +1,7 @@
 {
     "translation-revision-date": "2024-12-16 16:11+0000",
     "generator": "WP-CLI\/2.11.0",
-    "source": "build\/2.12.4\/index.js",
+    "source": "build\/2.12.5\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
@@ -638,6 +638,138 @@
             ],
             "WonderBlocks provides a library of customizable block patterns and page templates.": [
                 "O WonderBlocks fornece uma biblioteca de padr\u00f5es de blocos e modelos de p\u00e1gina personaliz\u00e1veis."
+            ],
+            "Asks the browser to download and cache links on the page ahead of them being clicked on, so that when they are clicked they load almost instantly. ": [
+                ""
+            ],
+            "Link prefetching setting saved": [
+                ""
+            ],
+            "Link Prefetch": [
+                ""
+            ],
+            "Enable link prefetching on desktop": [
+                ""
+            ],
+            "Activate on desktop": [
+                ""
+            ],
+            "Behavior of the prefetch": [
+                ""
+            ],
+            "Behavior": [
+                ""
+            ],
+            "Prefetch on Mouse down": [
+                ""
+            ],
+            "Prefetch on Mouse Down: Starts loading the page as soon as you click down, for faster response when you release the click.": [
+                ""
+            ],
+            "Prefetch on Mouse Hover (Recommended)": [
+                ""
+            ],
+            "Prefetch on Mouse Hover: Begins loading the page the moment your cursor hovers over a link": [
+                ""
+            ],
+            "Enable link prefetching on Mobile": [
+                ""
+            ],
+            "Activate on mobile": [
+                ""
+            ],
+            "Prefetch on Touchstart (Recommended)": [
+                ""
+            ],
+            "Prefetch on Touch Start: Instantly starts loading the page as soon as you tap the screen, ensuring a quicker response when you lift your finger.": [
+                ""
+            ],
+            "Prefetch Above the Fold": [
+                ""
+            ],
+            "Prefetch Above the Fold: Loads links in your current view instantly, ensuring they're ready when you need them.": [
+                ""
+            ],
+            "Exclude Keywords: A comma separated list of words or strings that will exclude a link from being prefetched. For example, excluding \"app\" will prevent https:\/\/example.com\/apple from being prefetched.": [
+                ""
+            ],
+            "Exclude keywords": [
+                ""
+            ],
+            "Advanced settings": [
+                ""
+            ],
+            "Additional speed and scalability features powered by Jetpack Boost to make your site as fast as it can be.": [
+                ""
+            ],
+            "Optimize Critical CSS Loading (manual)": [
+                ""
+            ],
+            "Move important styling information to the start of the page, which helps pages display your content sooner, so your users don\u2019t have to wait for the entire page to load.": [
+                ""
+            ],
+            "Optimize Critical CSS Loading (UPGRADED)": [
+                ""
+            ],
+            "Generate Critical CSS Automatically": [
+                ""
+            ],
+            "Move important styling information to the start of the page, which helps pages display your content sooner, so your users don\u2019t have to wait for the entire page to load.%1$s %2$sBoost will automatically generate your Critical CSS%3$s whenever you make changes to the HTML or CSS structure of your site.": [
+                ""
+            ],
+            "Defer Non-Essential JavaScript": [
+                ""
+            ],
+            "Run non-essential JavaScript after the page has loaded so that styles and images can load more quickly.": [
+                ""
+            ],
+            "Concatenate JS": [
+                ""
+            ],
+            "Scripts are grouped by their original placement, concatenated and minified to reduce site loading time and reduce the number of requests.": [
+                ""
+            ],
+            "Exclude JS Strings": [
+                ""
+            ],
+            "Concatenate CSS": [
+                ""
+            ],
+            "Styles are grouped by their original placement, concatenated and minified to reduce site loading time and reduce the number of requests.": [
+                ""
+            ],
+            "Exclude CSS Strings": [
+                ""
+            ],
+            "Show more": [
+                ""
+            ],
+            "Show less": [
+                ""
+            ],
+            "Discover More": [
+                ""
+            ],
+            "Install Jetpack Boost to unlock": [
+                ""
+            ],
+            "Installing Jetpack Boost\u2026": [
+                ""
+            ],
+            "Jetpack Boost is now active": [
+                ""
+            ],
+            "Activation failed": [
+                ""
+            ],
+            "Discover more %1$shere%2$s": [
+                ""
+            ],
+            "Option saved correctly": [
+                ""
+            ],
+            "Error saving option": [
+                ""
             ]
         }
     }
