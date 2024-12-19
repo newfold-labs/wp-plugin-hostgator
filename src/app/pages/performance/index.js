@@ -2,6 +2,7 @@ import AppStore from '../../data/store';
 import { Container, Page } from '@newfold/ui-component-library';
 import { useState, useEffect, useContext, Fragment } from '@wordpress/element';
 import apiFetch from '@wordpress/api-fetch';
+import { __, sprintf } from '@wordpress/i18n';
 import { useUpdateEffect } from 'react-use';
 import { NewfoldRuntime } from '@newfold-labs/wp-module-runtime';
 import { useNotification } from 'App/components/notifications';
@@ -94,6 +95,171 @@ const PerformancePage = () => {
 			),
 			clearCacheNoticeTitle: __( 'Cache cleared', 'wp-plugin-hostgator' ),
 			clearCacheTitle: __( 'Clear Cache', 'wp-plugin-hostgator' ),
+			linkPrefetchDescription: __(
+				'Asks the browser to download and cache links on the page ahead of them being clicked on, so that when they are clicked they load almost instantly. ',
+				'wp-plugin-hostgator'
+			),
+			linkPrefetchNoticeTitle: __(
+				'Link prefetching setting saved',
+				'wp-plugin-hostgator'
+			),
+			linkPrefetchTitle: __( 'Link Prefetch', 'wp-plugin-hostgator' ),
+			linkPrefetchActivateOnDesktopDescription: __(
+				'Enable link prefetching on desktop',
+				'wp-plugin-hostgator'
+			),
+			linkPrefetchActivateOnDesktopLabel: __(
+				'Activate on desktop',
+				'wp-plugin-hostgator'
+			),
+			linkPrefetchBehaviorDescription: __(
+				'Behavior of the prefetch',
+				'wp-plugin-hostgator'
+			),
+			linkPrefetchBehaviorLabel: __( 'Behavior', 'wp-plugin-hostgator' ),
+			linkPrefetchBehaviorMouseDownLabel: __(
+				'Prefetch on Mouse down',
+				'wp-plugin-hostgator'
+			),
+			linkPrefetchBehaviorMouseDownDescription: __(
+				'Prefetch on Mouse Down: Starts loading the page as soon as you click down, for faster response when you release the click.',
+				'wp-plugin-hostgator'
+			),
+			linkPrefetchBehaviorMouseHoverLabel: __(
+				'Prefetch on Mouse Hover (Recommended)',
+				'wp-plugin-hostgator'
+			),
+			linkPrefetchBehaviorMouseHoverDescription: __(
+				'Prefetch on Mouse Hover: Begins loading the page the moment your cursor hovers over a link',
+				'wp-plugin-hostgator'
+			),
+			linkPrefetchActivateOnMobileDescription: __(
+				'Enable link prefetching on Mobile',
+				'wp-plugin-hostgator'
+			),
+			linkPrefetchActivateOnMobileLabel: __(
+				'Activate on mobile',
+				'wp-plugin-hostgator'
+			),
+			linkPrefetchBehaviorMobileTouchstartLabel: __(
+				'Prefetch on Touchstart (Recommended)',
+				'wp-plugin-hostgator'
+			),
+			linkPrefetchBehaviorMobileTouchstartDescription: __(
+				'Prefetch on Touch Start: Instantly starts loading the page as soon as you tap the screen, ensuring a quicker response when you lift your finger.',
+				'wp-plugin-hostgator'
+			),
+			linkPrefetchBehaviorMobileViewportLabel: __(
+				'Prefetch Above the Fold',
+				'wp-plugin-hostgator'
+			),
+			linkPrefetchBehaviorMobileViewportDescription: __(
+				"Prefetch Above the Fold: Loads links in your current view instantly, ensuring they're ready when you need them.",
+				'wp-plugin-hostgator'
+			),
+			linkPrefetchIgnoreKeywordsDescription: __(
+				'Exclude Keywords: A comma separated list of words or strings that will exclude a link from being prefetched. For example, excluding "app" will prevent https://example.com/apple from being prefetched.',
+				'wp-plugin-hostgator'
+			),
+			linkPrefetchIgnoreKeywordsLabel: __(
+				'Exclude keywords',
+				'wp-plugin-hostgator'
+			),
+			performanceAdvancedSettingsTitle: __(
+				'Advanced settings',
+				'wp-plugin-hostgator'
+			),
+			performanceAdvancedSettingsDescription: __(
+				'Additional speed and scalability features powered by Jetpack Boost to make your site as fast as it can be.',
+				'wp-plugin-hostgator'
+			),
+			jetpackBoostCriticalCssTitle: __(
+				'Optimize Critical CSS Loading (manual)',
+				'wp-plugin-hostgator'
+			),
+			jetpackBoostCriticalCssDescription: __(
+				'Move important styling information to the start of the page, which helps pages display your content sooner, so your users don’t have to wait for the entire page to load.',
+				'wp-plugin-hostgator'
+			),
+			jetpackBoostCriticalCssPremiumTitle: __(
+				'Optimize Critical CSS Loading (UPGRADED)',
+				'wp-plugin-hostgator'
+			),
+			jetpackBoostCriticalCssUpgradeTitle: __(
+				'Generate Critical CSS Automatically',
+				'wp-plugin-hostgator'
+			),
+			jetpackBoostCriticalCssPremiumDescription: sprintf(
+				// translators: %1$s is a line break (<br>), %2$s is the opening <strong> tag, %3$s is the closing </strong> tag.
+				__(
+					'Move important styling information to the start of the page, which helps pages display your content sooner, so your users don’t have to wait for the entire page to load.%1$s %2$sBoost will automatically generate your Critical CSS%3$s whenever you make changes to the HTML or CSS structure of your site.',
+					'wp-plugin-hostgator'
+				),
+				'<br>',
+				'<strong>',
+				'</strong>'
+			),
+			jetpackBoostRenderBlockingTitle: __(
+				'Defer Non-Essential JavaScript',
+				'wp-plugin-hostgator'
+			),
+			jetpackBoostRenderBlockingDescription: __(
+				'Run non-essential JavaScript after the page has loaded so that styles and images can load more quickly.',
+				'wp-plugin-hostgator'
+			),
+			jetpackBoostMinifyJsTitle: __(
+				'Concatenate JS',
+				'wp-plugin-hostgator'
+			),
+			jetpackBoostMinifyJsDescription: __(
+				'Scripts are grouped by their original placement, concatenated and minified to reduce site loading time and reduce the number of requests.',
+				'wp-plugin-hostgator'
+			),
+			jetpackBoostExcludeJsTitle: __(
+				'Exclude JS Strings',
+				'wp-plugin-hostgator'
+			),
+			jetpackBoostMinifyCssTitle: __(
+				'Concatenate CSS',
+				'wp-plugin-hostgator'
+			),
+			jetpackBoostMinifyCssDescription: __(
+				'Styles are grouped by their original placement, concatenated and minified to reduce site loading time and reduce the number of requests.',
+				'wp-plugin-hostgator'
+			),
+			jetpackBoostExcludeCssTitle: __(
+				'Exclude CSS Strings',
+				'wp-plugin-hostgator'
+			),
+			jetpackBoostShowMore: __( 'Show more', 'wp-plugin-hostgator' ),
+			jetpackBoostShowLess: __( 'Show less', 'wp-plugin-hostgator' ),
+			jetpackBoostDicoverMore: __(
+				'Discover More',
+				'wp-plugin-hostgator'
+			),
+			jetpackBoostCtaText: __(
+				'Install Jetpack Boost to unlock',
+				'wp-plugin-hostgator'
+			),
+			jetpackBoostInstalling: __(
+				'Installing Jetpack Boost…',
+				'wp-plugin-hostgator'
+			),
+			jetpackBoostActivated: __(
+				'Jetpack Boost is now active',
+				'wp-plugin-hostgator'
+			),
+			jetpackBoostActivationFailed: __(
+				'Activation failed',
+				'wp-plugin-hostgator'
+			),
+			// translators: %1$s is the opening <a> tag, %2$s is the closing </a> tag.
+			jetpackBoostDiscoverMore: __(
+				'Discover more %1$shere%2$s',
+				'wp-plugin-hostgator'
+			),
+			optionSet: __( 'Option saved correctly', 'wp-plugin-hostgator' ),
+			optionNotSet: __( 'Error saving option', 'wp-plugin-hostgator' ),
 		},
 	};
 
