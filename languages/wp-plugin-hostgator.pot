@@ -1,4 +1,4 @@
-# Copyright (C) 2024 HostGator
+# Copyright (C) 2025 HostGator
 # This file is distributed under the GPL 2.0 or later.
 msgid ""
 msgstr ""
@@ -810,6 +810,102 @@ msgid "Error saving option"
 msgstr ""
 
 #: build/2.12.5/index.js:6
+msgid "Image Optimization"
+msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "We automatically optimize your uploaded images to WebP format for faster performance and reduced file sizes. You can also choose to delete the original images to save storage space."
+msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "Enable Image Optimization"
+msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "Enable or disable image optimization globally."
+msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "Automatically Optimize Uploaded Images"
+msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "When enabled, all your new image uploads will be automatically optimized to WebP format, ensuring faster page loading and reduced file sizes."
+msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "Auto Delete Original Image"
+msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "When enabled, the original uploaded image is deleted and replaced with the optimized version, helping to save storage space. If disabled, the optimized image is saved as a separate file, retaining the original."
+msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "No settings available."
+msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "Oops! Something went wrong. Please try again."
+msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "Loading settings…"
+msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "Settings updated successfully"
+msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "Your image optimization settings have been saved."
+msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "Enable Lazy Loading"
+msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "Lazy loading defers the loading of images until they are visible on the screen, improving page load speed and performance."
+msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "Lazy loading has been updated."
+msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "Oops! There was an error updating the lazy loading settings."
+msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "Enable Bulk Optimization of Images"
+msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "When enabled, allows bulk optimization of images in the media library."
+msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "Go to Media Library"
+msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "Error Updating Settings"
+msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "Prefer Optimized Image When Exists"
+msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "When enabled, optimized images will be served in place of original images when they exist, improving performance."
+msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "Something went wrong while updating the settings. Please try again."
+msgstr ""
+
+#: build/2.12.5/index.js:6
 msgid "This is where you can manage cache settings for your website."
 msgstr ""
 
@@ -835,10 +931,6 @@ msgstr ""
 
 #: build/2.12.5/index.js:6
 msgid "Keeping automatic updates on ensures timely security fixes and the latest features."
-msgstr ""
-
-#: build/2.12.5/index.js:6
-msgid "Oops! Something went wrong. Please try again."
 msgstr ""
 
 #: build/2.12.5/index.js:6

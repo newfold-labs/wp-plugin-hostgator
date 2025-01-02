@@ -1187,3 +1187,95 @@ msgstr ""
 #: build/2.12.5/index.js:6
 msgid "Error saving option"
 msgstr ""
+
+#: build/2.12.5/index.js:6
+msgid "Image Optimization"
+msgstr "Optimización de Imágenes"
+
+#: build/2.12.5/index.js:6
+msgid "We automatically optimize your uploaded images to WebP format for faster performance and reduced file sizes. You can also choose to delete the original images to save storage space."
+msgstr "Optimizamos automáticamente tus imágenes cargadas al formato WebP para un mejor rendimiento y tamaños de archivo reducidos. También puedes elegir eliminar las imágenes originales para ahorrar espacio de almacenamiento."
+
+#: build/2.12.5/index.js:6
+msgid "Enable Image Optimization"
+msgstr "Habilitar Optimización de Imágenes"
+
+#: build/2.12.5/index.js:6
+msgid "Enable or disable image optimization globally."
+msgstr "Habilita o deshabilita la optimización de imágenes globalmente."
+
+#: build/2.12.5/index.js:6
+msgid "Automatically Optimize Uploaded Images"
+msgstr "Optimizar Imágenes Cargadas Automáticamente"
+
+#: build/2.12.5/index.js:6
+msgid "When enabled, all your new image uploads will be automatically optimized to WebP format, ensuring faster page loading and reduced file sizes."
+msgstr "Cuando está habilitado, todas tus imágenes nuevas se optimizarán automáticamente al formato WebP, asegurando una carga más rápida de la página y tamaños de archivo reducidos."
+
+#: build/2.12.5/index.js:6
+msgid "Auto Delete Original Image"
+msgstr "Eliminar Imagen Original Automáticamente"
+
+#: build/2.12.5/index.js:6
+msgid "When enabled, the original uploaded image is deleted and replaced with the optimized version, helping to save storage space. If disabled, the optimized image is saved as a separate file, retaining the original."
+msgstr "Cuando está habilitado, la imagen original cargada se elimina y se reemplaza con la versión optimizada, ayudando a ahorrar espacio de almacenamiento. Si está deshabilitado, la imagen optimizada se guarda como un archivo separado, conservando la original."
+
+#: build/2.12.5/index.js:6
+msgid "No settings available."
+msgstr "No hay configuraciones disponibles."
+
+#: build/2.12.5/index.js:6
+msgid "Loading settings…"
+msgstr "Cargando configuraciones…"
+
+#: build/2.12.5/index.js:6
+msgid "Settings updated successfully"
+msgstr "Configuraciones actualizadas con éxito"
+
+#: build/2.12.5/index.js:6
+msgid "Your image optimization settings have been saved."
+msgstr "Tus configuraciones de optimización de imágenes se han guardado."
+
+#: build/2.12.5/index.js:6
+msgid "Enable Lazy Loading"
+msgstr "Habilitar Carga Diferida"
+
+#: build/2.12.5/index.js:6
+msgid "Lazy loading defers the loading of images until they are visible on the screen, improving page load speed and performance."
+msgstr "La carga diferida retrasa la carga de imágenes hasta que sean visibles en la pantalla, mejorando la velocidad de carga de la página y el rendimiento."
+
+#: build/2.12.5/index.js:6
+msgid "Lazy loading has been updated."
+msgstr "La carga diferida ha sido actualizada."
+
+#: build/2.12.5/index.js:6
+msgid "Oops! There was an error updating the lazy loading settings."
+msgstr "¡Ups! Hubo un error al actualizar las configuraciones de carga diferida."
+
+#: build/2.12.5/index.js:6
+msgid "Enable Bulk Optimization of Images"
+msgstr "Habilitar Optimización Masiva de Imágenes"
+
+#: build/2.12.5/index.js:6
+msgid "When enabled, allows bulk optimization of images in the media library."
+msgstr "Cuando está habilitado, permite la optimización masiva de imágenes en la biblioteca multimedia."
+
+#: build/2.12.5/index.js:6
+msgid "Go to Media Library"
+msgstr "Ir a la Biblioteca Multimedia"
+
+#: build/2.12.5/index.js:6
+msgid "Error Updating Settings"
+msgstr "Error al Actualizar Configuraciones"
+
+#: build/2.12.5/index.js:6
+msgid "Prefer Optimized Image When Exists"
+msgstr "Preferir Imagen Optimizada Cuando Existe"
+
+#: build/2.12.5/index.js:6
+msgid "When enabled, optimized images will be served in place of original images when they exist, improving performance."
+msgstr "Cuando está habilitado, las imágenes optimizadas se mostrarán en lugar de las originales cuando existan, mejorando el rendimiento."
+
+#: build/2.12.5/index.js:6
+msgid "Something went wrong while updating the settings. Please try again."
+msgstr "Algo salió mal al actualizar las configuraciones. Por favor, inténtalo de nuevo."
