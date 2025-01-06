@@ -260,6 +260,103 @@ const PerformancePage = () => {
 			),
 			optionSet: __( 'Option saved correctly', 'wp-plugin-hostgator' ),
 			optionNotSet: __( 'Error saving option', 'wp-plugin-hostgator' ),
+			// Image Optimization
+			imageOptimizationSettingsTitle: __(
+				'Image Optimization',
+				'wp-plugin-hostgator'
+			),
+			imageOptimizationSettingsDescription: __(
+				'We automatically optimize your uploaded images to WebP format for faster performance and reduced file sizes. You can also choose to delete the original images to save storage space.',
+				'wp-plugin-hostgator'
+			),
+			imageOptimizationEnabledLabel: __(
+				'Enable Image Optimization',
+				'wp-plugin-hostgator'
+			),
+			imageOptimizationEnabledDescription: __(
+				'Enable or disable image optimization globally.',
+				'wp-plugin-hostgator'
+			),
+			imageOptimizationAutoOptimizeLabel: __(
+				'Automatically Optimize Uploaded Images',
+				'wp-plugin-hostgator'
+			),
+			imageOptimizationAutoOptimizeDescription: __(
+				'When enabled, all your new image uploads will be automatically optimized to WebP format, ensuring faster page loading and reduced file sizes.',
+				'wp-plugin-hostgator'
+			),
+			imageOptimizationAutoDeleteLabel: __(
+				'Auto Delete Original Image',
+				'wp-plugin-hostgator'
+			),
+			imageOptimizationAutoDeleteDescription: __(
+				'When enabled, the original uploaded image is deleted and replaced with the optimized version, helping to save storage space. If disabled, the optimized image is saved as a separate file, retaining the original.',
+				'wp-plugin-hostgator'
+			),
+			imageOptimizationNoSettings: __(
+				'No settings available.',
+				'wp-plugin-hostgator'
+			),
+			imageOptimizationErrorMessage: __(
+				'Oops! Something went wrong. Please try again.',
+				'wp-plugin-hostgator'
+			),
+			imageOptimizationLoadingMessage: __(
+				'Loading settings…',
+				'wp-plugin-hostgator'
+			),
+			imageOptimizationUpdatedTitle: __(
+				'Settings updated successfully',
+				'wp-plugin-hostgator'
+			),
+			imageOptimizationUpdatedDescription: __(
+				'Your image optimization settings have been saved.',
+				'wp-plugin-hostgator'
+			),
+			imageOptimizationLazyLoadingLabel: __(
+				'Enable Lazy Loading',
+				'wp-plugin-hostgator'
+			),
+			imageOptimizationLazyLoadingDescription: __(
+				'Lazy loading defers the loading of images until they are visible on the screen, improving page load speed and performance.',
+				'wp-plugin-hostgator'
+			),
+			imageOptimizationLazyLoadingNoticeText: __(
+				'Lazy loading has been updated.',
+				'wp-plugin-hostgator'
+			),
+			imageOptimizationLazyLoadingErrorMessage: __(
+				'Oops! There was an error updating the lazy loading settings.',
+				'wp-plugin-hostgator'
+			),
+			imageOptimizationBulkOptimizeLabel: __(
+				'Enable Bulk Optimization of Images',
+				'wp-plugin-hostgator'
+			),
+			imageOptimizationBulkOptimizeDescription: __(
+				'When enabled, allows bulk optimization of images in the media library.',
+				'wp-plugin-hostgator'
+			),
+			imageOptimizationBulkOptimizeButtonLabel: __(
+				'Go to Media Library',
+				'wp-plugin-hostgator'
+			),
+			imageOptimizationUpdateErrorTitle: __(
+				'Error Updating Settings',
+				'wp-plugin-hostgator'
+			),
+			imageOptimizationPreferWebPLabel: __(
+				'Prefer Optimized Image When Exists',
+				'wp-plugin-hostgator'
+			),
+			imageOptimizationPreferWebPDescription: __(
+				'When enabled, optimized images will be served in place of original images when they exist, improving performance.',
+				'wp-plugin-hostgator'
+			),
+			imageOptimizationGenericErrorMessage: __(
+				'Something went wrong while updating the settings. Please try again.',
+				'wp-plugin-hostgator'
+			),
 		},
 	};
 

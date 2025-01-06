@@ -770,6 +770,75 @@
             ],
             "Error saving option": [
                 ""
+            ],
+            "Image Optimization": [
+                "Optimizaci\u00f3n de Im\u00e1genes"
+            ],
+            "We automatically optimize your uploaded images to WebP format for faster performance and reduced file sizes. You can also choose to delete the original images to save storage space.": [
+                "Optimizamos autom\u00e1ticamente tus im\u00e1genes cargadas al formato WebP para un mejor rendimiento y tama\u00f1os de archivo reducidos. Tambi\u00e9n puedes elegir eliminar las im\u00e1genes originales para ahorrar espacio de almacenamiento."
+            ],
+            "Enable Image Optimization": [
+                "Habilitar Optimizaci\u00f3n de Im\u00e1genes"
+            ],
+            "Enable or disable image optimization globally.": [
+                "Habilita o deshabilita la optimizaci\u00f3n de im\u00e1genes globalmente."
+            ],
+            "Automatically Optimize Uploaded Images": [
+                "Optimizar Im\u00e1genes Cargadas Autom\u00e1ticamente"
+            ],
+            "When enabled, all your new image uploads will be automatically optimized to WebP format, ensuring faster page loading and reduced file sizes.": [
+                "Cuando est\u00e1 habilitado, todas tus im\u00e1genes nuevas se optimizar\u00e1n autom\u00e1ticamente al formato WebP, asegurando una carga m\u00e1s r\u00e1pida de la p\u00e1gina y tama\u00f1os de archivo reducidos."
+            ],
+            "Auto Delete Original Image": [
+                "Eliminar Imagen Original Autom\u00e1ticamente"
+            ],
+            "When enabled, the original uploaded image is deleted and replaced with the optimized version, helping to save storage space. If disabled, the optimized image is saved as a separate file, retaining the original.": [
+                "Cuando est\u00e1 habilitado, la imagen original cargada se elimina y se reemplaza con la versi\u00f3n optimizada, ayudando a ahorrar espacio de almacenamiento. Si est\u00e1 deshabilitado, la imagen optimizada se guarda como un archivo separado, conservando la original."
+            ],
+            "No settings available.": [
+                "No hay configuraciones disponibles."
+            ],
+            "Loading settings\u2026": [
+                "Cargando configuraciones\u2026"
+            ],
+            "Settings updated successfully": [
+                "Configuraciones actualizadas con \u00e9xito"
+            ],
+            "Your image optimization settings have been saved.": [
+                "Tus configuraciones de optimizaci\u00f3n de im\u00e1genes se han guardado."
+            ],
+            "Enable Lazy Loading": [
+                "Habilitar Carga Diferida"
+            ],
+            "Lazy loading defers the loading of images until they are visible on the screen, improving page load speed and performance.": [
+                "La carga diferida retrasa la carga de im\u00e1genes hasta que sean visibles en la pantalla, mejorando la velocidad de carga de la p\u00e1gina y el rendimiento."
+            ],
+            "Lazy loading has been updated.": [
+                "La carga diferida ha sido actualizada."
+            ],
+            "Oops! There was an error updating the lazy loading settings.": [
+                "\u00a1Ups! Hubo un error al actualizar las configuraciones de carga diferida."
+            ],
+            "Enable Bulk Optimization of Images": [
+                "Habilitar Optimizaci\u00f3n Masiva de Im\u00e1genes"
+            ],
+            "When enabled, allows bulk optimization of images in the media library.": [
+                "Cuando est\u00e1 habilitado, permite la optimizaci\u00f3n masiva de im\u00e1genes en la biblioteca multimedia."
+            ],
+            "Go to Media Library": [
+                "Ir a la Biblioteca Multimedia"
+            ],
+            "Error Updating Settings": [
+                "Error al Actualizar Configuraciones"
+            ],
+            "Prefer Optimized Image When Exists": [
+                "Preferir Imagen Optimizada Cuando Existe"
+            ],
+            "When enabled, optimized images will be served in place of original images when they exist, improving performance.": [
+                "Cuando est\u00e1 habilitado, las im\u00e1genes optimizadas se mostrar\u00e1n en lugar de las originales cuando existan, mejorando el rendimiento."
+            ],
+            "Something went wrong while updating the settings. Please try again.": [
+                "Algo sali\u00f3 mal al actualizar las configuraciones. Por favor, int\u00e9ntalo de nuevo."
             ]
         }
     }
