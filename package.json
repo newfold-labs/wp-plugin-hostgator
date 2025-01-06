@@ -31,7 +31,7 @@
     "html-react-parser": "^5.2.2",
     "jquery": "^3.7.1",
     "lodash": "^4.17.21",
-    "react": "^18.2.0",
+    "react": "^19.0.0",
     "react-error-boundary": "^5.0.0",
     "react-router-dom": "^7.1.1",
     "react-use": "^17.6.0"
