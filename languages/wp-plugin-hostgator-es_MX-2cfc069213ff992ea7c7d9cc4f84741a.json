@@ -1,7 +1,7 @@
 {
     "translation-revision-date": "2024-12-16 16:14+0000",
     "generator": "WP-CLI\/2.11.0",
-    "source": "build\/2.12.5\/index.js",
+    "source": "build\/2.12.6\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
@@ -622,154 +622,154 @@
                 "WonderBlocks proporciona una biblioteca de patrones de bloques y plantillas de p\u00e1ginas personalizables."
             ],
             "Phone": [
-                ""
+                "Tel\u00e9fono"
             ],
             "Give us a ring at (866) 96-GATOR": [
-                ""
+                "Ll\u00e1manos al (866) 96-GATOR"
             ],
             "Call Us": [
-                ""
+                "Ll\u00e1manos"
             ],
             "Tweet": [
-                ""
+                "Tweet"
             ],
             "Every page load is fresh.": [
-                ""
+                "Cada carga de p\u00e1gina es nueva."
             ],
             "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take ": [
-                ""
+                "Guardar borradores y actualizar el contenido publicado crea revisiones. Haga cambios con confianza, sabiendo que puede tomar "
             ],
             "Asks the browser to download and cache links on the page ahead of them being clicked on, so that when they are clicked they load almost instantly. ": [
-                ""
+                "Pide al navegador que descargue y almacene en cach\u221a\u00a9 los enlaces de la p\u221a\u00b0gina antes de que se haga clic en ellos, de modo que cuando se haga clic se carguen casi instant\u221a\u00b0neamente."
             ],
             "Link prefetching setting saved": [
-                ""
+                "Configuraci\u221a\u2265n de precarga de enlaces guardada"
             ],
             "Link Prefetch": [
-                ""
+                "Precarga de enlaces"
             ],
             "Enable link prefetching on desktop": [
-                ""
+                "Activar la precarga de enlaces en el escritorio"
             ],
             "Activate on desktop": [
-                ""
+                "Activar en escritorio"
             ],
             "Behavior of the prefetch": [
-                ""
+                "Comportamiento de la precarga"
             ],
             "Behavior": [
-                ""
+                "Comportamiento"
             ],
             "Prefetch on Mouse down": [
-                ""
+                "Precarga al hacer clic en el bot\u221a\u2265n"
             ],
             "Prefetch on Mouse Down: Starts loading the page as soon as you click down, for faster response when you release the click.": [
-                ""
+                "Precarga al hacer clic en el bot\u221a\u2265n: comienza a cargar la p\u221a\u00b0gina tan pronto como se hace clic hacia abajo, para una respuesta m\u221a\u00b0s r\u221a\u00b0pida cuando se suelta el clic"
             ],
             "Prefetch on Mouse Hover (Recommended)": [
-                ""
+                "Precarga al pasar el cursor (recomendado)"
             ],
             "Prefetch on Mouse Hover: Begins loading the page the moment your cursor hovers over a link": [
-                ""
+                "Precarga al pasar el cursor: comienza a cargar la p\u221a\u00b0gina en el momento en que el cursor pasa por encima de un enlace"
             ],
             "Enable link prefetching on Mobile": [
-                ""
+                "Activar la precarga de enlaces en m\u221a\u2265viles"
             ],
             "Activate on mobile": [
-                ""
+                "Activar en m\u221a\u2265vil"
             ],
             "Prefetch on Touchstart (Recommended)": [
-                ""
+                "Precarga al tocar la pantalla t\u221a\u00b0ctil (recomendado)"
             ],
             "Prefetch on Touch Start: Instantly starts loading the page as soon as you tap the screen, ensuring a quicker response when you lift your finger.": [
-                ""
+                "Precarga al tocar la pantalla t\u221a\u00b0ctil: inicia instant\u221a\u00b0neamente la carga de la p\u221a\u00b0gina en cuanto se toca la pantalla, garantizando una respuesta m\u221a\u00b0s r\u221a\u00b0pida al levantar el dedo"
             ],
             "Prefetch Above the Fold": [
-                ""
+                "Precarga en vista actual"
             ],
             "Prefetch Above the Fold: Loads links in your current view instantly, ensuring they're ready when you need them.": [
-                ""
+                "Precarga en vista actual: carga los enlaces en la vista actual al instante, garantizando que est\u221a\u00a9n listos cuando los necesites"
             ],
             "Exclude Keywords: A comma separated list of words or strings that will exclude a link from being prefetched. For example, excluding \"app\" will prevent https:\/\/example.com\/apple from being prefetched.": [
-                ""
+                "Excluir palabras clave: una lista separada por comas de palabras o cadenas que excluir\u221a\u00b0n un enlace de ser precargado. Por ejemplo, si se excluye \u00ac\u00b4app\u00ac\u00aa, se evitar\u221a\u00b0 la precarga de https:\/\/example.com\/apple"
             ],
             "Exclude keywords": [
-                ""
+                "Excluir palabras clave"
             ],
             "Advanced settings": [
-                ""
+                "Configuraci\u221a\u2265n avanzada"
             ],
             "Additional speed and scalability features powered by Jetpack Boost to make your site as fast as it can be.": [
-                ""
+                "Funciones adicionales de velocidad y escalabilidad con Jetpack Boost para que tu sitio sea lo m\u221a\u00b0s r\u221a\u00b0pido posible"
             ],
             "Optimize Critical CSS Loading (manual)": [
-                ""
-            ],
-            "Move important styling information to the start of the page, which helps pages display your content sooner, so your users don\u2019t have to wait for the entire page to load.": [
-                ""
+                "Optimizar la carga cr\u221a\u2260tica de CSS (manual)"
             ],
             "Optimize Critical CSS Loading (UPGRADED)": [
-                ""
+                "Optimizar la carga de CSS cr\u221a\u2260tico (ACTUALIZADO)"
             ],
             "Generate Critical CSS Automatically": [
-                ""
-            ],
-            "Move important styling information to the start of the page, which helps pages display your content sooner, so your users don\u2019t have to wait for the entire page to load.%1$s %2$sBoost will automatically generate your Critical CSS%3$s whenever you make changes to the HTML or CSS structure of your site.": [
-                ""
+                "Generar CSS cr\u221a\u2260tico autom\u221a\u00b0ticamente"
             ],
             "Defer Non-Essential JavaScript": [
-                ""
+                "Aplazar JavaScript no esencial"
             ],
             "Run non-essential JavaScript after the page has loaded so that styles and images can load more quickly.": [
-                ""
+                "Ejecuta JavaScript no esencial despu\u221a\u00a9s de que la p\u221a\u00b0gina se haya cargado para que los estilos y las im\u221a\u00b0genes puedan cargarse m\u221a\u00b0s r\u221a\u00b0pidamente"
             ],
             "Concatenate JS": [
-                ""
+                "Concatenar JS"
             ],
             "Scripts are grouped by their original placement, concatenated and minified to reduce site loading time and reduce the number of requests.": [
-                ""
+                "Los scripts se agrupan por su ubicaci\u221a\u2265n original, se concatenan y se minifican para reducir el tiempo de carga del sitio y reducir el n\u221a\u222bmero de peticiones."
             ],
             "Exclude JS Strings": [
-                ""
+                "Excluir cadenas JS"
             ],
             "Concatenate CSS": [
-                ""
+                "Concatenar CSS"
             ],
             "Styles are grouped by their original placement, concatenated and minified to reduce site loading time and reduce the number of requests.": [
-                ""
+                "Los estilos se agrupan por su ubicaci\u221a\u2265n original, se concatenan y se minifican para reducir el tiempo de carga del sitio y el n\u221a\u222bmero de solicitudes"
             ],
             "Exclude CSS Strings": [
-                ""
+                "Excluir cadenas CSS"
             ],
             "Show more": [
-                ""
+                "Mostrar m\u221a\u00b0s"
             ],
             "Show less": [
-                ""
+                "Mostrar menos"
             ],
             "Discover More": [
-                ""
+                "Descubrir m\u221a\u00b0s"
             ],
             "Install Jetpack Boost to unlock": [
-                ""
-            ],
-            "Installing Jetpack Boost\u2026": [
-                ""
+                "Instalar Jetpack Boost para desbloquear"
             ],
             "Jetpack Boost is now active": [
-                ""
+                "Jetpack Boost ya est\u221a\u00b0 activo"
             ],
             "Activation failed": [
-                ""
-            ],
-            "Discover more %1$shere%2$s": [
-                ""
+                "Activaci\u221a\u2265n fallida"
             ],
             "Option saved correctly": [
-                ""
+                "Opci\u221a\u2265n guardada correctamente"
             ],
             "Error saving option": [
-                ""
+                "Error al guardar la opci\u221a\u2265n"
+            ],
+            "Discover more %1$shere%2$s": [
+                "Descubra m\u221a\u00b0s %1$saqu\u221a\u2260%2$s"
+            ],
+            "Move important styling information to the start of the page, which helps pages display your content sooner, so your users don\u2019t have to wait for the entire page to load.": [
+                "Mueva la informaci\u00f3n de estilo importante al inicio de la p\u00e1gina, lo que ayuda a que las p\u00e1ginas muestren su contenido antes, para que los usuarios no tengan que esperar a que se cargue toda la p\u00e1gina."
+            ],
+            "Move important styling information to the start of the page, which helps pages display your content sooner, so your users don\u2019t have to wait for the entire page to load.%1$s %2$sBoost will automatically generate your Critical CSS%3$s whenever you make changes to the HTML or CSS structure of your site.": [
+                "Mueva la informaci\u00f3n de estilo importante al inicio de la p\u00e1gina, lo que ayuda a que las p\u00e1ginas muestren su contenido antes, para que los usuarios no tengan que esperar a que se cargue toda la p\u00e1gina.%1$s %2$sBoost generar\u00e1 autom\u00e1ticamente tu CSS cr\u00edtico%3$s cada vez que realices cambios en la estructura HTML o CSS de tu sitio."
+            ],
+            "Installing Jetpack Boost\u2026": [
+                "Instalaci\u00f3n del Jetpack Boost\u2026"
             ],
             "Image Optimization": [
                 "Optimizaci\u00f3n de Im\u00e1genes"
