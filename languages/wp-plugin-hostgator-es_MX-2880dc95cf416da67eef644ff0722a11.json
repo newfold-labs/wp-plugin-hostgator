@@ -1,7 +1,7 @@
 {
     "translation-revision-date": "2024-12-16 16:14+0000",
     "generator": "WP-CLI\/2.11.0",
-    "source": "build\/2.12.4\/index.js",
+    "source": "build\/2.12.5\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
@@ -638,6 +638,207 @@
             ],
             "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take ": [
                 ""
+            ],
+            "Asks the browser to download and cache links on the page ahead of them being clicked on, so that when they are clicked they load almost instantly. ": [
+                ""
+            ],
+            "Link prefetching setting saved": [
+                ""
+            ],
+            "Link Prefetch": [
+                ""
+            ],
+            "Enable link prefetching on desktop": [
+                ""
+            ],
+            "Activate on desktop": [
+                ""
+            ],
+            "Behavior of the prefetch": [
+                ""
+            ],
+            "Behavior": [
+                ""
+            ],
+            "Prefetch on Mouse down": [
+                ""
+            ],
+            "Prefetch on Mouse Down: Starts loading the page as soon as you click down, for faster response when you release the click.": [
+                ""
+            ],
+            "Prefetch on Mouse Hover (Recommended)": [
+                ""
+            ],
+            "Prefetch on Mouse Hover: Begins loading the page the moment your cursor hovers over a link": [
+                ""
+            ],
+            "Enable link prefetching on Mobile": [
+                ""
+            ],
+            "Activate on mobile": [
+                ""
+            ],
+            "Prefetch on Touchstart (Recommended)": [
+                ""
+            ],
+            "Prefetch on Touch Start: Instantly starts loading the page as soon as you tap the screen, ensuring a quicker response when you lift your finger.": [
+                ""
+            ],
+            "Prefetch Above the Fold": [
+                ""
+            ],
+            "Prefetch Above the Fold: Loads links in your current view instantly, ensuring they're ready when you need them.": [
+                ""
+            ],
+            "Exclude Keywords: A comma separated list of words or strings that will exclude a link from being prefetched. For example, excluding \"app\" will prevent https:\/\/example.com\/apple from being prefetched.": [
+                ""
+            ],
+            "Exclude keywords": [
+                ""
+            ],
+            "Advanced settings": [
+                ""
+            ],
+            "Additional speed and scalability features powered by Jetpack Boost to make your site as fast as it can be.": [
+                ""
+            ],
+            "Optimize Critical CSS Loading (manual)": [
+                ""
+            ],
+            "Move important styling information to the start of the page, which helps pages display your content sooner, so your users don\u2019t have to wait for the entire page to load.": [
+                ""
+            ],
+            "Optimize Critical CSS Loading (UPGRADED)": [
+                ""
+            ],
+            "Generate Critical CSS Automatically": [
+                ""
+            ],
+            "Move important styling information to the start of the page, which helps pages display your content sooner, so your users don\u2019t have to wait for the entire page to load.%1$s %2$sBoost will automatically generate your Critical CSS%3$s whenever you make changes to the HTML or CSS structure of your site.": [
+                ""
+            ],
+            "Defer Non-Essential JavaScript": [
+                ""
+            ],
+            "Run non-essential JavaScript after the page has loaded so that styles and images can load more quickly.": [
+                ""
+            ],
+            "Concatenate JS": [
+                ""
+            ],
+            "Scripts are grouped by their original placement, concatenated and minified to reduce site loading time and reduce the number of requests.": [
+                ""
+            ],
+            "Exclude JS Strings": [
+                ""
+            ],
+            "Concatenate CSS": [
+                ""
+            ],
+            "Styles are grouped by their original placement, concatenated and minified to reduce site loading time and reduce the number of requests.": [
+                ""
+            ],
+            "Exclude CSS Strings": [
+                ""
+            ],
+            "Show more": [
+                ""
+            ],
+            "Show less": [
+                ""
+            ],
+            "Discover More": [
+                ""
+            ],
+            "Install Jetpack Boost to unlock": [
+                ""
+            ],
+            "Installing Jetpack Boost\u2026": [
+                ""
+            ],
+            "Jetpack Boost is now active": [
+                ""
+            ],
+            "Activation failed": [
+                ""
+            ],
+            "Discover more %1$shere%2$s": [
+                ""
+            ],
+            "Option saved correctly": [
+                ""
+            ],
+            "Error saving option": [
+                ""
+            ],
+            "Image Optimization": [
+                "Optimizaci\u00f3n de Im\u00e1genes"
+            ],
+            "We automatically optimize your uploaded images to WebP format for faster performance and reduced file sizes. You can also choose to delete the original images to save storage space.": [
+                "Optimizamos autom\u00e1ticamente tus im\u00e1genes cargadas al formato WebP para un mejor rendimiento y tama\u00f1os de archivo reducidos. Tambi\u00e9n puedes elegir eliminar las im\u00e1genes originales para ahorrar espacio de almacenamiento."
+            ],
+            "Enable Image Optimization": [
+                "Habilitar Optimizaci\u00f3n de Im\u00e1genes"
+            ],
+            "Enable or disable image optimization globally.": [
+                "Habilita o deshabilita la optimizaci\u00f3n de im\u00e1genes globalmente."
+            ],
+            "Automatically Optimize Uploaded Images": [
+                "Optimizar Im\u00e1genes Cargadas Autom\u00e1ticamente"
+            ],
+            "When enabled, all your new image uploads will be automatically optimized to WebP format, ensuring faster page loading and reduced file sizes.": [
+                "Cuando est\u00e1 habilitado, todas tus im\u00e1genes nuevas se optimizar\u00e1n autom\u00e1ticamente al formato WebP, asegurando una carga m\u00e1s r\u00e1pida de la p\u00e1gina y tama\u00f1os de archivo reducidos."
+            ],
+            "Auto Delete Original Image": [
+                "Eliminar Imagen Original Autom\u00e1ticamente"
+            ],
+            "When enabled, the original uploaded image is deleted and replaced with the optimized version, helping to save storage space. If disabled, the optimized image is saved as a separate file, retaining the original.": [
+                "Cuando est\u00e1 habilitado, la imagen original cargada se elimina y se reemplaza con la versi\u00f3n optimizada, ayudando a ahorrar espacio de almacenamiento. Si est\u00e1 deshabilitado, la imagen optimizada se guarda como un archivo separado, conservando la original."
+            ],
+            "No settings available.": [
+                "No hay configuraciones disponibles."
+            ],
+            "Loading settings\u2026": [
+                "Cargando configuraciones\u2026"
+            ],
+            "Settings updated successfully": [
+                "Configuraciones actualizadas con \u00e9xito"
+            ],
+            "Your image optimization settings have been saved.": [
+                "Tus configuraciones de optimizaci\u00f3n de im\u00e1genes se han guardado."
+            ],
+            "Enable Lazy Loading": [
+                "Habilitar Carga Diferida"
+            ],
+            "Lazy loading defers the loading of images until they are visible on the screen, improving page load speed and performance.": [
+                "La carga diferida retrasa la carga de im\u00e1genes hasta que sean visibles en la pantalla, mejorando la velocidad de carga de la p\u00e1gina y el rendimiento."
+            ],
+            "Lazy loading has been updated.": [
+                "La carga diferida ha sido actualizada."
+            ],
+            "Oops! There was an error updating the lazy loading settings.": [
+                "\u00a1Ups! Hubo un error al actualizar las configuraciones de carga diferida."
+            ],
+            "Enable Bulk Optimization of Images": [
+                "Habilitar Optimizaci\u00f3n Masiva de Im\u00e1genes"
+            ],
+            "When enabled, allows bulk optimization of images in the media library.": [
+                "Cuando est\u00e1 habilitado, permite la optimizaci\u00f3n masiva de im\u00e1genes en la biblioteca multimedia."
+            ],
+            "Go to Media Library": [
+                "Ir a la Biblioteca Multimedia"
+            ],
+            "Error Updating Settings": [
+                "Error al Actualizar Configuraciones"
+            ],
+            "Prefer Optimized Image When Exists": [
+                "Preferir Imagen Optimizada Cuando Existe"
+            ],
+            "When enabled, optimized images will be served in place of original images when they exist, improving performance.": [
+                "Cuando est\u00e1 habilitado, las im\u00e1genes optimizadas se mostrar\u00e1n en lugar de las originales cuando existan, mejorando el rendimiento."
+            ],
+            "Something went wrong while updating the settings. Please try again.": [
+                "Algo sali\u00f3 mal al actualizar las configuraciones. Por favor, int\u00e9ntalo de nuevo."
             ]
         }
     }
