@@ -357,6 +357,26 @@ const PerformancePage = () => {
 				'Something went wrong while updating the settings. Please try again.',
 				'wp-plugin-hostgator'
 			),
+			skip404Title: __( 'Skip 404', 'wp-plugin-hostgator' ),
+			skip404Description: __(
+				'When enabled, static resources like images and fonts will use a default server 404 page and not WordPress 404 pages. Pages and posts will continue using WordPress for 404 pages. This can considerably speed up your website if a static resource like an image or font is missing.',
+				'wp-plugin-hostgator'
+			),
+			skip404NoticeTitle: __( 'Skip 404 saved', 'wp-plugin-hostgator' ),
+			skip404Notice: __( 'Skip 404 saved', 'wp-plugin-hostgator' ),
+			cacheExclusionTitle: __(
+				'Exclude from cache',
+				'wp-plugin-hostgator'
+			),
+			cacheExclusionDescription: __(
+				'This setting controls what pages pass a “no-cache” header so that page caching and browser caching is not used.',
+				'wp-plugin-hostgator'
+			),
+			cacheExclusionSaved: __(
+				'Cache Exclusion saved',
+				'wp-plugin-hostgator'
+			),
+			cacheExclusionSaveButton: __( 'Save', 'wp-plugin-hostgator' ),
 		},
 	};
 

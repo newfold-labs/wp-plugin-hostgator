@@ -1279,3 +1279,31 @@ msgstr "Quando ativada, imagens otimizadas serão exibidas no lugar das imagens 
 #: build/2.12.6/index.js:6
 msgid "Something went wrong while updating the settings. Please try again."
 msgstr "Algo deu errado ao atualizar as configurações. Por favor, tente novamente."
+
+#: build/2.12.6/index.js:6
+msgid "Skip 404"
+msgstr "Ignorar 404"
+
+#: build/2.12.6/index.js:6
+msgid "When enabled, static resources like images and fonts will use a default server 404 page and not WordPress 404 pages. Pages and posts will continue using WordPress for 404 pages. This can considerably speed up your website if a static resource like an image or font is missing."
+msgstr "Quando ativado, recursos estáticos como imagens e fontes usarão uma página 404 padrão do servidor e não as páginas 404 do WordPress. Páginas e posts continuarão usando o WordPress para páginas 404. Isso pode acelerar consideravelmente seu site se um recurso estático, como uma imagem ou fonte, estiver ausente."
+
+#: build/2.12.6/index.js:6
+msgid "Skip 404 saved"
+msgstr "Ignorar 404 salvo"
+
+#: build/2.12.6/index.js:6
+msgid "Exclude from cache"
+msgstr "Excluir do cache"
+
+#: build/2.12.6/index.js:6
+msgid "This setting controls what pages pass a “no-cache” header so that page caching and browser caching is not used."
+msgstr "Esta configuração controla quais páginas recebem um cabeçalho “no-cache”, para que o cache de página e o cache do navegador não sejam usados."
+
+#: build/2.12.6/index.js:6
+msgid "Cache Exclusion saved"
+msgstr "Exclusão de cache salva"
+
+#: build/2.12.6/index.js:6
+msgid "Save"
+msgstr "Salvar"

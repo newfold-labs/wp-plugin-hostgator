@@ -906,6 +906,34 @@ msgid "Something went wrong while updating the settings. Please try again."
 msgstr ""
 
 #: build/2.12.6/index.js:6
+msgid "Skip 404"
+msgstr ""
+
+#: build/2.12.6/index.js:6
+msgid "When enabled, static resources like images and fonts will use a default server 404 page and not WordPress 404 pages. Pages and posts will continue using WordPress for 404 pages. This can considerably speed up your website if a static resource like an image or font is missing."
+msgstr ""
+
+#: build/2.12.6/index.js:6
+msgid "Skip 404 saved"
+msgstr ""
+
+#: build/2.12.6/index.js:6
+msgid "Exclude from cache"
+msgstr ""
+
+#: build/2.12.6/index.js:6
+msgid "This setting controls what pages pass a “no-cache” header so that page caching and browser caching is not used."
+msgstr ""
+
+#: build/2.12.6/index.js:6
+msgid "Cache Exclusion saved"
+msgstr ""
+
+#: build/2.12.6/index.js:6
+msgid "Save"
+msgstr ""
+
+#: build/2.12.6/index.js:6
 msgid "This is where you can manage cache settings for your website."
 msgstr ""
 

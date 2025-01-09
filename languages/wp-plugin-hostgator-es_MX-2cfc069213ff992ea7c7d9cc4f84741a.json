@@ -839,6 +839,27 @@
             ],
             "Something went wrong while updating the settings. Please try again.": [
                 "Algo sali\u00f3 mal al actualizar las configuraciones. Por favor, int\u00e9ntalo de nuevo."
+            ],
+            "Skip 404": [
+                "Omitir 404"
+            ],
+            "When enabled, static resources like images and fonts will use a default server 404 page and not WordPress 404 pages. Pages and posts will continue using WordPress for 404 pages. This can considerably speed up your website if a static resource like an image or font is missing.": [
+                "Cuando est\u00e1 habilitado, los recursos est\u00e1ticos como im\u00e1genes y fuentes usar\u00e1n una p\u00e1gina 404 predeterminada del servidor y no las p\u00e1ginas 404 de WordPress. Las p\u00e1ginas y publicaciones continuar\u00e1n usando WordPress para las p\u00e1ginas 404. Esto puede acelerar considerablemente tu sitio web si falta un recurso est\u00e1tico como una imagen o fuente."
+            ],
+            "Skip 404 saved": [
+                "Omitir 404 guardado"
+            ],
+            "Exclude from cache": [
+                "Excluir del cach\u00e9"
+            ],
+            "This setting controls what pages pass a \u201cno-cache\u201d header so that page caching and browser caching is not used.": [
+                "Esta configuraci\u00f3n controla qu\u00e9 p\u00e1ginas tienen un encabezado \u201cno-cache\u201d para que no se utilicen el cach\u00e9 de p\u00e1ginas ni el cach\u00e9 del navegador."
+            ],
+            "Cache Exclusion saved": [
+                "Exclusi\u00f3n de cach\u00e9 guardada"
+            ],
+            "Save": [
+                "Guardar"
             ]
         }
     }
