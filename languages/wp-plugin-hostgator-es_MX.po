@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hostgator-wordpress-plugin\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-plugin-hostgator\n"
+"POT-Creation-Date: 2023-01-11T20:21:44+00:00\n"
+"PO-Revision-Date: 2025-01-10 08:42+0000\n"
 "Last-Translator: \n"
 "Language-Team: Spanish, Mexico\n"
+"Language: es_MX\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-01-11T20:21:44+00:00\n"
-"PO-Revision-Date: 2024-12-16 16:14+0000\n"
-"Language: es_MX\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.2.2\n"
 "X-Domain: wp-plugin-hostgator\n"
@@ -36,9 +36,7 @@ msgid "WordPress plugin that integrates a WordPress site with the HostGator cont
 msgstr "Plugin WordPress que integra un sitio web a WordPress con el panel de control de HostGator, incluyendo características de rendimiento, seguridad y actualización."
 
 #. Author of the plugin
-#: wp-plugin-hostgator.php
-#: inc/Admin.php:226
-#: inc/Admin.php:227
+#: wp-plugin-hostgator.php inc/Admin.php:226 inc/Admin.php:227
 msgid "HostGator"
 msgstr "HostGator"
 
@@ -71,38 +69,30 @@ msgstr "Muy Pronto Activo"
 #. translators: %1$s is replaced with the opening link tag, %2$s is replaced with the closing link tag, %3$s is the opening link tag to preview the page, %4$s is the closing link tag.
 #: bootstrap.php:104
 msgid "Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s."
-msgstr "Tu sitio actualmente muestra una %1$próxima página%2$s. Una vez que esté listo, %3$inicie su sitio%4$s.�"
+msgstr "Tu sitio actualmente muestra una %1$spróxima página%2$s. Una vez que esté listo, inicie su sitio%4$s."
 
 #: bootstrap.php:105
 msgid "Preview the coming soon landing page"
 msgstr " Vista previa de la próxima página de inicio"
 
-#: inc/Admin.php:64
-#: inc/Admin.php:349
-#: build/2.12.6/index.js:1
+#: inc/Admin.php:64 inc/Admin.php:349 build/2.12.6/index.js:1
 msgid "Home"
 msgstr "Pagina principal"
 
-#: inc/Admin.php:73
-#: build/2.12.6/index.js:1
+#: inc/Admin.php:73 build/2.12.6/index.js:1
 msgid "Marketplace"
 msgstr " Marketplace"
 
-#: inc/Admin.php:78
-#: build/2.12.6/index.js:1
-#: build/2.12.6/index.js:6
+#: inc/Admin.php:78 build/2.12.6/index.js:1 build/2.12.6/index.js:6
 msgid "Performance"
 msgstr "Rendimiento"
 
-#: inc/Admin.php:82
-#: inc/Admin.php:350
-#: build/2.12.6/index.js:1
+#: inc/Admin.php:82 inc/Admin.php:350 build/2.12.6/index.js:1
 #: build/2.12.6/index.js:6
 msgid "Settings"
 msgstr "Configuraciones"
 
-#: inc/Admin.php:91
-#: build/2.12.6/index.js:1
+#: inc/Admin.php:91 build/2.12.6/index.js:1
 msgid "Help"
 msgstr "Ayuda"
 
@@ -156,15 +146,12 @@ msgstr "%1$s requiere la versión de WordPress %2$s o posterior. Actualmente est
 msgid "The \"%s\" plugin has been deactivated."
 msgstr "El plugin \"%s\" ha sido desactivado."
 
-#: inc/RestApi/CachingController.php:63
-#: inc/RestApi/SettingsController.php:204
+#: inc/RestApi/CachingController.php:63 inc/RestApi/SettingsController.php:204
 msgid "Sorry, you are not allowed to access this endpoint."
 msgstr "Lo sentimos, no tienes permiso para acceder a esta terminal."
 
 #. translators: %s Settings > General page URL.
-#: inc/updates.php:115
-#: inc/updates.php:143
-#: inc/updates.php:170
+#: inc/updates.php:115 inc/updates.php:143 inc/updates.php:170
 msgid "Auto-updates enabled on the <a href=\"%s\">HostGator > Settings</a> page."
 msgstr "Actualizaciones automáticas habilitadas en la página Configuración</a> de <a href=\"%s\">HostGator >."
 
@@ -504,14 +491,11 @@ msgstr "Opciones de Contenido"
 msgid "Controls for content revisions and how often to empty the trash."
 msgstr "Controles para revisiones de contenido y con qué frecuencia vaciar la papelera."
 
-#: inc/Admin.php:70
-#: build/2.12.6/index.js:1
+#: inc/Admin.php:70 build/2.12.6/index.js:1
 msgid "Store"
 msgstr "Tienda"
 
-#: inc/Admin.php:87
-#: build/2.12.6/index.js:1
-#: build/2.12.6/index.js:6
+#: inc/Admin.php:87 build/2.12.6/index.js:1 build/2.12.6/index.js:6
 msgid "Staging"
 msgstr "Entorno de prueba"
 
@@ -535,8 +519,7 @@ msgstr " ¿Cómo migrar un sitio web a Hostgator? "
 msgid "Why choose HostGator for your WordPress site?"
 msgstr " ¿Por qué elegir HostGator para tu sitio de WordPress?"
 
-#: inc/Admin.php:67
-#: build/2.12.6/index.js:1
+#: inc/Admin.php:67 build/2.12.6/index.js:1
 msgid "Pages & Posts"
 msgstr "Páginas y publicaciones "
 
