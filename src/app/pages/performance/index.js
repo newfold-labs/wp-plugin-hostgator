@@ -4,7 +4,7 @@ import { useState, useEffect, useContext, Fragment } from '@wordpress/element';
 import apiFetch from '@wordpress/api-fetch';
 import { __, sprintf } from '@wordpress/i18n';
 import { useUpdateEffect } from 'react-use';
-import { NewfoldRuntime } from '@newfold-labs/wp-module-runtime';
+import { NewfoldRuntime } from '@newfold/wp-module-runtime';
 import { useNotification } from 'App/components/notifications';
 import {
 	hostgatorSettingsApiFetch as newfoldSettingsApiFetch,
