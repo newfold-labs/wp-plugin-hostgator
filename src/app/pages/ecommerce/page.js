@@ -1,11 +1,11 @@
 import { Page } from '@newfold/ui-component-library';
-import { NewfoldECommerce } from '@newfold-labs/wp-module-ecommerce';
+import { NewfoldECommerce } from '@newfold/wp-module-ecommerce';
 import { useNavigate, useLocation, useSearchParams } from 'react-router-dom';
 import { useNotification } from 'App/components/notifications';
 import AppStore from '../../data/store';
 import { useContext } from '@wordpress/element';
 import { hostgatorSettingsApiFetch } from '../../util/helpers';
-import '@newfold-labs/wp-module-ecommerce/hostgator.css';
+import '@newfold/wp-module-ecommerce/hostgator.css';
 import { comingSoonAdminbarToggle } from '../../util/helpers';
 
 const EcomerceStore = () => {

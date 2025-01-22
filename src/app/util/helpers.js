@@ -1,7 +1,7 @@
 import { addQueryArgs } from '@wordpress/url';
 import { dispatch } from '@wordpress/data';
 import apiFetch from '@wordpress/api-fetch';
-import { NewfoldRuntime } from '@newfold-labs/wp-module-runtime';
+import { NewfoldRuntime } from '@newfold/wp-module-runtime';
 import region from '../data/region';
 
 let lastNoticeId;
