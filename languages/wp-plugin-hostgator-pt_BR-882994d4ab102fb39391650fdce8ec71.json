@@ -1,7 +1,7 @@
 {
     "translation-revision-date": "2024-12-16 16:11+0000",
     "generator": "WP-CLI\/2.11.0",
-    "source": "build\/2.13.0\/index.js",
+    "source": "build\/2.13.1\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
@@ -660,9 +660,6 @@
             "Behavior": [
                 "Comportamento"
             ],
-            "Prefetch on Mouse down": [
-                "Pr\u00e9-carregar ao pressionar o mouse"
-            ],
             "Prefetch on Mouse Down: Starts loading the page as soon as you click down, for faster response when you release the click.": [
                 "Pr\u00e9-carregar ao pressionar o mouse: come\u00e7a a carregar a p\u00e1gina assim que voc\u00ea pressiona o bot\u00e3o do mouse, para uma resposta mais r\u00e1pida ao soltar o clique"
             ],
@@ -672,17 +669,11 @@
             "Prefetch on Mouse Hover: Begins loading the page the moment your cursor hovers over a link": [
                 "Pr\u00e9-carregar ao passar o mouse: come\u00e7a a carregar a p\u00e1gina no momento em que o cursor passa sobre um link"
             ],
-            "Enable link prefetching on Mobile": [
-                "Ativar o pr\u00e9-carregamento de links no mobile"
-            ],
             "Activate on mobile": [
                 "Ativar no mobile"
             ],
             "Prefetch on Touchstart (Recommended)": [
                 "Pr\u00e9-carregar ao tocar (Recomendado)"
-            ],
-            "Prefetch on Touch Start: Instantly starts loading the page as soon as you tap the screen, ensuring a quicker response when you lift your finger.": [
-                "Pr\u00e9-carregar ao tocar na tela: come\u00e7a a carregar a p\u00e1gina instantaneamente assim que voc\u00ea toca na tela, garantindo uma resposta mais r\u00e1pida quando voc\u00ea levantar o dedo."
             ],
             "Prefetch Above the Fold": [
                 "Pr\u00e9-carregar acima da dobra"
@@ -839,6 +830,15 @@
             ],
             "Something went wrong while updating the settings. Please try again.": [
                 "Algo deu errado ao atualizar as configura\u00e7\u00f5es. Por favor, tente novamente."
+            ],
+            "Prefetch on Mouse Down": [
+                ""
+            ],
+            "Enable link prefetching on mobile": [
+                ""
+            ],
+            "Prefetch on Touchstart: Instantly starts loading the page as soon as you tap the screen, ensuring a quicker response when you lift your finger.": [
+                ""
             ]
         }
     }
