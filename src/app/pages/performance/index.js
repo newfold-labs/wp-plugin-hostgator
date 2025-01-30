@@ -118,7 +118,7 @@ const PerformancePage = () => {
 			),
 			linkPrefetchBehaviorLabel: __( 'Behavior', 'wp-plugin-hostgator' ),
 			linkPrefetchBehaviorMouseDownLabel: __(
-				'Prefetch on Mouse down',
+				'Prefetch on Mouse Down',
 				'wp-plugin-hostgator'
 			),
 			linkPrefetchBehaviorMouseDownDescription: __(
@@ -134,7 +134,7 @@ const PerformancePage = () => {
 				'wp-plugin-hostgator'
 			),
 			linkPrefetchActivateOnMobileDescription: __(
-				'Enable link prefetching on Mobile',
+				'Enable link prefetching on mobile',
 				'wp-plugin-hostgator'
 			),
 			linkPrefetchActivateOnMobileLabel: __(
@@ -146,7 +146,7 @@ const PerformancePage = () => {
 				'wp-plugin-hostgator'
 			),
 			linkPrefetchBehaviorMobileTouchstartDescription: __(
-				'Prefetch on Touch Start: Instantly starts loading the page as soon as you tap the screen, ensuring a quicker response when you lift your finger.',
+				'Prefetch on Touchstart: Instantly starts loading the page as soon as you tap the screen, ensuring a quicker response when you lift your finger.',
 				'wp-plugin-hostgator'
 			),
 			linkPrefetchBehaviorMobileViewportLabel: __(
