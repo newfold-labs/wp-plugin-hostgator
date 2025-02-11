@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "884e8273ddb6c7c2441da9aa52e5d24f",
+    "content-hash": "4d8d0c6c4e438ee61c21a748b1de7e98",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -1239,23 +1239,23 @@
         },
         {
             "name": "newfold-labs/wp-module-help-center",
-            "version": "2.2.3",
+            "version": "2.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-help-center.git",
-                "reference": "903de7fa7e652c98c22fc102f9265a70cd8113fa"
+                "reference": "17f91f96cfe863173811ff133fe70c5e7db162cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-help-center/zipball/903de7fa7e652c98c22fc102f9265a70cd8113fa",
-                "reference": "903de7fa7e652c98c22fc102f9265a70cd8113fa",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-help-center/zipball/17f91f96cfe863173811ff133fe70c5e7db162cd",
+                "reference": "17f91f96cfe863173811ff133fe70c5e7db162cd",
                 "shasum": ""
             },
             "require": {
-                "newfold-labs/wp-module-ai": "^1.1.9",
-                "newfold-labs/wp-module-data": "^2.5.0",
-                "newfold-labs/wp-module-features": "^1.4.1",
-                "typesense/typesense-php": "^2.0"
+                "newfold-labs/wp-module-ai": "^1.1.13",
+                "newfold-labs/wp-module-data": "^2.6.9",
+                "newfold-labs/wp-module-features": "^1.4.2",
+                "typesense/typesense-php": "^2.0.4"
             },
             "require-dev": {
                 "newfold-labs/wp-php-standards": "@stable"
@@ -1280,10 +1280,10 @@
             ],
             "description": "HelpCenter",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-help-center/tree/2.2.3",
+                "source": "https://github.com/newfold-labs/wp-module-help-center/tree/2.2.5",
                 "issues": "https://github.com/newfold-labs/wp-module-help-center/issues"
             },
-            "time": "2024-12-16T10:50:42+00:00"
+            "time": "2025-01-31T23:29:04+00:00"
         },
         {
             "name": "newfold-labs/wp-module-install-checker",
@@ -2334,12 +2334,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "2.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
