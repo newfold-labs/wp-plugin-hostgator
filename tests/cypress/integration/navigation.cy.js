@@ -23,77 +23,77 @@ describe('Navigation', { testIsolation: true }, () => {
 
 	it('Main nav links properly navigates', () => {
 		cy
-			.get( appClass + '-app-navitem-Marketplace').
+			.get( appClass + '-app-navitem-marketplace').
 			should('not.have.class', 'active');
-		cy.get( appClass + '-app-navitem-Marketplace').click();
+		cy.get( appClass + '-app-navitem-marketplace').click();
 		cy.wait(500);
 		cy.hash().should('eq', '#/marketplace');
 		cy
-			.get( appClass + '-app-navitem-Marketplace')
+			.get( appClass + '-app-navitem-marketplace')
 			.should('have.class', 'active');
 
-		cy.get( appClass + '-app-navitem-Performance').click();
+		cy.get( appClass + '-app-navitem-performance').click();
 		cy.wait(500);
 		cy.hash().should('eq', '#/performance');
 		cy
-			.get( appClass + '-app-navitem-Performance')
+			.get( appClass + '-app-navitem-performance')
 			.should('have.class', 'active');
 		cy
-			.get( appClass + '-app-navitem-Marketplace')
+			.get( appClass + '-app-navitem-marketplace')
 			.should('not.have.class', 'active');
 
-		cy.get( appClass + '-app-navitem-Settings').click();
+		cy.get( appClass + '-app-navitem-settings').click();
 		cy.wait(500);
 		cy.hash().should('eq', '#/settings');
 	});
 	
 	it('Subnav links properly navigates', () => {
 		cy
-			.get( appClass + '-app-navitem-Marketplace')
+			.get( appClass + '-app-navitem-marketplace')
 			.scrollIntoView()
 			.should('not.have.class', 'active');
-		cy.get( appClass + '-app-navitem-Marketplace').click();
+		cy.get( appClass + '-app-navitem-marketplace').click();
 
 		cy.wait(500);
 		cy.hash().should('eq', '#/marketplace');
 		cy
-			.get( appClass + '-app-navitem-Marketplace')
+			.get( appClass + '-app-navitem-marketplace')
 			.should('have.class', 'active');
 
-			cy.get( appClass + '-app-subnavitem-Services').click();
+			cy.get( appClass + '-app-subnavitem-services').click();
 			cy.wait(500);
 			cy.hash().should('eq', '#/marketplace/services');
 			cy
-				.get( appClass + '-app-subnavitem-Services')
+				.get( appClass + '-app-subnavitem-services')
 				.should('have.class', 'active');
 			cy
-				.get( appClass + '-app-navitem-Marketplace')
+				.get( appClass + '-app-navitem-marketplace')
 				.should('have.class', 'active');
 		
 
-		cy.get( appClass + '-app-subnavitem-SEO').click();
+		cy.get( appClass + '-app-subnavitem-seo').click();
 		cy.wait(500);
 		cy.hash().should('eq', '#/marketplace/seo');
 		cy
-			.get( appClass + '-app-subnavitem-SEO')
+			.get( appClass + '-app-subnavitem-seo')
 			.should('have.class', 'active');
 		cy
-			.get( appClass + '-app-subnavitem-Services')
+			.get( appClass + '-app-subnavitem-services')
 			.should('not.have.class', 'active');
 		cy
-			.get( appClass + '-app-navitem-Marketplace')
+			.get( appClass + '-app-navitem-marketplace')
 			.should('have.class', 'active');
 			
-		cy.get( appClass + '-app-navitem-Performance').click();
+		cy.get( appClass + '-app-navitem-performance').click();
 			cy.wait(500);
 		cy
-			.get( appClass + '-app-subnavitem-Services')
+			.get( appClass + '-app-subnavitem-services')
 			.should('not.have.class', 'active');
 		cy
-			.get( appClass + '-app-subnavitem-SEO')
+			.get( appClass + '-app-subnavitem-seo')
 			.should('not.have.class', 'active');
 		cy
-			.get( appClass + '-app-navitem-Marketplace')
+			.get( appClass + '-app-navitem-marketplace')
 			.should('not.have.class', 'active');
 	});
 
@@ -101,13 +101,13 @@ describe('Navigation', { testIsolation: true }, () => {
 		cy.viewport( 'iphone-x' );
 		cy.get( '#nfd-app-mobile-nav' ).should( 'be.visible' );
 
-		cy.get( appClass + '-app-navitem-Home' ).should( 'not.exist' );
+		cy.get( appClass + '-app-navitem-home' ).should( 'not.exist' );
 
 		cy.get( '#nfd-app-mobile-nav' ).click();
 		cy.wait( 500 );
-		cy.get( appClass + '-app-navitem-Home' ).should( 'be.visible' );
+		cy.get( appClass + '-app-navitem-home' ).should( 'be.visible' );
 		cy.get( 'button.nfd-modal__close-button' ).should( 'be.visible' );
 		cy.get( 'button.nfd-modal__close-button' ).click();
-		cy.get( appClass + '-app-navitem-Home' ).should( 'not.exist' );
+		cy.get( appClass + '-app-navitem-home' ).should( 'not.exist' );
 	});
 });
