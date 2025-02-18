@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "888489836fc9447e38e6f3399f722f0f",
+    "content-hash": "fd6912f9785495f4a7dafe29209fe514",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -623,16 +623,16 @@
         },
         {
             "name": "newfold-labs/wp-module-ai",
-            "version": "1.1.13",
+            "version": "1.1.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-ai.git",
-                "reference": "382a7efcb240c99cc19c0d9bf9054409b03013f7"
+                "reference": "b7cd30ce123c2809dc58fbaf2df683256f846b8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-ai/zipball/382a7efcb240c99cc19c0d9bf9054409b03013f7",
-                "reference": "382a7efcb240c99cc19c0d9bf9054409b03013f7",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-ai/zipball/b7cd30ce123c2809dc58fbaf2df683256f846b8e",
+                "reference": "b7cd30ce123c2809dc58fbaf2df683256f846b8e",
                 "shasum": ""
             },
             "require": {
@@ -662,10 +662,10 @@
             ],
             "description": "A module for providing artificial intelligence capabilities.",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-ai/tree/1.1.13",
+                "source": "https://github.com/newfold-labs/wp-module-ai/tree/1.1.14",
                 "issues": "https://github.com/newfold-labs/wp-module-ai/issues"
             },
-            "time": "2025-01-29T06:28:43+00:00"
+            "time": "2025-02-13T13:21:23+00:00"
         },
         {
             "name": "newfold-labs/wp-module-atomic",
@@ -1012,16 +1012,16 @@
         },
         {
             "name": "newfold-labs/wp-module-ecommerce",
-            "version": "1.5.2",
+            "version": "1.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-ecommerce.git",
-                "reference": "2f11f88201e3543154e494a47e954ee8b5b1f21c"
+                "reference": "fafa9c925600ddb56a1fd65cc0a8b7420613d069"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/2f11f88201e3543154e494a47e954ee8b5b1f21c",
-                "reference": "2f11f88201e3543154e494a47e954ee8b5b1f21c",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/fafa9c925600ddb56a1fd65cc0a8b7420613d069",
+                "reference": "fafa9c925600ddb56a1fd65cc0a8b7420613d069",
                 "shasum": ""
             },
             "require": {
@@ -1079,10 +1079,10 @@
             ],
             "description": "Brand Agnostic eCommerce Experience",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/1.5.2",
+                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/1.5.3",
                 "issues": "https://github.com/newfold-labs/wp-module-ecommerce/issues"
             },
-            "time": "2025-02-05T22:42:45+00:00"
+            "time": "2025-02-13T22:32:38+00:00"
         },
         {
             "name": "newfold-labs/wp-module-facebook",
