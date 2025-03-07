@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f7a13194ced6cca0d08df754d9bacd0f",
+    "content-hash": "fef88b232191661c982e4930b2c754da",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -1716,16 +1716,16 @@
         },
         {
             "name": "newfold-labs/wp-module-notifications",
-            "version": "1.6.7",
+            "version": "1.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-notifications.git",
-                "reference": "20e98d5489f1a340f1880f20a42c990d87f61d30"
+                "reference": "3f7253e6215caed62d92423cb702dc2b900cfe8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-notifications/zipball/20e98d5489f1a340f1880f20a42c990d87f61d30",
-                "reference": "20e98d5489f1a340f1880f20a42c990d87f61d30",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-notifications/zipball/3f7253e6215caed62d92423cb702dc2b900cfe8f",
+                "reference": "3f7253e6215caed62d92423cb702dc2b900cfe8f",
                 "shasum": ""
             },
             "require": {
@@ -1734,6 +1734,9 @@
                 "wp-forge/helpers": "^2.0",
                 "wpscholar/url": "^1.2"
             },
+            "require-dev": {
+                "newfold-labs/wp-php-standards": "^1.2"
+            },
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -1741,6 +1744,14 @@
                 },
                 "files": [
                     "bootstrap.php"
+                ]
+            },
+            "scripts": {
+                "fix": [
+                    "vendor/bin/phpcbf --standard=phpcs.xml ."
+                ],
+                "lint": [
+                    "vendor/bin/phpcs --standard=phpcs.xml -s ."
                 ]
             },
             "license": [
@@ -1754,10 +1765,10 @@
             ],
             "description": "A module for managing Newfold in-site notifications.",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-notifications/tree/1.6.7",
+                "source": "https://github.com/newfold-labs/wp-module-notifications/tree/1.6.8",
                 "issues": "https://github.com/newfold-labs/wp-module-notifications/issues"
             },
-            "time": "2025-02-13T22:31:01+00:00"
+            "time": "2025-02-25T21:08:22+00:00"
         },
         {
             "name": "newfold-labs/wp-module-onboarding",
