@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "69dfe1dbce470c7070703aa1f218b6e1",
+    "content-hash": "4843c1231b1d5aed632877002763917a",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -1668,16 +1668,16 @@
         },
         {
             "name": "newfold-labs/wp-module-migration",
-            "version": "v1.2.0",
+            "version": "v1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-migration.git",
-                "reference": "0fb8d9b4aa24a38d1a3f1dd466d1779802f97bb3"
+                "reference": "f033ebe57711ed6b2dc4b04d087a4b94f92e2758"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-migration/zipball/0fb8d9b4aa24a38d1a3f1dd466d1779802f97bb3",
-                "reference": "0fb8d9b4aa24a38d1a3f1dd466d1779802f97bb3",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-migration/zipball/f033ebe57711ed6b2dc4b04d087a4b94f92e2758",
+                "reference": "f033ebe57711ed6b2dc4b04d087a4b94f92e2758",
                 "shasum": ""
             },
             "require": {
@@ -1716,7 +1716,6 @@
                 "i18n": [
                     "@i18n-pot",
                     "@i18n-po",
-                    "@i18n-mo",
                     "@i18n-php",
                     "@i18n-json"
                 ],
@@ -1735,10 +1734,10 @@
             ],
             "description": "Initiates the migration process",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-migration/tree/v1.2.0",
+                "source": "https://github.com/newfold-labs/wp-module-migration/tree/v1.2.3",
                 "issues": "https://github.com/newfold-labs/wp-module-migration/issues"
             },
-            "time": "2025-03-04T10:40:52+00:00"
+            "time": "2025-03-11T07:55:14+00:00"
         },
         {
             "name": "newfold-labs/wp-module-notifications",
@@ -4518,13 +4517,13 @@
         }
     ],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
+    "platform": [],
+    "platform-dev": [],
     "platform-overrides": {
         "php": "7.3.0"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
