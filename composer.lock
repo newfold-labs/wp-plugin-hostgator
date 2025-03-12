@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "01d74b5e03cc4d6d5035b0c4f1c623ff",
+    "content-hash": "69dfe1dbce470c7070703aa1f218b6e1",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -1069,16 +1069,16 @@
         },
         {
             "name": "newfold-labs/wp-module-ecommerce",
-            "version": "1.6.0",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-ecommerce.git",
-                "reference": "e620ba78d28b99193a09d171ded6dc9144a55036"
+                "reference": "322bdb60164cb0066e0488a6829d6bdf68f2b6a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/e620ba78d28b99193a09d171ded6dc9144a55036",
-                "reference": "e620ba78d28b99193a09d171ded6dc9144a55036",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/322bdb60164cb0066e0488a6829d6bdf68f2b6a4",
+                "reference": "322bdb60164cb0066e0488a6829d6bdf68f2b6a4",
                 "shasum": ""
             },
             "require": {
@@ -1122,7 +1122,6 @@
                     "@i18n-pot",
                     "@i18n-po",
                     "@i18n-php",
-                    "@i18n-mo",
                     "@i18n-json"
                 ],
                 "lint": [
@@ -1140,10 +1139,10 @@
             ],
             "description": "Brand Agnostic eCommerce Experience",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/1.6.0",
+                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/1.6.1",
                 "issues": "https://github.com/newfold-labs/wp-module-ecommerce/issues"
             },
-            "time": "2025-03-04T14:36:48+00:00"
+            "time": "2025-03-10T21:45:37+00:00"
         },
         {
             "name": "newfold-labs/wp-module-facebook",
