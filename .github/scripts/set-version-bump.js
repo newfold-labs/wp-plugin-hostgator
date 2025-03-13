@@ -11,7 +11,7 @@ const semver = require( 'semver' );
 const packagefile = path.resolve( __dirname, '../../package.json' );
 const pluginfile = path.resolve(
 	__dirname,
-	'../../bluehost-wordpress-plugin.php'
+	'../../wp-plugin-hostgator.php'
 );
 
 if ( fs.existsSync( packagefile ) && fs.existsSync( pluginfile ) ) {

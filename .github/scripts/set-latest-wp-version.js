@@ -7,7 +7,7 @@ const path = require( 'path' );
 const wpEnvFile = path.resolve( __dirname, '../../.wp-env.json' );
 const pluginFile = path.resolve(
 	__dirname,
-	'../../bluehost-wordpress-plugin.php'
+	'../../wp-plugin-hostgator.php'
 );
 const wpEnv = require( '../../.wp-env.json' );
 async function fetchData( url ) {
