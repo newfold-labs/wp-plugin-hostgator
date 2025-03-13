@@ -37,8 +37,8 @@ msgstr "Plugin WordPress que integra un sitio web a WordPress con el panel de co
 
 #. Author of the plugin
 #: wp-plugin-hostgator.php
-#: inc/Admin.php:226
 #: inc/Admin.php:227
+#: inc/Admin.php:228
 msgid "HostGator"
 msgstr "HostGator"
 
@@ -77,46 +77,46 @@ msgstr "Tu sitio actualmente muestra una %1$spróxima página%2$s. Una vez que e
 msgid "Preview the coming soon landing page"
 msgstr " Vista previa de la próxima página de inicio"
 
-#: inc/Admin.php:64
-#: inc/Admin.php:349
+#: inc/Admin.php:65
+#: inc/Admin.php:381
 #: build/2.13.3/index.js:1
 msgid "Home"
 msgstr "Pagina principal"
 
-#: inc/Admin.php:73
+#: inc/Admin.php:74
 #: build/2.13.3/index.js:1
 msgid "Marketplace"
 msgstr " Marketplace"
 
-#: inc/Admin.php:78
+#: inc/Admin.php:79
 #: build/2.13.3/index.js:1
 msgid "Performance"
 msgstr "Rendimiento"
 
-#: inc/Admin.php:82
-#: inc/Admin.php:350
+#: inc/Admin.php:83
+#: inc/Admin.php:382
 #: build/2.13.3/index.js:1
 msgid "Settings"
 msgstr "Configuraciones"
 
-#: inc/Admin.php:91
+#: inc/Admin.php:92
 #: build/2.13.3/index.js:1
 msgid "Help"
 msgstr "Ayuda"
 
-#: inc/Admin.php:269
+#: inc/Admin.php:270
 msgid "Please update to a newer WordPress version."
 msgstr "Por favor actualiza a una versión más nueva de WordPress."
 
-#: inc/Admin.php:270
+#: inc/Admin.php:271
 msgid "There are new WordPress components which this plugin requires in order to render the interface."
 msgstr "Hay nuevos componentes de WordPress que este plugin requiere para renderizar la interfaz."
 
-#: inc/Admin.php:271
+#: inc/Admin.php:272
 msgid "Please update now"
 msgstr "Por favor actualiza ahora"
 
-#: inc/Admin.php:363
+#: inc/Admin.php:395
 msgid "Thank you for creating with <a href=\"https://wordpress.org/\">WordPress</a> and <a href=\"https://hostgator.com/about\">HostGator</a>."
 msgstr "Gracias por crear con <a href=\"https://es-mx.wordpress.org/\">WordPress</a> y <a href=\"https://hostgator.mx/\">HostGator</a>."
 
@@ -434,12 +434,12 @@ msgstr "Opciones de Contenido"
 msgid "Controls for content revisions and how often to empty the trash."
 msgstr "Controles para revisiones de contenido y con qué frecuencia vaciar la papelera."
 
-#: inc/Admin.php:70
+#: inc/Admin.php:71
 #: build/2.13.3/index.js:1
 msgid "Store"
 msgstr "Tienda"
 
-#: inc/Admin.php:87
+#: inc/Admin.php:88
 #: build/2.13.3/index.js:1
 msgid "Staging"
 msgstr "Entorno de prueba"
@@ -456,7 +456,7 @@ msgstr " ¿Cómo migrar un sitio web a Hostgator? "
 msgid "Why choose HostGator for your WordPress site?"
 msgstr " ¿Por qué elegir HostGator para tu sitio de WordPress?"
 
-#: inc/Admin.php:67
+#: inc/Admin.php:68
 #: build/2.13.3/index.js:1
 msgid "Pages & Posts"
 msgstr "Páginas y publicaciones "

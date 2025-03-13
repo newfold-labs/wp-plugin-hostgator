@@ -37,8 +37,8 @@ msgstr "Plugin WordPress que integra um site WordPress com o painel de controle 
 
 #. Author of the plugin
 #: wp-plugin-hostgator.php
-#: inc/Admin.php:226
 #: inc/Admin.php:227
+#: inc/Admin.php:228
 msgid "HostGator"
 msgstr "HostGator"
 
@@ -77,56 +77,56 @@ msgstr "Seu site está exibindo uma %1$spágina em breve%2$s. Assim que estiver 
 msgid "Preview the coming soon landing page"
 msgstr "Visualize a página de destino em breve"
 
-#: inc/Admin.php:64
-#: inc/Admin.php:349
+#: inc/Admin.php:65
+#: inc/Admin.php:381
 #: build/2.13.3/index.js:1
 msgid "Home"
 msgstr "Início"
 
-#: inc/Admin.php:70
+#: inc/Admin.php:71
 #: build/2.13.3/index.js:1
 msgid "Store"
 msgstr "Loja"
 
-#: inc/Admin.php:73
+#: inc/Admin.php:74
 #: build/2.13.3/index.js:1
 msgid "Marketplace"
 msgstr "Mercado"
 
-#: inc/Admin.php:78
+#: inc/Admin.php:79
 #: build/2.13.3/index.js:1
 msgid "Performance"
 msgstr "Desempenho"
 
-#: inc/Admin.php:82
-#: inc/Admin.php:350
+#: inc/Admin.php:83
+#: inc/Admin.php:382
 #: build/2.13.3/index.js:1
 msgid "Settings"
 msgstr "Configurações"
 
-#: inc/Admin.php:87
+#: inc/Admin.php:88
 #: build/2.13.3/index.js:1
 msgid "Staging"
 msgstr "Encenação"
 
-#: inc/Admin.php:91
+#: inc/Admin.php:92
 #: build/2.13.3/index.js:1
 msgid "Help"
 msgstr "Ajuda"
 
-#: inc/Admin.php:269
+#: inc/Admin.php:270
 msgid "Please update to a newer WordPress version."
 msgstr "Por favor, atualize para uma versão mais recente do WordPress."
 
-#: inc/Admin.php:270
+#: inc/Admin.php:271
 msgid "There are new WordPress components which this plugin requires in order to render the interface."
 msgstr "Existem novos componentes do WordPress que este plugin precisa para renderizar a interface."
 
-#: inc/Admin.php:271
+#: inc/Admin.php:272
 msgid "Please update now"
 msgstr "Por favor, atualize agora"
 
-#: inc/Admin.php:363
+#: inc/Admin.php:395
 msgid "Thank you for creating with <a href=\"https://wordpress.org/\">WordPress</a> and <a href=\"https://hostgator.com/about\">HostGator</a>."
 msgstr "Obrigado por criar com <a href=\"https://wordpress.org/\">WordPress</a> e <a href=\"https://hostgator.com.br/\">HostGator</a>."
 
@@ -472,7 +472,7 @@ msgstr "Como migrar um site para Hostgator?"
 msgid "Why choose HostGator for your WordPress site?"
 msgstr "Por que escolher HostGator para seu site WordPress?"
 
-#: inc/Admin.php:67
+#: inc/Admin.php:68
 #: build/2.13.3/index.js:1
 msgid "Pages & Posts"
 msgstr "Páginas e Postagens"
