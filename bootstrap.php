@@ -169,6 +169,9 @@ require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/SettingsController.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/rest-api.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/settings.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/updates.php';
+require_once HOSTGATOR_PLUGIN_DIR . '/inc/Filters.php';
+
+Filters::init();
 
 /* WordPress Admin Page & Features */
 if ( is_admin() ) {
