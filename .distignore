@@ -9,7 +9,6 @@ node_modules
 # Files
 /.*
 cypress.config.js
-set-latest-wp-version.js
 webpack.config.js
 
 # File Types
