@@ -34,6 +34,7 @@ final class Admin {
 		/* Filter plugin locale */
 		\add_filter( 'plugin_locale', array( __CLASS__, 'locale_filter' ) );
 		\add_filter( 'load_script_translation_file', array( __CLASS__, 'load_script_locale_filter' ), 10, 3 );
+		\add_action( 'update_option_WPLANG', array( __CLASS__, 'clear_transient_on_language_change' ), 10, 2 );
 
 		if ( isset( $_GET['page'] ) && strpos( filter_input( INPUT_GET, 'page', FILTER_UNSAFE_RAW ), 'hostgator' ) >= 0 ) { // phpcs:ignore
 			\add_action( 'admin_footer_text', array( __CLASS__, 'add_brand_to_admin_footer' ) );
@@ -315,6 +316,18 @@ final class Admin {
 			\wp_enqueue_script( 'hostgator-script' );
 			\wp_enqueue_style( 'hostgator-style' );
 		}
+
+		// These assets are loaded in all wp-admin
+		\wp_register_script( 'newfold-plugin', false, array(), HOSTGATOR_PLUGIN_VERSION, true );
+		\wp_localize_script(
+			'newfold-plugin',
+			'nfdplugin',
+			array(
+				'restApiUrl'   => \esc_url_raw( \get_home_url() . '/index.php?rest_route=' ),
+				'restApiNonce' => \wp_create_nonce( 'wp_rest' ),
+			)
+		);
+		\wp_enqueue_script( 'newfold-plugin' );
 	}
 
 	/**
@@ -335,6 +348,25 @@ final class Admin {
 			'wp-plugin-hostgator',
 			HOSTGATOR_PLUGIN_DIR . '/languages'
 		);
+	}
+
+	/**
+	 * Clears a specific transient when the WordPress admin language setting is changed.
+	 *
+	 * This function hooks into the `update_option_WPLANG` action to detect when
+	 * the site language is updated in the WordPress settings. If a change is detected,
+	 * it deletes the specified transient to ensure fresh data is retrieved.
+	 *
+	 * @param string $old_value The previous language setting (e.g., 'en_US').
+	 * @param string $new_value The new language setting (e.g., 'fr_FR').
+	 */
+	public static function clear_transient_on_language_change( $old_value, $new_value ) {
+		// Check if the language has actually changed
+		if ( $old_value !== $new_value ) {
+			// Delete the transients to refresh cached data
+			delete_transient( 'newfold_marketplace' );
+			delete_transient( 'newfold_notifications' );
+		}
 	}
 
 	/**
