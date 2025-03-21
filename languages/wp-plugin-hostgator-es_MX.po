@@ -154,8 +154,7 @@ msgstr "%1$s requiere la versión de WordPress %2$s o posterior. Actualmente est
 msgid "The \"%s\" plugin has been deactivated."
 msgstr "El plugin \"%s\" ha sido desactivado."
 
-#: inc/RestApi/CachingController.php:63
-#: inc/RestApi/SettingsController.php:204
+#: inc/RestApi/SettingsController.php:200
 msgid "Sorry, you are not allowed to access this endpoint."
 msgstr "Lo sentimos, no tienes permiso para acceder a esta terminal."
 
