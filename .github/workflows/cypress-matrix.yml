@@ -35,10 +35,10 @@ jobs:
     steps:
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+        uses: shivammathur/setup-php@9e72090525849c5e82e596468b86eb55e9cc5401 # v2.32.0
         with:
           php-version: '8.1'
           coverage: none
@@ -55,7 +55,7 @@ jobs:
           echo "PACKAGE=${REPO##*/}" >> $GITHUB_OUTPUT
 
       - name: Use Node.js 20.x
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e # v4.3.0
         with:
           node-version: 20.x
           cache: 'npm'
@@ -65,7 +65,7 @@ jobs:
         run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
 
       - name: Cache Composer vendor directory
-        uses: actions/cache@v4
+        uses: actions/cache@d4323d4df104b026a6aa633fdb11d772146be0bf # v4.2.2
         with:
           path: ${{ steps.composer-cache.outputs.dir }}
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
@@ -110,7 +110,7 @@ jobs:
           echo '{"wpVersion": "${{ matrix.wpVersion }}","phpVersion": "${{ matrix.phpVersion }}"}' > cypress.env.json
 
       - name: Install WordPress
-        uses: nick-fields/retry@v3
+        uses: nick-fields/retry@ce71cc2ab81d554ebbe88c79ab5975992d79ba08 # v3.0.2
         with:
           timeout_minutes: 4
           max_attempts: 3
@@ -126,7 +126,7 @@ jobs:
 
       - name: Store screenshots of test failures
         if: ${{ failure() }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@4cec3d8aa04e39d1a68397de0c4cd6fb9dce8ec1 # v4.6.1
         with:
           name: screenshots
           path: ./tests/cypress/screenshots
