@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ff66d79eb295bbeb77b55669ea5d9d4c",
+    "content-hash": "341f5ade857489d49a41ce464c0c626a",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -1466,16 +1466,16 @@
         },
         {
             "name": "newfold-labs/wp-module-installer",
-            "version": "1.4.1",
+            "version": "1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-installer.git",
-                "reference": "397ee9fb8ab29dfde639ceaa89cc29a50b90a713"
+                "reference": "b2bc2da7271e098e4c45fd5c3f10fabf90dc1293"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-installer/zipball/397ee9fb8ab29dfde639ceaa89cc29a50b90a713",
-                "reference": "397ee9fb8ab29dfde639ceaa89cc29a50b90a713",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-installer/zipball/b2bc2da7271e098e4c45fd5c3f10fabf90dc1293",
+                "reference": "b2bc2da7271e098e4c45fd5c3f10fabf90dc1293",
                 "shasum": ""
             },
             "require": {
@@ -1535,10 +1535,10 @@
             ],
             "description": "An installer for WordPress plugins and themes.",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-installer/tree/1.4.1",
+                "source": "https://github.com/newfold-labs/wp-module-installer/tree/1.4.3",
                 "issues": "https://github.com/newfold-labs/wp-module-installer/issues"
             },
-            "time": "2025-03-03T15:46:27+00:00"
+            "time": "2025-03-28T11:29:08+00:00"
         },
         {
             "name": "newfold-labs/wp-module-loader",
@@ -2038,16 +2038,16 @@
         },
         {
             "name": "newfold-labs/wp-module-performance",
-            "version": "2.7.5",
+            "version": "2.7.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-performance.git",
-                "reference": "c380d8f7bd1e9238b6113ab01009655c15573c36"
+                "reference": "25cd0d80422b1fb55f9de80ab052057e4f6a5785"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-performance/zipball/c380d8f7bd1e9238b6113ab01009655c15573c36",
-                "reference": "c380d8f7bd1e9238b6113ab01009655c15573c36",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-performance/zipball/25cd0d80422b1fb55f9de80ab052057e4f6a5785",
+                "reference": "25cd0d80422b1fb55f9de80ab052057e4f6a5785",
                 "shasum": ""
             },
             "require": {
@@ -2059,8 +2059,8 @@
                 "wpscholar/url": "^1.2.5"
             },
             "require-dev": {
-                "10up/wp_mock": "^1.0",
-                "newfold-labs/wp-php-standards": "^1.2.4",
+                "10up/wp_mock": "^1.1",
+                "newfold-labs/wp-php-standards": "^1.2.5",
                 "wp-cli/i18n-command": "^2.6",
                 "wp-cli/wp-cli-bundle": "^2.11"
             },
@@ -2119,10 +2119,10 @@
             ],
             "description": "A module for managing caching functionality.",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-performance/tree/2.7.5",
+                "source": "https://github.com/newfold-labs/wp-module-performance/tree/2.7.9",
                 "issues": "https://github.com/newfold-labs/wp-module-performance/issues"
             },
-            "time": "2025-03-14T07:26:58+00:00"
+            "time": "2025-03-27T22:26:06+00:00"
         },
         {
             "name": "newfold-labs/wp-module-pls",
@@ -4567,13 +4567,13 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
+    "platform": [],
+    "platform-dev": [],
     "platform-overrides": {
         "php": "7.3.0"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
