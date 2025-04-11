@@ -176,8 +176,7 @@ msgstr ""
 msgid "The \"%s\" plugin has been deactivated."
 msgstr ""
 
-#: inc/RestApi/CachingController.php:63
-#: inc/RestApi/SettingsController.php:204
+#: inc/RestApi/SettingsController.php:200
 msgid "Sorry, you are not allowed to access this endpoint."
 msgstr ""
 
