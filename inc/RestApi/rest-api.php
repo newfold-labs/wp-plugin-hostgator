@@ -13,7 +13,6 @@ namespace HostGator;
 function init_rest_api() {
 
 	$controllers = array(
-		'HostGator\\RestApi\\CachingController',
 		'HostGator\\RestApi\\SettingsController',
 	);
 
