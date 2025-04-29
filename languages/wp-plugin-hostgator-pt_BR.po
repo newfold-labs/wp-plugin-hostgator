@@ -46,34 +46,34 @@ msgstr "HostGator"
 msgid "Please install the HostGator Plugin dependencies."
 msgstr "Por favor instale as dependências do Plugin HostGator."
 
-#: bootstrap.php:74
+#: bootstrap.php:77
 msgid "A New WordPress Site"
 msgstr "Um Novo Site WordPress"
 
-#: bootstrap.php:75
+#: bootstrap.php:78
 msgid "Coming Soon!"
 msgstr "Em Breve!"
 
 #. translators: %1$s is replaced with opening link tag taking you to hostgator.com/wordpress, %2$s is replaced with closing link tag, %3$s is replaced with opening link tag taking you to login page, %4$s is replaced with closing link tag, %5$s is replaced with opening link tag taking you to portal.hostgator.com, %6$s is replaced with closing link tag.
-#: bootstrap.php:88
+#: bootstrap.php:91
 msgid "A %1$sHostGator%2$s powered website. Is this your website? Log in to %3$sWordPress%4$s or %5$sHostgator%6$s."
 msgstr "Um site alimentado por %1$sHostGator%2$s. Este é o seu site? Inicie sessão em %3$sWordPress%4$s ou %5$sHostgator%6$s."
 
 #. translators: %s is Blog name
-#: bootstrap.php:98
+#: bootstrap.php:101
 msgid "%s &mdash; Coming Soon"
 msgstr "%s &mdash; Em Breve"
 
-#: bootstrap.php:101
+#: bootstrap.php:104
 msgid "Coming Soon Active"
 msgstr "Ativo Em Breve"
 
 #. translators: %1$s is replaced with the opening link tag, %2$s is replaced with the closing link tag, %3$s is the opening link tag to preview the page, %4$s is the closing link tag.
-#: bootstrap.php:104
+#: bootstrap.php:107
 msgid "Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s."
 msgstr "Seu site está exibindo uma %1$spágina em breve%2$s. Assim que estiver pronto, %3$slance seu site%4$s."
 
-#: bootstrap.php:105
+#: bootstrap.php:108
 msgid "Preview the coming soon landing page"
 msgstr "Visualize a página de destino em breve"
 
@@ -460,15 +460,15 @@ msgstr "Opções de Conteúdo"
 msgid "Controls for content revisions and how often to empty the trash."
 msgstr "Controles para revisões de conteúdo e com que frequência esvaziar a lixeira."
 
-#: bootstrap.php:78
+#: bootstrap.php:81
 msgid "How to build your WordPress Website"
 msgstr "Como construir seu site WordPress"
 
-#: bootstrap.php:81
+#: bootstrap.php:84
 msgid "How to Migrate a Website to Hostgator?"
 msgstr "Como migrar um site para Hostgator?"
 
-#: bootstrap.php:84
+#: bootstrap.php:87
 msgid "Why choose HostGator for your WordPress site?"
 msgstr "Por que escolher HostGator para seu site WordPress?"
 

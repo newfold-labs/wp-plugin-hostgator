@@ -41,46 +41,46 @@ msgstr ""
 msgid "Please install the HostGator Plugin dependencies."
 msgstr ""
 
-#: bootstrap.php:74
+#: bootstrap.php:77
 msgid "A New WordPress Site"
 msgstr ""
 
-#: bootstrap.php:75
+#: bootstrap.php:78
 msgid "Coming Soon!"
 msgstr ""
 
-#: bootstrap.php:78
+#: bootstrap.php:81
 msgid "How to build your WordPress Website"
 msgstr ""
 
-#: bootstrap.php:81
+#: bootstrap.php:84
 msgid "How to Migrate a Website to Hostgator?"
 msgstr ""
 
-#: bootstrap.php:84
+#: bootstrap.php:87
 msgid "Why choose HostGator for your WordPress site?"
 msgstr ""
 
 #. translators: %1$s is replaced with opening link tag taking you to hostgator.com/wordpress, %2$s is replaced with closing link tag, %3$s is replaced with opening link tag taking you to login page, %4$s is replaced with closing link tag, %5$s is replaced with opening link tag taking you to portal.hostgator.com, %6$s is replaced with closing link tag.
-#: bootstrap.php:88
+#: bootstrap.php:91
 msgid "A %1$sHostGator%2$s powered website. Is this your website? Log in to %3$sWordPress%4$s or %5$sHostgator%6$s."
 msgstr ""
 
 #. translators: %s is Blog name
-#: bootstrap.php:98
+#: bootstrap.php:101
 msgid "%s &mdash; Coming Soon"
 msgstr ""
 
-#: bootstrap.php:101
+#: bootstrap.php:104
 msgid "Coming Soon Active"
 msgstr ""
 
 #. translators: %1$s is replaced with the opening link tag, %2$s is replaced with the closing link tag, %3$s is the opening link tag to preview the page, %4$s is the closing link tag.
-#: bootstrap.php:104
+#: bootstrap.php:107
 msgid "Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s."
 msgstr ""
 
-#: bootstrap.php:105
+#: bootstrap.php:108
 msgid "Preview the coming soon landing page"
 msgstr ""
 
