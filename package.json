@@ -23,7 +23,7 @@
         "@reduxjs/toolkit": "^2.6.1",
         "@wordpress/compose": "^7.20.0",
         "@wordpress/dom-ready": "^4.20.0",
-        "@wordpress/element": "^6.19.0",
+        "@wordpress/element": "^6.21.0",
         "@wordpress/i18n": "^5.20.0",
         "@wordpress/icons": "^10.20.0",
         "classnames": "^2.5.1",
@@ -32,7 +32,7 @@
         "lodash": "^4.17.21",
         "react": "^18.2.0",
         "react-error-boundary": "^5.0.0",
-        "react-router-dom": "^7.3.0",
+        "react-router-dom": "^7.4.1",
         "react-use": "^17.6.0"
     },
     "devDependencies": {
@@ -41,7 +41,7 @@
         "@testing-library/cypress": "^10.0.3",
         "@wordpress/env": "^10.20.0",
         "@wordpress/scripts": "^27",
-        "cypress": "^14.2.0",
+        "cypress": "^14.2.1",
         "cypress-axe": "1.6.0",
         "node-fetch": "^3.3.2",
         "node-wp-i18n": "^1.2.7",
