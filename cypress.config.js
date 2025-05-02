@@ -100,6 +100,7 @@ module.exports = defineConfig({
 		excludeSpecPattern: [
 			'vendor/newfold-labs/**/tests/cypress/integration/wp-module-support/*.cy.js', // skip any module's wp-module-support files
 			'vendor/newfold-labs/wp-module-onboarding/tests/cypress/integration/5-AI-SiteGen-onboarding-flow/*.cy.js', // skip onboarding sitegen tests for now
+			'vendor/newfold-labs/wp-module-ecommerce/tests/cypress/integration/Home/ecommerce-live.cy.js', // skip outdated ecom test - it is removed from ecom in 1.7.3
 		],
 		experimentalRunAllSpecs: true,
 	},
