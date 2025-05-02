@@ -1,9 +1,10 @@
 {
-  "core": "WordPress/WordPress#tags/6.8",
+  "core": "WordPress/WordPress#tags/6.8.1",
   "config": {
     "WP_DEBUG": true,
     "WP_DEBUG_LOG": true,
     "WP_DEBUG_DISPLAY": false,
+    "WP_ENVIRONMENT_TYPE": "local",
     "FS_METHOD": "direct"
   },
   "phpVersion": "8.1",
