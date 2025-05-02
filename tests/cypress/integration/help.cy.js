@@ -43,7 +43,7 @@ describe('Help Page', { testIsolation: true }, () => {
 	
 	it('Is Accessible', () => {
 		cy.injectAxe();
-		cy.wait(500);
+		cy.get( '.hgwp-app-help-page', { timeout: 2000 } ).should( 'exist' );
 		cy.a11y('.hgwp-app-body');
 	});
 
