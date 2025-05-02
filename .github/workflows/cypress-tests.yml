@@ -121,7 +121,7 @@ jobs:
 
       - name: Run Cypress Cloud Tests
         if: ${{ github.repository == 'newfold-labs/wp-plugin-hostgator' && github.actor != 'dependabot[bot]' }}
-        run: npm run test:e2e -- --browser chrome --record --key ${{ secrets.CYPRESS_RECORD_KEY }} --tag hostgator
+        run: npm run test:e2e -- --browser chrome --record --parallel --key ${{ secrets.CYPRESS_RECORD_KEY }} --tag hostgator
 
       - name: Store screenshots of test failures
         if: ${{ failure() }}
