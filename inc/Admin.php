@@ -255,13 +255,17 @@ final class Admin {
 	 */
 	public static function render() {
 		global $wp_version;
+		if ( ! function_exists( 'get_plugin_data' ) ) {
+			require_once ABSPATH . 'wp-admin/includes/plugin.php';
+		}
+		$plugin_data = get_plugin_data( HOSTGATOR_PLUGIN_FILE );
 
 		echo '<!-- HostGator -->' . PHP_EOL;
 
-		if ( version_compare( $wp_version, '5.4', '>=' ) ) {
+		if ( version_compare( $wp_version, $plugin_data['RequiresWP'], '>=' ) ) {
 			echo '<div id="hwa-app" class="hgwpp hgwpp_app"></div>' . PHP_EOL;
 		} else {
-			// fallback messaging for WordPress older than 5.4
+			// fallback messaging for outdated WordPress
 			echo '<div id="hwa-app" class="hgwpp hgwpp_app">' . PHP_EOL;
 			echo '<header class="hgwp-header" style="min-height: 90px; padding: 1rem; margin-bottom: 1.5rem;"><div class="hgwp-header-inner"><div class="hgwp-logo-wrap">' . PHP_EOL;
 			echo '<img src="' . esc_url( HOSTGATOR_PLUGIN_URL . 'assets/svg/nav-for-light.svg' ) . '" alt="HostGator logo" />' . PHP_EOL;
