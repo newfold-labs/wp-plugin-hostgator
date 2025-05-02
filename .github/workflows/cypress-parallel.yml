@@ -1,5 +1,4 @@
-name: Cypress Tests
-
+name: Parallel Cypress Tests
 on:
   push:
     branches:
@@ -23,8 +22,18 @@ concurrency:
 
 jobs:
   test:
-    name: Run Cypress Tests
-    runs-on: ubuntu-latest
+    name: Run Cypress Tests in Parallel
+    runs-on: ubuntu-24.04
+    strategy:
+      # when one test fails, DO NOT cancel the other
+      # containers, because this will kill Cypress processes
+      # leaving Cypress Cloud hanging ...
+      # https://github.com/cypress-io/github-action/issues/48
+      fail-fast: false
+      matrix:
+        # run 3 copies of the current job in parallel
+        containers: [1, 2, 3]
+
     steps:
 
       - name: Checkout
@@ -115,13 +124,18 @@ jobs:
           max_attempts: 3
           command: npx wp-env start --debug
 
-      - name: Run Cypress Tests
-        if: ${{ github.repository != 'newfold-labs/wp-plugin-hostgator' || github.actor == 'dependabot[bot]' }}
-        run: npm run test:e2e -- --browser chrome
-
-      - name: Run Cypress Cloud Tests
-        if: ${{ github.repository == 'newfold-labs/wp-plugin-hostgator' && github.actor != 'dependabot[bot]' }}
-        run: npm run test:e2e -- --browser chrome --record --key ${{ secrets.CYPRESS_RECORD_KEY }} --tag hostgator
+      - name: Cypress
+        uses: cypress-io/github-action@v6
+        with:
+          record: true
+          parallel: true
+          group: 'parallel'
+        env:
+          # pass the Cypress Cloud record key as an environment variable
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          # Recommended: pass the GitHub token lets this action correctly
+          # determine the unique run id necessary to re-run the checks
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Store screenshots of test failures
         if: ${{ failure() }}
