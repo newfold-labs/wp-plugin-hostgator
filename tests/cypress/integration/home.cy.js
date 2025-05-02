@@ -20,7 +20,7 @@ describe('Home Page', { testIsolation: true }, () => {
 
 	it('Is Accessible', () => {
 		cy.injectAxe();
-		cy.wait(500);
+		cy.get( appClass + '-home', { timeout: 2000 } ).should( 'exist' );
 		cy.checkA11y( appClass + '-app-body');
 	});
 

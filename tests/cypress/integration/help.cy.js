@@ -41,13 +41,11 @@ describe('Help Page', { testIsolation: true }, () => {
 
 	});
 	
-	it('Is Accessible', () => {
+	it('Is Accessible and Cards Exist', () => {
 		cy.injectAxe();
 		cy.get( '.hgwp-app-help-page', { timeout: 2000 } ).should( 'exist' );
 		cy.a11y('.hgwp-app-body');
-	});
 
-	it('Cards Each Exist', () => {
 		cy.get('.card-help-phone').contains('h3', 'Phone')
 			.scrollIntoView()
 			.should('be.visible');
