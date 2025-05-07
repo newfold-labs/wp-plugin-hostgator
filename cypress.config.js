@@ -27,9 +27,19 @@ module.exports = defineConfig({
 		'*youtube.com',
 	],
 	e2e: {
-		// We've imported your old cypress plugins here.
-		// You may want to clean this up later by importing these.
 		setupNodeEvents(on, config) {
+			on( 'task', {
+				log( message ) {
+					// eslint-disable-next-line no-console
+					console.log( message );
+					return null;
+				},
+				table( message ) {
+					// eslint-disable-next-line no-console
+					console.table( message );
+					return null;
+				},
+			} );
 
 			// Ensure that the base URL is always properly set.
 			if (config.env && config.env.baseUrl) {
@@ -90,6 +100,7 @@ module.exports = defineConfig({
 		excludeSpecPattern: [
 			'vendor/newfold-labs/**/tests/cypress/integration/wp-module-support/*.cy.js', // skip any module's wp-module-support files
 			'vendor/newfold-labs/wp-module-onboarding/tests/cypress/integration/5-AI-SiteGen-onboarding-flow/*.cy.js', // skip onboarding sitegen tests for now
+			'vendor/newfold-labs/wp-module-ecommerce/tests/cypress/integration/Home/ecommerce-live.cy.js', // skip outdated ecom test - it is removed from ecom in 1.7.3
 		],
 		experimentalRunAllSpecs: true,
 	},

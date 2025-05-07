@@ -11,7 +11,9 @@ describe('Settings Page', { testIsolation: true }, () => {
 
 	it('Is Accessible', () => {
 		cy.injectAxe();
-		cy.wait(500);
+		cy.get( appClass + '-app-settings-page', { timeout: 2000 } ).should(
+			'exist'
+		);
 		cy.checkA11y( appClass + '-app-body');
 	});
 

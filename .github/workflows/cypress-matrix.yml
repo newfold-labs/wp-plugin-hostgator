@@ -28,9 +28,9 @@ jobs:
           - '8.2'
           - '8.3'
         wpVersion:
-          - '6.5'
           - '6.6'
           - '6.7'
+          - '6.8'
 
     steps:
 
@@ -134,4 +134,4 @@ jobs:
       - name: Output debug.log file contents
         if: ${{ always() }}
         continue-on-error: true
-        run: npx wp-env run wordpress "cat /var/www/html/wp-content/debug.log"
+        run: npx wp-env run wordpress cat /var/www/html/wp-content/debug.log
