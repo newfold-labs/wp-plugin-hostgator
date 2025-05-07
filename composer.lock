@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f1f8ed2a67f5f1ab24c70dbe853ebede",
+    "content-hash": "4732037915189bf34da308ae114620bd",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -565,16 +565,16 @@
         },
         {
             "name": "newfold-labs/wp-module-activation",
-            "version": "1.0.7",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-activation.git",
-                "reference": "e724edfafe55dffcbc086c82335e327a391d3c27"
+                "reference": "3b4fe31621aec5dbf374ddb37ea6240abe9ded37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-activation/zipball/e724edfafe55dffcbc086c82335e327a391d3c27",
-                "reference": "e724edfafe55dffcbc086c82335e327a391d3c27",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-activation/zipball/3b4fe31621aec5dbf374ddb37ea6240abe9ded37",
+                "reference": "3b4fe31621aec5dbf374ddb37ea6240abe9ded37",
                 "shasum": ""
             },
             "require-dev": {
@@ -616,10 +616,10 @@
             ],
             "description": "A Module for handling WordPress brand plugins activations",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-activation/tree/1.0.7",
+                "source": "https://github.com/newfold-labs/wp-module-activation/tree/1.0.8",
                 "issues": "https://github.com/newfold-labs/wp-module-activation/issues"
             },
-            "time": "2025-03-10T19:16:09+00:00"
+            "time": "2025-05-02T19:58:07+00:00"
         },
         {
             "name": "newfold-labs/wp-module-ai",
@@ -4579,13 +4579,13 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
+    "platform": [],
+    "platform-dev": [],
     "platform-overrides": {
         "php": "7.3.0"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
