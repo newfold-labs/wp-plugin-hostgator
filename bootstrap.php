@@ -62,54 +62,65 @@ $nfd_module_container->set(
 	array( 'browser', 'skip404' )
 );
 
-$website_guide_link = 'https://www.hostgator.com/blog/build-wordpress-website-guide/';
-$migrate_link       = 'https://www.hostgator.com/help/article/hostgator-website-migration';
-$hosting_link       = 'https://www.hostgator.com/blog/reasons-why-wordpress-website/';
-
 // Set coming soon values
-$nfd_module_container->set(
-	'comingsoon',
-	array(
-		'admin_app_url'              => admin_url( 'admin.php?page=hostgator#/home' ),
-		'template_h1'                => __( 'A New WordPress Site', 'wp-plugin-hostgator' ),
-		'template_h2'                => __( 'Coming Soon!', 'wp-plugin-hostgator' ),
-		'template_coming_soon_links' =>
-			'<a href="' . esc_url( $website_guide_link ) . '" target="_blank" rel="noopener noreferrer nofollow">' .
-			__( 'How to build your WordPress Website', 'wp-plugin-hostgator' ) .
-			'</a><br/>' .
-			'<a href="' . esc_url( $migrate_link ) . '" target="_blank" rel="noopener noreferrer nofollow">' .
-			__( 'How to Migrate a Website to Hostgator?', 'wp-plugin-hostgator' ) .
-			'</a><br/>' .
-			'<a href="' . esc_url( $hosting_link ) . '" target="_blank" rel="noopener noreferrer nofollow">' .
-			__( 'Why choose HostGator for your WordPress site?', 'wp-plugin-hostgator' ) .
-			'</a><br/>',
-		'template_footer_t'          => sprintf(
-			/* translators: %1$s is replaced with opening link tag taking you to hostgator.com/wordpress, %2$s is replaced with closing link tag, %3$s is replaced with opening link tag taking you to login page, %4$s is replaced with closing link tag, %5$s is replaced with opening link tag taking you to portal.hostgator.com, %6$s is replaced with closing link tag. */
-			esc_html__( 'A %1$sHostGator%2$s powered website. Is this your website? Log in to %3$sWordPress%4$s or %5$sHostgator%6$s.', 'wp-plugin-hostgator' ) . '&nbsp;',
-			'<a href="' . esc_url( 'https://www.hostgator.com/managed-wordpress-hosting' ) . '" target="_blank" rel="noopener noreferrer nofollow">',
-			'</a>',
-			'<a href="' . esc_url( wp_login_url() ) . '">',
-			'</a>',
-			'<a href="' . esc_url( 'https://portal.hostgator.com/' ) . '" target="_blank" rel="noopener noreferrer nofollow">',
-			'</a>'
-		),
-		'template_page_title'        => sprintf(
-			/* translators: %s is Blog name */
-			__( '%s &mdash; Coming Soon', 'wp-plugin-hostgator' ),
-			esc_html( get_option( 'blogname' ) )
-		),
-		'admin_bar_text'             => '<div style="background-color: #ffcf00; color: #191936; padding: 0 1rem;">' . __( 'Coming Soon Active', 'wp-plugin-hostgator' ) . '</div>',
-		'admin_notice_text'          => sprintf(
-			/* translators: %1$s is replaced with the opening link tag, %2$s is replaced with the closing link tag, %3$s is the opening link tag to preview the page, %4$s is the closing link tag. */
-			__( 'Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s.', 'wp-plugin-hostgator' ),
-			'<a href="' . get_home_url() . '?preview=coming_soon" title="' . __( 'Preview the coming soon landing page', 'wp-plugin-hostgator' ) . '">',
-			'</a>',
-			'<a href="' . esc_url( admin_url( 'admin.php?page=hostgator#/home' ) ) . '">',
-			'</a>'
-		),
-		'template_styles'            => esc_url( HOSTGATOR_PLUGIN_URL . 'assets/styles/coming-soon.css' ),
-	)
+add_filter(
+	'newfold/coming-soon/filter/args',
+	function ( $args, $default_args ) {
+
+		$website_guide_link = 'https://www.hostgator.com/blog/build-wordpress-website-guide/';
+		$migrate_link       = 'https://www.hostgator.com/help/article/hostgator-website-migration';
+		$hosting_link       = 'https://www.hostgator.com/blog/reasons-why-wordpress-website/';
+
+		$args = wp_parse_args(
+			array(
+				'admin_app_url'              => admin_url( 'admin.php?page=hostgator#/home' ),
+				'template_h1'                => __( 'A New WordPress Site', 'wp-plugin-hostgator' ),
+				'template_h2'                => __( 'Coming Soon!', 'wp-plugin-hostgator' ),
+				'template_coming_soon_links' =>
+					'<a href="' . esc_url( $website_guide_link ) . '" target="_blank" rel="noopener noreferrer nofollow">' .
+					__( 'How to build your WordPress Website', 'wp-plugin-hostgator' ) .
+					'</a><br/>' .
+					'<a href="' . esc_url( $migrate_link ) . '" target="_blank" rel="noopener noreferrer nofollow">' .
+					__( 'How to Migrate a Website to Hostgator?', 'wp-plugin-hostgator' ) .
+					'</a><br/>' .
+					'<a href="' . esc_url( $hosting_link ) . '" target="_blank" rel="noopener noreferrer nofollow">' .
+					__( 'Why choose HostGator for your WordPress site?', 'wp-plugin-hostgator' ) .
+					'</a><br/>',
+				'template_footer_t'          => sprintf(
+				/* translators: %1$s is replaced with opening link tag taking you to hostgator.com/wordpress, %2$s is replaced with closing link tag, %3$s is replaced with opening link tag taking you to login page, %4$s is replaced with closing link tag, %5$s is replaced with opening link tag taking you to portal.hostgator.com, %6$s is replaced with closing link tag. */
+					esc_html__( 'A %1$sHostGator%2$s powered website. Is this your website? Log in to %3$sWordPress%4$s or %5$sHostgator%6$s.', 'wp-plugin-hostgator' ) . '&nbsp;',
+					'<a href="' . esc_url( 'https://www.hostgator.com/managed-wordpress-hosting' ) . '" target="_blank" rel="noopener noreferrer nofollow">',
+					'</a>',
+					'<a href="' . esc_url( wp_login_url() ) . '">',
+					'</a>',
+					'<a href="' . esc_url( 'https://portal.hostgator.com/' ) . '" target="_blank" rel="noopener noreferrer nofollow">',
+					'</a>'
+				),
+				'template_page_title'        => sprintf(
+				/* translators: %s is Blog name */
+					__( '%s &mdash; Coming Soon', 'wp-plugin-hostgator' ),
+					esc_html( get_option( 'blogname' ) )
+				),
+				'admin_bar_text'             => '<div style="background-color: #ffcf00; color: #191936; padding: 0 1rem;">' . __( 'Coming Soon Active', 'wp-plugin-hostgator' ) . '</div>',
+				'admin_notice_text'          => sprintf(
+				/* translators: %1$s is replaced with the opening link tag, %2$s is replaced with the closing link tag, %3$s is the opening link tag to preview the page, %4$s is the closing link tag. */
+					__( 'Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s.', 'wp-plugin-hostgator' ),
+					'<a href="' . get_home_url() . '?preview=coming_soon" title="' . __( 'Preview the coming soon landing page', 'wp-plugin-hostgator' ) . '">',
+					'</a>',
+					'<a href="' . esc_url( admin_url( 'admin.php?page=hostgator#/home' ) ) . '">',
+					'</a>'
+				),
+				'template_styles'            => esc_url( HOSTGATOR_PLUGIN_URL . 'assets/styles/coming-soon.css' ),
+			),
+			$default_args
+		);
+
+		return $args;
+	},
+	10,
+	2
 );
+
 setContainer( $nfd_module_container );
 
 // Set up the updater endpoint and map values

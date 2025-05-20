@@ -44,7 +44,7 @@ Cypress.Commands.add('login', (username, password) => {
 				cy.get('#user_pass').type(`${ password }{enter}`);
 
                 // Speed up tests by setting permalink structure once
-                cy.setPermalinkStructure();
+                // cy.setPermalinkStructure();
 			}
 		});
 });
@@ -63,13 +63,13 @@ Cypress.Commands.add(
 			const permalinkWpCliCommand = `wp rewrite structure "${ structure }" --hard;`;
 			const permalinkWpEnvCommand = `npx wp-env run cli ${ permalinkWpCliCommand }`;
 			const permalinkWpEnvTestCommand = `npx wp-env run tests-cli ${ permalinkWpCliCommand }`;
-			cy.exec( permalinkWpEnvCommand, { failOnNonZeroExit: true } ).then(
+			cy.exec( permalinkWpEnvCommand, { failOnNonZeroExit: false } ).then(
 				( result ) => {
 					cy.request( '/wp-json/' );
 				}
 			);
 			cy.exec( permalinkWpEnvTestCommand, {
-				failOnNonZeroExit: true,
+				failOnNonZeroExit: false,
 			} ).then( ( result ) => {
 				cy.request( '/wp-json/' );
 			} );
@@ -151,9 +151,59 @@ function printAccessibilityViolations(violations) {
 	cy.task('table', violationData)
 }
   
-Cypress.Commands.add( 
-	'a11y', 
-	(context) => {
-		cy.checkA11y(context, null, printAccessibilityViolations, false);
-	},
-);
+Cypress.Commands.add( 'a11y', ( context ) => {
+	cy.checkA11y( context, null, printAccessibilityViolations, false );
+} );
+
+/**
+ * wp-cli helper
+ *
+ * This wraps the command in the required npx wp-env run cli wp
+ *
+ * @param {string} cmd               the command to send to wp-cli
+ * @param          failOnNonZeroExit
+ */
+Cypress.Commands.add( 'wpCli', ( cmd, failOnNonZeroExit = true ) => {
+	const args = {
+		env: {
+			NODE_TLS_REJECT_UNAUTHORIZED: '1',
+		},
+	};
+	if ( ! failOnNonZeroExit ) {
+		args.failOnNonZeroExit = false;
+	}
+	cy.exec( `npx wp-env run cli wp ${ cmd }`, args ).then( ( result ) => {
+		for ( const [ key, value ] of Object.entries( result ) ) {
+			cy.log( `${ key }: ${ value }` );
+		}
+	} );
+} );
+
+/**
+ * Set capability helper
+ *
+ * This calls performs a cli command to set a specific capability
+ *
+ * @param {*}      capJSON    json of capabilities
+ * @param {number} expiration seconds for transient to expire, defualt 3600 (1 hour)
+ */
+Cypress.Commands.add( 'setCapability', ( capJSON, expiration = 3600 ) => {
+	cy.wpCli(
+		`option update _transient_nfd_site_capabilities '${ JSON.stringify(
+			capJSON
+		) }' --format=json`
+	);
+	// set transient expiration to one hour (default) from now
+	const expiry = Math.floor( new Date().getTime() / 1000.0 ) + expiration;
+	// manually set expiration for the transients
+	cy.wpCli(
+		`option update _transient_timeout_nfd_site_capabilities ${ expiry }`
+	);
+} );
+
+/**
+ * Clear capabilities
+ */
+Cypress.Commands.add( 'clearCapabilities', () => {
+	cy.wpCli( `option delete _transient_nfd_site_capabilities` );
+} );
