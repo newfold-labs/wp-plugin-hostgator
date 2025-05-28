@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3ed3bc093fcc18abfff212bd49793915",
+    "content-hash": "b9c643bb0e10e435ca80e1453bf4a621",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -1702,16 +1702,16 @@
         },
         {
             "name": "newfold-labs/wp-module-notifications",
-            "version": "1.6.8",
+            "version": "1.6.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-notifications.git",
-                "reference": "3f7253e6215caed62d92423cb702dc2b900cfe8f"
+                "reference": "c5d488bd82ad9cb4e422d4330fa588efe1b39893"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-notifications/zipball/3f7253e6215caed62d92423cb702dc2b900cfe8f",
-                "reference": "3f7253e6215caed62d92423cb702dc2b900cfe8f",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-notifications/zipball/c5d488bd82ad9cb4e422d4330fa588efe1b39893",
+                "reference": "c5d488bd82ad9cb4e422d4330fa588efe1b39893",
                 "shasum": ""
             },
             "require": {
@@ -1751,10 +1751,10 @@
             ],
             "description": "A module for managing Newfold in-site notifications.",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-notifications/tree/1.6.8",
+                "source": "https://github.com/newfold-labs/wp-module-notifications/tree/1.6.11",
                 "issues": "https://github.com/newfold-labs/wp-module-notifications/issues"
             },
-            "time": "2025-02-25T21:08:22+00:00"
+            "time": "2025-04-03T15:38:57+00:00"
         },
         {
             "name": "newfold-labs/wp-module-onboarding",
@@ -4589,13 +4589,13 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
+    "platform": [],
+    "platform-dev": [],
     "platform-overrides": {
         "php": "7.3.0"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
