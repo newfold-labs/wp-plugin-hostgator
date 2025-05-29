@@ -22,15 +22,15 @@ Alternatively, check the updater endpoint for the latest version at: https://hii
 
 # Releasing Updates
 
+To prepare a release, run the `Newfold Prepare Release` workflow. Select the release level (patch, minor or major) and the target branch (where the release PR should target, nearly always `main`), and the source branch (typically `develop`, but could be another branch for hotfix releases). The workflow will create a release branch with updated versions, build files and language files and then create a PR for review.
+
 This plugin has version number set in 3 distinct places in 2 files:
 
-- the plugin header info (wp-plugin-hostgator/wp-plugin-hostgator.php line 14) - this is used in the plugin php code.
-- the constant HOSTGATOR_PLUGIN_VERSION (wp-plugin-hostgator/wp-plugin-hostgator.php line 34) - this is used by
-  WordPress.
-- in the package.json version value (wp-plugin-hostgator/package.json line 5) this is used by the build step to place
-  the release files within a matching version directory for convenient cache busting. All 3 instances need to be
-  incremented in conjuction with new releases via github tagging.
-  (In a perfect world, we have a runner increment and/or validate this)
+- the plugin header info (`wp-plugin-hostgator.php` line 14) - this is used in the plugin php code.
+- the constant HOSTGATOR_PLUGIN_VERSION (`wp-plugin-hostgator.php` line 34) - this is used by WordPress.
+- in the package.json version value (`package.json` line 5) this is used by the build step to place the release files within a matching version directory for convenient cache busting.
+
+All 3 instances need to be incremented in conjuction with new releases via github tagging.
 
 # Languages & Regions
 There are some parts to the hostgator plugin that adapt depending on the region and/or language which is chosen. This not only relies on the language setting (which is set automatically on installs in HostGator Latam Brazil for example), but also on the `mm_brand` value being set to `hostgator-latam` and an additional option `hg_region` being set to `BR` in the case of Brazil. Features should all function in both US and BR setups. See the `region.cy.js` and `region-help.cy.js` cypress integration tests for example.
