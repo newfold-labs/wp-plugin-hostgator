@@ -1,0 +1,44 @@
+name: Newfold Prepare Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      level:
+        description: 'The level of release to be used.'
+        type: choice
+        options:
+          - 'patch'
+          - 'minor'
+          - 'major'
+        default: 'patch'
+        required: true
+      target-branch:
+        description: 'Target branch to merge the release into.'
+        type: string
+        default: 'main'
+        required: true
+      source-branch:
+        description: 'The source branch to be used for the release.'
+        type: string
+        default: 'develop'
+        required: true
+
+# Disable permissions for all available scopes by default.
+# Any needed permissions should be configured at the job level.
+permissions: {}
+
+jobs:
+
+  # This runs the Newfold reusable-plugin-prep-release workflow for this plugin to prepare a release.
+  prep-release:
+    name: Prepare Release
+    permissions:
+      contents: write
+      pull-requests: write
+    uses: newfold-labs/workflows/.github/workflows/reusable-plugin-prep-release.yml@main
+    with:
+      plugin-repo: ${{ github.repository }}
+      plugin-target-branch: ${{ inputs.target-branch }}
+      plugin-source-branch: ${{ inputs.source-branch }}
+      level: ${{ inputs.level }}
+      php-file: 'wp-plugin-hostgator.php'
