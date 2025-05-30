@@ -26,7 +26,7 @@ const SettingsSection = () => {
 				<ActionField
 					label={ __( 'Performance', 'wp-plugin-hostgator' ) }
 					buttonLabel={ __( 'Performance', 'wp-plugin-hostgator' ) }
-					href={ '#/performance' }
+					href={window.NewfoldRuntime.admin_url + 'tools.php?page=nfd-performance'}
 					className={ 'hgwp-app-home-performance-action' }
 				>
 					{ __(

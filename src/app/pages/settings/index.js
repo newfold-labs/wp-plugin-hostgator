@@ -1,4 +1,4 @@
-import { Container, Page } from '@newfold/ui-component-library';
+import { Container, Page, Title } from '@newfold/ui-component-library';
 import ComingSoon from './comingSoon';
 import AutomaticUpdates from './automaticUpdates';
 import HelpCenterSettings from './helpCenterSettings';

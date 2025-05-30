@@ -1,23 +1,17 @@
 import {
 	HomeIcon,
 	ShoppingBagIcon,
-	WrenchScrewdriverIcon,
-	BoltIcon,
 	AdjustmentsHorizontalIcon,
 	BuildingStorefrontIcon,
 	QuestionMarkCircleIcon,
-	DocumentDuplicateIcon,
 } from '@heroicons/react/24/outline';
 import { NewfoldRuntime } from '@newfold/wp-module-runtime';
 import { Route, Routes } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
 import Home from '../pages/home';
-import PagesAndPosts from '../pages/pages-and-posts';
 import Store from '../pages/ecommerce/page';
 import Marketplace from '../pages/marketplace';
-import Performance from '../pages/performance';
 import Settings from '../pages/settings';
-import Staging from '../pages/staging';
 import Help from '../pages/help';
 import Admin from '../pages/admin';
 import { getMarketplaceSubnavRoutes } from '../../../vendor/newfold-labs/wp-module-marketplace/components/marketplaceSubnav';
@@ -64,12 +58,8 @@ export const AppRoutes = () => {
 
 const topRoutePaths = [
 	'/home',
-	'/pages-and-posts',
-	'/store',
 	'/marketplace',
-	'/performance',
 	'/settings',
-	'/staging',
 ];
 const utilityRoutePaths = ['/help'];
 
@@ -79,13 +69,6 @@ export const routes = [
 		title: __('Home', 'wp-plugin-hostgator'),
 		Component: Home,
 		Icon: HomeIcon,
-		condition: true,
-	},
-	{
-		name: '/pages-and-posts',
-		title: __('Pages & Posts', 'wp-plugin-hostgator'),
-		Component: PagesAndPosts,
-		Icon: DocumentDuplicateIcon,
 		condition: true,
 	},
 	{
@@ -136,13 +119,6 @@ export const routes = [
 		condition: true,
 	},
 	{
-		name: '/performance',
-		title: __('Performance', 'wp-plugin-hostgator'),
-		Component: Performance,
-		Icon: BoltIcon,
-		condition: await window.NewfoldFeatures.isEnabled( 'performance' ),
-	},
-	{
 		name: '/settings',
 		title: __('Settings', 'wp-plugin-hostgator'),
 		Component: Settings,
@@ -150,21 +126,16 @@ export const routes = [
 		condition: true,
 	},
 	{
-		name: '/staging',
-		title: __('Staging', 'wp-plugin-hostgator'),
-		Component: Staging,
-		Icon: WrenchScrewdriverIcon,
-		condition: await window.NewfoldFeatures.isEnabled( 'staging' ),
-	},
-	{
 		name: '/help',
 		title: __('Help', 'wp-plugin-hostgator'),
 		Component: Help,
 		Icon: QuestionMarkCircleIcon,
 		condition: true,
-		action: NewfoldRuntime.hasCapability('canAccessHelpCenter')
-			? HelpCenterAI
-			: false,
+		action: 
+			NewfoldRuntime.hasCapability( 'canAccessHelpCenter' ) &&
+			( await window.NewfoldFeatures.isEnabled( 'helpCenter' ) )
+				? HelpCenterAI
+				: false,
 	},
 	{
 		name: '/admin',
