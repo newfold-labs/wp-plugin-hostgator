@@ -9,15 +9,21 @@ import ContentSettings from './contentSettings';
 const Settings = () => {
 	return (
 		<Page title="Settings" className={ 'hgwp-app-settings-page' }>
-			<Container className={ 'hgwp-app-settings-container' }>
-				<Container.Header
-					title={ __( 'Settings', 'wp-plugin-hostgator' ) }
-					description={ __(
+			<div
+				id={ 'settings-header' }
+				className={ 'hgwp-app-settings-header' }
+			>
+				<Title as={ 'h1' } className={ 'nfd-mb-2' }>
+					{ __( 'Settings', 'wp-plugin-hostgator' ) }
+				</Title>
+				<Title as={ 'h2' } className="nfd-font-normal nfd-text-[13px]">
+					{ __(
 						'This is where you can manage common settings for your website.',
 						'wp-plugin-hostgator'
 					) }
-					className={ 'hgwp-app-settings-header' }
-				/>
+				</Title>
+			</div>
+			<Container className={ 'hgwp-app-settings-container' }>
 
 				<Container.Block
 					separator={ true }
