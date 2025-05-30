@@ -55,53 +55,53 @@ final class Admin {
 
 	/**
 	 * Subpages to register with add_submenu_page().
+	 * Modules should use `nfd_plugin_subnav` filter to add their own subnav items
 	 *
 	 * Order or array items determines menu order.
 	 *
 	 * @return array
 	 */
-	public static function subpages() {
-		$home          = array(
-			'hostgator#/home' => __( 'Home', 'wp-plugin-hostgator' ),
+	public static function plugin_subpages() {
+
+		$home     = array(
+			'route'    => 'hostgator#/home',
+			'title'    => __( 'Home', 'wp-plugin-hostgator' ),
+			'priority' => 1,
 		);
-		$pagesAndPosts = array(
-			'hostgator#/pages-and-posts' => __( 'Pages & Posts', 'wp-plugin-hostgator' ),
+		$settings = array(
+			'route'    => 'hostgator#/settings',
+			'title'    => __( 'Settings', 'wp-plugin-hostgator' ),
+			'priority' => 60,
 		);
-		$store         = array(
-			'hostgator#/store' => __( 'Store', 'wp-plugin-hostgator' ),
-		);
-		$marketplace   = array(
-			'hostgator#/marketplace' => __( 'Marketplace', 'wp-plugin-hostgator' ),
-		);
-		// add performance if enabled
-		$performance = isEnabled( 'performance' )
-		? array(
-			'hostgator#/performance' => __( 'Performance', 'wp-plugin-hostgator' ),
-		)
-		: array();
-		$settings    = array(
-			'hostgator#/settings' => __( 'Settings', 'wp-plugin-hostgator' ),
-		);
-		// add staging if enabled
-		$staging = isEnabled( 'staging' )
-			? array(
-				'hostgator#/staging' => __( 'Staging', 'wp-plugin-hostgator' ),
-			)
-			: array();
-		$help    = array(
-			'hostgator#/help' => __( 'Help', 'wp-plugin-hostgator' ),
+		$help     = array(
+			'route'    => 'hostgator#/help',
+			'title'    => __( 'Help Resources', 'wp-plugin-hostgator' ),
+			'priority' => 70,
 		);
 
-		return array_merge(
-			$home,
-			$pagesAndPosts,
-			$store,
-			$marketplace,
-			$performance,
-			$settings,
-			$staging,
-			$help,
+		// apply filter to add module subnav items
+		$subnav = apply_filters(
+			'nfd_plugin_subnav', // modules can filter this to add their own subnav items
+			array(
+				$settings,
+				$home,
+				$help,
+			)
 		);
+
+		// sort subnav items by priority
+		usort(
+			$subnav,
+			function ( $a, $b ) {
+				if ( $a['priority'] === $b['priority'] ) {
+					return 0;
+				}
+				return ( $a['priority'] < $b['priority'] ? -1 : 1 );
+			}
+		);
+
+		// return subnav items sorted by priority
+		return $subnav;
 	}
 
 	/**
@@ -233,18 +233,16 @@ final class Admin {
 			0
 		);
 
-		// If we're outside of App, add subpages to App menu
-		if ( false === ( isset( $_GET['page'] ) && strpos( filter_input( INPUT_GET, 'page', FILTER_UNSAFE_RAW ), 'hostgator' ) >= 0 ) ) { // phpcs:ignore
-			foreach ( self::subpages() as $route => $title ) {
-				\add_submenu_page(
-					'hostgator',
-					$title,
-					$title,
-					'manage_options',
-					$route,
-					array( __CLASS__, 'render' )
-				);
-			}
+		// Add subpages to menu
+		foreach ( self::plugin_subpages() as $subpage ) {
+			\add_submenu_page(
+				'hostgator',
+				$subpage['title'],
+				$subpage['title'],
+				'manage_options',
+				$subpage['route'],
+				array_key_exists( 'callback', $subpage ) ? $subpage['callback'] : array( __CLASS__, 'render' )
+			);
 		}
 	}
 

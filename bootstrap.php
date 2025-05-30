@@ -191,3 +191,42 @@ if ( is_admin() ) {
 
 // Instantiate the Features singleton
 Features::getInstance();
+
+/**
+ * Handle activation tasks.
+ * TODO: Move this to the activation module
+ *
+ * @return void
+ */
+function on_activate() {
+	// clear transients
+	delete_transient( 'newfold_marketplace' );
+	delete_transient( 'newfold_notifications' );
+	delete_transient( 'newfold_solutions' );
+	delete_transient( 'nfd_site_capabilities' );
+	// Flush rewrite rules
+	flush_rewrite_rules();
+}
+
+/**
+ * Determine if the plugin was freshly activated.
+ *
+ * @return void
+ */
+function load_plugin() {
+	if ( is_admin() && HOSTGATOR_PLUGIN_FILE === get_option( 'nfd_activated_fresh' ) ) {
+		delete_option( 'nfd_activated_fresh' );
+		on_activate();
+	}
+}
+
+// Check for plugin activation
+add_action( 'admin_init', __NAMESPACE__ . '\\load_plugin' );
+
+// Register activation hook to set the activation flag
+register_activation_hook(
+	HOSTGATOR_PLUGIN_FILE,
+	function () {
+		add_option( 'nfd_activated_fresh', HOSTGATOR_PLUGIN_FILE );
+	}
+);

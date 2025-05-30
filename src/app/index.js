@@ -14,10 +14,10 @@ import { useEffect } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import { store as noticesStore } from '@wordpress/notices';
 import { kebabCase, filter } from 'lodash';
-import { AppNav } from './components/app-nav';
-import { SiteInfoBar } from './components/site-info';
 import { NotificationFeed } from 'App/components/notifications';
 import { addQueryArgs } from '@wordpress/url';
+import { handleHelpLinksClick } from './util/helpers';
+import Logo from './components/app-nav/logo';
 
 // component sourced from module
 import { default as NewfoldNotifications } from '../../vendor/newfold-labs/wp-module-notifications/assets/js/components/notifications/';
@@ -63,6 +63,7 @@ const AppBody = ( props ) => {
 	const { booted, hasError } = useContext( AppStore );
 
 	handlePageLoad();
+	handleHelpLinksClick();
 
 	return (
 		<main
@@ -90,10 +91,12 @@ const AppBody = ( props ) => {
 				} }
 			/>
 			<div className="hgwp-app-body">
+				<header className="nfd-mb-6">
+					<Logo />
+				</header>
 				<div className="hgwp-app-body-inner">
 					<ErrorBoundary FallbackComponent={ <ErrorCard /> }>
 						{ hasError && <ErrorCard error={ hasError } /> }
-						<SiteInfoBar />
 						{ ( true === booted && <AppRoutes /> ) ||
 							( ! hasError && <Spinner /> ) }
 					</ErrorBoundary>
@@ -113,7 +116,6 @@ export const App = () => (
 			<NotificationFeed>
 				<Router>
 					<div className="hgwp-app-container min-[783px]:nfd-p-8 min-[783px]:nfd-flex nfd-gap-6 nfd-max-w-full xl:nfd-max-w-screen-xl 2xl:nfd-max-w-screen-2xl nfd-my-0">
-						<AppNav />
 						<AppBody />
 					</div>
 				</Router>
