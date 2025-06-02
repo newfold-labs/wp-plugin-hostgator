@@ -1,6 +1,6 @@
 {
     "translation-revision-date": "2025-01-10 08:42+0000",
-    "generator": "WP-CLI\/2.11.0",
+    "generator": "WP-CLI\/2.12.0",
     "source": "build\/2.14.1\/index.js",
     "domain": "messages",
     "locale_data": {
@@ -224,17 +224,8 @@
             "Store": [
                 "Tienda"
             ],
-            "Staging": [
-                "Entorno de prueba"
-            ],
-            "Pages & Posts": [
-                "P\u00e1ginas y publicaciones "
-            ],
             "Hostgator WordPress Plugin": [
                 "Plugin de WordPress para Hostgator "
-            ],
-            "HostGator Account": [
-                "Cuenta HostGator "
             ],
             "Products & Services": [
                 "Productos y servicios"
@@ -280,57 +271,6 @@
             ],
             "An error occurred while loading the content. Please try again later.": [
                 " Se produjo un error al cargar el contenido. Int\u00e9ntelo de nuevo m\u00e1s tarde."
-            ],
-            "Products": [
-                " Productos"
-            ],
-            "Showcase physical and digital goods, product variations, and custom configurations.": [
-                " Muestra productos f\u00edsicos y digitales, variaciones de productos y configuraciones personalizadas."
-            ],
-            "View all ": [
-                " Ver todo"
-            ],
-            "Add New": [
-                " Agregar nuevo "
-            ],
-            "Blog Posts": [
-                " Publicaciones de blog "
-            ],
-            "Add a new blog post or edit your existing posts.": [
-                "Agrega una nueva publicaci\u00f3n de blog o edite tus publicaciones existentes. "
-            ],
-            "Bookings & Appointments": [
-                " Reservas y Citas"
-            ],
-            "Add your list of services, setup a booking calendar, and edit your bookings form.": [
-                " Agrega tu lista de servicios, configure un calendario de reservas y edite tu formulario de reservas. "
-            ],
-            "Your site is not live.": [
-                "Tu sitio no est\u00e1 activo. "
-            ],
-            "Your site is live.": [
-                " Tu sitio est\u00e1 activo."
-            ],
-            "Visitors to your site will see your \"Coming Soon\" page and not your actual site. Visit ": [
-                " Los visitantes de tu sitio ver\u00e1n su p\u00e1gina \"Pr\u00f3ximamente\" y no tu sitio real."
-            ],
-            "\"Settings\"": [
-                "Configuraciones"
-            ],
-            " to set your site live.": [
-                "para configurar tu sitio en vivo."
-            ],
-            "Visitors to your site will see all your publicly published pages.": [
-                " Los visitantes de tu sitio ver\u00e1n todas sus p\u00e1ginas publicadas p\u00fablicamente."
-            ],
-            "Site Pages": [
-                " P\u00e1ginas del sitio"
-            ],
-            "Edit your homepage and other existing pages or add new pages to your site.": [
-                "Edita tu p\u00e1gina de inicio y otras p\u00e1ginas existentes o agrega nuevas p\u00e1ginas a tu sitio."
-            ],
-            "This is where you can manage cache settings for your website.": [
-                " Aqu\u00ed es donde puede administrar la configuraci\u00f3n de cach\u00e9 de tu sitio web. "
             ],
             "Manage All Updates": [
                 " Administrar todas las actualizaciones"
@@ -413,141 +353,6 @@
             ],
             "The staging feature provides a way to copy a site to test new updates, features or content.": [
                 " La funci\u00f3n de preparaci\u00f3n proporciona una forma de copiar un sitio para probar nuevas actualizaciones, funciones o contenido."
-            ],
-            "Cancel": [
-                " Cancelar "
-            ],
-            "Clone": [
-                " Clon "
-            ],
-            "Confirm Clone Action": [
-                " Confirmar acci\u00f3n de clonaci\u00f3n "
-            ],
-            "This will overwrite anything in staging and update it to an exact clone of the current production site. Are you sure you want to proceed?": [
-                "Esto sobrescribir\u00e1 todo lo que est\u00e9 en preparaci\u00f3n y lo actualizar\u00e1 a un clon exacto del sitio de producci\u00f3n actual. \u00bfEst\u00e1s seguro de que deseas continuar?\" "
-            ],
-            "Cloned to Staging": [
-                "Clonado del entorno de pureba"
-            ],
-            "Cloning production to staging, this should take about a minute.": [
-                " Clonando producci\u00f3n del entorno de prueba, esto tomar\u00e1 aproximadamente un minuto..."
-            ],
-            "Clone to staging": [
-                "Clonar entorno de prueba"
-            ],
-            "Created": [
-                " Creado "
-            ],
-            "Staging Created": [
-                "Entorno de prueba creado"
-            ],
-            "Creating a staging site, this should take about a minute.": [
-                " Crear un entorno de prueba deber\u00eda llevar aproximadamente un minuto. "
-            ],
-            "Create staging site": [
-                " Crear sitio de prueba"
-            ],
-            "Currently editing": [
-                "Actualmente editando"
-            ],
-            "Delete": [
-                " Borrar"
-            ],
-            "Confirm Delete": [
-                "Confirmar eliminaci\u00f3n "
-            ],
-            "This will permanently delete staging site. Are you sure you want to proceed? You can recreate another staging site at any time, but any specific changes you've made to this staging site will be lost.": [
-                " Esto eliminar\u00e1 permanentemente el entorno de prueba. \u00bfEst\u00e1s seguro de que quieres continuar? Puedes recrear otro sitio de prueba en cualquier momento, pero se perder\u00e1n todos los cambios espec\u00edficos que hayas realizado en este sitio de prueba."
-            ],
-            "Deleted Staging": [
-                "Entorno de prueba eliminado"
-            ],
-            "Deleting the staging site, this should take about a minute.": [
-                " La eliminaci\u00f3n del entorno de prueba debe llevar aproximadamente un minuto."
-            ],
-            "Delete Staging Site": [
-                "Eliminar sitio de prueba"
-            ],
-            "Deploy": [
-                "Desplegar"
-            ],
-            "Deploy all changes": [
-                " Implementar todos los cambios"
-            ],
-            "Confirm Deployment": [
-                "Confirmar implementaci\u00f3n"
-            ],
-            "Deploy database only": [
-                "Implementar solo base de datos"
-            ],
-            "This will deploy staging to production and overwrite current production site. Are you sure you want to proceed?": [
-                "Esto implementar\u00e1 la preparaci\u00f3n en producci\u00f3n y sobrescribir\u00e1 el sitio de producci\u00f3n actual. \u00bfEst\u00e1s seguro de que quieres continuar? "
-            ],
-            "Deploy files only": [
-                " Implementar solo archivos"
-            ],
-            "Deployed": [
-                " Implementado"
-            ],
-            "Deploying from staging to production, this should take about a minute.": [
-                " La implementaci\u00f3n desde el sitio de prueba hasta la producci\u00f3n deber\u00eda llevar aproximadamente un minuto. "
-            ],
-            "Deploy Site": [
-                "Implementar sitio"
-            ],
-            "Error": [
-                "Error"
-            ],
-            "Not currently editing": [
-                "No editando actualmente"
-            ],
-            "Proceed": [
-                "Proceder "
-            ],
-            "Production Site": [
-                " Sitio de producci\u00f3n"
-            ],
-            "Staging Site": [
-                " Sitio de prueba "
-            ],
-            "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready.": [
-                " Un sitio de prueba es un duplicado de tu sitio activo y ofrece un entorno seguro para experimentar, probar actualizaciones e implementar cuando est\u00e9 listo."
-            ],
-            "Switch": [
-                " Cambiar"
-            ],
-            "Switching": [
-                "Cambio"
-            ],
-            "Switch to Production": [
-                "Cambiar a producci\u00f3n "
-            ],
-            "This will navigate you to the production environment": [
-                " Esto te llevar\u00e1 al entorno de producci\u00f3n."
-            ],
-            "Loading the production environment now.": [
-                " Cargando el entorno de producci\u00f3n ahora"
-            ],
-            "Switching to the production environment, this should take about a minute.": [
-                " Cambiar al entorno de producci\u00f3n debe llevar aproximadamente un minuto."
-            ],
-            "Switch to Staging": [
-                " Cambiar entorno de prueba"
-            ],
-            "This will navigate you to the staging environment": [
-                "Esto te llevar\u00e1 al entorno de prueba."
-            ],
-            "Loading the staging environment now.": [
-                " Cargando el entorno de prueba ahora."
-            ],
-            "Switching to the staging environment, this should take about a minute.": [
-                " Cambiar al entorno de prueba debe llevar aproximadamente un minuto. "
-            ],
-            "An unknown error has occurred.": [
-                "Se ha producido un error desconocido."
-            ],
-            "Working\u2026": [
-                "Trabajando..."
             ],
             "Sales Channel": [
                 "Canal de Ventas"
