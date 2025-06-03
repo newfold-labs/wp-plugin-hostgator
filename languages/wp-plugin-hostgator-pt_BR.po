@@ -661,3 +661,11 @@ msgstr "O WonderBlocks fornece uma biblioteca de padrões de blocos e modelos de
 #: inc/Admin.php:78
 msgid "Help Resources"
 msgstr ""
+
+#: build/2.14.1/index.js:1
+msgid "Welcome to HostGator"
+msgstr ""
+
+#: build/2.14.1/index.js:1
+msgid "We're very excited to get started with you!"
+msgstr ""

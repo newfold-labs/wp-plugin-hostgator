@@ -316,6 +316,14 @@ msgid "We are available 24/7 to help answer questions and solve your problems."
 msgstr ""
 
 #: build/2.14.1/index.js:1
+msgid "Welcome to HostGator"
+msgstr ""
+
+#: build/2.14.1/index.js:1
+msgid "We're very excited to get started with you!"
+msgstr ""
+
+#: build/2.14.1/index.js:1
 msgid "More"
 msgstr ""
 

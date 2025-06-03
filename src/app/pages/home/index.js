@@ -12,12 +12,12 @@ const Home = () => {
 		<Page title="Settings" className={ 'hgwp-app-home-page hgwp-home xl:nfd-max-w-screen-lg' }>
 			<div className="nfd-home__title-section">
 				<Title className="nfd-mb-1 nfd-font-bold">
-					{ __( 'Welcome to Bluehost', 'wp-plugin-bluehost' ) }
+					{ __( 'Welcome to HostGator', 'wp-plugin-hostgator' ) }
 				</Title>
 				<span className="nfd-text-sm">
 					{ __(
 						"We're very excited to get started with you!",
-						'wp-plugin-bluehost'
+						'wp-plugin-hostgator'
 					) }
 				</span>
 			</div>
