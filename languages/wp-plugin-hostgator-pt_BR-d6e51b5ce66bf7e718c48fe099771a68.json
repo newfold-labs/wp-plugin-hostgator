@@ -1,6 +1,6 @@
 {
     "translation-revision-date": "2024-12-16 16:11+0000",
-    "generator": "WP-CLI\/2.11.0",
+    "generator": "WP-CLI\/2.12.0",
     "source": "build\/2.14.1\/index.js",
     "domain": "messages",
     "locale_data": {
@@ -24,9 +24,6 @@
             ],
             "Settings": [
                 "Configura\u00e7\u00f5es"
-            ],
-            "Staging": [
-                "Encena\u00e7\u00e3o"
             ],
             "Help": [
                 "Ajuda"
@@ -239,14 +236,8 @@
             "Controls for content revisions and how often to empty the trash.": [
                 "Controles para revis\u00f5es de conte\u00fado e com que frequ\u00eancia esvaziar a lixeira."
             ],
-            "Pages & Posts": [
-                "P\u00e1ginas e Postagens"
-            ],
             "Hostgator WordPress Plugin": [
                 "Plugin WordPress Hostgator"
-            ],
-            "HostGator Account": [
-                "Conta HostGator"
             ],
             "Products & Services": [
                 "Produtos e Servi\u00e7os"
@@ -292,57 +283,6 @@
             ],
             "An error occurred while loading the content. Please try again later.": [
                 "Ocorreu um erro ao carregar o conte\u00fado. Tente novamente mais tarde."
-            ],
-            "Products": [
-                "Produtos"
-            ],
-            "Showcase physical and digital goods, product variations, and custom configurations.": [
-                "Mostrar produtos f\u00edsicos e digitais, varia\u00e7\u00f5es de produtos e configura\u00e7\u00f5es personalizadas."
-            ],
-            "View all ": [
-                "View all "
-            ],
-            "Add New": [
-                "Add New"
-            ],
-            "Blog Posts": [
-                "Blog Posts"
-            ],
-            "Add a new blog post or edit your existing posts.": [
-                "Adicione um novo blog post ou edite seus posts existentes."
-            ],
-            "Bookings & Appointments": [
-                "Bookings & Appointments"
-            ],
-            "Add your list of services, setup a booking calendar, and edit your bookings form.": [
-                "Adicione sua lista de servi\u00e7os, configure um calend\u00e1rio de reservas e edite seu formul\u00e1rio de reservas."
-            ],
-            "Your site is not live.": [
-                "Seu site n\u00e3o est\u00e1 ativo."
-            ],
-            "Your site is live.": [
-                "Seu site est\u00e1 ativo."
-            ],
-            "Visitors to your site will see your \"Coming Soon\" page and not your actual site. Visit ": [
-                "Visitantes do seu site ver\u00e3o sua p\u00e1gina \"Em breve\" e n\u00e3o seu site real. Visite "
-            ],
-            "\"Settings\"": [
-                "\"Configura\u00e7\u00f5es\""
-            ],
-            " to set your site live.": [
-                " para ativar seu site."
-            ],
-            "Visitors to your site will see all your publicly published pages.": [
-                "Visitantes do seu site ver\u00e3o todas as suas p\u00e1ginas publicadas publicamente."
-            ],
-            "Site Pages": [
-                "P\u00e1ginas do site"
-            ],
-            "Edit your homepage and other existing pages or add new pages to your site.": [
-                "Edite sua p\u00e1gina inicial e outras p\u00e1ginas existentes ou adicione novas p\u00e1ginas ao seu site."
-            ],
-            "This is where you can manage cache settings for your website.": [
-                "Aqui \u00e9 onde voc\u00ea pode gerenciar as configura\u00e7\u00f5es de cache do seu site."
             ],
             "Manage All Updates": [
                 "Gerenciar todas as atualiza\u00e7\u00f5es"
@@ -429,146 +369,17 @@
             "The staging feature provides a way to copy a site to test new updates, features or content.": [
                 "O recurso de prepara\u00e7\u00e3o fornece uma maneira de copiar um site para testar novas atualiza\u00e7\u00f5es, recursos ou conte\u00fado."
             ],
-            "Cancel": [
-                "Cancelar"
-            ],
-            "Clone": [
-                "Clonar"
-            ],
-            "Confirm Clone Action": [
-                "Confirmar a\u00e7\u00e3o de clonagem"
-            ],
-            "This will overwrite anything in staging and update it to an exact clone of the current production site. Are you sure you want to proceed?": [
-                "Isso substituir\u00e1 qualquer coisa na prepara\u00e7\u00e3o e a atualizar\u00e1 para um clone exato do site de produ\u00e7\u00e3o atual. Tem certeza de que deseja prosseguir?"
-            ],
-            "Cloned to Staging": [
-                "Clonado para Staging"
-            ],
-            "Cloning production to staging, this should take about a minute.": [
-                "Clonando produ\u00e7\u00e3o para staging, isso deve levar cerca de um minuto."
-            ],
-            "Clone to staging": [
-                "Clone para staging"
-            ],
-            "Created": [
-                "Criado"
-            ],
-            "Staging Created": [
-                "Staging criado"
-            ],
-            "Creating a staging site, this should take about a minute.": [
-                "Criando um site de staging, isso deve levar cerca de um minuto."
-            ],
-            "Create staging site": [
-                "Criar site de prepara\u00e7\u00e3o"
-            ],
-            "Currently editing": [
-                "Editando atualmente"
-            ],
-            "Delete": [
-                "Excluir"
-            ],
-            "Confirm Delete": [
-                "Confirmar exclus\u00e3o"
-            ],
-            "This will permanently delete staging site. Are you sure you want to proceed? You can recreate another staging site at any time, but any specific changes you've made to this staging site will be lost.": [
-                "Isso excluir\u00e1 permanentemente o site de prepara\u00e7\u00e3o. Tem certeza de que deseja prosseguir? Voc\u00ea pode recriar outro site de prepara\u00e7\u00e3o a qualquer momento, mas quaisquer altera\u00e7\u00f5es espec\u00edficas que voc\u00ea tenha feito neste site de prepara\u00e7\u00e3o ser\u00e3o perdidas."
-            ],
-            "Deleted Staging": [
-                "Staging exclu\u00eddo"
-            ],
-            "Deleting the staging site, this should take about a minute.": [
-                "Excluindo o site de staging, isso deve levar cerca de um minuto."
-            ],
-            "Delete Staging Site": [
-                "Excluir site de prepara\u00e7\u00e3o"
-            ],
-            "Deploy": [
-                "Implementar"
-            ],
-            "Deploy all changes": [
-                "Implementar todas as altera\u00e7\u00f5es"
-            ],
-            "Confirm Deployment": [
-                "Confirmar implementa\u00e7\u00e3o"
-            ],
-            "Deploy database only": [
-                "Implementar somente o banco de dados"
-            ],
-            "This will deploy staging to production and overwrite current production site. Are you sure you want to proceed?": [
-                "Isso implementar\u00e1 a prepara\u00e7\u00e3o na produ\u00e7\u00e3o e substituir\u00e1 o site de produ\u00e7\u00e3o atual. Tem certeza de que deseja prosseguir?"
-            ],
-            "Deploy files only": [
-                "Implementar apenas arquivos"
-            ],
-            "Deployed": [
-                "Implementado"
-            ],
-            "Deploying from staging to production, this should take about a minute.": [
-                "Implementando do staging para a produ\u00e7\u00e3o, isso deve levar cerca de um minuto."
-            ],
-            "Deploy Site": [
-                "Implementar site"
-            ],
-            "Error": [
-                "Erro"
-            ],
-            "Not currently editing": [
-                "N\u00e3o est\u00e1 editando no momento"
-            ],
-            "Proceed": [
-                "Continuar"
-            ],
-            "Production Site": [
-                "Site de produ\u00e7\u00e3o"
-            ],
-            "Staging Site": [
-                "Site de prepara\u00e7\u00e3o"
-            ],
-            "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready.": [
-                "Um site de prepara\u00e7\u00e3o \u00e9 uma duplicata do seu site ativo, oferecendo um ambiente seguro para experimentar, testar atualiza\u00e7\u00f5es e implantar quando estiver pronto."
-            ],
-            "Switch": [
-                "Trocar"
-            ],
-            "Switching": [
-                "Trocar"
-            ],
-            "Switch to Production": [
-                "Trocar para produ\u00e7\u00e3o"
-            ],
-            "This will navigate you to the production environment": [
-                "Isso o levar\u00e1 ao ambiente de produ\u00e7\u00e3o"
-            ],
-            "Loading the production environment now.": [
-                "Carregando o ambiente de produ\u00e7\u00e3o agora."
-            ],
-            "Switching to the production environment, this should take about a minute.": [
-                "Alternando para o ambiente de produ\u00e7\u00e3o, isso deve levar cerca de um minuto."
-            ],
-            "Switch to Staging": [
-                "Alternar para o ambiente de prepara\u00e7\u00e3o"
-            ],
-            "This will navigate you to the staging environment": [
-                "Isso o levar\u00e1 ao ambiente de prepara\u00e7\u00e3o"
-            ],
-            "Loading the staging environment now.": [
-                "Carregando o ambiente de prepara\u00e7\u00e3o agora."
-            ],
-            "Switching to the staging environment, this should take about a minute.": [
-                "Alternando para o ambiente de prepara\u00e7\u00e3o, isso deve levar cerca de um minuto."
-            ],
-            "An unknown error has occurred.": [
-                "Ocorreu um erro desconhecido."
-            ],
-            "Working\u2026": [
-                "Funcionando\u2026"
-            ],
             "Sales Channel": [
                 "Canal de vendas"
             ],
             "WonderBlocks provides a library of customizable block patterns and page templates.": [
                 "O WonderBlocks fornece uma biblioteca de padr\u00f5es de blocos e modelos de p\u00e1gina personaliz\u00e1veis."
+            ],
+            "Welcome to HostGator": [
+                ""
+            ],
+            "We're very excited to get started with you!": [
+                ""
             ]
         }
     }

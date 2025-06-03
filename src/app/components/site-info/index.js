@@ -71,9 +71,7 @@ export const SiteInfoBar = () => {
 						className="nfd-bg-white nfd-text-[#212936] nfd-text-tiny nfd-w-full min-[400px]:nfd-w-auto"
 					>
 						<WordPressIcon />
-						{ isEcommerce && isStore
-							? __( 'View Store', 'wp-plugin-hostgator' )
-							: __( 'View Site', 'wp-plugin-hostgator' ) }
+						{ __( 'View Site', 'wp-plugin-hostgator' ) }
 					</Button>
 				</div>
 			</div>

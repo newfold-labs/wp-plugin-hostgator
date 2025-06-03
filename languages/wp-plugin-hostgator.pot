@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2023-01-11T20:21:44+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.11.0\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: wp-plugin-hostgator\n"
 
 #. Plugin Name of the plugin
@@ -63,11 +63,13 @@ msgstr ""
 
 #. translators: %1$s is replaced with opening link tag taking you to hostgator.com/wordpress, %2$s is replaced with closing link tag, %3$s is replaced with opening link tag taking you to login page, %4$s is replaced with closing link tag, %5$s is replaced with opening link tag taking you to portal.hostgator.com, %6$s is replaced with closing link tag.
 #: bootstrap.php:91
+#, php-format
 msgid "A %1$sHostGator%2$s powered website. Is this your website? Log in to %3$sWordPress%4$s or %5$sHostgator%6$s."
 msgstr ""
 
 #. translators: %s is Blog name
 #: bootstrap.php:101
+#, php-format
 msgid "%s &mdash; Coming Soon"
 msgstr ""
 
@@ -77,6 +79,7 @@ msgstr ""
 
 #. translators: %1$s is replaced with the opening link tag, %2$s is replaced with the closing link tag, %3$s is the opening link tag to preview the page, %4$s is the closing link tag.
 #: bootstrap.php:107
+#, php-format
 msgid "Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s."
 msgstr ""
 
@@ -84,76 +87,53 @@ msgstr ""
 msgid "Preview the coming soon landing page"
 msgstr ""
 
-#: inc/Admin.php:65
-#: inc/Admin.php:385
+#: inc/Admin.php:68
+#: inc/Admin.php:383
 #: build/2.14.1/index.js:1
 msgid "Home"
 msgstr ""
 
-#: inc/Admin.php:68
-#: build/2.14.1/index.js:1
-msgid "Pages & Posts"
-msgstr ""
-
-#: inc/Admin.php:71
-#: build/2.14.1/index.js:1
-msgid "Store"
-msgstr ""
-
-#: inc/Admin.php:74
-#: build/2.14.1/index.js:1
-msgid "Marketplace"
-msgstr ""
-
-#: inc/Admin.php:79
-#: build/2.14.1/index.js:1
-msgid "Performance"
-msgstr ""
-
-#: inc/Admin.php:83
-#: inc/Admin.php:386
+#: inc/Admin.php:73
+#: inc/Admin.php:384
 #: build/2.14.1/index.js:1
 msgid "Settings"
 msgstr ""
 
-#: inc/Admin.php:88
-#: build/2.14.1/index.js:1
-msgid "Staging"
+#: inc/Admin.php:78
+msgid "Help Resources"
 msgstr ""
 
-#: inc/Admin.php:92
-#: build/2.14.1/index.js:1
-msgid "Help"
-msgstr ""
-
-#: inc/Admin.php:274
+#: inc/Admin.php:272
 msgid "Please update to a newer WordPress version."
 msgstr ""
 
-#: inc/Admin.php:275
+#: inc/Admin.php:273
 msgid "There are new WordPress components which this plugin requires in order to render the interface."
 msgstr ""
 
-#: inc/Admin.php:276
+#: inc/Admin.php:274
 msgid "Please update now"
 msgstr ""
 
-#: inc/Admin.php:399
+#: inc/Admin.php:397
 msgid "Thank you for creating with <a href=\"https://wordpress.org/\">WordPress</a> and <a href=\"https://hostgator.com/about\">HostGator</a>."
 msgstr ""
 
 #. translators: 1: plugin name 2: incompatible plugin name
 #: inc/plugin-nfd-compat-check.php:161
+#, php-format
 msgid "\"%1$s\" has self-deactivated. It is incompatible with \"%2$s\"."
 msgstr ""
 
 #. translators: 1: legacy plugin name 2: plugin name
 #: inc/plugin-nfd-compat-check.php:188
+#, php-format
 msgid "\"%1$s\" has been deactivated. It is incompatible with \"%2$s\"."
 msgstr ""
 
 #. translators: 1: plugin name 2: minimum required PHP version, current PHP version
 #: inc/plugin-php-compat-check.php:123
+#, php-format
 msgid "%1$s requires PHP version %2$s or later. You are currently running version %3$s."
 msgstr ""
 
@@ -163,21 +143,23 @@ msgstr ""
 
 #. translators: 1: plugin name 2: required PHP extension
 #: inc/plugin-php-compat-check.php:139
+#, php-format
 msgid "%1$s requires the %2$s PHP extension."
 msgstr ""
 
 #. translators: 1: plugin name 2: minimum required WordPress version 3: current WordPress version
 #: inc/plugin-php-compat-check.php:155
+#, php-format
 msgid "%1$s requires WordPress version %2$s or later. You are currently running version %3$s."
 msgstr ""
 
 #. translators: plugin name
 #: inc/plugin-php-compat-check.php:193
+#, php-format
 msgid "The \"%s\" plugin has been deactivated."
 msgstr ""
 
-#: inc/RestApi/CachingController.php:63
-#: inc/RestApi/SettingsController.php:204
+#: inc/RestApi/SettingsController.php:200
 msgid "Sorry, you are not allowed to access this endpoint."
 msgstr ""
 
@@ -185,6 +167,7 @@ msgstr ""
 #: inc/updates.php:115
 #: inc/updates.php:143
 #: inc/updates.php:170
+#, php-format
 msgid "Auto-updates enabled on the <a href=\"%s\">HostGator > Settings</a> page."
 msgstr ""
 
@@ -210,10 +193,6 @@ msgstr ""
 
 #: build/2.14.1/index.js:1
 msgid " Error code: "
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "HostGator Account"
 msgstr ""
 
 #: build/2.14.1/index.js:1
@@ -293,6 +272,10 @@ msgid "There's nothing here!"
 msgstr ""
 
 #: build/2.14.1/index.js:1
+msgid "Store"
+msgstr ""
+
+#: build/2.14.1/index.js:1
 msgid "Products & Services"
 msgstr ""
 
@@ -313,6 +296,14 @@ msgid "Store Details"
 msgstr ""
 
 #: build/2.14.1/index.js:1
+msgid "Marketplace"
+msgstr ""
+
+#: build/2.14.1/index.js:1
+msgid "Help"
+msgstr ""
+
+#: build/2.14.1/index.js:1
 msgid "Admin"
 msgstr ""
 
@@ -322,6 +313,14 @@ msgstr ""
 
 #: build/2.14.1/index.js:1
 msgid "We are available 24/7 to help answer questions and solve your problems."
+msgstr ""
+
+#: build/2.14.1/index.js:1
+msgid "Welcome to HostGator"
+msgstr ""
+
+#: build/2.14.1/index.js:1
+msgid "We're very excited to get started with you!"
 msgstr ""
 
 #: build/2.14.1/index.js:1
@@ -342,6 +341,10 @@ msgstr ""
 
 #: build/2.14.1/index.js:1
 msgid "Manage your site settings. You can ajdust automatic updates, comments, revisions and more."
+msgstr ""
+
+#: build/2.14.1/index.js:1
+msgid "Performance"
 msgstr ""
 
 #: build/2.14.1/index.js:1
@@ -470,74 +473,6 @@ msgstr ""
 
 #: build/2.14.1/index.js:1
 msgid "An error occurred while loading the content. Please try again later."
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Products"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Showcase physical and digital goods, product variations, and custom configurations."
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "View all "
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Add New"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Blog Posts"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Add a new blog post or edit your existing posts."
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Bookings & Appointments"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Add your list of services, setup a booking calendar, and edit your bookings form."
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Your site is not live."
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Your site is live."
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Visitors to your site will see your \"Coming Soon\" page and not your actual site. Visit "
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "\"Settings\""
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid " to set your site live."
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Visitors to your site will see all your publicly published pages."
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Site Pages"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Edit your homepage and other existing pages or add new pages to your site."
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "This is where you can manage cache settings for your website."
 msgstr ""
 
 #: build/2.14.1/index.js:1
@@ -728,184 +663,4 @@ msgstr ""
 
 #: build/2.14.1/index.js:1
 msgid "WonderBlocks provides a library of customizable block patterns and page templates."
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Cancel"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Clone"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Confirm Clone Action"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "This will overwrite anything in staging and update it to an exact clone of the current production site. Are you sure you want to proceed?"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Cloned to Staging"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Cloning production to staging, this should take about a minute."
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Clone to staging"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Created"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Staging Created"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Creating a staging site, this should take about a minute."
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Create staging site"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Currently editing"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Delete"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Confirm Delete"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "This will permanently delete staging site. Are you sure you want to proceed? You can recreate another staging site at any time, but any specific changes you've made to this staging site will be lost."
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Deleted Staging"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Deleting the staging site, this should take about a minute."
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Delete Staging Site"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Deploy"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Deploy all changes"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Confirm Deployment"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Deploy database only"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "This will deploy staging to production and overwrite current production site. Are you sure you want to proceed?"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Deploy files only"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Deployed"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Deploying from staging to production, this should take about a minute."
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Deploy Site"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Error"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Not currently editing"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Proceed"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Production Site"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Staging Site"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready."
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Switch"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Switching"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Switch to Production"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "This will navigate you to the production environment"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Loading the production environment now."
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Switching to the production environment, this should take about a minute."
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Switch to Staging"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "This will navigate you to the staging environment"
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Loading the staging environment now."
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Switching to the staging environment, this should take about a minute."
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "An unknown error has occurred."
-msgstr ""
-
-#: build/2.14.1/index.js:1
-msgid "Working…"
 msgstr ""

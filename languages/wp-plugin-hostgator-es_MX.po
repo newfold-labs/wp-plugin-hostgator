@@ -56,11 +56,13 @@ msgstr "¡Muy Pronto!"
 
 #. translators: %1$s is replaced with opening link tag taking you to hostgator.com/wordpress, %2$s is replaced with closing link tag, %3$s is replaced with opening link tag taking you to login page, %4$s is replaced with closing link tag, %5$s is replaced with opening link tag taking you to portal.hostgator.com, %6$s is replaced with closing link tag.
 #: bootstrap.php:91
+#, php-format
 msgid "A %1$sHostGator%2$s powered website. Is this your website? Log in to %3$sWordPress%4$s or %5$sHostgator%6$s."
 msgstr "Un sitio web creado por %1$sHostGator%2$s. ¿Este sitio web es tuyo? Inicia sesión en %3$sWordPress%4$s o %5$sHostGator%6$s."
 
 #. translators: %s is Blog name
 #: bootstrap.php:101
+#, php-format
 msgid "%s &mdash; Coming Soon"
 msgstr "¡Muy Pronto!"
 
@@ -70,6 +72,7 @@ msgstr "Muy Pronto Activo"
 
 #. translators: %1$s is replaced with the opening link tag, %2$s is replaced with the closing link tag, %3$s is the opening link tag to preview the page, %4$s is the closing link tag.
 #: bootstrap.php:107
+#, php-format
 msgid "Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s."
 msgstr "Tu sitio actualmente muestra una %1$spróxima página%2$s. Una vez que esté listo, inicie su sitio%4$s."
 
@@ -77,61 +80,61 @@ msgstr "Tu sitio actualmente muestra una %1$spróxima página%2$s. Una vez que e
 msgid "Preview the coming soon landing page"
 msgstr " Vista previa de la próxima página de inicio"
 
-#: inc/Admin.php:65
-#: inc/Admin.php:385
+#: inc/Admin.php:68
+#: inc/Admin.php:383
 #: build/2.14.1/index.js:1
 msgid "Home"
 msgstr "Pagina principal"
 
-#: inc/Admin.php:74
 #: build/2.14.1/index.js:1
 msgid "Marketplace"
 msgstr " Marketplace"
 
-#: inc/Admin.php:79
 #: build/2.14.1/index.js:1
 msgid "Performance"
 msgstr "Rendimiento"
 
-#: inc/Admin.php:83
-#: inc/Admin.php:386
+#: inc/Admin.php:73
+#: inc/Admin.php:384
 #: build/2.14.1/index.js:1
 msgid "Settings"
 msgstr "Configuraciones"
 
-#: inc/Admin.php:92
 #: build/2.14.1/index.js:1
 msgid "Help"
 msgstr "Ayuda"
 
-#: inc/Admin.php:274
+#: inc/Admin.php:272
 msgid "Please update to a newer WordPress version."
 msgstr "Por favor actualiza a una versión más nueva de WordPress."
 
-#: inc/Admin.php:275
+#: inc/Admin.php:273
 msgid "There are new WordPress components which this plugin requires in order to render the interface."
 msgstr "Hay nuevos componentes de WordPress que este plugin requiere para renderizar la interfaz."
 
-#: inc/Admin.php:276
+#: inc/Admin.php:274
 msgid "Please update now"
 msgstr "Por favor actualiza ahora"
 
-#: inc/Admin.php:399
+#: inc/Admin.php:397
 msgid "Thank you for creating with <a href=\"https://wordpress.org/\">WordPress</a> and <a href=\"https://hostgator.com/about\">HostGator</a>."
 msgstr "Gracias por crear con <a href=\"https://es-mx.wordpress.org/\">WordPress</a> y <a href=\"https://hostgator.mx/\">HostGator</a>."
 
 #. translators: 1: plugin name 2: incompatible plugin name
 #: inc/plugin-nfd-compat-check.php:161
+#, php-format
 msgid "\"%1$s\" has self-deactivated. It is incompatible with \"%2$s\"."
 msgstr "\"%1$s\" se ha autodesactivado. Es incompatible con \"%2$s\"."
 
 #. translators: 1: legacy plugin name 2: plugin name
 #: inc/plugin-nfd-compat-check.php:188
+#, php-format
 msgid "\"%1$s\" has been deactivated. It is incompatible with \"%2$s\"."
 msgstr "\"%1$s\" se ha autodesactivado. Es incompatible con \"%2$s\"."
 
 #. translators: 1: plugin name 2: minimum required PHP version, current PHP version
 #: inc/plugin-php-compat-check.php:123
+#, php-format
 msgid "%1$s requires PHP version %2$s or later. You are currently running version %3$s."
 msgstr "%1$s requiere la versión de PHP %2$s o posterior. Actualmente estas ejecutando la versión %3$s."
 
@@ -141,21 +144,23 @@ msgstr " Por favor, Comunícate con tu proveedor de alojamiento web para actuali
 
 #. translators: 1: plugin name 2: required PHP extension
 #: inc/plugin-php-compat-check.php:139
+#, php-format
 msgid "%1$s requires the %2$s PHP extension."
 msgstr "%1$s requiere la extensión PHP %2$s."
 
 #. translators: 1: plugin name 2: minimum required WordPress version 3: current WordPress version
 #: inc/plugin-php-compat-check.php:155
+#, php-format
 msgid "%1$s requires WordPress version %2$s or later. You are currently running version %3$s."
 msgstr "%1$s requiere la versión de WordPress %2$s o posterior. Actualmente estas ejecutando la versión %3$s."
 
 #. translators: plugin name
 #: inc/plugin-php-compat-check.php:193
+#, php-format
 msgid "The \"%s\" plugin has been deactivated."
 msgstr "El plugin \"%s\" ha sido desactivado."
 
-#: inc/RestApi/CachingController.php:63
-#: inc/RestApi/SettingsController.php:204
+#: inc/RestApi/SettingsController.php:200
 msgid "Sorry, you are not allowed to access this endpoint."
 msgstr "Lo sentimos, no tienes permiso para acceder a esta terminal."
 
@@ -163,6 +168,7 @@ msgstr "Lo sentimos, no tienes permiso para acceder a esta terminal."
 #: inc/updates.php:115
 #: inc/updates.php:143
 #: inc/updates.php:170
+#, php-format
 msgid "Auto-updates enabled on the <a href=\"%s\">HostGator > Settings</a> page."
 msgstr "Actualizaciones automáticas habilitadas en la página Configuración</a> de <a href=\"%s\">HostGator >."
 
@@ -434,15 +440,9 @@ msgstr "Opciones de Contenido"
 msgid "Controls for content revisions and how often to empty the trash."
 msgstr "Controles para revisiones de contenido y con qué frecuencia vaciar la papelera."
 
-#: inc/Admin.php:71
 #: build/2.14.1/index.js:1
 msgid "Store"
 msgstr "Tienda"
-
-#: inc/Admin.php:88
-#: build/2.14.1/index.js:1
-msgid "Staging"
-msgstr "Entorno de prueba"
 
 #: bootstrap.php:81
 msgid "How to build your WordPress Website"
@@ -456,18 +456,9 @@ msgstr " ¿Cómo migrar un sitio web a Hostgator? "
 msgid "Why choose HostGator for your WordPress site?"
 msgstr " ¿Por qué elegir HostGator para tu sitio de WordPress?"
 
-#: inc/Admin.php:68
-#: build/2.14.1/index.js:1
-msgid "Pages & Posts"
-msgstr "Páginas y publicaciones "
-
 #: build/2.14.1/index.js:1
 msgid "Hostgator WordPress Plugin"
 msgstr "Plugin de WordPress para Hostgator "
-
-#: build/2.14.1/index.js:1
-msgid "HostGator Account"
-msgstr "Cuenta HostGator "
 
 #: build/2.14.1/index.js:1
 msgid "Products & Services"
@@ -528,74 +519,6 @@ msgstr "¡Ups! Algo salió mal"
 #: build/2.14.1/index.js:1
 msgid "An error occurred while loading the content. Please try again later."
 msgstr " Se produjo un error al cargar el contenido. Inténtelo de nuevo más tarde."
-
-#: build/2.14.1/index.js:1
-msgid "Products"
-msgstr " Productos"
-
-#: build/2.14.1/index.js:1
-msgid "Showcase physical and digital goods, product variations, and custom configurations."
-msgstr " Muestra productos físicos y digitales, variaciones de productos y configuraciones personalizadas."
-
-#: build/2.14.1/index.js:1
-msgid "View all "
-msgstr " Ver todo"
-
-#: build/2.14.1/index.js:1
-msgid "Add New"
-msgstr " Agregar nuevo "
-
-#: build/2.14.1/index.js:1
-msgid "Blog Posts"
-msgstr " Publicaciones de blog "
-
-#: build/2.14.1/index.js:1
-msgid "Add a new blog post or edit your existing posts."
-msgstr "Agrega una nueva publicación de blog o edite tus publicaciones existentes. "
-
-#: build/2.14.1/index.js:1
-msgid "Bookings & Appointments"
-msgstr " Reservas y Citas"
-
-#: build/2.14.1/index.js:1
-msgid "Add your list of services, setup a booking calendar, and edit your bookings form."
-msgstr " Agrega tu lista de servicios, configure un calendario de reservas y edite tu formulario de reservas. "
-
-#: build/2.14.1/index.js:1
-msgid "Your site is not live."
-msgstr "Tu sitio no está activo. "
-
-#: build/2.14.1/index.js:1
-msgid "Your site is live."
-msgstr " Tu sitio está activo."
-
-#: build/2.14.1/index.js:1
-msgid "Visitors to your site will see your \"Coming Soon\" page and not your actual site. Visit "
-msgstr " Los visitantes de tu sitio verán su página \"Próximamente\" y no tu sitio real."
-
-#: build/2.14.1/index.js:1
-msgid "\"Settings\""
-msgstr "Configuraciones"
-
-#: build/2.14.1/index.js:1
-msgid " to set your site live."
-msgstr "para configurar tu sitio en vivo."
-
-#: build/2.14.1/index.js:1
-msgid "Visitors to your site will see all your publicly published pages."
-msgstr " Los visitantes de tu sitio verán todas sus páginas publicadas públicamente."
-
-#: build/2.14.1/index.js:1
-msgid "Site Pages"
-msgstr " Páginas del sitio"
-
-#: build/2.14.1/index.js:1
-msgid "Edit your homepage and other existing pages or add new pages to your site."
-msgstr "Edita tu página de inicio y otras páginas existentes o agrega nuevas páginas a tu sitio."
-
-#: build/2.14.1/index.js:1
-msgid "This is where you can manage cache settings for your website."
-msgstr " Aquí es donde puede administrar la configuración de caché de tu sitio web. "
 
 #: build/2.14.1/index.js:1
 msgid "Manage All Updates"
@@ -708,186 +631,6 @@ msgid "The staging feature provides a way to copy a site to test new updates, fe
 msgstr " La función de preparación proporciona una forma de copiar un sitio para probar nuevas actualizaciones, funciones o contenido."
 
 #: build/2.14.1/index.js:1
-msgid "Cancel"
-msgstr " Cancelar "
-
-#: build/2.14.1/index.js:1
-msgid "Clone"
-msgstr " Clon "
-
-#: build/2.14.1/index.js:1
-msgid "Confirm Clone Action"
-msgstr " Confirmar acción de clonación "
-
-#: build/2.14.1/index.js:1
-msgid "This will overwrite anything in staging and update it to an exact clone of the current production site. Are you sure you want to proceed?"
-msgstr "Esto sobrescribirá todo lo que esté en preparación y lo actualizará a un clon exacto del sitio de producción actual. ¿Estás seguro de que deseas continuar?\" "
-
-#: build/2.14.1/index.js:1
-msgid "Cloned to Staging"
-msgstr "Clonado del entorno de pureba"
-
-#: build/2.14.1/index.js:1
-msgid "Cloning production to staging, this should take about a minute."
-msgstr " Clonando producción del entorno de prueba, esto tomará aproximadamente un minuto..."
-
-#: build/2.14.1/index.js:1
-msgid "Clone to staging"
-msgstr "Clonar entorno de prueba"
-
-#: build/2.14.1/index.js:1
-msgid "Created"
-msgstr " Creado "
-
-#: build/2.14.1/index.js:1
-msgid "Staging Created"
-msgstr "Entorno de prueba creado"
-
-#: build/2.14.1/index.js:1
-msgid "Creating a staging site, this should take about a minute."
-msgstr " Crear un entorno de prueba debería llevar aproximadamente un minuto. "
-
-#: build/2.14.1/index.js:1
-msgid "Create staging site"
-msgstr " Crear sitio de prueba"
-
-#: build/2.14.1/index.js:1
-msgid "Currently editing"
-msgstr "Actualmente editando"
-
-#: build/2.14.1/index.js:1
-msgid "Delete"
-msgstr " Borrar"
-
-#: build/2.14.1/index.js:1
-msgid "Confirm Delete"
-msgstr "Confirmar eliminación "
-
-#: build/2.14.1/index.js:1
-msgid "This will permanently delete staging site. Are you sure you want to proceed? You can recreate another staging site at any time, but any specific changes you've made to this staging site will be lost."
-msgstr " Esto eliminará permanentemente el entorno de prueba. ¿Estás seguro de que quieres continuar? Puedes recrear otro sitio de prueba en cualquier momento, pero se perderán todos los cambios específicos que hayas realizado en este sitio de prueba."
-
-#: build/2.14.1/index.js:1
-msgid "Deleted Staging"
-msgstr "Entorno de prueba eliminado"
-
-#: build/2.14.1/index.js:1
-msgid "Deleting the staging site, this should take about a minute."
-msgstr " La eliminación del entorno de prueba debe llevar aproximadamente un minuto."
-
-#: build/2.14.1/index.js:1
-msgid "Delete Staging Site"
-msgstr "Eliminar sitio de prueba"
-
-#: build/2.14.1/index.js:1
-msgid "Deploy"
-msgstr "Desplegar"
-
-#: build/2.14.1/index.js:1
-msgid "Deploy all changes"
-msgstr " Implementar todos los cambios"
-
-#: build/2.14.1/index.js:1
-msgid "Confirm Deployment"
-msgstr "Confirmar implementación"
-
-#: build/2.14.1/index.js:1
-msgid "Deploy database only"
-msgstr "Implementar solo base de datos"
-
-#: build/2.14.1/index.js:1
-msgid "This will deploy staging to production and overwrite current production site. Are you sure you want to proceed?"
-msgstr "Esto implementará la preparación en producción y sobrescribirá el sitio de producción actual. ¿Estás seguro de que quieres continuar? "
-
-#: build/2.14.1/index.js:1
-msgid "Deploy files only"
-msgstr " Implementar solo archivos"
-
-#: build/2.14.1/index.js:1
-msgid "Deployed"
-msgstr " Implementado"
-
-#: build/2.14.1/index.js:1
-msgid "Deploying from staging to production, this should take about a minute."
-msgstr " La implementación desde el sitio de prueba hasta la producción debería llevar aproximadamente un minuto. "
-
-#: build/2.14.1/index.js:1
-msgid "Deploy Site"
-msgstr "Implementar sitio"
-
-#: build/2.14.1/index.js:1
-msgid "Error"
-msgstr "Error"
-
-#: build/2.14.1/index.js:1
-msgid "Not currently editing"
-msgstr "No editando actualmente"
-
-#: build/2.14.1/index.js:1
-msgid "Proceed"
-msgstr "Proceder "
-
-#: build/2.14.1/index.js:1
-msgid "Production Site"
-msgstr " Sitio de producción"
-
-#: build/2.14.1/index.js:1
-msgid "Staging Site"
-msgstr " Sitio de prueba "
-
-#: build/2.14.1/index.js:1
-msgid "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready."
-msgstr " Un sitio de prueba es un duplicado de tu sitio activo y ofrece un entorno seguro para experimentar, probar actualizaciones e implementar cuando esté listo."
-
-#: build/2.14.1/index.js:1
-msgid "Switch"
-msgstr " Cambiar"
-
-#: build/2.14.1/index.js:1
-msgid "Switching"
-msgstr "Cambio"
-
-#: build/2.14.1/index.js:1
-msgid "Switch to Production"
-msgstr "Cambiar a producción "
-
-#: build/2.14.1/index.js:1
-msgid "This will navigate you to the production environment"
-msgstr " Esto te llevará al entorno de producción."
-
-#: build/2.14.1/index.js:1
-msgid "Loading the production environment now."
-msgstr " Cargando el entorno de producción ahora"
-
-#: build/2.14.1/index.js:1
-msgid "Switching to the production environment, this should take about a minute."
-msgstr " Cambiar al entorno de producción debe llevar aproximadamente un minuto."
-
-#: build/2.14.1/index.js:1
-msgid "Switch to Staging"
-msgstr " Cambiar entorno de prueba"
-
-#: build/2.14.1/index.js:1
-msgid "This will navigate you to the staging environment"
-msgstr "Esto te llevará al entorno de prueba."
-
-#: build/2.14.1/index.js:1
-msgid "Loading the staging environment now."
-msgstr " Cargando el entorno de prueba ahora."
-
-#: build/2.14.1/index.js:1
-msgid "Switching to the staging environment, this should take about a minute."
-msgstr " Cambiar al entorno de prueba debe llevar aproximadamente un minuto. "
-
-#: build/2.14.1/index.js:1
-msgid "An unknown error has occurred."
-msgstr "Se ha producido un error desconocido."
-
-#: build/2.14.1/index.js:1
-msgid "Working…"
-msgstr "Trabajando..."
-
-#: build/2.14.1/index.js:1
 msgid "Sales Channel"
 msgstr "Canal de Ventas"
 
@@ -914,3 +657,15 @@ msgstr "Tweet"
 #: build/2.14.1/index.js:1
 msgid "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take "
 msgstr "Guardar borradores y actualizar el contenido publicado crea revisiones. Haga cambios con confianza, sabiendo que puede tomar "
+
+#: inc/Admin.php:78
+msgid "Help Resources"
+msgstr ""
+
+#: build/2.14.1/index.js:1
+msgid "Welcome to HostGator"
+msgstr ""
+
+#: build/2.14.1/index.js:1
+msgid "We're very excited to get started with you!"
+msgstr ""
