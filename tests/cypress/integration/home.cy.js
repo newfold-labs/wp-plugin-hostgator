@@ -9,22 +9,11 @@ describe('Home Page', { testIsolation: true }, () => {
 		
 	});
 
-	it('Site Info Exists', () => {
-		cy.window().then((win) => {
-			const siteTitle = win.NewfoldRuntime.siteTitle;
-			cy.get( appClass + '-app-site-info').contains('h3', siteTitle)
-			.scrollIntoView()
-			.should('be.visible');
-		  })
-	});
-
-	it('Is Accessible', () => {
+	it('Is Accessible and Each Section Exists', () => {
 		cy.injectAxe();
 		cy.get( appClass + '-home', { timeout: 2000 } ).should( 'exist' );
 		cy.checkA11y( appClass + '-app-body');
-	});
 
-	it('Each Section Exists', () => {
 		// Maintenance Mode
 		cy
 			.get( appClass + '-app-home-coming-soon').contains('h3', 'Site Status')

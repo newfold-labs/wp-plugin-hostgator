@@ -124,9 +124,6 @@ class SettingsController extends \WP_REST_Controller {
 					case 'emptyTrashDays':
 						update_option( 'nfd_empty_trash_days', intval( $new_value ) );
 						break;
-					case 'cacheLevel':
-						update_option( 'endurance_cache_level', $new_value );
-						break;
 					case 'hasSetHomepage':
 						update_option( 'bh_has_set_homepage', (bool) $new_value );
 						break;
@@ -185,7 +182,6 @@ class SettingsController extends \WP_REST_Controller {
 			'commentsPerPage'         => intval( get_option( 'comments_per_page', 50 ) ),
 			'contentRevisions'        => intval( get_option( 'nfd_wp_post_revisions', 5 ) ),
 			'emptyTrashDays'          => intval( get_option( 'nfd_empty_trash_days', 30 ) ),
-			'cacheLevel'              => intval( get_option( 'endurance_cache_level', 2 ) ),
 			'hasSetHomepage'          => (bool) get_option( 'bh_has_set_homepage', false ),
 			'showOnFront'             => (string) get_option( 'show_on_front' ),
 			'pageOnFront'             => (int) get_option( 'page_on_front' ),

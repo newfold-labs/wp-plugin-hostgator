@@ -42,6 +42,6 @@ if ( fs.existsSync( packagefile ) && fs.existsSync( pluginfile ) ) {
 	console.log( 'Version updated', currentVersion, '=>', newVersion );
 } else {
 	console.log(
-		'Version update error: package.json or bluehost-wordpress-plugin.php not found.'
+		'Version update error: package.json or wp-plugin-hostgator.php not found.'
 	);
 }
