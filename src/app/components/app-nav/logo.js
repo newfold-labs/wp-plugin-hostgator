@@ -19,6 +19,7 @@ const Mark = () => {
 			onMouseUp={ defocus }
 			className="logo-mark nfd-p-0"
 			href="#/home"
+			aria-label="HostGator"
 		/>
 	);
 };

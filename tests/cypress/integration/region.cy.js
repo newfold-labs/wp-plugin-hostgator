@@ -11,7 +11,7 @@ describe('Regional Adjustments', { testIsolation: true }, () => {
         cy.reload();
     });
 
-    it('Site info portal link adjusts for BR', () => {
+    it('Web hosting link adjusts for BR', () => {
 
         cy.visit('/wp-admin/admin.php?page=' + Cypress.env('pluginId') + '#/home', {
             onBeforeLoad() {
@@ -23,9 +23,9 @@ describe('Regional Adjustments', { testIsolation: true }, () => {
             }
         });
 
-        cy.get('#site_info_portal_button').should('have.attr', 'href')
+        cy.get('.hgwp-app-home-sites-action a.nfd-button').should('have.attr', 'href')
             .then(href => {
-                expect(href).to.contain('financeiro.hostgator.com.br')
+                expect(href).to.contain('cliente.hostgator.com.br')
             });
 
     });

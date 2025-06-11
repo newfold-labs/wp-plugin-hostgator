@@ -5,8 +5,9 @@ const wpVersion = /[^/]*$/.exec(core)[0]
 module.exports = defineConfig({
 	projectId: 'kuks2q',
 	env: {
-		wpUsername: 'admin',
-		wpPassword: 'password',
+		baseUrl: process.env.BASE_URL || 'http://localhost:8884',
+		wpUsername: process.env.WP_ADMIN_USERNAME || 'admin',
+		wpPassword: process.env.WP_ADMIN_PASSWORD || 'password',
 		wpVersion,
 		phpVersion,
 		pluginId: 'hostgator',
@@ -112,7 +113,7 @@ module.exports = defineConfig({
 const supportsWoo = ( env ) => {
 	const semver = require( 'semver' );
 	if (
-		semver.satisfies( env.wpSemverVersion, '>=6.6.0' ) &&
+		semver.satisfies( env.wpSemverVersion, '>=6.7.0' ) &&
 		semver.satisfies( env.phpSemverVersion, '>=7.4.0' )
 	) {
 		return true;
@@ -123,8 +124,19 @@ const supportsWoo = ( env ) => {
 const supportsJetpack = ( env ) => {
 	const semver = require( 'semver' );
 	if (
-		semver.satisfies( env.wpSemverVersion, '>=6.6.0' ) &&
+		semver.satisfies( env.wpSemverVersion, '>=6.7.0' ) &&
 		semver.satisfies( env.phpSemverVersion, '>=7.2.0' )
+	) {
+		return true;
+	}
+	return false;
+};
+// Check against plugin support at https://wordpress.org/plugins/wordpress-seo/
+const supportsYoast = ( env ) => {
+	const semver = require( 'semver' );
+	if (
+		semver.satisfies( env.wpSemverVersion, '>=6.6.0' ) &&
+		semver.satisfies( env.phpSemverVersion, '>=7.4.0' )
 	) {
 		return true;
 	}

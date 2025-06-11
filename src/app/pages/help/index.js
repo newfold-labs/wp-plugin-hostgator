@@ -26,7 +26,7 @@ const HelpCard = ( { item } ) => {
 				<Button
 					variant="secondary"
 					as="a"
-					className="nfd-w-full"
+					className="nfd-w-full nfd-transition-bg nfd-duration-100"
 					href={ getLinkPerRegion( item.id, item.cta ) }
 					target="_blank"
 				>
@@ -55,16 +55,23 @@ const Help = () => {
 	};
 	return (
 		<Page className={ 'hgwp-app-help-page' }>
-			<Container className={ 'hgwp-app-help-container' }>
-				<Container.Header
-					title={ __( 'Help', 'wp-plugin-hostgator' ) }
-					description={ __(
+			<div className={ 'hgwp-app-help-page__header' }>
+				<Title as ="h1">{ __( 'Help', 'wp-plugin-hostgator' ) }</Title>
+				<Title as="h2" className="nfd-font-normal nfd-text-[13px]">
+					{ __(
 						'We are available 24/7 to help answer questions and solve your problems.',
 						'wp-plugin-hostgator'
 					) }
-				/>
-
-				<Container.Block>{ renderHelpCards() }</Container.Block>
+				</Title>
+			</div>
+			<Container
+				className={
+					'hgwp-app-help-container nfd-bg-transparent nfd-shadow-none'
+				}
+			>
+				<Container.Block className={ 'nfd-p-0' }>
+					{ renderHelpCards() }
+				</Container.Block>
 			</Container>
 		</Page>
 	);
