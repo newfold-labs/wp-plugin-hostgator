@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "977853a771963fc2ef73c17a3d5edbe9",
+    "content-hash": "8ccc1569d17c71f99eae3bd38f8c0387",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -1266,16 +1266,16 @@
         },
         {
             "name": "newfold-labs/wp-module-global-ctb",
-            "version": "1.2.1",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-global-ctb.git",
-                "reference": "5816e12ac26d39f9a9e12d8325805681731654bb"
+                "reference": "ff324fccbff25972a8d34ddf291726f5ba490fca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-global-ctb/zipball/5816e12ac26d39f9a9e12d8325805681731654bb",
-                "reference": "5816e12ac26d39f9a9e12d8325805681731654bb",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-global-ctb/zipball/ff324fccbff25972a8d34ddf291726f5ba490fca",
+                "reference": "ff324fccbff25972a8d34ddf291726f5ba490fca",
                 "shasum": ""
             },
             "require-dev": {
@@ -1309,10 +1309,10 @@
             ],
             "description": "Newfold module for 'Click to Buy' functionality in brand plugins",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-global-ctb/tree/1.2.1",
+                "source": "https://github.com/newfold-labs/wp-module-global-ctb/tree/1.2.0",
                 "issues": "https://github.com/newfold-labs/wp-module-global-ctb/issues"
             },
-            "time": "2025-06-03T18:41:53+00:00"
+            "time": "2025-04-14T17:16:04+00:00"
         },
         {
             "name": "newfold-labs/wp-module-help-center",
@@ -5578,10 +5578,10 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "platform-overrides": {
         "php": "7.3.0"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
