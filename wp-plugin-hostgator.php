@@ -12,7 +12,7 @@
  * Plugin URI:        https://hostgator.com
  * Update URI:        https://github.com/newfold-labs/wp-plugin-hostgator/
  * Description:       WordPress plugin that integrates a WordPress site with the HostGator control panel, including performance, security, and update features.
- * Version:           2.15.0
+ * Version:           2.15.1
  * Requires at least: 6.6
  * Requires PHP:      7.3
  * Tested up to:      6.8.1
@@ -32,7 +32,7 @@ if ( defined( 'HOSTGATOR_PLUGIN_VERSION' ) ) {
 }
 
 // Define constants
-define( 'HOSTGATOR_PLUGIN_VERSION', '2.15.0' );
+define( 'HOSTGATOR_PLUGIN_VERSION', '2.15.1' );
 define( 'HOSTGATOR_PLUGIN_FILE', __FILE__ );
 define( 'HOSTGATOR_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'HOSTGATOR_PLUGIN_URL', plugin_dir_url( __FILE__ ) );

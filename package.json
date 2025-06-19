@@ -2,7 +2,7 @@
     "name": "wp-plugin-hostgator",
     "description": "WordPress plugin that integrates your WordPress site with the HostGator control panel, including performance, security, and update features.",
     "license": "GPL-2.0-or-later",
-    "version": "2.15.0",
+    "version": "2.15.1",
     "private": true,
     "contributors": [
         "Abdulrahman Al Ani (https://alani.dev/)",
@@ -41,7 +41,7 @@
         "@testing-library/cypress": "^10.0.3",
         "@wordpress/env": "^10.25.0",
         "@wordpress/scripts": "^30.18.0",
-        "cypress": "^14.4.1",
+        "cypress": "^14.5.0",
         "cypress-axe": "1.6.0",
         "node-fetch": "^3.3.2",
         "node-wp-i18n": "^1.2.7",
