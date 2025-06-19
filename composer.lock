@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6a84dc2183beff9bc3bfc865cd8200d3",
+    "content-hash": "3cc7b38690266bbddb57df6352e1f6a4",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -1277,16 +1277,16 @@
         },
         {
             "name": "newfold-labs/wp-module-global-ctb",
-            "version": "1.2.0",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-global-ctb.git",
-                "reference": "ff324fccbff25972a8d34ddf291726f5ba490fca"
+                "reference": "00332e508e0ada2f0d1770a397e2f8ec1e4290f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-global-ctb/zipball/ff324fccbff25972a8d34ddf291726f5ba490fca",
-                "reference": "ff324fccbff25972a8d34ddf291726f5ba490fca",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-global-ctb/zipball/00332e508e0ada2f0d1770a397e2f8ec1e4290f8",
+                "reference": "00332e508e0ada2f0d1770a397e2f8ec1e4290f8",
                 "shasum": ""
             },
             "require-dev": {
@@ -1320,10 +1320,10 @@
             ],
             "description": "Newfold module for 'Click to Buy' functionality in brand plugins",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-global-ctb/tree/1.2.0",
+                "source": "https://github.com/newfold-labs/wp-module-global-ctb/tree/1.2.2",
                 "issues": "https://github.com/newfold-labs/wp-module-global-ctb/issues"
             },
-            "time": "2025-04-14T17:16:04+00:00"
+            "time": "2025-06-18T22:03:47+00:00"
         },
         {
             "name": "newfold-labs/wp-module-help-center",
