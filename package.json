@@ -44,7 +44,7 @@
         "cypress": "^14.5.0",
         "cypress-axe": "1.6.0",
         "node-fetch": "^3.3.2",
-        "node-wp-i18n": "^1.2.7",
+        "node-wp-i18n": "^1.2.8",
         "tailwindcss": "^3.4.17"
     },
     "scripts": {
