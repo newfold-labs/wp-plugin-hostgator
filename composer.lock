@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c5d6bdd6ded727c41449e7c6d819740",
+    "content-hash": "3d73d21e3867d6bacc0a0292a11c4a96",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -515,16 +515,16 @@
         },
         {
             "name": "newfold-labs/wp-module-activation",
-            "version": "1.0.9",
+            "version": "1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-activation.git",
-                "reference": "f7e9e4d4312b54ee7fa51617be9c1b4575bbbe39"
+                "reference": "603097499663979473feefadd4e147b22a0c4064"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-activation/zipball/f7e9e4d4312b54ee7fa51617be9c1b4575bbbe39",
-                "reference": "f7e9e4d4312b54ee7fa51617be9c1b4575bbbe39",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-activation/zipball/603097499663979473feefadd4e147b22a0c4064",
+                "reference": "603097499663979473feefadd4e147b22a0c4064",
                 "shasum": ""
             },
             "require-dev": {
@@ -577,10 +577,10 @@
             ],
             "description": "A Module for handling WordPress brand plugins activations",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-activation/tree/1.0.9",
+                "source": "https://github.com/newfold-labs/wp-module-activation/tree/1.0.10",
                 "issues": "https://github.com/newfold-labs/wp-module-activation/issues"
             },
-            "time": "2025-06-06T22:16:00+00:00"
+            "time": "2025-06-30T18:13:04+00:00"
         },
         {
             "name": "newfold-labs/wp-module-ai",
