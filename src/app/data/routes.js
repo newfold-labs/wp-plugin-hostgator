@@ -24,6 +24,32 @@ const HelpCenterAI = (e) => {
 	window.newfoldEmbeddedHelp.toggleNFDLaunchedEmbeddedHelp();
 };
 
+/**
+ * Redirect component for staging route.
+ * Redirects users to the nfd-staging page.
+ *
+ * @return {null} Returns null as this component only handles redirection.
+ */
+const StagingRedirect = () => {
+	// Redirect to the nfd-staging page.
+	window.location.href =
+		window.NewfoldRuntime.adminUrl + 'admin.php?page=nfd-staging';
+	return null;
+};
+
+/**
+ * Redirect component for performance route.
+ * Redirects users to the nfd-performance page.
+ *
+ * @return {null} Returns null as this component only handles redirection.
+ */
+const PerformanceRedirect = () => {
+	// Redirect to the nfd-performance page.
+	window.location.href =
+		window.NewfoldRuntime.adminUrl + 'admin.php?page=nfd-performance';
+	return null;
+};
+
 export const AppRoutes = () => {
 	return (
 		<Routes>
@@ -38,6 +64,8 @@ export const AppRoutes = () => {
 					element={<page.Component />}
 				/>
 			))}
+			<Route path="/staging" element={ <StagingRedirect /> } />
+			<Route path="/performance" element={ <PerformanceRedirect /> } />
 			<Route path="/" element={<Home />} />
 			<Route
 				path="*"
