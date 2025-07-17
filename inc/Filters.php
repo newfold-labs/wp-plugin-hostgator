@@ -7,6 +7,8 @@
 
 namespace HostGator;
 
+use function NewfoldLabs\WP\ModuleLoader\container;
+
 /**
  * Class Filters
  *
@@ -30,13 +32,13 @@ final class Filters {
 	 * @return array
 	 */
 	public static function add_hiive_headers( $args, $url ) {
-		global $nfd_module_container;
+		$container = container();
 		if ( defined( 'NFD_HIIVE_URL' ) && strpos( $url, NFD_HIIVE_URL ) !== false ) {
 			if ( ! isset( $args['headers'] ) || ! is_array( $args['headers'] ) ) {
 				$args['headers'] = array();
 			}
 			$args['headers']['X-WP-LOCALE'] = get_locale();
-			$args['headers']['X-HOST-PLUGIN-ID'] = $nfd_module_container->plugin()->id;
+			$args['headers']['X-HOST-PLUGIN-ID'] = $container->plugin()->id;
 		}
 
 		return $args;
