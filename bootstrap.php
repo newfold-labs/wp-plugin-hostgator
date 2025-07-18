@@ -74,8 +74,8 @@ add_filter(
 		$args = wp_parse_args(
 			array(
 				'admin_app_url'              => admin_url( 'admin.php?page=hostgator#/home' ),
-				'template_h1'                => __( 'A New WordPress Site', 'wp-plugin-hostgator' ),
-				'template_h2'                => __( 'Coming Soon!', 'wp-plugin-hostgator' ),
+				'template_h1'                => __( 'Coming Soon!', 'wp-plugin-hostgator' ),
+				'template_h2'                => __( 'A New WordPress Site', 'wp-plugin-hostgator' ),
 				'template_coming_soon_links' =>
 					'<a href="' . esc_url( $website_guide_link ) . '" target="_blank" rel="noopener noreferrer nofollow">' .
 					__( 'How to build your WordPress Website', 'wp-plugin-hostgator' ) .
