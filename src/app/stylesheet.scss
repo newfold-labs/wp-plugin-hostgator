@@ -253,6 +253,31 @@ body.toplevel_page_hostgator {
     pointer-events: none;
 }
 
+.nfd-brand-logo {
+    width  : 160px;
+    height : 29px;
+    display: block;
+
+    &:not(.nfd-brand-logo--rendered) {
+        background : url("../../assets/svg/nav-for-light.svg") no-repeat;
+    }
+
+    &.nfd-size-sm{
+        height: 18px;
+        width: 99px;
+    }
+
+    &.nfd-size-lg{
+        height: 47px;
+        width: 259px;
+    }
+
+    &.nfd-size-xl{
+        height: 76px;
+        width: 419px;
+    }
+}
+
 .hgwpp {
 
     .components-card {
