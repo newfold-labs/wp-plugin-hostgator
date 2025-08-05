@@ -19,10 +19,10 @@ const WebHostingSection = () => {
 							'Manage Sites',
 							'wp-plugin-hostgator'
 						) }
-						href={ getLinkPerRegion(
+						href={ window.NewfoldRuntime.linkTracker.addUtmParams( getLinkPerRegion(
 							'home_manage_sites',
 							__( 'Manage Sites', 'wp-plugin-hostgator' )
-						) }
+						) ) }
 						target="_blank"
 						className={ 'hgwp-app-home-sites-action' }
 					>
@@ -40,10 +40,10 @@ const WebHostingSection = () => {
 							'Manage Email',
 							'wp-plugin-hostgator'
 						) }
-						href={ getLinkPerRegion(
+						href={ window.NewfoldRuntime.linkTracker.addUtmParams( getLinkPerRegion(
 							'home_manage_email',
 							__( 'Manage Email', 'wp-plugin-hostgator' )
-						) }
+						) ) }
 						target="_blank"
 						className={ 'hgwp-app-home-emails-action' }
 					>
@@ -61,10 +61,10 @@ const WebHostingSection = () => {
 							'Manage Domain',
 							'wp-plugin-hostgator'
 						) }
-						href={ getLinkPerRegion(
+						href={ window.NewfoldRuntime.linkTracker.addUtmParams( getLinkPerRegion(
 							'home_find_domain',
 							__( 'Find a Domain', 'wp-plugin-hostgator' )
-						) }
+						) ) }
 						target="_blank"
 						className={ 'hgwp-app-home-domains-action' }
 					>
@@ -78,7 +78,7 @@ const WebHostingSection = () => {
 				<ActionField
 					label={ __( 'Help', 'wp-plugin-hostgator' ) }
 					buttonLabel={ __( 'Get Help', 'wp-plugin-hostgator' ) }
-					href={ '#/help' }
+					href={ window.NewfoldRuntime.linkTracker.addUtmParams('admin.php?page=hostgator#/help') }
 					className={ 'hgwp-app-home-help-action' }
 				>
 					{ __(

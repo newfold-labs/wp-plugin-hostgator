@@ -380,8 +380,8 @@ final class Admin {
 	public static function actions( $actions ) {
 		return array_merge(
 			array(
-				'overview' => '<a href="' . \admin_url( 'admin.php?page=hostgator#/home' ) . '">' . __( 'Home', 'wp-plugin-hostgator' ) . '</a>',
-				'settings' => '<a href="' . \admin_url( 'admin.php?page=hostgator#/settings' ) . '">' . __( 'Settings', 'wp-plugin-hostgator' ) . '</a>',
+				'overview' => '<a href="' . \apply_filters( 'nfd_build_url', admin_url( 'admin.php?page=hostgator#/home' ) ) . '">' . __( 'Home', 'wp-plugin-hostgator' ) . '</a>',
+				'settings' => '<a href="' . \apply_filters( 'nfd_build_url', admin_url( 'admin.php?page=hostgator#/settings' ) ). '">' . __( 'Settings', 'wp-plugin-hostgator' ) . '</a>',
 			),
 			$actions
 		);

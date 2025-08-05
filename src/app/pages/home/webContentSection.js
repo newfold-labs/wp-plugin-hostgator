@@ -14,7 +14,7 @@ const WebContentSection = () => {
 				<ActionField
 					label={__('Blog', 'wp-plugin-hostgator')}
 					buttonLabel={__('New Post', 'wp-plugin-hostgator')}
-					href={window.NewfoldRuntime.adminUrl + 'post-new.php'}
+					href={ window.NewfoldRuntime.linkTracker.addUtmParams( window.NewfoldRuntime.adminUrl + 'post-new.php' )}
 					className={'hgwp-app-home-blog-action'}
 				>
 					{__('Write a new blog post.', 'wp-plugin-hostgator')}
@@ -24,8 +24,8 @@ const WebContentSection = () => {
 					label={__('Pages', 'wp-plugin-hostgator')}
 					buttonLabel={__('New Page', 'wp-plugin-hostgator')}
 					href={
-						window.NewfoldRuntime.adminUrl +
-						'post-new.php?post_type=page'
+                        window.NewfoldRuntime.linkTracker.addUtmParams( window.NewfoldRuntime.adminUrl +
+						'post-new.php?post_type=page' )
 					}
 					className={'hgwp-app-home-pages-action'}
 				>
@@ -42,8 +42,8 @@ const WebContentSection = () => {
 						'wp-plugin-hostgator'
 					)}
 					href={
-						window.NewfoldRuntime.adminUrl +
-						'edit-tags.php?taxonomy=category'
+                        window.NewfoldRuntime.linkTracker.addUtmParams( window.NewfoldRuntime.adminUrl +
+						'edit-tags.php?taxonomy=category' )
 					}
 					className={'hgwp-app-home-categories-action'}
 				>

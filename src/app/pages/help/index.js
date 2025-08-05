@@ -27,7 +27,7 @@ const HelpCard = ( { item } ) => {
 					variant="secondary"
 					as="a"
 					className="nfd-w-full nfd-transition-bg nfd-duration-100"
-					href={ getLinkPerRegion( item.id, item.cta ) }
+					href={ window.NewfoldRuntime.linkTracker.addUtmParams( getLinkPerRegion( item.id, item.cta ) ) }
 					target="_blank"
 				>
 					{ item.cta }
