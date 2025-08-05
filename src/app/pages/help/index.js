@@ -27,7 +27,9 @@ const HelpCard = ( { item } ) => {
 					variant="secondary"
 					as="a"
 					className="nfd-w-full nfd-transition-bg nfd-duration-100"
-					href={ window.NewfoldRuntime.linkTracker.addUtmParams( getLinkPerRegion( item.id, item.cta ) ) }
+					href={ window.NewfoldRuntime.linkTracker.addUtmParams(
+						getLinkPerRegion( item.id, item.cta )
+					) }
 					target="_blank"
 				>
 					{ item.cta }
@@ -56,7 +58,7 @@ const Help = () => {
 	return (
 		<Page className={ 'hgwp-app-help-page' }>
 			<div className={ 'hgwp-app-help-page__header' }>
-				<Title as ="h1">{ __( 'Help', 'wp-plugin-hostgator' ) }</Title>
+				<Title as="h1">{ __( 'Help', 'wp-plugin-hostgator' ) }</Title>
 				<Title as="h2" className="nfd-font-normal nfd-text-[13px]">
 					{ __(
 						'We are available 24/7 to help answer questions and solve your problems.',

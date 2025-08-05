@@ -77,20 +77,20 @@ const CloseCommentsDays = ( { setError, notify } ) => {
 	);
 
 	const closeCommentsDaysNoticeTitle = () => {
-		return __( 'Comments setting saved ', 'wp-plugin-hostgator' );
+		return __( 'Comments setting saved', 'wp-plugin-hostgator' );
 	};
 
 	const closeCommentsDaysNoticeText = () => {
 		//`Comments on posts are disabled after ${closeCommentsDays} days.`
 		return (
 			__(
-				'Comments on posts are disabled after ',
+				'Comments on posts are disabled after',
 				'wp-plugin-hostgator'
 			) +
 			closeCommentsDays +
 			_n(
-				' day.',
-				' days.',
+				'day.',
+				'days.',
 				parseInt( closeCommentsDays ),
 				'wp-plugin-hostgator'
 			)
@@ -100,11 +100,11 @@ const CloseCommentsDays = ( { setError, notify } ) => {
 	const closeCommentsDaysLabelText = () => {
 		//`Close comments after ${closeCommentsDays} days.`
 		return (
-			__( 'Close comments after ', 'wp-plugin-hostgator' ) +
+			__( 'Close comments after', 'wp-plugin-hostgator' ) +
 			closeCommentsDays +
 			_n(
-				' day.',
-				' days.',
+				'day.',
+				'days.',
 				parseInt( closeCommentsDays ),
 				'wp-plugin-hostgator'
 			)
@@ -178,11 +178,11 @@ const CommentsPerPage = ( { setError, notify } ) => {
 	const commentsPerPageNoticeText = () => {
 		//`Posts will display ${commentsPerPage} comments at a time.`
 		return (
-			__( 'Posts will display ', 'wp-plugin-hostgator' ) +
+			__( 'Posts will display', 'wp-plugin-hostgator' ) +
 			commentsPerPage +
 			_n(
-				' comment at a time.',
-				' comments at a time.',
+				'comment at a time.',
+				'comments at a time.',
 				parseInt( commentsPerPage ),
 				'wp-plugin-hostgator'
 			)
@@ -221,9 +221,9 @@ const CommentsPerPage = ( { setError, notify } ) => {
 		<SelectField
 			id="comments-per-page-select"
 			label={
-				__( 'Display ', 'wp-plugin-hostgator' ) +
+				__( 'Display', 'wp-plugin-hostgator' ) +
 				commentsPerPage +
-				__( ' comments per page.', 'wp-plugin-hostgator' )
+				__( 'comments per page.', 'wp-plugin-hostgator' )
 			}
 			value={ commentsPerPage }
 			selectedLabel={ commentsPerPage }

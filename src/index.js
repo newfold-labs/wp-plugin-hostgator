@@ -46,7 +46,7 @@ console.log( HG_ASCI );
 const HGWPRender = () => {
 	const DOM_ELEMENT = document.getElementById( WP_ADM_PAGE_ROOT_ELEMENT );
 	if ( null !== DOM_ELEMENT ) {
-			createRoot( DOM_ELEMENT ).render( <App /> );
+		createRoot( DOM_ELEMENT ).render( <App /> );
 	}
 };
 

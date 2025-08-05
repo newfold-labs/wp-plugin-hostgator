@@ -24,7 +24,6 @@ const Settings = () => {
 				</Title>
 			</div>
 			<Container className={ 'hgwp-app-settings-container' }>
-
 				<Container.Block
 					separator={ true }
 					className={ 'hgwp-app-settings-coming-soon' }

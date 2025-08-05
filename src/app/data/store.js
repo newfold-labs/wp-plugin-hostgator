@@ -38,7 +38,7 @@ export const AppStoreProvider = ( { children } ) => {
 		if ( false === booted ) {
 			hgApiFetchSettings()
 				.then( ( settings ) => {
-					setStore( { 
+					setStore( {
 						...store,
 						...window.HGWP,
 						...settings,

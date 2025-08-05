@@ -12,16 +12,16 @@ const ContentRevisions = ( { setError, notify } ) => {
 	);
 
 	const contentRevisionsNoticeTitle = () => {
-		return __( 'Post revision setting saved ', 'wp-plugin-hostgator' );
+		return __( 'Post revision setting saved', 'wp-plugin-hostgator' );
 	};
 
 	const contentRevisionsNoticeText = () => {
 		return (
-			__( 'Posts will save  ', 'wp-plugin-hostgator' ) +
+			__( 'Posts will save', 'wp-plugin-hostgator' ) +
 			contentRevisions +
 			_n(
-				' revision.',
-				' revisions.',
+				'revision.',
+				'revisions.',
 				parseInt( contentRevisions ),
 				'wp-plugin-hostgator'
 			)
@@ -31,13 +31,13 @@ const ContentRevisions = ( { setError, notify } ) => {
 	const contentRevisionsDescriptionText = () => {
 		return (
 			__(
-				'Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take ',
+				'Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take',
 				'wp-plugin-hostgator'
 			) +
 			contentRevisions +
 			_n(
-				' step back.',
-				' steps back.',
+				'step back.',
+				'steps back.',
 				parseInt( contentRevisions ),
 				'wp-plugin-hostgator'
 			)
@@ -76,7 +76,7 @@ const ContentRevisions = ( { setError, notify } ) => {
 		<SelectField
 			id="content-revisions-select"
 			label={ __(
-				'Number of revisions posts can save ',
+				'Number of revisions posts can save',
 				'wp-plugin-hostgator'
 			) }
 			description={ contentRevisionsDescriptionText() }
@@ -103,19 +103,19 @@ const EmptyTrash = ( { setError, notify } ) => {
 	let numTrashWeeks = Math.floor( emptyTrashDays / 7 );
 
 	const emptyTrashNoticeTitle = () => {
-		return __( 'Trash setting saved ', 'wp-plugin-hostgator' );
+		return __( 'Trash setting saved', 'wp-plugin-hostgator' );
 	};
 
 	const emptyTrashNoticeText = () => {
 		return (
 			__(
-				'The trash will automatically empty every ',
+				'The trash will automatically empty every',
 				'wp-plugin-hostgator'
 			) +
 			numTrashWeeks +
 			_n(
-				' week.',
-				' weeks.',
+				'week.',
+				'weeks.',
 				parseInt( numTrashWeeks ),
 				'wp-plugin-hostgator'
 			)
@@ -154,16 +154,16 @@ const EmptyTrash = ( { setError, notify } ) => {
 	return (
 		<SelectField
 			id="empty-trash-select"
-			label={ __( 'Trash emptying frequency ', 'wp-plugin-hostgator' ) }
+			label={ __( 'Trash emptying frequency', 'wp-plugin-hostgator' ) }
 			description={
 				__(
-					'The trash will automatically empty every ',
+					'The trash will automatically empty every',
 					'wp-plugin-hostgator'
 				) +
 				numTrashWeeks +
 				_n(
-					' week.',
-					' weeks.',
+					'week.',
+					'weeks.',
 					parseInt( numTrashWeeks ),
 					'wp-plugin-hostgator'
 				)
