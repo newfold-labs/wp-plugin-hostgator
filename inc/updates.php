@@ -113,7 +113,7 @@ function plugin_auto_update_setting_html( $html ) {
 		sprintf(
 		/* translators: %s Settings > General page URL. */
 			__( 'Auto-updates enabled on the <a href="%s">HostGator > Settings</a> page.', 'wp-plugin-hostgator' ),
-			apply_filters( 'nfd_build_url', admin_url( 'admin.php?page=hostgator#/settings' ))
+			apply_filters( 'nfd_build_url', admin_url( 'admin.php?page=hostgator#/settings' ) )
 		),
 		$html
 	);
