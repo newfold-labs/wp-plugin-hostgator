@@ -9,7 +9,10 @@ import WebinarsBanner from 'App/components/webinars-banner';
 
 const Home = () => {
 	return (
-		<Page title="Settings" className={ 'hgwp-app-home-page hgwp-home xl:nfd-max-w-screen-lg' }>
+		<Page
+			title="Settings"
+			className={ 'hgwp-app-home-page hgwp-home xl:nfd-max-w-screen-lg' }
+		>
 			<div className="nfd-home__title-section">
 				<Title className="nfd-mb-1 nfd-font-bold">
 					{ __( 'Welcome to HostGator', 'wp-plugin-hostgator' ) }
@@ -24,7 +27,7 @@ const Home = () => {
 			<WelcomeSection />
 			<WebinarsBanner />
 			<FreePluginsSection />
-			
+
 			<Container className={ 'hgwp-app-home-container nfd-max-w-full' }>
 				<Container.Header
 					title={ __( 'More', 'wp-plugin-hostgator' ) }

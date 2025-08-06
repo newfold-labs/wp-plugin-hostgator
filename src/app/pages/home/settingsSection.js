@@ -14,7 +14,9 @@ const SettingsSection = () => {
 				<ActionField
 					label={ __( 'Manage Settings', 'wp-plugin-hostgator' ) }
 					buttonLabel={ __( 'Settings', 'wp-plugin-hostgator' ) }
-					href={ '#/settings' }
+					href={ window.NewfoldRuntime.linkTracker.addUtmParams(
+						'admin.php?page=hostgator#/settings'
+					) }
 					className={ 'hgwp-app-home-settings-action' }
 				>
 					{ __(
@@ -26,7 +28,10 @@ const SettingsSection = () => {
 				<ActionField
 					label={ __( 'Performance', 'wp-plugin-hostgator' ) }
 					buttonLabel={ __( 'Performance', 'wp-plugin-hostgator' ) }
-					href={window.NewfoldRuntime.admin_url + 'tools.php?page=nfd-performance'}
+					href={ window.NewfoldRuntime.linkTracker.addUtmParams(
+						window.NewfoldRuntime.admin_url +
+							'tools.php?page=nfd-performance'
+					) }
 					className={ 'hgwp-app-home-performance-action' }
 				>
 					{ __(
@@ -41,7 +46,9 @@ const SettingsSection = () => {
 						'Visit Marketplace',
 						'wp-plugin-hostgator'
 					) }
-					href={ '#/marketplace' }
+					href={ window.NewfoldRuntime.linkTracker.addUtmParams(
+						'admin.php?page=hostgator#/marketplace'
+					) }
 					className={ 'hgwp-app-home-marketplace-action' }
 				>
 					{ __(

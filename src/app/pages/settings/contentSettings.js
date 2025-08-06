@@ -12,35 +12,32 @@ const ContentRevisions = ( { setError, notify } ) => {
 	);
 
 	const contentRevisionsNoticeTitle = () => {
-		return __( 'Post revision setting saved ', 'wp-plugin-hostgator' );
+		return __( 'Post revision setting saved', 'wp-plugin-hostgator' );
 	};
 
 	const contentRevisionsNoticeText = () => {
-		return (
-			__( 'Posts will save  ', 'wp-plugin-hostgator' ) +
-			contentRevisions +
+		return sprintf(
+			//translators: %s: number of revisions. `Posts will save ${contentRevisions} revisions.`
 			_n(
-				' revision.',
-				' revisions.',
+				'Posts will save %s revision.',
+				'Posts will save %s revisions.',
 				parseInt( contentRevisions ),
 				'wp-plugin-hostgator'
-			)
+			),
+			contentRevisions
 		);
 	};
 
 	const contentRevisionsDescriptionText = () => {
-		return (
-			__(
-				'Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take ',
-				'wp-plugin-hostgator'
-			) +
-			contentRevisions +
+		return sprintf(
+			//translators: %s: number of content revisions. `Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take ${contentRevisions} steps back.`
 			_n(
-				' step back.',
-				' steps back.',
+				'Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take %s step back.',
+				'Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take %s steps back.',
 				parseInt( contentRevisions ),
 				'wp-plugin-hostgator'
-			)
+			),
+			contentRevisions
 		);
 	};
 
@@ -76,7 +73,7 @@ const ContentRevisions = ( { setError, notify } ) => {
 		<SelectField
 			id="content-revisions-select"
 			label={ __(
-				'Number of revisions posts can save ',
+				'Number of revisions posts can save',
 				'wp-plugin-hostgator'
 			) }
 			description={ contentRevisionsDescriptionText() }
@@ -103,22 +100,19 @@ const EmptyTrash = ( { setError, notify } ) => {
 	let numTrashWeeks = Math.floor( emptyTrashDays / 7 );
 
 	const emptyTrashNoticeTitle = () => {
-		return __( 'Trash setting saved ', 'wp-plugin-hostgator' );
+		return __( 'Trash setting saved', 'wp-plugin-hostgator' );
 	};
 
 	const emptyTrashNoticeText = () => {
-		return (
-			__(
-				'The trash will automatically empty every ',
-				'wp-plugin-hostgator'
-			) +
-			numTrashWeeks +
+		return sprintf(
+			//translators: %s: number of weeks. `The trash will automatically empty every ${numTrashWeeks} weeks.`
 			_n(
-				' week.',
-				' weeks.',
+				'The trash will automatically empty every %s week.',
+				'The trash will automatically empty every %s weeks.',
 				parseInt( numTrashWeeks ),
 				'wp-plugin-hostgator'
-			)
+			),
+			numTrashWeeks
 		);
 	};
 
@@ -154,20 +148,17 @@ const EmptyTrash = ( { setError, notify } ) => {
 	return (
 		<SelectField
 			id="empty-trash-select"
-			label={ __( 'Trash emptying frequency ', 'wp-plugin-hostgator' ) }
-			description={
-				__(
-					'The trash will automatically empty every ',
-					'wp-plugin-hostgator'
-				) +
-				numTrashWeeks +
+			label={ __( 'Trash emptying frequency', 'wp-plugin-hostgator' ) }
+			description={ sprintf(
+				//translators: %s: number of weeks. `The trash will automatically empty every ${numTrashWeeks} weeks.`
 				_n(
-					' week.',
-					' weeks.',
+					'The trash will automatically empty every %s week.',
+					'The trash will automatically empty every %s weeks.',
 					parseInt( numTrashWeeks ),
 					'wp-plugin-hostgator'
-				)
-			}
+				),
+				numTrashWeeks
+			) }
 			value={ emptyTrashDays }
 			selectedLabel={ numTrashWeeks }
 			options={ [
