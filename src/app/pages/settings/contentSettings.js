@@ -16,15 +16,15 @@ const ContentRevisions = ( { setError, notify } ) => {
 	};
 
 	const contentRevisionsNoticeText = () => {
-		return (
-			__( 'Posts will save', 'wp-plugin-hostgator' ) +
-			contentRevisions +
+		return sprintf(
+			//translators: %s: number of revisions. `Posts will save ${contentRevisions} revisions.`
 			_n(
-				'revision.',
-				'revisions.',
+				'Posts will save %s revision.',
+				'Posts will save %s revisions.',
 				parseInt( contentRevisions ),
 				'wp-plugin-hostgator'
-			)
+			),
+			contentRevisions
 		);
 	};
 

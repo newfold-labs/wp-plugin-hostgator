@@ -81,33 +81,28 @@ const CloseCommentsDays = ( { setError, notify } ) => {
 	};
 
 	const closeCommentsDaysNoticeText = () => {
-		//`Comments on posts are disabled after ${closeCommentsDays} days.`
-		return (
-			__(
-				'Comments on posts are disabled after',
-				'wp-plugin-hostgator'
-			) +
-			closeCommentsDays +
+		return sprintf(
+			//translators: %s: number of days. `Comments on posts are disabled after ${closeCommentsDays} days.`
 			_n(
-				'day.',
-				'days.',
+				'Comments on posts are disabled after %s day.',
+				'Comments on posts are disabled after %s days.',
 				parseInt( closeCommentsDays ),
 				'wp-plugin-hostgator'
-			)
+			),
+			closeCommentsDays
 		);
 	};
 
 	const closeCommentsDaysLabelText = () => {
-		//`Close comments after ${closeCommentsDays} days.`
-		return (
-			__( 'Close comments after', 'wp-plugin-hostgator' ) +
-			closeCommentsDays +
+		return sprintf(
+			//translators: %s: number of days. `Close comments after ${closeCommentsDays} days.`
 			_n(
-				'day.',
-				'days.',
+				'Close comments after %s day.',
+				'Close comments after %s days.',
 				parseInt( closeCommentsDays ),
 				'wp-plugin-hostgator'
-			)
+			),
+			closeCommentsDays
 		);
 	};
 
@@ -176,16 +171,15 @@ const CommentsPerPage = ( { setError, notify } ) => {
 	};
 
 	const commentsPerPageNoticeText = () => {
-		//`Posts will display ${commentsPerPage} comments at a time.`
-		return (
-			__( 'Posts will display', 'wp-plugin-hostgator' ) +
-			commentsPerPage +
+		return sprintf(
+			//translators: %s: number of comments. `Posts will display ${commentsPerPage} comments at a time.`
 			_n(
-				'comment at a time.',
-				'comments at a time.',
+				'Posts will display %s comment at a time.',
+				'Posts will display %s comments at a time.',
 				parseInt( commentsPerPage ),
 				'wp-plugin-hostgator'
-			)
+			),
+			commentsPerPage
 		);
 	};
 
