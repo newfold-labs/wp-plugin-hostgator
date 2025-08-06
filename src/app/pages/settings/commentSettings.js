@@ -215,9 +215,14 @@ const CommentsPerPage = ( { setError, notify } ) => {
 		<SelectField
 			id="comments-per-page-select"
 			label={
-				__( 'Display', 'wp-plugin-hostgator' ) +
-				commentsPerPage +
-				__( 'comments per page.', 'wp-plugin-hostgator' )
+				//translators: %s: number of comments. `Display ${commentsPerPage} comments per page.`
+				sprintf(
+					__(
+						'Display %s comments per page.',
+						'wp-plugin-hostgator'
+					),
+					commentsPerPage
+				)
 			}
 			value={ commentsPerPage }
 			selectedLabel={ commentsPerPage }
