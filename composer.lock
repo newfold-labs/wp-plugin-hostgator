@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "af17457a9b1acfa5436c9c38f92db317",
+    "content-hash": "d58e57994529eb9b54ea2e4a22e66b01",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -1511,23 +1511,23 @@
         },
         {
             "name": "newfold-labs/wp-module-installer",
-            "version": "1.6.4",
+            "version": "1.6.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-installer.git",
-                "reference": "a64e50091ea8225d658cdb8c09500994afa0f9c3"
+                "reference": "cac4eba1ef153dde1ffca39da66d58b7fc00b8dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-installer/zipball/a64e50091ea8225d658cdb8c09500994afa0f9c3",
-                "reference": "a64e50091ea8225d658cdb8c09500994afa0f9c3",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-installer/zipball/cac4eba1ef153dde1ffca39da66d58b7fc00b8dd",
+                "reference": "cac4eba1ef153dde1ffca39da66d58b7fc00b8dd",
                 "shasum": ""
             },
             "require": {
                 "newfold-labs/wp-module-pls": "^1.1.2"
             },
             "require-dev": {
-                "johnpbloch/wordpress": "6.8.1",
+                "johnpbloch/wordpress": "6.8.2",
                 "lucatume/wp-browser": "*",
                 "newfold-labs/wp-php-standards": "^1.2.5",
                 "phpunit/phpcov": "*",
@@ -1553,8 +1553,16 @@
                     "@i18n-php",
                     "@i18n-json"
                 ],
+                "i18n-ci-pre": [
+                    "@i18n-pot",
+                    "@i18n-po"
+                ],
+                "i18n-ci-post": [
+                    "@i18n-json",
+                    "@i18n-php"
+                ],
                 "i18n-pot": [
-                    "vendor/bin/wp i18n make-pot . ./languages/wp-module-installer.pot --headers='{\"Report-Msgid-Bugs-To\":\"https://github.com/newfold-labs/wp-module-installer/issues\",\"POT-Creation-Date\":\"2025-02-13T09:55:55+00:00\"}' --exclude=node_modules,src,wordpress"
+                    "vendor/bin/wp i18n make-pot . ./languages/wp-module-installer.pot --domain=wp-module-installer --headers='{\"Report-Msgid-Bugs-To\":\"https://github.com/newfold-labs/wp-module-installer/issues\",\"POT-Creation-Date\":\"2025-02-13T09:55:55+00:00\"}' --exclude=src,wordpress"
                 ],
                 "i18n-po": [
                     "vendor/bin/wp i18n update-po ./languages/wp-module-installer.pot ./languages"
@@ -1588,10 +1596,10 @@
             ],
             "description": "An installer for WordPress plugins and themes.",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-installer/tree/1.6.4",
+                "source": "https://github.com/newfold-labs/wp-module-installer/tree/1.6.5",
                 "issues": "https://github.com/newfold-labs/wp-module-installer/issues"
             },
-            "time": "2025-06-30T22:52:51+00:00"
+            "time": "2025-08-18T16:16:24+00:00"
         },
         {
             "name": "newfold-labs/wp-module-link-tracker",
@@ -2194,16 +2202,16 @@
         },
         {
             "name": "newfold-labs/wp-module-performance",
-            "version": "3.2.8",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-performance.git",
-                "reference": "e4737a5070c6ee1e5cf56a1e7e7d5f21b02a87ec"
+                "reference": "e3f6a297f7e30649c2c52f1a115d9ecd55f1c53c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-performance/zipball/e4737a5070c6ee1e5cf56a1e7e7d5f21b02a87ec",
-                "reference": "e4737a5070c6ee1e5cf56a1e7e7d5f21b02a87ec",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-performance/zipball/e3f6a297f7e30649c2c52f1a115d9ecd55f1c53c",
+                "reference": "e3f6a297f7e30649c2c52f1a115d9ecd55f1c53c",
                 "shasum": ""
             },
             "require": {
@@ -2216,7 +2224,7 @@
             },
             "require-dev": {
                 "10up/wp_mock": "^0.5.0|^1.0.0",
-                "johnpbloch/wordpress": "6.8.1",
+                "johnpbloch/wordpress": "6.8.2",
                 "lucatume/wp-browser": "*",
                 "newfold-labs/wp-php-standards": "^1.2",
                 "phpunit/phpcov": "*",
@@ -2268,7 +2276,7 @@
                     "vendor/bin/wp i18n update-po ./languages/wp-module-performance.pot ./languages"
                 ],
                 "i18n-pot": [
-                    "vendor/bin/wp i18n make-pot . ./languages/wp-module-performance.pot --domain=wp-module-performance --headers='{\"Report-Msgid-Bugs-To\":\"https://github.com/newfold-labs/wp-module-performance/issues\",\"POT-Creation-Date\":null}' --exclude=src,tests,vendor,assets --include=build/*.min.js"
+                    "vendor/bin/wp i18n make-pot . ./languages/wp-module-performance.pot --domain=wp-module-performance --headers='{\"Report-Msgid-Bugs-To\":\"https://github.com/newfold-labs/wp-module-performance/issues\",\"POT-Creation-Date\":null}' --exclude=src,tests,assets,wordpress --include=build/*.min.js"
                 ],
                 "test": [
                     "phpunit --bootstrap tests/phpunit/bootstrap.php",
@@ -2291,10 +2299,10 @@
             ],
             "description": "A module for managing caching functionality.",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-performance/tree/3.2.8",
+                "source": "https://github.com/newfold-labs/wp-module-performance/tree/3.3.0",
                 "issues": "https://github.com/newfold-labs/wp-module-performance/issues"
             },
-            "time": "2025-07-14T10:39:40+00:00"
+            "time": "2025-09-05T10:52:26+00:00"
         },
         {
             "name": "newfold-labs/wp-module-pls",
