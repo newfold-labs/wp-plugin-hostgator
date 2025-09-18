@@ -23,7 +23,7 @@
         "@reduxjs/toolkit": "^2.8.2",
         "@wordpress/compose": "^7.26.0",
         "@wordpress/dom-ready": "^4.26.0",
-        "@wordpress/element": "^6.24.0",
+        "@wordpress/element": "^6.31.0",
         "@wordpress/i18n": "^5.26.0",
         "@wordpress/icons": "^10.26.0",
         "classnames": "^2.5.1",
