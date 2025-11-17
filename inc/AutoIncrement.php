@@ -177,7 +177,7 @@ class AutoIncrement {
 	/**
 	 * Check the column info to see if it has AUTO_INCREMENT.
 	 *
-	 * @param array&ColumnInfoArray $column_info The column info from a `SHOW COLUMNS...` query.
+	 * @param array $column_info The column info from a `SHOW COLUMNS...` query.
 	 */
 	protected function column_info_has_autoincrement( array $column_info ): bool {
 		return stripos( $column_info['Extra'], 'auto_increment' ) !== false;
