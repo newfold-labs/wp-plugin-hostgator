@@ -41,7 +41,7 @@
         "@testing-library/cypress": "^10.0.3",
         "@wordpress/env": "^10.26.0",
         "@wordpress/scripts": "^30.19.0",
-        "cypress": "^14.5.2",
+        "cypress": "^15.8.1",
         "cypress-axe": "1.6.0",
         "node-fetch": "^3.3.2",
         "node-wp-i18n": "^1.2.8",
