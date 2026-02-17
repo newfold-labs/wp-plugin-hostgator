@@ -15,7 +15,6 @@ function getLocalModules() {
           if (repo.type === 'path' && repo.url && repo.url.includes('modules/')) {
             const moduleName = repo.url.split('/').pop();
             const resolvedPath = resolve(repo.url);
-            // Correct path resolution if needed, based on the project's root
             const correctedPath = resolvedPath.replace('/wordpress/modules/', '/modules/');
             const playwrightDir = join(correctedPath, 'tests', 'playwright');
             if (existsSync(playwrightDir)) {
@@ -58,7 +57,7 @@ function generateProjects() {
   console.log('🔍 Playwright Projects Discovery:');
   const projects = [
     {
-      name: 'newfold-labs/wp-plugin-bluehost',
+      name: 'newfold-labs/wp-plugin-hostgator',
       testDir: './tests/playwright/specs',
       testMatch: '**/*.spec.js',
     }
@@ -68,7 +67,6 @@ function generateProjects() {
   const vendorModules = getVendorModules();
   const discoveredModules = new Set();
 
-  // Add local modules first (they take precedence)
   localModules.forEach(module => {
     if (!discoveredModules.has(module.name)) {
       projects.push({
@@ -80,7 +78,6 @@ function generateProjects() {
     }
   });
 
-  // Add vendor modules if no local version exists
   vendorModules.forEach(module => {
     if (!discoveredModules.has(module.name)) {
       projects.push({
@@ -104,22 +101,20 @@ function generateProjects() {
 function writeProjectsFile() {
   const projects = generateProjects();
   const projectsFile = 'tests/playwright/playwright-projects.json';
-  
+
   console.log(`\n📝 Writing projects to ${projectsFile}...`);
   writeFileSync(projectsFile, JSON.stringify(projects, null, 2));
   console.log(`✅ Projects written to ${projectsFile}`);
-  
+
   return projects;
 }
 
-// If this script is run directly, generate and write the projects file
-// ES module equivalent of require.main === module
 if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])) {
   writeProjectsFile();
 }
 
-export { 
-  generateProjects, 
+export {
+  generateProjects,
   writeProjectsFile,
   getLocalModules,
   getVendorModules

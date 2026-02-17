@@ -38,11 +38,11 @@
     "devDependencies": {
         "@automattic/babel-plugin-preserve-i18n": "^1.0.0",
         "@tailwindcss/forms": "^0.5.10",
-        "@testing-library/cypress": "^10.0.3",
+        "@axe-core/playwright": "^4.11.1",
+        "@playwright/test": "^1.58.2",
+        "@wordpress/e2e-test-utils-playwright": "^1.0.0",
         "@wordpress/env": "^10.26.0",
         "@wordpress/scripts": "^30.19.0",
-        "cypress": "^14.5.2",
-        "cypress-axe": "1.6.0",
         "node-fetch": "^3.3.2",
         "node-wp-i18n": "^1.2.8",
         "tailwindcss": "^3.4.17"
@@ -53,7 +53,6 @@
         "check-licenses": "wp-scripts check-licenses --production",
         "create:dist": "rsync -r --include-from=.distinclude --exclude-from=.distignore . ./wp-plugin-hostgator",
         "create:zip": "cd ./wp-plugin-hostgator && zip -r -9 ../wp-plugin-hostgator.zip . && ls -lh ../wp-plugin-hostgator.zip",
-        "cypress": "npm cypress open",
         "develop": "npm run start",
         "develop:analyzer": "npm run start:analyzer",
         "format": "wp-scripts format ./src",
@@ -80,7 +79,9 @@
         "start:analyzer": "npm run start --webpack-bundle-analyzer",
         "storybook:build": "build-storybook -c ./storybook -o ./.docs",
         "storybook:dev": "start-storybook -c ./storybook",
-        "test:e2e": "npx cypress run",
+        "test:e2e": "npm run test:playwright",
+        "test:playwright": "npx playwright test",
+        "test:playwright:update-projects": "node .github/scripts/generate-playwright-projects.mjs",
         "test:unit": "wp-scripts test-unit-js"
     }
 }
