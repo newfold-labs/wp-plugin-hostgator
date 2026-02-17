@@ -19,7 +19,8 @@
         },
         "platform-check": false,
         "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "johnpbloch/wordpress-core-installer": true
         },
         "preferred-install": {
             "newfold-labs/*": "source",
@@ -55,7 +56,9 @@
             "@i18n-po",
             "@i18n-php",
             "@i18n-json"
-        ]
+        ],
+        "test": "codecept run wpunit",
+        "test:phpunit": "HOSTGATOR_PHPUNIT_MINIMAL=1 vendor/bin/phpunit --bootstrap tests/phpunit/bootstrap.php tests/phpunit/PluginTest.php --no-configuration"
     },
     "scripts-descriptions": {
         "fix": "Automatically fix coding standards issues where possible.",
@@ -65,13 +68,18 @@
         "i18n-po": "Update existing .po files.",
         "i18n-mo": "Generate new language .mo files.",
         "i18n-php": "Generate new language .l10n.php files.",
-        "i18n-json": "Generate new language .json files."
+        "i18n-json": "Generate new language .json files.",
+        "test": "Run Codeception wpunit tests.",
+        "test:phpunit": "Run minimal PHPUnit tests (no WordPress)."
     },
     "require-dev": {
+        "johnpbloch/wordpress": "6.9.1",
+        "lucatume/wp-browser": ">=3.7.16",
         "newfold-labs/wp-php-standards": "^1.2.5",
         "roave/security-advisories": "dev-latest",
         "wp-cli/i18n-command": "^2.6.6",
-        "wp-phpunit/wp-phpunit": "^6.9.1"
+        "wp-phpunit/wp-phpunit": "^6.9.1",
+        "yoast/phpunit-polyfills": "^4.0.0"
     },
     "require": {
         "newfold-labs/wp-module-activation": "^1.0.13",
