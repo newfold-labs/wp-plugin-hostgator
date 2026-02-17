@@ -1,10 +1,10 @@
-name: Cypress Test Matrix
+name: Playwright Test Matrix
 
 on:
   pull_request:
     types: [ opened, synchronize, reopened, ready_for_review ]
-    branches:
-      - 'main'
+    # branches:
+    #   - 'main'
   workflow_dispatch:
 
 concurrency:
@@ -17,7 +17,7 @@ permissions: {}
 
 jobs:
   test:
-    name: Run Cypress Test Matrix
+    name: Playwright Test Matrix
     runs-on: ubuntu-latest
     timeout-minutes: 60
     permissions:
@@ -38,18 +38,40 @@ jobs:
           - '6.9'
 
     steps:
-
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
         with:
           persist-credentials: false
 
       - name: Setup PHP
-        uses: shivammathur/setup-php@44454db4f0199b8b9685a5d763dc37cbf79108e1 # v2.36.0
+        uses: shivammathur/setup-php@44454db4f0199b8b9685a5d763dc37cbf79108e1  # v2.36.0
         with:
-          php-version: '8.1'
+          php-version: '8.3'
           coverage: none
           tools: composer, cs2pr
+
+      - name: Use Node.js 24.x
+        uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238  # v6.2.0
+        with:
+          node-version: 24.x
+          cache: 'npm'
+
+      - name: Show versions
+        run: |
+          php --version
+          composer --version
+          node --version
+          npm --version
+
+      - name: Get Composer cache directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> "$GITHUB_OUTPUT"
+
+      - name: Cache Composer vendor directory
+        uses: actions/cache@8b402f58fbc84540c8b491a91e594a4576fec3d7  # v5.0.2
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
 
       - name: Setup workflow context
         id: workflow
@@ -61,37 +83,11 @@ jobs:
           echo "DIST=${PWD}/dist" >> "$GITHUB_OUTPUT"
           echo "PACKAGE=${REPO##*/}" >> "$GITHUB_OUTPUT"
 
-      - name: Use Node.js 20.x
-        uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
-        with:
-          node-version: 20.x
-          cache: 'npm'
-
-      - name: Get Composer cache directory
-        id: composer-cache
-        run: echo "dir=$(composer config cache-files-dir)" >> "$GITHUB_OUTPUT"
-
-      - name: Cache Composer vendor directory
-        uses: actions/cache@8b402f58fbc84540c8b491a91e594a4576fec3d7 # v5.0.2
-        with:
-          path: ${{ steps.composer-cache.outputs.dir }}
-          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
-
-      - name: Show versions
-        run: |
-          php --version
-          composer --version
-          node --version
-          npm --version
-
       - name: Validate composer.json and composer.lock
         run: composer validate
 
       - name: Install PHP Dependencies
         run: composer install --no-progress --no-dev --optimize-autoloader --prefer-source
-
-      - name: Setup Registry
-        run: printf "\n//npm.pkg.github.com/:_authToken=${{ secrets.NEWFOLD_ACCESS_TOKEN }}" >> .npmrc
 
       - name: NPM Install
         run: npm install --legacy-peer-deps
@@ -121,26 +117,34 @@ jobs:
             '{core: $core, phpVersion: $phpVersion, plugins: [$plugin]}' \
             > .wp-env.override.json
 
-      - name: Configure Cypress
-        run: |
-          echo '{"wpVersion": "${{ matrix.wpVersion }}","phpVersion": "${{ matrix.phpVersion }}"}' > cypress.env.json
-
       - name: Install WordPress
-        uses: nick-fields/retry@ce71cc2ab81d554ebbe88c79ab5975992d79ba08 # v3.0.2
+        uses: nick-fields/retry@ce71cc2ab81d554ebbe88c79ab5975992d79ba08  # v3.0.2
         with:
           timeout_minutes: 4
           max_attempts: 3
           command: npx wp-env start --debug
 
-      - name: Run Cypress Tests
-        run: npm run test:e2e -- --browser chrome
+      - name: Verify WordPress is ready
+        run: |
+          echo "Verifying WordPress is ready..."
+          npx wp-env run cli wp core version
+          echo "WordPress is ready!"
 
-      - name: Store screenshots of test failures
-        if: ${{ failure() }}
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run Playwright Tests
+        run: npx playwright test --reporter=line
+        env:
+          CI: true
+
+      - name: Store Playwright test results
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f  # v6.0.0
         with:
-          name: screenshots-wp_${{ matrix.wpVersion }}-php_${{ matrix.phpVersion }}
-          path: ./tests/cypress/screenshots
+          name: playwright-report-wp${{ matrix.wpVersion }}-php${{ matrix.phpVersion }}
+          path: tests/playwright/test-results/
+          retention-days: 10
 
       - name: Output debug.log file contents
         if: always()

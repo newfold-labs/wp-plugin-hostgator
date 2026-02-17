@@ -1,0 +1,299 @@
+name: WordPress Playground Preview (PR & Comments)
+
+on:
+  pull_request:
+    types: [ opened, synchronize, reopened, ready_for_review ]
+
+jobs:
+  playground-preview:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.head.repo.fork == false
+
+    permissions:
+      contents: read
+      pull-requests: write
+      pages: write
+      id-token: write
+
+    concurrency:
+      group: pages-${{ github.event.pull_request.number }}
+      cancel-in-progress: true
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+
+    steps:
+      - name: Resolve PR context (number/branch/commit)
+        id: ctx
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            let prNumber, branch, sha, commit;
+
+            if (context.eventName === 'pull_request') {
+              prNumber = context.payload.pull_request.number;
+              branch   = context.payload.pull_request.head.ref;
+              commit   = context.payload.pull_request.head.sha.slice(0,7);
+            } else {
+              prNumber = context.payload.issue.number;
+
+              const { data: pr } = await github.rest.pulls.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: prNumber,
+              });
+              branch = pr.head.ref;
+              sha    = pr.head.sha;
+              commit = pr.head.sha.slice(0,7);
+            }
+
+            core.setOutput('number', prNumber.toString());
+            core.setOutput('branch', branch);
+            core.setOutput('sha', sha);
+            core.setOutput('commit', commit);
+
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@44454db4f0199b8b9685a5d763dc37cbf79108e1  # v2.36.0
+        with:
+          php-version: '8.1'
+          coverage: none
+          tools: composer, cs2pr
+
+      - name: Use Node from .nvmrc
+        uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+          cache-dependency-path: 'package-lock.json'
+
+      - name: Setup workflow context
+        id: workflow
+        working-directory: ${{ runner.temp }}
+        env:
+          PLUGIN_NAME: ${{ vars.PLUGIN_NAME }}
+        run: |
+          mkdir dist
+          echo "DIST=${PWD}/dist" >> "$GITHUB_OUTPUT"
+          echo "PACKAGE=$PLUGIN_NAME" >> "$GITHUB_OUTPUT"
+
+      - name: Install PHP Dependencies
+        run: composer install --no-progress --no-dev --optimize-autoloader --prefer-dist
+
+      - name: NPM Install
+        run: npm install
+
+      - name: Build JavaScript
+        run: npm run build
+
+      - name: Prepare files
+        env:
+          DIST: ${{ steps.workflow.outputs.DIST }}
+        run: |
+          rsync -r --include-from=.distinclude --exclude-from=.distignore . "$DIST"
+
+      - name: List dist files (debug)
+        env:
+          DIST: ${{ steps.workflow.outputs.DIST }}
+        run: |
+          set -euo pipefail
+          cd -- "$DIST"
+          find .
+
+      - name: Prepare plugin zip for GitHub Pages
+        id: prepare
+        env:
+          DIST: ${{ steps.workflow.outputs.DIST }}
+          PR_NUMBER: ${{ steps.ctx.outputs.number }}
+        run: |
+          set -euo pipefail
+
+          mkdir -p gh-pages/previews
+
+          PR_NUM="$PR_NUMBER"
+          ZIP_NAME="hostgator-pr-${PR_NUM}.zip"
+
+          # Create excludes.txt inside the DIST folder
+          cat > "$DIST/excludes.txt" <<'EOF'
+          .env
+          .env.*
+          .npmrc
+          .yarnrc*
+          auth.json
+          composer.auth.json
+          wp-config.php
+          .git*
+          **/.git/**
+          **/node_modules/**
+          **/.github/**
+          **/.vscode/**
+          **/.idea/**
+          EOF
+
+          # Zip inside DIST using the local excludes.txt file
+          cd "$DIST"
+          zip -r -9 "../${ZIP_NAME}" . -x@excludes.txt
+          cd -
+
+          # Move the ZIP inside gh-pages/previews
+          mv "${DIST}/../${ZIP_NAME}" "gh-pages/previews/${ZIP_NAME}"
+
+          SIZE=$(du -h "gh-pages/previews/${ZIP_NAME}" | cut -f1)
+
+          echo "zip_name=${ZIP_NAME}" >> "$GITHUB_OUTPUT"
+          echo "zip_size=${SIZE}" >> "$GITHUB_OUTPUT"
+
+          cat > gh-pages/previews/index.html <<EOF
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <meta charset="utf-8" />
+            <title>Hostgator Plugin - Playground Previews</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <style>
+              body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; }
+              h1 { color: #333; }
+              .preview { background: #f5f5f5; padding: 15px; margin: 10px 0; border-radius: 5px; }
+              a { color: #0969da; text-decoration: none; }
+              a:hover { text-decoration: underline; }
+              code { background:#eee; padding:2px 6px; border-radius:4px; }
+            </style>
+          </head>
+          <body>
+            <h1>🎮 WordPress Playground Previews</h1>
+            <p>Preview builds of the Hostgator WordPress Plugin for testing in WordPress Playground.</p>
+            <div class="preview">
+              <p><strong>Latest:</strong> <a href="${ZIP_NAME}">${ZIP_NAME}</a> (${SIZE})</p>
+            </div>
+          </body>
+          </html>
+          EOF
+
+      - name: Configure Pages
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          enablement: true
+      - name: Cleanup previous github-pages artifacts for this run
+        id: cleanup_pages_artifacts
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        env:
+          RUN_ID: ${{ github.run_id }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const runId = process.env.RUN_ID;
+
+            const { data } = await github.rest.actions.listWorkflowRunArtifacts({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              run_id: runId,
+            });
+
+            for (const artifact of data.artifacts) {
+              if (artifact.name === 'github-pages') {
+                await github.rest.actions.deleteArtifact({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  artifact_id: artifact.id,
+                });
+                core.info(`Deleted old github-pages artifact ${artifact.id}`);
+              }
+            }
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4.0.0
+        with:
+          path: ./gh-pages
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
+
+      - name: Comment Playground link on PR
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        env:
+          PR_NUMBER: ${{ steps.ctx.outputs.number }}
+          ZIP_NAME: ${{ steps.prepare.outputs.zip_name }}
+          ZIP_SIZE: ${{ steps.prepare.outputs.zip_size }}
+          COMMIT: ${{ steps.ctx.outputs.commit }}
+          BRANCH: ${{ steps.ctx.outputs.branch }}
+          PAGES_URL: ${{ steps.deploy.outputs.page_url }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = Number(process.env.PR_NUMBER);
+            const zipName  = process.env.ZIP_NAME;
+            const zipSize  = process.env.ZIP_SIZE;
+            const commit   = process.env.COMMIT;
+            const branch   = process.env.BRANCH;
+            const baseUrl  = process.env.PAGES_URL.replace(/\/+$/, '');
+            const zipUrl   = `${baseUrl}/previews/${zipName}`;
+
+            const blueprint = {
+              landingPage: "/wp-admin/admin.php?page=hostgator#/home",
+              preferredVersions: { php: "8.1", wp: "latest" },
+              login: true,
+              steps: [
+                {
+                  step: "installPlugin",
+                  pluginData: { resource: "url", url: zipUrl },
+                  options: { activate: true }
+                }
+              ]
+            };
+
+            const blueprintBase64 = Buffer
+              .from(JSON.stringify(blueprint))
+              .toString('base64');
+
+            const playgroundUrl = `https://playground.wordpress.net/#${blueprintBase64}`;
+
+            const commentMeta = '<!-- playground-preview-link -->';
+            const body = `
+            ${commentMeta}
+            ## 🎮 WordPress Playground Preview
+
+            [**▶️ Launch Preview in Playground**](${playgroundUrl})
+
+            _This spins up a fresh WordPress-in-browser, installs this PR's plugin build, and drops you straight into the Hostgator screen._
+
+            ---
+            **Preview Details**
+            - 📦 Build ZIP: \`${zipName}\` (${zipSize})
+            - 🗂️ Branch: \`${branch}\`
+            - 📝 Commit: \`${commit}\`
+            - 🔗 [Direct Download of ZIP](${zipUrl})
+
+            ⚠ Every new commit / comment on this PR overwrites the preview ZIP for this PR number.
+            `;
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+            });
+
+            const existing = comments.find(c => c.body && c.body.includes(commentMeta));
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body,
+              });
+            }

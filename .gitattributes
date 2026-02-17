@@ -1,0 +1,4 @@
+/.env.testing           export-ignore
+/.wp-env.json           export-ignore
+/codeception.dist.yml   export-ignore
+/tests                  export-ignore
