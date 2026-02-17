@@ -1,6 +1,7 @@
 import { addQueryArgs } from '@wordpress/url';
 import { dispatch } from '@wordpress/data';
 import apiFetch from '@wordpress/api-fetch';
+import { __ } from '@wordpress/i18n';
 import { NewfoldRuntime } from '@newfold/wp-module-runtime';
 import region from '../data/region';
 
@@ -255,4 +256,124 @@ export const handleHelpLinksClick = () => {
 			window.newfoldEmbeddedHelp.toggleNFDLaunchedEmbeddedHelp();
 		}
 	}
+};
+
+/**
+ * Cached features promise - ensures only one polling instance exists
+ * @type {Promise<object>|null}
+ */
+let featuresPromise = null;
+
+/**
+ * Wait for the NewfoldFeatures object to be available on window
+ * @param {number} timeout - Maximum time to wait in milliseconds (default: 5000)
+ * @return {Promise<object>} Resolves with the features object when available
+ */
+export const waitForFeatures = ( timeout = 5000 ) => {
+	if ( featuresPromise ) {
+		return featuresPromise;
+	}
+	featuresPromise = new Promise( ( resolve, reject ) => {
+		if ( window.NewfoldFeatures?.features ) {
+			resolve( window.NewfoldFeatures );
+			return;
+		}
+		const startTime = Date.now();
+		const interval = setInterval( () => {
+			if ( window.NewfoldFeatures?.features ) {
+				clearInterval( interval );
+				resolve( window.NewfoldFeatures );
+			} else if ( Date.now() - startTime >= timeout ) {
+				clearInterval( interval );
+				featuresPromise = null;
+				reject(
+					new Error(
+						'NewfoldFeatures not available, please refresh the page and try again.'
+					)
+				);
+			}
+		}, 50 );
+	} );
+	return featuresPromise;
+};
+
+/**
+ * Cached runtime promise for use by getEditorUrl/getEditorLabel
+ * @type {Promise<object>|null}
+ */
+let runtimePromise = null;
+
+/**
+ * Wait for NewfoldRuntime to be available on window
+ * @param {number} timeout - Max wait in ms (default 5000)
+ * @return {Promise<object>}
+ */
+export const waitForRuntime = ( timeout = 5000 ) => {
+	if ( runtimePromise ) {
+		return runtimePromise;
+	}
+	runtimePromise = new Promise( ( resolve, reject ) => {
+		if (
+			window.NewfoldRuntime?.adminUrl &&
+			window.NewfoldRuntime?.capabilities &&
+			window.NewfoldRuntime?.wordpress
+		) {
+			resolve( window.NewfoldRuntime );
+			return;
+		}
+		const startTime = Date.now();
+		const interval = setInterval( () => {
+			if (
+				window.NewfoldRuntime?.adminUrl &&
+				window.NewfoldRuntime?.capabilities &&
+				window.NewfoldRuntime?.wordpress
+			) {
+				clearInterval( interval );
+				resolve( window.NewfoldRuntime );
+			} else if ( Date.now() - startTime >= timeout ) {
+				clearInterval( interval );
+				runtimePromise = null;
+				reject( new Error( 'NewfoldRuntime not available.' ) );
+			}
+		}, 50 );
+	} );
+	return runtimePromise;
+};
+
+/**
+ * Get the appropriate editor URL based on theme type
+ * @param {string} canvas - Optional canvas for site editor (default 'edit')
+ * @return {Promise<string>}
+ */
+export const getEditorUrl = async ( canvas = 'edit' ) => {
+	const runtime = await waitForRuntime();
+	const classicThemeEditorUrl = `${ runtime.adminUrl }customize.php`;
+	const blockThemeEditorUrl = `${ runtime.adminUrl }site-editor.php?canvas=${ canvas }`;
+	const blockTheme = runtime?.wordpress?.isBlockTheme || false;
+	return blockTheme ? blockThemeEditorUrl : classicThemeEditorUrl;
+};
+
+/**
+ * Get the appropriate editor label based on theme type
+ * @return {Promise<string>}
+ */
+export const getEditorLabel = async () => {
+	const runtime = await waitForRuntime();
+	const blockTheme = runtime?.wordpress?.isBlockTheme || false;
+	return blockTheme ? __( 'Site Editor', 'wp-plugin-hostgator' ) : __( 'Customizer', 'wp-plugin-hostgator' );
+};
+
+/**
+ * Get HostGator platform/hosting URL
+ * @param {string} jarvisPath - Path for Jarvis-style accounts
+ * @param {string} legacyPath - Path for legacy hosting (e.g. 'app/#/sites')
+ * @return {string}
+ */
+export const getPlatformPathUrl = ( jarvisPath = '', legacyPath = '' ) => {
+	// HostGator: use my.hostgator.com or similar; legacyPath for hosting panel
+	const base = 'https://my.hostgator.com/';
+	if ( legacyPath ) {
+		return base + ( legacyPath.startsWith( 'app' ) ? 'hosting/' + legacyPath : legacyPath );
+	}
+	return base + ( jarvisPath || '' );
 };

@@ -14,15 +14,22 @@ import Marketplace from '../pages/marketplace';
 import Settings from '../pages/settings';
 import Help from '../pages/help';
 import Admin from '../pages/admin';
-import { getMarketplaceSubnavRoutes } from '../../../vendor/newfold-labs/wp-module-marketplace/components/marketplaceSubnav';
+import { getMarketplaceSubnavRoutes } from '@modules/wp-module-marketplace/components/marketplaceSubnav';
 
 const addPartialMatch = ( prefix, path ) =>
 	prefix === path ? `${ prefix }/*` : path;
 
-const HelpCenterAI = ( e ) => {
-	e.preventDefault();
-	window.newfoldEmbeddedHelp.toggleNFDLaunchedEmbeddedHelp();
-};
+function helpAction( e, preventDefault = false ) {
+	if (
+		NewfoldRuntime.hasCapability( 'canAccessHelpCenter' ) &&
+		window.NewfoldFeatures?.features?.helpCenter
+	) {
+		if ( preventDefault ) {
+			e.preventDefault();
+		}
+		window.newfoldEmbeddedHelp.toggleNFDLaunchedEmbeddedHelp();
+	}
+}
 
 /**
  * Redirect component for staging route.
@@ -53,17 +60,20 @@ const PerformanceRedirect = () => {
 export const AppRoutes = () => {
 	return (
 		<Routes>
-			{ routes.map( ( page ) => (
-				<Route
-					end
-					key={ page.name }
-					path={ addPartialMatch(
-						'/marketplace',
-						addPartialMatch( '/store', page.name )
-					) }
-					element={ <page.Component /> }
-				/>
-			) ) }
+			{ routes.map(
+				( page ) =>
+					true === page.condition && (
+						<Route
+							end
+							key={ page.name }
+							path={ addPartialMatch(
+								'/marketplace',
+								addPartialMatch( '/store', page.name )
+							) }
+							element={ <page.Component /> }
+						/>
+					)
+			) }
 			<Route path="/staging" element={ <StagingRedirect /> } />
 			<Route path="/performance" element={ <PerformanceRedirect /> } />
 			<Route path="/" element={ <Home /> } />
@@ -84,7 +94,7 @@ export const AppRoutes = () => {
 	);
 };
 
-const topRoutePaths = [ '/home', '/marketplace', '/settings' ];
+const topRoutePaths = [ '/home', '/store', '/marketplace', '/settings', '/help' ];
 const utilityRoutePaths = [ '/help' ];
 
 export const routes = [
@@ -155,11 +165,7 @@ export const routes = [
 		Component: Help,
 		Icon: QuestionMarkCircleIcon,
 		condition: true,
-		action:
-			NewfoldRuntime.hasCapability( 'canAccessHelpCenter' ) &&
-			( await window.NewfoldFeatures.isEnabled( 'helpCenter' ) )
-				? HelpCenterAI
-				: false,
+		action: helpAction,
 	},
 	{
 		name: '/admin',

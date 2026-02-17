@@ -1,0 +1,1 @@
+export { useHandlePageLoad } from './useHandlePageLoad';
