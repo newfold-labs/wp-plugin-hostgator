@@ -14,11 +14,12 @@ test.describe('Settings Page', () => {
 
   test('Has coming soon section', async ({ page }) => {
     const generalSettings = page.locator('.settings-details');
-    await generalSettings.locator('summary').click();
-    await page.waitForTimeout(300);
+    if (!(await generalSettings.getAttribute('open'))) {
+      await generalSettings.locator('summary').click();
+    }
+    await expect(generalSettings).toHaveAttribute('open', /.*/, { timeout: 10000 });
     const comingSoonSection = page.locator('.hgwp-app-settings-coming-soon');
-    await utils.scrollIntoView(comingSoonSection);
-    await expect(comingSoonSection).toBeVisible();
+    await expect(comingSoonSection).toBeVisible({ timeout: 10000 });
   });
 
   test('Autoupdate toggles function properly', async ({ page }) => {
