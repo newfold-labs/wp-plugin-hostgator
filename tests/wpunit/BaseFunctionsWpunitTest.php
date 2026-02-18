@@ -62,7 +62,7 @@ class BaseFunctionsWpunitTest extends \lucatume\WPBrowser\TestCase\WPTestCase {
 	public function test_hg_install_date_filter_returns_install_date(): void {
 		$value = '1111111111';
 		\HostGator\hg_set_plugin_install_date( $value );
-		$this->assertSame( $value, \HostGator\hg_install_date_filter() );
+		$this->assertSame( $value, \HostGator\hg_install_date_filter( '' ) );
 	}
 
 	public function test_hg_setup_sets_plugin_install_date_when_missing(): void {
