@@ -57,7 +57,8 @@ const ComingSoon = () => {
 		hostgatorSettingsApiFetch(
 			{ comingSoon: ! comingSoon },
 			setError,
-			( _response ) => {
+			( response ) => {
+				void response;
 				setComingSoon( ! comingSoon );
 			}
 		);

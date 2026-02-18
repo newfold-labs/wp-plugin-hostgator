@@ -7,6 +7,7 @@ export default () => {
 		'undefined' !== typeof window.NewfoldRuntime &&
 		'plugin' in window.NewfoldRuntime
 	) {
+		// eslint-disable-next-line camelcase, no-undef -- webpack global
 		__webpack_public_path__ = window.NewfoldRuntime.plugin.url;
 	}
 };

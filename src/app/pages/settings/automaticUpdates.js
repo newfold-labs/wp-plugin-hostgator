@@ -43,7 +43,8 @@ const AutomaticUpdatesAll = ( { setError, notify } ) => {
 					autoUpdatesThemes: true,
 				},
 				setError,
-				( _response ) => {
+				( response ) => {
+					void response;
 					setAutoUpdatesAll( ! autoUpdatesAll );
 				}
 			);
@@ -121,7 +122,8 @@ const AutomaticUpdatesMajorCore = ( { setError, notify } ) => {
 		hostgatorSettingsApiFetch(
 			{ autoUpdatesMajorCore: ! autoUpdatesMajorCore },
 			setError,
-			( _response ) => {
+			( response ) => {
+				void response;
 				setAutoUpdatesCore( ! autoUpdatesMajorCore );
 			}
 		);
@@ -183,7 +185,8 @@ const AutomaticUpdatesPlugins = ( { setError, notify } ) => {
 		hostgatorSettingsApiFetch(
 			{ autoUpdatesPlugins: ! autoUpdatesPlugins },
 			setError,
-			( _response ) => {
+			( response ) => {
+				void response;
 				setAutoUpdatesPlugins( ! autoUpdatesPlugins );
 			}
 		);
@@ -246,7 +249,8 @@ const AutomaticUpdatesThemes = ( { setError, notify } ) => {
 		hostgatorSettingsApiFetch(
 			{ autoUpdatesThemes: ! autoUpdatesThemes },
 			setError,
-			( _response ) => {
+			( response ) => {
+				void response;
 				setAutoUpdatesThemes( ! autoUpdatesThemes );
 			}
 		);

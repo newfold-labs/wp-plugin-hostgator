@@ -10,8 +10,7 @@ let lastNoticeId;
 /**
  * Wrapper method to dispatch snackbar notice
  *
- * @param string text text for notice
- * @param text
+ * @param {string} [text='Settings Saved'] - Text for the notice.
  */
 export const dispatchUpdateSnackbar = ( text = 'Settings Saved' ) => {
 	//clear previous notice so they don't stack up when quickly saving multiple settings
@@ -102,10 +101,10 @@ export const hostgatorSettingsApiFetch = ( data, passError, thenCallback ) => {
 /**
  * Wrapper method to post request to hostgator cache endpoint
  *
- * @param {*} data         object of data
- * @param     passError    setter for the error in component
- * @param     thenCallback method to call in promise then
- * @return apiFetch promise
+ * @param {Object}   data         - Request data.
+ * @param {Function} passError    - Setter for the error in component.
+ * @param {Function} thenCallback - Callback for the promise then.
+ * @return {Promise} apiFetch promise.
  */
 export const hostgatorPurgeCacheApiFetch = (
 	data,
@@ -126,16 +125,18 @@ export const hostgatorPurgeCacheApiFetch = (
 };
 
 /**
- * Coming soon admin bar
- * @param comingSoon
+ * Coming soon admin bar toggle.
+ *
+ * @param {boolean} comingSoon - Whether coming soon mode is enabled.
  */
 export const comingSoonAdminbarToggle = ( comingSoon ) => {
 	window.NewfoldRuntime.comingSoon.toggleAdminBarSiteStatus( comingSoon );
 };
 
 /**
- * Get the current region value
- * @return string - 2 char country code for region - or empty string for default region
+ * Get the current region value.
+ *
+ * @return {string} Two-char country code for region, or empty string for default region.
  */
 export const getRegionValue = () => {
 	const brand = NewfoldRuntime.plugin.brand;
@@ -165,13 +166,13 @@ export const getRegionValue = () => {
 };
 
 /**
- * Get region specific link value
+ * Get region specific link value.
  *
- * @param {*} link_name   - name for link in regions object
- * @param {*} region_code - region code for reference
- * @param     link_text
- * @return region specific href value for specified link or default
+ * @param {string} [link_name='main'] - Name for link in regions object.
+ * @param {string} [link_text]        - Link text for UTM.
+ * @return {string} Region-specific href value for the specified link or default.
  */
+/* eslint-disable camelcase */
 export const getLinkPerRegion = ( link_name = 'main', link_text ) => {
 	const region_code = getRegionValue();
 
@@ -191,11 +192,10 @@ export const getLinkPerRegion = ( link_name = 'main', link_text ) => {
 };
 
 /**
- * Supports or can get region specific link value
+ * Supports or can get region specific link value.
  *
- * @param {*} link_name   - name for link in regions object
- * @param {*} region_code - region code for reference
- * @return boolean value of whether the region link is present or missing, or is false
+ * @param {string} [link_name='main'] - Name for link in regions object.
+ * @return {boolean} Whether the region link is present or missing, or false.
  */
 export const supportsLinkPerRegion = ( link_name = 'main' ) => {
 	const region_code = getRegionValue();
@@ -207,6 +207,7 @@ export const supportsLinkPerRegion = ( link_name = 'main' ) => {
 	// if no match, we'll return default
 	return true;
 };
+/* eslint-enable camelcase */
 
 /**
  * Decorates an external link URL with UTM params.
@@ -221,7 +222,9 @@ export const supportsLinkPerRegion = ( link_name = 'main' ) => {
  * @return {string} The new URL.
  */
 export const addUtmParams = ( url, params = {} ) => {
+	// eslint-disable-next-line camelcase
 	params.utm_source = `wp-admin/admin.php?page=hostgator${ window.location.hash }`;
+	// eslint-disable-next-line camelcase
 	params.utm_medium = 'hostgator_plugin';
 	return addQueryArgs( url, params );
 };
@@ -301,9 +304,10 @@ export const waitForFeatures = ( timeout = 5000 ) => {
 let runtimePromise = null;
 
 /**
- * Wait for NewfoldRuntime to be available on window
- * @param {number} timeout - Max wait in ms (default 5000)
- * @return {Promise<object>}
+ * Wait for NewfoldRuntime to be available on window.
+ *
+ * @param {number} [timeout=5000] - Max wait in ms.
+ * @return {Promise<object>} Resolves with NewfoldRuntime when available.
  */
 export const waitForRuntime = ( timeout = 5000 ) => {
 	if ( runtimePromise ) {
@@ -338,9 +342,10 @@ export const waitForRuntime = ( timeout = 5000 ) => {
 };
 
 /**
- * Get the appropriate editor URL based on theme type
- * @param {string} canvas - Optional canvas for site editor (default 'edit')
- * @return {Promise<string>}
+ * Get the appropriate editor URL based on theme type.
+ *
+ * @param {string} [canvas='edit'] - Optional canvas for site editor.
+ * @return {Promise<string>} URL for the theme editor or customizer.
  */
 export const getEditorUrl = async ( canvas = 'edit' ) => {
 	const runtime = await waitForRuntime();
@@ -351,8 +356,9 @@ export const getEditorUrl = async ( canvas = 'edit' ) => {
 };
 
 /**
- * Get the appropriate editor label based on theme type
- * @return {Promise<string>}
+ * Get the appropriate editor label based on theme type.
+ *
+ * @return {Promise<string>} Localized label for Site Editor or Customizer.
  */
 export const getEditorLabel = async () => {
 	const runtime = await waitForRuntime();
@@ -363,10 +369,11 @@ export const getEditorLabel = async () => {
 };
 
 /**
- * Get HostGator platform/hosting URL
- * @param {string} jarvisPath - Path for Jarvis-style accounts
- * @param {string} legacyPath - Path for legacy hosting (e.g. 'app/#/sites')
- * @return {string}
+ * Get HostGator platform/hosting URL.
+ *
+ * @param {string} [jarvisPath=''] - Path for Jarvis-style accounts.
+ * @param {string} [legacyPath=''] - Path for legacy hosting (e.g. 'app/#/sites').
+ * @return {string} Full URL for the platform or hosting panel.
  */
 export const getPlatformPathUrl = ( jarvisPath = '', legacyPath = '' ) => {
 	// HostGator: use my.hostgator.com or similar; legacyPath for hosting panel

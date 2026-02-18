@@ -5,7 +5,7 @@ module.exports = {
 			alias: {
 				map: [
 					['App', './src/app'],
-					['Assets', './aseets'],
+					['Assets', './assets'],
 					['@modules', './vendor/newfold-labs'],
 				],
 				extensions: ['.js', '.jsx', '.json'],
@@ -25,7 +25,22 @@ module.exports = {
 	rules: {
 		'import/no-unresolved': [
 			'error',
-			{ ignore: ['^App/', '^Assets/'] },
+			{
+				ignore: [
+					'^App/',
+					'^Assets/',
+					'^@wordpress/',
+					'^@newfold/',
+					'^react',
+					'^lodash',
+					'^classnames',
+					'^react-use',
+					'^react-router-dom',
+					'^@heroicons/',
+					'^react-error-boundary',
+					'^html-react-parser',
+				],
+			},
 		],
 	},
 };

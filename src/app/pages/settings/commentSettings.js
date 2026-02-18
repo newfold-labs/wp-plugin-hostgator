@@ -1,7 +1,8 @@
 import AppStore from '../../data/store';
 import { hostgatorSettingsApiFetch } from '../../util/helpers';
 import { useUpdateEffect } from 'react-use';
-import { useState } from '@wordpress/element';
+import { useState, useContext } from '@wordpress/element';
+import { __, _n, sprintf } from '@wordpress/i18n';
 import {
 	Alert,
 	Container,
@@ -32,7 +33,8 @@ const OldPostsComments = ( { setError, notify } ) => {
 		hostgatorSettingsApiFetch(
 			{ disableCommentsOldPosts: ! disableCommentsOldPosts },
 			setError,
-			( _response ) => {
+			( response ) => {
+				void response;
 				setDisableCommentsOldPosts( ! disableCommentsOldPosts );
 			}
 		);
@@ -110,7 +112,8 @@ const CloseCommentsDays = ( { setError, notify } ) => {
 		hostgatorSettingsApiFetch(
 			{ closeCommentsDays: value },
 			setError,
-			( _response ) => {
+			( response ) => {
+				void response;
 				setNumCloseCommentsDays( value );
 			}
 		);
@@ -187,7 +190,8 @@ const CommentsPerPage = ( { setError, notify } ) => {
 		hostgatorSettingsApiFetch(
 			{ commentsPerPage: value },
 			setError,
-			( _response ) => {
+			( response ) => {
+				void response;
 				setNumCommentsPerPage( value );
 			}
 		);
