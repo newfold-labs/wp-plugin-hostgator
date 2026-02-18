@@ -36,7 +36,7 @@ function feedReducer( feed, action ) {
 }
 
 const FeedContext = createContext( {
-	push: ( id, message ) => {},
+	push: ( _id, _message ) => {},
 } );
 
 /** @type {() => { push: (id: string, message: FeedEntry) => void}}  */
@@ -48,8 +48,12 @@ export function NotificationFeed( { children } ) {
 		<>
 			<FeedContext.Provider
 				value={ {
-					push: ( id, message ) =>
-						dispatch( { type: actions.PUSH, id, message } ),
+					push: ( noticeId, noticeMessage ) =>
+						dispatch( {
+							type: actions.PUSH,
+							id: noticeId,
+							message: noticeMessage,
+						} ),
 				} }
 			>
 				{ children }

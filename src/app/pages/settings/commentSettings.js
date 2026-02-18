@@ -32,7 +32,7 @@ const OldPostsComments = ( { setError, notify } ) => {
 		hostgatorSettingsApiFetch(
 			{ disableCommentsOldPosts: ! disableCommentsOldPosts },
 			setError,
-			( response ) => {
+			( _response ) => {
 				setDisableCommentsOldPosts( ! disableCommentsOldPosts );
 			}
 		);
@@ -110,7 +110,7 @@ const CloseCommentsDays = ( { setError, notify } ) => {
 		hostgatorSettingsApiFetch(
 			{ closeCommentsDays: value },
 			setError,
-			( response ) => {
+			( _response ) => {
 				setNumCloseCommentsDays( value );
 			}
 		);
@@ -187,7 +187,7 @@ const CommentsPerPage = ( { setError, notify } ) => {
 		hostgatorSettingsApiFetch(
 			{ commentsPerPage: value },
 			setError,
-			( response ) => {
+			( _response ) => {
 				setNumCommentsPerPage( value );
 			}
 		);
@@ -214,16 +214,11 @@ const CommentsPerPage = ( { setError, notify } ) => {
 	return (
 		<SelectField
 			id="comments-per-page-select"
-			label={
-				//translators: %s: number of comments. `Display ${commentsPerPage} comments per page.`
-				sprintf(
-					__(
-						'Display %s comments per page.',
-						'wp-plugin-hostgator'
-					),
-					commentsPerPage
-				)
-			}
+			label={ sprintf(
+				/* translators: %s: number of comments to display per page */
+				__( 'Display %s comments per page.', 'wp-plugin-hostgator' ),
+				commentsPerPage
+			) }
 			value={ commentsPerPage }
 			selectedLabel={ commentsPerPage }
 			options={ [

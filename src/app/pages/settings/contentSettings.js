@@ -45,7 +45,7 @@ const ContentRevisions = ( { setError, notify } ) => {
 		hostgatorSettingsApiFetch(
 			{ contentRevisions: value },
 			setError,
-			( response ) => {
+			( _response ) => {
 				setNumContentRevisions( value );
 			}
 		);
@@ -120,7 +120,7 @@ const EmptyTrash = ( { setError, notify } ) => {
 		hostgatorSettingsApiFetch(
 			{ emptyTrashDays: value },
 			setError,
-			( response ) => {
+			( _response ) => {
 				setNumEmptyTrashDays( value );
 			}
 		);

@@ -31,28 +31,31 @@ export const AppNavHeader = () => {
 export const AppNavMenu = () => {
 	const location = useLocation();
 	const { setActivePath } = useNavigationContext();
-	const [editorUrl, setEditorUrl] = useState('#');
-	const [editorLabel, setEditorLabel] = useState(__('Editor', 'wp-plugin-hostgator'));
+	const [ editorUrl, setEditorUrl ] = useState( '#' );
+	const [ editorLabel, setEditorLabel ] = useState(
+		__( 'Editor', 'wp-plugin-hostgator' )
+	);
 
-	useEffect(() => {
-		getEditorUrl('edit').then(setEditorUrl);
-		getEditorLabel().then(setEditorLabel);
-	}, []);
+	useEffect( () => {
+		getEditorUrl( 'edit' ).then( setEditorUrl );
+		getEditorLabel().then( setEditorLabel );
+	}, [] );
 
 	const menu = () => {
 		return (
 			<AppBarNavigation.AppBar.Nav>
-				{[...topRoutes]?.map((page) => {
-					if (true !== page.condition) {
+				{ [ ...topRoutes ]?.map( ( page ) => {
+					if ( true !== page.condition ) {
 						return null;
 					}
-					const { mode, setOpen } = AppBarNavigation.AppBar.useContext();
+					const { mode, setOpen } =
+						AppBarNavigation.AppBar.useContext();
 					return (
 						<AppBarNavigation.AppBar.Item
-							key={page.name}
-							label={page.title}
-							href={`#${page.name}`}
-							className={classnames(
+							key={ page.name }
+							label={ page.title }
+							href={ `#${ page.name }` }
+							className={ classnames(
 								'group-[.nfd-appbar-item--active]:nfd-text-[var(--color-primary)] nfd-whitespace-nowrap',
 								{
 									'nfd-px-4 group-[.nfd-appbar-item--active]:nfd-bg-[#DBF1FC80] group-[.nfd-appbar-item--active]:nfd-font-bold':
@@ -60,16 +63,19 @@ export const AppNavMenu = () => {
 									'nfd-px-0 nfd-font-bold nfd-bg-transparent group-[.nfd-appbar-item]:!nfd-bg-transparent hover:!nfd-bg-black':
 										'collapsed' === mode,
 								}
-							)}
-							onClick={(e) => {
-								setOpen(false);
-								if (page.action && typeof page.action === 'function') {
-									page.action(e);
+							) }
+							onClick={ ( e ) => {
+								setOpen( false );
+								if (
+									page.action &&
+									typeof page.action === 'function'
+								) {
+									page.action( e );
 								}
-							}}
+							} }
 						/>
 					);
-				})}
+				} ) }
 			</AppBarNavigation.AppBar.Nav>
 		);
 	};
@@ -80,20 +86,20 @@ export const AppNavMenu = () => {
 				<Button
 					as="a"
 					className="nfd-flex nfd-gap-2 nfd-mr-4"
-					href={editorUrl}
+					href={ editorUrl }
 				>
-					{editorLabel}
+					{ editorLabel }
 					<RectangleGroupIcon />
 				</Button>
 				<Button
 					as="a"
 					className="nfd-flex nfd-gap-2 nfd-mr-4"
-					href={addUtmParams(
-						getPlatformPathUrl('hosting/details', 'app/#/sites')
-					)}
+					href={ addUtmParams(
+						getPlatformPathUrl( 'hosting/details', 'app/#/sites' )
+					) }
 					variant="secondary"
 				>
-					{__('Hosting Panel', 'wp-plugin-hostgator')}
+					{ __( 'Hosting Panel', 'wp-plugin-hostgator' ) }
 					<ArrowUpRightIcon />
 				</Button>
 			</>
@@ -101,22 +107,28 @@ export const AppNavMenu = () => {
 	};
 
 	const SubMenusManager = () => {
-		const subMenus = document.querySelectorAll('.hgwp-app-navitem-submenu');
-		subMenus.forEach((subMenu) => {
-			subMenu.classList.add('nfd-hidden');
-		});
-		const activeMenu = document.querySelector('.hgwp-app-sidenav .active');
+		const subMenus = document.querySelectorAll(
+			'.hgwp-app-navitem-submenu'
+		);
+		subMenus.forEach( ( subMenu ) => {
+			subMenu.classList.add( 'nfd-hidden' );
+		} );
+		const activeMenu = document.querySelector(
+			'.hgwp-app-sidenav .active'
+		);
 		if (
-			activeMenu?.nextSibling?.classList?.contains('hgwp-app-navitem-submenu')
+			activeMenu?.nextSibling?.classList?.contains(
+				'hgwp-app-navitem-submenu'
+			)
 		) {
-			activeMenu.nextSibling.classList.remove('nfd-hidden');
+			activeMenu.nextSibling.classList.remove( 'nfd-hidden' );
 		}
 	};
 
-	useEffect(() => {
-		if (location?.pathname) {
+	useEffect( () => {
+		if ( location?.pathname ) {
 			let pathnameLocation = location.pathname;
-			switch (location.pathname) {
+			switch ( location.pathname ) {
 				case '/':
 					pathnameLocation = '/home';
 					break;
@@ -126,20 +138,20 @@ export const AppNavMenu = () => {
 					pathnameLocation = '/settings';
 					break;
 			}
-			if (pathnameLocation.startsWith('/marketplace')) {
+			if ( pathnameLocation.startsWith( '/marketplace' ) ) {
 				pathnameLocation = '/marketplace';
 			}
-			setActivePath(`#${pathnameLocation}`);
+			setActivePath( `#${ pathnameLocation }` );
 		}
 		SubMenusManager();
 		document.onclick = SubMenusManager;
-	}, [location, setActivePath]);
+	}, [ location, setActivePath ] );
 
 	return (
 		<>
-			{menu()}
+			{ menu() }
 			<div className="nfd-grow" />
-			{actions()}
+			{ actions() }
 		</>
 	);
 };
@@ -153,23 +165,23 @@ export const AppBarNav = () => {
 			<AppBarNavigation.AppBar
 				position="absolute"
 				className="nfd-pr-2"
-				collapseAt={880}
+				collapseAt={ 880 }
 			>
 				<AppNavHeader variant="icon" />
 				<AppNavMenu />
 			</AppBarNavigation.AppBar>
 			<NewfoldNotifications
-				constants={{
+				constants={ {
 					context: 'hostgator-app-nav',
 					page: hashedPath,
-				}}
-				methods={{
+				} }
+				methods={ {
 					apiFetch,
 					addQueryArgs,
 					filter,
 					useState,
 					useEffect,
-				}}
+				} }
 			/>
 		</>
 	);

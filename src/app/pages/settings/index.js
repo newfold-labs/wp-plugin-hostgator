@@ -11,113 +11,115 @@ import ContentSettings from './contentSettings';
 import { waitForFeatures } from 'App/util/helpers';
 
 const Settings = () => {
-	const [isStagingEnabled, setIsStagingEnabled] = useState(true);
-	const [isPerformanceEnabled, setIsPerformanceEnabled] = useState(true);
+	const [ isStagingEnabled, setIsStagingEnabled ] = useState( true );
+	const [ isPerformanceEnabled, setIsPerformanceEnabled ] = useState( true );
 	const location = useLocation();
 
-	const getFeature = async (featureName) => {
+	const getFeature = async ( featureName ) => {
 		const nfdFeatures = await waitForFeatures();
-		return nfdFeatures.features[featureName] || false;
+		return nfdFeatures.features[ featureName ] || false;
 	};
 
-	useEffect(() => {
-		if (!isStagingEnabled && !isPerformanceEnabled) {
+	useEffect( () => {
+		if ( ! isStagingEnabled && ! isPerformanceEnabled ) {
 			const settingsDetails =
-				document.querySelector('.settings-details');
-			if (settingsDetails) {
-				settingsDetails.setAttribute('open', 'true');
+				document.querySelector( '.settings-details' );
+			if ( settingsDetails ) {
+				settingsDetails.setAttribute( 'open', 'true' );
 			}
 		}
-	}, [isStagingEnabled, isPerformanceEnabled]);
+	}, [ isStagingEnabled, isPerformanceEnabled ] );
 
-	useEffect(() => {
-		getFeature('staging').then(setIsStagingEnabled);
-		getFeature('performance').then(setIsPerformanceEnabled);
+	useEffect( () => {
+		getFeature( 'staging' ).then( setIsStagingEnabled );
+		getFeature( 'performance' ).then( setIsPerformanceEnabled );
 
-		const stagingPortal = document.getElementById('staging-portal');
+		const stagingPortal = document.getElementById( 'staging-portal' );
 		const performancePortal =
-			document.getElementById('performance-portal');
-		if (stagingPortal) {
-			window.NFDPortalRegistry.registerPortal('staging', stagingPortal);
+			document.getElementById( 'performance-portal' );
+		if ( stagingPortal ) {
+			window.NFDPortalRegistry.registerPortal( 'staging', stagingPortal );
 		}
-		if (performancePortal) {
+		if ( performancePortal ) {
 			window.NFDPortalRegistry.registerPortal(
 				'performance',
 				performancePortal
 			);
 		}
 		return () => {
-			window.NFDPortalRegistry.unregisterPortal('staging');
-			window.NFDPortalRegistry.unregisterPortal('performance');
+			window.NFDPortalRegistry.unregisterPortal( 'staging' );
+			window.NFDPortalRegistry.unregisterPortal( 'performance' );
 		};
-	}, []);
+	}, [] );
 
-	useEffect(() => {
+	useEffect( () => {
 		const path = location.pathname;
-		const allDetails = document.querySelectorAll('.nfd-details');
-		allDetails.forEach((details) => {
-			details.removeAttribute('open');
-		});
+		const allDetails = document.querySelectorAll( '.nfd-details' );
+		allDetails.forEach( ( details ) => {
+			details.removeAttribute( 'open' );
+		} );
 		const accordionMap = {
 			'/settings': '.settings-details',
 			'/settings/performance': '.performance-details',
 			'/settings/staging': '.staging-details',
 			'/settings/settings': '.settings-details',
 		};
-		const targetSelector = accordionMap[path];
-		if (targetSelector) {
-			const targetDetails = document.querySelector(targetSelector);
-			if (targetDetails) {
-				targetDetails.setAttribute('open', 'true');
+		const targetSelector = accordionMap[ path ];
+		if ( targetSelector ) {
+			const targetDetails = document.querySelector( targetSelector );
+			if ( targetDetails ) {
+				targetDetails.setAttribute( 'open', 'true' );
 			}
 		}
-	}, [location.pathname]);
+	}, [ location.pathname ] );
 
 	return (
-		<Page title="Settings" className={'hgwp-app-settings-page'}>
+		<Page title="Settings" className={ 'hgwp-app-settings-page' }>
 			<div
 				className={
 					'hgwp-app-settings-page__header nfd-flex nfd-flex-col nfd-gap-y-4'
 				}
 			>
 				<Title as="h1">
-					{__('Manage WordPress', 'wp-plugin-hostgator')}
+					{ __( 'Manage WordPress', 'wp-plugin-hostgator' ) }
 				</Title>
 				<Title
 					as="h2"
 					className="nfd-font-normal nfd-text-[13px] nfd-color-body"
 				>
-					{__(
+					{ __(
 						'Optimize your website my managing cache, security and performance settings.',
 						'wp-plugin-hostgator'
-					)}
+					) }
 				</Title>
 			</div>
-			{isPerformanceEnabled && (
+			{ isPerformanceEnabled && (
 				<Container
 					id="nfd-performance"
-					className={'nfd-settings-app-wrapper nfd-performance performance-fill'}
+					className={
+						'nfd-settings-app-wrapper nfd-performance performance-fill'
+					}
 				>
 					<details className="nfd-details settings-app-wrapper performance-details">
 						<summary>
 							<div
-								id={'performance-header'}
-								className={'hgwp-app-performance-header'}
+								id={ 'performance-header' }
+								className={ 'hgwp-app-performance-header' }
 							>
-								<Title as={'h1'} className={'nfd-mb-2'}>
-									{__(
+								<Title as={ 'h1' } className={ 'nfd-mb-2' }>
+									{ __(
 										'Performance',
 										'wp-plugin-hostgator'
-									)}
+									) }
 								</Title>
 								<Title
-									as={'h2'}
+									as={ 'h2' }
 									className="nfd-font-normal nfd-text-[13px]"
 								>
-									{__(
+									{ __(
 										'Optimize your website by managing cache and performance settings',
 										'wp-plugin-hostgator'
-									)}
+									) }
 								</Title>
 							</div>
 							<span className="nfd-details-icon">
@@ -129,7 +131,7 @@ const Settings = () => {
 						</div>
 					</details>
 				</Container>
-			)}
+			) }
 			<Container
 				className={
 					'nfd-settings-app-wrapper hgwp-app-settings-container'
@@ -138,23 +140,23 @@ const Settings = () => {
 				<details className="nfd-details settings-app-wrapper settings-details">
 					<summary>
 						<div
-							id={'settings-header'}
-							className={'hgwp-app-settings-header'}
+							id={ 'settings-header' }
+							className={ 'hgwp-app-settings-header' }
 						>
-							<Title as={'h1'} className={'nfd-mb-2'}>
-								{__(
+							<Title as={ 'h1' } className={ 'nfd-mb-2' }>
+								{ __(
 									'General Settings',
 									'wp-plugin-hostgator'
-								)}
+								) }
 							</Title>
 							<Title
-								as={'h2'}
+								as={ 'h2' }
 								className="nfd-font-normal nfd-text-[13px]"
 							>
-								{__(
+								{ __(
 									'This is where you can manage common settings for your website.',
 									'wp-plugin-hostgator'
-								)}
+								) }
 							</Title>
 						</div>
 						<span className="nfd-details-icon">
@@ -162,18 +164,18 @@ const Settings = () => {
 						</span>
 					</summary>
 					<Container.Block
-						separator={true}
-						className={'hgwp-app-settings-coming-soon'}
+						separator={ true }
+						className={ 'hgwp-app-settings-coming-soon' }
 					>
 						<ComingSoon />
 					</Container.Block>
 
 					<Container.Block
-						separator={true}
-						className={'hgwp-app-settings-wonder-blocks'}
+						separator={ true }
+						className={ 'hgwp-app-settings-wonder-blocks' }
 					>
 						<Container.SettingsField
-							title={__('Features', 'wp-plugin-hostgator')}
+							title={ __( 'Features', 'wp-plugin-hostgator' ) }
 						></Container.SettingsField>
 						<WonderBlocksSettings />
 						<br />
@@ -181,43 +183,47 @@ const Settings = () => {
 					</Container.Block>
 
 					<Container.Block
-						separator={true}
-						className={'hgwp-app-settings-update'}
+						separator={ true }
+						className={ 'hgwp-app-settings-update' }
 					>
 						<AutomaticUpdates />
 					</Container.Block>
 
 					<Container.Block
-						separator={true}
-						className={'hgwp-app-settings-content'}
+						separator={ true }
+						className={ 'hgwp-app-settings-content' }
 					>
 						<ContentSettings />
 					</Container.Block>
 
-					<Container.Block className={'hgwp-app-settings-comments'}>
+					<Container.Block className={ 'hgwp-app-settings-comments' }>
 						<CommentSettings />
 					</Container.Block>
 				</details>
 			</Container>
-			{isStagingEnabled && (
-				<Container className={'nfd-settings-app-wrapper nfd-staging staging-fill'}>
+			{ isStagingEnabled && (
+				<Container
+					className={
+						'nfd-settings-app-wrapper nfd-staging staging-fill'
+					}
+				>
 					<details className="nfd-details settings-app-wrapper staging-details">
 						<summary>
 							<div
-								id={'staging-header'}
-								className={'hgwp-app-staging-header'}
+								id={ 'staging-header' }
+								className={ 'hgwp-app-staging-header' }
 							>
-								<Title as={'h1'} className={'nfd-mb-2'}>
-									{__('Staging', 'wp-plugin-hostgator')}
+								<Title as={ 'h1' } className={ 'nfd-mb-2' }>
+									{ __( 'Staging', 'wp-plugin-hostgator' ) }
 								</Title>
 								<Title
-									as={'h2'}
+									as={ 'h2' }
 									className="nfd-font-normal nfd-text-[13px]"
 								>
-									{__(
+									{ __(
 										'A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready.',
 										'wp-plugin-hostgator'
-									)}
+									) }
 								</Title>
 							</div>
 							<span className="nfd-details-icon">
@@ -232,7 +238,7 @@ const Settings = () => {
 						</div>
 					</details>
 				</Container>
-			)}
+			) }
 		</Page>
 	);
 };

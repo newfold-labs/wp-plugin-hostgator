@@ -4,9 +4,11 @@ import { useNavigate, useLocation, useSearchParams } from 'react-router-dom';
 import { useNotification } from 'App/components/notifications';
 import AppStore from '../../data/store';
 import { useContext } from '@wordpress/element';
-import { hostgatorSettingsApiFetch } from '../../util/helpers';
+import {
+	hostgatorSettingsApiFetch,
+	comingSoonAdminbarToggle,
+} from '../../util/helpers';
 import '@newfold/wp-module-ecommerce/hostgator.css';
-import { comingSoonAdminbarToggle } from '../../util/helpers';
 
 const EcomerceStore = () => {
 	const { store, setStore } = useContext( AppStore );
@@ -30,8 +32,8 @@ const EcomerceStore = () => {
 		toggleComingSoon: () =>
 			hostgatorSettingsApiFetch(
 				{ comingSoon: ! store.comingSoon },
-				console.error,
-				( response ) => {
+				() => {},
+				() => {
 					setStore( { ...store, comingSoon: ! store.comingSoon } );
 					comingSoonAdminbarToggle( ! store.comingSoon );
 				}

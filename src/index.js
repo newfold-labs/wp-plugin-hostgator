@@ -6,6 +6,7 @@ import domReady from '@wordpress/dom-ready';
 import { createRoot } from '@wordpress/element';
 
 const WP_ADM_PAGE_ROOT_ELEMENT = 'hwa-app';
+// eslint-disable-next-line no-unused-vars
 const HG_ASCI = `                                                                                                     
                                       /%&%/                                     
                           %@&&&&&&&&&&&&&&&&&&&&&&&&&&(                         
@@ -41,7 +42,6 @@ const HG_ASCI = `
                           .((((((((((((,,,,,,,,,,,,,,,                          
                               Welcome to HostGator!
 `;
-console.log( HG_ASCI );
 
 const HGWPRender = () => {
 	const DOM_ELEMENT = document.getElementById( WP_ADM_PAGE_ROOT_ELEMENT );

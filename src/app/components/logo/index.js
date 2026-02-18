@@ -2,8 +2,8 @@ import { Button } from '@wordpress/components';
 import { Title } from '@newfold/ui-component-library';
 import { ReactComponent as HostGatorLogo } from 'Assets/svg/hostgator-snappy.svg';
 
-const Mark = ({ variant }) => {
-	const isIcon = (variant === 'icon');
+const Mark = ( { variant } ) => {
+	const isIcon = variant === 'icon';
 	return (
 		<Button
 			icon={
@@ -15,17 +15,17 @@ const Mark = ({ variant }) => {
 			}
 			className="logo-mark nfd-p-0 hgwp-logo"
 			href="#/home"
-			aria-label={__('HostGator', 'wp-plugin-hostgator')}
+			aria-label={ __( 'HostGator', 'wp-plugin-hostgator' ) }
 		/>
 	);
 };
 
-const Logo = ({ variant = 'wordmark' }) => {
+const Logo = ( { variant = 'wordmark' } ) => {
 	return (
 		<div className="hgwp-logo-wrap nfd-flex nfd-items-center nfd-justify-center">
-			<Mark variant={variant} />
+			<Mark variant={ variant } />
 			<Title as="h2" className="nfd-sr-only">
-				{__('HostGator WordPress Plugin', 'wp-plugin-hostgator')}
+				{ __( 'HostGator WordPress Plugin', 'wp-plugin-hostgator' ) }
 			</Title>
 		</div>
 	);

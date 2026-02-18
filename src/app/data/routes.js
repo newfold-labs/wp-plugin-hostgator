@@ -16,15 +16,15 @@ import Help from '../pages/help';
 import Admin from '../pages/admin';
 import { getMarketplaceSubnavRoutes } from '@modules/wp-module-marketplace/components/marketplaceSubnav';
 
-const addPartialMatch = (prefix, path) =>
-	prefix === path ? `${prefix}/*` : path;
+const addPartialMatch = ( prefix, path ) =>
+	prefix === path ? `${ prefix }/*` : path;
 
-function helpAction(e, preventDefault = false) {
+function helpAction( e, preventDefault = false ) {
 	if (
-		NewfoldRuntime.hasCapability('canAccessHelpCenter') &&
+		NewfoldRuntime.hasCapability( 'canAccessHelpCenter' ) &&
 		window.NewfoldFeatures?.features?.helpCenter
 	) {
-		if (preventDefault) {
+		if ( preventDefault ) {
 			e.preventDefault();
 		}
 		window.newfoldEmbeddedHelp.toggleNFDLaunchedEmbeddedHelp();
@@ -60,32 +60,32 @@ const PerformanceRedirect = () => {
 export const AppRoutes = () => {
 	return (
 		<Routes>
-			{routes.map(
-				(page) =>
+			{ routes.map(
+				( page ) =>
 					true === page.condition && (
 						<Route
 							end
-							key={page.name}
-							path={addPartialMatch(
+							key={ page.name }
+							path={ addPartialMatch(
 								'/marketplace',
-								addPartialMatch('/store', page.name)
-							)}
-							element={<page.Component />}
+								addPartialMatch( '/store', page.name )
+							) }
+							element={ <page.Component /> }
 						/>
 					)
-			)}
-			<Route path="/staging" element={<StagingRedirect />} />
-			<Route path="/performance" element={<PerformanceRedirect />} />
-			<Route path="/" element={<Home />} />
+			) }
+			<Route path="/staging" element={ <StagingRedirect /> } />
+			<Route path="/performance" element={ <PerformanceRedirect /> } />
+			<Route path="/" element={ <Home /> } />
 			<Route
 				path="*"
 				element={
-					<main style={{ padding: '1rem' }}>
+					<main style={ { padding: '1rem' } }>
 						<p>
-							{__(
+							{ __(
 								"There's nothing here!",
 								'wp-plugin-hostgator'
-							)}
+							) }
 						</p>
 					</main>
 				}
@@ -94,39 +94,38 @@ export const AppRoutes = () => {
 	);
 };
 
-
 export const routes = [
 	{
 		name: '/home',
-		title: __('Home', 'wp-plugin-hostgator'),
+		title: __( 'Home', 'wp-plugin-hostgator' ),
 		Component: Home,
 		Icon: HomeIcon,
 		condition: true,
 	},
 	{
 		name: '/settings',
-		title: __('Manage WordPress', 'wp-plugin-hostgator'),
+		title: __( 'Manage WordPress', 'wp-plugin-hostgator' ),
 		Component: Settings,
 		Icon: AdjustmentsHorizontalIcon,
 		condition: true,
 	},
 	{
 		name: '/settings/staging',
-		title: __('Staging', 'wp-plugin-hostgator'),
+		title: __( 'Staging', 'wp-plugin-hostgator' ),
 		Component: Settings,
 		Icon: AdjustmentsHorizontalIcon,
 		condition: true,
 	},
 	{
 		name: '/settings/performance',
-		title: __('Performance', 'wp-plugin-hostgator'),
+		title: __( 'Performance', 'wp-plugin-hostgator' ),
 		Component: Settings,
 		Icon: AdjustmentsHorizontalIcon,
 		condition: true,
 	},
 	{
 		name: '/marketplace',
-		title: __('Marketplace', 'wp-plugin-hostgator'),
+		title: __( 'Marketplace', 'wp-plugin-hostgator' ),
 		Component: Marketplace,
 		Icon: ShoppingBagIcon,
 		subRoutes: await getMarketplaceSubnavRoutes(),
@@ -134,46 +133,46 @@ export const routes = [
 	},
 	{
 		name: '/store',
-		title: __('Store', 'wp-plugin-hostgator'),
+		title: __( 'Store', 'wp-plugin-hostgator' ),
 		Component: Store,
 		Icon: BuildingStorefrontIcon,
 		condition: true,
 		subRoutes: [
 			{
 				name: '/store/products',
-				title: __('Products & Services', 'wp-plugin-hostgator'),
+				title: __( 'Products & Services', 'wp-plugin-hostgator' ),
 			},
-			NewfoldRuntime.hasCapability('hasYithExtended')
+			NewfoldRuntime.hasCapability( 'hasYithExtended' )
 				? {
-					name: '/store/sales_discounts',
-					title: __(
-						'Sales & Promotions',
-						'wp-plugin-hostgator'
-					),
-				}
+						name: '/store/sales_discounts',
+						title: __(
+							'Sales & Promotions',
+							'wp-plugin-hostgator'
+						),
+				  }
 				: null,
-			NewfoldRuntime.hasCapability('hasYithExtended') &&
-				NewfoldRuntime.hasCapability('hasEcomdash')
+			NewfoldRuntime.hasCapability( 'hasYithExtended' ) &&
+			NewfoldRuntime.hasCapability( 'hasEcomdash' )
 				? {
-					name: '/store/sales_channel',
-					title: __('Sales Channel', 'wp-plugin-hostgator'),
-				}
+						name: '/store/sales_channel',
+						title: __( 'Sales Channel', 'wp-plugin-hostgator' ),
+				  }
 				: null,
 			NewfoldRuntime.isWoo
 				? {
-					name: '/store/payments',
-					title: __('Payments', 'wp-plugin-hostgator'),
-				}
+						name: '/store/payments',
+						title: __( 'Payments', 'wp-plugin-hostgator' ),
+				  }
 				: null,
 			{
 				name: '/store/details',
-				title: __('Store Details', 'wp-plugin-hostgator'),
+				title: __( 'Store Details', 'wp-plugin-hostgator' ),
 			},
-		].filter(Boolean),
+		].filter( Boolean ),
 	},
 	{
 		name: '/help',
-		title: __('Help', 'wp-plugin-hostgator'),
+		title: __( 'Help', 'wp-plugin-hostgator' ),
 		Component: Help,
 		Icon: QuestionMarkCircleIcon,
 		condition: true,
@@ -181,15 +180,21 @@ export const routes = [
 	},
 	{
 		name: '/admin',
-		title: __('Admin', 'wp-plugin-hostgator'),
+		title: __( 'Admin', 'wp-plugin-hostgator' ),
 		Component: Admin,
 		condition: true,
 	},
 ];
 
-const topRoutePaths = ['/home', '/settings', '/marketplace', '/store', '/help'];
-export const topRoutes = _filter(routes, (route) =>
-	topRoutePaths.includes(route.name)
+const topRoutePaths = [
+	'/home',
+	'/settings',
+	'/marketplace',
+	'/store',
+	'/help',
+];
+export const topRoutes = _filter( routes, ( route ) =>
+	topRoutePaths.includes( route.name )
 );
 
 export default AppRoutes;

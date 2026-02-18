@@ -121,7 +121,6 @@ export const hostgatorPurgeCacheApiFetch = (
 			thenCallback( response );
 		} )
 		.catch( ( error ) => {
-			console.log( error );
 			passError( error );
 		} );
 };
@@ -140,14 +139,13 @@ export const comingSoonAdminbarToggle = ( comingSoon ) => {
  */
 export const getRegionValue = () => {
 	const brand = NewfoldRuntime.plugin.brand;
-	const region = NewfoldRuntime.plugin.region.toUpperCase();
 
 	// bail if not hostgator-latam brand
 	if ( brand !== 'hostgator-latam' ) {
 		return '';
 	}
-	// qualify region setting and return region code
-	switch ( region ) {
+	const regionCode = NewfoldRuntime.plugin.region.toUpperCase();
+	switch ( regionCode ) {
 		case 'AR': // Argentina
 		case 'BO': // Bolivia
 		case 'BR': // Brazil
@@ -158,8 +156,7 @@ export const getRegionValue = () => {
 		case 'MX': // Mexico
 		case 'PR': // Peru
 		case 'UY': // Uruguay
-			return region;
-			break;
+			return regionCode;
 		case 'US':
 		case false:
 		default:
@@ -360,7 +357,9 @@ export const getEditorUrl = async ( canvas = 'edit' ) => {
 export const getEditorLabel = async () => {
 	const runtime = await waitForRuntime();
 	const blockTheme = runtime?.wordpress?.isBlockTheme || false;
-	return blockTheme ? __( 'Site Editor', 'wp-plugin-hostgator' ) : __( 'Customizer', 'wp-plugin-hostgator' );
+	return blockTheme
+		? __( 'Site Editor', 'wp-plugin-hostgator' )
+		: __( 'Customizer', 'wp-plugin-hostgator' );
 };
 
 /**
@@ -373,7 +372,12 @@ export const getPlatformPathUrl = ( jarvisPath = '', legacyPath = '' ) => {
 	// HostGator: use my.hostgator.com or similar; legacyPath for hosting panel
 	const base = 'https://my.hostgator.com/';
 	if ( legacyPath ) {
-		return base + ( legacyPath.startsWith( 'app' ) ? 'hosting/' + legacyPath : legacyPath );
+		return (
+			base +
+			( legacyPath.startsWith( 'app' )
+				? 'hosting/' + legacyPath
+				: legacyPath )
+		);
 	}
 	return base + ( jarvisPath || '' );
 };
