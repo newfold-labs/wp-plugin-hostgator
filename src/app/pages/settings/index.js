@@ -59,6 +59,7 @@ const Settings = () => {
 			details.removeAttribute('open');
 		});
 		const accordionMap = {
+			'/settings': '.settings-details',
 			'/settings/performance': '.performance-details',
 			'/settings/staging': '.staging-details',
 			'/settings/settings': '.settings-details',

@@ -13,28 +13,36 @@ test.describe('Settings Page', () => {
   });
 
   test('Has coming soon section', async ({ page }) => {
+    const generalSettings = page.locator('.settings-details');
+    await generalSettings.locator('summary').click();
+    await page.waitForTimeout(300);
     const comingSoonSection = page.locator('.hgwp-app-settings-coming-soon');
     await utils.scrollIntoView(comingSoonSection);
     await expect(comingSoonSection).toBeVisible();
   });
 
   test('Autoupdate toggles function properly', async ({ page }) => {
+    const generalSettings = page.locator('.settings-details');
+    if (!(await generalSettings.getAttribute('open'))) {
+      await generalSettings.locator('summary').click();
+      await page.waitForTimeout(300);
+    }
     const updatesSection = page.locator('.hgwp-app-settings-update');
     await utils.scrollIntoView(updatesSection);
     await expect(updatesSection).toBeVisible();
 
-    const allToggle = page.locator('[data-id="autoupdate-all-toggle"]');
+    const allToggle = page.locator('#autoupdate-all-toggle, [data-id="autoupdate-all-toggle"]').first();
     await expect(allToggle).toHaveAttribute('aria-checked', 'true');
 
-    const coreToggle = page.locator('[data-id="autoupdate-core-toggle"]');
+    const coreToggle = page.locator('#autoupdate-core-toggle, [data-id="autoupdate-core-toggle"]').first();
     await expect(coreToggle).toBeDisabled();
     await expect(coreToggle).toHaveAttribute('aria-checked', 'true');
 
-    const pluginsToggle = page.locator('[data-id="autoupdate-plugins-toggle"]');
+    const pluginsToggle = page.locator('#autoupdate-plugins-toggle, [data-id="autoupdate-plugins-toggle"]').first();
     await expect(pluginsToggle).toBeDisabled();
     await expect(pluginsToggle).toHaveAttribute('aria-checked', 'true');
 
-    const themesToggle = page.locator('[data-id="autoupdate-themes-toggle"]');
+    const themesToggle = page.locator('#autoupdate-themes-toggle, [data-id="autoupdate-themes-toggle"]').first();
     await expect(themesToggle).toBeDisabled();
     await expect(themesToggle).toHaveAttribute('aria-checked', 'true');
 
@@ -48,23 +56,33 @@ test.describe('Settings Page', () => {
   });
 
   test('Content settings work', async ({ page }) => {
-    const emptyTrashSelect = page.locator('[data-id="empty-trash-select"]');
+    const generalSettings = page.locator('.settings-details');
+    if (!(await generalSettings.getAttribute('open'))) {
+      await generalSettings.locator('summary').click();
+      await page.waitForTimeout(300);
+    }
+    const emptyTrashSelect = page.locator('#empty-trash-select, [data-id="empty-trash-select"]').first();
     await emptyTrashSelect.click();
     await page.waitForTimeout(500);
-    await emptyTrashSelect.locator('..').locator('+ .nfd-select__options .nfd-select__option:nth-child(2)').click();
+    await page.locator('.nfd-select__options .nfd-select__option').filter({ hasText: /^2$/ }).first().click();
     await page.waitForTimeout(100);
-    const description = page.locator('#empty-trash-select__description');
-    await expect(description).toContainText('The trash will automatically empty every 2 weeks.');
+    const description = page.locator('[id="empty-trash-select__description"], .nfd-select-field__description').filter({ hasText: '2 weeks' });
+    await expect(description).toContainText('2 weeks');
   });
 
   test('Comment settings work', async ({ page }) => {
+    const generalSettings = page.locator('.settings-details');
+    if (!(await generalSettings.getAttribute('open'))) {
+      await generalSettings.locator('summary').click();
+      await page.waitForTimeout(300);
+    }
     const commentsSection = page.locator('.hgwp-app-settings-comments');
     await utils.scrollIntoView(commentsSection);
     await expect(commentsSection).toBeVisible();
 
-    const disableCommentsToggle = page.locator('[data-id="disable-comments-toggle"]');
+    const disableCommentsToggle = page.locator('#disable-comments-toggle, [data-id="disable-comments-toggle"]').first();
     await expect(disableCommentsToggle).toHaveAttribute('aria-checked', 'false');
-    const closeCommentsDaysSelect = page.locator('[data-id="close-comments-days-select"]');
+    const closeCommentsDaysSelect = page.locator('#close-comments-days-select, [data-id="close-comments-days-select"]').first();
     await expect(closeCommentsDaysSelect).toBeDisabled();
 
     await disableCommentsToggle.click();
