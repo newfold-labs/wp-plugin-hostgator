@@ -305,6 +305,7 @@ let runtimePromise = null;
 
 /**
  * Wait for NewfoldRuntime to be available on window.
+ * Resolves when adminUrl is present (required for editor URL/label helpers).
  *
  * @param {number} [timeout=5000] - Max wait in ms.
  * @return {Promise<object>} Resolves with NewfoldRuntime when available.
@@ -314,23 +315,17 @@ export const waitForRuntime = ( timeout = 5000 ) => {
 		return runtimePromise;
 	}
 	runtimePromise = new Promise( ( resolve, reject ) => {
-		if (
-			window.NewfoldRuntime?.adminUrl &&
-			window.NewfoldRuntime?.capabilities &&
-			window.NewfoldRuntime?.wordpress
-		) {
-			resolve( window.NewfoldRuntime );
+		const rt = window.NewfoldRuntime;
+		if ( rt?.adminUrl ) {
+			resolve( rt );
 			return;
 		}
 		const startTime = Date.now();
 		const interval = setInterval( () => {
-			if (
-				window.NewfoldRuntime?.adminUrl &&
-				window.NewfoldRuntime?.capabilities &&
-				window.NewfoldRuntime?.wordpress
-			) {
+			const current = window.NewfoldRuntime;
+			if ( current?.adminUrl ) {
 				clearInterval( interval );
-				resolve( window.NewfoldRuntime );
+				resolve( current );
 			} else if ( Date.now() - startTime >= timeout ) {
 				clearInterval( interval );
 				runtimePromise = null;
@@ -348,11 +343,16 @@ export const waitForRuntime = ( timeout = 5000 ) => {
  * @return {Promise<string>} URL for the theme editor or customizer.
  */
 export const getEditorUrl = async ( canvas = 'edit' ) => {
-	const runtime = await waitForRuntime();
-	const classicThemeEditorUrl = `${ runtime.adminUrl }customize.php`;
-	const blockThemeEditorUrl = `${ runtime.adminUrl }site-editor.php?canvas=${ canvas }`;
-	const blockTheme = runtime?.wordpress?.isBlockTheme || false;
-	return blockTheme ? blockThemeEditorUrl : classicThemeEditorUrl;
+	try {
+		const runtime = await waitForRuntime();
+		const classicThemeEditorUrl = `${ runtime.adminUrl }customize.php`;
+		const blockThemeEditorUrl = `${ runtime.adminUrl }site-editor.php?canvas=${ canvas }`;
+		const blockTheme = runtime?.wordpress?.isBlockTheme || false;
+		return blockTheme ? blockThemeEditorUrl : classicThemeEditorUrl;
+	} catch {
+		// Fallback when runtime not available (e.g. before script loads).
+		return '#';
+	}
 };
 
 /**
@@ -361,11 +361,15 @@ export const getEditorUrl = async ( canvas = 'edit' ) => {
  * @return {Promise<string>} Localized label for Site Editor or Customizer.
  */
 export const getEditorLabel = async () => {
-	const runtime = await waitForRuntime();
-	const blockTheme = runtime?.wordpress?.isBlockTheme || false;
-	return blockTheme
-		? __( 'Site Editor', 'wp-plugin-hostgator' )
-		: __( 'Customizer', 'wp-plugin-hostgator' );
+	try {
+		const runtime = await waitForRuntime();
+		const blockTheme = runtime?.wordpress?.isBlockTheme || false;
+		return blockTheme
+			? __( 'Site Editor', 'wp-plugin-hostgator' )
+			: __( 'Customizer', 'wp-plugin-hostgator' );
+	} catch {
+		return __( 'Editor', 'wp-plugin-hostgator' );
+	}
 };
 
 /**

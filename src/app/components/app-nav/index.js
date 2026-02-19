@@ -37,8 +37,12 @@ export const AppNavMenu = () => {
 	);
 
 	useEffect( () => {
-		getEditorUrl( 'edit' ).then( setEditorUrl );
-		getEditorLabel().then( setEditorLabel );
+		getEditorUrl( 'edit' )
+			.then( setEditorUrl )
+			.catch( () => {} );
+		getEditorLabel()
+			.then( setEditorLabel )
+			.catch( () => {} );
 	}, [] );
 
 	const menu = () => {
@@ -85,7 +89,7 @@ export const AppNavMenu = () => {
 			<>
 				<Button
 					as="a"
-					className="nfd-flex nfd-gap-2 nfd-mr-4"
+					className="nfd-flex nfd-gap-2 nfd-mr-4 nfd-text-nowrap"
 					href={ editorUrl }
 				>
 					{ editorLabel }
@@ -93,7 +97,7 @@ export const AppNavMenu = () => {
 				</Button>
 				<Button
 					as="a"
-					className="nfd-flex nfd-gap-2 nfd-mr-4"
+					className="nfd-flex nfd-gap-2 nfd-mr-4 nfd-text-nowrap"
 					href={ addUtmParams(
 						getPlatformPathUrl( 'hosting/details', 'app/#/sites' )
 					) }

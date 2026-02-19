@@ -62,9 +62,12 @@ export const AppRoutes = () => {
 				( page ) =>
 					true === page.condition && (
 						<Route
-							end
+							end={ page.name !== '/marketplace' }
 							key={ page.name }
-							path={ addPartialMatch( '/marketplace' ) }
+							path={ addPartialMatch(
+								'/marketplace',
+								page.name
+							) }
 							element={ <page.Component /> }
 						/>
 					)
