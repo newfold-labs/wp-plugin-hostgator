@@ -21,7 +21,7 @@ final class Admin {
 		/* Add Page to WordPress Admin Menu. */
 		\add_action( 'admin_menu', array( __CLASS__, 'page' ) );
 		/* Load Page Scripts & Styles. */
-		\add_action( 'load-toplevel_page_hostgator', array( __CLASS__, 'assets' ) );
+		\add_action( 'admin_enqueue_scripts', array( __CLASS__, 'assets' ) );
 		/* Load i18 files */
 		\add_action( 'init', array( __CLASS__, 'load_text_domain' ), 100 );
 		/* Add Links to WordPress Plugins list item. */
@@ -262,6 +262,16 @@ final class Admin {
 
 		if ( version_compare( $wp_version, $plugin_data['RequiresWP'], '>=' ) ) {
 			echo '<div id="hwa-app" class="hgwpp hgwpp_app"></div>' . PHP_EOL;
+			echo '<div id="nfd-portal-apps" class="nfd-portal-apps">';
+			$portal_apps = array(
+				'nfd-coming-soon-portal',
+				'nfd-performance-portal',
+				'nfd-staging-portal',
+			);
+			foreach ( $portal_apps as $portal_app ) {
+				echo '<div id="' . esc_attr( $portal_app ) . '"></div>';
+			}
+			echo '</div>' . PHP_EOL;
 		} else {
 			// fallback messaging for outdated WordPress
 			echo '<div id="hwa-app" class="hgwpp hgwpp_app">' . PHP_EOL;
@@ -293,9 +303,20 @@ final class Admin {
 		}
 
 		\wp_register_script(
+			'nfd-portal-registry',
+			HOSTGATOR_BUILD_URL . '/portal-registry.js',
+			array( 'wp-components', 'wp-element' ),
+			$asset['version'],
+			true
+		);
+
+		\wp_register_script(
 			'hostgator-script',
 			HOSTGATOR_BUILD_URL . '/index.js',
-			array_merge( $asset['dependencies'], array( 'newfold-features', 'nfd-runtime' ) ),
+			array_merge(
+				$asset['dependencies'],
+				array( 'newfold-features', 'nfd-runtime', 'nfd-portal-registry' )
+			),
 			$asset['version'],
 			true
 		);
@@ -314,7 +335,7 @@ final class Admin {
 		);
 
 		$screen = get_current_screen();
-		if ( false !== strpos( $screen->id, 'hostgator' ) ) {
+		if ( $screen && false !== strpos( $screen->id, 'hostgator' ) ) {
 			\wp_enqueue_script( 'hostgator-script' );
 			\wp_enqueue_style( 'hostgator-style' );
 		}

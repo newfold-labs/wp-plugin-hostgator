@@ -1,5 +1,7 @@
 # Composer
 /vendor
+/vendor-prefixed
+bin/strauss.phar
 
 #node_modules
 /node_modules
@@ -8,11 +10,28 @@
 .DS_Store
 .idea
 
+# PHPCS cache files
+.cache/*
+!.cache/.gitkeep
+
+# WordPress core files
+/wordpress
+/wp-content
+
+# Tests
+/tests/_output
+/tests/_support/_generated
+
 # Cypress
 cypress.env.json
 /tests/cypress/downloads
 /tests/cypress/screenshots
 /tests/cypress/videos
+
+# Playwright
+/tests/playwright/test-results
+/tests/playwright/artifacts
+/tests/playwright/playwright-projects.json
 
 # Built-app files
 /.docs
@@ -23,3 +42,4 @@ cypress.env.json
 *.log
 *.sql
 *.zip
+*.local.json

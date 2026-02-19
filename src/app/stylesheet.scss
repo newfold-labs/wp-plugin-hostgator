@@ -89,7 +89,7 @@ body.toplevel_page_hostgator {
     }
 
     // color: #363636;
-    
+
     //     h1,
     //     h2,
     //     h3,
@@ -100,7 +100,7 @@ body.toplevel_page_hostgator {
     //         font-weight: 800;
     //         color: var(--color-primary);
     //     }
-    
+
     //     p,
     //     .hgwp-nav a,
     //     div {
@@ -169,8 +169,12 @@ body.toplevel_page_hostgator {
         margin-top: 0.25rem;
     }
 
-    .newfold-notifications-wrapper .notice {
-        display: block !important;
+    .newfold-notifications-wrapper {
+        padding-top: 2rem;
+
+        .notice {
+            display: block !important;
+        }
     }
 }
 
@@ -277,4 +281,101 @@ body.toplevel_page_hostgator {
 
 .coming-soon-status {
     text-transform: uppercase;
+}
+
+// App bar logo: spacing and wordmark color on light background
+.hgwpp .hgwp-logo-wrap {
+    padding: 0 1rem;
+    color: var(--color-primary);
+
+    .hgwp-logo--wordmark {
+        width: 160px;
+        height: auto;
+    }
+
+    .hgwp-logo--icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    // Wordmark paths are #FFF in SVG; use primary for light app bar
+    .header__logoPath {
+        fill: var(--color-primary);
+    }
+
+    .logo-mark {
+        width: 150px;
+
+        &:focus:not(:disabled) {
+            box-shadow: none !important;
+            outline: 0;
+        }
+
+        &:focus-visible {
+            box-shadow: var(--hgbrand-focus);
+        }
+    }
+}
+
+// Settings page and accordion wrappers: stable width when toggling (no layout shift)
+.hgwp-app-settings-page {
+    min-width: 100%;
+}
+
+.settings-app-wrapper {
+    width: 100%;
+}
+
+// Hide module's own page header when embedded in Settings (avoid doubled titles)
+.hgwpp .performance-fill {
+    .nfd-page {
+        &>div:first-child {
+            display: none;
+        }
+    }
+}
+
+.hgwpp .staging-fill {
+    .nfd-page .newfold-staging-header {
+        display: none;
+    }
+}
+
+// Settings accordion (details/summary) and chevron icon
+.hgwpp .nfd-details {
+
+    summary {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        padding: 2rem;
+    }
+
+    .nfd-details-icon {
+        flex-shrink: 0;
+        font-size: 2rem;
+        transform: rotate(180deg);
+        width: 2rem;
+        transition: color 0.25s ease;
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    &[open] {
+        .nfd-details-icon {
+            transform: rotate(0deg);
+        }
+    }
+
+    &:hover,
+    &[open] {
+        .nfd-details-icon {
+            color: var(--color-primary);
+        }
+    }
 }

@@ -44,6 +44,7 @@ const AutomaticUpdatesAll = ( { setError, notify } ) => {
 				},
 				setError,
 				( response ) => {
+					void response;
 					setAutoUpdatesAll( ! autoUpdatesAll );
 				}
 			);
@@ -122,6 +123,7 @@ const AutomaticUpdatesMajorCore = ( { setError, notify } ) => {
 			{ autoUpdatesMajorCore: ! autoUpdatesMajorCore },
 			setError,
 			( response ) => {
+				void response;
 				setAutoUpdatesCore( ! autoUpdatesMajorCore );
 			}
 		);
@@ -184,6 +186,7 @@ const AutomaticUpdatesPlugins = ( { setError, notify } ) => {
 			{ autoUpdatesPlugins: ! autoUpdatesPlugins },
 			setError,
 			( response ) => {
+				void response;
 				setAutoUpdatesPlugins( ! autoUpdatesPlugins );
 			}
 		);
@@ -247,6 +250,7 @@ const AutomaticUpdatesThemes = ( { setError, notify } ) => {
 			{ autoUpdatesThemes: ! autoUpdatesThemes },
 			setError,
 			( response ) => {
+				void response;
 				setAutoUpdatesThemes( ! autoUpdatesThemes );
 			}
 		);

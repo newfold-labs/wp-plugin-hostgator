@@ -1,0 +1,7 @@
+[
+  {
+    "name": "newfold-labs/wp-plugin-hostgator",
+    "testDir": "./tests/playwright/specs",
+    "testMatch": "**/*.spec.js"
+  }
+]

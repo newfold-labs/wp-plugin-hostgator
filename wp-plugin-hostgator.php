@@ -14,8 +14,8 @@
  * Description:       WordPress plugin that integrates a WordPress site with the HostGator control panel, including performance, security, and update features.
  * Version:           2.15.2
  * Requires at least: 6.6
- * Requires PHP:      7.3
- * Tested up to:      6.8.3
+ * Requires PHP:      7.4
+ * Tested up to:      6.9.1
  * Author:            HostGator
  * Author URI:        https://hostgator.com
  * Text Domain:       wp-plugin-hostgator
@@ -50,7 +50,7 @@ if ( 'plugins.php' === $pagenow ) {
 
 	$plugin_check = new HG_Plugin_PHP_Compat_Check( __FILE__ );
 
-	$plugin_check->min_php_version = '7.3';
+	$plugin_check->min_php_version = '7.4';
 	$plugin_check->min_wp_version  = '6.6';
 
 	$plugin_check->check_plugin_requirements();
@@ -72,6 +72,6 @@ $nfd_plugins_check->legacy_plugins = array(
 $pass_nfd_check                    = $nfd_plugins_check->check_plugin_requirements();
 
 // Check PHP version before initializing to prevent errors if plugin is incompatible.
-if ( $pass_nfd_check && version_compare( PHP_VERSION, '7.3', '>=' ) ) {
+if ( $pass_nfd_check && version_compare( PHP_VERSION, '7.4', '>=' ) ) {
 	require __DIR__ . '/bootstrap.php';
 }

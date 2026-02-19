@@ -1,0 +1,126 @@
+name: Cleanup Playground Preview
+on:
+  pull_request:
+    types: [ closed ]
+
+# Disable permissions for all available scopes by default.
+# Any needed permissions should be configured at the job level.
+permissions: {}
+
+jobs:
+  cleanup-preview:
+    name: Remove Preview from GitHub Pages
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+      deployments: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Get PR number
+        id: pr
+        run: |
+          echo "number=${{ github.event.pull_request.number }}" >> "$GITHUB_OUTPUT"
+
+      - name: Download current GitHub Pages deployment
+        continue-on-error: true
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131  # v7.0.0
+        with:
+          name: github-pages
+          path: ./current-pages
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract and cleanup preview files
+        id: cleanup
+        env:
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
+        run: |
+          PR_NUM="${PR_NUMBER}"
+          ZIP_NAME="hostgator-pr-${PR_NUM}.zip"
+
+          # Create clean directory structure
+          mkdir -p gh-pages/previews
+
+          # If we successfully downloaded current pages, extract and filter
+          if [ -d "./current-pages" ] && [ -f "./current-pages/artifact.tar" ]; then
+            echo "Found existing pages deployment, extracting..."
+            cd current-pages
+            tar -xf artifact.tar
+            cd ..
+
+            # Copy everything except the PR's zip file
+            if [ -d "./current-pages/previews" ]; then
+              echo "Copying preview files except ${ZIP_NAME}..."
+              for file in ./current-pages/previews/*; do
+                # Skip if no files matched (glob pattern remains literal)
+                [ -e "$file" ] || break
+                filename=$(basename "$file")
+                if [ "$filename" != "$ZIP_NAME" ]; then
+                  cp "$file" "./gh-pages/previews/"
+                fi
+              done
+              echo "removed=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "No previews directory found in current deployment"
+              echo "removed=false" >> "$GITHUB_OUTPUT"
+            fi
+          else
+            echo "No existing pages deployment found or extraction failed"
+            echo "removed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+          # Create index.html (simple version)
+          cat > gh-pages/previews/index.html <<'EOF'
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <title>Hostgator Plugin - Playground Previews</title>
+            <style>
+              body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; }
+              h1 { color: #333; }
+              .preview { background: #f5f5f5; padding: 15px; margin: 10px 0; border-radius: 5px; }
+              a { color: #0969da; text-decoration: none; }
+              a:hover { text-decoration: underline; }
+            </style>
+          </head>
+          <body>
+            <h1>🎮 WordPress Playground Previews</h1>
+            <p>Preview builds of the Hostgator WordPress Plugin for testing in WordPress Playground.</p>
+            <p>Active PR previews are listed here automatically.</p>
+          </body>
+          </html>
+          EOF
+
+          # Count remaining preview files
+          REMAINING=$(find gh-pages/previews -name "*.zip" -type f 2>/dev/null | wc -l)
+          echo "remaining_count=${REMAINING}" >> "$GITHUB_OUTPUT"
+
+      - name: Upload cleaned pages artifact
+        if: steps.cleanup.outputs.removed == 'true'
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b  # v4.0.0
+        with:
+          path: ./gh-pages
+
+      - name: Deploy to GitHub Pages
+        if: steps.cleanup.outputs.removed == 'true'
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e  # v4.0.5
+
+      - name: Log cleanup results
+        env:
+          REMOVED: ${{ steps.cleanup.outputs.removed }}
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
+          REMAINING_COUNT: ${{ steps.cleanup.outputs.remaining_count }}
+        run: |
+          if [ "${REMOVED}" == "true" ]; then
+            echo "✓ Successfully removed preview for PR #${PR_NUMBER}"
+            echo "✓ Remaining preview files: ${REMAINING_COUNT}"
+          else
+            echo "ℹ No preview file found for PR #${PR_NUMBER} (may not have been created)"
+          fi

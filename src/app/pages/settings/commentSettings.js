@@ -1,7 +1,8 @@
 import AppStore from '../../data/store';
 import { hostgatorSettingsApiFetch } from '../../util/helpers';
 import { useUpdateEffect } from 'react-use';
-import { useState } from '@wordpress/element';
+import { useState, useContext } from '@wordpress/element';
+import { __, _n, sprintf } from '@wordpress/i18n';
 import {
 	Alert,
 	Container,
@@ -33,6 +34,7 @@ const OldPostsComments = ( { setError, notify } ) => {
 			{ disableCommentsOldPosts: ! disableCommentsOldPosts },
 			setError,
 			( response ) => {
+				void response;
 				setDisableCommentsOldPosts( ! disableCommentsOldPosts );
 			}
 		);
@@ -111,6 +113,7 @@ const CloseCommentsDays = ( { setError, notify } ) => {
 			{ closeCommentsDays: value },
 			setError,
 			( response ) => {
+				void response;
 				setNumCloseCommentsDays( value );
 			}
 		);
@@ -188,6 +191,7 @@ const CommentsPerPage = ( { setError, notify } ) => {
 			{ commentsPerPage: value },
 			setError,
 			( response ) => {
+				void response;
 				setNumCommentsPerPage( value );
 			}
 		);
@@ -214,16 +218,11 @@ const CommentsPerPage = ( { setError, notify } ) => {
 	return (
 		<SelectField
 			id="comments-per-page-select"
-			label={
-				//translators: %s: number of comments. `Display ${commentsPerPage} comments per page.`
-				sprintf(
-					__(
-						'Display %s comments per page.',
-						'wp-plugin-hostgator'
-					),
-					commentsPerPage
-				)
-			}
+			label={ sprintf(
+				/* translators: %s: number of comments to display per page */
+				__( 'Display %s comments per page.', 'wp-plugin-hostgator' ),
+				commentsPerPage
+			) }
 			value={ commentsPerPage }
 			selectedLabel={ commentsPerPage }
 			options={ [

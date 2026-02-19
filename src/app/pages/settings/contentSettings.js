@@ -1,7 +1,8 @@
 import AppStore from '../../data/store';
 import { hostgatorSettingsApiFetch } from '../../util/helpers';
 import { useUpdateEffect } from 'react-use';
-import { useState } from '@wordpress/element';
+import { useState, useContext } from '@wordpress/element';
+import { __, _n, sprintf } from '@wordpress/i18n';
 import { Alert, Container, SelectField } from '@newfold/ui-component-library';
 import { useNotification } from 'App/components/notifications';
 
@@ -46,6 +47,7 @@ const ContentRevisions = ( { setError, notify } ) => {
 			{ contentRevisions: value },
 			setError,
 			( response ) => {
+				void response;
 				setNumContentRevisions( value );
 			}
 		);
@@ -121,6 +123,7 @@ const EmptyTrash = ( { setError, notify } ) => {
 			{ emptyTrashDays: value },
 			setError,
 			( response ) => {
+				void response;
 				setNumEmptyTrashDays( value );
 			}
 		);

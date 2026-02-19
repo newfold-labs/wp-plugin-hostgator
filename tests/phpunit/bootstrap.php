@@ -1,9 +1,32 @@
 <?php
+/**
+ * Bootstrap file for unit tests.
+ *
+ * When WP_PHPUNIT__DIR is set (e.g. in CI) and HOSTGATOR_PHPUNIT_MINIMAL is not set,
+ * loads the WordPress test suite. Set HOSTGATOR_PHPUNIT_MINIMAL=1 to run only the
+ * minimal PluginTest without WordPress (e.g. vendor/bin/phpunit tests/phpunit/PluginTest.php).
+ *
+ * @package HostGatorWordPressPlugin
+ */
 
-// Load up Composer dependencies
-require dirname( dirname( __DIR__ ) ) . '/vendor/autoload.php';
+$plugin_root = dirname( dirname( __DIR__ ) );
+require $plugin_root . '/vendor/autoload.php';
 
-$wp_phpunit_dir = getenv( 'WP_PHPUNIT__DIR' );
+if ( getenv( 'HOSTGATOR_PHPUNIT_MINIMAL' ) ) {
+	// phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.runtime_configuration_putenv -- Test bootstrap must clear WP_PHPUNIT__DIR for minimal runs.
+	putenv( 'WP_PHPUNIT__DIR' );
+	$wp_phpunit_dir = '';
+} else {
+	$wp_phpunit_dir = getenv( 'WP_PHPUNIT__DIR' );
+}
 
-// Bootstrap tests
-require $wp_phpunit_dir . '/includes/bootstrap.php';
+if ( $wp_phpunit_dir && is_dir( $wp_phpunit_dir ) ) {
+	$polyfills_path = $plugin_root . '/vendor/yoast/phpunit-polyfills';
+	if ( is_dir( $polyfills_path ) && ! defined( 'WP_TESTS_PHPUNIT_POLYFILLS_PATH' ) ) {
+		define( 'WP_TESTS_PHPUNIT_POLYFILLS_PATH', $polyfills_path );
+	}
+	if ( ! defined( 'WP_TESTS_CONFIG_FILE_PATH' ) ) {
+		define( 'WP_TESTS_CONFIG_FILE_PATH', $plugin_root . '/tests/phpunit/wp-tests-config.php' );
+	}
+	require $wp_phpunit_dir . '/includes/bootstrap.php';
+}

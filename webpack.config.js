@@ -10,7 +10,7 @@ const TerserPlugin = require( 'terser-webpack-plugin' );
  */
 const alias = {
     App: path.resolve(__dirname, '/src/app/'),
-	Assets: path.resolve( __dirname, '/assets/' ),
+	Assets: path.resolve( __dirname, 'assets' ),
     Store: path.resolve(__dirname, '/src/app/data/store.js'),
     Routes: path.resolve(__dirname, '/src/app/data/routes.js'),
     '@modules': path.resolve( __dirname, '/vendor/newfold-labs/' ),
@@ -79,9 +79,17 @@ const mostCommonImports = {
  */
 const hostgatorConfig = {
     mode: 'production',
+    entry: {
+        index: path.resolve( process.cwd(), 'src/index.js' ),
+        'portal-registry': path.resolve(
+            process.cwd(),
+            'src/portalRegistry/index.js'
+        ),
+    },
     output: {
         // versioned output directory i.e. /build/1.0.0, /build/1.1.0, etc.
         path: path.resolve(process.cwd(), 'build/' + version),
+        filename: '[name].js',
     },
     resolve: { alias },
     plugins: [new ProvidePlugin(mostCommonImports)],

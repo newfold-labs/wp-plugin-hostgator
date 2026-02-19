@@ -5,24 +5,23 @@ const actions = { PUSH: 'push', DISMISS: 'dismiss' };
 
 /**
  * @typedef FeedEntry
- * @property {string}                                         title
- * @property {React.ReactNode | string[]}                     description
- * @property {"info" | "success" | "error" | "warning"}       variant
- * @property {number}                                         autoDismiss
- * @property {(id) => void | null}                            onDismiss
- * @property {"bottom-left" | "bottom-center" | "top-center"} position
+ * @property {string}                                         title       - Notice title.
+ * @property {import('react').ReactNode | string[]}           description - Notice body content.
+ * @property {"info" | "success" | "error" | "warning"}       variant     - Notice style variant.
+ * @property {number}                                         autoDismiss - Auto-dismiss delay in ms.
+ * @property {(id: string) => void | null}                    onDismiss   - Optional dismiss handler.
+ * @property {"bottom-left" | "bottom-center" | "top-center"} position    - Notice position.
  */
 
 /**
- *
  * @typedef FeedReducerAction
- * @property {"push" | "dismiss"}        type
- * @property {string}                    id
- * @property {FeedEntry?}                message
+ * @property {"push" | "dismiss"}        type    - Action type.
+ * @property {string}                    id      - Notice id.
+ * @property {FeedEntry?}                message - Notice payload for push.
  *
- * @param    {Record<string, FeedEntry>} feed
- * @param    {FeedReducerAction}         action
- * @return {Record<string, FeedEntry>}
+ * @param    {Record<string, FeedEntry>} feed    - Current feed state.
+ * @param    {FeedReducerAction}         action  - Action to apply.
+ * @return {Record<string, FeedEntry>} Updated feed state.
  */
 function feedReducer( feed, action ) {
 	switch ( action.type ) {
@@ -36,7 +35,7 @@ function feedReducer( feed, action ) {
 }
 
 const FeedContext = createContext( {
-	push: ( id, message ) => {},
+	push: () => {},
 } );
 
 /** @type {() => { push: (id: string, message: FeedEntry) => void}}  */
@@ -48,8 +47,12 @@ export function NotificationFeed( { children } ) {
 		<>
 			<FeedContext.Provider
 				value={ {
-					push: ( id, message ) =>
-						dispatch( { type: actions.PUSH, id, message } ),
+					push: ( noticeId, noticeMessage ) =>
+						dispatch( {
+							type: actions.PUSH,
+							id: noticeId,
+							message: noticeMessage,
+						} ),
 				} }
 			>
 				{ children }
