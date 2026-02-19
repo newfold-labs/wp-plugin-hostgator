@@ -19,11 +19,18 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
   cancel-in-progress: true
 
+# Disable permissions for all available scopes by default.
+# Any needed permissions should be configured at the job level.
+permissions: {}
+
 jobs:
   build:
     name: On Push
     runs-on: ubuntu-latest
     if: ${{ github.repository == 'newfold-labs/wp-plugin-hostgator' }}
+    permissions:
+      contents: read
+      pull-requests: write
     steps:
 
       - name: Checkout
@@ -111,8 +118,9 @@ jobs:
           include-hidden-files: true
 
       - name: Comment on PR with download link
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request' && github.actor != 'dependabot[bot]'
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd  # v8.0.0
+        continue-on-error: true
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
