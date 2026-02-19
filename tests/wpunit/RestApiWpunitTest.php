@@ -9,6 +9,9 @@ namespace HostGator;
  */
 class RestApiWpunitTest extends \lucatume\WPBrowser\TestCase\WPTestCase {
 
+	/**
+	 * Set up test; load REST API controller and init.
+	 */
 	protected function setUp(): void {
 		parent::setUp();
 		$root = codecept_root_dir();
@@ -16,17 +19,26 @@ class RestApiWpunitTest extends \lucatume\WPBrowser\TestCase\WPTestCase {
 		require_once $root . 'inc/RestApi/rest-api.php';
 	}
 
-	/** @covers \HostGator\init_rest_api */
+	/**
+	 * Asserts the HostGator settings REST route is registered.
+	 *
+	 * @covers \HostGator\init_rest_api
+	 */
 	public function test_hostgator_v1_settings_route_registered(): void {
 		do_action( 'rest_api_init' );
 		$routes = rest_get_server()->get_routes();
 		$this->assertArrayHasKey( '/hostgator/v1/settings', $routes );
 	}
 
-	/** @covers \HostGator\RestApi\SettingsController::register_routes */
+	/**
+	 * Asserts the settings route supports GET and at least one of POST/PUT/PATCH.
+	 *
+	 * @covers \HostGator\RestApi\SettingsController::register_routes
+	 */
 	public function test_settings_route_supports_get_and_edit_methods(): void {
 		do_action( 'rest_api_init' );
-		$route       = rest_get_server()->get_routes()['/hostgator/v1/settings'] ?? null;
+		$routes = rest_get_server()->get_routes();
+		$route  = $routes['/hostgator/v1/settings'] ?? null;
 		$this->assertNotNull( $route );
 		$all_methods = array();
 		foreach ( $route as $endpoint ) {
@@ -37,7 +49,11 @@ class RestApiWpunitTest extends \lucatume\WPBrowser\TestCase\WPTestCase {
 		$this->assertTrue( $has_editable, 'Settings route should support an editable method (POST/PUT/PATCH)' );
 	}
 
-	/** @covers \HostGator\RestApi\SettingsController::check_permission */
+	/**
+	 * Asserts unauthenticated GET request returns 401.
+	 *
+	 * @covers \HostGator\RestApi\SettingsController::check_permission
+	 */
 	public function test_settings_get_requires_authentication(): void {
 		do_action( 'rest_api_init' );
 		wp_set_current_user( 0 );
@@ -51,7 +67,11 @@ class RestApiWpunitTest extends \lucatume\WPBrowser\TestCase\WPTestCase {
 		$this->assertSame( 401, $response->get_status() );
 	}
 
-	/** @covers \HostGator\RestApi\SettingsController::check_permission */
+	/**
+	 * Asserts administrator user passes the permission check.
+	 *
+	 * @covers \HostGator\RestApi\SettingsController::check_permission
+	 */
 	public function test_settings_permission_allows_administrator(): void {
 		$controller = new \HostGator\RestApi\SettingsController();
 		$admin      = $this->factory()->user->create_and_get( array( 'role' => 'administrator' ) );
@@ -60,8 +80,12 @@ class RestApiWpunitTest extends \lucatume\WPBrowser\TestCase\WPTestCase {
 		$this->assertTrue( $result, 'Administrator should pass permission check' );
 	}
 
-	/** @covers \HostGator\RestApi\SettingsController::get_item */
-	/** @covers \HostGator\RestApi\SettingsController::get_current_settings */
+	/**
+	 * Asserts GET settings returns the expected keys and types.
+	 *
+	 * @covers \HostGator\RestApi\SettingsController::get_item
+	 * @covers \HostGator\RestApi\SettingsController::get_current_settings
+	 */
 	public function test_settings_get_returns_expected_structure(): void {
 		do_action( 'rest_api_init' );
 		$admin = $this->factory()->user->create_and_get( array( 'role' => 'administrator' ) );
@@ -103,8 +127,12 @@ class RestApiWpunitTest extends \lucatume\WPBrowser\TestCase\WPTestCase {
 		$this->assertIsInt( $data['pageOnFront'] );
 	}
 
-	/** @covers \HostGator\RestApi\SettingsController::get_item */
-	/** @covers \HostGator\RestApi\SettingsController::get_current_settings */
+	/**
+	 * Asserts GET settings comingSoon reflects nfd_coming_soon option.
+	 *
+	 * @covers \HostGator\RestApi\SettingsController::get_item
+	 * @covers \HostGator\RestApi\SettingsController::get_current_settings
+	 */
 	public function test_settings_get_coming_soon_reflects_option(): void {
 		do_action( 'rest_api_init' );
 		$admin = $this->factory()->user->create_and_get( array( 'role' => 'administrator' ) );
@@ -123,7 +151,11 @@ class RestApiWpunitTest extends \lucatume\WPBrowser\TestCase\WPTestCase {
 		$this->assertFalse( $data2['comingSoon'], 'comingSoon should be false when nfd_coming_soon option is false' );
 	}
 
-	/** @covers \HostGator\RestApi\SettingsController::update_item */
+	/**
+	 * Asserts POST can update comingSoon and option is persisted.
+	 *
+	 * @covers \HostGator\RestApi\SettingsController::update_item
+	 */
 	public function test_settings_update_coming_soon(): void {
 		do_action( 'rest_api_init' );
 		$admin = $this->factory()->user->create_and_get( array( 'role' => 'administrator' ) );
@@ -146,7 +178,11 @@ class RestApiWpunitTest extends \lucatume\WPBrowser\TestCase\WPTestCase {
 		$this->assertFalse( get_option( 'nfd_coming_soon' ), 'nfd_coming_soon option should be false' );
 	}
 
-	/** @covers \HostGator\RestApi\SettingsController::check_permission */
+	/**
+	 * Asserts unauthenticated POST request returns 401.
+	 *
+	 * @covers \HostGator\RestApi\SettingsController::check_permission
+	 */
 	public function test_settings_edit_requires_authentication(): void {
 		do_action( 'rest_api_init' );
 		wp_set_current_user( 0 );

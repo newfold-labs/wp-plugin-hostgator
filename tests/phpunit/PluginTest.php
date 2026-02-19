@@ -27,7 +27,8 @@ class PluginTest extends TestCase {
 	 */
 	public function test_plugin_version_constant_defined_in_file(): void {
 		$plugin_file = dirname( dirname( __DIR__ ) ) . '/wp-plugin-hostgator.php';
-		$content     = file_get_contents( $plugin_file );
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- Reading local plugin file, not a remote URL.
+		$content = file_get_contents( $plugin_file );
 		$this->assertNotEmpty( $content );
 		$this->assertMatchesRegularExpression(
 			'/define\s*\(\s*[\'"]HOSTGATOR_PLUGIN_VERSION[\'"]\s*,\s*[\'"]([\d.]+)[\'"]\s*\)/',

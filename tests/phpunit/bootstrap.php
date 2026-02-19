@@ -13,6 +13,7 @@ $plugin_root = dirname( dirname( __DIR__ ) );
 require $plugin_root . '/vendor/autoload.php';
 
 if ( getenv( 'HOSTGATOR_PHPUNIT_MINIMAL' ) ) {
+	// phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.runtime_configuration_putenv -- Test bootstrap must clear WP_PHPUNIT__DIR for minimal runs.
 	putenv( 'WP_PHPUNIT__DIR' );
 	$wp_phpunit_dir = '';
 } else {

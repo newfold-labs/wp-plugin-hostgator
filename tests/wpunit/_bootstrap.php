@@ -4,6 +4,7 @@
  *
  * @package HostGatorWordPressPlugin
  */
+
 if ( ! defined( 'HOSTGATOR_PLUGIN_VERSION' ) ) {
 	define( 'HOSTGATOR_PLUGIN_VERSION', '3.0.0' );
 }
