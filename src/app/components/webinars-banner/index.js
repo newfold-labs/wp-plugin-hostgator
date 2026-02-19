@@ -17,7 +17,7 @@ import { ReactComponent as WebinarsVector } from 'App/images/webinars-vector.svg
  *
  * If any of the above fails the component will not render.
  *
- * @return { JSX.Element } The webinars banner component.
+ * @return {import('react').ReactNode} The webinars banner component.
  */
 const WebinarsBanner = () => {
 	const [ webinars, setWebinars ] = useState( [] );
