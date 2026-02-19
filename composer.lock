@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1efca2e95c2313952e6f3f18fa284ffe",
+    "content-hash": "adaf591f894c9f6ad9d33a651a96dd67",
     "packages": [
         {
             "name": "colinmollenhour/credis",
@@ -791,28 +791,28 @@
         },
         {
             "name": "newfold-labs/wp-module-coming-soon",
-            "version": "1.6.3",
+            "version": "2.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-coming-soon.git",
-                "reference": "1387d7939343cefde556d175e49b82097e518abc"
+                "reference": "560e97ed3d3abeca4580733dd8d51052477870eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-coming-soon/zipball/1387d7939343cefde556d175e49b82097e518abc",
-                "reference": "1387d7939343cefde556d175e49b82097e518abc",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-coming-soon/zipball/560e97ed3d3abeca4580733dd8d51052477870eb",
+                "reference": "560e97ed3d3abeca4580733dd8d51052477870eb",
                 "shasum": ""
             },
             "require": {
-                "newfold-labs/wp-module-data": "^2.6.8",
+                "newfold-labs/wp-module-data": "^2.9.2",
                 "wp-forge/wp-upgrade-handler": "^1.0"
             },
             "require-dev": {
                 "johnpbloch/wordpress": "@stable",
                 "lucatume/wp-browser": "*",
-                "newfold-labs/wp-php-standards": "^1.2.4",
+                "newfold-labs/wp-php-standards": "^1.2.5",
                 "phpunit/phpcov": "*",
-                "wp-cli/i18n-command": "^2.6.3"
+                "wp-cli/i18n-command": "^2.6.6"
             },
             "type": "library",
             "autoload": {
@@ -833,6 +833,14 @@
                     "@i18n-php",
                     "@i18n-json"
                 ],
+                "i18n-ci-pre": [
+                    "@i18n-pot",
+                    "@i18n-po"
+                ],
+                "i18n-ci-post": [
+                    "@i18n-json",
+                    "@i18n-php"
+                ],
                 "i18n-json": [
                     "find ./languages -name \"*.json\" -exec rm {} \\; && vendor/bin/wp i18n make-json ./languages --no-purge --pretty-print"
                 ],
@@ -846,7 +854,7 @@
                     "vendor/bin/wp i18n update-po ./languages/wp-module-coming-soon.pot ./languages"
                 ],
                 "i18n-pot": [
-                    "vendor/bin/wp i18n make-pot . ./languages/wp-module-coming-soon.pot --headers='{\"Report-Msgid-Bugs-To\":\"https://github.com/newfold-labs/wp-module-coming-soon/issues\",\"POT-Creation-Date\":\"2025-02-13T09:55:55+00:00\"}' --exclude=wordpress,assets,tests,src"
+                    "vendor/bin/wp i18n make-pot . ./languages/wp-module-coming-soon.pot --domain=wp-module-coming-soon --headers='{\"Report-Msgid-Bugs-To\":\"https://github.com/newfold-labs/wp-module-coming-soon/issues\",\"POT-Creation-Date\":\"2025-02-13T09:55:55+00:00\"}' --exclude=wordpress,assets,tests,src"
                 ],
                 "lint": [
                     "vendor/bin/phpcs . --standard=phpcs.xml -s"
@@ -871,10 +879,10 @@
             ],
             "description": "Coming Soon module for WordPress sites.",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-coming-soon/tree/1.6.3",
+                "source": "https://github.com/newfold-labs/wp-module-coming-soon/tree/2.2.7",
                 "issues": "https://github.com/newfold-labs/wp-module-coming-soon/issues"
             },
-            "time": "2025-07-22T15:30:03+00:00"
+            "time": "2026-02-06T16:15:41+00:00"
         },
         {
             "name": "newfold-labs/wp-module-context",
