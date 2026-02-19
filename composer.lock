@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa9b01f250379a50e02c836658c3d6b2",
+    "content-hash": "1efca2e95c2313952e6f3f18fa284ffe",
     "packages": [
         {
             "name": "colinmollenhour/credis",
@@ -1151,21 +1151,21 @@
         },
         {
             "name": "newfold-labs/wp-module-ecommerce",
-            "version": "1.10.4",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-ecommerce.git",
-                "reference": "6bd247bf1b9a24886908abd26d1166da5f108e3f"
+                "reference": "1950cc9aabb8f731e745672404598bd8553fe32b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/6bd247bf1b9a24886908abd26d1166da5f108e3f",
-                "reference": "6bd247bf1b9a24886908abd26d1166da5f108e3f",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/1950cc9aabb8f731e745672404598bd8553fe32b",
+                "reference": "1950cc9aabb8f731e745672404598bd8553fe32b",
                 "shasum": ""
             },
             "require": {
-                "newfold-labs/wp-module-installer": "^1.6.6",
-                "newfold-labs/wp-module-onboarding-data": "^1.2.19"
+                "newfold-labs/wp-module-installer": "^1.7.1",
+                "newfold-labs/wp-module-onboarding-data": "^1.2.22"
             },
             "require-dev": {
                 "johnpbloch/wordpress": "@stable",
@@ -1240,10 +1240,10 @@
             ],
             "description": "Brand Agnostic eCommerce Experience",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/1.10.4",
+                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/2.3.0",
                 "issues": "https://github.com/newfold-labs/wp-module-ecommerce/issues"
             },
-            "time": "2025-10-24T13:21:01+00:00"
+            "time": "2026-02-05T16:05:02+00:00"
         },
         {
             "name": "newfold-labs/wp-module-facebook",
