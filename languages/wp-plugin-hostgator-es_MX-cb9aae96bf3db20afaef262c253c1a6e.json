@@ -1,7 +1,7 @@
 {
     "translation-revision-date": "2025-01-10 08:42+0000",
     "generator": "WP-CLI\/2.12.0",
-    "source": "build\/2.15.2\/index.js",
+    "source": "build\/3.0.0\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
@@ -10,6 +10,9 @@
                 "lang": "es_MX",
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
+            "HostGator": [
+                "HostGator"
+            ],
             "Home": [
                 "Pagina principal"
             ],
@@ -33,9 +36,6 @@
             ],
             "If the error persists, please contact support.": [
                 "Si persiste el error, comun\u00edcate con el soporte."
-            ],
-            " Error code: ": [
-                " C\u00f3digo de error: "
             ],
             "Chat": [
                 "Chat"
@@ -181,63 +181,14 @@
             "Disable comments for older posts": [
                 "Deshabilitar comentarios para publicaciones antiguas"
             ],
-            "Comments on posts are disabled after ": [
-                " Los comentarios en las publicaciones se desactivan despu\u00e9s "
-            ],
-            " day.": [
-                " d\u00eda.",
-                " d\u00edas."
-            ],
-            "Close comments after ": [
-                " Cerrar comentarios despu\u00e9s "
-            ],
-            "Posts will display ": [
-                "Las publicaciones se mostrar\u00e1n "
-            ],
-            " comment at a time.": [
-                " comentario a la vez.",
-                " comentarios a la vez."
-            ],
-            "Display ": [
-                "Mostrar "
-            ],
             "Comments": [
                 "Comentarios"
-            ],
-            " revision.": [
-                " revisi\u00f3n.",
-                " revisiones."
-            ],
-            "The trash will automatically empty every ": [
-                "La papelera se vac\u00eda autom\u00e1ticamente cada "
-            ],
-            " week.": [
-                " semana.",
-                " semanas."
             ],
             "Content Options": [
                 "Opciones de Contenido"
             ],
             "Controls for content revisions and how often to empty the trash.": [
                 "Controles para revisiones de contenido y con qu\u00e9 frecuencia vaciar la papelera."
-            ],
-            "Store": [
-                "Tienda"
-            ],
-            "Hostgator WordPress Plugin": [
-                "Plugin de WordPress para Hostgator "
-            ],
-            "Products & Services": [
-                "Productos y servicios"
-            ],
-            "Sales & Promotions": [
-                " Ventas y promociones"
-            ],
-            "Payments": [
-                "Pagos"
-            ],
-            "Store Details": [
-                " Detalles de la tienda"
             ],
             "Admin": [
                 " Administrador"
@@ -302,36 +253,11 @@
             "Your website is currently displaying a \"Coming Soon\" page.": [
                 "Tu sitio web actualmente muestra una p\u00e1gina \"Pr\u00f3ximamente\"."
             ],
-            "Comments setting saved ": [
-                "Configuraci\u00f3n de comentarios guardada"
-            ],
             "Comments setting saved.": [
                 "Configuraci\u00f3n de comentarios guardada. "
             ],
-            " comments per page.": [
-                "comentarios por p\u00e1gina."
-            ],
             "Comments allow visitors to provide feedback and respond to your posts or pages.": [
                 "Los comentarios permiten a los visitantes proporcionar comentarios y responder a sus publicaciones o p\u00e1ginas."
-            ],
-            "Post revision setting saved ": [
-                "Configuraci\u00f3n posterior a la revisi\u00f3n guardada"
-            ],
-            "Posts will save  ": [
-                "Las publicaciones se guardar\u00e1n "
-            ],
-            "Number of revisions posts can save ": [
-                " N\u00famero de revisiones que las publicaciones pueden guardar"
-            ],
-            " step back.": [
-                " paso atr\u00e1s. ",
-                " pasos atr\u00e1s. "
-            ],
-            "Trash setting saved ": [
-                " Configuraci\u00f3n de la papelera guardada"
-            ],
-            "Trash emptying frequency ": [
-                " Frecuencia de vaciado de la basura"
             ],
             "The Help Center provides guided, step-by-step assistance as you build your site.": [
                 "La Central de ayuda brinda asistencia guiada paso a paso a medida que crea tu sitio. "
@@ -354,9 +280,6 @@
             "The staging feature provides a way to copy a site to test new updates, features or content.": [
                 " La funci\u00f3n de preparaci\u00f3n proporciona una forma de copiar un sitio para probar nuevas actualizaciones, funciones o contenido."
             ],
-            "Sales Channel": [
-                "Canal de Ventas"
-            ],
             "WonderBlocks provides a library of customizable block patterns and page templates.": [
                 "WonderBlocks proporciona una biblioteca de patrones de bloques y plantillas de p\u00e1ginas personalizables."
             ],
@@ -372,13 +295,94 @@
             "Tweet": [
                 "Tweet"
             ],
-            "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take ": [
-                "Guardar borradores y actualizar el contenido publicado crea revisiones. Haga cambios con confianza, sabiendo que puede tomar "
-            ],
             "Welcome to HostGator": [
                 ""
             ],
             "We're very excited to get started with you!": [
+                ""
+            ],
+            "Editor": [
+                ""
+            ],
+            "Hosting Panel": [
+                ""
+            ],
+            "Error code:": [
+                ""
+            ],
+            "HostGator WordPress Plugin": [
+                ""
+            ],
+            "Manage WordPress": [
+                ""
+            ],
+            "Staging": [
+                ""
+            ],
+            "Disabled old post comments": [
+                ""
+            ],
+            "Enabled old post comments": [
+                ""
+            ],
+            "Comments on old posts are disabled.": [
+                ""
+            ],
+            "Comments are allowed on old posts.": [
+                ""
+            ],
+            "Comments setting saved": [
+                ""
+            ],
+            "Comments on posts are disabled after %s day.": [
+                ""
+            ],
+            "Close comments after %s day.": [
+                ""
+            ],
+            "Posts will display %s comment at a time.": [
+                ""
+            ],
+            "Display %s comments per page.": [
+                ""
+            ],
+            "Post revision setting saved": [
+                ""
+            ],
+            "Posts will save %s revision.": [
+                ""
+            ],
+            "Number of revisions posts can save": [
+                ""
+            ],
+            "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take %s step back.": [
+                ""
+            ],
+            "Trash setting saved": [
+                ""
+            ],
+            "The trash will automatically empty every %s week.": [
+                ""
+            ],
+            "Trash emptying frequency": [
+                ""
+            ],
+            "Optimize your website my managing cache, security and performance settings.": [
+                ""
+            ],
+            "Optimize your website by managing cache and performance settings": [
+                ""
+            ],
+            "General Settings": [
+                ""
+            ],
+            "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready.": [
+                ""
+            ],
+            "Site Editor": [
+                ""
+            ],
+            "Customizer": [
                 ""
             ]
         }

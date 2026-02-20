@@ -39,6 +39,7 @@ msgstr "Plugin WordPress que integra um site WordPress com o painel de controle 
 #: wp-plugin-hostgator.php
 #: inc/Admin.php:227
 #: inc/Admin.php:228
+#: build/3.0.0/index.js:1
 msgid "HostGator"
 msgstr "HostGator"
 
@@ -81,46 +82,43 @@ msgid "Preview the coming soon landing page"
 msgstr "Visualize a página de destino em breve"
 
 #: inc/Admin.php:68
-#: inc/Admin.php:383
-#: build/2.15.2/index.js:1
+#: inc/Admin.php:404
+#: build/3.0.0/index.js:1
 msgid "Home"
 msgstr "Início"
 
-#: build/2.15.2/index.js:1
-msgid "Store"
-msgstr "Loja"
-
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Marketplace"
 msgstr "Mercado"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
+#: build/3.0.0/index.js:23
 msgid "Performance"
 msgstr "Desempenho"
 
 #: inc/Admin.php:73
-#: inc/Admin.php:384
-#: build/2.15.2/index.js:1
+#: inc/Admin.php:405
+#: build/3.0.0/index.js:1
 msgid "Settings"
 msgstr "Configurações"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Help"
 msgstr "Ajuda"
 
-#: inc/Admin.php:272
+#: inc/Admin.php:282
 msgid "Please update to a newer WordPress version."
 msgstr "Por favor, atualize para uma versão mais recente do WordPress."
 
-#: inc/Admin.php:273
+#: inc/Admin.php:283
 msgid "There are new WordPress components which this plugin requires in order to render the interface."
 msgstr "Existem novos componentes do WordPress que este plugin precisa para renderizar a interface."
 
-#: inc/Admin.php:274
+#: inc/Admin.php:284
 msgid "Please update now"
 msgstr "Por favor, atualize agora"
 
-#: inc/Admin.php:397
+#: inc/Admin.php:418
 msgid "Thank you for creating with <a href=\"https://wordpress.org/\">WordPress</a> and <a href=\"https://hostgator.com/about\">HostGator</a>."
 msgstr "Obrigado por criar com <a href=\"https://wordpress.org/\">WordPress</a> e <a href=\"https://hostgator.com.br/\">HostGator</a>."
 
@@ -180,283 +178,235 @@ msgstr "Atualizações automáticas habilitadas na página <a href=\"%s\">HostGa
 msgid "Auto-updates enabled"
 msgstr "Atualizações automáticas habilitadas"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Oh No, An Error!"
 msgstr "Oh, Não, Um Erro!"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "You found an error, please refresh the page and try again!"
 msgstr "Você encontrou um erro, por favor atualize a página e tente novamente!"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "If the error persists, please contact support."
 msgstr "Se o erro persistir, por favor contate o suporte."
 
-#: build/2.15.2/index.js:1
-msgid " Error code: "
-msgstr " Código de erro: "
-
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Phone"
 msgstr "Telefone"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Give us a ring at (866) 96-GATOR"
 msgstr "Ligue para nós"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Call Us"
 msgstr "Ligue para nós"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Chat"
 msgstr "Chat"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Have a question? We're here 24/7/365"
 msgstr "Tem uma dúvida? Estamos aqui 24/7"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Live Chat"
 msgstr "Chat ao Vivo"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Tweet"
 msgstr "Tweet"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Tweet us at @hgsupport for support"
 msgstr "Envie um tweet para @hgsupport para suporte"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Tweet Us"
 msgstr "Tweet-nos"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Knowledge Base"
 msgstr "Base de Conhecimento"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Know what the pros know."
 msgstr "Saiba o que os profissionais sabem."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Find Answers"
 msgstr "Encontre Respostas"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Blog"
 msgstr "Blog"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Get our tips and in-depth articles."
 msgstr "Receba nossas dicas e artigos detalhados."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Learn Stuff"
 msgstr "Aprenda Coisas"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Video Tutorials"
 msgstr "Vídeos Tutoriais"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Step-by-step tutorials and additional guides."
 msgstr "Tutoriais passo a passo e guias adicionais."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Watch Now"
 msgstr "Assista Agora"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "There's nothing here!"
 msgstr "Não há nada aqui!"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Settings and Performance"
 msgstr "Configurações e Desempenho"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Customize & fine-tune your site."
 msgstr "Personalize & ajuste seu site."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Manage Settings"
 msgstr "Gerenciar Configurações"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Manage your site settings. You can ajdust automatic updates, comments, revisions and more."
 msgstr "Gerencie as configurações do seu site. Você pode ajustar atualizações automáticas, comentários, revisões e muito mais."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Manage site performance and caching settings as well as clear the site cache."
 msgstr "Gerencie o desempenho do site e as configurações de cache, bem como limpe o cache do site."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Visit Marketplace"
 msgstr "Visite o Mercado"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Add site services, themes or plugins from the marketplace."
 msgstr "Adicione serviços de site, temas ou plugins da loja."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Website Content"
 msgstr "Conteúdo do Site"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Create, manage & sort your story."
 msgstr "Crie, gerencie e classifique seu conteúdo."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "New Post"
 msgstr "Nova postagem"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Write a new blog post."
 msgstr "Escreva uma nova postagem no blog."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Pages"
 msgstr "Páginas"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "New Page"
 msgstr "Nova Página"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Add fresh pages to your website."
 msgstr "Adicione novas páginas ao seu site."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Categories"
 msgstr "Categorias"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Manage Categories"
 msgstr "Gerenciar Categorias"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Organize existing content into categories."
 msgstr "Organize o conteúdo existente em categorias."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Web Hosting"
 msgstr "Hospedagem de Sites"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Access & manage your HostGator account."
 msgstr "Acesse & gerencie sua conta HostGator."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Manage Sites"
 msgstr "Gerenciar Sites"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Manage your site from the control panel. You can create backups, set security, and improve performance."
 msgstr "Gerencie seu site a partir do painel de controle. Você pode criar backups, definir a segurança e melhorar o desempenho."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Email"
 msgstr "E-mail"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Manage Email"
 msgstr "Gerenciar E-mail"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Create email accounts, compose, send, and receive your email from the control panel."
 msgstr "Crie contas de e-mail, componha, envie e receba seu e-mail no painel de controle."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Domains"
 msgstr "Domínios"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Find a Domain"
 msgstr "Encontre um Domínio"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Find a new domain and assign it to your site or start a new site with a fresh domain."
 msgstr "Encontre um novo domínio e atribua-o ao seu site ou inicie um novo site com um novo domínio."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Get Help"
 msgstr "Obter Ajuda"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "24/7/365 support. We work when you work."
 msgstr "Suporte 24/7/365. Nós trabalhamos quando você trabalha."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Plugins"
 msgstr "Plugins"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Themes"
 msgstr "Temas"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Automatic Updates"
 msgstr "Atualizações Automáticas"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Disable comments for older posts"
 msgstr "Desabilitar comentários de postagens mais antigas"
 
-#: build/2.15.2/index.js:1
-msgid "Comments on posts are disabled after "
-msgstr "Os comentários em postagens são desativados após "
-
-#: build/2.15.2/index.js:1
-msgid " day."
-msgid_plural " days."
-msgstr[0] " dia."
-msgstr[1] " dias."
-
-#: build/2.15.2/index.js:1
-msgid "Close comments after "
-msgstr "Fechar comentários após "
-
-#: build/2.15.2/index.js:1
-msgid "Posts will display "
-msgstr "As postagens serão exibidas "
-
-#: build/2.15.2/index.js:1
-msgid " comment at a time."
-msgid_plural " comments at a time."
-msgstr[0] " comentário por vez."
-msgstr[1] " comentários por vez."
-
-#: build/2.15.2/index.js:1
-msgid "Display "
-msgstr "Exibir "
-
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:11
 msgid "Comments"
 msgstr "Comentários"
 
-#: build/2.15.2/index.js:1
-msgid " revision."
-msgid_plural " revisions."
-msgstr[0] " revisão."
-msgstr[1] " revisões."
-
-#: build/2.15.2/index.js:1
-msgid "The trash will automatically empty every "
-msgstr "A lixeira será automaticamente vazia a cada "
-
-#: build/2.15.2/index.js:1
-msgid " week."
-msgid_plural " weeks."
-msgstr[0] " semana."
-msgstr[1] " semanas."
-
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:23
 msgid "Content Options"
 msgstr "Opções de Conteúdo"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:23
 msgid "Controls for content revisions and how often to empty the trash."
 msgstr "Controles para revisões de conteúdo e com que frequência esvaziar a lixeira."
 
@@ -472,189 +422,129 @@ msgstr "Como migrar um site para Hostgator?"
 msgid "Why choose HostGator for your WordPress site?"
 msgstr "Por que escolher HostGator para seu site WordPress?"
 
-#: build/2.15.2/index.js:1
-msgid "Hostgator WordPress Plugin"
-msgstr "Plugin WordPress Hostgator"
-
-#: build/2.15.2/index.js:1
-msgid "Products & Services"
-msgstr "Produtos e Serviços"
-
-#: build/2.15.2/index.js:1
-msgid "Sales & Promotions"
-msgstr "Vendas e Promoções"
-
-#: build/2.15.2/index.js:1
-msgid "Payments"
-msgstr "Pagamentos"
-
-#: build/2.15.2/index.js:1
-msgid "Store Details"
-msgstr "Detalhes da loja"
-
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Admin"
 msgstr "Admin"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Secret page to manage admin features and settings."
 msgstr "Página secreta para gerenciar recursos e configurações de administração."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "We are available 24/7 to help answer questions and solve your problems."
 msgstr "Estamos disponíveis 24 horas por dia, 7 dias por semana para ajudar a responder perguntas e resolver seus problemas."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "More"
 msgstr "Mais"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Manage Domain"
 msgstr "Gerenciar domínio"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Explore our featured collection of tools and services."
 msgstr "Explore nossa coleção de ferramentas e serviços em destaque."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Oops, there was an error loading the marketplace, please try again later."
 msgstr "Ops, ocorreu um erro ao carregar o marketplace, tente novamente mais tarde."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Sorry, no marketplace items. Please, try again later."
 msgstr "Desculpe, não há itens do marketplace. Tente novamente mais tarde."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Load More"
 msgstr "Carregar mais"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Oops! Something Went Wrong"
 msgstr "Ops! Algo deu errado"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "An error occurred while loading the content. Please try again later."
 msgstr "Ocorreu um erro ao carregar o conteúdo. Tente novamente mais tarde."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Manage All Updates"
 msgstr "Gerenciar todas as atualizações"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "WordPress Core"
 msgstr "WordPress Core"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Keeping automatic updates on ensures timely security fixes and the latest features."
 msgstr "Manter atualizações automáticas ativadas garante correções de segurança oportunas e os recursos mais recentes."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
+#: build/3.0.0/index.js:11
+#: build/3.0.0/index.js:23
 msgid "Oops! Something went wrong. Please try again."
 msgstr "Ops! Algo deu errado. Tente novamente."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Site Status"
 msgstr "Status do site"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Not Live"
 msgstr "Não ativo"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Live"
 msgstr "Ativo"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Coming Soon page"
 msgstr "Página em breve"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen."
 msgstr "Sua página em breve do Hostgator permite que você oculte seu site dos visitantes enquanto você faz a mágica acontecer."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Your website is currently displaying a \"Coming Soon\" page."
 msgstr "Seu site está exibindo uma página \"Em breve\"."
 
-#: build/2.15.2/index.js:1
-msgid "Comments setting saved "
-msgstr "Configuração de comentários salva "
-
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:7
 msgid "Comments setting saved."
 msgstr "Configuração de comentários salva."
 
-#: build/2.15.2/index.js:1
-msgid " comments per page."
-msgstr " comentários por página."
-
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:11
 msgid "Comments allow visitors to provide feedback and respond to your posts or pages."
 msgstr "Os comentários permitem que os visitantes forneçam feedback e respondam às suas postagens ou páginas."
 
-#: build/2.15.2/index.js:1
-msgid "Post revision setting saved "
-msgstr "Post revision setting saved "
-
-#: build/2.15.2/index.js:1
-msgid "Posts will save  "
-msgstr "Posts will save "
-
-#: build/2.15.2/index.js:1
-msgid "Number of revisions posts can save "
-msgstr "Número de revisões que os posts podem salvar "
-
-#: build/2.15.2/index.js:1
-msgid "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take "
-msgstr "Salvar rascunhos e atualizar conteúdo publicado cria revisões. Faça alterações com confiança, sabendo que você pode "
-
-#: build/2.15.2/index.js:1
-msgid " step back."
-msgid_plural " steps back."
-msgstr[0] " dê um passo para trás."
-msgstr[1] " dá um passo para trás"
-
-#: build/2.15.2/index.js:1
-msgid "Trash setting saved "
-msgstr "Configuração de lixeira salva "
-
-#: build/2.15.2/index.js:1
-msgid "Trash emptying frequency "
-msgstr "Frequência de esvaziamento de lixeira "
-
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:23
 msgid "The Help Center provides guided, step-by-step assistance as you build your site."
 msgstr "A Central de Ajuda fornece assistência guiada passo a passo enquanto você cria seu site."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:23
 msgid "Sorry, that is not allowed."
 msgstr "Desculpe, isso não é permitido."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:23
 msgid "This feature cannot currently be modified."
 msgstr "Este recurso não pode ser modificado no momento."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:23
 msgid "This is where you can manage common settings for your website."
 msgstr "Aqui é onde você pode gerenciar as configurações comuns do seu site."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:23
 msgid "Features"
 msgstr "Recursos"
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:23
 msgid "The performance feature provides improvements to loads faster for visitors including cache settings."
 msgstr "O recurso de desempenho fornece melhorias para carregamentos mais rápidos para visitantes, incluindo configurações de cache."
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:23
 msgid "The staging feature provides a way to copy a site to test new updates, features or content."
 msgstr "O recurso de preparação fornece uma maneira de copiar um site para testar novas atualizações, recursos ou conteúdo."
 
-#: build/2.15.2/index.js:1
-msgid "Sales Channel"
-msgstr "Canal de vendas"
-
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:23
 msgid "WonderBlocks provides a library of customizable block patterns and page templates."
 msgstr "O WonderBlocks fornece uma biblioteca de padrões de blocos e modelos de página personalizáveis."
 
@@ -662,10 +552,804 @@ msgstr "O WonderBlocks fornece uma biblioteca de padrões de blocos e modelos de
 msgid "Help Resources"
 msgstr ""
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "Welcome to HostGator"
 msgstr ""
 
-#: build/2.15.2/index.js:1
+#: build/3.0.0/index.js:1
 msgid "We're very excited to get started with you!"
+msgstr ""
+
+#: build/3.0.0/index.js:1
+#: build/3.0.0/index.js:23
+msgid "Editor"
+msgstr ""
+
+#: build/3.0.0/index.js:1
+msgid "Hosting Panel"
+msgstr ""
+
+#: build/3.0.0/index.js:1
+msgid "Error code:"
+msgstr ""
+
+#: build/3.0.0/index.js:1
+msgid "HostGator WordPress Plugin"
+msgstr ""
+
+#: build/3.0.0/index.js:1
+#: build/3.0.0/index.js:23
+msgid "Manage WordPress"
+msgstr ""
+
+#: build/3.0.0/index.js:1
+#: build/3.0.0/index.js:23
+msgid "Staging"
+msgstr ""
+
+#: build/3.0.0/index.js:1
+msgid "Disabled old post comments"
+msgstr ""
+
+#: build/3.0.0/index.js:1
+msgid "Enabled old post comments"
+msgstr ""
+
+#: build/3.0.0/index.js:1
+msgid "Comments on old posts are disabled."
+msgstr ""
+
+#: build/3.0.0/index.js:1
+msgid "Comments are allowed on old posts."
+msgstr ""
+
+#: build/3.0.0/index.js:1
+msgid "Comments setting saved"
+msgstr ""
+
+#. translators: %s: number of days. `Comments on posts are disabled after ${closeCommentsDays} days.`
+#: build/3.0.0/index.js:4
+#, js-format
+msgid "Comments on posts are disabled after %s day."
+msgid_plural "Comments on posts are disabled after %s days."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: number of days. `Close comments after ${closeCommentsDays} days.`
+#: build/3.0.0/index.js:7
+#, js-format
+msgid "Close comments after %s day."
+msgid_plural "Close comments after %s days."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: number of comments. `Posts will display ${commentsPerPage} comments at a time.`
+#: build/3.0.0/index.js:10
+#, js-format
+msgid "Posts will display %s comment at a time."
+msgid_plural "Posts will display %s comments at a time."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: number of comments to display per page
+#: build/3.0.0/index.js:11
+#, js-format
+msgid "Display %s comments per page."
+msgstr ""
+
+#: build/3.0.0/index.js:11
+msgid "Post revision setting saved"
+msgstr ""
+
+#. translators: %s: number of revisions. `Posts will save ${contentRevisions} revisions.`
+#: build/3.0.0/index.js:14
+#, js-format
+msgid "Posts will save %s revision."
+msgid_plural "Posts will save %s revisions."
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/3.0.0/index.js:14
+msgid "Number of revisions posts can save"
+msgstr ""
+
+#. translators: %s: number of content revisions. `Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take ${contentRevisions} steps back.`
+#: build/3.0.0/index.js:17
+#, js-format
+msgid "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take %s step back."
+msgid_plural "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take %s steps back."
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/3.0.0/index.js:17
+msgid "Trash setting saved"
+msgstr ""
+
+#. translators: %s: number of weeks. `The trash will automatically empty every ${numTrashWeeks} weeks.`
+#: build/3.0.0/index.js:20
+#: build/3.0.0/index.js:23
+#, js-format
+msgid "The trash will automatically empty every %s week."
+msgid_plural "The trash will automatically empty every %s weeks."
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/3.0.0/index.js:20
+msgid "Trash emptying frequency"
+msgstr ""
+
+#: build/3.0.0/index.js:23
+msgid "Optimize your website my managing cache, security and performance settings."
+msgstr ""
+
+#: build/3.0.0/index.js:23
+msgid "Optimize your website by managing cache and performance settings"
+msgstr ""
+
+#: build/3.0.0/index.js:23
+msgid "General Settings"
+msgstr ""
+
+#: build/3.0.0/index.js:23
+msgid "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready."
+msgstr ""
+
+#: build/3.0.0/index.js:23
+msgid "Site Editor"
+msgstr ""
+
+#: build/3.0.0/index.js:23
+msgid "Customizer"
+msgstr ""
+
+#: wordpress/wp-includes/blocks/widget-group/block.json
+msgctxt "block title"
+msgid "Widget Group"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Color name"
+msgid "Base"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Color name"
+msgid "Contrast"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Color name"
+msgid "Accent 1"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Color name"
+msgid "Accent 2"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Color name"
+msgid "Accent 3"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Color name"
+msgid "Accent 4"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Color name"
+msgid "Accent 5"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Color name"
+msgid "Accent 6"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Space size name"
+msgid "Tiny"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Space size name"
+msgid "X-Small"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Space size name"
+msgid "Small"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Space size name"
+msgid "Regular"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Space size name"
+msgid "Large"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Space size name"
+msgid "X-Large"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Space size name"
+msgid "XX-Large"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-includes/theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-includes/theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-includes/theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-includes/theme.json
+msgctxt "Font size name"
+msgid "Extra Large"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Font size name"
+msgid "Extra Extra Large"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Font family name"
+msgid "Manrope"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Font family name"
+msgid "Fira Code"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Template part name"
+msgid "Vertical site header"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Template part name"
+msgid "Header with large title"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Template part name"
+msgid "Footer Columns"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Template part name"
+msgid "Footer Newsletter"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Template part name"
+msgid "Sidebar"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Custom template name"
+msgid "Page No Title"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Duotone name"
+msgid "Black and white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Duotone name"
+msgid "Black and sandstone"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Duotone name"
+msgid "Black and rust"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Duotone name"
+msgid "Black and sage"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Duotone name"
+msgid "Black and pastel blue"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical soft beige to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical soft sandstone to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical soft rust to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical soft sage to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical soft mint to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical soft pewter to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical hard beige to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical hard sandstone to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical hard rust to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical hard sage to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical hard mint to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical hard pewter to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Color name"
+msgid "Base / Two"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Color name"
+msgid "Contrast / Two"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Color name"
+msgid "Contrast / Three"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Color name"
+msgid "Accent"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Color name"
+msgid "Accent / Two"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Color name"
+msgid "Accent / Three"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Color name"
+msgid "Accent / Four"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Color name"
+msgid "Accent / Five"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Space size name"
+msgid "1"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Space size name"
+msgid "2"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Space size name"
+msgid "3"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Space size name"
+msgid "4"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Space size name"
+msgid "5"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Space size name"
+msgid "6"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Font family name"
+msgid "Inter"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Font family name"
+msgid "Cardo"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Font family name"
+msgid "System Sans-serif"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Font family name"
+msgid "System Serif"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Template part name"
+msgid "Post Meta"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Custom template name"
+msgid "Page with Sidebar"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Custom template name"
+msgid "Page with Wide Image"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Custom template name"
+msgid "Single with Sidebar"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Custom template name"
+msgid "Blank"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Custom template name"
+msgid "Blog (Alternative)"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Custom template name"
+msgid "404"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Color name"
+msgid "Tertiary"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Font family name"
+msgid "DM Sans"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Font family name"
+msgid "IBM Plex Mono"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Font family name"
+msgid "System Font"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Font family name"
+msgid "Source Serif Pro"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Template part name"
+msgid "Comments Template Part"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Duotone name"
+msgid "Dark grayscale"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Duotone name"
+msgid "Grayscale"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Duotone name"
+msgid "Purple and yellow"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Duotone name"
+msgid "Blue and red"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Duotone name"
+msgid "Midnight"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Duotone name"
+msgid "Magenta and yellow"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Duotone name"
+msgid "Purple and green"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Duotone name"
+msgid "Blue and orange"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Vivid cyan blue to vivid purple"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Light green cyan to vivid green cyan"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Luminous vivid amber to luminous vivid orange"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Luminous vivid orange to vivid red"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Very light gray to cyan bluish gray"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Cool to warm spectrum"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Blush light purple"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Blush bordeaux"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Luminous dusk"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Pale ocean"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Electric grass"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Midnight"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "Black"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "Cyan bluish gray"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "White"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "Pale pink"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "Vivid red"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "Luminous vivid orange"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "Luminous vivid amber"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "Light green cyan"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "Vivid green cyan"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "Pale cyan blue"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "Vivid cyan blue"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "Vivid purple"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Aspect ratio name"
+msgid "Square - 1:1"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Aspect ratio name"
+msgid "Standard - 4:3"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Aspect ratio name"
+msgid "Portrait - 3:4"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Aspect ratio name"
+msgid "Classic - 3:2"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Aspect ratio name"
+msgid "Classic Portrait - 2:3"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Aspect ratio name"
+msgid "Wide - 16:9"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Aspect ratio name"
+msgid "Tall - 9:16"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Shadow name"
+msgid "Natural"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Shadow name"
+msgid "Deep"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Shadow name"
+msgid "Sharp"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Shadow name"
+msgid "Outlined"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Shadow name"
+msgid "Crisp"
 msgstr ""
