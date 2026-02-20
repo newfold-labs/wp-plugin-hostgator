@@ -1,10 +1,8 @@
 import { Container, Page, Title } from '@newfold/ui-component-library';
 import ComingSoon from '../settings/comingSoon';
-import FreePluginsSection from './freeAddonsSection';
 import SettingsSection from './settingsSection';
 import WebContentSection from './webContentSection';
 import WebHostingSection from './webHostingSection';
-import WelcomeSection from './welcomeSection';
 import WebinarsBanner from 'App/components/webinars-banner';
 
 const Home = () => {
@@ -24,9 +22,8 @@ const Home = () => {
 					) }
 				</span>
 			</div>
-			<WelcomeSection />
+
 			<WebinarsBanner />
-			<FreePluginsSection />
 
 			<Container className={ 'hgwp-app-home-container nfd-max-w-full' }>
 				<Container.Header
