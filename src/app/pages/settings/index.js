@@ -170,16 +170,23 @@ const Settings = () => {
 						<ComingSoon />
 					</Container.Block>
 
+					
 					<Container.Block
 						separator={ true }
+						id={ 'wonder-blocks-section' }
 						className={ 'hgwp-app-settings-wonder-blocks' }
 					>
 						<Container.SettingsField
 							title={ __( 'Features', 'wp-plugin-hostgator' ) }
-						></Container.SettingsField>
-						<WonderBlocksSettings />
-						<br />
-						<HelpCenterSettings />
+							description={ __(
+								'Customize the available features as you manage your website.',
+								'wp-plugin-hostgator'
+							) }
+						>
+							<WonderBlocksSettings />
+							<br />
+							<HelpCenterSettings />
+						</Container.SettingsField>
 					</Container.Block>
 
 					<Container.Block
