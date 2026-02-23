@@ -11,13 +11,7 @@ msgstr ""
 "PO-Revision-Date: 2025-01-10 08:42+0000\n"
 "Language: es_MX\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
 "X-Domain: wp-plugin-hostgator\n"
-"X-Crowdin-Project: hostgator-wordpress-plugin\n"
-"X-Crowdin-Project-ID: 610119\n"
-"X-Crowdin-Language: es-MX\n"
-"X-Crowdin-File: wp-plugin-hostgator.pot\n"
-"X-Crowdin-File-ID: 1\n"
 
 #. Plugin Name of the plugin
 #: wp-plugin-hostgator.php

@@ -20,7 +20,7 @@ const SettingsSection = () => {
 					className={ 'hgwp-app-home-settings-action' }
 				>
 					{ __(
-						'Manage your site settings. You can ajdust automatic updates, comments, revisions and more.',
+						'Manage your site settings. You can adjust automatic updates, comments, revisions and more.',
 						'wp-plugin-hostgator'
 					) }
 				</ActionField>
