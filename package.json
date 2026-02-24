@@ -33,7 +33,7 @@
         "lodash": "^4.17.21",
         "react": "^18.3.1",
         "react-error-boundary": "^6.1.1",
-        "react-router-dom": "^7.7.0",
+        "react-router-dom": "^7.13.1",
         "react-use": "^17.6.0",
         "uuid": "^13.0.0"
     },
@@ -48,7 +48,8 @@
         "eslint-import-resolver-alias": "^1.1.2",
         "node-fetch": "^3.3.2",
         "node-wp-i18n": "^1.2.8",
-        "tailwindcss": "^3.4.19"
+        "tailwindcss": "^3.4.19",
+        "typescript": "^5.9.3"
     },
     "scripts": {
         "build": "wp-scripts build",
@@ -59,7 +60,9 @@
         "develop": "npm run start",
         "develop:analyzer": "npm run start:analyzer",
         "format": "wp-scripts format ./src",
-        "i18n": "wpi18n addtextdomain && composer run i18n",
+        "i18n": "composer run i18n",
+        "i18n-ci-pre": "npm run build && composer run i18n-ci-pre",
+        "i18n-ci-post": "composer run i18n-ci-post",
         "i18n-pot": "wpi18n make-pot . languages/wp-plugin-hostgator.pot --exclude=assets,storybook,tests,src,wp-plugin-hostgator",
         "i18n-mo": "cd languages && for file in `find . -name \"*.po\"` ; do msgfmt -o ${file/.po/.mo} $file ; done",
         "i18n-json": "wpi18n make-json languages/ --no-purge",
