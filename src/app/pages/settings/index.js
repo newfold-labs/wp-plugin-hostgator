@@ -170,7 +170,6 @@ const Settings = () => {
 						<ComingSoon />
 					</Container.Block>
 
-					
 					<Container.Block
 						separator={ true }
 						id={ 'wonder-blocks-section' }
