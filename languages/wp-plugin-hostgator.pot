@@ -1,4 +1,4 @@
-# Copyright (C) 2025 HostGator
+# Copyright (C) 2026 HostGator
 # This file is distributed under the GPL 2.0 or later.
 msgid ""
 msgstr ""
@@ -34,6 +34,7 @@ msgstr ""
 #: wp-plugin-hostgator.php
 #: inc/Admin.php:227
 #: inc/Admin.php:228
+#: build/2.15.2/index.js:1
 msgid "HostGator"
 msgstr ""
 
@@ -88,13 +89,13 @@ msgid "Preview the coming soon landing page"
 msgstr ""
 
 #: inc/Admin.php:68
-#: inc/Admin.php:383
+#: inc/Admin.php:404
 #: build/2.15.2/index.js:1
 msgid "Home"
 msgstr ""
 
 #: inc/Admin.php:73
-#: inc/Admin.php:384
+#: inc/Admin.php:405
 #: build/2.15.2/index.js:1
 msgid "Settings"
 msgstr ""
@@ -103,19 +104,19 @@ msgstr ""
 msgid "Help Resources"
 msgstr ""
 
-#: inc/Admin.php:272
+#: inc/Admin.php:282
 msgid "Please update to a newer WordPress version."
 msgstr ""
 
-#: inc/Admin.php:273
+#: inc/Admin.php:283
 msgid "There are new WordPress components which this plugin requires in order to render the interface."
 msgstr ""
 
-#: inc/Admin.php:274
+#: inc/Admin.php:284
 msgid "Please update now"
 msgstr ""
 
-#: inc/Admin.php:397
+#: inc/Admin.php:418
 msgid "Thank you for creating with <a href=\"https://wordpress.org/\">WordPress</a> and <a href=\"https://hostgator.com/about\">HostGator</a>."
 msgstr ""
 
@@ -176,7 +177,12 @@ msgid "Auto-updates enabled"
 msgstr ""
 
 #: build/2.15.2/index.js:1
-msgid "Hostgator WordPress Plugin"
+#: build/2.15.2/index.js:23
+msgid "Editor"
+msgstr ""
+
+#: build/2.15.2/index.js:1
+msgid "Hosting Panel"
 msgstr ""
 
 #: build/2.15.2/index.js:1
@@ -192,7 +198,11 @@ msgid "If the error persists, please contact support."
 msgstr ""
 
 #: build/2.15.2/index.js:1
-msgid " Error code: "
+msgid "Error code:"
+msgstr ""
+
+#: build/2.15.2/index.js:1
+msgid "HostGator WordPress Plugin"
 msgstr ""
 
 #: build/2.15.2/index.js:1
@@ -272,27 +282,18 @@ msgid "There's nothing here!"
 msgstr ""
 
 #: build/2.15.2/index.js:1
-msgid "Store"
+#: build/2.15.2/index.js:23
+msgid "Manage WordPress"
 msgstr ""
 
 #: build/2.15.2/index.js:1
-msgid "Products & Services"
+#: build/2.15.2/index.js:23
+msgid "Staging"
 msgstr ""
 
 #: build/2.15.2/index.js:1
-msgid "Sales & Promotions"
-msgstr ""
-
-#: build/2.15.2/index.js:1
-msgid "Sales Channel"
-msgstr ""
-
-#: build/2.15.2/index.js:1
-msgid "Payments"
-msgstr ""
-
-#: build/2.15.2/index.js:1
-msgid "Store Details"
+#: build/2.15.2/index.js:23
+msgid "Performance"
 msgstr ""
 
 #: build/2.15.2/index.js:1
@@ -341,10 +342,6 @@ msgstr ""
 
 #: build/2.15.2/index.js:1
 msgid "Manage your site settings. You can ajdust automatic updates, comments, revisions and more."
-msgstr ""
-
-#: build/2.15.2/index.js:1
-msgid "Performance"
 msgstr ""
 
 #: build/2.15.2/index.js:1
@@ -500,6 +497,8 @@ msgid "Keeping automatic updates on ensures timely security fixes and the latest
 msgstr ""
 
 #: build/2.15.2/index.js:1
+#: build/2.15.2/index.js:11
+#: build/2.15.2/index.js:23
 msgid "Oops! Something went wrong. Please try again."
 msgstr ""
 
@@ -528,139 +527,824 @@ msgid "Your website is currently displaying a \"Coming Soon\" page."
 msgstr ""
 
 #: build/2.15.2/index.js:1
+msgid "Disabled old post comments"
+msgstr ""
+
+#: build/2.15.2/index.js:1
+msgid "Enabled old post comments"
+msgstr ""
+
+#: build/2.15.2/index.js:1
+msgid "Comments on old posts are disabled."
+msgstr ""
+
+#: build/2.15.2/index.js:1
+msgid "Comments are allowed on old posts."
+msgstr ""
+
+#: build/2.15.2/index.js:1
 msgid "Disable comments for older posts"
 msgstr ""
 
 #: build/2.15.2/index.js:1
-msgid "Comments setting saved "
+msgid "Comments setting saved"
 msgstr ""
 
-#: build/2.15.2/index.js:1
-msgid "Comments on posts are disabled after "
-msgstr ""
-
-#: build/2.15.2/index.js:1
-msgid " day."
-msgid_plural " days."
+#. translators: %s: number of days. `Comments on posts are disabled after ${closeCommentsDays} days.`
+#: build/2.15.2/index.js:4
+#, js-format
+msgid "Comments on posts are disabled after %s day."
+msgid_plural "Comments on posts are disabled after %s days."
 msgstr[0] ""
 msgstr[1] ""
 
-#: build/2.15.2/index.js:1
-msgid "Close comments after "
-msgstr ""
+#. translators: %s: number of days. `Close comments after ${closeCommentsDays} days.`
+#: build/2.15.2/index.js:7
+#, js-format
+msgid "Close comments after %s day."
+msgid_plural "Close comments after %s days."
+msgstr[0] ""
+msgstr[1] ""
 
-#: build/2.15.2/index.js:1
+#: build/2.15.2/index.js:7
 msgid "Comments setting saved."
 msgstr ""
 
-#: build/2.15.2/index.js:1
-msgid "Posts will display "
-msgstr ""
-
-#: build/2.15.2/index.js:1
-msgid " comment at a time."
-msgid_plural " comments at a time."
+#. translators: %s: number of comments. `Posts will display ${commentsPerPage} comments at a time.`
+#: build/2.15.2/index.js:10
+#, js-format
+msgid "Posts will display %s comment at a time."
+msgid_plural "Posts will display %s comments at a time."
 msgstr[0] ""
 msgstr[1] ""
 
-#: build/2.15.2/index.js:1
-msgid "Display "
+#. translators: %s: number of comments to display per page
+#: build/2.15.2/index.js:11
+#, js-format
+msgid "Display %s comments per page."
 msgstr ""
 
-#: build/2.15.2/index.js:1
-msgid " comments per page."
-msgstr ""
-
-#: build/2.15.2/index.js:1
+#: build/2.15.2/index.js:11
 msgid "Comments"
 msgstr ""
 
-#: build/2.15.2/index.js:1
+#: build/2.15.2/index.js:11
 msgid "Comments allow visitors to provide feedback and respond to your posts or pages."
 msgstr ""
 
-#: build/2.15.2/index.js:1
-msgid "Post revision setting saved "
+#: build/2.15.2/index.js:11
+msgid "Post revision setting saved"
 msgstr ""
 
-#: build/2.15.2/index.js:1
-msgid "Posts will save  "
-msgstr ""
-
-#: build/2.15.2/index.js:1
-msgid " revision."
-msgid_plural " revisions."
+#. translators: %s: number of revisions. `Posts will save ${contentRevisions} revisions.`
+#: build/2.15.2/index.js:14
+#, js-format
+msgid "Posts will save %s revision."
+msgid_plural "Posts will save %s revisions."
 msgstr[0] ""
 msgstr[1] ""
 
-#: build/2.15.2/index.js:1
-msgid "Number of revisions posts can save "
+#: build/2.15.2/index.js:14
+msgid "Number of revisions posts can save"
 msgstr ""
 
-#: build/2.15.2/index.js:1
-msgid "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take "
-msgstr ""
-
-#: build/2.15.2/index.js:1
-msgid " step back."
-msgid_plural " steps back."
+#. translators: %s: number of content revisions. `Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take ${contentRevisions} steps back.`
+#: build/2.15.2/index.js:17
+#, js-format
+msgid "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take %s step back."
+msgid_plural "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take %s steps back."
 msgstr[0] ""
 msgstr[1] ""
 
-#: build/2.15.2/index.js:1
-msgid "Trash setting saved "
+#: build/2.15.2/index.js:17
+msgid "Trash setting saved"
 msgstr ""
 
-#: build/2.15.2/index.js:1
-msgid "The trash will automatically empty every "
-msgstr ""
-
-#: build/2.15.2/index.js:1
-msgid " week."
-msgid_plural " weeks."
+#. translators: %s: number of weeks. `The trash will automatically empty every ${numTrashWeeks} weeks.`
+#: build/2.15.2/index.js:20
+#: build/2.15.2/index.js:23
+#, js-format
+msgid "The trash will automatically empty every %s week."
+msgid_plural "The trash will automatically empty every %s weeks."
 msgstr[0] ""
 msgstr[1] ""
 
-#: build/2.15.2/index.js:1
-msgid "Trash emptying frequency "
+#: build/2.15.2/index.js:20
+msgid "Trash emptying frequency"
 msgstr ""
 
-#: build/2.15.2/index.js:1
+#: build/2.15.2/index.js:23
 msgid "Content Options"
 msgstr ""
 
-#: build/2.15.2/index.js:1
+#: build/2.15.2/index.js:23
 msgid "Controls for content revisions and how often to empty the trash."
 msgstr ""
 
-#: build/2.15.2/index.js:1
+#: build/2.15.2/index.js:23
 msgid "The Help Center provides guided, step-by-step assistance as you build your site."
 msgstr ""
 
-#: build/2.15.2/index.js:1
+#: build/2.15.2/index.js:23
 msgid "Sorry, that is not allowed."
 msgstr ""
 
-#: build/2.15.2/index.js:1
+#: build/2.15.2/index.js:23
 msgid "This feature cannot currently be modified."
 msgstr ""
 
-#: build/2.15.2/index.js:1
+#: build/2.15.2/index.js:23
+msgid "Optimize your website my managing cache, security and performance settings."
+msgstr ""
+
+#: build/2.15.2/index.js:23
+msgid "Optimize your website by managing cache and performance settings"
+msgstr ""
+
+#: build/2.15.2/index.js:23
+msgid "General Settings"
+msgstr ""
+
+#: build/2.15.2/index.js:23
 msgid "This is where you can manage common settings for your website."
 msgstr ""
 
-#: build/2.15.2/index.js:1
+#: build/2.15.2/index.js:23
 msgid "Features"
 msgstr ""
 
-#: build/2.15.2/index.js:1
+#: build/2.15.2/index.js:23
+msgid "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready."
+msgstr ""
+
+#: build/2.15.2/index.js:23
 msgid "The performance feature provides improvements to loads faster for visitors including cache settings."
 msgstr ""
 
-#: build/2.15.2/index.js:1
+#: build/2.15.2/index.js:23
 msgid "The staging feature provides a way to copy a site to test new updates, features or content."
 msgstr ""
 
-#: build/2.15.2/index.js:1
+#: build/2.15.2/index.js:23
 msgid "WonderBlocks provides a library of customizable block patterns and page templates."
+msgstr ""
+
+#: build/2.15.2/index.js:23
+msgid "Site Editor"
+msgstr ""
+
+#: build/2.15.2/index.js:23
+msgid "Customizer"
+msgstr ""
+
+#: wordpress/wp-includes/blocks/widget-group/block.json
+msgctxt "block title"
+msgid "Widget Group"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Color name"
+msgid "Base"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Color name"
+msgid "Contrast"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Color name"
+msgid "Accent 1"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Color name"
+msgid "Accent 2"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Color name"
+msgid "Accent 3"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Color name"
+msgid "Accent 4"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Color name"
+msgid "Accent 5"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Color name"
+msgid "Accent 6"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Space size name"
+msgid "Tiny"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Space size name"
+msgid "X-Small"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Space size name"
+msgid "Small"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Space size name"
+msgid "Regular"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Space size name"
+msgid "Large"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Space size name"
+msgid "X-Large"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Space size name"
+msgid "XX-Large"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-includes/theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-includes/theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-includes/theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-includes/theme.json
+msgctxt "Font size name"
+msgid "Extra Large"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Font size name"
+msgid "Extra Extra Large"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Font family name"
+msgid "Manrope"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Font family name"
+msgid "Fira Code"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Template part name"
+msgid "Vertical site header"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Template part name"
+msgid "Header with large title"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Template part name"
+msgid "Footer Columns"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+msgctxt "Template part name"
+msgid "Footer Newsletter"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Template part name"
+msgid "Sidebar"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfive/theme.json
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Custom template name"
+msgid "Page No Title"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Duotone name"
+msgid "Black and white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Duotone name"
+msgid "Black and sandstone"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Duotone name"
+msgid "Black and rust"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Duotone name"
+msgid "Black and sage"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Duotone name"
+msgid "Black and pastel blue"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical soft beige to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical soft sandstone to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical soft rust to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical soft sage to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical soft mint to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical soft pewter to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical hard beige to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical hard sandstone to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical hard rust to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical hard sage to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical hard mint to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Gradient name"
+msgid "Vertical hard pewter to white"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Color name"
+msgid "Base / Two"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Color name"
+msgid "Contrast / Two"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Color name"
+msgid "Contrast / Three"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Color name"
+msgid "Accent"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Color name"
+msgid "Accent / Two"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Color name"
+msgid "Accent / Three"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Color name"
+msgid "Accent / Four"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Color name"
+msgid "Accent / Five"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Space size name"
+msgid "1"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Space size name"
+msgid "2"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Space size name"
+msgid "3"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Space size name"
+msgid "4"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Space size name"
+msgid "5"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Space size name"
+msgid "6"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Font family name"
+msgid "Inter"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Font family name"
+msgid "Cardo"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Font family name"
+msgid "System Sans-serif"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Font family name"
+msgid "System Serif"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Template part name"
+msgid "Post Meta"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Custom template name"
+msgid "Page with Sidebar"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Custom template name"
+msgid "Page with Wide Image"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentyfour/theme.json
+msgctxt "Custom template name"
+msgid "Single with Sidebar"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Custom template name"
+msgid "Blank"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Custom template name"
+msgid "Blog (Alternative)"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Custom template name"
+msgid "404"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Color name"
+msgid "Tertiary"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Font family name"
+msgid "DM Sans"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Font family name"
+msgid "IBM Plex Mono"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Font family name"
+msgid "System Font"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Font family name"
+msgid "Source Serif Pro"
+msgstr ""
+
+#: wordpress/wp-content/themes/twentytwentythree/theme.json
+msgctxt "Template part name"
+msgid "Comments Template Part"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Duotone name"
+msgid "Dark grayscale"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Duotone name"
+msgid "Grayscale"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Duotone name"
+msgid "Purple and yellow"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Duotone name"
+msgid "Blue and red"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Duotone name"
+msgid "Midnight"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Duotone name"
+msgid "Magenta and yellow"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Duotone name"
+msgid "Purple and green"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Duotone name"
+msgid "Blue and orange"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Vivid cyan blue to vivid purple"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Light green cyan to vivid green cyan"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Luminous vivid amber to luminous vivid orange"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Luminous vivid orange to vivid red"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Very light gray to cyan bluish gray"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Cool to warm spectrum"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Blush light purple"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Blush bordeaux"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Luminous dusk"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Pale ocean"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Electric grass"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Gradient name"
+msgid "Midnight"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "Black"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "Cyan bluish gray"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "White"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "Pale pink"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "Vivid red"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "Luminous vivid orange"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "Luminous vivid amber"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "Light green cyan"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "Vivid green cyan"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "Pale cyan blue"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "Vivid cyan blue"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Color name"
+msgid "Vivid purple"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Aspect ratio name"
+msgid "Square - 1:1"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Aspect ratio name"
+msgid "Standard - 4:3"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Aspect ratio name"
+msgid "Portrait - 3:4"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Aspect ratio name"
+msgid "Classic - 3:2"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Aspect ratio name"
+msgid "Classic Portrait - 2:3"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Aspect ratio name"
+msgid "Wide - 16:9"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Aspect ratio name"
+msgid "Tall - 9:16"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Shadow name"
+msgid "Natural"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Shadow name"
+msgid "Deep"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Shadow name"
+msgid "Sharp"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Shadow name"
+msgid "Outlined"
+msgstr ""
+
+#: wordpress/wp-includes/theme.json
+msgctxt "Shadow name"
+msgid "Crisp"
 msgstr ""
