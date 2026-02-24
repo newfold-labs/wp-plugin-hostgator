@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "adaf591f894c9f6ad9d33a651a96dd67",
+    "content-hash": "a642cfc4b5d0a09682e2f0a1226aefc3",
     "packages": [
         {
             "name": "colinmollenhour/credis",
@@ -1159,21 +1159,20 @@
         },
         {
             "name": "newfold-labs/wp-module-ecommerce",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-ecommerce.git",
-                "reference": "1950cc9aabb8f731e745672404598bd8553fe32b"
+                "reference": "7969273b4226af2ce3cdf5b4acaee4f17e9d2326"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/1950cc9aabb8f731e745672404598bd8553fe32b",
-                "reference": "1950cc9aabb8f731e745672404598bd8553fe32b",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-ecommerce/zipball/7969273b4226af2ce3cdf5b4acaee4f17e9d2326",
+                "reference": "7969273b4226af2ce3cdf5b4acaee4f17e9d2326",
                 "shasum": ""
             },
             "require": {
-                "newfold-labs/wp-module-installer": "^1.7.1",
-                "newfold-labs/wp-module-onboarding-data": "^1.2.22"
+                "newfold-labs/wp-module-installer": "^1.7.2"
             },
             "require-dev": {
                 "johnpbloch/wordpress": "@stable",
@@ -1248,10 +1247,10 @@
             ],
             "description": "Brand Agnostic eCommerce Experience",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/2.3.0",
+                "source": "https://github.com/newfold-labs/wp-module-ecommerce/tree/2.3.1",
                 "issues": "https://github.com/newfold-labs/wp-module-ecommerce/issues"
             },
-            "time": "2026-02-05T16:05:02+00:00"
+            "time": "2026-02-24T00:10:42+00:00"
         },
         {
             "name": "newfold-labs/wp-module-facebook",
