@@ -57,6 +57,15 @@
             "@i18n-php",
             "@i18n-json"
         ],
+        "i18n-ci-pre": [
+            "@i18n-pot",
+            "@i18n-po"
+        ],
+        "i18n-ci-post": [
+            "@i18n-po",
+            "@i18n-json",
+            "@i18n-php"
+        ],
         "test": "codecept run wpunit",
         "test:phpunit": "HOSTGATOR_PHPUNIT_MINIMAL=1 vendor/bin/phpunit --bootstrap tests/phpunit/bootstrap.php tests/phpunit/PluginTest.php --no-configuration"
     },
@@ -64,6 +73,8 @@
         "fix": "Automatically fix coding standards issues where possible.",
         "lint": "Check files against coding standards.",
         "i18n": "Generate new language files.",
+        "i18n-ci-pre": "Command for CI to run before generating language files.",
+        "i18n-ci-post": "Command for CI to run after generating language files.",
         "i18n-pot": "Generate a .pot file for translation.",
         "i18n-po": "Update existing .po files.",
         "i18n-mo": "Generate new language .mo files.",
