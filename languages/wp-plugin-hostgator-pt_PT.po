@@ -273,10 +273,6 @@ msgid "Manage Settings"
 msgstr "Gerenciar Configurações"
 
 #: build/3.0.0/index.js:1
-msgid "Manage your site settings. You can ajdust automatic updates, comments, revisions and more."
-msgstr "Gerencie as configurações do seu site. Você pode ajustar atualizações automáticas, comentários, revisões e muito mais."
-
-#: build/3.0.0/index.js:1
 msgid "Manage site performance and caching settings as well as clear the site cache."
 msgstr "Gerencie o desempenho do site e as configurações de cache, bem como limpe o cache do site."
 
@@ -427,10 +423,6 @@ msgstr "Página secreta para gerenciar recursos e configurações de administra�
 #: build/3.0.0/index.js:1
 msgid "We are available 24/7 to help answer questions and solve your problems."
 msgstr "Estamos disponíveis 24 horas por dia, 7 dias por semana para ajudar a responder perguntas e resolver seus problemas."
-
-#: build/3.0.0/index.js:1
-msgid "More"
-msgstr "Mais"
 
 #: build/3.0.0/index.js:1
 msgid "Manage Domain"
@@ -694,4 +686,16 @@ msgstr ""
 
 #: build/3.0.0/index.js:23
 msgid "Customizer"
+msgstr ""
+
+#: build/3.0.0/index.js:1
+msgid "Quick Links"
+msgstr ""
+
+#: build/3.0.0/index.js:1
+msgid "Manage your site settings. You can adjust automatic updates, comments, revisions and more."
+msgstr ""
+
+#: build/3.0.0/index.js:23
+msgid "Customize the available features as you manage your website."
 msgstr ""

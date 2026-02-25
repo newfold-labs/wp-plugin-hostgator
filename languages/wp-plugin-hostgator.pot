@@ -325,7 +325,7 @@ msgid "We're very excited to get started with you!"
 msgstr ""
 
 #: build/3.0.0/index.js:1
-msgid "More"
+msgid "Quick Links"
 msgstr ""
 
 #: build/3.0.0/index.js:1
@@ -341,7 +341,7 @@ msgid "Manage Settings"
 msgstr ""
 
 #: build/3.0.0/index.js:1
-msgid "Manage your site settings. You can ajdust automatic updates, comments, revisions and more."
+msgid "Manage your site settings. You can adjust automatic updates, comments, revisions and more."
 msgstr ""
 
 #: build/3.0.0/index.js:1
@@ -671,6 +671,10 @@ msgstr ""
 
 #: build/3.0.0/index.js:23
 msgid "Features"
+msgstr ""
+
+#: build/3.0.0/index.js:23
+msgid "Customize the available features as you manage your website."
 msgstr ""
 
 #: build/3.0.0/index.js:23
