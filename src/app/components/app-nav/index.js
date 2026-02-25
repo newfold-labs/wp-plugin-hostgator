@@ -12,7 +12,6 @@ import { default as NewfoldNotifications } from '@modules/wp-module-notification
 import { useLocation } from 'react-router-dom';
 import classnames from 'classnames';
 import {
-	getPlatformPathUrl,
 	addUtmParams,
 	getEditorUrl,
 	getEditorLabel,
@@ -98,7 +97,9 @@ export const AppNavMenu = () => {
 				<Button
 					as="a"
 					className="nfd-flex nfd-gap-2 nfd-mr-4 nfd-text-nowrap"
-					href={ addUtmParams( 'https://www.hostgator.com/my-account/hosting/details/sites' ) }
+					href={ addUtmParams(
+						'https://www.hostgator.com/my-account/hosting/details/sites'
+					) }
 					variant="secondary"
 				>
 					{ __( 'Hosting Panel', 'wp-plugin-hostgator' ) }
