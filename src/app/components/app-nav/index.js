@@ -11,11 +11,7 @@ import {
 import { default as NewfoldNotifications } from '@modules/wp-module-notifications/assets/js/components/notifications/';
 import { useLocation } from 'react-router-dom';
 import classnames from 'classnames';
-import {
-	addUtmParams,
-	getEditorUrl,
-	getEditorLabel,
-} from 'App/util/helpers';
+import { addUtmParams, getEditorUrl, getEditorLabel } from 'App/util/helpers';
 import { topRoutes } from 'App/data/routes';
 import {
 	RectangleGroupIcon,
@@ -97,7 +93,9 @@ export const AppNavMenu = () => {
 				<Button
 					as="a"
 					className="nfd-flex nfd-gap-2 nfd-mr-4 nfd-text-nowrap"
-					href={ addUtmParams( 'https://www.hostgator.com/my-account/hosting/details' ) }
+					href={ addUtmParams(
+						'https://www.hostgator.com/my-account/hosting/details'
+					) }
 					variant="secondary"
 				>
 					{ __( 'Hosting Panel', 'wp-plugin-hostgator' ) }
