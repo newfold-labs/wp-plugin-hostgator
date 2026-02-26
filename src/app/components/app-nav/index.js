@@ -98,7 +98,7 @@ export const AppNavMenu = () => {
 					as="a"
 					className="nfd-flex nfd-gap-2 nfd-mr-4 nfd-text-nowrap"
 					href={ addUtmParams(
-						'https://www.hostgator.com/my-account/hosting/details/sites'
+						'https://www.hostgator.com/my-account/hosting/details'
 					) }
 					variant="secondary"
 				>
