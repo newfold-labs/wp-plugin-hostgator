@@ -8,6 +8,7 @@ import { NewfoldRuntime } from '@newfold/wp-module-runtime';
 import { Route, Routes } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
 import Home from '../pages/home';
+import Commerce from '../pages/commerce';
 import Marketplace from '../pages/marketplace';
 import Settings from '../pages/settings';
 import Help from '../pages/help';
@@ -122,6 +123,12 @@ export const routes = [
 		condition: true,
 	},
 	{
+		name: '/commerce',
+		title: __( 'Commerce', 'wp-plugin-hostgator' ),
+		Component: Commerce,
+		condition: true,
+	},
+	{
 		name: '/marketplace',
 		title: __( 'Marketplace', 'wp-plugin-hostgator' ),
 		Component: Marketplace,
@@ -145,7 +152,13 @@ export const routes = [
 	},
 ];
 
-const topRoutePaths = [ '/home', '/settings', '/marketplace', '/help' ];
+const topRoutePaths = [
+	'/home',
+	'/settings',
+	'/commerce',
+	'/marketplace',
+	'/help',
+];
 export const topRoutes = _filter( routes, ( route ) =>
 	topRoutePaths.includes( route.name )
 );

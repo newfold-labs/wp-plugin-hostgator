@@ -183,6 +183,39 @@ body.toplevel_page_hostgator {
     box-sizing: border-box;
 }
 
+.hgwp-app-body-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    position: relative;
+
+    .hgwp-app-body-inner {
+        flex-grow: 1;
+    }
+
+    .hgwp-app-aside {
+        flex-shrink: 1;
+        flex-grow: 0;
+    }
+
+    @media screen and (max-width: 782px) {
+        flex-direction: column;
+
+        .hgwp-app-aside {
+            width: 100%;
+            position: relative;
+        }
+    }
+}
+
+.hgwp-app-aside {
+    position: sticky;
+    top: 4rem;
+    z-index: 2;
+}
+
 // .hgwp-app-body {
 //     padding: 3.25rem 24px 1rem;
 
@@ -260,6 +293,7 @@ body.toplevel_page_hostgator {
 .hgwpp {
 
     .components-card {
+        box-shadow: inset 0px 0px 0px 1px var(--color-border);
 
         &.short {
             margin-bottom: auto;
@@ -276,6 +310,24 @@ body.toplevel_page_hostgator {
         &.disabled {
             opacity: .5;
         }
+    }
+}
+
+.hgwp-animation-blink {
+    animation: blink 2.5s ease 1s 3 normal forwards;
+}
+
+@keyframes blink {
+
+    0%,
+    50%,
+    100% {
+        background-color: initial;
+    }
+
+    25%,
+    75% {
+        background-color: #e9f1fd;
     }
 }
 
@@ -328,6 +380,53 @@ body.toplevel_page_hostgator {
 
 .hgwp-app-marketplace-page {
     width: 100%;
+
+    .nfd-marketplace-sidebar ul {
+        margin-left: 0 !important;
+    }
+
+    .nfd-marketplace-categories .nfd-select.nfd-marketing-page-category-selector .nfd-select__options {
+        width: auto !important;
+    }
+
+    // TODO: generate these via tailwind config
+    // These styles should not be needed but tailwind doesn't seem to be adding these
+    .nfd-flex-col {
+        flex-direction: column !important;
+    }
+
+    @media (min-width: 768px) {
+        .md\:nfd-flex-row {
+            flex-direction: row !important;
+        }
+
+        .md\:nfd-grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        }
+    }
+
+    @media (min-width: 1120px) {
+        .min-\[1120px\]\:nfd-grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        .min-\[1400px\]\:nfd-grid-cols-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        }
+    }
+
+    .nfd-pp-yoast-hero-content > div {
+        min-width: 400px;
+        max-width: 50%;
+        margin-left: auto;
+        align-items: center;
+    }
+}
+
+#nfd-portal-apps {
+    display: none;
 }
 
 // Hide module's own page header when embedded in Settings (avoid doubled titles)
@@ -382,4 +481,37 @@ body.toplevel_page_hostgator {
             color: var(--color-primary);
         }
     }
+}
+
+// Nav fixes
+.nfd-root .hgwp-app-body header nav > svg {
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .nfd-root .hgwp-app-body header nav {
+        top: 46px !important;
+
+        .nfd-button {
+            display: none !important;
+        }
+    }
+}
+
+.nfd-pointer-events-none + .nfd-appbar-nav-dialog {
+    pointer-events: none !important;
+}
+
+.nfd-validation-input button[data-id="nfd-marketing-page-category-selector"] .nfd-select__button-label {
+    padding-right: 2rem;
+}
+
+// fix for performance toast notices PRESS0-3273
+.nfd-root aside.nfd-notifications {
+    z-index: 9991; // admin menu has z-index 9990
+}
+
+// fix for coming soon portal layout
+.nfd-coming-soon-content {
+    align-items: center;
 }
