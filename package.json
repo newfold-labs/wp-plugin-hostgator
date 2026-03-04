@@ -27,7 +27,7 @@
         "@wordpress/url": "^4.40.0",
         "@wordpress/element": "^6.24.0",
         "@wordpress/i18n": "^6.13.0",
-        "@wordpress/icons": "^11.7.0",
+        "@wordpress/icons": "^11.8.0",
         "classnames": "^2.5.1",
         "html-react-parser": "^5.2.17",
         "lodash": "^4.17.21",
