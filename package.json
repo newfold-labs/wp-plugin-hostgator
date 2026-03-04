@@ -23,7 +23,7 @@
         "@wordpress/compose": "^7.40.0",
         "@wordpress/api-fetch": "^7.41.0",
         "@wordpress/data": "^10.40.0",
-        "@wordpress/dom-ready": "^4.40.0",
+        "@wordpress/dom-ready": "^4.41.0",
         "@wordpress/url": "^4.40.0",
         "@wordpress/element": "^6.24.0",
         "@wordpress/i18n": "^6.13.0",
