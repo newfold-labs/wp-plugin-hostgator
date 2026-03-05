@@ -127,6 +127,14 @@ final class Admin {
 			}
 		);
 
+		// remove Solutions link from subnav
+		$subnav = array_filter(
+			$subnav,
+			function ( $item ) {
+				return $item['route'] !== 'hostgator#/commerce';
+			}
+		);
+
 		// return subnav items sorted by priority
 		return $subnav;
 	}
