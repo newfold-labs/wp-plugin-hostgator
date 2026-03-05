@@ -131,7 +131,7 @@ final class Admin {
 		$subnav = array_filter(
 			$subnav,
 			function ( $item ) {
-				return $item['route'] !== 'hostgator#/commerce';
+				return 'hostgator#/commerce' !== $item['route'];
 			}
 		);
 
