@@ -1,5 +1,3 @@
-# Copyright (C) 2026 HostGator
-# This file is distributed under the GPL 2.0 or later.
 msgid ""
 msgstr ""
 "Project-Id-Version: The HostGator Plugin 3.0.0\n"
@@ -11,9 +9,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2023-01-11T20:21:44+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language: de_DE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: wp-plugin-hostgator\n"
-"Language: de_DE\n"
 
 #. Plugin Name of the plugin
 #: wp-plugin-hostgator.php
@@ -326,10 +324,6 @@ msgid "We're very excited to get started with you!"
 msgstr ""
 
 #: build/3.0.0/index.js:1
-msgid "More"
-msgstr ""
-
-#: build/3.0.0/index.js:1
 msgid "Settings and Performance"
 msgstr ""
 
@@ -339,10 +333,6 @@ msgstr ""
 
 #: build/3.0.0/index.js:1
 msgid "Manage Settings"
-msgstr ""
-
-#: build/3.0.0/index.js:1
-msgid "Manage your site settings. You can ajdust automatic updates, comments, revisions and more."
 msgstr ""
 
 #: build/3.0.0/index.js:1
@@ -696,4 +686,16 @@ msgstr ""
 
 #: build/3.0.0/index.js:23
 msgid "Customizer"
+msgstr ""
+
+#: build/3.0.0/index.js:1
+msgid "Quick Links"
+msgstr ""
+
+#: build/3.0.0/index.js:1
+msgid "Manage your site settings. You can adjust automatic updates, comments, revisions and more."
+msgstr ""
+
+#: build/3.0.0/index.js:23
+msgid "Customize the available features as you manage your website."
 msgstr ""
