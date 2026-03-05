@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3fb1b20390da97adcc61c22e41fdd5e7",
+    "content-hash": "6d4097f9ecb61a6489543ebe4e2b1ddf",
     "packages": [
         {
             "name": "colinmollenhour/credis",
@@ -1509,16 +1509,16 @@
         },
         {
             "name": "newfold-labs/wp-module-help-center",
-            "version": "2.7.0",
+            "version": "2.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-help-center.git",
-                "reference": "a0343d2a3681f42f6b122b25e4842f3b9588b5a0"
+                "reference": "30492b7bb1b4eac3921611b6ac6c9cbae55c6992"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-help-center/zipball/a0343d2a3681f42f6b122b25e4842f3b9588b5a0",
-                "reference": "a0343d2a3681f42f6b122b25e4842f3b9588b5a0",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-help-center/zipball/30492b7bb1b4eac3921611b6ac6c9cbae55c6992",
+                "reference": "30492b7bb1b4eac3921611b6ac6c9cbae55c6992",
                 "shasum": ""
             },
             "require": {
@@ -1596,10 +1596,10 @@
             ],
             "description": "HelpCenter",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-help-center/tree/2.7.0",
+                "source": "https://github.com/newfold-labs/wp-module-help-center/tree/2.7.1",
                 "issues": "https://github.com/newfold-labs/wp-module-help-center/issues"
             },
-            "time": "2026-03-04T16:26:14+00:00"
+            "time": "2026-03-05T21:54:20+00:00"
         },
         {
             "name": "newfold-labs/wp-module-htaccess",
