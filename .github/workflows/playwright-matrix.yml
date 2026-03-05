@@ -51,7 +51,7 @@ jobs:
           tools: composer, cs2pr
 
       - name: Use Node.js 24.x
-        uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238  # v6.2.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f  # v6.3.0
         with:
           node-version: 24.x
           cache: 'npm'
@@ -140,7 +140,7 @@ jobs:
 
       - name: Store Playwright test results
         if: always()
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f  # v6.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f  # v7.0.0
         with:
           name: playwright-report-wp${{ matrix.wpVersion }}-php${{ matrix.phpVersion }}
           path: tests/playwright/test-results/
