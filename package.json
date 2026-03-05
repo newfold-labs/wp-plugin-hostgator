@@ -42,7 +42,7 @@
         "@tailwindcss/forms": "^0.5.11",
         "@axe-core/playwright": "^4.11.1",
         "@playwright/test": "^1.58.2",
-        "@wordpress/e2e-test-utils-playwright": "^1.0.0",
+        "@wordpress/e2e-test-utils-playwright": "^1.41.0",
         "@wordpress/env": "^10.39.0",
         "@wordpress/scripts": "^31.4.0",
         "eslint-import-resolver-alias": "^1.1.2",
