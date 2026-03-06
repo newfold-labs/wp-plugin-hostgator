@@ -32,8 +32,8 @@ msgstr ""
 
 #. Author of the plugin
 #: wp-plugin-hostgator.php
-#: inc/Admin.php:227
-#: inc/Admin.php:228
+#: inc/Admin.php:262
+#: inc/Admin.php:263
 #: build/3.0.0/index.js:1
 msgid "HostGator"
 msgstr ""
@@ -89,13 +89,13 @@ msgid "Preview the coming soon landing page"
 msgstr ""
 
 #: inc/Admin.php:68
-#: inc/Admin.php:404
+#: inc/Admin.php:439
 #: build/3.0.0/index.js:1
 msgid "Home"
 msgstr ""
 
 #: inc/Admin.php:73
-#: inc/Admin.php:405
+#: inc/Admin.php:440
 #: build/3.0.0/index.js:1
 msgid "Settings"
 msgstr ""
@@ -104,19 +104,19 @@ msgstr ""
 msgid "Help Resources"
 msgstr ""
 
-#: inc/Admin.php:282
+#: inc/Admin.php:317
 msgid "Please update to a newer WordPress version."
 msgstr ""
 
-#: inc/Admin.php:283
+#: inc/Admin.php:318
 msgid "There are new WordPress components which this plugin requires in order to render the interface."
 msgstr ""
 
-#: inc/Admin.php:284
+#: inc/Admin.php:319
 msgid "Please update now"
 msgstr ""
 
-#: inc/Admin.php:418
+#: inc/Admin.php:453
 msgid "Thank you for creating with <a href=\"https://wordpress.org/\">WordPress</a> and <a href=\"https://hostgator.com/about\">HostGator</a>."
 msgstr ""
 
@@ -297,6 +297,10 @@ msgid "Performance"
 msgstr ""
 
 #: build/3.0.0/index.js:1
+msgid "Commerce"
+msgstr ""
+
+#: build/3.0.0/index.js:1
 msgid "Marketplace"
 msgstr ""
 
@@ -313,6 +317,14 @@ msgid "Secret page to manage admin features and settings."
 msgstr ""
 
 #: build/3.0.0/index.js:1
+msgid "Premium tools available in eCommerce Add-Ons"
+msgstr ""
+
+#: build/3.0.0/index.js:1
+msgid "Discover exclusive features, designed to deliver unmatched value and elevate your online experience."
+msgstr ""
+
+#: build/3.0.0/index.js:1
 msgid "We are available 24/7 to help answer questions and solve your problems."
 msgstr ""
 
@@ -325,7 +337,7 @@ msgid "We're very excited to get started with you!"
 msgstr ""
 
 #: build/3.0.0/index.js:1
-msgid "More"
+msgid "Quick Links"
 msgstr ""
 
 #: build/3.0.0/index.js:1
@@ -341,7 +353,7 @@ msgid "Manage Settings"
 msgstr ""
 
 #: build/3.0.0/index.js:1
-msgid "Manage your site settings. You can ajdust automatic updates, comments, revisions and more."
+msgid "Manage your site settings. You can adjust automatic updates, comments, revisions and more."
 msgstr ""
 
 #: build/3.0.0/index.js:1
@@ -671,6 +683,10 @@ msgstr ""
 
 #: build/3.0.0/index.js:23
 msgid "Features"
+msgstr ""
+
+#: build/3.0.0/index.js:23
+msgid "Customize the available features as you manage your website."
 msgstr ""
 
 #: build/3.0.0/index.js:23

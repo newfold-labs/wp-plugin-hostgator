@@ -31,8 +31,8 @@ msgstr "Plugin WordPress que integra um site WordPress com o painel de controle 
 
 #. Author of the plugin
 #: wp-plugin-hostgator.php
-#: inc/Admin.php:227
-#: inc/Admin.php:228
+#: inc/Admin.php:262
+#: inc/Admin.php:263
 #: build/3.0.0/index.js:1
 msgid "HostGator"
 msgstr "HostGator"
@@ -76,7 +76,7 @@ msgid "Preview the coming soon landing page"
 msgstr "Visualize a página de destino em breve"
 
 #: inc/Admin.php:68
-#: inc/Admin.php:404
+#: inc/Admin.php:439
 #: build/3.0.0/index.js:1
 msgid "Home"
 msgstr "Início"
@@ -91,7 +91,7 @@ msgid "Performance"
 msgstr "Desempenho"
 
 #: inc/Admin.php:73
-#: inc/Admin.php:405
+#: inc/Admin.php:440
 #: build/3.0.0/index.js:1
 msgid "Settings"
 msgstr "Configurações"
@@ -100,19 +100,19 @@ msgstr "Configurações"
 msgid "Help"
 msgstr "Ajuda"
 
-#: inc/Admin.php:282
+#: inc/Admin.php:317
 msgid "Please update to a newer WordPress version."
 msgstr "Por favor, atualize para uma versão mais recente do WordPress."
 
-#: inc/Admin.php:283
+#: inc/Admin.php:318
 msgid "There are new WordPress components which this plugin requires in order to render the interface."
 msgstr "Existem novos componentes do WordPress que este plugin precisa para renderizar a interface."
 
-#: inc/Admin.php:284
+#: inc/Admin.php:319
 msgid "Please update now"
 msgstr "Por favor, atualize agora"
 
-#: inc/Admin.php:418
+#: inc/Admin.php:453
 msgid "Thank you for creating with <a href=\"https://wordpress.org/\">WordPress</a> and <a href=\"https://hostgator.com/about\">HostGator</a>."
 msgstr "Obrigado por criar com <a href=\"https://wordpress.org/\">WordPress</a> e <a href=\"https://hostgator.com.br/\">HostGator</a>."
 
@@ -273,10 +273,6 @@ msgid "Manage Settings"
 msgstr "Gerenciar Configurações"
 
 #: build/3.0.0/index.js:1
-msgid "Manage your site settings. You can ajdust automatic updates, comments, revisions and more."
-msgstr "Gerencie as configurações do seu site. Você pode ajustar atualizações automáticas, comentários, revisões e muito mais."
-
-#: build/3.0.0/index.js:1
 msgid "Manage site performance and caching settings as well as clear the site cache."
 msgstr "Gerencie o desempenho do site e as configurações de cache, bem como limpe o cache do site."
 
@@ -427,10 +423,6 @@ msgstr "Página secreta para gerenciar recursos e configurações de administra�
 #: build/3.0.0/index.js:1
 msgid "We are available 24/7 to help answer questions and solve your problems."
 msgstr "Estamos disponíveis 24 horas por dia, 7 dias por semana para ajudar a responder perguntas e resolver seus problemas."
-
-#: build/3.0.0/index.js:1
-msgid "More"
-msgstr "Mais"
 
 #: build/3.0.0/index.js:1
 msgid "Manage Domain"
@@ -694,4 +686,28 @@ msgstr ""
 
 #: build/3.0.0/index.js:23
 msgid "Customizer"
+msgstr ""
+
+#: build/3.0.0/index.js:1
+msgid "Commerce"
+msgstr ""
+
+#: build/3.0.0/index.js:1
+msgid "Premium tools available in eCommerce Add-Ons"
+msgstr ""
+
+#: build/3.0.0/index.js:1
+msgid "Discover exclusive features, designed to deliver unmatched value and elevate your online experience."
+msgstr ""
+
+#: build/3.0.0/index.js:1
+msgid "Quick Links"
+msgstr ""
+
+#: build/3.0.0/index.js:1
+msgid "Manage your site settings. You can adjust automatic updates, comments, revisions and more."
+msgstr ""
+
+#: build/3.0.0/index.js:23
+msgid "Customize the available features as you manage your website."
 msgstr ""
