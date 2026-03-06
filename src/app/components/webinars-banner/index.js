@@ -17,7 +17,7 @@ import { ReactComponent as WebinarsVector } from 'App/images/webinars-vector.svg
  *
  * If any of the above fails the component will not render.
  *
- * @return { JSX.Element } The webinars banner component.
+ * @return {import('react').ReactNode} The webinars banner component.
  */
 const WebinarsBanner = () => {
 	const [ webinars, setWebinars ] = useState( [] );
@@ -28,10 +28,9 @@ const WebinarsBanner = () => {
 	}, [] );
 
 	const fetchWebinars = async () => {
-        // https://cdn.hiive.space/resources/hostgator_US-webinars.json
-        // https://cdn.hiive.space/resources/hostgator-latam_BR-webinars.json
-		const webinarsEndpoint =
-			`https://cdn.hiive.space/resources/${window.NewfoldRuntime.plugin.brand}_${window.NewfoldRuntime.plugin.region}-webinars.json`;
+		// https://cdn.hiive.space/resources/hostgator_US-webinars.json
+		// https://cdn.hiive.space/resources/hostgator-latam_BR-webinars.json
+		const webinarsEndpoint = `https://cdn.hiive.space/resources/${ window.NewfoldRuntime.plugin.brand }_${ window.NewfoldRuntime.plugin.region }-webinars.json`;
 
 		const response = await fetch( webinarsEndpoint );
 		if ( ! response.ok ) {
@@ -83,7 +82,9 @@ const WebinarsBanner = () => {
 					? true
 					: false;
 			nextWebinar.hasTime = nextWebinar.time ? true : false;
-			nextWebinar.link = nextWebinar.link ?? 'https://www.hostgator.com/blog/resources/content-type/webinar/';
+			nextWebinar.link =
+				nextWebinar.link ??
+				'https://www.hostgator.com/blog/resources/content-type/webinar/';
 			nextWebinar.ctaText = nextWebinar.ctaText ?? 'Register Now';
 
 			return nextWebinar;

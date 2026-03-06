@@ -21,7 +21,7 @@ final class Admin {
 		/* Add Page to WordPress Admin Menu. */
 		\add_action( 'admin_menu', array( __CLASS__, 'page' ) );
 		/* Load Page Scripts & Styles. */
-		\add_action( 'load-toplevel_page_hostgator', array( __CLASS__, 'assets' ) );
+		\add_action( 'admin_enqueue_scripts', array( __CLASS__, 'assets' ) );
 		/* Load i18 files */
 		\add_action( 'init', array( __CLASS__, 'load_text_domain' ), 100 );
 		/* Add Links to WordPress Plugins list item. */
@@ -76,7 +76,7 @@ final class Admin {
 		$help     = array(
 			'route'    => 'hostgator#/help',
 			'title'    => __( 'Help Resources', 'wp-plugin-hostgator' ),
-			'priority' => 70,
+			'priority' => 100,
 		);
 
 		// apply filter to add module subnav items
@@ -89,6 +89,33 @@ final class Admin {
 			)
 		);
 
+		// Check post filtered subnav items and make some tweaks
+		// check subnav items and update 'Solutions' to 'Commerce' and update priority to 80
+		// update 'Marketplace' priority to 90
+		foreach ( $subnav as $key => $item ) {
+			if ( 'hostgator#/commerce' === $item['route'] ) {
+				$subnav[ $key ]['title']    = 'Commerce';
+				$subnav[ $key ]['priority'] = 80;
+			}
+			if ( 'hostgator#/marketplace' === $item['route'] ) {
+				$subnav[ $key ]['priority'] = 90;
+			}
+		}
+
+		// remove perforamnce and staging from subnav via array_filter
+		$subnav = array_filter(
+			$subnav,
+			function ( $item ) {
+				if ( 'hostgator#/settings/performance' === $item['route'] ) {
+					return false;
+				}
+				if ( 'hostgator#/settings/staging' === $item['route'] ) {
+					return false;
+				}
+				return true;
+			}
+		);
+
 		// sort subnav items by priority
 		usort(
 			$subnav,
@@ -97,6 +124,14 @@ final class Admin {
 					return 0;
 				}
 				return ( $a['priority'] < $b['priority'] ? -1 : 1 );
+			}
+		);
+
+		// remove Solutions link from subnav
+		$subnav = array_filter(
+			$subnav,
+			function ( $item ) {
+				return 'hostgator#/commerce' !== $item['route'];
 			}
 		);
 
@@ -262,6 +297,16 @@ final class Admin {
 
 		if ( version_compare( $wp_version, $plugin_data['RequiresWP'], '>=' ) ) {
 			echo '<div id="hwa-app" class="hgwpp hgwpp_app"></div>' . PHP_EOL;
+			echo '<div id="nfd-portal-apps" class="nfd-portal-apps">';
+			$portal_apps = array(
+				'nfd-coming-soon-portal',
+				'nfd-performance-portal',
+				'nfd-staging-portal',
+			);
+			foreach ( $portal_apps as $portal_app ) {
+				echo '<div id="' . esc_attr( $portal_app ) . '"></div>';
+			}
+			echo '</div>' . PHP_EOL;
 		} else {
 			// fallback messaging for outdated WordPress
 			echo '<div id="hwa-app" class="hgwpp hgwpp_app">' . PHP_EOL;
@@ -293,9 +338,20 @@ final class Admin {
 		}
 
 		\wp_register_script(
+			'nfd-portal-registry',
+			HOSTGATOR_BUILD_URL . '/portal-registry.js',
+			array( 'wp-components', 'wp-element' ),
+			$asset['version'],
+			true
+		);
+
+		\wp_register_script(
 			'hostgator-script',
 			HOSTGATOR_BUILD_URL . '/index.js',
-			array_merge( $asset['dependencies'], array( 'newfold-features', 'nfd-runtime' ) ),
+			array_merge(
+				$asset['dependencies'],
+				array( 'newfold-features', 'nfd-runtime', 'nfd-portal-registry' )
+			),
 			$asset['version'],
 			true
 		);
@@ -314,7 +370,7 @@ final class Admin {
 		);
 
 		$screen = get_current_screen();
-		if ( false !== strpos( $screen->id, 'hostgator' ) ) {
+		if ( $screen && false !== strpos( $screen->id, 'hostgator' ) ) {
 			\wp_enqueue_script( 'hostgator-script' );
 			\wp_enqueue_style( 'hostgator-style' );
 		}
@@ -380,8 +436,8 @@ final class Admin {
 	public static function actions( $actions ) {
 		return array_merge(
 			array(
-				'overview' => '<a href="' . \admin_url( 'admin.php?page=hostgator#/home' ) . '">' . __( 'Home', 'wp-plugin-hostgator' ) . '</a>',
-				'settings' => '<a href="' . \admin_url( 'admin.php?page=hostgator#/settings' ) . '">' . __( 'Settings', 'wp-plugin-hostgator' ) . '</a>',
+				'overview' => '<a href="' . \apply_filters( 'nfd_build_url', admin_url( 'admin.php?page=hostgator#/home' ) ) . '">' . __( 'Home', 'wp-plugin-hostgator' ) . '</a>',
+				'settings' => '<a href="' . \apply_filters( 'nfd_build_url', admin_url( 'admin.php?page=hostgator#/settings' ) ) . '">' . __( 'Settings', 'wp-plugin-hostgator' ) . '</a>',
 			),
 			$actions
 		);

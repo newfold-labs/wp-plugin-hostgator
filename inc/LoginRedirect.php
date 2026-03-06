@@ -145,7 +145,7 @@ class LoginRedirect {
 	public static function get_plugin_dashboard_url() {
 		$plugin_id = self::get_plugin_id();
 
-		return admin_url( 'admin.php?page=' . $plugin_id . '#/home' );
+		return apply_filters( 'nfd_build_url', admin_url( 'admin.php?page=' . $plugin_id . '#/home' ) );
 	}
 
 	/**

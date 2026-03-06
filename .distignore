@@ -5,11 +5,16 @@
 node_modules
 /src
 /tests
+.cache
+/wordpress
 
 # Files
 /.*
 cypress.config.js
+postcss.config.js
+tailwind.config.js
 webpack.config.js
+playwright.config.mjs
 
 # File Types
 /*.json
@@ -34,3 +39,12 @@ vendor/newfold-labs/*/*.scss
 vendor/newfold-labs/*/*.md
 vendor/newfold-labs/*/*.config.js
 vendor/newfold-labs/*/LICENSE
+vendor/newfold-labs/*/*.yml
+
+# Add wordpress/mcp-adapter rules vendor and vendor-prefixex
+wordpress/mcp-adapter/.*
+wordpress/mcp-adapter/*.lock
+wordpress/mcp-adapter/*.json
+wordpress/mcp-adapter/*.md
+wordpress/mcp-adapter/tests
+wordpress/mcp-adapter/docs

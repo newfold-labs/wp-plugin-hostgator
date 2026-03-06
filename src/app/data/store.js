@@ -38,20 +38,20 @@ export const AppStoreProvider = ( { children } ) => {
 		if ( false === booted ) {
 			hgApiFetchSettings()
 				.then( ( settings ) => {
-					setStore( { 
-						...store,
+					setStore( ( prev ) => ( {
+						...prev,
 						...window.HGWP,
 						...settings,
 						features: window.NewfoldFeatures.features,
 						toggleableFeatures: window.NewfoldFeatures.togglable,
-					} );
+					} ) );
 					setBooted( true );
 				} )
-				.catch( ( error ) => {
-					setError( error );
+				.catch( ( err ) => {
+					setError( err );
 				} );
 		}
-	}, [] );
+	}, [ booted ] );
 
 	return (
 		<AppStore.Provider value={ contextStore }>

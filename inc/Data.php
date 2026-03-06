@@ -22,12 +22,15 @@ final class Data {
 		global $nfd_module_container;
 
 		$runtime = array(
-			'plugin' => array(
+			'plugin'    => array(
 				'url'     => HOSTGATOR_BUILD_URL,
 				'version' => HOSTGATOR_PLUGIN_VERSION,
 				'assets'  => HOSTGATOR_PLUGIN_URL . 'assets/',
 				'brand'   => $nfd_module_container->plugin()->brand,
 				'region'  => $nfd_module_container->plugin()->region,
+			),
+			'wordpress' => array(
+				'isBlockTheme' => function_exists( 'wp_is_block_theme' ) ? wp_is_block_theme() : false,
 			),
 		);
 

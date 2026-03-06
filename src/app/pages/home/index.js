@@ -1,15 +1,34 @@
+import { useEffect } from '@wordpress/element';
 import { Container, Page, Title } from '@newfold/ui-component-library';
-import ComingSoon from '../settings/comingSoon';
-import FreePluginsSection from './freeAddonsSection';
 import SettingsSection from './settingsSection';
 import WebContentSection from './webContentSection';
 import WebHostingSection from './webHostingSection';
-import WelcomeSection from './welcomeSection';
 import WebinarsBanner from 'App/components/webinars-banner';
 
 const Home = () => {
+	useEffect( () => {
+		// run when mounts
+		const comingSoonPortal =
+			document.getElementById( 'coming-soon-portal' );
+
+		if ( comingSoonPortal ) {
+			window.NFDPortalRegistry.registerPortal(
+				'coming-soon',
+				comingSoonPortal
+			);
+		}
+
+		// run when unmounts
+		return () => {
+			window.NFDPortalRegistry.unregisterPortal( 'coming-soon' );
+		};
+	}, [] );
+
 	return (
-		<Page title="Settings" className={ 'hgwp-app-home-page hgwp-home xl:nfd-max-w-screen-lg' }>
+		<Page
+			title="Settings"
+			className={ 'hgwp-app-home-page hgwp-home xl:nfd-max-w-screen-lg' }
+		>
 			<div className="nfd-home__title-section">
 				<Title className="nfd-mb-1 nfd-font-bold">
 					{ __( 'Welcome to HostGator', 'wp-plugin-hostgator' ) }
@@ -21,21 +40,18 @@ const Home = () => {
 					) }
 				</span>
 			</div>
-			<WelcomeSection />
+
+			<Container className="nfd-max-w-full nfd-p-8">
+				<div id="coming-soon-portal" />
+			</Container>
+
 			<WebinarsBanner />
-			<FreePluginsSection />
-			
+
 			<Container className={ 'hgwp-app-home-container nfd-max-w-full' }>
 				<Container.Header
-					title={ __( 'More', 'wp-plugin-hostgator' ) }
+					title={ __( 'Quick Links', 'wp-plugin-hostgator' ) }
 					className={ 'hgwp-app-home-header display-none' }
 				/>
-				<Container.Block
-					separator={ true }
-					className={ 'hgwp-app-home-coming-soon' }
-				>
-					<ComingSoon />
-				</Container.Block>
 
 				<Container.Block
 					separator={ true }

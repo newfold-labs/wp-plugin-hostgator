@@ -58,6 +58,7 @@ const ComingSoon = () => {
 			{ comingSoon: ! comingSoon },
 			setError,
 			( response ) => {
+				void response;
 				setComingSoon( ! comingSoon );
 			}
 		);
