@@ -20,7 +20,7 @@ final class Admin {
 	public function __construct() {
 		/* Add Page to WordPress Admin Menu. */
 		\add_action( 'admin_menu', array( __CLASS__, 'page' ) );
-		/* Remove Solutions "My Solution" submenu from Plugins (we use Commerce in our app nav instead). */
+		/* Remove Solutions "My Solution" submenu from Plugins */
 		\add_action( 'admin_menu', array( __CLASS__, 'remove_solutions_plugins_submenu' ), 999 );
 		/* Load Page Scripts & Styles. */
 		\add_action( 'admin_enqueue_scripts', array( __CLASS__, 'assets' ) );
@@ -45,7 +45,7 @@ final class Admin {
 
 	/**
 	 * Remove the Solutions module's "My Solution" submenu from the Plugins admin menu.
-	 * HostGator exposes Solutions/Commerce via the plugin's own nav (hostgator#/commerce) instead.
+	 * HostGator Solutions/Commerce us not yet available.
 	 *
 	 * @return void
 	 */
