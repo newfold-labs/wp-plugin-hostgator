@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1772823547">
-  <project timestamp="1772823547">
+<coverage generated="1773261707">
+  <project timestamp="1773261707">
     <file name="/home/runner/work/wp-plugin-hostgator/wp-plugin-hostgator/inc/Admin.php">
       <class name="HostGator\Admin" namespace="global">
         <metrics complexity="38" methods="16" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="223" coveredstatements="48" elements="239" coveredelements="48"/>
