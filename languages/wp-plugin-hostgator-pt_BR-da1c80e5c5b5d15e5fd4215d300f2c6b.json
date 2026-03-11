@@ -1,7 +1,7 @@
 {
     "translation-revision-date": "2024-12-16 16:11+0000",
     "generator": "WP-CLI\/2.12.0",
-    "source": "build\/3.0.0\/index.js",
+    "source": "build\/3.0.1\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
@@ -102,9 +102,6 @@
             ],
             "Manage Settings": [
                 "Gerenciar Configura\u00e7\u00f5es"
-            ],
-            "Manage your site settings. You can ajdust automatic updates, comments, revisions and more.": [
-                "Gerencie as configura\u00e7\u00f5es do seu site. Voc\u00ea pode ajustar atualiza\u00e7\u00f5es autom\u00e1ticas, coment\u00e1rios, revis\u00f5es e muito mais."
             ],
             "Manage site performance and caching settings as well as clear the site cache.": [
                 "Gerencie o desempenho do site e as configura\u00e7\u00f5es de cache, bem como limpe o cache do site."
@@ -210,9 +207,6 @@
             ],
             "We are available 24\/7 to help answer questions and solve your problems.": [
                 "Estamos dispon\u00edveis 24 horas por dia, 7 dias por semana para ajudar a responder perguntas e resolver seus problemas."
-            ],
-            "More": [
-                "Mais"
             ],
             "Manage Domain": [
                 "Gerenciar dom\u00ednio"
@@ -383,6 +377,24 @@
                 ""
             ],
             "Customizer": [
+                ""
+            ],
+            "Commerce": [
+                ""
+            ],
+            "Premium tools available in eCommerce Add-Ons": [
+                ""
+            ],
+            "Discover exclusive features, designed to deliver unmatched value and elevate your online experience.": [
+                ""
+            ],
+            "Quick Links": [
+                ""
+            ],
+            "Manage your site settings. You can adjust automatic updates, comments, revisions and more.": [
+                ""
+            ],
+            "Customize the available features as you manage your website.": [
                 ""
             ]
         }
