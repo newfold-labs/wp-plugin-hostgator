@@ -31,8 +31,8 @@ msgstr "Plugin WordPress que integra un sitio web a WordPress con el panel de co
 
 #. Author of the plugin
 #: wp-plugin-hostgator.php
-#: inc/Admin.php:262
-#: inc/Admin.php:263
+#: inc/Admin.php:282
+#: inc/Admin.php:283
 #: build/3.0.0/index.js:1
 msgid "HostGator"
 msgstr "HostGator"
@@ -75,8 +75,8 @@ msgstr "Tu sitio actualmente muestra una %1$spróxima página%2$s. Una vez que e
 msgid "Preview the coming soon landing page"
 msgstr " Vista previa de la próxima página de inicio"
 
-#: inc/Admin.php:68
-#: inc/Admin.php:439
+#: inc/Admin.php:88
+#: inc/Admin.php:459
 #: build/3.0.0/index.js:1
 msgid "Home"
 msgstr "Pagina principal"
@@ -90,8 +90,8 @@ msgstr " Marketplace"
 msgid "Performance"
 msgstr "Rendimiento"
 
-#: inc/Admin.php:73
-#: inc/Admin.php:440
+#: inc/Admin.php:93
+#: inc/Admin.php:460
 #: build/3.0.0/index.js:1
 msgid "Settings"
 msgstr "Configuraciones"
@@ -100,19 +100,19 @@ msgstr "Configuraciones"
 msgid "Help"
 msgstr "Ayuda"
 
-#: inc/Admin.php:317
+#: inc/Admin.php:337
 msgid "Please update to a newer WordPress version."
 msgstr "Por favor actualiza a una versión más nueva de WordPress."
 
-#: inc/Admin.php:318
+#: inc/Admin.php:338
 msgid "There are new WordPress components which this plugin requires in order to render the interface."
 msgstr "Hay nuevos componentes de WordPress que este plugin requiere para renderizar la interfaz."
 
-#: inc/Admin.php:319
+#: inc/Admin.php:339
 msgid "Please update now"
 msgstr "Por favor actualiza ahora"
 
-#: inc/Admin.php:453
+#: inc/Admin.php:473
 msgid "Thank you for creating with <a href=\"https://wordpress.org/\">WordPress</a> and <a href=\"https://hostgator.com/about\">HostGator</a>."
 msgstr "Gracias por crear con <a href=\"https://es-mx.wordpress.org/\">WordPress</a> y <a href=\"https://hostgator.mx/\">HostGator</a>."
 
@@ -534,7 +534,7 @@ msgstr "Llámanos"
 msgid "Tweet"
 msgstr "Tweet"
 
-#: inc/Admin.php:78
+#: inc/Admin.php:98
 msgid "Help Resources"
 msgstr ""
 
