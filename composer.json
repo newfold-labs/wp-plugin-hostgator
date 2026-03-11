@@ -84,7 +84,7 @@
         "test:phpunit": "Run minimal PHPUnit tests (no WordPress)."
     },
     "require-dev": {
-        "johnpbloch/wordpress": "6.9.1",
+        "johnpbloch/wordpress": "6.9.3",
         "lucatume/wp-browser": ">=3.7.16",
         "newfold-labs/wp-php-standards": "^1.2.5",
         "phpunit/phpcov": ">=8.2.1",
