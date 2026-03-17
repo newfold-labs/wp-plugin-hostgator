@@ -1,0 +1,402 @@
+{
+    "translation-revision-date": "YEAR-MO-DA HO:MI+ZONE",
+    "generator": "WP-CLI\/2.12.0",
+    "source": "build\/3.0.1\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "it_IT",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "HostGator": [
+                ""
+            ],
+            "Home": [
+                ""
+            ],
+            "Settings": [
+                ""
+            ],
+            "Editor": [
+                ""
+            ],
+            "Hosting Panel": [
+                ""
+            ],
+            "Oh No, An Error!": [
+                ""
+            ],
+            "You found an error, please refresh the page and try again!": [
+                ""
+            ],
+            "If the error persists, please contact support.": [
+                ""
+            ],
+            "Error code:": [
+                ""
+            ],
+            "HostGator WordPress Plugin": [
+                ""
+            ],
+            "Phone": [
+                ""
+            ],
+            "Give us a ring at (866) 96-GATOR": [
+                ""
+            ],
+            "Call Us": [
+                ""
+            ],
+            "Chat": [
+                ""
+            ],
+            "Have a question? We're here 24\/7\/365": [
+                ""
+            ],
+            "Live Chat": [
+                ""
+            ],
+            "Tweet": [
+                ""
+            ],
+            "Tweet us at @hgsupport for support": [
+                ""
+            ],
+            "Tweet Us": [
+                ""
+            ],
+            "Knowledge Base": [
+                ""
+            ],
+            "Know what the pros know.": [
+                ""
+            ],
+            "Find Answers": [
+                ""
+            ],
+            "Blog": [
+                ""
+            ],
+            "Get our tips and in-depth articles.": [
+                ""
+            ],
+            "Learn Stuff": [
+                ""
+            ],
+            "Video Tutorials": [
+                ""
+            ],
+            "Step-by-step tutorials and additional guides.": [
+                ""
+            ],
+            "Watch Now": [
+                ""
+            ],
+            "There's nothing here!": [
+                ""
+            ],
+            "Manage WordPress": [
+                ""
+            ],
+            "Staging": [
+                ""
+            ],
+            "Performance": [
+                ""
+            ],
+            "Marketplace": [
+                ""
+            ],
+            "Help": [
+                ""
+            ],
+            "Admin": [
+                ""
+            ],
+            "Secret page to manage admin features and settings.": [
+                ""
+            ],
+            "We are available 24\/7 to help answer questions and solve your problems.": [
+                ""
+            ],
+            "Welcome to HostGator": [
+                ""
+            ],
+            "We're very excited to get started with you!": [
+                ""
+            ],
+            "Settings and Performance": [
+                ""
+            ],
+            "Customize & fine-tune your site.": [
+                ""
+            ],
+            "Manage Settings": [
+                ""
+            ],
+            "Manage site performance and caching settings as well as clear the site cache.": [
+                ""
+            ],
+            "Visit Marketplace": [
+                ""
+            ],
+            "Add site services, themes or plugins from the marketplace.": [
+                ""
+            ],
+            "Website Content": [
+                ""
+            ],
+            "Create, manage & sort your story.": [
+                ""
+            ],
+            "New Post": [
+                ""
+            ],
+            "Write a new blog post.": [
+                ""
+            ],
+            "Pages": [
+                ""
+            ],
+            "New Page": [
+                ""
+            ],
+            "Add fresh pages to your website.": [
+                ""
+            ],
+            "Categories": [
+                ""
+            ],
+            "Manage Categories": [
+                ""
+            ],
+            "Organize existing content into categories.": [
+                ""
+            ],
+            "Web Hosting": [
+                ""
+            ],
+            "Access & manage your HostGator account.": [
+                ""
+            ],
+            "Manage Sites": [
+                ""
+            ],
+            "Manage your site from the control panel. You can create backups, set security, and improve performance.": [
+                ""
+            ],
+            "Email": [
+                ""
+            ],
+            "Manage Email": [
+                ""
+            ],
+            "Create email accounts, compose, send, and receive your email from the control panel.": [
+                ""
+            ],
+            "Domains": [
+                ""
+            ],
+            "Manage Domain": [
+                ""
+            ],
+            "Find a Domain": [
+                ""
+            ],
+            "Find a new domain and assign it to your site or start a new site with a fresh domain.": [
+                ""
+            ],
+            "Get Help": [
+                ""
+            ],
+            "24\/7\/365 support. We work when you work.": [
+                ""
+            ],
+            "Explore our featured collection of tools and services.": [
+                ""
+            ],
+            "Oops, there was an error loading the marketplace, please try again later.": [
+                ""
+            ],
+            "Sorry, no marketplace items. Please, try again later.": [
+                ""
+            ],
+            "Load More": [
+                ""
+            ],
+            "Oops! Something Went Wrong": [
+                ""
+            ],
+            "An error occurred while loading the content. Please try again later.": [
+                ""
+            ],
+            "Manage All Updates": [
+                ""
+            ],
+            "WordPress Core": [
+                ""
+            ],
+            "Plugins": [
+                ""
+            ],
+            "Themes": [
+                ""
+            ],
+            "Automatic Updates": [
+                ""
+            ],
+            "Keeping automatic updates on ensures timely security fixes and the latest features.": [
+                ""
+            ],
+            "Oops! Something went wrong. Please try again.": [
+                ""
+            ],
+            "Site Status": [
+                ""
+            ],
+            "Not Live": [
+                ""
+            ],
+            "Live": [
+                ""
+            ],
+            "Coming Soon page": [
+                ""
+            ],
+            "Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen.": [
+                ""
+            ],
+            "Your website is currently displaying a \"Coming Soon\" page.": [
+                ""
+            ],
+            "Disabled old post comments": [
+                ""
+            ],
+            "Enabled old post comments": [
+                ""
+            ],
+            "Comments on old posts are disabled.": [
+                ""
+            ],
+            "Comments are allowed on old posts.": [
+                ""
+            ],
+            "Disable comments for older posts": [
+                ""
+            ],
+            "Comments setting saved": [
+                ""
+            ],
+            "Comments on posts are disabled after %s day.": [
+                ""
+            ],
+            "Close comments after %s day.": [
+                ""
+            ],
+            "Comments setting saved.": [
+                ""
+            ],
+            "Posts will display %s comment at a time.": [
+                ""
+            ],
+            "Display %s comments per page.": [
+                ""
+            ],
+            "Comments": [
+                ""
+            ],
+            "Comments allow visitors to provide feedback and respond to your posts or pages.": [
+                ""
+            ],
+            "Post revision setting saved": [
+                ""
+            ],
+            "Posts will save %s revision.": [
+                ""
+            ],
+            "Number of revisions posts can save": [
+                ""
+            ],
+            "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take %s step back.": [
+                ""
+            ],
+            "Trash setting saved": [
+                ""
+            ],
+            "The trash will automatically empty every %s week.": [
+                ""
+            ],
+            "Trash emptying frequency": [
+                ""
+            ],
+            "Content Options": [
+                ""
+            ],
+            "Controls for content revisions and how often to empty the trash.": [
+                ""
+            ],
+            "The Help Center provides guided, step-by-step assistance as you build your site.": [
+                ""
+            ],
+            "Sorry, that is not allowed.": [
+                ""
+            ],
+            "This feature cannot currently be modified.": [
+                ""
+            ],
+            "Optimize your website my managing cache, security and performance settings.": [
+                ""
+            ],
+            "Optimize your website by managing cache and performance settings": [
+                ""
+            ],
+            "General Settings": [
+                ""
+            ],
+            "This is where you can manage common settings for your website.": [
+                ""
+            ],
+            "Features": [
+                ""
+            ],
+            "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready.": [
+                ""
+            ],
+            "The performance feature provides improvements to loads faster for visitors including cache settings.": [
+                ""
+            ],
+            "The staging feature provides a way to copy a site to test new updates, features or content.": [
+                ""
+            ],
+            "WonderBlocks provides a library of customizable block patterns and page templates.": [
+                ""
+            ],
+            "Site Editor": [
+                ""
+            ],
+            "Customizer": [
+                ""
+            ],
+            "Commerce": [
+                ""
+            ],
+            "Premium tools available in eCommerce Add-Ons": [
+                ""
+            ],
+            "Discover exclusive features, designed to deliver unmatched value and elevate your online experience.": [
+                ""
+            ],
+            "Quick Links": [
+                ""
+            ],
+            "Manage your site settings. You can adjust automatic updates, comments, revisions and more.": [
+                ""
+            ],
+            "Customize the available features as you manage your website.": [
+                ""
+            ]
+        }
+    }
+}
