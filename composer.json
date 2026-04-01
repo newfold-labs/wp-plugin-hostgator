@@ -94,7 +94,7 @@
         "yoast/phpunit-polyfills": "^4.0.0"
     },
     "require": {
-        "newfold-labs/wp-module-activation": "^1.0.13",
+        "newfold-labs/wp-module-activation": "^1.0.14",
         "newfold-labs/wp-module-atomic": "^1.4.1",
         "newfold-labs/wp-module-coming-soon": "^2.2.7",
         "newfold-labs/wp-module-context": "^1.0.3",
