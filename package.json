@@ -41,7 +41,7 @@
         "@automattic/babel-plugin-preserve-i18n": "^1.0.0",
         "@tailwindcss/forms": "^0.5.11",
         "@axe-core/playwright": "^4.11.1",
-        "@playwright/test": "^1.58.2",
+        "@playwright/test": "^1.59.0",
         "@wordpress/e2e-test-utils-playwright": "^1.42.0",
         "@wordpress/env": "^10.39.0",
         "@wordpress/scripts": "^31.6.0",
