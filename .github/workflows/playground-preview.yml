@@ -215,7 +215,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deploy
-        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0
 
       - name: Comment Playground link on PR
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
