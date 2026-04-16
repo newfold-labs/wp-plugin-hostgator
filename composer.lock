@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "160fd6224d1b54e29f003c8aebe7c31b",
+    "content-hash": "aac25649ae3a3a6cef04245350985754",
     "packages": [
         {
             "name": "colinmollenhour/credis",
@@ -2492,16 +2492,16 @@
         },
         {
             "name": "newfold-labs/wp-module-performance",
-            "version": "3.7.7",
+            "version": "3.7.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-performance.git",
-                "reference": "7faf943174b4ff6359e7060a97991aede67c816b"
+                "reference": "ef590de7cf145cd68d12ca5cc3745bc4a9f9af46"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-performance/zipball/7faf943174b4ff6359e7060a97991aede67c816b",
-                "reference": "7faf943174b4ff6359e7060a97991aede67c816b",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-performance/zipball/ef590de7cf145cd68d12ca5cc3745bc4a9f9af46",
+                "reference": "ef590de7cf145cd68d12ca5cc3745bc4a9f9af46",
                 "shasum": ""
             },
             "require": {
@@ -2568,7 +2568,7 @@
                     "vendor/bin/wp i18n update-po ./languages/wp-module-performance.pot ./languages"
                 ],
                 "i18n-pot": [
-                    "vendor/bin/wp i18n make-pot . ./languages/wp-module-performance.pot --domain=wp-module-performance --headers='{\"Report-Msgid-Bugs-To\":\"https://github.com/newfold-labs/wp-module-performance/issues\",\"POT-Creation-Date\":null}' --exclude=src,tests,assets,wordpress --include=build/*.min.js"
+                    "vendor/bin/wp i18n make-pot . ./languages/wp-module-performance.pot --domain=wp-module-performance --headers='{\"Report-Msgid-Bugs-To\":\"https://github.com/newfold-labs/wp-module-performance/issues\",\"POT-Creation-Date\":null}' --exclude=src,tests,assets,wordpress --include=includes/*,build/*.min.js"
                 ],
                 "test": [
                     "phpunit --bootstrap tests/phpunit/bootstrap.php",
@@ -2591,10 +2591,10 @@
             ],
             "description": "A module for managing caching functionality.",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-performance/tree/3.7.7",
+                "source": "https://github.com/newfold-labs/wp-module-performance/tree/3.7.8",
                 "issues": "https://github.com/newfold-labs/wp-module-performance/issues"
             },
-            "time": "2026-04-01T22:27:26+00:00"
+            "time": "2026-04-03T12:32:54+00:00"
         },
         {
             "name": "newfold-labs/wp-module-pls",
