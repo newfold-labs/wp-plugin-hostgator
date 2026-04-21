@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aac25649ae3a3a6cef04245350985754",
+    "content-hash": "99717febaf9f587757fa8aa222f29359",
     "packages": [
         {
             "name": "colinmollenhour/credis",
@@ -2812,16 +2812,16 @@
         },
         {
             "name": "newfold-labs/wp-module-solutions",
-            "version": "2.9.1",
+            "version": "2.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-solutions.git",
-                "reference": "cfd1017b250616a84623e14c318b36d0fb68f313"
+                "reference": "fe57759c3e0d4cd057ca1351c1d4c4251be21a57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-solutions/zipball/cfd1017b250616a84623e14c318b36d0fb68f313",
-                "reference": "cfd1017b250616a84623e14c318b36d0fb68f313",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-solutions/zipball/fe57759c3e0d4cd057ca1351c1d4c4251be21a57",
+                "reference": "fe57759c3e0d4cd057ca1351c1d4c4251be21a57",
                 "shasum": ""
             },
             "require": {
@@ -2834,7 +2834,7 @@
                 "lucatume/wp-browser": "*",
                 "newfold-labs/wp-php-standards": "^1.2.5",
                 "phpunit/phpcov": "*",
-                "wp-cli/i18n-command": "^2.6.6"
+                "wp-cli/i18n-command": "^2.7.0"
             },
             "type": "library",
             "autoload": {
@@ -2855,14 +2855,11 @@
                 "i18n-po": [
                     "vendor/bin/wp i18n update-po ./languages/wp-module-solutions.pot ./languages"
                 ],
-                "i18n-mo": [
-                    "vendor/bin/wp i18n make-mo ./languages"
-                ],
                 "i18n-php": [
-                    "vendor/bin/wp i18n make-php ./languages"
+                    "vendor/bin/wp i18n make-php ./languages --pretty-print"
                 ],
                 "i18n-json": [
-                    "rm -f languages/*.json && vendor/bin/wp i18n make-json ./languages --no-purge --pretty-print"
+                    "rm -f languages/*.json && vendor/bin/wp i18n make-json ./languages --pretty-print"
                 ],
                 "i18n": [
                     "@i18n-pot",
@@ -2899,10 +2896,10 @@
             ],
             "description": "A Newfold module that handles integration of WordPress Solutions Addon packages (content creator/ service / ecommerce) for BlueHost & HostGator customers",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-solutions/tree/2.9.1",
+                "source": "https://github.com/newfold-labs/wp-module-solutions/tree/2.9.2",
                 "issues": "https://github.com/newfold-labs/wp-module-solutions/issues"
             },
-            "time": "2026-02-11T22:25:55+00:00"
+            "time": "2026-04-20T18:51:34+00:00"
         },
         {
             "name": "newfold-labs/wp-module-sso",
