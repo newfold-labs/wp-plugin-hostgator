@@ -1,13 +1,13 @@
 {
     "translation-revision-date": "2025-01-10 08:42+0000",
     "generator": "WP-CLI\/2.12.0",
-    "source": "build\/3.0.1\/index.js",
+    "source": "build\/3.0.2\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
             "": {
                 "domain": "messages",
-                "lang": "es_ES",
+                "lang": "es_MX",
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
             "HostGator": [
