@@ -96,7 +96,7 @@
     "require": {
         "newfold-labs/wp-module-activation": "^1.0.14",
         "newfold-labs/wp-module-atomic": "^1.4.1",
-        "newfold-labs/wp-module-coming-soon": "^2.2.7",
+        "newfold-labs/wp-module-coming-soon": "^2.2.8",
         "newfold-labs/wp-module-context": "^1.0.3",
         "newfold-labs/wp-module-data": "^2.9.3",
         "newfold-labs/wp-module-deactivation": "^1.6.1",
