@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5a53844a73b5962aa4f6d8fb1b8a380e",
+    "content-hash": "8990d90dfac80163c8098ff7e0f776a6",
     "packages": [
         {
             "name": "colinmollenhour/credis",
@@ -1974,27 +1974,27 @@
         },
         {
             "name": "newfold-labs/wp-module-marketplace",
-            "version": "3.2.1",
+            "version": "3.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-marketplace.git",
-                "reference": "06837bb552e36f025ea26ac45075707faf0b6ff3"
+                "reference": "4d5dc5e7e124e6e0e86cc8522c1f2b6917ef965f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-marketplace/zipball/06837bb552e36f025ea26ac45075707faf0b6ff3",
-                "reference": "06837bb552e36f025ea26ac45075707faf0b6ff3",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-marketplace/zipball/4d5dc5e7e124e6e0e86cc8522c1f2b6917ef965f",
+                "reference": "4d5dc5e7e124e6e0e86cc8522c1f2b6917ef965f",
                 "shasum": ""
             },
             "require": {
-                "newfold-labs/wp-module-data": "^2.9.2"
+                "newfold-labs/wp-module-data": "^2.9.3"
             },
             "require-dev": {
                 "johnpbloch/wordpress": "@stable",
                 "lucatume/wp-browser": "*",
                 "newfold-labs/wp-php-standards": "^1.2",
                 "phpunit/phpcov": "*",
-                "wp-cli/i18n-command": "^2.6.6"
+                "wp-cli/i18n-command": "^2.7.0"
             },
             "type": "library",
             "autoload": {
@@ -2012,7 +2012,6 @@
                 "i18n": [
                     "@i18n-pot",
                     "@i18n-po",
-                    "@i18n-mo",
                     "@i18n-php",
                     "@i18n-json"
                 ],
@@ -2025,13 +2024,10 @@
                     "@i18n-php"
                 ],
                 "i18n-json": [
-                    "rm -f languages/*.json && vendor/bin/wp i18n make-json ./languages --no-purge --pretty-print"
-                ],
-                "i18n-mo": [
-                    "vendor/bin/wp i18n make-mo ./languages"
+                    "rm -f languages/*.json && vendor/bin/wp i18n make-json ./languages --pretty-print"
                 ],
                 "i18n-php": [
-                    "vendor/bin/wp i18n make-php ./languages"
+                    "vendor/bin/wp i18n make-php ./languages --pretty-print"
                 ],
                 "i18n-po": [
                     "vendor/bin/wp i18n update-po ./languages/wp-module-marketplace.pot ./languages"
@@ -2066,10 +2062,10 @@
             ],
             "description": "A module for rendering product data and interacting with the Hiive marketplace API.",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-marketplace/tree/3.2.1",
+                "source": "https://github.com/newfold-labs/wp-module-marketplace/tree/3.2.3",
                 "issues": "https://github.com/newfold-labs/wp-module-marketplace/issues"
             },
-            "time": "2026-02-06T15:36:33+00:00"
+            "time": "2026-04-29T17:09:18+00:00"
         },
         {
             "name": "newfold-labs/wp-module-migration",
