@@ -41,7 +41,16 @@ if (!existsSync(projectsFile)) {
 }
 
 // Load projects from generated file
-const projects = JSON.parse(readFileSync(projectsFile, 'utf8'));
+let projects = JSON.parse(readFileSync(projectsFile, 'utf8'));
+// Merge per-project overrides from module (e.g. tests/playwright/project-overrides.json)
+projects = projects.map((p) => {
+  const overridesPath = resolve(__dirname, p.testDir, '..', 'project-overrides.json');
+  if (existsSync(overridesPath)) {
+    const overrides = JSON.parse(readFileSync(overridesPath, 'utf8'));
+    return { ...p, ...overrides };
+  }
+  return p;
+});
 
 // Set environment variable for plugin root
 process.env.PLUGIN_DIR = __dirname;
@@ -62,28 +71,35 @@ export default defineConfig({
     ...devices['Desktop Chrome'],
     headless: true,
     viewport: { width: 1200, height: 800 },
-    baseURL: `http://localhost:${_port}`,
+    baseURL: `http://localhost:${_port}`, // Use port from wp-env.json
     ignoreHTTPSErrors: true,
+    // WordPress-optimized settings
     locale: 'en-US',
     contextOptions: {
-      reducedMotion: 'reduce',
-      strictSelectors: true,
+      reducedMotion: 'reduce', // Accessibility testing
+      strictSelectors: true, // Better selector reliability
     },
+    // Debugging features
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
   },
   webServer: process.env.CI ? undefined : {
     command: 'npx wp-env start',
-    port: _port,
+    port: _port, // Use port from wp-env.json
     reuseExistingServer: true,
-    timeout: 120 * 1000,
+    timeout: 120 * 1000, // 2 minutes
   },
-  timeout: 30 * 1000,
+  timeout: 30 * 1000, // 30 seconds
   expect: {
-    timeout: 10 * 1000,
+    timeout: 10 * 1000, // 10 seconds
+    toHaveScreenshot: {
+      maxDiffPixels: 100,
+      pathTemplate: '{testDir}/screenshots{/projectName}/{testFilePath}/{arg}{ext}',
+      fullPage: true,
+    },
   },
-  retries: process.env.CI ? 1 : 1,
+  retries: process.env.CI ? 0 : 1, // 0 retries on CI, 1 for local
   workers: process.env.CI ? 1 : 1,
   outputDir: 'tests/playwright/test-results',
   reporter: [

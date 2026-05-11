@@ -86,7 +86,8 @@
         "storybook:build": "build-storybook -c ./storybook -o ./.docs",
         "storybook:dev": "start-storybook -c ./storybook",
         "test:e2e": "npm run test:playwright",
-        "test:playwright": "npx playwright test",
+        "playwright:prune-vendor-dupes": "node .github/scripts/prune-vendor-playwright-dupes.mjs",
+        "test:playwright": "npm run playwright:prune-vendor-dupes && npx playwright test",
         "test:playwright:update-projects": "node .github/scripts/generate-playwright-projects.mjs",
         "test:unit": "wp-scripts test-unit-js"
     }
