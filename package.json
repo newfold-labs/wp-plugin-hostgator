@@ -38,6 +38,8 @@
         "uuid": "^14.0.0"
     },
     "devDependencies": {
+        "@wordpress/eslint-plugin": "^25.1.0",
+        "eslint": "^10.0.0",
         "@automattic/babel-plugin-preserve-i18n": "^1.0.0",
         "@tailwindcss/forms": "^0.5.11",
         "@axe-core/playwright": "^4.11.3",
