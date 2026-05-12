@@ -202,6 +202,7 @@ require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/SettingsController.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/rest-api.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/settings.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/updates.php';
+require_once HOSTGATOR_PLUGIN_DIR . '/inc/widgets/bootstrap.php';
 require_once HOSTGATOR_PLUGIN_DIR . '/inc/Helpers.php';
 require_once HOSTGATOR_PLUGIN_DIR . '/inc/Brand.php';
 require_once HOSTGATOR_PLUGIN_DIR . '/inc/Filters.php';
