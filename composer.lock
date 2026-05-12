@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "474cceaea565631f5ad11ceb7aba33c3",
+    "content-hash": "0afe348392fc976646365e5e3c60632c",
     "packages": [
         {
             "name": "colinmollenhour/credis",
@@ -3009,16 +3009,16 @@
         },
         {
             "name": "newfold-labs/wp-module-staging",
-            "version": "2.7.3",
+            "version": "2.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-staging.git",
-                "reference": "11d2b525c8607e239c970dc776d3c59b98e911b7"
+                "reference": "fd46db8136749689d63ba557c566ac508e5ca413"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-staging/zipball/11d2b525c8607e239c970dc776d3c59b98e911b7",
-                "reference": "11d2b525c8607e239c970dc776d3c59b98e911b7",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-staging/zipball/fd46db8136749689d63ba557c566ac508e5ca413",
+                "reference": "fd46db8136749689d63ba557c566ac508e5ca413",
                 "shasum": ""
             },
             "require": {
@@ -3031,7 +3031,7 @@
                 "newfold-labs/wp-module-loader": "^1.1",
                 "newfold-labs/wp-php-standards": "^1.2.5",
                 "phpunit/phpcov": "*",
-                "wp-cli/i18n-command": "^2.6.6"
+                "wp-cli/i18n-command": "^2.7.0"
             },
             "type": "library",
             "autoload": {
@@ -3055,19 +3055,15 @@
                 "i18n-po": [
                     "vendor/bin/wp i18n update-po ./languages/wp-module-staging.pot ./languages"
                 ],
-                "i18n-mo": [
-                    "vendor/bin/wp i18n make-mo ./languages"
-                ],
                 "i18n-php": [
-                    "vendor/bin/wp i18n make-php ./languages"
+                    "vendor/bin/wp i18n make-php ./languages --pretty-print"
                 ],
                 "i18n-json": [
-                    "rm -f languages/*.json && vendor/bin/wp i18n make-json ./languages --no-purge --pretty-print"
+                    "rm -f languages/*.json && vendor/bin/wp i18n make-json ./languages --pretty-print"
                 ],
                 "i18n": [
                     "@i18n-pot",
                     "@i18n-po",
-                    "@i18n-mo",
                     "@i18n-php",
                     "@i18n-json"
                 ],
@@ -3097,10 +3093,10 @@
             ],
             "description": "Newfold module for staging functionality in brand plugins",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-staging/tree/2.7.3",
+                "source": "https://github.com/newfold-labs/wp-module-staging/tree/2.7.4",
                 "issues": "https://github.com/newfold-labs/wp-module-staging/issues"
             },
-            "time": "2026-02-11T21:10:17+00:00"
+            "time": "2026-04-22T21:17:23+00:00"
         },
         {
             "name": "newfold-labs/wp-module-survey",
