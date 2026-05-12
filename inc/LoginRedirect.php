@@ -87,15 +87,18 @@ class LoginRedirect {
 	 */
 	public static function on_login_redirect( $redirect_to, $requested_redirect_to, $user ) {
 
-		if ( self::is_user( $user ) && self::should_redirect() ) {
-			// If no redirect is defined and the user is an administrator, redirect to the Plugin dashboard.
-			if ( ( empty( $requested_redirect_to ) || admin_url( '/' ) === $requested_redirect_to ) && self::is_administrator( $user ) ) {
-				return self::get_plugin_dashboard_url();
-			}
+		if ( ! self::is_user( $user ) ) {
+			return $redirect_to;
+		}
 
-			// If the user isn't an admin and the redirect is to the Plugin dashboard, point them to the WP dashboard instead.
-			if ( ! self::is_administrator( $user ) && self::is_plugin_redirect( $requested_redirect_to ) ) {
-				return admin_url( '/' );
+		// Non-admins must not land on the plugin dashboard via login redirect (use $user from the hook, not only current_user_can).
+		if ( ! self::is_administrator( $user ) && self::is_plugin_redirect( $requested_redirect_to ) ) {
+			return admin_url( '/' );
+		}
+
+		if ( self::is_administrator( $user ) && self::$container->get( 'capabilities' )->get( 'abTestPluginHome' ) ) {
+			if ( empty( $requested_redirect_to ) || admin_url( '/' ) === $requested_redirect_to ) {
+				return self::get_plugin_dashboard_url();
 			}
 		}
 
