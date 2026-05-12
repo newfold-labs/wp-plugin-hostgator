@@ -37,9 +37,13 @@ test.describe('wp-login.php — Login with HostGator button', () => {
     expect(style).toMatch(/--nfd-sso-hosting-login-accent:\s*#[0-9a-f]{3,8}/i);
   });
 
-  test('renders the brand grid-mark SVG inside the button', async ({ page }) => {
-    await expect(page.locator(ICON)).toHaveCount(1);
-    await expect(page.locator(`${ICON} rect`)).toHaveCount(9);
+  test('renders an inline brand SVG inside the button', async ({ page }) => {
+    const svg = page.locator(ICON);
+    await expect(svg).toHaveCount(1);
+    // Bluehost uses a 3×3 grid of rects; HostGator uses the snappy mark (path).
+    const marks = svg.locator('path, rect');
+    await expect(marks.first()).toBeVisible();
+    await expect(marks).not.toHaveCount(0);
   });
 
   test('sits below the submit row in the visual flex order', async ({ page }) => {
