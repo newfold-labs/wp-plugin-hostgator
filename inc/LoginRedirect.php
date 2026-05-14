@@ -5,7 +5,7 @@ namespace HostGator;
 /**
  * Class LoginRedirect
  *
- * @package HostHostGatorWordPressPluginGator
+ * @package HostGatorWordPressPlugin
  */
 class LoginRedirect {
 
@@ -31,13 +31,33 @@ class LoginRedirect {
 	}
 
 	/**
+	 * Whether abTestPluginHome is enabled via the module container capabilities service.
+	 *
+	 * Avoids fatals when the container or capabilities binding is unavailable (tests, partial bootstrap).
+	 *
+	 * @return bool
+	 */
+	private static function is_ab_test_plugin_home_enabled() {
+		if ( ! self::$container || ! is_object( self::$container ) || ! method_exists( self::$container, 'get' ) ) {
+			return false;
+		}
+
+		$capabilities = self::$container->get( 'capabilities' );
+		if ( ! $capabilities || ! is_object( $capabilities ) || ! method_exists( $capabilities, 'get' ) ) {
+			return false;
+		}
+
+		return (bool) $capabilities->get( 'abTestPluginHome' );
+	}
+
+	/**
 	 * Check if we should redirect.
 	 * Redirect only if abTestPluginHome capability is true
 	 *
 	 * @return boolean
 	 */
 	public static function should_redirect() {
-		return current_user_can( 'manage_options' ) && self::$container->get( 'capabilities' )->get( 'abTestPluginHome' );
+		return current_user_can( 'manage_options' ) && self::is_ab_test_plugin_home_enabled();
 	}
 
 	/**
@@ -96,7 +116,7 @@ class LoginRedirect {
 			return admin_url( '/' );
 		}
 
-		if ( self::is_administrator( $user ) && self::$container->get( 'capabilities' )->get( 'abTestPluginHome' ) ) {
+		if ( self::is_administrator( $user ) && self::is_ab_test_plugin_home_enabled() ) {
 			if ( empty( $requested_redirect_to ) || admin_url( '/' ) === $requested_redirect_to ) {
 				return self::get_plugin_dashboard_url();
 			}

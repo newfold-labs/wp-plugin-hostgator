@@ -190,25 +190,25 @@ $site_edit_url = buildLink(
 			<?php esc_html_e( 'Edit Site', 'wp-plugin-hostgator' ); ?>
 		</a>
 		<?php if ( $isComingSoon ) : ?>
-			<a
+			<button
+				type="button"
 				class="nfd-button nfd-button--upsell nfd-grow"
 				data-test-id="nfd-coming-soon-disable"
-				href="#"
 				id="nfd-coming-soon-disable"
 			>
 				<?php echo wp_kses( $svgRocket, KSES_ALLOWED_SVG_TAGS ); ?>
 				<?php esc_html_e( 'Launch Site', 'wp-plugin-hostgator' ); ?>
-			</a>
+			</button>
 		<?php else : ?>
-			<a
+			<button
+				type="button"
 				class="nfd-button nfd-button--secondary nfd-grow nfd-text-balance"
 				data-test-id="nfd-coming-soon-enable"
-				href="#"
 				id="nfd-coming-soon-enable"
 			>
 				<?php echo wp_kses( $svgWrench, KSES_ALLOWED_SVG_TAGS ); ?>
 				<?php esc_html_e( 'Enable Coming Soon', 'wp-plugin-hostgator' ); ?>
-			</a>
+			</button>
 		<?php endif; ?>
 		</div>
 </div>
@@ -218,11 +218,11 @@ function initSitePreviewButtonHandlers(){
 	const enable_button = document.getElementById( 'nfd-coming-soon-enable' );
 	if ( enable_button ) {
 		enable_button.addEventListener( 'click', function( e ) {
-			e.preventDefault();
-			if ( e.target.hasAttribute( 'disabled' ) ) {
+			const btn = e.currentTarget;
+			if ( btn.hasAttribute( 'disabled' ) ) {
 				return;
 			}
-			e.target.setAttribute( 'disabled', '' );
+			btn.setAttribute( 'disabled', '' );
 			window.NewfoldRuntime.comingSoon.enable().then( () => {
 				window.location.reload();
 			});
@@ -232,11 +232,11 @@ function initSitePreviewButtonHandlers(){
 	const disable_button = document.getElementById( 'nfd-coming-soon-disable' );
 	if ( disable_button ) {
 		disable_button.addEventListener( 'click', function( e ) {
-			e.preventDefault();
-			if ( e.target.hasAttribute( 'disabled' ) ) {
+			const btn = e.currentTarget;
+			if ( btn.hasAttribute( 'disabled' ) ) {
 				return;
 			}
-			e.target.setAttribute( 'disabled', '' );
+			btn.setAttribute( 'disabled', '' );
 			window.NewfoldRuntime.comingSoon.disable().then( () => {
 				window.location.reload();
 			});

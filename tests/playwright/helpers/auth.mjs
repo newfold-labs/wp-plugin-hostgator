@@ -139,7 +139,7 @@ async function navigateToAdminPage(page, adminPage, options = {}) {
     // Session expired, login again
     await loginToWordPress(page, { ...options, force: true });
     // Retry navigation
-    await page.goto(`/${adminPage}`, { waitUntil: 'domcontentloaded' });
+    await page.goto(`/wp-admin/${adminPage}`, { waitUntil: 'domcontentloaded' });
   }
   
   // Create WordPress utilities for additional functionality

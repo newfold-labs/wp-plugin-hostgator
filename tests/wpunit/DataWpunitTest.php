@@ -11,30 +11,31 @@ class DataWpunitTest extends \lucatume\WPBrowser\TestCase\WPTestCase {
 
 	protected function setUp(): void {
 		parent::setUp();
+		require_once ABSPATH . 'wp-admin/includes/plugin.php';
 		require_once codecept_root_dir( 'inc/Data.php' );
 	}
 
-	/** @covers \HostGator\Data::get_entitlement_by_id */
-	public function test_get_entitlement_by_id_returns_false_when_no_entitlements(): void {
-		$this->assertFalse( \HostGator\Data::get_entitlement_by_id( array( 'solution' => 'foo' ), 'WonderCart' ) );
+	/** @covers \HostGator\Data::get_entitlement_by_name */
+	public function test_get_entitlement_by_name_returns_false_when_no_entitlements(): void {
+		$this->assertFalse( \HostGator\Data::get_entitlement_by_name( array( 'solution' => 'foo' ), 'WonderCart' ) );
 	}
 
-	/** @covers \HostGator\Data::get_entitlement_by_id */
-	public function test_get_entitlement_by_id_returns_false_when_entitlements_not_array(): void {
-		$this->assertFalse( \HostGator\Data::get_entitlement_by_id( array( 'entitlements' => 'invalid' ), 'WonderCart' ) );
+	/** @covers \HostGator\Data::get_entitlement_by_name */
+	public function test_get_entitlement_by_name_returns_false_when_entitlements_not_array(): void {
+		$this->assertFalse( \HostGator\Data::get_entitlement_by_name( array( 'entitlements' => 'invalid' ), 'WonderCart' ) );
 	}
 
-	/** @covers \HostGator\Data::get_entitlement_by_id */
-	public function test_get_entitlement_by_id_returns_entitlement_by_name(): void {
+	/** @covers \HostGator\Data::get_entitlement_by_name */
+	public function test_get_entitlement_by_name_returns_entitlement_when_found(): void {
 		$entitlement = array( 'name' => 'WonderCart', 'id' => '123' );
 		$data        = array( 'entitlements' => array( array( 'name' => 'Other' ), $entitlement ) );
-		$this->assertEquals( $entitlement, \HostGator\Data::get_entitlement_by_id( $data, 'WonderCart' ) );
+		$this->assertEquals( $entitlement, \HostGator\Data::get_entitlement_by_name( $data, 'WonderCart' ) );
 	}
 
-	/** @covers \HostGator\Data::get_entitlement_by_id */
-	public function test_get_entitlement_by_id_returns_false_when_name_not_found(): void {
+	/** @covers \HostGator\Data::get_entitlement_by_name */
+	public function test_get_entitlement_by_name_returns_false_when_name_not_found(): void {
 		$data = array( 'entitlements' => array( array( 'name' => 'WonderCart' ) ) );
-		$this->assertFalse( \HostGator\Data::get_entitlement_by_id( $data, 'Sales & Promotions' ) );
+		$this->assertFalse( \HostGator\Data::get_entitlement_by_name( $data, 'Sales & Promotions' ) );
 	}
 
 	/** @covers \HostGator\Data::get_site_type */

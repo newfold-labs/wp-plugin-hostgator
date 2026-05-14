@@ -116,6 +116,40 @@ class LoginRedirectWpunitTest extends \lucatume\WPBrowser\TestCase\WPTestCase {
 		$this->assertStringContainsString( '#/home', $defaults['redirect'] );
 	}
 
+	/** @covers \HostGator\LoginRedirect::should_redirect */
+	public function test_should_redirect_returns_false_when_container_is_null(): void {
+		$saved = LoginRedirect::$container;
+		$admin = $this->factory()->user->create_and_get( array( 'role' => 'administrator' ) );
+		wp_set_current_user( $admin->ID );
+
+		LoginRedirect::$container = null;
+		$this->assertFalse( LoginRedirect::should_redirect() );
+
+		LoginRedirect::$container = $saved;
+	}
+
+	/** @covers \HostGator\LoginRedirect::should_redirect */
+	public function test_should_redirect_returns_false_when_capabilities_service_missing(): void {
+		$saved                    = LoginRedirect::$container;
+		LoginRedirect::$container = new class() {
+			public function plugin() {
+				return new class() {
+					/** @var string */
+					public $id = 'hostgator';
+				};
+			}
+
+			public function get( $key ) {
+				return null;
+			}
+		};
+		$admin = $this->factory()->user->create_and_get( array( 'role' => 'administrator' ) );
+		wp_set_current_user( $admin->ID );
+		$this->assertFalse( LoginRedirect::should_redirect() );
+
+		LoginRedirect::$container = $saved;
+	}
+
 	/** @covers \HostGator\LoginRedirect::on_login_redirect */
 	public function test_on_login_redirect_returns_plugin_dashboard_for_admin_when_empty_requested(): void {
 		$admin = $this->factory()->user->create_and_get( array( 'role' => 'administrator' ) );

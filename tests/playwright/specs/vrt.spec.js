@@ -33,7 +33,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 /* Skipping for now until we get tests fully migrated to Playwright */
-test.skip('VRT', () => {
+test.describe.skip('VRT', () => {
     for (const path of paths) {
         test(`${path}`, async ({ page }) => {
             await page.goto(path);

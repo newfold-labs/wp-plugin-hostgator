@@ -181,14 +181,14 @@ async function getSkipMessage(pluginKey) {
  * @param {number} expiration - Expiration time in seconds (default: 3600)
  * @returns {Promise<void>}
  */
-async function setCapability(capabilitiesJSON, expiration = 3600) {
-  utils.fancyLog(`🔐 Setting capabilities: ${JSON.stringify(capabilitiesJSON)}`);
+async function setCapability(capabilities, expiration = 3600) {
+  utils.fancyLog(`🔐 Setting capabilities: ${JSON.stringify(capabilities)}`);
   const expiry = Math.floor( new Date().getTime() / 1000.0 ) + expiration;
   
   // Use Promise.all to ensure both operations complete before returning
   await Promise.all([
     wordpress.wpCli(`option update _transient_nfd_site_capabilities '${ JSON.stringify(
-      capabilitiesJSON
+      capabilities
     ) }' --format=json`),
     wordpress.wpCli(`option update _transient_timeout_nfd_site_capabilities ${ expiry }`)
   ]);
@@ -254,7 +254,7 @@ async function isComingSoonEnabled(page) {
  * @param {boolean} enabled - Whether to enable coming soon
  */
 async function setComingSoon(enabled) {
-return await wordpress.setOption('nfd_coming_soon', enabled);
+  return await wordpress.setOption('nfd_coming_soon', enabled);
 }
 
 /**

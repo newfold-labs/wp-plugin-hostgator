@@ -133,6 +133,7 @@ const KSES_ALLOWED_SVG_TAGS = array(
 		'opacity'         => true,
 		'stroke-linecap'  => true,
 		'stroke-linejoin' => true,
+		'stroke-width'    => true,
 		'transform'       => true,
 
 	),

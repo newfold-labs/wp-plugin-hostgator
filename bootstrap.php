@@ -67,10 +67,10 @@ add_action(
 
 		$cache_types = apply_filters( 'newfold/container/cache_types', array( 'browser', 'skip404' ) );
 
-		$mm_brand = get_option( 'mm_brand', false );
-		$hg_reg  = get_option( 'hg_region', false );
-		$default_marketplace_brand = ( $mm_brand && $hg_reg )
-			? $mm_brand . '_' . strtoupper( $hg_reg )
+		$mm_brand  = get_option( 'mm_brand', false );
+		$hg_region = get_option( 'hg_region', false );
+		$default_marketplace_brand = ( $mm_brand && $hg_region )
+			? $mm_brand . '_' . strtoupper( $hg_region )
 			: 'hostgator';
 
 		$marketplace_brand = apply_filters( 'newfold/container/marketplace_brand', $default_marketplace_brand );

@@ -74,11 +74,11 @@ test.describe('Dashboard Widgets', () => {
     const editSiteHref = await editSiteLink.getAttribute('href');
     expect(editSiteHref).toContain('site-editor');
 
-    const enableComingSoonButton = page.locator('a[data-test-id="nfd-coming-soon-enable"]');
+    const enableComingSoonButton = page.locator('button[data-test-id="nfd-coming-soon-enable"]');
     enableComingSoonButton.scrollIntoViewIfNeeded();
     await expect(enableComingSoonButton).toBeVisible();
     await expect(enableComingSoonButton).toContainText('Enable Coming Soon');
-    await expect(enableComingSoonButton).toHaveAttribute('href', '#');
+    await expect(enableComingSoonButton).toHaveAttribute('type', 'button');
     await enableComingSoonButton.click();
     await page.waitForLoadState('load');
 
@@ -94,11 +94,11 @@ test.describe('Dashboard Widgets', () => {
 
     await expect(enableComingSoonButton).toHaveCount(0);
 
-    const disableComingSoonButton = page.locator('a[data-test-id="nfd-coming-soon-disable"]');
+    const disableComingSoonButton = page.locator('button[data-test-id="nfd-coming-soon-disable"]');
     disableComingSoonButton.scrollIntoViewIfNeeded();
     await expect(disableComingSoonButton).toBeVisible();
     await expect(disableComingSoonButton).toContainText('Launch Site');
-    await expect(disableComingSoonButton).toHaveAttribute('href', '#');
+    await expect(disableComingSoonButton).toHaveAttribute('type', 'button');
 
     await disableComingSoonButton.click();
     await page.waitForLoadState('load');
@@ -112,7 +112,7 @@ test.describe('Dashboard Widgets', () => {
 
     await expect(disableComingSoonButton).toHaveCount(0);
     await expect(enableComingSoonButton).toContainText('Enable Coming Soon');
-    await expect(enableComingSoonButton).toHaveAttribute('href', '#');
+    await expect(enableComingSoonButton).toHaveAttribute('type', 'button');
   });
 
   test.skip('Help Widget', async ({ page }) => {
