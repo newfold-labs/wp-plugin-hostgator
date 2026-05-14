@@ -8,13 +8,15 @@ on:
         required: true
         default: ""
 
-permissions:
-  issues: write
-  contents: read
+# Disable permissions for all available scopes by default.
+# Any needed permissions should be configured at the job level.
+permissions: {}
 
 jobs:
   create-milestone:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write # Required to create milestones via the GitHub REST API with GITHUB_TOKEN.
 
     steps:
       - name: Create Milestone

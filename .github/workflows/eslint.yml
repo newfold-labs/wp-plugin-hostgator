@@ -25,7 +25,8 @@ jobs:
   ESLint:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: read # Required to checkout the repository.
+
     steps:
 
       - name: Checkout

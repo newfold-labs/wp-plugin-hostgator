@@ -12,10 +12,16 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.head_ref || github.sha }}
   cancel-in-progress: true
 
+# Disable permissions for all available scopes by default.
+# Any needed permissions should be configured at the job level.
+permissions: {}
+
 jobs:
   build:
     name: On Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required to checkout the repository and upload release assets.
     steps:
 
       - name: Checkout

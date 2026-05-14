@@ -14,6 +14,8 @@ jobs:
     name: On Delete Release
     runs-on: ubuntu-latest
     if: ${{ github.repository == 'newfold-labs/wp-plugin-hostgator' }}
+    permissions: {} # Cloudflare purge uses repository secrets; GITHUB_TOKEN is unused.
+
     steps:
 
       - name: Clear cache for release API

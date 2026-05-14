@@ -12,10 +12,10 @@ jobs:
     name: Remove Preview from GitHub Pages
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      pages: write
-      id-token: write
-      deployments: read
+      contents: read       # Required to checkout the repository.
+      actions: read        # Required to download the github-pages artifact via actions/download-artifact.
+      pages: write         # Required to redeploy GitHub Pages after removing a preview ZIP.
+      id-token: write      # Required for OIDC token exchange when deploying to Pages.
 
     steps:
       - name: Checkout repository
