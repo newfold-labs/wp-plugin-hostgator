@@ -13,6 +13,7 @@ jobs:
   webhook:
     name: Send Webhook
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions: {} # No GITHUB_TOKEN repo scopes needed; Satis dispatch uses WEBHOOK_TOKEN.
     steps:
 

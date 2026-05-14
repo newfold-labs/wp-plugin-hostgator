@@ -13,6 +13,7 @@ jobs:
   add-to-project:
     name: Add issue to project
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions: {} # Uses PROJECT_TOKEN; default GITHUB_TOKEN is not passed to add-to-project.
 
     steps:

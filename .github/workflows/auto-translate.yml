@@ -19,6 +19,7 @@ permissions: {}
 jobs:
   translate:
     name: 'Check and update translations'
+    timeout-minutes: 60
     uses: newfold-labs/workflows/.github/workflows/reusable-translations.yml@main
     permissions:
       contents: write       # Required for reusable workflow to commit translation updates.

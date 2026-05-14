@@ -22,6 +22,7 @@ permissions: {}
 jobs:
   get-repo-name:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     permissions: {} # Computes outputs only; no checkout or GitHub API calls with GITHUB_TOKEN.
     outputs:
       repository-name: ${{ steps.repo-name.outputs.name }}
@@ -32,6 +33,7 @@ jobs:
 
   codecoverage:
     needs: get-repo-name
+    timeout-minutes: 90
     uses: newfold-labs/workflows/.github/workflows/reusable-codecoverage.yml@main
     permissions:
       contents: write       # Required for reusable workflow to publish coverage artifacts/commits.

@@ -11,6 +11,7 @@ permissions: {}
 jobs:
   playground-preview:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     permissions:
       contents: read       # Required to checkout the repository.
       issues: write        # Required for github-script issue/PR comments.

@@ -11,6 +11,7 @@ jobs:
   cleanup-preview:
     name: Remove Preview from GitHub Pages
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       contents: read       # Required to checkout the repository.
       actions: read        # Required to download the github-pages artifact via actions/download-artifact.
