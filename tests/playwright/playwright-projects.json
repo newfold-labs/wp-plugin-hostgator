@@ -2,6 +2,66 @@
   {
     "name": "newfold-labs/wp-plugin-hostgator",
     "testDir": "./tests/playwright/specs",
-    "testMatch": "**/*.spec.js"
+    "testMatch": "*.spec.{js,mjs}"
+  },
+  {
+    "name": "newfold-labs/wp-module-coming-soon",
+    "testDir": "./vendor/newfold-labs/wp-module-coming-soon/tests/playwright/specs",
+    "testMatch": "*.spec.{js,mjs}"
+  },
+  {
+    "name": "newfold-labs/wp-module-deactivation",
+    "testDir": "./vendor/newfold-labs/wp-module-deactivation/tests/playwright/specs",
+    "testMatch": "*.spec.{js,mjs}"
+  },
+  {
+    "name": "newfold-labs/wp-module-ecommerce",
+    "testDir": "./vendor/newfold-labs/wp-module-ecommerce/tests/playwright/specs",
+    "testMatch": "*.spec.{js,mjs}"
+  },
+  {
+    "name": "newfold-labs/wp-module-global-ctb",
+    "testDir": "./vendor/newfold-labs/wp-module-global-ctb/tests/playwright/specs",
+    "testMatch": "*.spec.{js,mjs}"
+  },
+  {
+    "name": "newfold-labs/wp-module-help-center",
+    "testDir": "./vendor/newfold-labs/wp-module-help-center/tests/playwright/specs",
+    "testMatch": "*.spec.{js,mjs}"
+  },
+  {
+    "name": "newfold-labs/wp-module-marketplace",
+    "testDir": "./vendor/newfold-labs/wp-module-marketplace/tests/playwright/specs",
+    "testMatch": "*.spec.{js,mjs}"
+  },
+  {
+    "name": "newfold-labs/wp-module-migration",
+    "testDir": "./vendor/newfold-labs/wp-module-migration/tests/playwright/specs",
+    "testMatch": "*.spec.{js,mjs}"
+  },
+  {
+    "name": "newfold-labs/wp-module-notifications",
+    "testDir": "./vendor/newfold-labs/wp-module-notifications/tests/playwright/specs",
+    "testMatch": "*.spec.{js,mjs}"
+  },
+  {
+    "name": "newfold-labs/wp-module-patterns",
+    "testDir": "./vendor/newfold-labs/wp-module-patterns/tests/playwright/specs",
+    "testMatch": "*.spec.{js,mjs}"
+  },
+  {
+    "name": "newfold-labs/wp-module-performance",
+    "testDir": "./vendor/newfold-labs/wp-module-performance/tests/playwright/specs",
+    "testMatch": "*.spec.{js,mjs}"
+  },
+  {
+    "name": "newfold-labs/wp-module-solutions",
+    "testDir": "./vendor/newfold-labs/wp-module-solutions/tests/playwright/specs",
+    "testMatch": "*.spec.{js,mjs}"
+  },
+  {
+    "name": "newfold-labs/wp-module-staging",
+    "testDir": "./vendor/newfold-labs/wp-module-staging/tests/playwright/specs",
+    "testMatch": "*.spec.{js,mjs}"
   }
 ]

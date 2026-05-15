@@ -189,10 +189,20 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps chromium
 
+      - name: Prune nested Playwright copies from vendor modules
+        run: node .github/scripts/prune-vendor-playwright-dupes.mjs
+
       - name: Run Playwright Tests
-        run: npx playwright test --reporter=line
+        run: npx playwright test --reporter=line,json,github
         env:
           CI: true
+          PLAYWRIGHT_JSON_OUTPUT_FILE: tests/playwright/test-results/github-summary-source.json
+
+      - name: Add Playwright results to job summary
+        if: always()
+        env:
+          PLAYWRIGHT_JSON_OUTPUT_FILE: tests/playwright/test-results/github-summary-source.json
+        run: node .github/scripts/playwright-job-summary.mjs
 
       - name: Store Playwright test results
         if: always()

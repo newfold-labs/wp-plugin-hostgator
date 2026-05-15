@@ -119,7 +119,7 @@
         "newfold-labs/wp-module-secure-passwords": "^1.1.3",
         "newfold-labs/wp-module-solutions": "^2.9.3",
         "newfold-labs/wp-module-sso": "^1.3.0",
-        "newfold-labs/wp-module-staging": "^2.7.3",
+        "newfold-labs/wp-module-staging": "^2.7.4",
         "wp-forge/wp-update-handler": "^1.0.2",
         "wp-forge/wp-upgrade-handler": "^1.0"
     }

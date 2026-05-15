@@ -370,7 +370,13 @@ final class Admin {
 			HOSTGATOR_BUILD_URL . '/index.js',
 			array_merge(
 				$asset['dependencies'],
-				array( 'newfold-features', 'nfd-runtime', 'nfd-portal-registry' )
+				array(
+					'newfold-features',
+					'nfd-runtime',
+					'nfd-installer',
+					'nfd-portal-registry',
+					'wp-module-link-tracker',
+				)
 			),
 			$asset['version'],
 			true
@@ -385,7 +391,7 @@ final class Admin {
 		\wp_register_style(
 			'hostgator-style',
 			HOSTGATOR_BUILD_URL . '/index.css',
-			array( 'wp-components' ),
+			array( 'wp-components', 'nfd-installer' ),
 			$asset['version']
 		);
 
