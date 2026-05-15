@@ -86,7 +86,7 @@
     "require-dev": {
         "johnpbloch/wordpress": "6.9.4",
         "lucatume/wp-browser": ">=3.7.16",
-        "newfold-labs/wp-php-standards": "^1.2.5",
+        "newfold-labs/wp-php-standards": "^1.2.6",
         "phpunit/phpcov": ">=8.2.1",
         "roave/security-advisories": "dev-latest",
         "wp-cli/i18n-command": "^2.7.0",
