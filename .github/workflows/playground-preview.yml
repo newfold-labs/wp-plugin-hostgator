@@ -15,7 +15,7 @@ jobs:
     permissions:
       contents: read       # Required to checkout the repository.
       issues: write        # Required for github-script issue/PR comments.
-      actions: write       # Required to delete prior github-pages workflow artifacts.
+      actions: write       # Required for github.rest.actions.deleteArtifact below.
       pages: write         # Required to publish GitHub Pages preview builds.
       id-token: write      # Required for OIDC token exchange when deploying to Pages.
 
