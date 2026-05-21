@@ -162,7 +162,7 @@ export const routes = [
 const topRoutePaths = [
 	'/home',
 	'/settings',
-	// '/commerce', // remove commerce route until solutions are ready
+	'/commerce',
 	'/marketplace',
 	'/help',
 ];

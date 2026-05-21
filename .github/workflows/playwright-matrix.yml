@@ -75,9 +75,9 @@ jobs:
           - '8.3'
           - '8.4'
         wpVersion:
-          - '6.7'
           - '6.8'
           - '6.9'
+          - '7.0'
 
     steps:
       - name: Checkout
