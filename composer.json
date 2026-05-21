@@ -90,7 +90,7 @@
         "phpunit/phpcov": ">=8.2.1",
         "roave/security-advisories": "dev-latest",
         "wp-cli/i18n-command": "^2.7.0",
-        "wp-phpunit/wp-phpunit": "^6.9.4",
+        "wp-phpunit/wp-phpunit": "^7.0.0",
         "yoast/phpunit-polyfills": "^4.0.0"
     },
     "require": {
