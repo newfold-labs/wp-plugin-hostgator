@@ -14,7 +14,7 @@ const CommercePage = () => {
 					'hgwp-app-commerce-page__header nfd-flex nfd-flex-col nfd-gap-y-4'
 				}
 			>
-				<Title as="h1">
+				<Title as="h1" data-testid="nfd-solutions-commerce-page-title">
 					{ __(
 						'Premium tools available in eCommerce Add-Ons',
 						'wp-plugin-hostgator'
