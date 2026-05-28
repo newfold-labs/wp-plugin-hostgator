@@ -2,7 +2,7 @@
 return [
 	'domain' => 'wp-plugin-hostgator',
 	'plural-forms' => 'nplurals=2; plural=(n != 1);',
-	'language' => 'es_MX',
+	'language' => 'es_ES',
 	'project-id-version' => 'hostgator-wordpress-plugin',
 	'pot-creation-date' => '2023-01-11T20:21:44+00:00',
 	'po-revision-date' => '2026-05-28T20:43:04+00:00',
