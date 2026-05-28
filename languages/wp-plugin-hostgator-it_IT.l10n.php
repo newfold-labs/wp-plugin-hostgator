@@ -1,0 +1,2 @@
+<?php
+return ['domain'=>'wp-plugin-hostgator','plural-forms'=>NULL,'language'=>'it_IT','project-id-version'=>'The HostGator Plugin 3.0.0','pot-creation-date'=>'2023-01-11T20:21:44+00:00','po-revision-date'=>'YEAR-MO-DA HO:MI+ZONE','x-generator'=>'WP-CLI 2.12.0','messages'=>[]];
