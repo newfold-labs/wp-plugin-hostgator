@@ -205,8 +205,10 @@ require HOSTGATOR_PLUGIN_DIR . '/inc/updates.php';
 require_once HOSTGATOR_PLUGIN_DIR . '/inc/widgets/bootstrap.php';
 require_once HOSTGATOR_PLUGIN_DIR . '/inc/Helpers.php';
 require_once HOSTGATOR_PLUGIN_DIR . '/inc/Brand.php';
+require_once HOSTGATOR_PLUGIN_DIR . '/inc/SolutionsBrandIntegration.php';
 require_once HOSTGATOR_PLUGIN_DIR . '/inc/Filters.php';
 
+SolutionsBrandIntegration::init();
 Filters::init();
 
 /* WordPress Admin Page & Features */

@@ -10,6 +10,21 @@ import { expect } from '@playwright/test';
 import wordpress from './wordpress.mjs';
 import utils from './utils.mjs';
 
+/**
+ * Plugin support requirements
+ * Update these when plugin requirements change
+ */
+const PLUGIN_REQUIREMENTS = {
+  // https://wordpress.org/plugins/woocommerce/
+  woocommerce: { minWp: '6.9.0', minPhp: '7.4.0' },
+  // https://wordpress.org/plugins/jetpack/
+  jetpack: { minWp: '6.8.0', minPhp: '7.2.0' },
+  // https://wordpress.org/plugins/wordpress-seo/
+  yoast: { minWp: '6.8.0', minPhp: '7.4.0' },
+  // https://github.com/newfold-labs/yith-wonder/blob/master/style.css
+  wonderTheme: { minWp: '6.5.0', minPhp: '7.0.0' },
+};
+
 // ============================================================================
 // VERSION COMPARISON UTILITIES
 // ============================================================================
@@ -23,7 +38,7 @@ import utils from './utils.mjs';
 function compareVersions(a, b) {
   const partsA = String(a).split('.').map(Number);
   const partsB = String(b).split('.').map(Number);
-  
+
   for (let i = 0; i < Math.max(partsA.length, partsB.length); i++) {
     const numA = partsA[i] || 0;
     const numB = partsB[i] || 0;
@@ -59,19 +74,19 @@ async function getEnvironmentVersions() {
   if (_envVersions) {
     return _envVersions;
   }
-  
+
   const [wpVersion, phpVersion] = await Promise.all([
     wordpress.wpCli('core version'),
     wordpress.wpCli('eval "echo PHP_VERSION;"'),
   ]);
-  
+
   _envVersions = {
     wpVersion: wpVersion.trim(),
     phpVersion: phpVersion.trim(),
   };
-  
+
   utils.fancyLog(`📦 Environment: WP ${_envVersions.wpVersion}, PHP ${_envVersions.phpVersion}`);
-  
+
   return _envVersions;
 }
 
@@ -93,21 +108,6 @@ function clearVersionCache() {
 // ============================================================================
 
 /**
- * Plugin support requirements
- * Update these when plugin requirements change
- */
-const PLUGIN_REQUIREMENTS = {
-  // https://wordpress.org/plugins/woocommerce/
-  woocommerce: { minWp: '6.8.0', minPhp: '7.4.0' },
-  // https://wordpress.org/plugins/jetpack/
-  jetpack: { minWp: '6.8.0', minPhp: '7.2.0' },
-  // https://wordpress.org/plugins/wordpress-seo/
-  yoast: { minWp: '6.8.0', minPhp: '7.4.0' },
-  // https://github.com/newfold-labs/yith-wonder/blob/master/style.css
-  wonderTheme: { minWp: '6.5.0', minPhp: '7.0.0' },
-};
-
-/**
  * Check if the current environment supports a specific plugin
  * @param {'woocommerce' | 'jetpack' | 'yoast' | 'wonderTheme'} pluginKey - Plugin identifier
  * @returns {Promise<boolean>}
@@ -117,11 +117,11 @@ async function supportsPlugin(pluginKey) {
   if (!requirements) {
     throw new Error(`Unknown plugin: ${pluginKey}. Available: ${Object.keys(PLUGIN_REQUIREMENTS).join(', ')}`);
   }
-  
+
   const { wpVersion, phpVersion } = await getEnvironmentVersions();
-  
-  return satisfiesMin(wpVersion, requirements.minWp) && 
-         satisfiesMin(phpVersion, requirements.minPhp);
+
+  return satisfiesMin(wpVersion, requirements.minWp) &&
+    satisfiesMin(phpVersion, requirements.minPhp);
 }
 
 /**
@@ -169,9 +169,9 @@ async function supportsWonderTheme() {
 async function getSkipMessage(pluginKey) {
   const requirements = PLUGIN_REQUIREMENTS[pluginKey];
   const { wpVersion, phpVersion } = await getEnvironmentVersions();
-  
+
   return `Skipping: ${pluginKey} requires WP >=${requirements.minWp} & PHP >=${requirements.minPhp}, ` +
-         `current: WP ${wpVersion} & PHP ${phpVersion}`;
+    `current: WP ${wpVersion} & PHP ${phpVersion}`;
 }
 
 /**
@@ -183,14 +183,14 @@ async function getSkipMessage(pluginKey) {
  */
 async function setCapability(capabilities, expiration = 3600) {
   utils.fancyLog(`🔐 Setting capabilities: ${JSON.stringify(capabilities)}`);
-  const expiry = Math.floor( new Date().getTime() / 1000.0 ) + expiration;
-  
+  const expiry = Math.floor(new Date().getTime() / 1000.0) + expiration;
+
   // Use Promise.all to ensure both operations complete before returning
   await Promise.all([
-    wordpress.wpCli(`option update _transient_nfd_site_capabilities '${ JSON.stringify(
+    wordpress.wpCli(`option update _transient_nfd_site_capabilities '${JSON.stringify(
       capabilities
-    ) }' --format=json`),
-    wordpress.wpCli(`option update _transient_timeout_nfd_site_capabilities ${ expiry }`)
+    )}' --format=json`),
+    wordpress.wpCli(`option update _transient_timeout_nfd_site_capabilities ${expiry}`)
   ]);
 }
 
@@ -209,13 +209,13 @@ async function clearCapabilities() {
  */
 async function logCapabilities() {
   const result = await wordpress.wpCli('option get _transient_nfd_site_capabilities --format=json');
-  
+
   utils.fancyLog('📋 Current capabilities:');
-  
+
   try {
     // Parse JSON and iterate over key-value pairs
     const capabilities = JSON.parse(result);
-    
+
     if (typeof capabilities === 'object' && capabilities !== null) {
       Object.entries(capabilities).forEach(([key, value]) => {
         const valueStr = typeof value === 'object' ? JSON.stringify(value) : String(value);
@@ -224,7 +224,7 @@ async function logCapabilities() {
     } else {
       utils.fancyLog(`- ${String(capabilities)}`, 100, 'gray', '            ');
     }
-    
+
     return capabilities;
   } catch (error) {
     // Fallback if JSON parsing fails
@@ -264,13 +264,13 @@ async function setComingSoon(enabled) {
  * @param {boolean} enable - Whether to enable (true) or disable (false) coming soon
  */
 async function toggleComingSoon(page, enable = true) {
-  const buttonSelector = enable 
-    ? '[data-cy="nfd-coming-soon-enable"]' 
+  const buttonSelector = enable
+    ? '[data-cy="nfd-coming-soon-enable"]'
     : '[data-cy="nfd-coming-soon-disable"]';
-  
+
   const button = page.locator(buttonSelector);
   await button.click();
-  
+
   // Wait for the toggle to take effect
   await page.waitForTimeout(1000);
 }
@@ -285,13 +285,13 @@ async function verifyComingSoonStatus(page, expectedEnabled) {
   const statusText = expectedEnabled ? 'Not Live' : 'Live';
   const bodyText = expectedEnabled ? 'Coming Soon' : 'website is live';
   const dataAttribute = expectedEnabled ? 'true' : 'false';
-  
+
   // Check status text
   await expect(page.locator('.iframe-preview-status')).toContainText(statusText);
-  
+
   // Check body text
   await expect(page.locator('.site-preview-widget-body')).toContainText(bodyText);
-  
+
   // Check data attribute
   await expect(page.locator('.site-preview-widget-body')).toHaveAttribute('data-coming-soon', dataAttribute);
 }
@@ -307,10 +307,10 @@ async function verifyComingSoonStatus(page, expectedEnabled) {
  */
 async function verifyWidgetLink(page, linkSelector, expectedText, expectedHref, expectedAttributes = {}) {
   const link = page.locator(linkSelector);
-  
+
   // Check text content
   await expect(link).toContainText(expectedText);
-  
+
   // Check href
   const href = await link.getAttribute('href');
   if (typeof expectedHref === 'string') {
@@ -318,7 +318,7 @@ async function verifyWidgetLink(page, linkSelector, expectedText, expectedHref, 
   } else {
     expect(href).toMatch(expectedHref);
   }
-  
+
   // Check additional attributes
   for (const [attr, value] of Object.entries(expectedAttributes)) {
     await expect(link).toHaveAttribute(attr, value);
@@ -389,7 +389,7 @@ export default {
   satisfiesMin,
   getEnvironmentVersions,
   clearVersionCache,
-  
+
   // Plugin Support Checks
   PLUGIN_REQUIREMENTS,
   supportsPlugin,
@@ -398,25 +398,25 @@ export default {
   supportsYoast,
   supportsWonderTheme,
   getSkipMessage,
-  
+
   // Capabilities
   setCapability,
   clearCapabilities,
   logCapabilities,
-  
+
   // Coming Soon
   isComingSoonEnabled,
   setComingSoon,
   toggleComingSoon,
   verifyComingSoonStatus,
-  
+
   // Dashboard Widgets
   verifyWidgetLink,
   waitForDashboardWidgets,
-  
+
   // Plugin Navigation
   navigateToPluginPage,
-  
+
   // WordPress Admin
   waitForWordPressAdmin,
   getAdminMenuItems,
