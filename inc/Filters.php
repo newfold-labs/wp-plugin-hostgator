@@ -103,7 +103,15 @@ final class Filters {
 		);
 		$config['label']        = __( 'Login with HostGator', 'wp-plugin-hostgator' );
 		$config['accent_color'] = Brand::BUTTON_BACKGROUND;
-		$config['icon_svg']     = Helpers::get_svg( 'snappy-head-monotone' );
+
+		// The shared asset hardcodes fill="black", which overrides the module's
+		// `fill: currentColor` CSS and renders the icon black on the button.
+		// Swap to currentColor so it tints with the button's white text color.
+		$config['icon_svg'] = str_replace(
+			'fill="black"',
+			'fill="currentColor"',
+			Helpers::get_svg( 'snappy-head-monotone' )
+		);
 
 		return $config;
 	}
