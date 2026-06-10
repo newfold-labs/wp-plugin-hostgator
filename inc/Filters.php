@@ -26,6 +26,7 @@ final class Filters {
 		\add_filter( 'http_request_args', array( __CLASS__, 'add_hiive_headers' ), 99, 2 );
 		\add_filter( 'newfold/coming-soon/filter/portal_data', array( __CLASS__, 'filter_coming_soon_portal_data' ) );
 		\add_filter( 'newfold/sso/hosting_login', array( __CLASS__, 'configure_hosting_login' ) );
+		\add_filter( 'newfold_performance_object_cache_ui_available', '__return_false' );
 	}
 
 	/**
