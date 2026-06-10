@@ -16,6 +16,8 @@ jobs:
   build:
     name: On Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required to upload the built plugin zip as a release asset.
     steps:
 
       - name: Checkout
