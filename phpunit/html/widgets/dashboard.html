@@ -2,7 +2,7 @@
 <html lang="en">
  <head>
   <meta charset="UTF-8">
-  <title>Dashboard for /home/runner/work/wp-plugin-hostgator/wp-plugin-hostgator/inc/RestApi</title>
+  <title>Dashboard for /home/runner/work/wp-plugin-hostgator/wp-plugin-hostgator/inc/widgets</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../_css/bootstrap.min.css?v=9.2.32" rel="stylesheet" type="text/css">
   <link href="../_css/nv.d3.min.css?v=9.2.32" rel="stylesheet" type="text/css">
@@ -17,7 +17,7 @@
       <nav aria-label="breadcrumb">
        <ol class="breadcrumb">
          <li class="breadcrumb-item"><a href="../index.html">/home/runner/work/wp-plugin-hostgator/wp-plugin-hostgator/inc</a></li>
-         <li class="breadcrumb-item"><a href="index.html">RestApi</a></li>
+         <li class="breadcrumb-item"><a href="index.html">widgets</a></li>
          <li class="breadcrumb-item active">(Dashboard)</li>
 
        </ol>
@@ -58,7 +58,7 @@
         </tr>
        </thead>
        <tbody>
-       <tr><td><a href="SettingsController.php.html#10">HostGator\RestApi\SettingsController</a></td><td class="text-right">40%</td></tr>
+       <tr><td><a href="SitePreview.php.html#13">HostGator\HostGatorSitePreviewWidget</a></td><td class="text-right">0%</td></tr>
 
        </tbody>
       </table>
@@ -75,7 +75,6 @@
         </tr>
        </thead>
        <tbody>
-       <tr><td><a href="SettingsController.php.html#10">HostGator\RestApi\SettingsController</a></td><td class="text-right">336</td></tr>
 
        </tbody>
       </table>
@@ -113,8 +112,10 @@
         </tr>
        </thead>
        <tbody>
-       <tr><td><a href="SettingsController.php.html#22"><abbr title="HostGator\RestApi\SettingsController::register_routes">register_routes</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="SettingsController.php.html#60"><abbr title="HostGator\RestApi\SettingsController::update_item">update_item</abbr></a></td><td class="text-right">20%</td></tr>
+       <tr><td><a href="SitePreview.php.html#22"><abbr title="HostGator\HostGatorSitePreviewWidget::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SitePreview.php.html#29"><abbr title="HostGator\HostGatorSitePreviewWidget::init">init</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SitePreview.php.html#47"><abbr title="HostGator\HostGatorSitePreviewWidget::widget_render">widget_render</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SitePreview.php.html#57"><abbr title="HostGator\HostGatorSitePreviewWidget::assets">assets</abbr></a></td><td class="text-right">0%</td></tr>
 
        </tbody>
       </table>
@@ -131,7 +132,6 @@
         </tr>
        </thead>
        <tbody>
-       <tr><td><a href="SettingsController.php.html#60"><abbr title="HostGator\RestApi\SettingsController::update_item">update_item</abbr></a></td><td class="text-right">391</td></tr>
 
        </tbody>
       </table>
@@ -160,7 +160,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#classCoverageDistribution svg')
-      .datum(getCoverageDistributionData([0,0,0,0,0,1,0,0,0,0,0,0], "Class Coverage"))
+      .datum(getCoverageDistributionData([1,0,0,0,0,0,0,0,0,0,0,0], "Class Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -178,7 +178,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#methodCoverageDistribution svg')
-      .datum(getCoverageDistributionData([1,0,0,1,0,0,0,0,0,0,1,2], "Method Coverage"))
+      .datum(getCoverageDistributionData([4,0,0,0,0,0,0,0,0,0,0,0], "Method Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -228,7 +228,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Cyclomatic Complexity');
 
     d3.select('#classComplexity svg')
-      .datum(getComplexityData([[40.869565217391305,38,"<a href=\"SettingsController.php.html#10\">HostGator\\RestApi\\SettingsController<\/a>"]], 'Class Complexity'))
+      .datum(getComplexityData([[0,4,"<a href=\"SitePreview.php.html#13\">HostGator\\HostGatorSitePreviewWidget<\/a>"]], 'Class Complexity'))
       .transition()
       .duration(500)
       .call(chart);
@@ -252,7 +252,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Method Complexity');
 
     d3.select('#methodComplexity svg')
-      .datum(getComplexityData([[0,1,"<a href=\"SettingsController.php.html#22\">HostGator\\RestApi\\SettingsController::register_routes<\/a>"],[100,1,"<a href=\"SettingsController.php.html#49\">HostGator\\RestApi\\SettingsController::get_item<\/a>"],[20.634920634920633,27,"<a href=\"SettingsController.php.html#60\">HostGator\\RestApi\\SettingsController::update_item<\/a>"],[93.75,7,"<a href=\"SettingsController.php.html#148\">HostGator\\RestApi\\SettingsController::get_current_settings<\/a>"],[100,2,"<a href=\"SettingsController.php.html#198\">HostGator\\RestApi\\SettingsController::check_permission<\/a>"]], 'Method Complexity'))
+      .datum(getComplexityData([[0,1,"<a href=\"SitePreview.php.html#22\">HostGator\\HostGatorSitePreviewWidget::__construct<\/a>"],[0,1,"<a href=\"SitePreview.php.html#29\">HostGator\\HostGatorSitePreviewWidget::init<\/a>"],[0,1,"<a href=\"SitePreview.php.html#47\">HostGator\\HostGatorSitePreviewWidget::widget_render<\/a>"],[0,1,"<a href=\"SitePreview.php.html#57\">HostGator\\HostGatorSitePreviewWidget::assets<\/a>"]], 'Method Complexity'))
       .transition()
       .duration(500)
       .call(chart);
