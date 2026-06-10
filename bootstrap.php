@@ -14,6 +14,8 @@ use NewfoldLabs\WP\ModuleLoader\Plugin;
 use NewfoldLabs\WP\Module\Features\Features;
 
 use function NewfoldLabs\WP\ModuleLoader\container as setContainer;
+use function NewfoldLabs\WP\Context\setContext;
+use function NewfoldLabs\WP\Module\LinkTracker\Functions\build_link as buildLink;
 
 // Composer autoloader
 if ( is_readable( __DIR__ . '/vendor/autoload.php' ) ) {
@@ -30,6 +32,15 @@ if ( is_readable( __DIR__ . '/vendor/autoload.php' ) ) {
  * Initialize data module via container
  */
 $nfd_module_container = new Container();
+
+// Context setup (aligns with other brand plugins; used by modules and Hiive integrations).
+add_action(
+	'newfold/context/set',
+	function () {
+		setContext( 'brand.name', 'hostgator' );
+	}
+);
+
 // Set plugin to container
 $nfd_module_container->set(
 	'plugin',
@@ -48,32 +59,44 @@ $nfd_module_container->set(
 	)
 );
 
-// Set marketplace brand from mm_brand and hg_region values in container
-if ( get_option( 'mm_brand', false ) && get_option( 'hg_region', false ) ) {
-	$nfd_module_container->set(
-		'marketplace_brand',
-		get_option( 'mm_brand', false ) . '_' . strtoupper( get_option( 'hg_region', false ) )
-	);
-}
+// Assign container values based on context
+add_action(
+	'plugins_loaded',
+	function () {
+		global $nfd_module_container;
 
-// Performance/cache settings
-$nfd_module_container->set(
-	'cache_types',
-	array( 'browser', 'skip404' )
+		$cache_types = apply_filters( 'newfold/container/cache_types', array( 'browser', 'skip404' ) );
+
+		$mm_brand  = get_option( 'mm_brand', false );
+		$hg_region = get_option( 'hg_region', false );
+		$default_marketplace_brand = ( $mm_brand && $hg_region )
+			? $mm_brand . '_' . strtoupper( $hg_region )
+			: 'hostgator';
+
+		$marketplace_brand = apply_filters( 'newfold/container/marketplace_brand', $default_marketplace_brand );
+
+		if ( $nfd_module_container ) {
+			$nfd_module_container->set( 'cache_types', $cache_types );
+			$nfd_module_container->set( 'marketplace_brand', $marketplace_brand );
+		}
+	}
 );
 
-// Set coming soon values
+// Set coming soon values (Link Tracker + deep-link to settings, aligned with Bluehost integration).
 add_filter(
 	'newfold/coming-soon/filter/args',
 	function ( $args, $default_args ) {
+		$link_params = array(
+			'utm_source' => 'coming-soon-template',
+		);
 
-		$website_guide_link = 'https://www.hostgator.com/blog/build-wordpress-website-guide/';
-		$migrate_link       = 'https://www.hostgator.com/help/article/hostgator-website-migration';
-		$hosting_link       = 'https://www.hostgator.com/blog/reasons-why-wordpress-website/';
+		$website_guide_link = buildLink( 'https://www.hostgator.com/blog/build-wordpress-website-guide/', $link_params );
+		$migrate_link       = buildLink( 'https://www.hostgator.com/help/article/hostgator-website-migration', $link_params );
+		$hosting_link       = buildLink( 'https://www.hostgator.com/blog/reasons-why-wordpress-website/', $link_params );
 
 		$args = wp_parse_args(
 			array(
-				'admin_app_url'              => admin_url( 'admin.php?page=hostgator#/home' ),
+				'admin_app_url'              => buildLink( admin_url( 'admin.php?page=hostgator#/home' ) ),
 				'template_h1'                => __( 'A New WordPress Site', 'wp-plugin-hostgator' ),
 				'template_h2'                => __( 'Coming Soon!', 'wp-plugin-hostgator' ),
 				'template_coming_soon_links' =>
@@ -87,27 +110,27 @@ add_filter(
 					__( 'Why choose HostGator for your WordPress site?', 'wp-plugin-hostgator' ) .
 					'</a><br/>',
 				'template_footer_t'          => sprintf(
-				/* translators: %1$s is replaced with opening link tag taking you to hostgator.com/wordpress, %2$s is replaced with closing link tag, %3$s is replaced with opening link tag taking you to login page, %4$s is replaced with closing link tag, %5$s is replaced with opening link tag taking you to portal.hostgator.com, %6$s is replaced with closing link tag. */
+					/* translators: %1$s is replaced with opening link tag taking you to hostgator.com/wordpress, %2$s is replaced with closing link tag, %3$s is replaced with opening link tag taking you to login page, %4$s is replaced with closing link tag, %5$s is replaced with opening link tag taking you to portal.hostgator.com, %6$s is replaced with closing link tag. */
 					esc_html__( 'A %1$sHostGator%2$s powered website. Is this your website? Log in to %3$sWordPress%4$s or %5$sHostgator%6$s.', 'wp-plugin-hostgator' ) . '&nbsp;',
-					'<a href="' . esc_url( 'https://www.hostgator.com/managed-wordpress-hosting' ) . '" target="_blank" rel="noopener noreferrer nofollow">',
+					'<a href="' . esc_url( buildLink( 'https://www.hostgator.com/managed-wordpress-hosting', $link_params ) ) . '" target="_blank" rel="noopener noreferrer nofollow">',
 					'</a>',
 					'<a href="' . esc_url( wp_login_url() ) . '">',
 					'</a>',
-					'<a href="' . esc_url( 'https://portal.hostgator.com/' ) . '" target="_blank" rel="noopener noreferrer nofollow">',
+					'<a href="' . esc_url( buildLink( 'https://portal.hostgator.com/', $link_params ) ) . '" target="_blank" rel="noopener noreferrer nofollow">',
 					'</a>'
 				),
 				'template_page_title'        => sprintf(
-				/* translators: %s is Blog name */
+					/* translators: %s is Blog name */
 					__( '%s &mdash; Coming Soon', 'wp-plugin-hostgator' ),
 					esc_html( get_option( 'blogname' ) )
 				),
 				'admin_bar_text'             => '<div style="background-color: #ffcf00; color: #191936; padding: 0 1rem;">' . __( 'Coming Soon Active', 'wp-plugin-hostgator' ) . '</div>',
 				'admin_notice_text'          => sprintf(
-				/* translators: %1$s is replaced with the opening link tag, %2$s is replaced with the closing link tag, %3$s is the opening link tag to preview the page, %4$s is the closing link tag. */
+					/* translators: %1$s is replaced with the opening link tag, %2$s is replaced with the closing link tag, %3$s is the opening link tag to preview the page, %4$s is the closing link tag. */
 					__( 'Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s.', 'wp-plugin-hostgator' ),
-					'<a href="' . get_home_url() . '?preview=coming_soon" title="' . __( 'Preview the coming soon landing page', 'wp-plugin-hostgator' ) . '">',
+					'<a href="' . esc_url( buildLink( get_home_url() . '?preview=coming_soon' ) ) . '" title="' . esc_attr__( 'Preview the coming soon landing page', 'wp-plugin-hostgator' ) . '">',
 					'</a>',
-					'<a href="' . esc_url( admin_url( 'admin.php?page=hostgator#/home' ) ) . '">',
+					'<a href="' . esc_url( buildLink( admin_url( 'admin.php?page=hostgator&nfd-target=coming-soon-section#/settings' ) ) ) . '">',
 					'</a>'
 				),
 				'template_styles'            => esc_url( HOSTGATOR_PLUGIN_URL . 'assets/styles/coming-soon.css' ),
@@ -179,8 +202,13 @@ require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/SettingsController.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/RestApi/rest-api.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/settings.php';
 require HOSTGATOR_PLUGIN_DIR . '/inc/updates.php';
+require_once HOSTGATOR_PLUGIN_DIR . '/inc/widgets/bootstrap.php';
+require_once HOSTGATOR_PLUGIN_DIR . '/inc/Helpers.php';
+require_once HOSTGATOR_PLUGIN_DIR . '/inc/Brand.php';
+require_once HOSTGATOR_PLUGIN_DIR . '/inc/SolutionsBrandIntegration.php';
 require_once HOSTGATOR_PLUGIN_DIR . '/inc/Filters.php';
 
+SolutionsBrandIntegration::init();
 Filters::init();
 
 /* WordPress Admin Page & Features */

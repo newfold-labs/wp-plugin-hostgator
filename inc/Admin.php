@@ -20,8 +20,6 @@ final class Admin {
 	public function __construct() {
 		/* Add Page to WordPress Admin Menu. */
 		\add_action( 'admin_menu', array( __CLASS__, 'page' ) );
-		/* Remove Solutions "My Solution" submenu from Plugins */
-		\add_action( 'admin_menu', array( __CLASS__, 'remove_solutions_plugins_submenu' ), 999 );
 		/* Load Page Scripts & Styles. */
 		\add_action( 'admin_enqueue_scripts', array( __CLASS__, 'assets' ) );
 		/* Load i18 files */
@@ -40,24 +38,6 @@ final class Admin {
 
 		if ( isset( $_GET['page'] ) && strpos( filter_input( INPUT_GET, 'page', FILTER_UNSAFE_RAW ), 'hostgator' ) >= 0 ) { // phpcs:ignore
 			\add_action( 'admin_footer_text', array( __CLASS__, 'add_brand_to_admin_footer' ) );
-		}
-	}
-
-	/**
-	 * Remove the Solutions module's "My Solution" submenu from the Plugins admin menu.
-	 * HostGator Solutions/Commerce us not yet available.
-	 *
-	 * @return void
-	 */
-	public static function remove_solutions_plugins_submenu() {
-		global $submenu;
-		if ( isset( $submenu['plugins.php'] ) ) {
-			foreach ( $submenu['plugins.php'] as $index => $item ) {
-				if ( isset( $item[2] ) && false !== strpos( $item[2], 'nfd_solutions' ) ) {
-					unset( $submenu['plugins.php'][ $index ] );
-					break;
-				}
-			}
 		}
 	}
 
@@ -144,14 +124,6 @@ final class Admin {
 					return 0;
 				}
 				return ( $a['priority'] < $b['priority'] ? -1 : 1 );
-			}
-		);
-
-		// remove Solutions link from subnav
-		$subnav = array_filter(
-			$subnav,
-			function ( $item ) {
-				return 'hostgator#/commerce' !== $item['route'];
 			}
 		);
 
@@ -370,7 +342,13 @@ final class Admin {
 			HOSTGATOR_BUILD_URL . '/index.js',
 			array_merge(
 				$asset['dependencies'],
-				array( 'newfold-features', 'nfd-runtime', 'nfd-portal-registry' )
+				array(
+					'newfold-features',
+					'nfd-runtime',
+					'nfd-installer',
+					'nfd-portal-registry',
+					'wp-module-link-tracker',
+				)
 			),
 			$asset['version'],
 			true
@@ -385,7 +363,7 @@ final class Admin {
 		\wp_register_style(
 			'hostgator-style',
 			HOSTGATOR_BUILD_URL . '/index.css',
-			array( 'wp-components' ),
+			array( 'wp-components', 'nfd-installer' ),
 			$asset['version']
 		);
 

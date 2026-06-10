@@ -87,3 +87,54 @@ function hg_install_date_filter( $install_date ) {
 	return hg_get_plugin_install_date();
 }
 add_filter( 'nfd_install_date_filter', __NAMESPACE__ . '\\hg_install_date_filter' );
+
+/**
+ * SVG allowed tags for kses
+ *
+ * Example use: wp_kses( $svg, KSES_ALLOWED_SVG_TAGS );
+ */
+const KSES_ALLOWED_SVG_TAGS = array(
+	'svg'  => array(
+		'class'        => true,
+		'fill'         => true,
+		'height'       => true,
+		'stroke'       => true,
+		'stroke-width' => true,
+		'viewbox'      => true,
+		'width'        => true,
+		'xmlns'        => true,
+	),
+	'g'    => array(
+		'fill'              => true,
+		'stroke'            => true,
+		'stroke-miterlimit' => true,
+		'stroke-width'      => true,
+	),
+	'rect' => array(
+		'fill'      => true,
+		'height'    => true,
+		'rx'        => true,
+		'transform' => true,
+		'width'     => true,
+		'x'         => true,
+		'y'         => true,
+	),
+	'text' => array(
+		'fill'        => true,
+		'font-family' => true,
+		'font-size'   => true,
+		'font-weight' => true,
+		'title'       => true,
+		'transform'   => true,
+	),
+	'path' => array(
+		'd'               => true,
+		'fill'            => true,
+		'opacity'         => true,
+		'stroke-linecap'  => true,
+		'stroke-linejoin' => true,
+		'stroke-width'    => true,
+		'transform'       => true,
+
+	),
+);
