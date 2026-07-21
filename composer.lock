@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cfb9128cd9939f16b129d5115e162a96",
+    "content-hash": "9e92f018629fd2fea78faf7ea00d636f",
     "packages": [
         {
             "name": "colinmollenhour/credis",
@@ -1761,16 +1761,16 @@
         },
         {
             "name": "newfold-labs/wp-module-installer",
-            "version": "1.7.3",
+            "version": "1.7.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-installer.git",
-                "reference": "6c0471fc9c0a078dacc0628ee37362e8d51aa362"
+                "reference": "5e93e1920828b8a0f73f56e3c5891679ded407fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-installer/zipball/6c0471fc9c0a078dacc0628ee37362e8d51aa362",
-                "reference": "6c0471fc9c0a078dacc0628ee37362e8d51aa362",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-installer/zipball/5e93e1920828b8a0f73f56e3c5891679ded407fb",
+                "reference": "5e93e1920828b8a0f73f56e3c5891679ded407fb",
                 "shasum": ""
             },
             "require": {
@@ -1779,7 +1779,7 @@
             "require-dev": {
                 "johnpbloch/wordpress": "6.9.4",
                 "lucatume/wp-browser": "*",
-                "newfold-labs/wp-php-standards": "^1.2.5",
+                "newfold-labs/wp-php-standards": "^1.2.6",
                 "phpunit/phpcov": "*",
                 "wp-cli/i18n-command": "^2.7",
                 "wp-cli/wp-cli": "^2.12"
@@ -1818,10 +1818,10 @@
                     "vendor/bin/wp i18n update-po ./languages/wp-module-installer.pot ./languages"
                 ],
                 "i18n-php": [
-                    "vendor/bin/wp i18n make-php ./languages"
+                    "vendor/bin/wp i18n make-php ./languages --pretty-print"
                 ],
                 "i18n-json": [
-                    "rm -f languages/*.json && vendor/bin/wp i18n make-json ./languages --no-purge --pretty-print"
+                    "rm -f languages/*.json && vendor/bin/wp i18n make-json ./languages --pretty-print"
                 ],
                 "lint": [
                     "vendor/bin/phpcs --standard=phpcs.xml -s ."
@@ -1846,10 +1846,10 @@
             ],
             "description": "An installer for WordPress plugins and themes.",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-installer/tree/1.7.3",
+                "source": "https://github.com/newfold-labs/wp-module-installer/tree/1.7.5",
                 "issues": "https://github.com/newfold-labs/wp-module-installer/issues"
             },
-            "time": "2026-03-23T19:25:51+00:00"
+            "time": "2026-06-23T13:21:37+00:00"
         },
         {
             "name": "newfold-labs/wp-module-link-tracker",
@@ -2533,16 +2533,16 @@
         },
         {
             "name": "newfold-labs/wp-module-performance",
-            "version": "3.7.12",
+            "version": "3.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-performance.git",
-                "reference": "845f2e8abe7aa94132522418e4256d7d3e3ada59"
+                "reference": "7656ad4dce2d66674b6e08075aa4429f135d55b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-performance/zipball/845f2e8abe7aa94132522418e4256d7d3e3ada59",
-                "reference": "845f2e8abe7aa94132522418e4256d7d3e3ada59",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-performance/zipball/7656ad4dce2d66674b6e08075aa4429f135d55b7",
+                "reference": "7656ad4dce2d66674b6e08075aa4429f135d55b7",
                 "shasum": ""
             },
             "require": {
@@ -2632,10 +2632,10 @@
             ],
             "description": "A module for managing caching functionality.",
             "support": {
-                "source": "https://github.com/newfold-labs/wp-module-performance/tree/3.7.12",
+                "source": "https://github.com/newfold-labs/wp-module-performance/tree/3.8.1",
                 "issues": "https://github.com/newfold-labs/wp-module-performance/issues"
             },
-            "time": "2026-04-29T17:21:33+00:00"
+            "time": "2026-06-23T09:58:20+00:00"
         },
         {
             "name": "newfold-labs/wp-module-pls",
