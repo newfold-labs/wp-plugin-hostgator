@@ -1,7 +1,7 @@
 {
-    "translation-revision-date": "2024-12-16 16:11+0000",
+    "translation-revision-date": "2026-05-28T20:57:38+00:00",
     "generator": "WP-CLI\/2.12.0",
-    "source": "build\/3.0.2\/index.js",
+    "source": "build\/3.1.0\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
@@ -16,17 +16,23 @@
             "Home": [
                 "In\u00edcio"
             ],
-            "Marketplace": [
-                "Mercado"
-            ],
-            "Performance": [
-                "Desempenho"
-            ],
             "Settings": [
                 "Configura\u00e7\u00f5es"
             ],
-            "Help": [
-                "Ajuda"
+            "Not Live": [
+                "N\u00e3o ativo"
+            ],
+            "Live": [
+                "Ativo"
+            ],
+            "Your website is currently displaying a \"Coming Soon\" page.": [
+                "Seu site est\u00e1 exibindo uma p\u00e1gina \"Em breve\"."
+            ],
+            "Editor": [
+                ""
+            ],
+            "Hosting Panel": [
+                ""
             ],
             "Oh No, An Error!": [
                 "Oh, N\u00e3o, Um Erro!"
@@ -36,6 +42,12 @@
             ],
             "If the error persists, please contact support.": [
                 "Se o erro persistir, por favor contate o suporte."
+            ],
+            "Error code:": [
+                ""
+            ],
+            "HostGator WordPress Plugin": [
+                ""
             ],
             "Phone": [
                 "Telefone"
@@ -94,6 +106,48 @@
             "There's nothing here!": [
                 "N\u00e3o h\u00e1 nada aqui!"
             ],
+            "Manage WordPress": [
+                ""
+            ],
+            "Staging": [
+                ""
+            ],
+            "Performance": [
+                "Desempenho"
+            ],
+            "Commerce": [
+                ""
+            ],
+            "Marketplace": [
+                "Mercado"
+            ],
+            "Help": [
+                "Ajuda"
+            ],
+            "Admin": [
+                "Admin"
+            ],
+            "Secret page to manage admin features and settings.": [
+                "P\u00e1gina secreta para gerenciar recursos e configura\u00e7\u00f5es de administra\u00e7\u00e3o."
+            ],
+            "Premium tools available in eCommerce Add-Ons": [
+                ""
+            ],
+            "Discover exclusive features, designed to deliver unmatched value and elevate your online experience.": [
+                ""
+            ],
+            "We are available 24\/7 to help answer questions and solve your problems.": [
+                "Estamos dispon\u00edveis 24 horas por dia, 7 dias por semana para ajudar a responder perguntas e resolver seus problemas."
+            ],
+            "Welcome to HostGator": [
+                ""
+            ],
+            "We're very excited to get started with you!": [
+                ""
+            ],
+            "Quick Links": [
+                ""
+            ],
             "Settings and Performance": [
                 "Configura\u00e7\u00f5es e Desempenho"
             ],
@@ -102,6 +156,9 @@
             ],
             "Manage Settings": [
                 "Gerenciar Configura\u00e7\u00f5es"
+            ],
+            "Manage your site settings. You can adjust automatic updates, comments, revisions and more.": [
+                ""
             ],
             "Manage site performance and caching settings as well as clear the site cache.": [
                 "Gerencie o desempenho do site e as configura\u00e7\u00f5es de cache, bem como limpe o cache do site."
@@ -166,6 +223,9 @@
             "Domains": [
                 "Dom\u00ednios"
             ],
+            "Manage Domain": [
+                "Gerenciar dom\u00ednio"
+            ],
             "Find a Domain": [
                 "Encontre um Dom\u00ednio"
             ],
@@ -177,39 +237,6 @@
             ],
             "24\/7\/365 support. We work when you work.": [
                 "Suporte 24\/7\/365. N\u00f3s trabalhamos quando voc\u00ea trabalha."
-            ],
-            "Plugins": [
-                "Plugins"
-            ],
-            "Themes": [
-                "Temas"
-            ],
-            "Automatic Updates": [
-                "Atualiza\u00e7\u00f5es Autom\u00e1ticas"
-            ],
-            "Disable comments for older posts": [
-                "Desabilitar coment\u00e1rios de postagens mais antigas"
-            ],
-            "Comments": [
-                "Coment\u00e1rios"
-            ],
-            "Content Options": [
-                "Op\u00e7\u00f5es de Conte\u00fado"
-            ],
-            "Controls for content revisions and how often to empty the trash.": [
-                "Controles para revis\u00f5es de conte\u00fado e com que frequ\u00eancia esvaziar a lixeira."
-            ],
-            "Admin": [
-                "Admin"
-            ],
-            "Secret page to manage admin features and settings.": [
-                "P\u00e1gina secreta para gerenciar recursos e configura\u00e7\u00f5es de administra\u00e7\u00e3o."
-            ],
-            "We are available 24\/7 to help answer questions and solve your problems.": [
-                "Estamos dispon\u00edveis 24 horas por dia, 7 dias por semana para ajudar a responder perguntas e resolver seus problemas."
-            ],
-            "Manage Domain": [
-                "Gerenciar dom\u00ednio"
             ],
             "Explore our featured collection of tools and services.": [
                 "Explore nossa cole\u00e7\u00e3o de ferramentas e servi\u00e7os em destaque."
@@ -235,83 +262,47 @@
             "WordPress Core": [
                 "WordPress Core"
             ],
+            "Plugins": [
+                "Plugins"
+            ],
+            "Themes": [
+                "Temas"
+            ],
+            "Automatic Updates": [
+                "Atualiza\u00e7\u00f5es Autom\u00e1ticas"
+            ],
             "Keeping automatic updates on ensures timely security fixes and the latest features.": [
                 "Manter atualiza\u00e7\u00f5es autom\u00e1ticas ativadas garante corre\u00e7\u00f5es de seguran\u00e7a oportunas e os recursos mais recentes."
             ],
             "Oops! Something went wrong. Please try again.": [
                 "Ops! Algo deu errado. Tente novamente."
             ],
+            "Coming soon activated": [
+                ""
+            ],
+            "Coming soon deactivated": [
+                ""
+            ],
+            "Coming soon page is active. Site requires login.": [
+                ""
+            ],
+            "Coming soon page is not active. Site is live to visitors.": [
+                ""
+            ],
             "Site Status": [
                 "Status do site"
             ],
-            "Not Live": [
-                "N\u00e3o ativo"
+            "Turn off your \"Coming Soon\" page when you are ready to launch your website.": [
+                ""
             ],
-            "Live": [
-                "Ativo"
+            "Turn on your \"Coming Soon\" page when you need to make major changes to your website.": [
+                ""
             ],
             "Coming Soon page": [
                 "P\u00e1gina em breve"
             ],
             "Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen.": [
                 "Sua p\u00e1gina em breve do Hostgator permite que voc\u00ea oculte seu site dos visitantes enquanto voc\u00ea faz a m\u00e1gica acontecer."
-            ],
-            "Your website is currently displaying a \"Coming Soon\" page.": [
-                "Seu site est\u00e1 exibindo uma p\u00e1gina \"Em breve\"."
-            ],
-            "Comments setting saved.": [
-                "Configura\u00e7\u00e3o de coment\u00e1rios salva."
-            ],
-            "Comments allow visitors to provide feedback and respond to your posts or pages.": [
-                "Os coment\u00e1rios permitem que os visitantes forne\u00e7am feedback e respondam \u00e0s suas postagens ou p\u00e1ginas."
-            ],
-            "The Help Center provides guided, step-by-step assistance as you build your site.": [
-                "A Central de Ajuda fornece assist\u00eancia guiada passo a passo enquanto voc\u00ea cria seu site."
-            ],
-            "Sorry, that is not allowed.": [
-                "Desculpe, isso n\u00e3o \u00e9 permitido."
-            ],
-            "This feature cannot currently be modified.": [
-                "Este recurso n\u00e3o pode ser modificado no momento."
-            ],
-            "This is where you can manage common settings for your website.": [
-                "Aqui \u00e9 onde voc\u00ea pode gerenciar as configura\u00e7\u00f5es comuns do seu site."
-            ],
-            "Features": [
-                "Recursos"
-            ],
-            "The performance feature provides improvements to loads faster for visitors including cache settings.": [
-                "O recurso de desempenho fornece melhorias para carregamentos mais r\u00e1pidos para visitantes, incluindo configura\u00e7\u00f5es de cache."
-            ],
-            "The staging feature provides a way to copy a site to test new updates, features or content.": [
-                "O recurso de prepara\u00e7\u00e3o fornece uma maneira de copiar um site para testar novas atualiza\u00e7\u00f5es, recursos ou conte\u00fado."
-            ],
-            "WonderBlocks provides a library of customizable block patterns and page templates.": [
-                "O WonderBlocks fornece uma biblioteca de padr\u00f5es de blocos e modelos de p\u00e1gina personaliz\u00e1veis."
-            ],
-            "Welcome to HostGator": [
-                ""
-            ],
-            "We're very excited to get started with you!": [
-                ""
-            ],
-            "Editor": [
-                ""
-            ],
-            "Hosting Panel": [
-                ""
-            ],
-            "Error code:": [
-                ""
-            ],
-            "HostGator WordPress Plugin": [
-                ""
-            ],
-            "Manage WordPress": [
-                ""
-            ],
-            "Staging": [
-                ""
             ],
             "Disabled old post comments": [
                 ""
@@ -325,6 +316,9 @@
             "Comments are allowed on old posts.": [
                 ""
             ],
+            "Disable comments for older posts": [
+                "Desabilitar coment\u00e1rios de postagens mais antigas"
+            ],
             "Comments setting saved": [
                 ""
             ],
@@ -334,11 +328,20 @@
             "Close comments after %s day.": [
                 ""
             ],
+            "Comments setting saved.": [
+                "Configura\u00e7\u00e3o de coment\u00e1rios salva."
+            ],
             "Posts will display %s comment at a time.": [
                 ""
             ],
             "Display %s comments per page.": [
                 ""
+            ],
+            "Comments": [
+                "Coment\u00e1rios"
+            ],
+            "Comments allow visitors to provide feedback and respond to your posts or pages.": [
+                "Os coment\u00e1rios permitem que os visitantes forne\u00e7am feedback e respondam \u00e0s suas postagens ou p\u00e1ginas."
             ],
             "Post revision setting saved": [
                 ""
@@ -361,6 +364,21 @@
             "Trash emptying frequency": [
                 ""
             ],
+            "Content Options": [
+                "Op\u00e7\u00f5es de Conte\u00fado"
+            ],
+            "Controls for content revisions and how often to empty the trash.": [
+                "Controles para revis\u00f5es de conte\u00fado e com que frequ\u00eancia esvaziar a lixeira."
+            ],
+            "The Help Center provides guided, step-by-step assistance as you build your site.": [
+                "A Central de Ajuda fornece assist\u00eancia guiada passo a passo enquanto voc\u00ea cria seu site."
+            ],
+            "Sorry, that is not allowed.": [
+                "Desculpe, isso n\u00e3o \u00e9 permitido."
+            ],
+            "This feature cannot currently be modified.": [
+                "Este recurso n\u00e3o pode ser modificado no momento."
+            ],
             "Optimize your website my managing cache, security and performance settings.": [
                 ""
             ],
@@ -370,31 +388,31 @@
             "General Settings": [
                 ""
             ],
+            "This is where you can manage common settings for your website.": [
+                "Aqui \u00e9 onde voc\u00ea pode gerenciar as configura\u00e7\u00f5es comuns do seu site."
+            ],
+            "Features": [
+                "Recursos"
+            ],
+            "Customize the available features as you manage your website.": [
+                ""
+            ],
             "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready.": [
                 ""
+            ],
+            "The performance feature provides improvements to loads faster for visitors including cache settings.": [
+                "O recurso de desempenho fornece melhorias para carregamentos mais r\u00e1pidos para visitantes, incluindo configura\u00e7\u00f5es de cache."
+            ],
+            "The staging feature provides a way to copy a site to test new updates, features or content.": [
+                "O recurso de prepara\u00e7\u00e3o fornece uma maneira de copiar um site para testar novas atualiza\u00e7\u00f5es, recursos ou conte\u00fado."
+            ],
+            "WonderBlocks provides a library of customizable block patterns and page templates.": [
+                "O WonderBlocks fornece uma biblioteca de padr\u00f5es de blocos e modelos de p\u00e1gina personaliz\u00e1veis."
             ],
             "Site Editor": [
                 ""
             ],
             "Customizer": [
-                ""
-            ],
-            "Commerce": [
-                ""
-            ],
-            "Premium tools available in eCommerce Add-Ons": [
-                ""
-            ],
-            "Discover exclusive features, designed to deliver unmatched value and elevate your online experience.": [
-                ""
-            ],
-            "Quick Links": [
-                ""
-            ],
-            "Manage your site settings. You can adjust automatic updates, comments, revisions and more.": [
-                ""
-            ],
-            "Customize the available features as you manage your website.": [
                 ""
             ]
         }

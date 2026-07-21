@@ -26,6 +26,7 @@ final class Filters {
 		\add_filter( 'http_request_args', array( __CLASS__, 'add_hiive_headers' ), 99, 2 );
 		\add_filter( 'newfold/coming-soon/filter/portal_data', array( __CLASS__, 'filter_coming_soon_portal_data' ) );
 		\add_filter( 'newfold/sso/hosting_login', array( __CLASS__, 'configure_hosting_login' ) );
+		\add_filter( 'newfold_performance_object_cache_ui_available', '__return_false' );
 	}
 
 	/**
@@ -103,7 +104,15 @@ final class Filters {
 		);
 		$config['label']        = __( 'Login with HostGator', 'wp-plugin-hostgator' );
 		$config['accent_color'] = Brand::BUTTON_BACKGROUND;
-		$config['icon_svg']     = Helpers::get_svg( 'snappy-head-monotone' );
+
+		// The shared asset hardcodes fill="black", which overrides the module's
+		// `fill: currentColor` CSS and renders the icon black on the button.
+		// Swap to currentColor so it tints with the button's white text color.
+		$config['icon_svg'] = str_replace(
+			'fill="black"',
+			'fill="currentColor"',
+			Helpers::get_svg( 'snappy-head-monotone' )
+		);
 
 		return $config;
 	}
