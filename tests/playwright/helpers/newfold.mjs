@@ -174,6 +174,90 @@ async function getSkipMessage(pluginKey) {
     `current: WP ${wpVersion} & PHP ${phpVersion}`;
 }
 
+// ============================================================================
+// WOOCOMMERCE / COMPANION PLUGIN MANAGEMENT
+// ============================================================================
+
+/**
+ * Companion plugins known to call WooCommerce classes (e.g. WC_Data_Store) unconditionally
+ * on bootstrap. If WooCommerce is removed while one of these is still active, it fatals on
+ * the next WP-Cron tick and can take the rest of a test run down with it. Deactivated
+ * alongside WooCommerce so that failure mode can't cascade regardless of upstream fixes.
+ */
+const WOOCOMMERCE_DEPENDENT_PLUGINS = ['wp-plugin-payments-shipping'];
+
+/**
+ * @param {string} slug - Plugin slug
+ * @returns {Promise<boolean>} true if `wp plugin is-active <slug>` exits 0
+ *   (wordpress.wpCli() returns 0 for empty success stdout).
+ *
+ * --skip-plugins: `is-active` only needs the active_plugins option, not a full plugin
+ * bootstrap. Without this flag, checking a plugin that's *currently fataling on load*
+ * (e.g. one of the WOOCOMMERCE_DEPENDENT_PLUGINS right after WooCommerce is removed)
+ * makes the check itself fail, which wordpress.wpCli() reports as a non-zero/error
+ * result — indistinguishable from "not active". That masked exactly the case this
+ * helper exists to catch: the plugin was still active and still fataling, but looked
+ * "inactive" to this check, so it never got deactivated.
+ */
+async function isPluginActive(slug) {
+  return (await wordpress.wpCli(`plugin is-active ${slug} --skip-plugins`)) === 0;
+}
+
+/**
+ * Install and activate WooCommerce plugin.
+ * Callers that need to know whether WooCommerce is expected to work in the current
+ * environment first should check `supportsWoo()` above.
+ */
+async function installWooCommerce() {
+  try {
+    await wordpress.wpCli('plugin install woocommerce --activate');
+  } catch (error) {
+    utils.fancyLog('Failed to install WooCommerce:' + error.message, 100, 'yellow');
+  }
+}
+
+/**
+ * @returns {Promise<boolean>} true if WooCommerce is active
+ */
+async function isWooCommerceActive() {
+  return isPluginActive('woocommerce');
+}
+
+/**
+ * Uninstall WooCommerce, and any companion plugin known to fatal without it active.
+ * Runs `deactivate --uninstall` first; if the plugin is still active (e.g. uninstall step
+ * failed), runs `plugin deactivate` so later tests do not run with WooCommerce still active.
+ * Repeats up to `maxAttempts` (no unbounded recursion).
+ */
+async function uninstallWooCommerce() {
+  const maxAttempts = 3;
+  for (let i = 0; i < maxAttempts; i++) {
+    if (!(await isWooCommerceActive())) {
+      break;
+    }
+    await wordpress.wpCli('plugin deactivate woocommerce --uninstall');
+    if (!(await isWooCommerceActive())) {
+      break;
+    }
+    await wordpress.wpCli('plugin deactivate woocommerce');
+  }
+  if (await isWooCommerceActive()) {
+    utils.fancyLog(
+      'WooCommerce is still active after multiple deactivate attempts; later tests may fail.',
+      100,
+      'yellow',
+    );
+  }
+
+  for (const slug of WOOCOMMERCE_DEPENDENT_PLUGINS) {
+    if (await isPluginActive(slug)) {
+      // --skip-plugins here too: we want this plugin out of active_plugins even
+      // though (especially because) loading it currently fatals.
+      await wordpress.wpCli(`plugin deactivate ${slug} --skip-plugins`);
+    }
+  }
+}
+
 /**
  * Set plugin capabilities (brand plugin functionality)
  * 
@@ -398,6 +482,11 @@ export default {
   supportsYoast,
   supportsWonderTheme,
   getSkipMessage,
+
+  // WooCommerce / Companion Plugin Management
+  installWooCommerce,
+  isWooCommerceActive,
+  uninstallWooCommerce,
 
   // Capabilities
   setCapability,
