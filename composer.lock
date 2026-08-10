@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9f8274c630482003a8f3696de6ca5911",
+    "content-hash": "77616fcc0563d106fea127d981651cb5",
     "packages": [
         {
             "name": "colinmollenhour/credis",
@@ -477,16 +477,16 @@
         },
         {
             "name": "instawp/connect-helpers",
-            "version": "1.0.8",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/InstaWP/connect-helpers.git",
-                "reference": "7178cccefc15607880fd8376d95db74a4fb13ed1"
+                "reference": "e40678f5a7fd3e678e2706a0e72af76b97a3fd5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/InstaWP/connect-helpers/zipball/7178cccefc15607880fd8376d95db74a4fb13ed1",
-                "reference": "7178cccefc15607880fd8376d95db74a4fb13ed1",
+                "url": "https://api.github.com/repos/InstaWP/connect-helpers/zipball/e40678f5a7fd3e678e2706a0e72af76b97a3fd5f",
+                "reference": "e40678f5a7fd3e678e2706a0e72af76b97a3fd5f",
                 "shasum": ""
             },
             "require": {
@@ -518,10 +518,10 @@
             ],
             "description": "CLI Package for InstaWP Remote Features",
             "support": {
-                "source": "https://github.com/InstaWP/connect-helpers/tree/1.0.8",
+                "source": "https://github.com/InstaWP/connect-helpers/tree/1.1.2",
                 "issues": "https://github.com/InstaWP/connect-helpers/issues"
             },
-            "time": "2026-01-15T13:11:21+00:00"
+            "time": "2026-06-09T10:48:48+00:00"
         },
         {
             "name": "newfold-labs/container",
@@ -556,9 +556,6 @@
                 }
             ],
             "description": "A lightweight, PHP 7.0+ compatible, PSR-11 dependency injection container.",
-            "support": {
-                "source": "https://github.com/newfold-labs/container/tree/1.2.4"
-            },
             "time": "2026-03-06T22:45:10+00:00"
         },
         {
@@ -1990,10 +1987,6 @@
                 }
             ],
             "description": "A module that handles registration and management of Newfold modules used within our WordPress plugins.",
-            "support": {
-                "source": "https://github.com/newfold-labs/wp-module-loader/tree/1.1.0",
-                "issues": "https://github.com/newfold-labs/wp-module-loader/issues"
-            },
             "time": "2026-02-05T21:09:56+00:00"
         },
         {
@@ -2093,20 +2086,20 @@
         },
         {
             "name": "newfold-labs/wp-module-migration",
-            "version": "1.7.2",
+            "version": "1.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-migration.git",
-                "reference": "bb84ce6630110301efe3477775307174c620bcb5"
+                "reference": "489c642d5f2717cd4c460cc07f55fdd3fd34debd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-migration/zipball/bb84ce6630110301efe3477775307174c620bcb5",
-                "reference": "bb84ce6630110301efe3477775307174c620bcb5",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-migration/zipball/489c642d5f2717cd4c460cc07f55fdd3fd34debd",
+                "reference": "489c642d5f2717cd4c460cc07f55fdd3fd34debd",
                 "shasum": ""
             },
             "require": {
-                "instawp/connect-helpers": "^1.0.8",
+                "instawp/connect-helpers": "^1.1.2",
                 "newfold-labs/wp-module-loader": "^1.1.0"
             },
             "require-dev": {
@@ -2174,11 +2167,7 @@
                 }
             ],
             "description": "Initiates the migration process",
-            "support": {
-                "source": "https://github.com/newfold-labs/wp-module-migration/tree/1.7.2",
-                "issues": "https://github.com/newfold-labs/wp-module-migration/issues"
-            },
-            "time": "2026-05-05T14:11:58+00:00"
+            "time": "2026-07-22T20:26:39+00:00"
         },
         {
             "name": "newfold-labs/wp-module-notifications",
