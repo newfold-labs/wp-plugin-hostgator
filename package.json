@@ -24,7 +24,7 @@
         "@wordpress/api-fetch": "^7.51.0",
         "@wordpress/data": "^10.51.0",
         "@wordpress/dom-ready": "^4.47.0",
-        "@wordpress/url": "^4.44.0",
+        "@wordpress/url": "^4.52.0",
         "@wordpress/element": "^8.3.0",
         "@wordpress/i18n": "^6.16.0",
         "@wordpress/icons": "^13.2.0",
