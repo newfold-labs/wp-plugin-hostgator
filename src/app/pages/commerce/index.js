@@ -15,10 +15,7 @@ const CommercePage = () => {
 				}
 			>
 				<Title as="h1" data-testid="nfd-solutions-commerce-page-title">
-					{ __(
-						'Premium tools available in eCommerce Add-Ons',
-						'wp-plugin-hostgator'
-					) }
+					{ SolutionsPageComponent.getSolutionsPageTitle() }
 				</Title>
 				<Title
 					as="h2"
