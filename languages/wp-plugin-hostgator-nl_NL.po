@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2023-01-11T20:21:44+00:00\n"
-"PO-Revision-Date: 2026-08-12T21:17:47+00:00\n"
+"PO-Revision-Date: 2026-08-13T11:22:27+00:00\n"
 "Language: nl_NL\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: wp-plugin-hostgator\n"
@@ -511,10 +511,6 @@ msgid "Posts will save %s revision."
 msgid_plural "Posts will save %s revisions."
 msgstr[0] ""
 msgstr[1] ""
-
-#: build/3.1.0/index.js:1
-msgid "Premium tools available in eCommerce Add-Ons"
-msgstr ""
 
 #: inc/widgets/views/site-preview.php:179
 msgid "Preview Site"
