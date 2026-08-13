@@ -10,6 +10,24 @@ import { execSync } from 'child_process';
 import { Admin, PageUtils } from '@wordpress/e2e-test-utils-playwright';
 import utils from './utils.mjs';
 
+/** @type {string|undefined} */
+let pluginRoot;
+
+/**
+ * Plugin root must match wp-env's cwd (loadConfig uses path.resolve('.')).
+ * Prefer PLUGIN_DIR when Playwright config has run; otherwise use process cwd.
+ *
+ * @returns {string}
+ */
+function getPluginRoot() {
+  if (pluginRoot) {
+    return pluginRoot;
+  }
+
+  pluginRoot = process.env.PLUGIN_DIR || process.cwd();
+  return pluginRoot;
+}
+
 /**
  * Wait for WordPress admin to be ready
  * 
@@ -58,26 +76,43 @@ async function isPluginActive(page, pluginSlug) {
   return await deactivateLink.isVisible();
 }
 
+/** Default execSync timeout for wp-env CLI calls (2 minutes). Pass `timeout: 0` to disable. */
+const DEFAULT_WP_CLI_TIMEOUT_MS = 120_000;
+
 /**
  * Execute WordPress CLI command
- * 
+ *
  * @param {string} command - WP-CLI command to execute
- * @returns {string|number} - Output string if available, 0 for success, or error info.
+ * @param {Object} [options]
+ * @param {string} [options.cwd] - Override auto-detected plugin root for wp-env
+ * @param {number} [options.timeout] - execSync timeout in ms (default: 120000; use 0 to disable)
+ * @param {boolean} [options.failOnNonZeroExit] - When true, throw on non-zero exit code
+ * @returns {Promise<string|number>} Output string if available, 0 for success, or error info
  */
-async function wpCli(command) {
+async function wpCli(command, options = {}) {
+  // TODO: bail early if no cli access (live site or not wp-env setup)
+
+  const {
+    timeout = DEFAULT_WP_CLI_TIMEOUT_MS,
+    failOnNonZeroExit,
+    cwd,
+  } = options;
+
   utils.fancyLog(`🔧 WP-CLI command: ${command}`);
   try {
     const output = execSync(`npx wp-env run cli wp ${command}`, {
-      cwd: process.env.PLUGIN_DIR || process.cwd(),
-      encoding: 'utf-8', // auto convert Buffer to string
-      stdio: ['pipe', 'pipe', 'pipe'], // capture stdout/stderr
+      cwd: cwd ?? getPluginRoot(),
+      encoding: 'utf-8',
+      stdio: ['pipe', 'pipe', 'pipe'],
+      ...(timeout > 0 ? { timeout } : {}),
     });
 
-    // If output is empty, just return 0 for success
     return output.trim() ? output.trim() : 0;
   } catch (err) {
-    // err.status = exit code
-    // err.stdout / err.stderr may have useful info
+    if (failOnNonZeroExit) {
+      const detail = err.stderr ? err.stderr.toString().trim() : err.message;
+      throw new Error(`wp ${command}: ${detail}`);
+    }
     if (err.stderr) {
       return `Error: ${err.stderr.toString().trim()}`;
     }
@@ -86,11 +121,68 @@ async function wpCli(command) {
 }
 
 /**
+ * Whether a wpCli() result indicates failure (when failOnNonZeroExit is false).
+ *
+ * @param {string|number} result - wpCli return value
+ * @returns {boolean}
+ */
+function isWpCliFailure(result) {
+  return (
+    (typeof result === 'string' && result.startsWith('Error:')) ||
+    (typeof result === 'number' && result !== 0)
+  );
+}
+
+/**
+ * Format a wpCli() result for logs.
+ *
+ * @param {string|number} result - wpCli return value
+ * @returns {string}
+ */
+function formatWpCliResult(result) {
+  if (result === 0) {
+    return 'ok';
+  }
+  return String(result);
+}
+
+/**
+ * Run wpCli() with retries on failure (uses isWpCliFailure).
+ *
+ * @param {string} command - WP-CLI command to execute
+ * @param {Object} [options] - Passed to wpCli()
+ * @param {{ maxAttempts?: number, delayMs?: number }} [retry]
+ * @returns {Promise<{ result: string|number, attempt: number }>}
+ */
+async function wpCliWithRetry(command, options = {}, retry = {}) {
+  const { maxAttempts = 2, delayMs = 2000 } = retry;
+  let lastResult;
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    lastResult = await wpCli(command, options);
+    if (!isWpCliFailure(lastResult)) {
+      return { result: lastResult, attempt };
+    }
+    if (attempt < maxAttempts) {
+      utils.fancyLog(
+        `↻ WP-CLI retry ${attempt + 1}/${maxAttempts} in ${delayMs}ms: ${command}`,
+        120,
+        'yellow',
+        '',
+      );
+      await new Promise((resolve) => setTimeout(resolve, delayMs));
+    }
+  }
+
+  return { result: lastResult, attempt: maxAttempts };
+}
+
+/**
  * Set WordPress option via WP-CLI
  * 
  * @param {string} option - Option name
  * @param {string|boolean} value - Option value
- * @returns {string|number} - Output string if available, 0 for success, or error info.
+ * @returns {Promise<string|number>} Output string if available, 0 for success, or error info
  */
 async function setOption(option, value) {
   utils.fancyLog(`⚙️  Setting WordPress option: ${option} = ${value}`);
@@ -153,6 +245,9 @@ export default {
   
   // WordPress CLI and options
   wpCli,
+  wpCliWithRetry,
+  isWpCliFailure,
+  formatWpCliResult,
   setOption,
   setPermalinkStructure,
 };
