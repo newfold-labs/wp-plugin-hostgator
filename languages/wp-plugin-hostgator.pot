@@ -513,10 +513,6 @@ msgid_plural "Posts will save %s revisions."
 msgstr[0] ""
 msgstr[1] ""
 
-#: build/3.1.0/index.js:1
-msgid "Premium tools available in eCommerce Add-Ons"
-msgstr ""
-
 #: inc/widgets/views/site-preview.php:179
 msgid "Preview Site"
 msgstr ""
