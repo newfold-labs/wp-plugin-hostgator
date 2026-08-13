@@ -1,13 +1,13 @@
 {
-    "translation-revision-date": "YEAR-MO-DA HO:MI+ZONE",
+    "translation-revision-date": "2026-05-28T20:57:38+00:00",
     "generator": "WP-CLI\/2.12.0",
-    "source": "build\/3.0.2\/index.js",
+    "source": "build\/3.1.0\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
             "": {
                 "domain": "messages",
-                "lang": "fr_FR",
+                "lang": "de_DE",
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
             "HostGator": [
@@ -17,6 +17,15 @@
                 ""
             ],
             "Settings": [
+                ""
+            ],
+            "Not Live": [
+                ""
+            ],
+            "Live": [
+                ""
+            ],
+            "Your website is currently displaying a \"Coming Soon\" page.": [
                 ""
             ],
             "Editor": [
@@ -106,6 +115,9 @@
             "Performance": [
                 ""
             ],
+            "Commerce": [
+                ""
+            ],
             "Marketplace": [
                 ""
             ],
@@ -118,6 +130,12 @@
             "Secret page to manage admin features and settings.": [
                 ""
             ],
+            "Premium tools available in eCommerce Add-Ons": [
+                ""
+            ],
+            "Discover exclusive features, designed to deliver unmatched value and elevate your online experience.": [
+                ""
+            ],
             "We are available 24\/7 to help answer questions and solve your problems.": [
                 ""
             ],
@@ -127,6 +145,9 @@
             "We're very excited to get started with you!": [
                 ""
             ],
+            "Quick Links": [
+                ""
+            ],
             "Settings and Performance": [
                 ""
             ],
@@ -134,6 +155,9 @@
                 ""
             ],
             "Manage Settings": [
+                ""
+            ],
+            "Manage your site settings. You can adjust automatic updates, comments, revisions and more.": [
                 ""
             ],
             "Manage site performance and caching settings as well as clear the site cache.": [
@@ -253,22 +277,31 @@
             "Oops! Something went wrong. Please try again.": [
                 ""
             ],
+            "Coming soon activated": [
+                ""
+            ],
+            "Coming soon deactivated": [
+                ""
+            ],
+            "Coming soon page is active. Site requires login.": [
+                ""
+            ],
+            "Coming soon page is not active. Site is live to visitors.": [
+                ""
+            ],
             "Site Status": [
                 ""
             ],
-            "Not Live": [
+            "Turn off your \"Coming Soon\" page when you are ready to launch your website.": [
                 ""
             ],
-            "Live": [
+            "Turn on your \"Coming Soon\" page when you need to make major changes to your website.": [
                 ""
             ],
             "Coming Soon page": [
                 ""
             ],
             "Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen.": [
-                ""
-            ],
-            "Your website is currently displaying a \"Coming Soon\" page.": [
                 ""
             ],
             "Disabled old post comments": [
@@ -361,6 +394,9 @@
             "Features": [
                 ""
             ],
+            "Customize the available features as you manage your website.": [
+                ""
+            ],
             "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready.": [
                 ""
             ],
@@ -377,24 +413,6 @@
                 ""
             ],
             "Customizer": [
-                ""
-            ],
-            "Commerce": [
-                ""
-            ],
-            "Premium tools available in eCommerce Add-Ons": [
-                ""
-            ],
-            "Discover exclusive features, designed to deliver unmatched value and elevate your online experience.": [
-                ""
-            ],
-            "Quick Links": [
-                ""
-            ],
-            "Manage your site settings. You can adjust automatic updates, comments, revisions and more.": [
-                ""
-            ],
-            "Customize the available features as you manage your website.": [
                 ""
             ]
         }

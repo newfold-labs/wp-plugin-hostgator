@@ -6,13 +6,11 @@ test.describe('Home Page', () => {
     await auth.navigateToAdminPage(page, 'admin.php?page=hostgator#/home');
   });
 
-  test('Is accessible', async ({ page }) => {
+  test('Is Accessible', async ({ page }) => {
     await page.waitForSelector('#hgwp-app-rendered', { timeout: 10000 });
-    await page.waitForSelector('.hgwp-app-body', { state: 'visible', timeout: 10000 });
-    await page.waitForTimeout(500);
-    await a11y.checkA11y(page, '.hgwp-app-body', {
-      disabledRules: ['region'],
-    });
+    await page.waitForSelector('.hgwp-app-home-page', { timeout: 10000 });
+
+    await a11y.checkA11y(page, '.hgwp-app-body');
   });
 
   test('Home page content is visible', async ({ page }) => {

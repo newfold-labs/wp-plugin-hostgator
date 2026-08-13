@@ -109,6 +109,13 @@ export const routes = [
 		condition: true,
 	},
 	{
+		name: '/settings/settings',
+		title: __( 'Manage WordPress', 'wp-plugin-hostgator' ),
+		Component: Settings,
+		Icon: AdjustmentsHorizontalIcon,
+		condition: true,
+	},
+	{
 		name: '/settings/staging',
 		title: __( 'Staging', 'wp-plugin-hostgator' ),
 		Component: Settings,
@@ -155,7 +162,7 @@ export const routes = [
 const topRoutePaths = [
 	'/home',
 	'/settings',
-	// '/commerce', // remove commerce route until solutions are ready
+	'/commerce',
 	'/marketplace',
 	'/help',
 ];

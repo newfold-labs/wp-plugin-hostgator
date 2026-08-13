@@ -80,4 +80,46 @@ class AdminWpunitTest extends \lucatume\WPBrowser\TestCase\WPTestCase {
 		$this->assertNotContains( 'hostgator#/settings/performance', $routes );
 		$this->assertNotContains( 'hostgator#/settings/staging', $routes );
 	}
+
+	/**
+	 * @covers \HostGator\Admin::render
+	 */
+	public function test_render_outputs_app_shell_when_wp_meets_requires(): void {
+		global $wp_version;
+		$previous = $wp_version;
+		require_once codecept_root_dir( 'inc/Admin.php' );
+		try {
+			$wp_version = '99.0';
+			ob_start();
+			Admin::render();
+			$html = ob_get_clean();
+			$this->assertStringContainsString( 'id="hwa-app"', $html );
+			$this->assertStringContainsString( 'nfd-coming-soon-portal', $html );
+		} finally {
+			$wp_version = $previous;
+		}
+	}
+
+	/**
+	 * Outdated WordPress branch lives in Admin::render() (HostGator has no AppWhenOutdated template).
+	 *
+	 * @covers \HostGator\Admin::render
+	 */
+	public function test_render_outputs_outdated_notice_when_wp_below_requires(): void {
+		global $wp_version;
+		$previous = $wp_version;
+		require_once codecept_root_dir( 'inc/Admin.php' );
+		try {
+			$wp_version = '5.0';
+			ob_start();
+			Admin::render();
+			$html = ob_get_clean();
+			$this->assertStringContainsString( 'Please update to a newer WordPress version.', $html );
+			$this->assertStringContainsString( 'update-core.php', $html );
+			$this->assertStringContainsString( 'Please update now', $html );
+			$this->assertStringContainsString( 'hgwp-header', $html );
+		} finally {
+			$wp_version = $previous;
+		}
+	}
 }
