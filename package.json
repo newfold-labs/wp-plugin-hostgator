@@ -21,7 +21,7 @@
         "@newfold/ui-component-library": "^2.1.1",
         "@reduxjs/toolkit": "^2.12.0",
         "@wordpress/compose": "^8.5.0",
-        "@wordpress/api-fetch": "^7.52.0",
+        "@wordpress/api-fetch": "^7.53.0",
         "@wordpress/data": "^10.52.0",
         "@wordpress/dom-ready": "^4.52.0",
         "@wordpress/url": "^4.53.0",
