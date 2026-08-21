@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "75b0925a319f2aabbd7fa43bda24a6ea",
+    "content-hash": "b60139cd692bc0e71812b5faec28e008",
     "packages": [
         {
             "name": "colinmollenhour/credis",
@@ -725,16 +725,16 @@
         },
         {
             "name": "newfold-labs/wp-module-atomic",
-            "version": "1.4.1",
+            "version": "1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-atomic.git",
-                "reference": "e09b1e735462b10d4eb84563ffae8affe898e32f"
+                "reference": "b51c988cc26689c328341773a178386f070a2404"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-atomic/zipball/e09b1e735462b10d4eb84563ffae8affe898e32f",
-                "reference": "e09b1e735462b10d4eb84563ffae8affe898e32f",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-atomic/zipball/b51c988cc26689c328341773a178386f070a2404",
+                "reference": "b51c988cc26689c328341773a178386f070a2404",
                 "shasum": ""
             },
             "require": {
@@ -781,11 +781,7 @@
                 }
             ],
             "description": "A module to customize a brand plugin for wp cloud environments.",
-            "support": {
-                "source": "https://github.com/newfold-labs/wp-module-atomic/tree/1.4.1",
-                "issues": "https://github.com/newfold-labs/wp-module-atomic/issues"
-            },
-            "time": "2026-02-05T07:11:06+00:00"
+            "time": "2026-08-17T18:20:28+00:00"
         },
         {
             "name": "newfold-labs/wp-module-coming-soon",
