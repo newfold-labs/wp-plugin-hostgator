@@ -172,8 +172,20 @@ jobs:
           npx wp-env run cli wp core version
           echo "WordPress is ready!"
 
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps chromium
+      - name: Get Playwright version
+        id: playwright-version
+        run: echo "version=$(node -e "console.log(require('@playwright/test/package.json').version)")" >> "$GITHUB_OUTPUT"
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ steps.playwright-version.outputs.version }}
+
+      # Skip --with-deps: apt-get can hang on slow ubuntu mirrors. ubuntu-latest includes Chromium runtime libraries.
+      - name: Install Playwright Chromium
+        timeout-minutes: 5
+        run: npx playwright install chromium
 
       - name: Prune nested Playwright copies from vendor modules
         run: node .github/scripts/prune-vendor-playwright-dupes.mjs
