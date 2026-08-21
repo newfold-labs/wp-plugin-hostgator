@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b60139cd692bc0e71812b5faec28e008",
+    "content-hash": "cf67d97f5d816126dedb467002293264",
     "packages": [
         {
             "name": "colinmollenhour/credis",
@@ -2886,20 +2886,20 @@
         },
         {
             "name": "newfold-labs/wp-module-sso",
-            "version": "1.3.0",
+            "version": "1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-sso.git",
-                "reference": "43ad446f47a9cd6f868f0f846069d3a655e2bee9"
+                "reference": "39cd322802f7f79698bb51e1bdf9bad3e4f3a021"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-sso/zipball/43ad446f47a9cd6f868f0f846069d3a655e2bee9",
-                "reference": "43ad446f47a9cd6f868f0f846069d3a655e2bee9",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-sso/zipball/39cd322802f7f79698bb51e1bdf9bad3e4f3a021",
+                "reference": "39cd322802f7f79698bb51e1bdf9bad3e4f3a021",
                 "shasum": ""
             },
             "require": {
-                "newfold-labs/wp-module-data": ">=2.9.3"
+                "newfold-labs/wp-module-data": ">=2.9.6"
             },
             "require-dev": {
                 "johnpbloch/wordpress": "@stable",
@@ -2967,11 +2967,7 @@
                 }
             ],
             "description": "Single sign-on functionality for Newfold WordPress sites.",
-            "support": {
-                "source": "https://github.com/newfold-labs/wp-module-sso/tree/1.3.0",
-                "issues": "https://github.com/newfold-labs/wp-module-sso/issues"
-            },
-            "time": "2026-04-27T07:37:47+00:00"
+            "time": "2026-08-14T10:03:41+00:00"
         },
         {
             "name": "newfold-labs/wp-module-staging",
