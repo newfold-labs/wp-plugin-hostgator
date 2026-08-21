@@ -1,4 +1,4 @@
-import { TAILWINDCSS_PRESET } from "@newfold/ui-component-library";
+import TAILWINDCSS_PRESET from "@newfold/ui-component-library/presets/tailwindcss";
 
 module.exports = {
     presets: [TAILWINDCSS_PRESET],
