@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "21273f12f24fd4eb487066317f749fd7",
+    "content-hash": "0cfa5a99c204b8fc880c9632850d9d99",
     "packages": [
         {
             "name": "colinmollenhour/credis",
@@ -1425,10 +1425,6 @@
                 }
             ],
             "description": "A module for providing an interface for features.",
-            "support": {
-                "source": "https://github.com/newfold-labs/wp-module-features/tree/1.5.2",
-                "issues": "https://github.com/newfold-labs/wp-module-features/issues"
-            },
             "time": "2026-02-04T16:38:05+00:00"
         },
         {
@@ -1651,10 +1647,6 @@
                 }
             ],
             "description": "A centralized Newfold module for managing .htaccess files across Newfold brand plugins. It provides a canonical ruleset, validates syntax, prevents duplicate or conflicting directives, maintains backups, and exposes a consumer API for other modules to safely register their own rewrite fragments.",
-            "support": {
-                "source": "https://github.com/newfold-labs/wp-module-htaccess/tree/1.0.1",
-                "issues": "https://github.com/newfold-labs/wp-module-htaccess/issues"
-            },
             "time": "2026-02-06T16:41:21+00:00"
         },
         {
@@ -2469,16 +2461,16 @@
         },
         {
             "name": "newfold-labs/wp-module-performance",
-            "version": "3.9.0",
+            "version": "3.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-performance.git",
-                "reference": "1e932ebdbd353ebd9b488edf50553a1a1bf6a005"
+                "reference": "6bb95bb65486d2a7f65c9b71f58bf5f0879791a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-performance/zipball/1e932ebdbd353ebd9b488edf50553a1a1bf6a005",
-                "reference": "1e932ebdbd353ebd9b488edf50553a1a1bf6a005",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-performance/zipball/6bb95bb65486d2a7f65c9b71f58bf5f0879791a4",
+                "reference": "6bb95bb65486d2a7f65c9b71f58bf5f0879791a4",
                 "shasum": ""
             },
             "require": {
@@ -2567,7 +2559,7 @@
                 }
             ],
             "description": "A module for managing caching functionality.",
-            "time": "2026-08-19T14:53:17+00:00"
+            "time": "2026-08-25T08:11:34+00:00"
         },
         {
             "name": "newfold-labs/wp-module-pls",
