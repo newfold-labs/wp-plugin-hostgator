@@ -5,8 +5,8 @@ return [
 	'language' => 'fr_FR',
 	'project-id-version' => 'The HostGator Plugin 3.0.0',
 	'pot-creation-date' => '2023-01-11T20:21:44+00:00',
-	'po-revision-date' => '2026-08-26T20:31:30+00:00',
+	'po-revision-date' => '2026-08-26T20:52:28+00:00',
 	'messages' => [
-		'The HostGator Plugin' => 'HostGator Plugin',
+		'The HostGator Plugin' => 'Le Plugin HostGator',
 	],
 ];

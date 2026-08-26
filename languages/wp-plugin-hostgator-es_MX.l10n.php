@@ -5,9 +5,9 @@ return [
 	'language' => 'es_MX',
 	'project-id-version' => 'hostgator-wordpress-plugin',
 	'pot-creation-date' => '2023-01-11T20:21:44+00:00',
-	'po-revision-date' => '2026-08-26T20:31:30+00:00',
+	'po-revision-date' => '2026-08-26T20:52:28+00:00',
 	'messages' => [
-		'The HostGator Plugin' => 'Plugin HostGator',
+		'The HostGator Plugin' => 'El plugin de HostGator',
 		'https://hostgator.com' => 'https://www.hostgator.mx',
 		'WordPress plugin that integrates a WordPress site with the HostGator control panel, including performance, security, and update features.' => 'Plugin WordPress que integra un sitio web a WordPress con el panel de control de HostGator, incluyendo características de rendimiento, seguridad y actualización.',
 		'HostGator' => 'HostGator',
