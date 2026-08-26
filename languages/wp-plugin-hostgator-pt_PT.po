@@ -1,21 +1,22 @@
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: hostgator-wordpress-plugin\n"
 "Report-Msgid-Bugs-To: https://github.com/newfold-labs/wp-plugin-hostgator/issues\n"
+"POT-Creation-Date: 2023-01-11T20:21:44+00:00\n"
+"PO-Revision-Date: 2026-08-26T22:06:39+00:00\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese, Portugal\n"
+"Language: pt_PT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-01-11T20:21:44+00:00\n"
-"PO-Revision-Date: 2026-08-26T21:15:35+00:00\n"
-"Language: pt_PT\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: wp-plugin-hostgator\n"
 
 #: inc/plugin-php-compat-check.php:124
 msgid " Please contact your web host about upgrading PHP."
-msgstr ""
+msgstr "Por favor, contacte o seu alojamento web para atualizar o PHP."
 
 #. translators: 1: legacy plugin name 2: plugin name
 #: inc/plugin-nfd-compat-check.php:188
@@ -69,7 +70,7 @@ msgstr "Um Novo Site WordPress"
 
 #: build/3.2.0/index.js:23
 msgid "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready."
-msgstr ""
+msgstr "Um site de staging é uma cópia do seu site live, oferecendo um ambiente seguro para experimentar, testar atualizações e implementar quando estiver pronto."
 
 #: build/3.2.0/index.js:1
 msgid "Access & manage your HostGator account."
@@ -93,13 +94,13 @@ msgstr "Ocorreu um erro ao carregar o conteúdo. Tente novamente mais tarde."
 
 #: inc/updates.php:166
 msgid "Auto-updates enabled"
-msgstr ""
+msgstr "Atualizações automáticas ativadas"
 
 #. translators: %s Settings > General page URL.
 #: inc/updates.php:115 inc/updates.php:143 inc/updates.php:170
 #, php-format
 msgid "Auto-updates enabled on the <a href=\"%s\">HostGator > Settings</a> page."
-msgstr ""
+msgstr "Atualizações automáticas ativadas na página de Definições > <a href=\"%s\">HostGator</a>."
 
 #: build/3.2.0/index.js:1
 msgid "Automatic Updates"
@@ -142,19 +143,19 @@ msgstr "Em Breve!"
 
 #: build/3.2.0/index.js:1
 msgid "Coming soon activated"
-msgstr ""
+msgstr "Em breve ativado"
 
 #: build/3.2.0/index.js:1
 msgid "Coming soon deactivated"
-msgstr ""
+msgstr "Em breve desativado"
 
 #: build/3.2.0/index.js:1
 msgid "Coming soon page is active. Site requires login."
-msgstr ""
+msgstr "Em breve, a página está ativa. O site requer login."
 
 #: build/3.2.0/index.js:1
 msgid "Coming soon page is not active. Site is live to visitors."
-msgstr ""
+msgstr "Página em breve não está ativa. O site está disponível para os visitantes."
 
 #: build/3.2.0/index.js:11
 msgid "Comments"
@@ -166,11 +167,11 @@ msgstr "Os comentários permitem que os visitantes forneçam feedback e responda
 
 #: build/3.2.0/index.js:1
 msgid "Comments are allowed on old posts."
-msgstr ""
+msgstr "São permitidos comentários em publicações antigas."
 
 #: build/3.2.0/index.js:1
 msgid "Comments on old posts are disabled."
-msgstr ""
+msgstr "Os comentários em publicações antigas estão desativados."
 
 #. translators: %s: number of days. `Comments on posts are disabled after ${closeCommentsDays} days.`
 #: build/3.2.0/index.js:4
@@ -181,7 +182,7 @@ msgstr[1] ""
 
 #: build/3.2.0/index.js:1
 msgid "Comments setting saved"
-msgstr ""
+msgstr "Definição de comentários guardada"
 
 #: build/3.2.0/index.js:7
 msgid "Comments setting saved."
@@ -189,7 +190,7 @@ msgstr "Configuração de comentários salva."
 
 #: build/3.2.0/index.js:1
 msgid "Commerce"
-msgstr ""
+msgstr "Comércio"
 
 #: build/3.2.0/index.js:23
 msgid "Content Options"
@@ -213,11 +214,11 @@ msgstr "Personalize & ajuste seu site."
 
 #: build/3.2.0/index.js:23
 msgid "Customize the available features as you manage your website."
-msgstr ""
+msgstr "Personalize as funcionalidades disponíveis enquanto gere o seu site."
 
 #: build/3.2.0/index.js:23
 msgid "Customizer"
-msgstr ""
+msgstr "Customizador"
 
 #: build/3.2.0/index.js:1
 msgid "Disable comments for older posts"
@@ -225,16 +226,16 @@ msgstr "Desabilitar comentários de postagens mais antigas"
 
 #: build/3.2.0/index.js:1
 msgid "Disabled old post comments"
-msgstr ""
+msgstr "Comentários antigos do post desativado"
 
 #: build/3.2.0/index.js:1
 msgid "Discover exclusive features, designed to deliver unmatched value and elevate your online experience."
-msgstr ""
+msgstr "Descubra funcionalidades exclusivas, concebidas para oferecer um valor incomparável e elevar a sua experiência online."
 
 #. translators: %s: number of comments to display per page
 #: build/3.2.0/index.js:11
 msgid "Display %s comments per page."
-msgstr ""
+msgstr "Mostrar percentagens de comentários por página."
 
 #: build/3.2.0/index.js:1
 msgid "Domains"
@@ -242,11 +243,11 @@ msgstr "Domínios"
 
 #: inc/widgets/views/site-preview.php:190
 msgid "Edit Site"
-msgstr ""
+msgstr "Editar Site"
 
 #: build/3.2.0/index.js:1 build/3.2.0/index.js:23
 msgid "Editor"
-msgstr ""
+msgstr "Editor"
 
 #: build/3.2.0/index.js:1
 msgid "Email"
@@ -254,15 +255,15 @@ msgstr "E-mail"
 
 #: inc/widgets/views/site-preview.php:210
 msgid "Enable Coming Soon"
-msgstr ""
+msgstr "Ativar Em Breve"
 
 #: build/3.2.0/index.js:1
 msgid "Enabled old post comments"
-msgstr ""
+msgstr "Ativei os comentários da publicação antiga"
 
 #: build/3.2.0/index.js:1
 msgid "Error code:"
-msgstr ""
+msgstr "Código de erro:"
 
 #: build/3.2.0/index.js:1
 msgid "Explore our featured collection of tools and services."
@@ -286,7 +287,7 @@ msgstr "Encontre um novo domínio e atribua-o ao seu site ou inicie um novo site
 
 #: build/3.2.0/index.js:23
 msgid "General Settings"
-msgstr ""
+msgstr "Cenários Gerais"
 
 #: build/3.2.0/index.js:1
 msgid "Get Help"
@@ -310,25 +311,24 @@ msgstr "Ajuda"
 
 #: inc/Admin.php:78
 msgid "Help Resources"
-msgstr ""
+msgstr "Recursos de Ajuda"
 
 #: inc/Admin.php:68 inc/Admin.php:437 build/3.2.0/index.js:1
 msgid "Home"
 msgstr "Início"
 
 #. Author of the plugin
-#: wp-plugin-hostgator.php:19 inc/Admin.php:254 inc/Admin.php:255
-#: build/3.2.0/index.js:1
+#: wp-plugin-hostgator.php:19 inc/Admin.php:254 inc/Admin.php:255 build/3.2.0/index.js:1
 msgid "HostGator"
 msgstr "HostGator"
 
 #: build/3.2.0/index.js:1
 msgid "HostGator WordPress Plugin"
-msgstr ""
+msgstr "HostGator WordPress Plugin"
 
 #: build/3.2.0/index.js:1
 msgid "Hosting Panel"
-msgstr ""
+msgstr "Painel de Organização"
 
 #: bootstrap.php:107
 msgid "How to Migrate a Website to Hostgator?"
@@ -356,7 +356,7 @@ msgstr "Base de Conhecimento"
 
 #: inc/widgets/views/site-preview.php:200
 msgid "Launch Site"
-msgstr ""
+msgstr "Local de Lançamento"
 
 #: build/3.2.0/index.js:1
 msgid "Learn Stuff"
@@ -376,7 +376,7 @@ msgstr "Carregar mais"
 
 #: inc/Filters.php:105
 msgid "Login with HostGator"
-msgstr ""
+msgstr "Iniciar sessão com o HostGator"
 
 #: build/3.2.0/index.js:1
 msgid "Manage All Updates"
@@ -404,7 +404,7 @@ msgstr "Gerenciar Sites"
 
 #: build/3.2.0/index.js:1 build/3.2.0/index.js:23
 msgid "Manage WordPress"
-msgstr ""
+msgstr "Gerir WordPress"
 
 #: build/3.2.0/index.js:1
 msgid "Manage site performance and caching settings as well as clear the site cache."
@@ -416,7 +416,7 @@ msgstr "Gerencie seu site a partir do painel de controle. Você pode criar backu
 
 #: build/3.2.0/index.js:1
 msgid "Manage your site settings. You can adjust automatic updates, comments, revisions and more."
-msgstr ""
+msgstr "Gere as definições do seu site. Pode ajustar atualizações automáticas, comentários, revisões e muito mais."
 
 #: build/3.2.0/index.js:1
 msgid "Marketplace"
@@ -436,7 +436,7 @@ msgstr "Não ativo"
 
 #: build/3.2.0/index.js:14
 msgid "Number of revisions posts can save"
-msgstr ""
+msgstr "Número de revisões que os posts podem salvar"
 
 #: build/3.2.0/index.js:1
 msgid "Oh No, An Error!"
@@ -456,11 +456,11 @@ msgstr "Ops, ocorreu um erro ao carregar o marketplace, tente novamente mais tar
 
 #: build/3.2.0/index.js:23
 msgid "Optimize your website by managing cache and performance settings"
-msgstr ""
+msgstr "Otimize o seu site gerindo a cache e as definições de desempenho"
 
 #: build/3.2.0/index.js:23
 msgid "Optimize your website my managing cache, security and performance settings."
-msgstr ""
+msgstr "Otimize o seu site na gestão de cache, segurança e definições de desempenho."
 
 #: build/3.2.0/index.js:1
 msgid "Organize existing content into categories."
@@ -496,7 +496,7 @@ msgstr "Plugins"
 
 #: build/3.2.0/index.js:11
 msgid "Post revision setting saved"
-msgstr ""
+msgstr "Configuração de pós-revisão guardada"
 
 #. translators: %s: number of comments. `Posts will display ${commentsPerPage} comments at a time.`
 #: build/3.2.0/index.js:10
@@ -514,7 +514,7 @@ msgstr[1] ""
 
 #: inc/widgets/views/site-preview.php:179
 msgid "Preview Site"
-msgstr ""
+msgstr "Site de Pré-visualização"
 
 #: bootstrap.php:131
 msgid "Preview the coming soon landing page"
@@ -522,7 +522,7 @@ msgstr "Visualize a página de destino em breve"
 
 #: build/3.2.0/index.js:1
 msgid "Quick Links"
-msgstr ""
+msgstr "Ligações Rápidas"
 
 #. translators: %s: number of content revisions. `Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take ${contentRevisions} steps back.`
 #: build/3.2.0/index.js:17
@@ -545,12 +545,11 @@ msgstr "Configurações e Desempenho"
 
 #: build/3.2.0/index.js:23
 msgid "Site Editor"
-msgstr ""
+msgstr "Site Editor"
 
-#: inc/widgets/SitePreview.php:33 inc/widgets/views/site-preview.php:114
-#: inc/widgets/views/site-preview.php:119
+#: inc/widgets/SitePreview.php:33 inc/widgets/views/site-preview.php:114 inc/widgets/views/site-preview.php:119
 msgid "Site Preview"
-msgstr ""
+msgstr "Pré-visualização do Site"
 
 #: build/3.2.0/index.js:1
 msgid "Site Status"
@@ -566,11 +565,11 @@ msgstr "Desculpe, isso não é permitido."
 
 #: inc/RestApi/SettingsController.php:200
 msgid "Sorry, you are not allowed to access this endpoint."
-msgstr ""
+msgstr "Desculpe, não tem permissão para aceder a este endpoint."
 
 #: build/3.2.0/index.js:1 build/3.2.0/index.js:23
 msgid "Staging"
-msgstr ""
+msgstr "Encenação"
 
 #: build/3.2.0/index.js:1
 msgid "Step-by-step tutorials and additional guides."
@@ -584,7 +583,7 @@ msgstr "Obrigado por criar com <a href=\"https://wordpress.org/\">WordPress</a> 
 #: inc/plugin-php-compat-check.php:193
 #, php-format
 msgid "The \"%s\" plugin has been deactivated."
-msgstr ""
+msgstr "O plugin \"%s\" foi desativado."
 
 #: build/3.2.0/index.js:23
 msgid "The Help Center provides guided, step-by-step assistance as you build your site."
@@ -632,19 +631,19 @@ msgstr "Aqui é onde você pode gerenciar as configurações comuns do seu site.
 
 #: build/3.2.0/index.js:20
 msgid "Trash emptying frequency"
-msgstr ""
+msgstr "Frequência de esvaziamento do lixo"
 
 #: build/3.2.0/index.js:17
 msgid "Trash setting saved"
-msgstr ""
+msgstr "Configuração de lixo guardada"
 
 #: build/3.2.0/index.js:1
 msgid "Turn off your \"Coming Soon\" page when you are ready to launch your website."
-msgstr ""
+msgstr "Desligue a sua página \"Em breve\" quando estiver pronto para lançar o seu site."
 
 #: build/3.2.0/index.js:1
 msgid "Turn on your \"Coming Soon\" page when you need to make major changes to your website."
-msgstr ""
+msgstr "Ligue a sua página \"Em breve\" quando precisar de fazer grandes alterações no seu site."
 
 #: build/3.2.0/index.js:1
 msgid "Tweet"
@@ -664,7 +663,7 @@ msgstr "Vídeos Tutoriais"
 
 #: inc/widgets/views/site-preview.php:180
 msgid "View Site"
-msgstr ""
+msgstr "Ver Site"
 
 #: build/3.2.0/index.js:1
 msgid "Visit Marketplace"
@@ -680,7 +679,7 @@ msgstr "Estamos disponíveis 24 horas por dia, 7 dias por semana para ajudar a r
 
 #: build/3.2.0/index.js:1
 msgid "We're very excited to get started with you!"
-msgstr ""
+msgstr "Estamos muito entusiasmados por começar consigo!"
 
 #: build/3.2.0/index.js:1
 msgid "Web Hosting"
@@ -692,7 +691,7 @@ msgstr "Conteúdo do Site"
 
 #: build/3.2.0/index.js:1
 msgid "Welcome to HostGator"
-msgstr ""
+msgstr "Bem-vindo ao HostGator"
 
 #: bootstrap.php:110
 msgid "Why choose HostGator for your WordPress site?"
@@ -735,7 +734,7 @@ msgstr "Seu site está exibindo uma página \"Em breve\"."
 
 #: inc/widgets/views/site-preview.php:164
 msgid "Your website is live to the world!"
-msgstr ""
+msgstr "O seu site está disponível para o mundo!"
 
 #. Plugin URI of the plugin
 #. Author URI of the plugin
