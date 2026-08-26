@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: hostgator-wordpress-plugin\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-plugin-hostgator\n"
+"Report-Msgid-Bugs-To: https://github.com/newfold-labs/wp-plugin-hostgator/issues\n"
 "Last-Translator: \n"
 "Language-Team: Spanish, Mexico\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2023-01-11T20:21:44+00:00\n"
-"PO-Revision-Date: 2026-08-26T20:31:30+00:00\n"
+"PO-Revision-Date: 2026-08-26T20:23:08+00:00\n"
 "Language: es_MX\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: wp-plugin-hostgator\n"
@@ -16,7 +16,7 @@ msgstr ""
 #. Plugin Name of the plugin
 #: wp-plugin-hostgator.php:11
 msgid "The HostGator Plugin"
-msgstr "Plugin HostGator"
+msgstr "El plugin de HostGator"
 
 #. Plugin URI of the plugin
 #. Author URI of the plugin

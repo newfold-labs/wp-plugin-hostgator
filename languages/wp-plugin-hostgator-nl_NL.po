@@ -16,7 +16,7 @@ msgstr ""
 #. Plugin Name of the plugin
 #: wp-plugin-hostgator.php:11
 msgid "The HostGator Plugin"
-msgstr "HostGator Plugin"
+msgstr "De HostGator Plugin"
 
 #. Plugin URI of the plugin
 #. Author URI of the plugin
