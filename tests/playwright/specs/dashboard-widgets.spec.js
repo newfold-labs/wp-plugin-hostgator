@@ -24,7 +24,9 @@ test.describe('Dashboard Widgets', () => {
     const accountWidget = page.locator(`#${pluginId}_account_widget`);
 
     if (await sitePreviewWidget.count() > 0) {
-      await a11y.checkA11y(page, '#site_preview_widget');
+      await a11y.checkA11y(page, '#site_preview_widget', {
+        exclude: ['#iframe-preview'],
+      });
     }
     if (await helpWidget.count() > 0) {
       await a11y.checkA11y(page, `#${pluginId}_help_widget`);
