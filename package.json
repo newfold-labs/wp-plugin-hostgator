@@ -17,9 +17,8 @@
     },
     "dependencies": {
         "@heroicons/react": "^2.2.0",
-        "@newfold/wp-module-runtime": "^1.2.3",
         "@newfold/ui-component-library": "^2.1.1",
-        "@newfold/wp-module-runtime": "^1.2.2",
+        "@newfold/wp-module-runtime": "^1.2.3",
         "@reduxjs/toolkit": "^2.12.0",
         "@wordpress/api-fetch": "^7.53.0",
         "@wordpress/compose": "^8.6.0",
