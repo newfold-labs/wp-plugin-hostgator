@@ -64,6 +64,15 @@ test.describe('Coming Soon admin notice', () => {
     await auth.navigateToAdminPage(page, route);
     await page.waitForSelector('#hgwp-app-rendered', { timeout: 10000 });
 
+    // The React useEffect that opens the settings accordion fires asynchronously
+    // after the app shell renders. Explicitly ensure it is open before asserting
+    // the toggle is visible (same pattern used in settings.spec.js).
+    const settingsDetails = page.locator('.settings-details');
+    if (!(await settingsDetails.getAttribute('open'))) {
+      await settingsDetails.locator('summary').click();
+    }
+    await expect(settingsDetails).toHaveAttribute('open', /.*/, { timeout: 10000 });
+
     const comingSoonSection = page.locator('.hgwp-app-settings-coming-soon');
     await utils.scrollIntoView(comingSoonSection);
     await expect(comingSoonSection).toBeVisible();
