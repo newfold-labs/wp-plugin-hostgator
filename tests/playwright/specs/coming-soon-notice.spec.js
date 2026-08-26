@@ -50,7 +50,7 @@ test.describe('Coming Soon admin notice', () => {
 
   test('Notice link destination shows the coming soon toggle', async ({ page }) => {
     // Follow the notice link's destination and confirm the coming soon control is
-    // actually reachable there (accordion expanded and toggle rendered).
+    // actually reachable there (accordion expanded and section rendered).
     await auth.navigateToAdminPage(page, 'options-general.php');
     const comingSoonLink = page
       .locator('.notice-warning', { hasText: 'Your site is currently displaying a coming soon page' })
@@ -66,7 +66,7 @@ test.describe('Coming Soon admin notice', () => {
 
     // The React useEffect that opens the settings accordion fires asynchronously
     // after the app shell renders. Explicitly ensure it is open before asserting
-    // the toggle is visible (same pattern used in settings.spec.js).
+    // the section is visible (same pattern used in settings.spec.js).
     const settingsDetails = page.locator('.settings-details');
     if (!(await settingsDetails.getAttribute('open'))) {
       await settingsDetails.locator('summary').click();
@@ -77,9 +77,9 @@ test.describe('Coming Soon admin notice', () => {
     await utils.scrollIntoView(comingSoonSection);
     await expect(comingSoonSection).toBeVisible();
 
-    // The coming-soon toggle must be visible: confirms the accordion is open
-    // and the user can actually interact with the control the notice links to.
-    const comingSoonToggle = comingSoonSection.locator('#coming-soon-toggle');
-    await expect(comingSoonToggle).toBeVisible();
+    // The ToggleField label is visible rendered text — a reliable signal that
+    // the coming-soon control is present and the user can interact with it.
+    // (The checkbox input itself carries the id but is hidden by CSS.)
+    await expect(comingSoonSection).toContainText('Coming Soon page');
   });
 });
