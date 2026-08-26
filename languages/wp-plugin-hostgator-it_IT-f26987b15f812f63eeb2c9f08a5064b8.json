@@ -1,323 +1,323 @@
 {
-    "translation-revision-date": "2026-08-26T20:54:22+00:00",
+    "translation-revision-date": "2026-08-26T22:16:59+00:00",
     "generator": "WP-CLI\/2.12.0",
-    "source": "build\/3.2.0\/index.js",
+    "source": "build\/3.2.1\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
             "": {
                 "domain": "messages",
-                "lang": "fr_FR",
+                "lang": "it_IT",
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
             "HostGator": [
-                ""
+                "HostGator"
             ],
             "Home": [
-                ""
+                "Casa"
             ],
             "Settings": [
-                ""
+                "Impostazioni"
             ],
             "Not Live": [
-                ""
+                "Non dal vivo"
             ],
             "Live": [
-                ""
+                "Live"
             ],
             "Your website is currently displaying a \"Coming Soon\" page.": [
-                ""
+                "Il tuo sito web mostra attualmente una pagina \"Prossimamente\"."
             ],
             "Editor": [
-                ""
+                "Direttore"
             ],
             "Hosting Panel": [
-                ""
+                "Panel di conduzione"
             ],
             "Oh No, An Error!": [
-                ""
+                "Oh no, un errore!"
             ],
             "You found an error, please refresh the page and try again!": [
-                ""
+                "Hai trovato un errore, per favore aggiorna la pagina e riprova!"
             ],
             "If the error persists, please contact support.": [
-                ""
+                "Se l'errore persiste, contatta l'assistenza."
             ],
             "Error code:": [
-                ""
+                "Codice di errore:"
             ],
             "HostGator WordPress Plugin": [
-                ""
+                "HostGator WordPress Plugin"
             ],
             "Phone": [
-                ""
+                "Telefono"
             ],
             "Give us a ring at (866) 96-GATOR": [
-                ""
+                "Chiamaci al (866) 96-GATOR"
             ],
             "Call Us": [
-                ""
+                "Chiamaci"
             ],
             "Chat": [
-                ""
+                "Chat"
             ],
             "Have a question? We're here 24\/7\/365": [
-                ""
+                "Hai una domanda? Siamo qui 24\/7\/365"
             ],
             "Live Chat": [
-                ""
+                "Chat dal vivo"
             ],
             "Tweet": [
-                ""
+                "Tweet"
             ],
             "Tweet us at @hgsupport for support": [
-                ""
+                "Scrivici su Twitter @hgsupport per supporto"
             ],
             "Tweet Us": [
-                ""
+                "Tweetaci"
             ],
             "Knowledge Base": [
-                ""
+                "Base di conoscenza"
             ],
             "Know what the pros know.": [
-                ""
+                "Sappi quello che sanno i professionisti."
             ],
             "Find Answers": [
-                ""
+                "Trova risposte"
             ],
             "Blog": [
-                ""
+                "Blog"
             ],
             "Get our tips and in-depth articles.": [
-                ""
+                "Ricevi i nostri consigli e articoli approfonditi."
             ],
             "Learn Stuff": [
-                ""
+                "Impara cose"
             ],
             "Video Tutorials": [
-                ""
+                "Video tutorial"
             ],
             "Step-by-step tutorials and additional guides.": [
-                ""
+                "Tutorial passo dopo passo e guide aggiuntive."
             ],
             "Watch Now": [
-                ""
+                "Guarda ora"
             ],
             "There's nothing here!": [
-                ""
+                "Non c'\u00e8 niente qui!"
             ],
             "Manage WordPress": [
-                ""
+                "Gestisci WordPress"
             ],
             "Staging": [
-                ""
+                "Messa in scena"
             ],
             "Performance": [
-                ""
+                "Prestazioni"
             ],
             "Commerce": [
-                ""
+                "Commercio"
             ],
             "Marketplace": [
-                ""
+                "Mercato"
             ],
             "Help": [
-                ""
+                "Aiuto"
             ],
             "Admin": [
-                ""
+                "Amministrazione"
             ],
             "Secret page to manage admin features and settings.": [
-                ""
+                "Pagina segreta per gestire le funzionalit\u00e0 amministrative e le impostazioni."
             ],
             "Discover exclusive features, designed to deliver unmatched value and elevate your online experience.": [
-                ""
+                "Scopri funzionalit\u00e0 esclusive, pensate per offrire un valore senza pari e elevare la tua esperienza online."
             ],
             "We are available 24\/7 to help answer questions and solve your problems.": [
-                ""
+                "Siamo disponibili 24 ore su 24, 7 giorni su 7, per aiutarti a rispondere alle domande e risolvere i tuoi problemi."
             ],
             "Welcome to HostGator": [
-                ""
+                "Benvenuti su HostGator"
             ],
             "We're very excited to get started with you!": [
-                ""
+                "Siamo molto entusiasti di iniziare con te!"
             ],
             "Quick Links": [
-                ""
+                "Collegamenti rapidi"
             ],
             "Settings and Performance": [
-                ""
+                "Impostazioni e prestazioni"
             ],
             "Customize & fine-tune your site.": [
-                ""
+                "Personalizza e affina il tuo sito."
             ],
             "Manage Settings": [
-                ""
+                "Gestisci le impostazioni"
             ],
             "Manage your site settings. You can adjust automatic updates, comments, revisions and more.": [
-                ""
+                "Gestisci le impostazioni del sito. Puoi regolare aggiornamenti automatici, commenti, revisioni e altro ancora."
             ],
             "Manage site performance and caching settings as well as clear the site cache.": [
-                ""
+                "Gestisci le prestazioni del sito e le impostazioni di cache, oltre a cancellare la cache del sito."
             ],
             "Visit Marketplace": [
-                ""
+                "Visita Marketplace"
             ],
             "Add site services, themes or plugins from the marketplace.": [
-                ""
+                "Aggiungi servizi del sito, temi o plugin dal marketplace."
             ],
             "Website Content": [
-                ""
+                "Contenuto del sito web"
             ],
             "Create, manage & sort your story.": [
-                ""
+                "Crea, gestisci e ordina la tua storia."
             ],
             "New Post": [
-                ""
+                "Nuovo incarico"
             ],
             "Write a new blog post.": [
-                ""
+                "Scrivi un nuovo post sul blog."
             ],
             "Pages": [
-                ""
+                "Pagine"
             ],
             "New Page": [
-                ""
+                "Nuova pagina"
             ],
             "Add fresh pages to your website.": [
-                ""
+                "Aggiungi nuove pagine al tuo sito web."
             ],
             "Categories": [
-                ""
+                "Categorie"
             ],
             "Manage Categories": [
-                ""
+                "Gestire le categorie"
             ],
             "Organize existing content into categories.": [
-                ""
+                "Organizza i contenuti esistenti in categorie."
             ],
             "Web Hosting": [
-                ""
+                "Web Hosting"
             ],
             "Access & manage your HostGator account.": [
-                ""
+                "Accedi e gestisci il tuo account HostGator."
             ],
             "Manage Sites": [
-                ""
+                "Gestione dei siti"
             ],
             "Manage your site from the control panel. You can create backups, set security, and improve performance.": [
-                ""
+                "Gestisci il tuo sito dal pannello di controllo. Puoi creare backup, impostare la sicurezza e migliorare le prestazioni."
             ],
             "Email": [
-                ""
+                "E-mail"
             ],
             "Manage Email": [
-                ""
+                "Gestisci l'email"
             ],
             "Create email accounts, compose, send, and receive your email from the control panel.": [
-                ""
+                "Crea account email, componi, invia e ricevi la tua email dal pannello di controllo."
             ],
             "Domains": [
-                ""
+                "Domini"
             ],
             "Manage Domain": [
-                ""
+                "Gestione del dominio"
             ],
             "Find a Domain": [
-                ""
+                "Trova un dominio"
             ],
             "Find a new domain and assign it to your site or start a new site with a fresh domain.": [
-                ""
+                "Trova un nuovo dominio e assegnalo al tuo sito oppure inizia un nuovo sito con un dominio nuovo."
             ],
             "Get Help": [
-                ""
+                "Fatti aiutare"
             ],
             "24\/7\/365 support. We work when you work.": [
-                ""
+                "Supporto 24\/7\/365. Noi lavoriamo quando lavori tu."
             ],
             "Explore our featured collection of tools and services.": [
-                ""
+                "Esplora la nostra collezione di strumenti e servizi in evidenza."
             ],
             "Oops, there was an error loading the marketplace, please try again later.": [
-                ""
+                "Ops, c'\u00e8 stato un errore nel caricamento del marketplace, per favore riprova pi\u00f9 tardi."
             ],
             "Sorry, no marketplace items. Please, try again later.": [
-                ""
+                "Mi dispiace, niente articoli del mercato. Per favore, riprova pi\u00f9 tardi."
             ],
             "Load More": [
-                ""
+                "Carica di pi\u00f9"
             ],
             "Oops! Something Went Wrong": [
-                ""
+                "Ops! Qualcosa \u00e8 andato storto"
             ],
             "An error occurred while loading the content. Please try again later.": [
-                ""
+                "Si \u00e8 verificato un errore durante il caricamento del contenuto. Per favore, riprova pi\u00f9 tardi."
             ],
             "Manage All Updates": [
-                ""
+                "Gestisci tutti gli aggiornamenti"
             ],
             "WordPress Core": [
-                ""
+                "WordPress Core"
             ],
             "Plugins": [
-                ""
+                "Plugin"
             ],
             "Themes": [
-                ""
+                "Temi"
             ],
             "Automatic Updates": [
-                ""
+                "Aggiornamenti automatici"
             ],
             "Keeping automatic updates on ensures timely security fixes and the latest features.": [
-                ""
+                "Mantenere aggiornamenti automatici garantisce correzioni di sicurezza tempestive e le ultime funzionalit\u00e0."
             ],
             "Oops! Something went wrong. Please try again.": [
-                ""
+                "Ops! Qualcosa \u00e8 andato storto. Per favore, riprova."
             ],
             "Coming soon activated": [
-                ""
+                "Presto attivato"
             ],
             "Coming soon deactivated": [
-                ""
+                "Prossimamente disattivato"
             ],
             "Coming soon page is active. Site requires login.": [
-                ""
+                "La pagina in arrivo \u00e8 attiva. Il sito richiede il login."
             ],
             "Coming soon page is not active. Site is live to visitors.": [
-                ""
+                "La pagina in arrivo non \u00e8 attiva. Il sito \u00e8 attivo per i visitatori."
             ],
             "Site Status": [
-                ""
+                "Stato del sito"
             ],
             "Turn off your \"Coming Soon\" page when you are ready to launch your website.": [
-                ""
+                "Disattiva la tua pagina \"Prossimamente\" quando sei pronto a lanciare il tuo sito web."
             ],
             "Turn on your \"Coming Soon\" page when you need to make major changes to your website.": [
-                ""
+                "Attiva la tua pagina \"In arrivo\" quando devi apportare cambiamenti importanti al tuo sito web."
             ],
             "Coming Soon page": [
-                ""
+                "Pagina in arrivo"
             ],
             "Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen.": [
-                ""
+                "La tua pagina Hostgator Coming Soon ti permette di nascondere il tuo sito ai visitatori mentre fai accadere la magia."
             ],
             "Disabled old post comments": [
-                ""
+                "Disabilitato vecchi commenti del post"
             ],
             "Enabled old post comments": [
-                ""
+                "Abilitato i commenti del vecchio post"
             ],
             "Comments on old posts are disabled.": [
-                ""
+                "I commenti ai post vecchi sono disabilitati."
             ],
             "Comments are allowed on old posts.": [
-                ""
+                "I commenti sono consentiti ai post precedenti."
             ],
             "Disable comments for older posts": [
-                ""
+                "Disabilita i commenti per i post pi\u00f9 vecchi"
             ],
             "Comments setting saved": [
-                ""
+                "Impostazioni commenti salvate"
             ],
             "Comments on posts are disabled after %s day.": [
                 ""
@@ -326,91 +326,91 @@
                 ""
             ],
             "Comments setting saved.": [
-                ""
+                "Impostazioni commenti salvate."
             ],
             "Posts will display %s comment at a time.": [
                 ""
             ],
             "Display %s comments per page.": [
-                ""
+                "Mostra percentuali di commenti per pagina."
             ],
             "Comments": [
-                ""
+                "Commenti"
             ],
             "Comments allow visitors to provide feedback and respond to your posts or pages.": [
-                ""
+                "I commenti permettono ai visitatori di fornire feedback e rispondere ai tuoi post o pagine."
             ],
             "Post revision setting saved": [
-                ""
+                "Impostazione della revisione salvata"
             ],
             "Posts will save %s revision.": [
                 ""
             ],
             "Number of revisions posts can save": [
-                ""
+                "Numero di revisioni che i post possono salvare"
             ],
             "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take %s step back.": [
                 ""
             ],
             "Trash setting saved": [
-                ""
+                "Impostazione del cestino salvata"
             ],
             "The trash will automatically empty every %s week.": [
                 ""
             ],
             "Trash emptying frequency": [
-                ""
+                "Frequenza di svuotamento dei rifiuti"
             ],
             "Content Options": [
-                ""
+                "Opzioni di contenuto"
             ],
             "Controls for content revisions and how often to empty the trash.": [
-                ""
+                "Controlli per le revisioni del contenuto e la frequenza con cui svuotare il cestino."
             ],
             "The Help Center provides guided, step-by-step assistance as you build your site.": [
-                ""
+                "Il Centro di Assistenza offre assistenza guidata passo dopo passo mentre costruisci il tuo sito."
             ],
             "Sorry, that is not allowed.": [
-                ""
+                "Mi dispiace, non \u00e8 permesso."
             ],
             "This feature cannot currently be modified.": [
-                ""
+                "Questa funzione attualmente non pu\u00f2 essere modificata."
             ],
             "Optimize your website my managing cache, security and performance settings.": [
-                ""
+                "Ottimizza il tuo sito web per gestire la cache, la sicurezza e le impostazioni di prestazioni."
             ],
             "Optimize your website by managing cache and performance settings": [
-                ""
+                "Ottimizza il tuo sito gestendo cache e impostazioni di prestazioni"
             ],
             "General Settings": [
-                ""
+                "Ambientazioni generali"
             ],
             "This is where you can manage common settings for your website.": [
-                ""
+                "Qui puoi gestire le impostazioni comuni del tuo sito web."
             ],
             "Features": [
-                ""
+                "Caratteristiche"
             ],
             "Customize the available features as you manage your website.": [
-                ""
+                "Personalizza le funzionalit\u00e0 disponibili mentre gestisci il tuo sito web."
             ],
             "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready.": [
-                ""
+                "Un sito di staging \u00e8 un duplicato del tuo sito live, offrendo un ambiente sicuro per sperimentare, testare aggiornamenti e distribuire quando pronto."
             ],
             "The performance feature provides improvements to loads faster for visitors including cache settings.": [
-                ""
+                "La funzione di prestazioni offre miglioramenti per caricare pi\u00f9 velocemente i visitatori, incluse le impostazioni della cache."
             ],
             "The staging feature provides a way to copy a site to test new updates, features or content.": [
-                ""
+                "La funzione staging offre un modo per copiare un sito per testare nuovi aggiornamenti, funzionalit\u00e0 o contenuti."
             ],
             "WonderBlocks provides a library of customizable block patterns and page templates.": [
-                ""
+                "WonderBlocks offre una libreria di modelli di blocchi personalizzabili e modelli di pagina."
             ],
             "Site Editor": [
-                ""
+                "Editor del sito"
             ],
             "Customizer": [
-                ""
+                "Personalizzatore"
             ]
         }
     }
