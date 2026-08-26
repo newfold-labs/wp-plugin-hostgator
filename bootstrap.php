@@ -94,6 +94,13 @@ add_filter(
 		$migrate_link       = buildLink( 'https://www.hostgator.com/help/article/hostgator-website-migration', $link_params );
 		$hosting_link       = buildLink( 'https://www.hostgator.com/blog/reasons-why-wordpress-website/', $link_params );
 
+		// Deep-link to the Coming Soon toggle in the plugin settings, kept identical
+		// on both notice links so either one lands on the on/off control. The route
+		// must be `#/settings/settings` (not `#/settings`): without the trailing
+		// segment the settings accordion stays collapsed and the coming soon option
+		// is not shown.
+		$coming_soon_settings_url = esc_url( buildLink( admin_url( 'admin.php?page=hostgator&nfd-target=coming-soon-section#/settings/settings' ) ) );
+
 		$args = wp_parse_args(
 			array(
 				'admin_app_url'              => buildLink( admin_url( 'admin.php?page=hostgator#/home' ) ),
@@ -126,11 +133,11 @@ add_filter(
 				),
 				'admin_bar_text'             => '<div style="background-color: #ffcf00; color: #191936; padding: 0 1rem;">' . __( 'Coming Soon Active', 'wp-plugin-hostgator' ) . '</div>',
 				'admin_notice_text'          => sprintf(
-					/* translators: %1$s is replaced with the opening link tag, %2$s is replaced with the closing link tag, %3$s is the opening link tag to preview the page, %4$s is the closing link tag. */
+					/* translators: %1$s is replaced with the opening link tag to the coming soon setting, and %2$s is replaced with the closing link tag, %3$s is the opening link tag, %4$s is the closing link tag. */
 					__( 'Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s.', 'wp-plugin-hostgator' ),
-					'<a href="' . esc_url( buildLink( get_home_url() . '?preview=coming_soon' ) ) . '" title="' . esc_attr__( 'Preview the coming soon landing page', 'wp-plugin-hostgator' ) . '">',
+					'<a href="' . $coming_soon_settings_url . '" title="' . esc_attr__( 'Manage your coming soon page settings', 'wp-plugin-hostgator' ) . '">',
 					'</a>',
-					'<a href="' . esc_url( buildLink( admin_url( 'admin.php?page=hostgator&nfd-target=coming-soon-section#/settings' ) ) ) . '">',
+					'<a href="' . $coming_soon_settings_url . '">',
 					'</a>'
 				),
 				'template_styles'            => esc_url( HOSTGATOR_PLUGIN_URL . 'assets/styles/coming-soon.css' ),
