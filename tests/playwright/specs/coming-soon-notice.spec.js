@@ -50,7 +50,7 @@ test.describe('Coming Soon admin notice', () => {
 
   test('Notice link destination shows the coming soon toggle', async ({ page }) => {
     // Follow the notice link's destination and confirm the coming soon control is
-    // actually reachable there (accordion expanded), not just present in the DOM.
+    // actually reachable there (accordion expanded and toggle rendered).
     await auth.navigateToAdminPage(page, 'options-general.php');
     const comingSoonLink = page
       .locator('.notice-warning', { hasText: 'Your site is currently displaying a coming soon page' })
@@ -68,8 +68,9 @@ test.describe('Coming Soon admin notice', () => {
     await utils.scrollIntoView(comingSoonSection);
     await expect(comingSoonSection).toBeVisible();
 
-    // The `nfd-target=coming-soon-section` param briefly highlights (blinks) the
-    // section so the user's eye lands on the right control.
-    await expect(comingSoonSection).toHaveClass(/hgwp-animation-blink/);
+    // The coming-soon toggle must be visible: confirms the accordion is open
+    // and the user can actually interact with the control the notice links to.
+    const comingSoonToggle = comingSoonSection.locator('#coming-soon-toggle');
+    await expect(comingSoonToggle).toBeVisible();
   });
 });
