@@ -24,7 +24,7 @@ jobs:
       pull-requests: write
     uses: newfold-labs/workflows/.github/workflows/reusable-translations.yml@main
     with:
-      text_domain: 'wp-plugin-bluehost'
+      text_domain: 'wp-plugin-hostgator'
       i18n-script-location: 'npm'
     secrets:
       TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY }}
