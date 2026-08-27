@@ -1,134 +1,22 @@
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: The HostGator Plugin 3.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/newfold-labs/wp-plugin-hostgator/issues\n"
+"POT-Creation-Date: 2023-01-11T20:21:44+00:00\n"
+"PO-Revision-Date: 2026-08-27T17:50:32+00:00\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-01-11T20:21:44+00:00\n"
-"PO-Revision-Date: 2026-08-26T22:16:59+00:00\n"
-"Language: fr_FR\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: wp-plugin-hostgator\n"
 
-#. Plugin Name of the plugin
-#: wp-plugin-hostgator.php:11
-msgid "The HostGator Plugin"
-msgstr "Le Plugin HostGator"
-
-#. Plugin URI of the plugin
-#. Author URI of the plugin
-#: wp-plugin-hostgator.php:12
-#: wp-plugin-hostgator.php:20
-msgid "https://hostgator.com"
-msgstr "https://hostgator.com"
-
-#. Description of the plugin
-#: wp-plugin-hostgator.php:14
-msgid "WordPress plugin that integrates a WordPress site with the HostGator control panel, including performance, security, and update features."
-msgstr "Un plugin WordPress qui intègre un site WordPress avec le panneau de contrôle HostGator, incluant les fonctionnalités de performance, de sécurité et de mise à jour."
-
-#. Author of the plugin
-#: wp-plugin-hostgator.php:19
-#: inc/Admin.php:254
-#: inc/Admin.php:255
-#: build/3.2.1/index.js:1
-msgid "HostGator"
-msgstr "HostGator"
-
-#: bootstrap.php:25
-msgid "Please install the HostGator Plugin dependencies."
-msgstr "Veuillez installer les dépendances du plugin HostGator."
-
-#: bootstrap.php:100
-msgid "A New WordPress Site"
-msgstr "Un nouveau site WordPress"
-
-#: bootstrap.php:101
-msgid "Coming Soon!"
-msgstr "Bientôt à venir !"
-
-#: bootstrap.php:104
-msgid "How to build your WordPress Website"
-msgstr "Comment construire votre site WordPress"
-
-#: bootstrap.php:107
-msgid "How to Migrate a Website to Hostgator?"
-msgstr "Comment migrer un site web vers Hostgator ?"
-
-#: bootstrap.php:110
-msgid "Why choose HostGator for your WordPress site?"
-msgstr "Pourquoi choisir HostGator pour votre site WordPress ?"
-
-#. translators: %1$s is replaced with opening link tag taking you to hostgator.com/wordpress, %2$s is replaced with closing link tag, %3$s is replaced with opening link tag taking you to login page, %4$s is replaced with closing link tag, %5$s is replaced with opening link tag taking you to portal.hostgator.com, %6$s is replaced with closing link tag.
-#: bootstrap.php:114
-#, php-format
-msgid "A %1$sHostGator%2$s powered website. Is this your website? Log in to %3$sWordPress%4$s or %5$sHostgator%6$s."
-msgstr "Un site web alimenté par %1$sHostGator %2$s. Est-ce votre site web ? Connectez-vous à %3$sWordPress %4$s ou %5$sHostgator %6$s."
-
-#. translators: %s is Blog name
-#: bootstrap.php:124
-#, php-format
-msgid "%s &mdash; Coming Soon"
-msgstr "%s — À venir bientôt"
-
-#: bootstrap.php:127
-msgid "Coming Soon Active"
-msgstr "Bientôt Actif"
-
-#. translators: %1$s is replaced with the opening link tag, %2$s is replaced with the closing link tag, %3$s is the opening link tag to preview the page, %4$s is the closing link tag.
-#: bootstrap.php:130
-#, php-format
-msgid "Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s."
-msgstr "Votre site affiche actuellement une page %1$coming soon %2$s. Une fois prêt, %3$lance votre site %4$s."
-
-#: bootstrap.php:131
-msgid "Preview the coming soon landing page"
-msgstr "Aperçu de la page d’accueil à venir"
-
-#: inc/Admin.php:68
-#: inc/Admin.php:437
-#: build/3.2.1/index.js:1
-msgid "Home"
-msgstr "Accueil"
-
-#: inc/Admin.php:73
-#: inc/Admin.php:438
-#: build/3.2.1/index.js:1
-msgid "Settings"
-msgstr "Décors"
-
-#: inc/Admin.php:78
-msgid "Help Resources"
-msgstr "Ressources d’aide"
-
-#: inc/Admin.php:309
-msgid "Please update to a newer WordPress version."
-msgstr "Veuillez mettre à jour avec une version WordPress plus récente."
-
-#: inc/Admin.php:310
-msgid "There are new WordPress components which this plugin requires in order to render the interface."
-msgstr "Il y a de nouveaux composants WordPress que ce plugin nécessite pour rendre l’interface."
-
-#: inc/Admin.php:311
-msgid "Please update now"
-msgstr "Veuillez vous mettre à jour maintenant"
-
-#: inc/Admin.php:451
-msgid "Thank you for creating with <a href=\"https://wordpress.org/\">WordPress</a> and <a href=\"https://hostgator.com/about\">HostGator</a>."
-msgstr "Merci d’avoir créé avec <a href=\"https://wordpress.org/\">WordPress</a> et <a href=\"https://hostgator.com/about\">HostGator</a>."
-
-#: inc/Filters.php:105
-msgid "Login with HostGator"
-msgstr "Connexion avec HostGator"
-
-#. translators: 1: plugin name 2: incompatible plugin name
-#: inc/plugin-nfd-compat-check.php:161
-#, php-format
-msgid "\"%1$s\" has self-deactivated. It is incompatible with \"%2$s\"."
-msgstr "« %1$ » s’est auto-désactivé. Il est incompatible avec « %2$s »."
+#: inc/plugin-php-compat-check.php:124
+msgid " Please contact your web host about upgrading PHP."
+msgstr "Merci de contacter votre hébergeur web pour la mise à niveau de PHP."
 
 #. translators: 1: legacy plugin name 2: plugin name
 #: inc/plugin-nfd-compat-check.php:188
@@ -136,21 +24,17 @@ msgstr "« %1$ » s’est auto-désactivé. Il est incompatible avec « %2$s ».
 msgid "\"%1$s\" has been deactivated. It is incompatible with \"%2$s\"."
 msgstr "« %1$s » a été désactivé. Il est incompatible avec « %2$s »."
 
+#. translators: 1: plugin name 2: incompatible plugin name
+#: inc/plugin-nfd-compat-check.php:161
+#, php-format
+msgid "\"%1$s\" has self-deactivated. It is incompatible with \"%2$s\"."
+msgstr "« %1$ » s’est auto-désactivé. Il est incompatible avec « %2$s »."
+
 #. translators: 1: plugin name 2: minimum required PHP version, current PHP version
 #: inc/plugin-php-compat-check.php:123
 #, php-format
 msgid "%1$s requires PHP version %2$s or later. You are currently running version %3$s."
 msgstr "%1$s nécessite la version PHP %2$s ou ultérieure. Vous utilisez actuellement la version %3$."
-
-#: inc/plugin-php-compat-check.php:124
-msgid " Please contact your web host about upgrading PHP."
-msgstr "Merci de contacter votre hébergeur web pour la mise à niveau de PHP."
-
-#. translators: 1: plugin name 2: required PHP extension
-#: inc/plugin-php-compat-check.php:139
-#, php-format
-msgid "%1$s requires the %2$s PHP extension."
-msgstr "%1$s nécessite l’extension %2$s PHP."
 
 #. translators: 1: plugin name 2: minimum required WordPress version 3: current WordPress version
 #: inc/plugin-php-compat-check.php:155
@@ -158,406 +42,104 @@ msgstr "%1$s nécessite l’extension %2$s PHP."
 msgid "%1$s requires WordPress version %2$s or later. You are currently running version %3$s."
 msgstr "%1$s nécessite la version WordPress %2$s ou ultérieure. Vous utilisez actuellement la version %3$."
 
-#. translators: plugin name
-#: inc/plugin-php-compat-check.php:193
+#. translators: 1: plugin name 2: required PHP extension
+#: inc/plugin-php-compat-check.php:139
 #, php-format
-msgid "The \"%s\" plugin has been deactivated."
-msgstr "Le plugin « %s » a été désactivé."
+msgid "%1$s requires the %2$s PHP extension."
+msgstr "%1$s nécessite l’extension %2$s PHP."
 
-#: inc/RestApi/SettingsController.php:200
-msgid "Sorry, you are not allowed to access this endpoint."
-msgstr "Désolé, vous n’êtes pas autorisé à accéder à ce point de terminaison."
-
-#. translators: %s Settings > General page URL.
-#: inc/updates.php:115
-#: inc/updates.php:143
-#: inc/updates.php:170
+#. translators: %s is Blog name
+#: bootstrap.php:131
 #, php-format
-msgid "Auto-updates enabled on the <a href=\"%s\">HostGator > Settings</a> page."
-msgstr "Les mises à jour automatiques activées sur la page > paramètres <a href=\" %s\">HostGator</a>."
-
-#: inc/updates.php:166
-msgid "Auto-updates enabled"
-msgstr "Mises à jour automatiques activées"
-
-#: inc/widgets/SitePreview.php:33
-#: inc/widgets/views/site-preview.php:114
-#: inc/widgets/views/site-preview.php:119
-msgid "Site Preview"
-msgstr "Aperçu du site"
-
-#: inc/widgets/views/site-preview.php:149
-#: build/3.2.1/index.js:1
-msgid "Not Live"
-msgstr "Pas en direct"
-
-#: inc/widgets/views/site-preview.php:150
-#: build/3.2.1/index.js:1
-msgid "Live"
-msgstr "En direct"
-
-#: inc/widgets/views/site-preview.php:163
-#: build/3.2.1/index.js:1
-msgid "Your website is currently displaying a \"Coming Soon\" page."
-msgstr "Votre site web affiche actuellement une page « Bientôt »."
-
-#: inc/widgets/views/site-preview.php:164
-msgid "Your website is live to the world!"
-msgstr "Votre site web est en ligne pour le monde entier !"
-
-#: inc/widgets/views/site-preview.php:179
-msgid "Preview Site"
-msgstr "Site d’aperçu"
-
-#: inc/widgets/views/site-preview.php:180
-msgid "View Site"
-msgstr "Voir le site"
-
-#: inc/widgets/views/site-preview.php:190
-msgid "Edit Site"
-msgstr "Modifier le site"
-
-#: inc/widgets/views/site-preview.php:200
-msgid "Launch Site"
-msgstr "Site de lancement"
-
-#: inc/widgets/views/site-preview.php:210
-msgid "Enable Coming Soon"
-msgstr "Activation bientôt"
+msgid "%s &mdash; Coming Soon"
+msgstr "%s — À venir bientôt"
 
 #: build/3.2.1/index.js:1
+msgid "24/7/365 support. We work when you work."
+msgstr "Support 24h/24, 7j/7, 365 jours sur 24. On travaille quand tu travailles."
+
+#. translators: %1$s is replaced with opening link tag taking you to hostgator.com/wordpress, %2$s is replaced with closing link tag, %3$s is replaced with opening link tag taking you to login page, %4$s is replaced with closing link tag, %5$s is replaced with opening link tag taking you to portal.hostgator.com, %6$s is replaced with closing link tag.
+#: bootstrap.php:121
+#, php-format
+msgid "A %1$sHostGator%2$s powered website. Is this your website? Log in to %3$sWordPress%4$s or %5$sHostgator%6$s."
+msgstr "Un site web alimenté par %1$sHostGator %2$s. Est-ce votre site web ? Connectez-vous à %3$sWordPress %4$s ou %5$sHostgator %6$s."
+
+#: bootstrap.php:107
+msgid "A New WordPress Site"
+msgstr "Un nouveau site WordPress"
+
 #: build/3.2.1/index.js:23
-msgid "Editor"
-msgstr "Rédacteur en chef"
-
-#: build/3.2.1/index.js:1
-msgid "Hosting Panel"
-msgstr "Panel d’accueil"
-
-#: build/3.2.1/index.js:1
-msgid "Oh No, An Error!"
-msgstr "Oh non, une erreur !"
-
-#: build/3.2.1/index.js:1
-msgid "You found an error, please refresh the page and try again!"
-msgstr "Vous avez trouvé une erreur, veuillez rafraîchir la page et réessayer !"
-
-#: build/3.2.1/index.js:1
-msgid "If the error persists, please contact support."
-msgstr "Si l’erreur persiste, veuillez contacter le support."
-
-#: build/3.2.1/index.js:1
-msgid "Error code:"
-msgstr "Code d’erreur :"
-
-#: build/3.2.1/index.js:1
-msgid "HostGator WordPress Plugin"
-msgstr "HostGator WordPress Plugin"
-
-#: build/3.2.1/index.js:1
-msgid "Phone"
-msgstr "Téléphone"
-
-#: build/3.2.1/index.js:1
-msgid "Give us a ring at (866) 96-GATOR"
-msgstr "Appelez-nous au (866) 96-GATOR"
-
-#: build/3.2.1/index.js:1
-msgid "Call Us"
-msgstr "Appelez-nous"
-
-#: build/3.2.1/index.js:1
-msgid "Chat"
-msgstr "Chat"
-
-#: build/3.2.1/index.js:1
-msgid "Have a question? We're here 24/7/365"
-msgstr "Vous avez une question ? Nous sommes là 24h/24, 7j/7, 365 jours sur 7"
-
-#: build/3.2.1/index.js:1
-msgid "Live Chat"
-msgstr "Chat en direct"
-
-#: build/3.2.1/index.js:1
-msgid "Tweet"
-msgstr "Tweet"
-
-#: build/3.2.1/index.js:1
-msgid "Tweet us at @hgsupport for support"
-msgstr "Tweetez-nous à @hgsupport pour obtenir du soutien"
-
-#: build/3.2.1/index.js:1
-msgid "Tweet Us"
-msgstr "Tweetez-nous"
-
-#: build/3.2.1/index.js:1
-msgid "Knowledge Base"
-msgstr "Base de connaissances"
-
-#: build/3.2.1/index.js:1
-msgid "Know what the pros know."
-msgstr "Sachez ce que savent les pros."
-
-#: build/3.2.1/index.js:1
-msgid "Find Answers"
-msgstr "Trouver des réponses"
-
-#: build/3.2.1/index.js:1
-msgid "Blog"
-msgstr "Blog"
-
-#: build/3.2.1/index.js:1
-msgid "Get our tips and in-depth articles."
-msgstr "Obtenez nos conseils et articles détaillés."
-
-#: build/3.2.1/index.js:1
-msgid "Learn Stuff"
-msgstr "Apprenez des choses"
-
-#: build/3.2.1/index.js:1
-msgid "Video Tutorials"
-msgstr "Tutoriels vidéo"
-
-#: build/3.2.1/index.js:1
-msgid "Step-by-step tutorials and additional guides."
-msgstr "Tutoriels étape par étape et guides supplémentaires."
-
-#: build/3.2.1/index.js:1
-msgid "Watch Now"
-msgstr "Regardez maintenant"
-
-#: build/3.2.1/index.js:1
-msgid "There's nothing here!"
-msgstr "Il n’y a rien ici !"
-
-#: build/3.2.1/index.js:1
-#: build/3.2.1/index.js:23
-msgid "Manage WordPress"
-msgstr "Gérer WordPress"
-
-#: build/3.2.1/index.js:1
-#: build/3.2.1/index.js:23
-msgid "Staging"
-msgstr "Mise en scène"
-
-#: build/3.2.1/index.js:1
-#: build/3.2.1/index.js:23
-msgid "Performance"
-msgstr "Performances"
-
-#: build/3.2.1/index.js:1
-msgid "Commerce"
-msgstr "Commerce"
-
-#: build/3.2.1/index.js:1
-msgid "Marketplace"
-msgstr "Marché"
-
-#: build/3.2.1/index.js:1
-msgid "Help"
-msgstr "À l’aide"
-
-#: build/3.2.1/index.js:1
-msgid "Admin"
-msgstr "Administration"
-
-#: build/3.2.1/index.js:1
-msgid "Secret page to manage admin features and settings."
-msgstr "Page secrète pour gérer les fonctionnalités et paramètres d’administration."
-
-#: build/3.2.1/index.js:1
-msgid "Discover exclusive features, designed to deliver unmatched value and elevate your online experience."
-msgstr "Découvrez des fonctionnalités exclusives, conçues pour offrir une valeur inégalée et améliorer votre expérience en ligne."
-
-#: build/3.2.1/index.js:1
-msgid "We are available 24/7 to help answer questions and solve your problems."
-msgstr "Nous sommes disponibles 24h/24 et 7j/7 pour répondre à vos questions et résoudre vos problèmes."
-
-#: build/3.2.1/index.js:1
-msgid "Welcome to HostGator"
-msgstr "Bienvenue sur HostGator"
-
-#: build/3.2.1/index.js:1
-msgid "We're very excited to get started with you!"
-msgstr "Nous sommes très enthousiastes à l’idée de commencer avec vous !"
-
-#: build/3.2.1/index.js:1
-msgid "Quick Links"
-msgstr "Liens rapides"
-
-#: build/3.2.1/index.js:1
-msgid "Settings and Performance"
-msgstr "Décors et performances"
-
-#: build/3.2.1/index.js:1
-msgid "Customize & fine-tune your site."
-msgstr "Personnalisez et affinez votre site."
-
-#: build/3.2.1/index.js:1
-msgid "Manage Settings"
-msgstr "Gérer les paramètres"
-
-#: build/3.2.1/index.js:1
-msgid "Manage your site settings. You can adjust automatic updates, comments, revisions and more."
-msgstr "Gérez les paramètres de votre site. Vous pouvez ajuster les mises à jour automatiques, les commentaires, les révisions et plus encore."
-
-#: build/3.2.1/index.js:1
-msgid "Manage site performance and caching settings as well as clear the site cache."
-msgstr "Gérez les performances du site et les paramètres de mise en cache ainsi que videz le cache du site."
-
-#: build/3.2.1/index.js:1
-msgid "Visit Marketplace"
-msgstr "Visitez Marketplace"
-
-#: build/3.2.1/index.js:1
-msgid "Add site services, themes or plugins from the marketplace."
-msgstr "Ajoutez des services de site, des thèmes ou des plugins issus du marché."
-
-#: build/3.2.1/index.js:1
-msgid "Website Content"
-msgstr "Contenu du site web"
-
-#: build/3.2.1/index.js:1
-msgid "Create, manage & sort your story."
-msgstr "Créez, gérez et triez votre histoire."
-
-#: build/3.2.1/index.js:1
-msgid "New Post"
-msgstr "Nouveau poste"
-
-#: build/3.2.1/index.js:1
-msgid "Write a new blog post."
-msgstr "Écrivez un nouvel article de blog."
-
-#: build/3.2.1/index.js:1
-msgid "Pages"
-msgstr "Pages"
-
-#: build/3.2.1/index.js:1
-msgid "New Page"
-msgstr "Nouvelle page"
-
-#: build/3.2.1/index.js:1
-msgid "Add fresh pages to your website."
-msgstr "Ajoutez de nouvelles pages à votre site web."
-
-#: build/3.2.1/index.js:1
-msgid "Categories"
-msgstr "Catégories"
-
-#: build/3.2.1/index.js:1
-msgid "Manage Categories"
-msgstr "Catégories de gestion"
-
-#: build/3.2.1/index.js:1
-msgid "Organize existing content into categories."
-msgstr "Organisez le contenu existant en catégories."
-
-#: build/3.2.1/index.js:1
-msgid "Web Hosting"
-msgstr "Hébergement web"
+msgid "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready."
+msgstr "Un site de staging est un double de votre site en direct, offrant un environnement sécurisé pour expérimenter, tester les mises à jour et déployer lorsque vous êtes prêt."
 
 #: build/3.2.1/index.js:1
 msgid "Access & manage your HostGator account."
 msgstr "Accédez et gérez votre compte HostGator."
 
 #: build/3.2.1/index.js:1
-msgid "Manage Sites"
-msgstr "Gérer les sites"
+msgid "Add fresh pages to your website."
+msgstr "Ajoutez de nouvelles pages à votre site web."
 
 #: build/3.2.1/index.js:1
-msgid "Manage your site from the control panel. You can create backups, set security, and improve performance."
-msgstr "Gérez votre site depuis le panneau de configuration. Vous pouvez créer des sauvegardes, mettre en place la sécurité et améliorer les performances."
+msgid "Add site services, themes or plugins from the marketplace."
+msgstr "Ajoutez des services de site, des thèmes ou des plugins issus du marché."
 
 #: build/3.2.1/index.js:1
-msgid "Email"
-msgstr "Email"
-
-#: build/3.2.1/index.js:1
-msgid "Manage Email"
-msgstr "Gérer les e-mails"
-
-#: build/3.2.1/index.js:1
-msgid "Create email accounts, compose, send, and receive your email from the control panel."
-msgstr "Créez des comptes email, composez, envoyez et recevez votre email depuis le panneau de contrôle."
-
-#: build/3.2.1/index.js:1
-msgid "Domains"
-msgstr "Domaines"
-
-#: build/3.2.1/index.js:1
-msgid "Manage Domain"
-msgstr "Gérer le domaine"
-
-#: build/3.2.1/index.js:1
-msgid "Find a Domain"
-msgstr "Trouver un domaine"
-
-#: build/3.2.1/index.js:1
-msgid "Find a new domain and assign it to your site or start a new site with a fresh domain."
-msgstr "Trouvez un nouveau domaine et attribuez-le à votre site ou créez un nouveau site avec un nouveau domaine."
-
-#: build/3.2.1/index.js:1
-msgid "Get Help"
-msgstr "Cherchez de l’aide"
-
-#: build/3.2.1/index.js:1
-msgid "24/7/365 support. We work when you work."
-msgstr "Support 24h/24, 7j/7, 365 jours sur 24. On travaille quand tu travailles."
-
-#: build/3.2.1/index.js:1
-msgid "Explore our featured collection of tools and services."
-msgstr "Découvrez notre collection d’outils et de services en vedette."
-
-#: build/3.2.1/index.js:1
-msgid "Oops, there was an error loading the marketplace, please try again later."
-msgstr "Oups, il y a eu une erreur lors du chargement du marché, veuillez réessayer plus tard."
-
-#: build/3.2.1/index.js:1
-msgid "Sorry, no marketplace items. Please, try again later."
-msgstr "Désolé, pas d’articles du marché. S’il vous plaît, réessayez plus tard."
-
-#: build/3.2.1/index.js:1
-msgid "Load More"
-msgstr "Chargez plus"
-
-#: build/3.2.1/index.js:1
-msgid "Oops! Something Went Wrong"
-msgstr "Oups ! Quelque chose a mal tourné"
+msgid "Admin"
+msgstr "Administration"
 
 #: build/3.2.1/index.js:1
 msgid "An error occurred while loading the content. Please try again later."
 msgstr "Une erreur s’est produite lors du chargement du contenu. Veuillez réessayer plus tard."
 
-#: build/3.2.1/index.js:1
-msgid "Manage All Updates"
-msgstr "Gérer toutes les mises à jour"
+#: inc/updates.php:166
+msgid "Auto-updates enabled"
+msgstr "Mises à jour automatiques activées"
 
-#: build/3.2.1/index.js:1
-msgid "WordPress Core"
-msgstr "WordPress Core"
-
-#: build/3.2.1/index.js:1
-msgid "Plugins"
-msgstr "Plugins"
-
-#: build/3.2.1/index.js:1
-msgid "Themes"
-msgstr "Thèmes"
+#. translators: %s Settings > General page URL.
+#: inc/updates.php:115 inc/updates.php:143 inc/updates.php:170
+#, php-format
+msgid "Auto-updates enabled on the <a href=\"%s\">HostGator > Settings</a> page."
+msgstr "Les mises à jour automatiques activées sur la page > paramètres <a href=\" %s\">HostGator</a>."
 
 #: build/3.2.1/index.js:1
 msgid "Automatic Updates"
 msgstr "Mises à jour automatiques"
 
 #: build/3.2.1/index.js:1
-msgid "Keeping automatic updates on ensures timely security fixes and the latest features."
-msgstr "Maintenir des mises à jour automatiques garantit des correctifs de sécurité en temps voulu et les dernières fonctionnalités."
+msgid "Blog"
+msgstr "Blog"
 
 #: build/3.2.1/index.js:1
-#: build/3.2.1/index.js:11
-#: build/3.2.1/index.js:23
-msgid "Oops! Something went wrong. Please try again."
-msgstr "Oups ! Quelque chose a mal tourné. Veuillez réessayer."
+msgid "Call Us"
+msgstr "Appelez-nous"
+
+#: build/3.2.1/index.js:1
+msgid "Categories"
+msgstr "Catégories"
+
+#: build/3.2.1/index.js:1
+msgid "Chat"
+msgstr "Chat"
+
+#. translators: %s: number of days. `Close comments after ${closeCommentsDays} days.`
+#: build/3.2.1/index.js:7
+msgid "Close comments after %s day."
+msgid_plural "Close comments after %s days."
+msgstr[0] ""
+msgstr[1] ""
+
+#: bootstrap.php:134
+msgid "Coming Soon Active"
+msgstr "Bientôt Actif"
+
+#: build/3.2.1/index.js:1
+msgid "Coming Soon page"
+msgstr "Page à venir"
+
+#: bootstrap.php:108
+msgid "Coming Soon!"
+msgstr "Bientôt à venir !"
 
 #: build/3.2.1/index.js:1
 msgid "Coming soon activated"
@@ -575,9 +157,485 @@ msgstr "La page à venir est active. Le site nécessite une connexion."
 msgid "Coming soon page is not active. Site is live to visitors."
 msgstr "La page Bientôt n’est pas active. Le site est disponible pour les visiteurs."
 
+#: build/3.2.1/index.js:11
+msgid "Comments"
+msgstr "Commentaires"
+
+#: build/3.2.1/index.js:11
+msgid "Comments allow visitors to provide feedback and respond to your posts or pages."
+msgstr "Les commentaires permettent aux visiteurs de donner des retours et de répondre à vos publications ou pages."
+
+#: build/3.2.1/index.js:1
+msgid "Comments are allowed on old posts."
+msgstr "Les commentaires sont autorisés sur les anciens posts."
+
+#: build/3.2.1/index.js:1
+msgid "Comments on old posts are disabled."
+msgstr "Les commentaires sur les anciens posts sont désactivés."
+
+#. translators: %s: number of days. `Comments on posts are disabled after ${closeCommentsDays} days.`
+#: build/3.2.1/index.js:4
+msgid "Comments on posts are disabled after %s day."
+msgid_plural "Comments on posts are disabled after %s days."
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/3.2.1/index.js:1
+msgid "Comments setting saved"
+msgstr "Paramètre des commentaires sauvegardé"
+
+#: build/3.2.1/index.js:7
+msgid "Comments setting saved."
+msgstr "Paramètre des commentaires sauvegardé."
+
+#: build/3.2.1/index.js:1
+msgid "Commerce"
+msgstr "Commerce"
+
+#: build/3.2.1/index.js:23
+msgid "Content Options"
+msgstr "Options de contenu"
+
+#: build/3.2.1/index.js:23
+msgid "Controls for content revisions and how often to empty the trash."
+msgstr "Contrôles pour les révisions de contenu et la fréquence à laquelle vider la corbeille."
+
+#: build/3.2.1/index.js:1
+msgid "Create email accounts, compose, send, and receive your email from the control panel."
+msgstr "Créez des comptes email, composez, envoyez et recevez votre email depuis le panneau de contrôle."
+
+#: build/3.2.1/index.js:1
+msgid "Create, manage & sort your story."
+msgstr "Créez, gérez et triez votre histoire."
+
+#: build/3.2.1/index.js:1
+msgid "Customize & fine-tune your site."
+msgstr "Personnalisez et affinez votre site."
+
+#: build/3.2.1/index.js:23
+msgid "Customize the available features as you manage your website."
+msgstr "Personnalisez les fonctionnalités disponibles au fur et à mesure que vous gérez votre site web."
+
+#: build/3.2.1/index.js:23
+msgid "Customizer"
+msgstr "Customizer"
+
+#: build/3.2.1/index.js:1
+msgid "Disable comments for older posts"
+msgstr "Désactivez les commentaires pour les anciens posts"
+
+#: build/3.2.1/index.js:1
+msgid "Disabled old post comments"
+msgstr "Anciens commentaires de publication désactivés"
+
+#: build/3.2.1/index.js:1
+msgid "Discover exclusive features, designed to deliver unmatched value and elevate your online experience."
+msgstr "Découvrez des fonctionnalités exclusives, conçues pour offrir une valeur inégalée et améliorer votre expérience en ligne."
+
+#. translators: %s: number of comments to display per page
+#: build/3.2.1/index.js:11
+msgid "Display %s comments per page."
+msgstr "Afficher des pourcentages de commentaires par page."
+
+#: build/3.2.1/index.js:1
+msgid "Domains"
+msgstr "Domaines"
+
+#: inc/widgets/views/site-preview.php:190
+msgid "Edit Site"
+msgstr "Modifier le site"
+
+#: build/3.2.1/index.js:1 build/3.2.1/index.js:23
+msgid "Editor"
+msgstr "Rédacteur en chef"
+
+#: build/3.2.1/index.js:1
+msgid "Email"
+msgstr "Email"
+
+#: inc/widgets/views/site-preview.php:210
+msgid "Enable Coming Soon"
+msgstr "Activation bientôt"
+
+#: build/3.2.1/index.js:1
+msgid "Enabled old post comments"
+msgstr "Activation des anciens commentaires du post"
+
+#: build/3.2.1/index.js:1
+msgid "Error code:"
+msgstr "Code d’erreur :"
+
+#: build/3.2.1/index.js:1
+msgid "Explore our featured collection of tools and services."
+msgstr "Découvrez notre collection d’outils et de services en vedette."
+
+#: build/3.2.1/index.js:23
+msgid "Features"
+msgstr "Caractéristiques"
+
+#: build/3.2.1/index.js:1
+msgid "Find Answers"
+msgstr "Trouver des réponses"
+
+#: build/3.2.1/index.js:1
+msgid "Find a Domain"
+msgstr "Trouver un domaine"
+
+#: build/3.2.1/index.js:1
+msgid "Find a new domain and assign it to your site or start a new site with a fresh domain."
+msgstr "Trouvez un nouveau domaine et attribuez-le à votre site ou créez un nouveau site avec un nouveau domaine."
+
+#: build/3.2.1/index.js:23
+msgid "General Settings"
+msgstr "Univers généraux"
+
+#: build/3.2.1/index.js:1
+msgid "Get Help"
+msgstr "Cherchez de l’aide"
+
+#: build/3.2.1/index.js:1
+msgid "Get our tips and in-depth articles."
+msgstr "Obtenez nos conseils et articles détaillés."
+
+#: build/3.2.1/index.js:1
+msgid "Give us a ring at (866) 96-GATOR"
+msgstr "Appelez-nous au (866) 96-GATOR"
+
+#: build/3.2.1/index.js:1
+msgid "Have a question? We're here 24/7/365"
+msgstr "Vous avez une question ? Nous sommes là 24h/24, 7j/7, 365 jours sur 7"
+
+#: build/3.2.1/index.js:1
+msgid "Help"
+msgstr "À l’aide"
+
+#: inc/Admin.php:78
+msgid "Help Resources"
+msgstr "Ressources d’aide"
+
+#: inc/Admin.php:68 inc/Admin.php:437 build/3.2.1/index.js:1
+msgid "Home"
+msgstr "Accueil"
+
+#. Author of the plugin
+#: wp-plugin-hostgator.php:19 inc/Admin.php:254 inc/Admin.php:255 build/3.2.1/index.js:1
+msgid "HostGator"
+msgstr "HostGator"
+
+#: build/3.2.1/index.js:1
+msgid "HostGator WordPress Plugin"
+msgstr "HostGator WordPress Plugin"
+
+#: build/3.2.1/index.js:1
+msgid "Hosting Panel"
+msgstr "Panel d’accueil"
+
+#: bootstrap.php:114
+msgid "How to Migrate a Website to Hostgator?"
+msgstr "Comment migrer un site web vers Hostgator ?"
+
+#: bootstrap.php:111
+msgid "How to build your WordPress Website"
+msgstr "Comment construire votre site WordPress"
+
+#: build/3.2.1/index.js:1
+msgid "If the error persists, please contact support."
+msgstr "Si l’erreur persiste, veuillez contacter le support."
+
+#: build/3.2.1/index.js:1
+msgid "Keeping automatic updates on ensures timely security fixes and the latest features."
+msgstr "Maintenir des mises à jour automatiques garantit des correctifs de sécurité en temps voulu et les dernières fonctionnalités."
+
+#: build/3.2.1/index.js:1
+msgid "Know what the pros know."
+msgstr "Sachez ce que savent les pros."
+
+#: build/3.2.1/index.js:1
+msgid "Knowledge Base"
+msgstr "Base de connaissances"
+
+#: inc/widgets/views/site-preview.php:200
+msgid "Launch Site"
+msgstr "Site de lancement"
+
+#: build/3.2.1/index.js:1
+msgid "Learn Stuff"
+msgstr "Apprenez des choses"
+
+#: inc/widgets/views/site-preview.php:150 build/3.2.1/index.js:1
+msgid "Live"
+msgstr "En direct"
+
+#: build/3.2.1/index.js:1
+msgid "Live Chat"
+msgstr "Chat en direct"
+
+#: build/3.2.1/index.js:1
+msgid "Load More"
+msgstr "Chargez plus"
+
+#: inc/Filters.php:105
+msgid "Login with HostGator"
+msgstr "Connexion avec HostGator"
+
+#: build/3.2.1/index.js:1
+msgid "Manage All Updates"
+msgstr "Gérer toutes les mises à jour"
+
+#: build/3.2.1/index.js:1
+msgid "Manage Categories"
+msgstr "Catégories de gestion"
+
+#: build/3.2.1/index.js:1
+msgid "Manage Domain"
+msgstr "Gérer le domaine"
+
+#: build/3.2.1/index.js:1
+msgid "Manage Email"
+msgstr "Gérer les e-mails"
+
+#: build/3.2.1/index.js:1
+msgid "Manage Settings"
+msgstr "Gérer les paramètres"
+
+#: build/3.2.1/index.js:1
+msgid "Manage Sites"
+msgstr "Gérer les sites"
+
+#: build/3.2.1/index.js:1 build/3.2.1/index.js:23
+msgid "Manage WordPress"
+msgstr "Gérer WordPress"
+
+#: build/3.2.1/index.js:1
+msgid "Manage site performance and caching settings as well as clear the site cache."
+msgstr "Gérez les performances du site et les paramètres de mise en cache ainsi que videz le cache du site."
+
+#: bootstrap.php:138
+msgid "Manage your coming soon page settings"
+msgstr "Gérez vos paramètres de page à venir"
+
+#: build/3.2.1/index.js:1
+msgid "Manage your site from the control panel. You can create backups, set security, and improve performance."
+msgstr "Gérez votre site depuis le panneau de configuration. Vous pouvez créer des sauvegardes, mettre en place la sécurité et améliorer les performances."
+
+#: build/3.2.1/index.js:1
+msgid "Manage your site settings. You can adjust automatic updates, comments, revisions and more."
+msgstr "Gérez les paramètres de votre site. Vous pouvez ajuster les mises à jour automatiques, les commentaires, les révisions et plus encore."
+
+#: build/3.2.1/index.js:1
+msgid "Marketplace"
+msgstr "Marché"
+
+#: build/3.2.1/index.js:1
+msgid "New Page"
+msgstr "Nouvelle page"
+
+#: build/3.2.1/index.js:1
+msgid "New Post"
+msgstr "Nouveau poste"
+
+#: inc/widgets/views/site-preview.php:149 build/3.2.1/index.js:1
+msgid "Not Live"
+msgstr "Pas en direct"
+
+#: build/3.2.1/index.js:14
+msgid "Number of revisions posts can save"
+msgstr "Nombre de révisions que les publications peuvent sauver"
+
+#: build/3.2.1/index.js:1
+msgid "Oh No, An Error!"
+msgstr "Oh non, une erreur !"
+
+#: build/3.2.1/index.js:1
+msgid "Oops! Something Went Wrong"
+msgstr "Oups ! Quelque chose a mal tourné"
+
+#: build/3.2.1/index.js:1 build/3.2.1/index.js:11 build/3.2.1/index.js:23
+msgid "Oops! Something went wrong. Please try again."
+msgstr "Oups ! Quelque chose a mal tourné. Veuillez réessayer."
+
+#: build/3.2.1/index.js:1
+msgid "Oops, there was an error loading the marketplace, please try again later."
+msgstr "Oups, il y a eu une erreur lors du chargement du marché, veuillez réessayer plus tard."
+
+#: build/3.2.1/index.js:23
+msgid "Optimize your website by managing cache and performance settings"
+msgstr "Optimisez votre site web en gérant les paramètres de cache et de performance"
+
+#: build/3.2.1/index.js:23
+msgid "Optimize your website my managing cache, security and performance settings."
+msgstr "Optimisez votre site web en gérant le cache, la sécurité et les paramètres de performance."
+
+#: build/3.2.1/index.js:1
+msgid "Organize existing content into categories."
+msgstr "Organisez le contenu existant en catégories."
+
+#: build/3.2.1/index.js:1
+msgid "Pages"
+msgstr "Pages"
+
+#: build/3.2.1/index.js:1 build/3.2.1/index.js:23
+msgid "Performance"
+msgstr "Performances"
+
+#: build/3.2.1/index.js:1
+msgid "Phone"
+msgstr "Téléphone"
+
+#: bootstrap.php:25
+msgid "Please install the HostGator Plugin dependencies."
+msgstr "Veuillez installer les dépendances du plugin HostGator."
+
+#: inc/Admin.php:311
+msgid "Please update now"
+msgstr "Veuillez vous mettre à jour maintenant"
+
+#: inc/Admin.php:309
+msgid "Please update to a newer WordPress version."
+msgstr "Veuillez mettre à jour avec une version WordPress plus récente."
+
+#: build/3.2.1/index.js:1
+msgid "Plugins"
+msgstr "Plugins"
+
+#: build/3.2.1/index.js:11
+msgid "Post revision setting saved"
+msgstr "Réglage de la révision après une sauvegarde"
+
+#. translators: %s: number of comments. `Posts will display ${commentsPerPage} comments at a time.`
+#: build/3.2.1/index.js:10
+msgid "Posts will display %s comment at a time."
+msgid_plural "Posts will display %s comments at a time."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: number of revisions. `Posts will save ${contentRevisions} revisions.`
+#: build/3.2.1/index.js:14
+msgid "Posts will save %s revision."
+msgid_plural "Posts will save %s revisions."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/widgets/views/site-preview.php:179
+msgid "Preview Site"
+msgstr "Site d’aperçu"
+
+#: build/3.2.1/index.js:1
+msgid "Quick Links"
+msgstr "Liens rapides"
+
+#. translators: %s: number of content revisions. `Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take ${contentRevisions} steps back.`
+#: build/3.2.1/index.js:17
+msgid "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take %s step back."
+msgid_plural "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take %s steps back."
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/3.2.1/index.js:1
+msgid "Secret page to manage admin features and settings."
+msgstr "Page secrète pour gérer les fonctionnalités et paramètres d’administration."
+
+#: inc/Admin.php:73 inc/Admin.php:438 build/3.2.1/index.js:1
+msgid "Settings"
+msgstr "Décors"
+
+#: build/3.2.1/index.js:1
+msgid "Settings and Performance"
+msgstr "Décors et performances"
+
+#: build/3.2.1/index.js:23
+msgid "Site Editor"
+msgstr "Éditeur du site"
+
+#: inc/widgets/SitePreview.php:33 inc/widgets/views/site-preview.php:114 inc/widgets/views/site-preview.php:119
+msgid "Site Preview"
+msgstr "Aperçu du site"
+
 #: build/3.2.1/index.js:1
 msgid "Site Status"
 msgstr "Statut du site"
+
+#: build/3.2.1/index.js:1
+msgid "Sorry, no marketplace items. Please, try again later."
+msgstr "Désolé, pas d’articles du marché. S’il vous plaît, réessayez plus tard."
+
+#: build/3.2.1/index.js:23
+msgid "Sorry, that is not allowed."
+msgstr "Désolé, ce n’est pas autorisé."
+
+#: inc/RestApi/SettingsController.php:200
+msgid "Sorry, you are not allowed to access this endpoint."
+msgstr "Désolé, vous n’êtes pas autorisé à accéder à ce point de terminaison."
+
+#: build/3.2.1/index.js:1 build/3.2.1/index.js:23
+msgid "Staging"
+msgstr "Mise en scène"
+
+#: build/3.2.1/index.js:1
+msgid "Step-by-step tutorials and additional guides."
+msgstr "Tutoriels étape par étape et guides supplémentaires."
+
+#: inc/Admin.php:451
+msgid "Thank you for creating with <a href=\"https://wordpress.org/\">WordPress</a> and <a href=\"https://hostgator.com/about\">HostGator</a>."
+msgstr "Merci d’avoir créé avec <a href=\"https://wordpress.org/\">WordPress</a> et <a href=\"https://hostgator.com/about\">HostGator</a>."
+
+#. translators: plugin name
+#: inc/plugin-php-compat-check.php:193
+#, php-format
+msgid "The \"%s\" plugin has been deactivated."
+msgstr "Le plugin « %s » a été désactivé."
+
+#: build/3.2.1/index.js:23
+msgid "The Help Center provides guided, step-by-step assistance as you build your site."
+msgstr "Le Centre d’Aide fournit une assistance guidée, étape par étape, tout au long de la création de votre site."
+
+#. Plugin Name of the plugin
+#: wp-plugin-hostgator.php:11
+msgid "The HostGator Plugin"
+msgstr "Le Plugin HostGator"
+
+#: build/3.2.1/index.js:23
+msgid "The performance feature provides improvements to loads faster for visitors including cache settings."
+msgstr "La fonctionnalité de performance améliore les chargements plus rapides pour les visiteurs, y compris les paramètres de cache."
+
+#: build/3.2.1/index.js:23
+msgid "The staging feature provides a way to copy a site to test new updates, features or content."
+msgstr "La fonction de staging permet de copier un site pour tester de nouvelles mises à jour, fonctionnalités ou contenus."
+
+#. translators: %s: number of weeks. `The trash will automatically empty every ${numTrashWeeks} weeks.`
+#: build/3.2.1/index.js:20 build/3.2.1/index.js:23
+msgid "The trash will automatically empty every %s week."
+msgid_plural "The trash will automatically empty every %s weeks."
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/3.2.1/index.js:1
+msgid "Themes"
+msgstr "Thèmes"
+
+#: inc/Admin.php:310
+msgid "There are new WordPress components which this plugin requires in order to render the interface."
+msgstr "Il y a de nouveaux composants WordPress que ce plugin nécessite pour rendre l’interface."
+
+#: build/3.2.1/index.js:1
+msgid "There's nothing here!"
+msgstr "Il n’y a rien ici !"
+
+#: build/3.2.1/index.js:23
+msgid "This feature cannot currently be modified."
+msgstr "Cette fonctionnalité ne peut actuellement pas être modifiée."
+
+#: build/3.2.1/index.js:23
+msgid "This is where you can manage common settings for your website."
+msgstr "C’est là que vous pouvez gérer les paramètres courants de votre site web."
+
+#: build/3.2.1/index.js:20
+msgid "Trash emptying frequency"
+msgstr "Fréquence de vidage des déchets"
+
+#: build/3.2.1/index.js:17
+msgid "Trash setting saved"
+msgstr "Paramètres de corbeille sauvegardés"
 
 #: build/3.2.1/index.js:1
 msgid "Turn off your \"Coming Soon\" page when you are ready to launch your website."
@@ -588,184 +646,98 @@ msgid "Turn on your \"Coming Soon\" page when you need to make major changes to 
 msgstr "Activez votre page « Bientôt » lorsque vous devez apporter des changements majeurs à votre site web."
 
 #: build/3.2.1/index.js:1
-msgid "Coming Soon page"
-msgstr "Page à venir"
+msgid "Tweet"
+msgstr "Tweet"
 
 #: build/3.2.1/index.js:1
-msgid "Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen."
-msgstr "Votre page Bientôt Hostgator vous permet de cacher votre site aux visiteurs pendant que vous faites la magie."
+msgid "Tweet Us"
+msgstr "Tweetez-nous"
 
 #: build/3.2.1/index.js:1
-msgid "Disabled old post comments"
-msgstr "Anciens commentaires de publication désactivés"
+msgid "Tweet us at @hgsupport for support"
+msgstr "Tweetez-nous à @hgsupport pour obtenir du soutien"
 
 #: build/3.2.1/index.js:1
-msgid "Enabled old post comments"
-msgstr "Activation des anciens commentaires du post"
+msgid "Video Tutorials"
+msgstr "Tutoriels vidéo"
+
+#: inc/widgets/views/site-preview.php:180
+msgid "View Site"
+msgstr "Voir le site"
 
 #: build/3.2.1/index.js:1
-msgid "Comments on old posts are disabled."
-msgstr "Les commentaires sur les anciens posts sont désactivés."
+msgid "Visit Marketplace"
+msgstr "Visitez Marketplace"
 
 #: build/3.2.1/index.js:1
-msgid "Comments are allowed on old posts."
-msgstr "Les commentaires sont autorisés sur les anciens posts."
+msgid "Watch Now"
+msgstr "Regardez maintenant"
 
 #: build/3.2.1/index.js:1
-msgid "Disable comments for older posts"
-msgstr "Désactivez les commentaires pour les anciens posts"
+msgid "We are available 24/7 to help answer questions and solve your problems."
+msgstr "Nous sommes disponibles 24h/24 et 7j/7 pour répondre à vos questions et résoudre vos problèmes."
 
 #: build/3.2.1/index.js:1
-msgid "Comments setting saved"
-msgstr "Paramètre des commentaires sauvegardé"
+msgid "We're very excited to get started with you!"
+msgstr "Nous sommes très enthousiastes à l’idée de commencer avec vous !"
 
-#. translators: %s: number of days. `Comments on posts are disabled after ${closeCommentsDays} days.`
-#: build/3.2.1/index.js:4
-#, js-format
-msgid "Comments on posts are disabled after %s day."
-msgid_plural "Comments on posts are disabled after %s days."
-msgstr[0] ""
-msgstr[1] ""
+#: build/3.2.1/index.js:1
+msgid "Web Hosting"
+msgstr "Hébergement web"
 
-#. translators: %s: number of days. `Close comments after ${closeCommentsDays} days.`
-#: build/3.2.1/index.js:7
-#, js-format
-msgid "Close comments after %s day."
-msgid_plural "Close comments after %s days."
-msgstr[0] ""
-msgstr[1] ""
+#: build/3.2.1/index.js:1
+msgid "Website Content"
+msgstr "Contenu du site web"
 
-#: build/3.2.1/index.js:7
-msgid "Comments setting saved."
-msgstr "Paramètre des commentaires sauvegardé."
+#: build/3.2.1/index.js:1
+msgid "Welcome to HostGator"
+msgstr "Bienvenue sur HostGator"
 
-#. translators: %s: number of comments. `Posts will display ${commentsPerPage} comments at a time.`
-#: build/3.2.1/index.js:10
-#, js-format
-msgid "Posts will display %s comment at a time."
-msgid_plural "Posts will display %s comments at a time."
-msgstr[0] ""
-msgstr[1] ""
-
-#. translators: %s: number of comments to display per page
-#: build/3.2.1/index.js:11
-#, js-format
-msgid "Display %s comments per page."
-msgstr "Afficher des pourcentages de commentaires par page."
-
-#: build/3.2.1/index.js:11
-msgid "Comments"
-msgstr "Commentaires"
-
-#: build/3.2.1/index.js:11
-msgid "Comments allow visitors to provide feedback and respond to your posts or pages."
-msgstr "Les commentaires permettent aux visiteurs de donner des retours et de répondre à vos publications ou pages."
-
-#: build/3.2.1/index.js:11
-msgid "Post revision setting saved"
-msgstr "Réglage de la révision après une sauvegarde"
-
-#. translators: %s: number of revisions. `Posts will save ${contentRevisions} revisions.`
-#: build/3.2.1/index.js:14
-#, js-format
-msgid "Posts will save %s revision."
-msgid_plural "Posts will save %s revisions."
-msgstr[0] ""
-msgstr[1] ""
-
-#: build/3.2.1/index.js:14
-msgid "Number of revisions posts can save"
-msgstr "Nombre de révisions que les publications peuvent sauver"
-
-#. translators: %s: number of content revisions. `Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take ${contentRevisions} steps back.`
-#: build/3.2.1/index.js:17
-#, js-format
-msgid "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take %s step back."
-msgid_plural "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take %s steps back."
-msgstr[0] ""
-msgstr[1] ""
-
-#: build/3.2.1/index.js:17
-msgid "Trash setting saved"
-msgstr "Paramètres de corbeille sauvegardés"
-
-#. translators: %s: number of weeks. `The trash will automatically empty every ${numTrashWeeks} weeks.`
-#: build/3.2.1/index.js:20
-#: build/3.2.1/index.js:23
-#, js-format
-msgid "The trash will automatically empty every %s week."
-msgid_plural "The trash will automatically empty every %s weeks."
-msgstr[0] ""
-msgstr[1] ""
-
-#: build/3.2.1/index.js:20
-msgid "Trash emptying frequency"
-msgstr "Fréquence de vidage des déchets"
-
-#: build/3.2.1/index.js:23
-msgid "Content Options"
-msgstr "Options de contenu"
-
-#: build/3.2.1/index.js:23
-msgid "Controls for content revisions and how often to empty the trash."
-msgstr "Contrôles pour les révisions de contenu et la fréquence à laquelle vider la corbeille."
-
-#: build/3.2.1/index.js:23
-msgid "The Help Center provides guided, step-by-step assistance as you build your site."
-msgstr "Le Centre d’Aide fournit une assistance guidée, étape par étape, tout au long de la création de votre site."
-
-#: build/3.2.1/index.js:23
-msgid "Sorry, that is not allowed."
-msgstr "Désolé, ce n’est pas autorisé."
-
-#: build/3.2.1/index.js:23
-msgid "This feature cannot currently be modified."
-msgstr "Cette fonctionnalité ne peut actuellement pas être modifiée."
-
-#: build/3.2.1/index.js:23
-msgid "Optimize your website my managing cache, security and performance settings."
-msgstr "Optimisez votre site web en gérant le cache, la sécurité et les paramètres de performance."
-
-#: build/3.2.1/index.js:23
-msgid "Optimize your website by managing cache and performance settings"
-msgstr "Optimisez votre site web en gérant les paramètres de cache et de performance"
-
-#: build/3.2.1/index.js:23
-msgid "General Settings"
-msgstr "Univers généraux"
-
-#: build/3.2.1/index.js:23
-msgid "This is where you can manage common settings for your website."
-msgstr "C’est là que vous pouvez gérer les paramètres courants de votre site web."
-
-#: build/3.2.1/index.js:23
-msgid "Features"
-msgstr "Caractéristiques"
-
-#: build/3.2.1/index.js:23
-msgid "Customize the available features as you manage your website."
-msgstr "Personnalisez les fonctionnalités disponibles au fur et à mesure que vous gérez votre site web."
-
-#: build/3.2.1/index.js:23
-msgid "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready."
-msgstr "Un site de staging est un double de votre site en direct, offrant un environnement sécurisé pour expérimenter, tester les mises à jour et déployer lorsque vous êtes prêt."
-
-#: build/3.2.1/index.js:23
-msgid "The performance feature provides improvements to loads faster for visitors including cache settings."
-msgstr "La fonctionnalité de performance améliore les chargements plus rapides pour les visiteurs, y compris les paramètres de cache."
-
-#: build/3.2.1/index.js:23
-msgid "The staging feature provides a way to copy a site to test new updates, features or content."
-msgstr "La fonction de staging permet de copier un site pour tester de nouvelles mises à jour, fonctionnalités ou contenus."
+#: bootstrap.php:117
+msgid "Why choose HostGator for your WordPress site?"
+msgstr "Pourquoi choisir HostGator pour votre site WordPress ?"
 
 #: build/3.2.1/index.js:23
 msgid "WonderBlocks provides a library of customizable block patterns and page templates."
 msgstr "WonderBlocks propose une bibliothèque de motifs de blocs personnalisables et de modèles de pages."
 
-#: build/3.2.1/index.js:23
-msgid "Site Editor"
-msgstr "Éditeur du site"
+#: build/3.2.1/index.js:1
+msgid "WordPress Core"
+msgstr "WordPress Core"
 
-#: build/3.2.1/index.js:23
-msgid "Customizer"
-msgstr "Customizer"
+#. Description of the plugin
+#: wp-plugin-hostgator.php:14
+msgid "WordPress plugin that integrates a WordPress site with the HostGator control panel, including performance, security, and update features."
+msgstr "Un plugin WordPress qui intègre un site WordPress avec le panneau de contrôle HostGator, incluant les fonctionnalités de performance, de sécurité et de mise à jour."
+
+#: build/3.2.1/index.js:1
+msgid "Write a new blog post."
+msgstr "Écrivez un nouvel article de blog."
+
+#: build/3.2.1/index.js:1
+msgid "You found an error, please refresh the page and try again!"
+msgstr "Vous avez trouvé une erreur, veuillez rafraîchir la page et réessayer !"
+
+#: build/3.2.1/index.js:1
+msgid "Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen."
+msgstr "Votre page Bientôt Hostgator vous permet de cacher votre site aux visiteurs pendant que vous faites la magie."
+
+#. translators: %1$s is replaced with the opening link tag to the coming soon setting, and %2$s is replaced with the closing link tag, %3$s is the opening link tag, %4$s is the closing link tag.
+#: bootstrap.php:137
+#, php-format
+msgid "Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s."
+msgstr "Votre site affiche actuellement une page %1$coming soon %2$s. Une fois prêt, %3$lance votre site %4$s."
+
+#: inc/widgets/views/site-preview.php:163 build/3.2.1/index.js:1
+msgid "Your website is currently displaying a \"Coming Soon\" page."
+msgstr "Votre site web affiche actuellement une page « Bientôt »."
+
+#: inc/widgets/views/site-preview.php:164
+msgid "Your website is live to the world!"
+msgstr "Votre site web est en ligne pour le monde entier !"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: wp-plugin-hostgator.php:12 wp-plugin-hostgator.php:20
+msgid "https://hostgator.com"
+msgstr "https://hostgator.com"
