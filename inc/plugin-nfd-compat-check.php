@@ -72,7 +72,8 @@ class NFD_Plugin_Compat_Check {
 		// require_once ABSPATH . '/wp-includes/option.php';
 		$this->slug      = $this->get_plugin_slug( $file );
 		$this->name      = $this->get_plugin_name( $file );
-		$this->conflicts = get_option( 'nfd_plugins_compat_check_conflicts', array() );
+		$conflicts       = get_option( 'nfd_plugins_compat_check_conflicts', array() );
+		$this->conflicts = is_array( $conflicts ) ? $conflicts : array();
 	}
 
 	/**
@@ -105,6 +106,7 @@ class NFD_Plugin_Compat_Check {
 	 * Displays an admin notice and deactivates the plugin if all requirements are not met.
 	 */
 	public function check_plugin_requirements() {
+		$this->prune_stale_conflicts();
 
 		if ( ! empty( $this->incompatible_plugins ) ) {
 			$this->check_incompatible_plugins();
@@ -144,6 +146,78 @@ class NFD_Plugin_Compat_Check {
 
 		// Pass check, enable self
 		return true;
+	}
+
+	/**
+	 * Drop stored conflicts that no longer apply.
+	 *
+	 * A leftover nfd_plugins_compat_check_conflicts option must not keep
+	 * self-deactivating this plugin after the incompatible plugin is gone.
+	 */
+	public function prune_stale_conflicts() {
+		if ( empty( $this->conflicts ) ) {
+			return;
+		}
+
+		$incompatible_files = array_values( $this->incompatible_plugins );
+		$legacy_files       = array_values( $this->legacy_plugins );
+		$kept               = array();
+
+		foreach ( $this->conflicts as $conflict ) {
+			if ( ! is_array( $conflict ) || empty( $conflict['slug'] ) ) {
+				continue;
+			}
+
+			$slug = $conflict['slug'];
+
+			if ( $slug === $this->slug ) {
+				if ( $this->is_any_plugin_active( $incompatible_files ) ) {
+					$kept[] = $conflict;
+				}
+				continue;
+			}
+
+			if ( in_array( $slug, $legacy_files, true ) && $this->is_plugin_currently_active( $slug ) ) {
+				$kept[] = $conflict;
+			}
+		}
+
+		if ( $kept === $this->conflicts ) {
+			return;
+		}
+
+		$this->conflicts = $kept;
+		if ( empty( $this->conflicts ) ) {
+			delete_option( 'nfd_plugins_compat_check_conflicts' );
+			return;
+		}
+
+		update_option( 'nfd_plugins_compat_check_conflicts', $this->conflicts );
+	}
+
+	/**
+	 * Whether any plugin in the list is currently active.
+	 *
+	 * @param array $plugin_files Plugin basenames.
+	 * @return bool
+	 */
+	protected function is_any_plugin_active( $plugin_files ) {
+		foreach ( $plugin_files as $plugin_file ) {
+			if ( $this->is_plugin_currently_active( $plugin_file ) ) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * Whether a plugin basename is currently active.
+	 *
+	 * @param string $plugin_file Plugin basename.
+	 * @return bool
+	 */
+	protected function is_plugin_currently_active( $plugin_file ) {
+		return function_exists( 'is_plugin_active' ) && is_plugin_active( $plugin_file );
 	}
 
 	/**
@@ -207,7 +281,7 @@ class NFD_Plugin_Compat_Check {
 	 */
 	public function has_errors() {
 		foreach ( $this->conflicts as $conflict ) {
-			if ( $conflict['source'] === $this->slug ) {
+			if ( is_array( $conflict ) && isset( $conflict['source'] ) && $conflict['source'] === $this->slug ) {
 				return true;
 			}
 		}
