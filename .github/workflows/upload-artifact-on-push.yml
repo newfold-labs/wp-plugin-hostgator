@@ -27,10 +27,11 @@ jobs:
   build:
     name: On Push
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     if: ${{ github.repository == 'newfold-labs/wp-plugin-hostgator' }}
     permissions:
-      contents: read
-      pull-requests: write
+      contents: read       # Required to checkout the repository.
+      issues: write        # Required to create/update PR comments via the Issues API.
     steps:
 
       - name: Checkout
