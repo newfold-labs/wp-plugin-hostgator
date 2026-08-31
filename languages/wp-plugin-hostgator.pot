@@ -19,13 +19,13 @@ msgid " Please contact your web host about upgrading PHP."
 msgstr ""
 
 #. translators: 1: legacy plugin name 2: plugin name
-#: inc/plugin-nfd-compat-check.php:188
+#: inc/plugin-nfd-compat-check.php:262
 #, php-format
 msgid "\"%1$s\" has been deactivated. It is incompatible with \"%2$s\"."
 msgstr ""
 
 #. translators: 1: plugin name 2: incompatible plugin name
-#: inc/plugin-nfd-compat-check.php:161
+#: inc/plugin-nfd-compat-check.php:235
 #, php-format
 msgid "\"%1$s\" has self-deactivated. It is incompatible with \"%2$s\"."
 msgstr ""

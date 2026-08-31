@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: hostgator-wordpress-plugin\n"
 "Report-Msgid-Bugs-To: https://github.com/newfold-labs/wp-plugin-hostgator/issues\n"
 "POT-Creation-Date: 2023-01-11T20:21:44+00:00\n"
-"PO-Revision-Date: 2026-08-27T17:50:32+00:00\n"
+"PO-Revision-Date: 2026-08-31T17:05:49+00:00\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese, Brazilian\n"
 "Language: pt_BR\n"
@@ -19,13 +19,13 @@ msgid " Please contact your web host about upgrading PHP."
 msgstr "Por favor, entre em contato com seu provedor de hospedagem para atualizar o PHP."
 
 #. translators: 1: legacy plugin name 2: plugin name
-#: inc/plugin-nfd-compat-check.php:188
+#: inc/plugin-nfd-compat-check.php:262
 #, php-format
 msgid "\"%1$s\" has been deactivated. It is incompatible with \"%2$s\"."
 msgstr "\"%1$s\" foi desativado. É incompatível com \"%2$s\"."
 
 #. translators: 1: plugin name 2: incompatible plugin name
-#: inc/plugin-nfd-compat-check.php:161
+#: inc/plugin-nfd-compat-check.php:235
 #, php-format
 msgid "\"%1$s\" has self-deactivated. It is incompatible with \"%2$s\"."
 msgstr "\"%1$s\" foi desativado automaticamente. É incompatível com \"%2$s\"."
