@@ -46,7 +46,7 @@
         "@playwright/test": "^1.60.0",
         "@tailwindcss/forms": "^0.5.11",
         "@wordpress/e2e-test-utils-playwright": "^1.54.0",
-        "@wordpress/env": "^11.13.0",
+        "@wordpress/env": "^11.14.0",
         "@wordpress/scripts": "^34.1.0",
         "eslint-import-resolver-alias": "^1.1.2",
         "node-fetch": "^3.3.2",
