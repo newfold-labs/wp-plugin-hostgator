@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "50f3e9380d2dd61d1982f52c183132e8",
+    "content-hash": "d4134598fa9cfd583ac552da46d2a6e1",
     "packages": [
         {
             "name": "colinmollenhour/credis",
@@ -785,26 +785,26 @@
         },
         {
             "name": "newfold-labs/wp-module-coming-soon",
-            "version": "2.2.9",
+            "version": "2.2.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-coming-soon.git",
-                "reference": "8b96d3bc7482059c1324fe69675c67b3d3bba0ac"
+                "reference": "6c79e72b65d47e88cff7c650243813e87266faee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-coming-soon/zipball/8b96d3bc7482059c1324fe69675c67b3d3bba0ac",
-                "reference": "8b96d3bc7482059c1324fe69675c67b3d3bba0ac",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-coming-soon/zipball/6c79e72b65d47e88cff7c650243813e87266faee",
+                "reference": "6c79e72b65d47e88cff7c650243813e87266faee",
                 "shasum": ""
             },
             "require": {
-                "newfold-labs/wp-module-data": "^2.9.4",
+                "newfold-labs/wp-module-data": "^2.9.8",
                 "wp-forge/wp-upgrade-handler": "^1.0"
             },
             "require-dev": {
                 "johnpbloch/wordpress": "@stable",
                 "lucatume/wp-browser": "*",
-                "newfold-labs/wp-php-standards": "^1.2.6",
+                "newfold-labs/wp-php-standards": "^2.0.0",
                 "phpunit/phpcov": "*",
                 "wp-cli/i18n-command": "^2.7.0"
             },
@@ -869,7 +869,7 @@
                 }
             ],
             "description": "Coming Soon module for WordPress sites.",
-            "time": "2026-07-21T17:12:00+00:00"
+            "time": "2026-09-01T20:08:30+00:00"
         },
         {
             "name": "newfold-labs/wp-module-context",
