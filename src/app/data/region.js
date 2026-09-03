@@ -14,7 +14,8 @@
  * DO - Dominican Republic
  * EC - Ecuador
  * MX - Mexico
- * PR - Peru
+ * PE - Peru
+ * PR - Puerto Rico
  * UY - Uruguay
  *
  * the value can be omitted and the default will be used

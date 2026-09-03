@@ -155,7 +155,7 @@ export const getRegionValue = () => {
 		case 'DO': // Dominican Republic
 		case 'EC': // Ecuador
 		case 'MX': // Mexico
-		case 'PR': // Peru
+		case 'PE': // Peru
 		case 'UY': // Uruguay
 			return regionCode;
 		case 'US':
