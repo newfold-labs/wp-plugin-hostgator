@@ -16,7 +16,7 @@ import utils from './utils.mjs';
  */
 const PLUGIN_REQUIREMENTS = {
   // https://wordpress.org/plugins/woocommerce/
-  woocommerce: { minWp: '6.9.0', minPhp: '7.4.0' },
+  woocommerce: { minWp: '7.0.0', minPhp: '7.4.0' },
   // https://wordpress.org/plugins/jetpack/
   jetpack: { minWp: '6.9.0', minPhp: '7.2.0' },
   // https://wordpress.org/plugins/wordpress-seo/
