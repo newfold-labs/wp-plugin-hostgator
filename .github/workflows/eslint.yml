@@ -24,8 +24,10 @@ permissions: {}
 jobs:
   ESLint:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
-      contents: read
+      contents: read # Required to checkout the repository.
+
     steps:
 
       - name: Checkout
