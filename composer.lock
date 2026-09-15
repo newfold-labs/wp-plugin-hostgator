@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b293fff8c5dc4b4eb25c26ebd9a0345d",
+    "content-hash": "ae454ce711d5974085989cc2e06444b6",
     "packages": [
         {
             "name": "colinmollenhour/credis",
@@ -2484,16 +2484,16 @@
         },
         {
             "name": "newfold-labs/wp-module-performance",
-            "version": "3.9.1",
+            "version": "3.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-performance.git",
-                "reference": "6bb95bb65486d2a7f65c9b71f58bf5f0879791a4"
+                "reference": "01a8d608c744f87cc209cea40fab28b867a12f15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-performance/zipball/6bb95bb65486d2a7f65c9b71f58bf5f0879791a4",
-                "reference": "6bb95bb65486d2a7f65c9b71f58bf5f0879791a4",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-performance/zipball/01a8d608c744f87cc209cea40fab28b867a12f15",
+                "reference": "01a8d608c744f87cc209cea40fab28b867a12f15",
                 "shasum": ""
             },
             "require": {
@@ -2513,7 +2513,7 @@
                 "10up/wp_mock": "^0.5.0|^1.0.0",
                 "johnpbloch/wordpress": "6.9.4",
                 "lucatume/wp-browser": "*",
-                "newfold-labs/wp-php-standards": "^1.2",
+                "newfold-labs/wp-php-standards": "^2.0",
                 "phpunit/phpcov": "*",
                 "wp-cli/i18n-command": "^2.7",
                 "wp-cli/wp-cli-bundle": "^2.8.1|^2.12"
@@ -2582,7 +2582,7 @@
                 }
             ],
             "description": "A module for managing caching functionality.",
-            "time": "2026-08-25T08:11:34+00:00"
+            "time": "2026-09-15T09:01:39+00:00"
         },
         {
             "name": "newfold-labs/wp-module-pls",
