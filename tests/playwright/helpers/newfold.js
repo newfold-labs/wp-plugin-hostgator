@@ -7,8 +7,8 @@
  */
 
 import { expect } from '@playwright/test';
-import wordpress from './wordpress.mjs';
-import utils from './utils.mjs';
+import wordpress from './wordpress.js';
+import utils from './utils.js';
 
 /**
  * Plugin support requirements
