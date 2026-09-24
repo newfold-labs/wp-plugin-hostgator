@@ -6,7 +6,7 @@ import {
   navigateToHomePage,
   installWooCommerce,
   uninstallWooCommerce,
-} from '../helpers/index.mjs';
+} from '../helpers/index.js';
 
 /**
  * HostGator does not ship Next Steps / Bluehost-style home ecommerce CTAs yet (product scope).
