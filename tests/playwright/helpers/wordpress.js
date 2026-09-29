@@ -8,7 +8,7 @@ import { execSync } from 'child_process';
  */
 
 import { Admin, PageUtils } from '@wordpress/e2e-test-utils-playwright';
-import utils from './utils.mjs';
+import utils from './utils.js';
 
 /** @type {string|undefined} */
 let pluginRoot;

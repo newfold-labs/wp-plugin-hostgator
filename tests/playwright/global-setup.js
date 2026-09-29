@@ -1,7 +1,7 @@
 import { execFileSync } from 'child_process';
 import { dirname, join } from 'path';
-import utils from './helpers/utils.mjs';
-import wordpress from './helpers/wordpress.mjs';
+import utils from './helpers/utils.js';
+import wordpress from './helpers/wordpress.js';
 
 /** Plugin root must match wp-env's cwd: loadConfig uses path.resolve('.'). */
 function getPluginRoot(config) {
