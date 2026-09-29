@@ -7,8 +7,8 @@
  */
 
 import { expect } from '@playwright/test';
-import wordpress from './wordpress.mjs';
-import utils from './utils.mjs';
+import wordpress from './wordpress.js';
+import utils from './utils.js';
 
 /**
  * Plugin support requirements
@@ -18,9 +18,9 @@ const PLUGIN_REQUIREMENTS = {
   // https://wordpress.org/plugins/woocommerce/
   woocommerce: { minWp: '7.0.0', minPhp: '7.4.0' },
   // https://wordpress.org/plugins/jetpack/
-  jetpack: { minWp: '6.9.0', minPhp: '7.2.0' },
+  jetpack: { minWp: '7.0.0', minPhp: '7.4.0' },
   // https://wordpress.org/plugins/wordpress-seo/
-  yoast: { minWp: '6.8.0', minPhp: '7.4.0' },
+  yoast: { minWp: '6.9.0', minPhp: '7.4.0' },
   // https://github.com/newfold-labs/yith-wonder/blob/master/style.css
   wonderTheme: { minWp: '6.5.0', minPhp: '7.0.0' },
 };
