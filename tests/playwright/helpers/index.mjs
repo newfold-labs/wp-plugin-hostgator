@@ -1,29 +1,11 @@
-/**
- * Playwright Test Helpers
- * 
- * Centralized helper functions for WordPress e2e tests.
- * Import specific helpers as needed to avoid bloating test files.
- */
-
-// Authentication helpers
-import auth from './auth.mjs';
-
-// Core WordPress functionality
-import wordpress from './wordpress.mjs';
-
-// Newfold/HostGator plugin-specific helpers
-import newfold from './newfold.mjs';
-
-// Accessibility testing helpers
-import a11y from './a11y.mjs';
-
-// General test utilities
-import utils from './utils.mjs';
-
-export {
-  auth,
-  wordpress,
-  newfold,
-  a11y,
-  utils
-};
+// Native ESM shim for vendor modules that load this file via pathToFileURL().
+// Static re-exports from './index.js' fail because Playwright compiles .js files
+// as CJS; CJS named exports are not available at ESM static link time.
+// Dynamic import resolves at evaluation time, after the CJS module runs, so
+// named exports on module.exports are accessible.
+const m = await import('./index.js');
+export const auth = m.auth;
+export const wordpress = m.wordpress;
+export const newfold = m.newfold;
+export const a11y = m.a11y;
+export const utils = m.utils;
