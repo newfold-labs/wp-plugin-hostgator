@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a724763dd1985282db7c3b2a69e2ca54",
+    "content-hash": "441a28d97a4fad2e691def12c9cf3476",
     "packages": [
         {
             "name": "colinmollenhour/credis",
@@ -1381,16 +1381,16 @@
         },
         {
             "name": "newfold-labs/wp-module-global-ctb",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-global-ctb.git",
-                "reference": "87d314a42174b47756ee0087c2240ae6f4f7eec1"
+                "reference": "69df8bfeba10aa84ba030768523fc6eebc3befe1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-global-ctb/zipball/87d314a42174b47756ee0087c2240ae6f4f7eec1",
-                "reference": "87d314a42174b47756ee0087c2240ae6f4f7eec1",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-global-ctb/zipball/69df8bfeba10aa84ba030768523fc6eebc3befe1",
+                "reference": "69df8bfeba10aa84ba030768523fc6eebc3befe1",
                 "shasum": ""
             },
             "require-dev": {
@@ -1461,7 +1461,7 @@
                 }
             ],
             "description": "Newfold module for 'Click to Buy' functionality in brand plugins",
-            "time": "2026-09-03T21:39:23+00:00"
+            "time": "2026-09-28T18:46:57+00:00"
         },
         {
             "name": "newfold-labs/wp-module-help-center",
