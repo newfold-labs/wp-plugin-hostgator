@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a724763dd1985282db7c3b2a69e2ca54",
+    "content-hash": "61f2270b09802c9824a4d079ed790caf",
     "packages": [
         {
             "name": "colinmollenhour/credis",
@@ -1909,25 +1909,25 @@
         },
         {
             "name": "newfold-labs/wp-module-marketplace",
-            "version": "3.2.4",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-marketplace.git",
-                "reference": "ff8185e1443e012c9f368e393268040db042ba29"
+                "reference": "faac416f3ad2d9ed3fec5ec72e59f57d1891ff63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-marketplace/zipball/ff8185e1443e012c9f368e393268040db042ba29",
-                "reference": "ff8185e1443e012c9f368e393268040db042ba29",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-marketplace/zipball/faac416f3ad2d9ed3fec5ec72e59f57d1891ff63",
+                "reference": "faac416f3ad2d9ed3fec5ec72e59f57d1891ff63",
                 "shasum": ""
             },
             "require": {
-                "newfold-labs/wp-module-data": "^2.9.4"
+                "newfold-labs/wp-module-data": "^2.9.8"
             },
             "require-dev": {
                 "johnpbloch/wordpress": "@stable",
                 "lucatume/wp-browser": "*",
-                "newfold-labs/wp-php-standards": "^1.2",
+                "newfold-labs/wp-php-standards": "^2.0",
                 "phpunit/phpcov": "*",
                 "wp-cli/i18n-command": "^2.7.0"
             },
@@ -1996,11 +1996,7 @@
                 }
             ],
             "description": "A module for rendering product data and interacting with the Hiive marketplace API.",
-            "support": {
-                "source": "https://github.com/newfold-labs/wp-module-marketplace/tree/3.2.4",
-                "issues": "https://github.com/newfold-labs/wp-module-marketplace/issues"
-            },
-            "time": "2026-06-10T07:43:12+00:00"
+            "time": "2026-09-28T18:33:57+00:00"
         },
         {
             "name": "newfold-labs/wp-module-migration",
