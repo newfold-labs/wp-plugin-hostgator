@@ -47,7 +47,7 @@
         "@tailwindcss/forms": "^0.5.11",
         "@wordpress/e2e-test-utils-playwright": "^2.1.0",
         "@wordpress/env": "^11.16.0",
-        "@wordpress/scripts": "^35.0.0",
+        "@wordpress/scripts": "^36.0.0",
         "eslint-import-resolver-alias": "^1.1.2",
         "node-fetch": "^3.3.2",
         "node-wp-i18n": "^1.2.8",
