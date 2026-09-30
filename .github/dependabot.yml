@@ -1,4 +1,11 @@
 version: 2
+
+# Registries must be declared so Dependabot's proxy allows egress to them.
+registries:
+  newfold-satis:
+    type: composer-repository
+    url: https://newfold-labs.github.io/satis/
+
 updates:
 
   # Maintain dependencies for GitHub Actions
@@ -35,6 +42,8 @@ updates:
   # Maintain dependencies for Composer
   - package-ecosystem: "composer"
     directory: "/"
+    registries:
+      - newfold-satis
     target-branch: "develop"
     schedule:
       interval: "daily"
