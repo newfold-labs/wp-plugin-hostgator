@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "db68bca348bfa40e35ca85fee5a313e9",
+    "content-hash": "d4e01fb41df06ccff6a6d545e041bb8e",
     "packages": [
         {
             "name": "colinmollenhour/credis",
@@ -737,16 +737,16 @@
         },
         {
             "name": "newfold-labs/wp-module-coming-soon",
-            "version": "2.2.10",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-coming-soon.git",
-                "reference": "6c79e72b65d47e88cff7c650243813e87266faee"
+                "reference": "4b5cff39693954432b18852a742d14077f7261e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-coming-soon/zipball/6c79e72b65d47e88cff7c650243813e87266faee",
-                "reference": "6c79e72b65d47e88cff7c650243813e87266faee",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-coming-soon/zipball/4b5cff39693954432b18852a742d14077f7261e9",
+                "reference": "4b5cff39693954432b18852a742d14077f7261e9",
                 "shasum": ""
             },
             "require": {
@@ -756,7 +756,7 @@
             "require-dev": {
                 "johnpbloch/wordpress": "@stable",
                 "lucatume/wp-browser": "*",
-                "newfold-labs/wp-php-standards": "^2.0.0",
+                "newfold-labs/wp-php-standards": "^2.0",
                 "phpunit/phpcov": "*",
                 "wp-cli/i18n-command": "^2.7.0"
             },
@@ -821,7 +821,7 @@
                 }
             ],
             "description": "Coming Soon module for WordPress sites.",
-            "time": "2026-09-01T20:08:30+00:00"
+            "time": "2026-09-30T13:16:48+00:00"
         },
         {
             "name": "newfold-labs/wp-module-context",
