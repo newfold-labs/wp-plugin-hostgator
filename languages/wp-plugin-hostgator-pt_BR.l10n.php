@@ -5,7 +5,7 @@ return [
 	'language' => 'pt_BR',
 	'project-id-version' => 'hostgator-wordpress-plugin',
 	'pot-creation-date' => '2023-01-11T20:21:44+00:00',
-	'po-revision-date' => '2026-08-26T22:16:59+00:00',
+	'po-revision-date' => '2026-10-01T18:00:43+00:00',
 	'messages' => [
 		'The HostGator Plugin' => 'O Plugin HostGator',
 		'https://hostgator.com' => 'https://hostgator.com.br',
@@ -21,7 +21,7 @@ return [
 		'%s &mdash; Coming Soon' => '%s &mdash; Em Breve',
 		'Coming Soon Active' => 'Ativo Em Breve',
 		'Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s.' => 'Seu site está exibindo uma %1$spágina em breve%2$s. Assim que estiver pronto, %3$slance seu site%4$s.',
-		'Preview the coming soon landing page' => 'Visualize a página de destino em breve',
+		'Manage your coming soon page settings' => 'Gerencie as configurações da sua página em breve',
 		'Home' => 'Início',
 		'Settings' => 'Configurações',
 		'Help Resources' => 'Recursos de Ajuda',

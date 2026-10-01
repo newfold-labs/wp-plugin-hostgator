@@ -1,323 +1,323 @@
 {
-    "translation-revision-date": "2026-08-26T22:16:59+00:00",
+    "translation-revision-date": "2026-10-01T18:00:43+00:00",
     "generator": "WP-CLI\/2.12.0",
-    "source": "build\/3.2.1\/index.js",
+    "source": "build\/3.3.0\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
             "": {
                 "domain": "messages",
-                "lang": "nl_NL",
+                "lang": "es_ES",
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
             "HostGator": [
                 "HostGator"
             ],
             "Home": [
-                "Home"
+                "Pagina principal"
             ],
             "Settings": [
-                "Instellingen"
+                "Configuraciones"
             ],
             "Not Live": [
-                "Niet live"
+                "No publicado "
             ],
             "Live": [
-                "Live"
+                "Publicado"
             ],
             "Your website is currently displaying a \"Coming Soon\" page.": [
-                "Je website toont momenteel een pagina \"Binnenkort beschikbaar\"."
+                "Tu sitio web actualmente muestra una p\u00e1gina \"Pr\u00f3ximamente\"."
             ],
             "Editor": [
-                "Redacteur"
+                "Editor"
             ],
             "Hosting Panel": [
-                "Presentatiepanel"
+                "Panel de Anfitrionas"
             ],
             "Oh No, An Error!": [
-                "Oh nee, een fout!"
+                "\u00a1Oh no, un error!"
             ],
             "You found an error, please refresh the page and try again!": [
-                "Je hebt een foutmelding gevonden, ververs de pagina en probeer het opnieuw!"
+                "Haz encontrado un error, \u00a1actualiza la p\u00e1gina e int\u00e9ntalo de nuevo!"
             ],
             "If the error persists, please contact support.": [
-                "Als de fout blijft bestaan, neem dan contact op met de support."
+                "Si persiste el error, comun\u00edcate con el soporte."
             ],
             "Error code:": [
-                "Foutcode:"
+                "C\u00f3digo de error:"
             ],
             "HostGator WordPress Plugin": [
-                "HostGator WordPress-plugin"
+                "HostGator WordPress Plugin"
             ],
             "Phone": [
-                "Telefoon"
+                "Tel\u00e9fono"
             ],
             "Give us a ring at (866) 96-GATOR": [
-                "Bel ons op (866) 96-GATOR"
+                "Ll\u00e1manos al (866) 96-GATOR"
             ],
             "Call Us": [
-                "Bel ons"
+                "Ll\u00e1manos"
             ],
             "Chat": [
                 "Chat"
             ],
             "Have a question? We're here 24\/7\/365": [
-                "Heb je een vraag? We zijn hier 24\/7\/365"
+                "\u00bfTiene alguna pregunta? Contactemos"
             ],
             "Live Chat": [
-                "Live Chat"
+                "Chat"
             ],
             "Tweet": [
                 "Tweet"
             ],
             "Tweet us at @hgsupport for support": [
-                "Tweet ons op @hgsupport voor steun"
+                "Env\u00edanos un tweet a @hgsupport para obtener ayuda"
             ],
             "Tweet Us": [
-                "Tweet ons"
+                "Env\u00edanos un tweet"
             ],
             "Knowledge Base": [
-                "Kennisbasis"
+                "Base de Conocimientos"
             ],
             "Know what the pros know.": [
-                "Weet wat de professionals weten."
+                "Conoce lo que saben los profesionales."
             ],
             "Find Answers": [
-                "Antwoorden vinden"
+                "Encontra Respuestas"
             ],
             "Blog": [
                 "Blog"
             ],
             "Get our tips and in-depth articles.": [
-                "Ontvang onze tips en diepgaande artikelen."
+                "Obten nuestros consejos y art\u00edculos detallados."
             ],
             "Learn Stuff": [
-                "Leer dingen"
+                "Aprende"
             ],
             "Video Tutorials": [
-                "Videotutorials"
+                "Tutoriales en V\u00eddeo"
             ],
             "Step-by-step tutorials and additional guides.": [
-                "Stapsgewijze tutorials en aanvullende gidsen."
+                "Tutoriales paso a paso y gu\u00edas adicionales."
             ],
             "Watch Now": [
-                "Bekijk nu"
+                "Ve Ahora"
             ],
             "There's nothing here!": [
-                "Er is hier niets!"
+                "\u00a1No hay nada aqu\u00ed!"
             ],
             "Manage WordPress": [
-                "Beheer WordPress"
+                "Gestionar WordPress"
             ],
             "Staging": [
-                "Enscenering"
+                "Puesta en escena"
             ],
             "Performance": [
-                "Prestaties"
+                "Rendimiento"
             ],
             "Commerce": [
-                "Handel"
+                "Comercio"
             ],
             "Marketplace": [
-                "Marktplaats"
+                " Marketplace"
             ],
             "Help": [
-                "Help"
+                "Ayuda"
             ],
             "Admin": [
-                "Administratie"
+                " Administrador"
             ],
             "Secret page to manage admin features and settings.": [
-                "Geheime pagina om beheerdersfuncties en instellingen te beheren."
+                " P\u00e1gina secreta para administrar funciones y configuraciones de administrador"
             ],
             "Discover exclusive features, designed to deliver unmatched value and elevate your online experience.": [
-                "Ontdek exclusieve functies, ontworpen om onge\u00ebvenaarde waarde te bieden en je online ervaring te verbeteren."
+                "Descubre funciones exclusivas, dise\u00f1adas para ofrecer un valor inigualable y elevar tu experiencia online."
             ],
             "We are available 24\/7 to help answer questions and solve your problems.": [
-                "Wij zijn 24\/7 beschikbaar om vragen te beantwoorden en uw problemen op te lossen."
+                "Estamos disponibles en horario comercial para ayudarlo a responder preguntas y resolver sus problemas. "
             ],
             "Welcome to HostGator": [
-                "Welkom bij HostGator"
+                "Bienvenidos a HostGator"
             ],
             "We're very excited to get started with you!": [
-                "We zijn erg enthousiast om samen met jou te beginnen!"
+                "\u00a1Estamos muy ilusionados de empezar contigo!"
             ],
             "Quick Links": [
-                "Snelle links"
+                "Enlaces r\u00e1pidos"
             ],
             "Settings and Performance": [
-                "Instellingen en uitvoering"
+                "Configuraci\u00f3n y Rendimiento"
             ],
             "Customize & fine-tune your site.": [
-                "Pas je site aan en verfijn je bij."
+                "Personaliza y ajusta tu sitio web."
             ],
             "Manage Settings": [
-                "Instellingen beheren"
+                "Administrar Configuraciones"
             ],
             "Manage your site settings. You can adjust automatic updates, comments, revisions and more.": [
-                "Beheer je site-instellingen. Je kunt automatische updates, opmerkingen, revisies en meer aanpassen."
+                "Gestiona la configuraci\u00f3n de tu sitio. Puedes ajustar actualizaciones autom\u00e1ticas, comentarios, revisiones y m\u00e1s."
             ],
             "Manage site performance and caching settings as well as clear the site cache.": [
-                "Beheer de siteprestaties en cachinginstellingen, evenals het wissen van de sitecache."
+                "Administra el rendimiento del sitio web y las configuraciones de almacenamiento en cach\u00e9, as\u00ed como borrar el cach\u00e9 del sitio web."
             ],
             "Visit Marketplace": [
-                "Bezoek Marketplace"
+                "Visita el Marketplace"
             ],
             "Add site services, themes or plugins from the marketplace.": [
-                "Voeg siteservices, thema's of plugins toe vanuit de marktplaats."
+                "A\u00f1ade servicios de sitio web, temas o plugins desde el marketplace."
             ],
             "Website Content": [
-                "Website-inhoud"
+                "Contenido del Sitio Web"
             ],
             "Create, manage & sort your story.": [
-                "Maak, beheer en sorteer je verhaal."
+                "Crea, administra y ordena tu projecto."
             ],
             "New Post": [
-                "Nieuwe functie"
+                "Nueva publicaci\u00f3n"
             ],
             "Write a new blog post.": [
-                "Schrijf een nieuwe blogpost."
+                "Escribe una nueva publicaci\u00f3n de blog."
             ],
             "Pages": [
-                "Pagina's"
+                "P\u00e1ginas"
             ],
             "New Page": [
-                "Nieuwe pagina"
+                "Nueva P\u00e1gina"
             ],
             "Add fresh pages to your website.": [
-                "Voeg verse pagina's toe aan je website."
+                "A\u00f1ade p\u00e1ginas nuevas a tu sitio web."
             ],
             "Categories": [
-                "Categorie\u00ebn"
+                "Categor\u00edas"
             ],
             "Manage Categories": [
-                "Beheer Categorie\u00ebn"
+                "Administra las Categor\u00edas"
             ],
             "Organize existing content into categories.": [
-                "Organiseer bestaande content in categorie\u00ebn."
+                "Organiza el contenido existente en categor\u00edas."
             ],
             "Web Hosting": [
-                "Webhosting"
+                " Web Hostin"
             ],
             "Access & manage your HostGator account.": [
-                "Toegang en beheer je HostGator-account."
+                "Accede y administra tu cuenta HostGator."
             ],
             "Manage Sites": [
-                "Beheer Sites"
+                "Administra Sitios Web"
             ],
             "Manage your site from the control panel. You can create backups, set security, and improve performance.": [
-                "Beheer je site vanuit het bedieningspaneel. Je kunt back-ups maken, beveiliging instellen en de prestaties verbeteren."
+                "Administra tu sitio web desde el panel de control. Es posible crear copias de seguridad, configurar la seguridad y mejorar el rendimiento."
             ],
             "Email": [
-                "E-mail"
+                "Correo Electr\u00f3nico"
             ],
             "Manage Email": [
-                "E-mail beheren"
+                "Administra el Correo Electr\u00f3nico"
             ],
             "Create email accounts, compose, send, and receive your email from the control panel.": [
-                "Maak e-mailaccounts aan, schrijf je e-mail, stuur en ontvang je e-mail vanuit het bedieningspaneel."
+                "Crea cuentas de correo electr\u00f3nico, redacta, env\u00eda y reciba su correo electr\u00f3nico desde el panel de control."
             ],
             "Domains": [
-                "Domeinen"
+                "Dominios"
             ],
             "Manage Domain": [
-                "Beheer Domein"
+                " Administrar dominio"
             ],
             "Find a Domain": [
-                "Vind een domein"
+                "Encuentra un Dominio"
             ],
             "Find a new domain and assign it to your site or start a new site with a fresh domain.": [
-                "Zoek een nieuw domein en wijs het toe aan je site, of begin een nieuwe site met een nieuw domein."
+                "Encuentra un nuevo dominio y as\u00edgnalo a tu sitio web o inicia un nuevo sitio web con un dominio nuevo."
             ],
             "Get Help": [
-                "Zoek hulp"
+                "Obtenga Ayuda"
             ],
             "24\/7\/365 support. We work when you work.": [
-                "24\/7\/365 ondersteuning. Wij werken wanneer jij werkt."
+                "Soporte en horario comercial."
             ],
             "Explore our featured collection of tools and services.": [
-                "Ontdek onze uitgelichte collectie gereedschappen en diensten."
+                "Explora nuestra colecci\u00f3n destacada de herramientas y servicios "
             ],
             "Oops, there was an error loading the marketplace, please try again later.": [
-                "Oeps, er was een fout bij het laden van de marketplace, probeer het later opnieuw."
+                "Vaya, se produjo un error al cargar el marketplace. Vuelve a intentarlo m\u00e1s tarde. "
             ],
             "Sorry, no marketplace items. Please, try again later.": [
-                "Sorry, geen marktartikelen. Probeer het later alsjeblieft opnieuw."
+                "Lo sentimos, no hay art\u00edculos en el marketplace. Por favor, int\u00e9ntalo de nuevo m\u00e1s tarde. "
             ],
             "Load More": [
-                "Meer laden"
+                " Cargar m\u00e1s"
             ],
             "Oops! Something Went Wrong": [
-                "Oeps! Er ging iets mis"
+                "\u00a1Ups! Algo sali\u00f3 mal"
             ],
             "An error occurred while loading the content. Please try again later.": [
-                "Er trad een fout op tijdens het laden van de inhoud. Probeer het later opnieuw."
+                " Se produjo un error al cargar el contenido. Int\u00e9ntelo de nuevo m\u00e1s tarde."
             ],
             "Manage All Updates": [
-                "Beheer alle updates"
+                " Administrar todas las actualizaciones"
             ],
             "WordPress Core": [
-                "WordPress Core"
+                "N\u00facleo de WordPress"
             ],
             "Plugins": [
                 "Plugins"
             ],
             "Themes": [
-                "Thema's"
+                "Temas"
             ],
             "Automatic Updates": [
-                "Automatische updates"
+                "Actualizaciones Autom\u00e1ticas"
             ],
             "Keeping automatic updates on ensures timely security fixes and the latest features.": [
-                "Het aanhouden van automatische updates zorgt voor tijdige beveiligingsupdates en de nieuwste functies."
+                "Mantener activadas las actualizaciones autom\u00e1ticas garantiza correcciones de seguridad oportunas y las funciones m\u00e1s recientes. "
             ],
             "Oops! Something went wrong. Please try again.": [
-                "Oeps! Er ging iets mis. Probeer het alsjeblieft opnieuw."
+                "\u00a1Ups! Algo sali\u00f3 mal. Por favor int\u00e9ntalo de nuevo. "
             ],
             "Coming soon activated": [
-                "Binnenkort geactiveerd"
+                "Pr\u00f3ximamente activado"
             ],
             "Coming soon deactivated": [
-                "Binnenkort gedeactiveerd"
+                "Pr\u00f3ximamente desactivado"
             ],
             "Coming soon page is active. Site requires login.": [
-                "De pagina die binnenkort komt is actief. De site vereist inlog."
+                "La p\u00e1gina pr\u00f3ximamente est\u00e1 activa. El sitio requiere inicio de sesi\u00f3n."
             ],
             "Coming soon page is not active. Site is live to visitors.": [
-                "De pagina Binnenkort is niet actief. De site is live voor bezoekers."
+                "La p\u00e1gina de pr\u00f3ximamente no est\u00e1 activa. El sitio est\u00e1 disponible para los visitantes."
             ],
             "Site Status": [
-                "Locatiestatus"
+                "Status del sitio "
             ],
             "Turn off your \"Coming Soon\" page when you are ready to launch your website.": [
-                "Schakel je pagina \"Binnenkort binnenkort\" uit wanneer je klaar bent om je website te lanceren."
+                "Apaga tu p\u00e1gina de \"Pr\u00f3ximamente\" cuando est\u00e9s listo para lanzar tu p\u00e1gina web."
             ],
             "Turn on your \"Coming Soon\" page when you need to make major changes to your website.": [
-                "Zet je pagina \"Binnenkort binnenkort\" aan wanneer je grote wijzigingen aan je website moet aanbrengen."
+                "Activa tu p\u00e1gina de \"Pr\u00f3ximamente\" cuando necesites hacer cambios importantes en tu p\u00e1gina web."
             ],
             "Coming Soon page": [
-                "Binnenkort pagina"
+                "Pr\u00f3ximamente una p\u00e1gina"
             ],
             "Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen.": [
-                "Je Hostgator Komt Binnenkort pagina laat je je site verbergen voor bezoekers terwijl je de magie laat gebeuren."
+                " Tu p\u00e1gina Hostgator pr\u00f3ximamente te permite ocultar tu sitio a los visitantes mientras hace que suceda la magia. "
             ],
             "Disabled old post comments": [
-                "Gedeactiveerde oude reacties"
+                "Deshabilitado comentarios de publicaci\u00f3n antigua"
             ],
             "Enabled old post comments": [
-                "Oude postreacties ingeschakeld"
+                "Activado los comentarios de la publicaci\u00f3n antigua"
             ],
             "Comments on old posts are disabled.": [
-                "Reacties op oude berichten zijn uitgeschakeld."
+                "Los comentarios en publicaciones antiguas est\u00e1n deshabilitados."
             ],
             "Comments are allowed on old posts.": [
-                "Reacties zijn toegestaan op oude berichten."
+                "Se permiten comentarios en publicaciones antiguas."
             ],
             "Disable comments for older posts": [
-                "Schakel reacties uit voor oudere berichten"
+                "Deshabilitar comentarios para publicaciones antiguas"
             ],
             "Comments setting saved": [
-                "Reactie-instelling opgeslagen"
+                "Configuraci\u00f3n de comentarios guardada"
             ],
             "Comments on posts are disabled after %s day.": [
                 ""
@@ -326,88 +326,88 @@
                 ""
             ],
             "Comments setting saved.": [
-                "Reacties opgeslagen."
+                "Configuraci\u00f3n de comentarios guardada. "
             ],
             "Posts will display %s comment at a time.": [
                 ""
             ],
             "Display %s comments per page.": [
-                "Toon %s reacties per pagina."
+                "Mostrar %s de comentarios por p\u00e1gina."
             ],
             "Comments": [
-                "Reacties"
+                "Comentarios"
             ],
             "Comments allow visitors to provide feedback and respond to your posts or pages.": [
-                "Reacties stellen bezoekers in staat feedback te geven en te reageren op je berichten of pagina's."
+                "Los comentarios permiten a los visitantes proporcionar comentarios y responder a sus publicaciones o p\u00e1ginas."
             ],
             "Post revision setting saved": [
-                "Instellingen na de revisie opgeslagen"
+                "Configuraci\u00f3n posterior a la revisi\u00f3n guardada"
             ],
             "Posts will save %s revision.": [
                 ""
             ],
             "Number of revisions posts can save": [
-                "Aantal revisies dat berichten kunnen opslaan"
+                "N\u00famero de revisiones que las publicaciones pueden guardar"
             ],
             "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take %s step back.": [
                 ""
             ],
             "Trash setting saved": [
-                "Vuilnisinstelling opgeslagen"
+                "Configuraci\u00f3n de la papelera guardada"
             ],
             "The trash will automatically empty every %s week.": [
                 ""
             ],
             "Trash emptying frequency": [
-                "Frequentie van het leegplaatsen van afval"
+                "Frecuencia de vaciado de la basura"
             ],
             "Content Options": [
-                "Inhoudsopties"
+                "Opciones de Contenido"
             ],
             "Controls for content revisions and how often to empty the trash.": [
-                "Controles voor inhoudsherzieningen en hoe vaak je de prullenbak moet leegmaken."
+                "Controles para revisiones de contenido y con qu\u00e9 frecuencia vaciar la papelera."
             ],
             "The Help Center provides guided, step-by-step assistance as you build your site.": [
-                "Het Helpcentrum biedt begeleide, stapsgewijze ondersteuning bij het bouwen van je site."
+                "La Central de ayuda brinda asistencia guiada paso a paso a medida que crea tu sitio. "
             ],
             "Sorry, that is not allowed.": [
-                "Sorry, dat is niet toegestaan."
+                " Lo siento, eso no est\u00e1 permitido."
             ],
             "This feature cannot currently be modified.": [
-                "Deze functie kan momenteel niet worden gewijzigd."
+                " Esta caracter\u00edstica no se puede modificar actualmente."
             ],
             "Optimize your website my managing cache, security and performance settings.": [
-                "Optimaliseer je website door cache-, beveiligings- en prestatie-instellingen te beheren."
+                "Optimiza tu sitio web gestionando la cach\u00e9, la seguridad y los ajustes de rendimiento."
             ],
             "Optimize your website by managing cache and performance settings": [
-                "Optimaliseer je website door cache- en prestatie-instellingen te beheren"
+                "Optimiza tu sitio web gestionando la cach\u00e9 y los ajustes de rendimiento"
             ],
             "General Settings": [
-                "Algemene instellingen"
+                "Escenarios generales"
             ],
             "This is where you can manage common settings for your website.": [
-                "Hier kun je de gebruikelijke instellingen voor je website beheren."
+                "Aqu\u00ed puedes administrar la configuraci\u00f3n com\u00fan de tu sitio web. "
             ],
             "Features": [
-                "Kenmerken"
+                " Caracter\u00edsticas "
             ],
             "Customize the available features as you manage your website.": [
-                "Pas de beschikbare functies aan terwijl je je website beheert."
+                "Personaliza las funciones disponibles mientras gestionas tu sitio web."
             ],
             "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready.": [
-                "Een stagingsite is een duplicaat van je live site en biedt een veilige omgeving om te experimenteren, updates te testen en te implementeren wanneer klaar."
+                "Un sitio de staging es un duplicado de tu sitio en vivo, ofreciendo un entorno seguro para experimentar, probar actualizaciones y desplegar cuando est\u00e9 listo."
             ],
             "The performance feature provides improvements to loads faster for visitors including cache settings.": [
-                "De prestatiefunctie zorgt voor verbeteringen om sneller te laden voor bezoekers, inclusief cache-instellingen."
+                " La funci\u00f3n de rendimiento proporciona mejoras para cargar m\u00e1s r\u00e1pido para los visitantes, incluida la configuraci\u00f3n de cach\u00e9."
             ],
             "The staging feature provides a way to copy a site to test new updates, features or content.": [
-                "De staging-functie biedt een manier om een site te kopi\u00ebren om nieuwe updates, functies of content te testen."
+                " La funci\u00f3n de preparaci\u00f3n proporciona una forma de copiar un sitio para probar nuevas actualizaciones, funciones o contenido."
             ],
             "WonderBlocks provides a library of customizable block patterns and page templates.": [
-                "WonderBlocks biedt een bibliotheek met aanpasbare blokpatronen en paginatemplates."
+                "WonderBlocks proporciona una biblioteca de patrones de bloques y plantillas de p\u00e1ginas personalizables."
             ],
             "Site Editor": [
-                "Site-editor"
+                "Editor del sitio"
             ],
             "Customizer": [
                 "Customizer"
