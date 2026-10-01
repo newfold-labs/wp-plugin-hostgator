@@ -26,11 +26,11 @@ const WonderBlocksSettings = () => {
 			? __(
 					'Create new content to see WonderBlocks in action.',
 					'wp-plugin-hostgator'
-			  )
+				)
 			: __(
 					'WonderBlocks will no longer display.',
 					'wp-plugin-hostgator'
-			  );
+				);
 	};
 
 	const toggleWonderBlocks = () => {
