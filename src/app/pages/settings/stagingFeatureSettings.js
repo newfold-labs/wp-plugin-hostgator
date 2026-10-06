@@ -24,7 +24,7 @@ const StagingFeatureSettings = () => {
 			? __(
 					'You need to reload the page to manage Staging.',
 					'wp-plugin-hostgator'
-			  )
+				)
 			: __( 'Staging will no longer display.', 'wp-plugin-hostgator' );
 	};
 

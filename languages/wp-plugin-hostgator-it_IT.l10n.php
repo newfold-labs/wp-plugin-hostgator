@@ -5,7 +5,7 @@ return [
 	'language' => 'it_IT',
 	'project-id-version' => 'The HostGator Plugin 3.0.0',
 	'pot-creation-date' => '2023-01-11T20:21:44+00:00',
-	'po-revision-date' => '2026-08-26T22:16:59+00:00',
+	'po-revision-date' => '2026-10-01T18:00:43+00:00',
 	'messages' => [
 		'The HostGator Plugin' => 'Il plugin HostGator',
 		'https://hostgator.com' => 'https://hostgator.com',
@@ -21,7 +21,7 @@ return [
 		'%s &mdash; Coming Soon' => '%s — Prossimamente in arrivo',
 		'Coming Soon Active' => 'In arrivo Presto Attivo',
 		'Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s.' => 'Il tuo sito sta attualmente mostrando una pagina %1$prossimo%2$. Quando sei pronto, %3$lancia il tuo sito%.',
-		'Preview the coming soon landing page' => 'Anteprima della prossima pagina di destinazione',
+		'Manage your coming soon page settings' => 'Gestisci le impostazioni della pagina prossima',
 		'Home' => 'Casa',
 		'Settings' => 'Impostazioni',
 		'Help Resources' => 'Risorse di aiuto',
