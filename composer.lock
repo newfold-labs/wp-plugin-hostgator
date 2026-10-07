@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d4e01fb41df06ccff6a6d545e041bb8e",
+    "content-hash": "39a63a28cdb94a94eb433c67d202f75f",
     "packages": [
         {
             "name": "colinmollenhour/credis",
@@ -2008,16 +2008,16 @@
         },
         {
             "name": "newfold-labs/wp-module-migration",
-            "version": "1.8.0",
+            "version": "1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-migration.git",
-                "reference": "96e0791d3a1a9deb46dd44f8bdd231c480454af0"
+                "reference": "642f3a8c70fe15ad482519549d6ca083d2cb1259"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-migration/zipball/96e0791d3a1a9deb46dd44f8bdd231c480454af0",
-                "reference": "96e0791d3a1a9deb46dd44f8bdd231c480454af0",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-migration/zipball/642f3a8c70fe15ad482519549d6ca083d2cb1259",
+                "reference": "642f3a8c70fe15ad482519549d6ca083d2cb1259",
                 "shasum": ""
             },
             "require": {
@@ -2088,7 +2088,7 @@
                 }
             ],
             "description": "Initiates the migration process",
-            "time": "2026-09-28T18:32:16+00:00"
+            "time": "2026-10-07T06:32:50+00:00"
         },
         {
             "name": "newfold-labs/wp-module-notifications",
