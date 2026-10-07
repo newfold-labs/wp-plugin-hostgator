@@ -25,7 +25,7 @@ const AutomaticUpdatesAll = ( { setError, notify } ) => {
 			? __(
 					'Everything will automatically update.',
 					'wp-plugin-hostgator'
-			  )
+				)
 			: __( 'Custom auto-update settings.', 'wp-plugin-hostgator' );
 	};
 
@@ -111,11 +111,11 @@ const AutomaticUpdatesMajorCore = ( { setError, notify } ) => {
 			? __(
 					'WordPress will automatically update.',
 					'wp-plugin-hostgator'
-			  )
+				)
 			: __(
 					'WordPress must be manually updated.',
 					'wp-plugin-hostgator'
-			  );
+				);
 	};
 
 	const toggleAutoUpdatesMajorCore = () => {
@@ -174,11 +174,11 @@ const AutomaticUpdatesPlugins = ( { setError, notify } ) => {
 			? __(
 					'All plugins will automatically update.',
 					'wp-plugin-hostgator'
-			  )
+				)
 			: __(
 					'Each plugin must be manually updated.',
 					'wp-plugin-hostgator'
-			  );
+				);
 	};
 
 	const toggleAutoUpdatesPlugins = () => {
@@ -238,11 +238,11 @@ const AutomaticUpdatesThemes = ( { setError, notify } ) => {
 			? __(
 					'All themes will automatically update.',
 					'wp-plugin-hostgator'
-			  )
+				)
 			: __(
 					'Each theme must be manually updated.',
 					'wp-plugin-hostgator'
-			  );
+				);
 	};
 
 	const toggleAutoUpdatesThemes = () => {
