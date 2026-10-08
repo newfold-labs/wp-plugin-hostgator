@@ -9,8 +9,14 @@ test.describe('Home Page', () => {
   test('Is Accessible', async ({ page }) => {
     await page.waitForSelector('#hgwp-app-rendered', { timeout: 10000 });
     await page.waitForSelector('.hgwp-app-home-page', { timeout: 10000 });
+    await page.waitForSelector('[data-cy="nfd-coming-soon-content"]', { timeout: 10000 });
 
-    await a11y.checkA11y(page, '.hgwp-app-body');
+    // Exclude the site preview iframe — it loads third-party theme content
+    // that is not part of the plugin UI and can cause flaky contrast failures
+    // while styles are still loading.
+    await a11y.checkA11y(page, '.hgwp-app-body', {
+      exclude: ['#iframe-preview'],
+    });
   });
 
   test('Home page content is visible', async ({ page }) => {

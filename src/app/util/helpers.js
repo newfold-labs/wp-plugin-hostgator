@@ -155,7 +155,7 @@ export const getRegionValue = () => {
 		case 'DO': // Dominican Republic
 		case 'EC': // Ecuador
 		case 'MX': // Mexico
-		case 'PR': // Peru
+		case 'PE': // Peru
 		case 'UY': // Uruguay
 			return regionCode;
 		case 'US':
@@ -222,9 +222,8 @@ export const supportsLinkPerRegion = ( link_name = 'main' ) => {
  * @return {string} The new URL.
  */
 export const addUtmParams = ( url, params = {} ) => {
-	// eslint-disable-next-line camelcase
 	params.utm_source = `wp-admin/admin.php?page=hostgator${ window.location.hash }`;
-	// eslint-disable-next-line camelcase
+
 	params.utm_medium = 'hostgator_plugin';
 	return addQueryArgs( url, params );
 };

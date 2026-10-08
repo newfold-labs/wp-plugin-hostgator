@@ -6,19 +6,19 @@
  */
 
 // Authentication helpers
-import auth from './auth.mjs';
+import auth from './auth.js';
 
 // Core WordPress functionality
-import wordpress from './wordpress.mjs';
+import wordpress from './wordpress.js';
 
 // Newfold/HostGator plugin-specific helpers
-import newfold from './newfold.mjs';
+import newfold from './newfold.js';
 
 // Accessibility testing helpers
-import a11y from './a11y.mjs';
+import a11y from './a11y.js';
 
 // General test utilities
-import utils from './utils.mjs';
+import utils from './utils.js';
 
 export {
   auth,

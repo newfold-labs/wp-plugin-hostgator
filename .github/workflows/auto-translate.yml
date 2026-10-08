@@ -25,7 +25,7 @@ jobs:
       contents: write       # Required for reusable workflow to commit translation updates.
       pull-requests: write # Required for reusable workflow to open/update pull requests.
     with:
-      text_domain: 'wp-plugin-bluehost'
+      text_domain: 'wp-plugin-hostgator'
       i18n-script-location: 'npm'
     secrets:
       TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY }}
