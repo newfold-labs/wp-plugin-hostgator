@@ -33,7 +33,6 @@ jobs:
 
   codecoverage:
     needs: get-repo-name
-    timeout-minutes: 90
     uses: newfold-labs/workflows/.github/workflows/reusable-codecoverage.yml@main
     permissions:
       contents: write       # Required for reusable workflow to publish coverage artifacts/commits.
