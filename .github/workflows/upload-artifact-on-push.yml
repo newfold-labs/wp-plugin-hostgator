@@ -31,7 +31,7 @@ jobs:
     if: ${{ github.repository == 'newfold-labs/wp-plugin-hostgator' }}
     permissions:
       contents: read       # Required to checkout the repository.
-      issues: write        # Required to create/update PR comments via the Issues API.
+      pull-requests: write # Required to create/update PR comments (Issues API on a PR needs pull-requests scope).
     steps:
 
       - name: Checkout
