@@ -32,10 +32,10 @@ jobs:
   # This runs the Newfold reusable-plugin-prep-release workflow for this plugin to prepare a release.
   prep-release:
     name: Prepare Release
-    permissions:
-      contents: write
-      pull-requests: write
     uses: newfold-labs/workflows/.github/workflows/reusable-plugin-prep-release.yml@main
+    permissions:
+      contents: write       # Required for reusable workflow to prepare release branches/commits.
+      pull-requests: write # Required for reusable workflow pull-request operations.
     with:
       plugin-repo: ${{ github.repository }}
       plugin-target-branch: ${{ inputs.target-branch }}
