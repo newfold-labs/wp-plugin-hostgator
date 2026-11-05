@@ -22,7 +22,7 @@
         "@reduxjs/toolkit": "^2.13.0",
         "@wordpress/api-fetch": "^8.0.0",
         "@wordpress/compose": "^9.0.0",
-        "@wordpress/data": "^10.57.0",
+        "@wordpress/data": "^11.0.0",
         "@wordpress/dom-ready": "^5.0.0",
         "@wordpress/element": "^9.0.0",
         "@wordpress/i18n": "^7.0.0",
