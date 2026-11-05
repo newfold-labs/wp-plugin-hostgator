@@ -24,7 +24,7 @@
         "@wordpress/compose": "^9.0.0",
         "@wordpress/data": "^11.0.0",
         "@wordpress/dom-ready": "^5.0.0",
-        "@wordpress/element": "^9.0.0",
+        "@wordpress/element": "^10.0.0",
         "@wordpress/i18n": "^7.0.0",
         "@wordpress/icons": "^19.0.0",
         "@wordpress/url": "^5.0.0",
