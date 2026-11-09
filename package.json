@@ -19,7 +19,7 @@
         "@heroicons/react": "^2.2.0",
         "@newfold/ui-component-library": "^2.1.1",
         "@newfold/wp-module-runtime": "^1.2.3",
-        "@reduxjs/toolkit": "^2.13.0",
+        "@reduxjs/toolkit": "^2.14.0",
         "@wordpress/api-fetch": "^8.1.0",
         "@wordpress/compose": "^9.0.0",
         "@wordpress/data": "^11.0.0",
