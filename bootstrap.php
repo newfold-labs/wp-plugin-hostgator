@@ -78,6 +78,7 @@ add_action(
 		if ( $nfd_module_container ) {
 			$nfd_module_container->set( 'cache_types', $cache_types );
 			$nfd_module_container->set( 'marketplace_brand', $marketplace_brand );
+			Brand::register( $nfd_module_container );
 		}
 	}
 );

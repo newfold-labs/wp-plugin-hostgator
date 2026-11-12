@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d56db8edbb87a861d49e54de423e00ce",
+    "content-hash": "2c052ab17d948a07d75803f5e216ba57",
     "packages": [
         {
             "name": "colinmollenhour/credis",
@@ -1198,16 +1198,16 @@
         },
         {
             "name": "newfold-labs/wp-module-editor-chat",
-            "version": "2.1.13",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-editor-chat.git",
-                "reference": "cd0a318e6211dcf76363b2ed278910f2057e814f"
+                "reference": "e133f4cdf6e8ad0d007951be2ea48691435d41fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-editor-chat/zipball/cd0a318e6211dcf76363b2ed278910f2057e814f",
-                "reference": "cd0a318e6211dcf76363b2ed278910f2057e814f",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-editor-chat/zipball/e133f4cdf6e8ad0d007951be2ea48691435d41fc",
+                "reference": "e133f4cdf6e8ad0d007951be2ea48691435d41fc",
                 "shasum": ""
             },
             "require-dev": {
@@ -1279,7 +1279,7 @@
                 }
             ],
             "description": "Site Editor AI Chat",
-            "time": "2026-11-09T17:25:40+00:00"
+            "time": "2026-11-12T19:18:10+00:00"
         },
         {
             "name": "newfold-labs/wp-module-facebook",
@@ -5105,20 +5105,20 @@
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "6.9.4",
+            "version": "7.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "5db0f1be882ca8d0a03a245728b7e9e5a4ed55a6"
+                "reference": "8fd3df90be180e75396bc3c5ad03ee11d8a957e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/5db0f1be882ca8d0a03a245728b7e9e5a4ed55a6",
-                "reference": "5db0f1be882ca8d0a03a245728b7e9e5a4ed55a6",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/8fd3df90be180e75396bc3c5ad03ee11d8a957e7",
+                "reference": "8fd3df90be180e75396bc3c5ad03ee11d8a957e7",
                 "shasum": ""
             },
             "require": {
-                "johnpbloch/wordpress-core": "6.9.4",
+                "johnpbloch/wordpress-core": "7.1.4",
                 "johnpbloch/wordpress-core-installer": "^1.0 || ^2.0",
                 "php": ">=7.0.0"
             },
@@ -5147,28 +5147,28 @@
                 "issues": "https://core.trac.wordpress.org/",
                 "source": "https://core.trac.wordpress.org/browser"
             },
-            "time": "2026-03-11T15:27:41+00:00"
+            "time": "2026-10-28T19:49:43+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core",
-            "version": "6.9.4",
+            "version": "7.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core.git",
-                "reference": "13e02e0047ca5c8ec8dc837c2de8a5bd3583b879"
+                "reference": "36ac9875ff3f09afe1d91f996bfac0ac261922ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/13e02e0047ca5c8ec8dc837c2de8a5bd3583b879",
-                "reference": "13e02e0047ca5c8ec8dc837c2de8a5bd3583b879",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/36ac9875ff3f09afe1d91f996bfac0ac261922ed",
+                "reference": "36ac9875ff3f09afe1d91f996bfac0ac261922ed",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "php": ">=7.2.24"
+                "php": ">=7.4"
             },
             "provide": {
-                "wordpress/core-implementation": "6.9.4"
+                "wordpress/core-implementation": "7.1.4"
             },
             "type": "wordpress-core",
             "notification-url": "https://packagist.org/downloads/",
@@ -5195,7 +5195,7 @@
                 "source": "https://core.trac.wordpress.org/browser",
                 "wiki": "https://codex.wordpress.org/"
             },
-            "time": "2026-03-11T15:27:36+00:00"
+            "time": "2026-10-28T19:49:26+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -10906,7 +10906,7 @@
     "platform": {},
     "platform-dev": {},
     "platform-overrides": {
-        "php": "7.3.0"
+        "php": "7.4"
     },
     "plugin-api-version": "2.9.0"
 }
