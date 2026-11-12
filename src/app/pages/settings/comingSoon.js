@@ -27,11 +27,11 @@ const ComingSoon = () => {
 			? __(
 					'Coming soon page is active. Site requires login.',
 					'wp-plugin-hostgator'
-			  )
+				)
 			: __(
 					'Coming soon page is not active. Site is live to visitors.',
 					'wp-plugin-hostgator'
-			  );
+				);
 	};
 
 	const getComingSoonSectionTitle = () => {
@@ -70,11 +70,11 @@ const ComingSoon = () => {
 			? __(
 					'Turn off your "Coming Soon" page when you are ready to launch your website.',
 					'wp-plugin-hostgator'
-			  )
+				)
 			: __(
 					'Turn on your "Coming Soon" page when you need to make major changes to your website.',
 					'wp-plugin-hostgator'
-			  );
+				);
 	};
 
 	const notifySuccess = () => {

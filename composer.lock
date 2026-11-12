@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c052ab17d948a07d75803f5e216ba57",
+    "content-hash": "c5433e42e6a26dfbe0424ea563b81649",
     "packages": [
         {
             "name": "colinmollenhour/credis",
@@ -2476,16 +2476,16 @@
         },
         {
             "name": "newfold-labs/wp-module-performance",
-            "version": "3.10.0",
+            "version": "3.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-performance.git",
-                "reference": "4aa0ff71c0fcc26cd8efaec1198c09cbf2db9574"
+                "reference": "7407d6f5fa303221d60f04207964b15e4ad93c1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-performance/zipball/4aa0ff71c0fcc26cd8efaec1198c09cbf2db9574",
-                "reference": "4aa0ff71c0fcc26cd8efaec1198c09cbf2db9574",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-performance/zipball/7407d6f5fa303221d60f04207964b15e4ad93c1f",
+                "reference": "7407d6f5fa303221d60f04207964b15e4ad93c1f",
                 "shasum": ""
             },
             "require": {
@@ -2574,7 +2574,7 @@
                 }
             ],
             "description": "A module for managing caching functionality.",
-            "time": "2026-09-28T18:40:28+00:00"
+            "time": "2026-11-11T14:46:31+00:00"
         },
         {
             "name": "newfold-labs/wp-module-pls",

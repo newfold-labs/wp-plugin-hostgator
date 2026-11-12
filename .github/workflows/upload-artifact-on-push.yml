@@ -27,10 +27,11 @@ jobs:
   build:
     name: On Push
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     if: ${{ github.repository == 'newfold-labs/wp-plugin-hostgator' }}
     permissions:
-      contents: read
-      pull-requests: write
+      contents: read       # Required to checkout the repository.
+      pull-requests: write # Required to create/update PR comments (Issues API on a PR needs pull-requests scope).
     steps:
 
       - name: Checkout
@@ -102,8 +103,12 @@ jobs:
       - name: Build JavaScript
         run: npm run build
 
+      # Copy into a "$PACKAGE" subfolder so the zip has a single root directory
       - name: Prepare files
-        run: rsync -r --include-from=.distinclude --exclude-from=.distignore . ${{ steps.workflow.outputs.DIST }}
+        env:
+          DIST: ${{ steps.workflow.outputs.DIST }}
+          PACKAGE: ${{ steps.workflow.outputs.PACKAGE }}
+        run: rsync -r --include-from=.distinclude --exclude-from=.distignore . "$DIST/$PACKAGE"
 
       - name: List Files
         working-directory: ${{ steps.workflow.outputs.DIST }}
