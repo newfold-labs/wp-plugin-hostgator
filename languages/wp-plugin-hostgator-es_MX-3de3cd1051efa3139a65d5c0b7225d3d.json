@@ -1,323 +1,323 @@
 {
-    "translation-revision-date": "2026-08-26T22:16:59+00:00",
+    "translation-revision-date": "2026-10-01T18:00:43+00:00",
     "generator": "WP-CLI\/2.12.0",
-    "source": "build\/3.2.1\/index.js",
+    "source": "build\/3.3.0\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
             "": {
                 "domain": "messages",
-                "lang": "it_IT",
+                "lang": "es_MX",
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
             "HostGator": [
                 "HostGator"
             ],
             "Home": [
-                "Casa"
+                "Pagina principal"
             ],
             "Settings": [
-                "Impostazioni"
+                "Configuraciones"
             ],
             "Not Live": [
-                "Non dal vivo"
+                "No publicado "
             ],
             "Live": [
-                "Live"
+                "Publicado"
             ],
             "Your website is currently displaying a \"Coming Soon\" page.": [
-                "Il tuo sito web mostra attualmente una pagina \"Prossimamente\"."
+                "Tu sitio web actualmente muestra una p\u00e1gina \"Pr\u00f3ximamente\"."
             ],
             "Editor": [
-                "Direttore"
+                "Editor"
             ],
             "Hosting Panel": [
-                "Panel di conduzione"
+                "Panel Anfitri\u00f3n"
             ],
             "Oh No, An Error!": [
-                "Oh no, un errore!"
+                "\u00a1Oh no, un error!"
             ],
             "You found an error, please refresh the page and try again!": [
-                "Hai trovato un errore, per favore aggiorna la pagina e riprova!"
+                "Haz encontrado un error, \u00a1actualiza la p\u00e1gina e int\u00e9ntalo de nuevo!"
             ],
             "If the error persists, please contact support.": [
-                "Se l'errore persiste, contatta l'assistenza."
+                "Si persiste el error, comun\u00edcate con el soporte."
             ],
             "Error code:": [
-                "Codice di errore:"
+                "C\u00f3digo de error:"
             ],
             "HostGator WordPress Plugin": [
                 "HostGator WordPress Plugin"
             ],
             "Phone": [
-                "Telefono"
+                "Tel\u00e9fono"
             ],
             "Give us a ring at (866) 96-GATOR": [
-                "Chiamaci al (866) 96-GATOR"
+                "Ll\u00e1manos al (866) 96-GATOR"
             ],
             "Call Us": [
-                "Chiamaci"
+                "Ll\u00e1manos"
             ],
             "Chat": [
                 "Chat"
             ],
             "Have a question? We're here 24\/7\/365": [
-                "Hai una domanda? Siamo qui 24\/7\/365"
+                "\u00bfTiene alguna pregunta? Contactemos"
             ],
             "Live Chat": [
-                "Chat dal vivo"
+                "Chat"
             ],
             "Tweet": [
                 "Tweet"
             ],
             "Tweet us at @hgsupport for support": [
-                "Scrivici su Twitter @hgsupport per supporto"
+                "Env\u00edanos un tweet a @hgsupport para obtener ayuda"
             ],
             "Tweet Us": [
-                "Tweetaci"
+                "Env\u00edanos un tweet"
             ],
             "Knowledge Base": [
-                "Base di conoscenza"
+                "Base de Conocimientos"
             ],
             "Know what the pros know.": [
-                "Sappi quello che sanno i professionisti."
+                "Conoce lo que saben los profesionales."
             ],
             "Find Answers": [
-                "Trova risposte"
+                "Encontra Respuestas"
             ],
             "Blog": [
                 "Blog"
             ],
             "Get our tips and in-depth articles.": [
-                "Ricevi i nostri consigli e articoli approfonditi."
+                "Obten nuestros consejos y art\u00edculos detallados."
             ],
             "Learn Stuff": [
-                "Impara cose"
+                "Aprende"
             ],
             "Video Tutorials": [
-                "Video tutorial"
+                "Tutoriales en V\u00eddeo"
             ],
             "Step-by-step tutorials and additional guides.": [
-                "Tutorial passo dopo passo e guide aggiuntive."
+                "Tutoriales paso a paso y gu\u00edas adicionales."
             ],
             "Watch Now": [
-                "Guarda ora"
+                "Ve Ahora"
             ],
             "There's nothing here!": [
-                "Non c'\u00e8 niente qui!"
+                "\u00a1No hay nada aqu\u00ed!"
             ],
             "Manage WordPress": [
-                "Gestisci WordPress"
+                "Administrar WordPress"
             ],
             "Staging": [
-                "Messa in scena"
+                "Puesta en escena"
             ],
             "Performance": [
-                "Prestazioni"
+                "Rendimiento"
             ],
             "Commerce": [
-                "Commercio"
+                "Comercio"
             ],
             "Marketplace": [
-                "Mercato"
+                " Marketplace"
             ],
             "Help": [
-                "Aiuto"
+                "Ayuda"
             ],
             "Admin": [
-                "Amministrazione"
+                " Administrador"
             ],
             "Secret page to manage admin features and settings.": [
-                "Pagina segreta per gestire le funzionalit\u00e0 amministrative e le impostazioni."
+                " P\u00e1gina secreta para administrar funciones y configuraciones de administrador"
             ],
             "Discover exclusive features, designed to deliver unmatched value and elevate your online experience.": [
-                "Scopri funzionalit\u00e0 esclusive, pensate per offrire un valore senza pari e elevare la tua esperienza online."
+                "Descubre funciones exclusivas, dise\u00f1adas para ofrecer un valor inigualable y elevar tu experiencia en l\u00ednea."
             ],
             "We are available 24\/7 to help answer questions and solve your problems.": [
-                "Siamo disponibili 24 ore su 24, 7 giorni su 7, per aiutarti a rispondere alle domande e risolvere i tuoi problemi."
+                "Estamos disponibles en horario comercial para ayudarlo a responder preguntas y resolver sus problemas. "
             ],
             "Welcome to HostGator": [
-                "Benvenuti su HostGator"
+                "Bienvenidos a HostGator"
             ],
             "We're very excited to get started with you!": [
-                "Siamo molto entusiasti di iniziare con te!"
+                "\u00a1Estamos muy emocionados de empezar contigo!"
             ],
             "Quick Links": [
-                "Collegamenti rapidi"
+                "Enlaces R\u00e1pidos"
             ],
             "Settings and Performance": [
-                "Impostazioni e prestazioni"
+                "Configuraci\u00f3n y Rendimiento"
             ],
             "Customize & fine-tune your site.": [
-                "Personalizza e affina il tuo sito."
+                "Personaliza y ajusta tu sitio web."
             ],
             "Manage Settings": [
-                "Gestisci le impostazioni"
+                "Administrar Configuraciones"
             ],
             "Manage your site settings. You can adjust automatic updates, comments, revisions and more.": [
-                "Gestisci le impostazioni del sito. Puoi regolare aggiornamenti automatici, commenti, revisioni e altro ancora."
+                "Administra la configuraci\u00f3n de tu sitio. Puedes ajustar actualizaciones autom\u00e1ticas, comentarios, revisiones y m\u00e1s."
             ],
             "Manage site performance and caching settings as well as clear the site cache.": [
-                "Gestisci le prestazioni del sito e le impostazioni di cache, oltre a cancellare la cache del sito."
+                "Administra el rendimiento del sitio web y las configuraciones de almacenamiento en cach\u00e9, as\u00ed como borrar el cach\u00e9 del sitio web."
             ],
             "Visit Marketplace": [
-                "Visita Marketplace"
+                "Visita el Marketplace"
             ],
             "Add site services, themes or plugins from the marketplace.": [
-                "Aggiungi servizi del sito, temi o plugin dal marketplace."
+                "A\u00f1ade servicios de sitio web, temas o plugins desde el marketplace."
             ],
             "Website Content": [
-                "Contenuto del sito web"
+                "Contenido del Sitio Web"
             ],
             "Create, manage & sort your story.": [
-                "Crea, gestisci e ordina la tua storia."
+                "Crea, administra y ordena tu projecto."
             ],
             "New Post": [
-                "Nuovo incarico"
+                "Nueva publicaci\u00f3n"
             ],
             "Write a new blog post.": [
-                "Scrivi un nuovo post sul blog."
+                "Escribe una nueva publicaci\u00f3n de blog."
             ],
             "Pages": [
-                "Pagine"
+                "P\u00e1ginas"
             ],
             "New Page": [
-                "Nuova pagina"
+                "Nueva P\u00e1gina"
             ],
             "Add fresh pages to your website.": [
-                "Aggiungi nuove pagine al tuo sito web."
+                "A\u00f1ade p\u00e1ginas nuevas a tu sitio web."
             ],
             "Categories": [
-                "Categorie"
+                "Categor\u00edas"
             ],
             "Manage Categories": [
-                "Gestire le categorie"
+                "Administra las Categor\u00edas"
             ],
             "Organize existing content into categories.": [
-                "Organizza i contenuti esistenti in categorie."
+                "Organiza el contenido existente en categor\u00edas."
             ],
             "Web Hosting": [
-                "Web Hosting"
+                " Web Hostin"
             ],
             "Access & manage your HostGator account.": [
-                "Accedi e gestisci il tuo account HostGator."
+                "Accede y administra tu cuenta HostGator."
             ],
             "Manage Sites": [
-                "Gestione dei siti"
+                "Administra Sitios Web"
             ],
             "Manage your site from the control panel. You can create backups, set security, and improve performance.": [
-                "Gestisci il tuo sito dal pannello di controllo. Puoi creare backup, impostare la sicurezza e migliorare le prestazioni."
+                "Administra tu sitio web desde el panel de control. Es posible crear copias de seguridad, configurar la seguridad y mejorar el rendimiento."
             ],
             "Email": [
-                "E-mail"
+                "Correo Electr\u00f3nico"
             ],
             "Manage Email": [
-                "Gestisci l'email"
+                "Administra el Correo Electr\u00f3nico"
             ],
             "Create email accounts, compose, send, and receive your email from the control panel.": [
-                "Crea account email, componi, invia e ricevi la tua email dal pannello di controllo."
+                "Crea cuentas de correo electr\u00f3nico, redacta, env\u00eda y reciba su correo electr\u00f3nico desde el panel de control."
             ],
             "Domains": [
-                "Domini"
+                "Dominios"
             ],
             "Manage Domain": [
-                "Gestione del dominio"
+                " Administrar dominio"
             ],
             "Find a Domain": [
-                "Trova un dominio"
+                "Encuentra un Dominio"
             ],
             "Find a new domain and assign it to your site or start a new site with a fresh domain.": [
-                "Trova un nuovo dominio e assegnalo al tuo sito oppure inizia un nuovo sito con un dominio nuovo."
+                "Encuentra un nuevo dominio y as\u00edgnalo a tu sitio web o inicia un nuevo sitio web con un dominio nuevo."
             ],
             "Get Help": [
-                "Fatti aiutare"
+                "Obtenga Ayuda"
             ],
             "24\/7\/365 support. We work when you work.": [
-                "Supporto 24\/7\/365. Noi lavoriamo quando lavori tu."
+                "Soporte en horario comercial."
             ],
             "Explore our featured collection of tools and services.": [
-                "Esplora la nostra collezione di strumenti e servizi in evidenza."
+                "Explora nuestra colecci\u00f3n destacada de herramientas y servicios "
             ],
             "Oops, there was an error loading the marketplace, please try again later.": [
-                "Ops, c'\u00e8 stato un errore nel caricamento del marketplace, per favore riprova pi\u00f9 tardi."
+                "Vaya, se produjo un error al cargar el marketplace. Vuelve a intentarlo m\u00e1s tarde. "
             ],
             "Sorry, no marketplace items. Please, try again later.": [
-                "Mi dispiace, niente articoli del mercato. Per favore, riprova pi\u00f9 tardi."
+                "Lo sentimos, no hay art\u00edculos en el marketplace. Por favor, int\u00e9ntalo de nuevo m\u00e1s tarde. "
             ],
             "Load More": [
-                "Carica di pi\u00f9"
+                " Cargar m\u00e1s"
             ],
             "Oops! Something Went Wrong": [
-                "Ops! Qualcosa \u00e8 andato storto"
+                "\u00a1Ups! Algo sali\u00f3 mal"
             ],
             "An error occurred while loading the content. Please try again later.": [
-                "Si \u00e8 verificato un errore durante il caricamento del contenuto. Per favore, riprova pi\u00f9 tardi."
+                " Se produjo un error al cargar el contenido. Int\u00e9ntelo de nuevo m\u00e1s tarde."
             ],
             "Manage All Updates": [
-                "Gestisci tutti gli aggiornamenti"
+                " Administrar todas las actualizaciones"
             ],
             "WordPress Core": [
-                "WordPress Core"
+                "N\u00facleo de WordPress"
             ],
             "Plugins": [
-                "Plugin"
+                "Plugins"
             ],
             "Themes": [
-                "Temi"
+                "Temas"
             ],
             "Automatic Updates": [
-                "Aggiornamenti automatici"
+                "Actualizaciones Autom\u00e1ticas"
             ],
             "Keeping automatic updates on ensures timely security fixes and the latest features.": [
-                "Mantenere aggiornamenti automatici garantisce correzioni di sicurezza tempestive e le ultime funzionalit\u00e0."
+                "Mantener activadas las actualizaciones autom\u00e1ticas garantiza correcciones de seguridad oportunas y las funciones m\u00e1s recientes. "
             ],
             "Oops! Something went wrong. Please try again.": [
-                "Ops! Qualcosa \u00e8 andato storto. Per favore, riprova."
+                "\u00a1Ups! Algo sali\u00f3 mal. Por favor int\u00e9ntalo de nuevo. "
             ],
             "Coming soon activated": [
-                "Presto attivato"
+                "Pr\u00f3ximamente activado"
             ],
             "Coming soon deactivated": [
-                "Prossimamente disattivato"
+                "Pr\u00f3ximamente desactivado"
             ],
             "Coming soon page is active. Site requires login.": [
-                "La pagina in arrivo \u00e8 attiva. Il sito richiede il login."
+                "La p\u00e1gina pr\u00f3ximamente est\u00e1 activa. El sitio requiere inicio de sesi\u00f3n."
             ],
             "Coming soon page is not active. Site is live to visitors.": [
-                "La pagina in arrivo non \u00e8 attiva. Il sito \u00e8 attivo per i visitatori."
+                "La p\u00e1gina pr\u00f3ximamente no est\u00e1 activa. El sitio est\u00e1 disponible para los visitantes."
             ],
             "Site Status": [
-                "Stato del sito"
+                "Status del sitio "
             ],
             "Turn off your \"Coming Soon\" page when you are ready to launch your website.": [
-                "Disattiva la tua pagina \"Prossimamente\" quando sei pronto a lanciare il tuo sito web."
+                "Apaga tu p\u00e1gina de \"Pr\u00f3ximamente\" cuando est\u00e9s listo para lanzar tu sitio web."
             ],
             "Turn on your \"Coming Soon\" page when you need to make major changes to your website.": [
-                "Attiva la tua pagina \"In arrivo\" quando devi apportare cambiamenti importanti al tuo sito web."
+                "Activa tu p\u00e1gina de \"Pr\u00f3ximamente\" cuando necesites hacer cambios importantes en tu sitio web."
             ],
             "Coming Soon page": [
-                "Pagina in arrivo"
+                "Pr\u00f3ximamente una p\u00e1gina"
             ],
             "Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen.": [
-                "La tua pagina Hostgator Coming Soon ti permette di nascondere il tuo sito ai visitatori mentre fai accadere la magia."
+                " Tu p\u00e1gina Hostgator pr\u00f3ximamente te permite ocultar tu sitio a los visitantes mientras hace que suceda la magia. "
             ],
             "Disabled old post comments": [
-                "Disabilitato vecchi commenti del post"
+                "Comentarios de publicaci\u00f3n antigua deshabilitados"
             ],
             "Enabled old post comments": [
-                "Abilitato i commenti del vecchio post"
+                "Activado los comentarios de la publicaci\u00f3n antigua"
             ],
             "Comments on old posts are disabled.": [
-                "I commenti ai post vecchi sono disabilitati."
+                "Los comentarios en publicaciones antiguas est\u00e1n deshabilitados."
             ],
             "Comments are allowed on old posts.": [
-                "I commenti sono consentiti ai post precedenti."
+                "Se permiten comentarios en publicaciones antiguas."
             ],
             "Disable comments for older posts": [
-                "Disabilita i commenti per i post pi\u00f9 vecchi"
+                "Deshabilitar comentarios para publicaciones antiguas"
             ],
             "Comments setting saved": [
-                "Impostazioni commenti salvate"
+                "Configuraci\u00f3n de comentarios guardada"
             ],
             "Comments on posts are disabled after %s day.": [
                 ""
@@ -326,91 +326,91 @@
                 ""
             ],
             "Comments setting saved.": [
-                "Impostazioni commenti salvate."
+                "Configuraci\u00f3n de comentarios guardada. "
             ],
             "Posts will display %s comment at a time.": [
                 ""
             ],
             "Display %s comments per page.": [
-                "Mostra percentuali di commenti per pagina."
+                "Mostrar los porcentajes de comentarios por p\u00e1gina."
             ],
             "Comments": [
-                "Commenti"
+                "Comentarios"
             ],
             "Comments allow visitors to provide feedback and respond to your posts or pages.": [
-                "I commenti permettono ai visitatori di fornire feedback e rispondere ai tuoi post o pagine."
+                "Los comentarios permiten a los visitantes proporcionar comentarios y responder a sus publicaciones o p\u00e1ginas."
             ],
             "Post revision setting saved": [
-                "Impostazione della revisione salvata"
+                "Configuraci\u00f3n posterior a la revisi\u00f3n guardada"
             ],
             "Posts will save %s revision.": [
                 ""
             ],
             "Number of revisions posts can save": [
-                "Numero di revisioni che i post possono salvare"
+                "N\u00famero de revisiones que las publicaciones pueden guardar"
             ],
             "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take %s step back.": [
                 ""
             ],
             "Trash setting saved": [
-                "Impostazione del cestino salvata"
+                "Configuraci\u00f3n de la basura guardada"
             ],
             "The trash will automatically empty every %s week.": [
                 ""
             ],
             "Trash emptying frequency": [
-                "Frequenza di svuotamento dei rifiuti"
+                "Frecuencia de vaciado de basura"
             ],
             "Content Options": [
-                "Opzioni di contenuto"
+                "Opciones de Contenido"
             ],
             "Controls for content revisions and how often to empty the trash.": [
-                "Controlli per le revisioni del contenuto e la frequenza con cui svuotare il cestino."
+                "Controles para revisiones de contenido y con qu\u00e9 frecuencia vaciar la papelera."
             ],
             "The Help Center provides guided, step-by-step assistance as you build your site.": [
-                "Il Centro di Assistenza offre assistenza guidata passo dopo passo mentre costruisci il tuo sito."
+                "La Central de ayuda brinda asistencia guiada paso a paso a medida que crea tu sitio. "
             ],
             "Sorry, that is not allowed.": [
-                "Mi dispiace, non \u00e8 permesso."
+                " Lo siento, eso no est\u00e1 permitido."
             ],
             "This feature cannot currently be modified.": [
-                "Questa funzione attualmente non pu\u00f2 essere modificata."
+                " Esta caracter\u00edstica no se puede modificar actualmente."
             ],
             "Optimize your website my managing cache, security and performance settings.": [
-                "Ottimizza il tuo sito web per gestire la cache, la sicurezza e le impostazioni di prestazioni."
+                "Optimiza tu sitio web gestionando cach\u00e9, seguridad y configuraciones de rendimiento."
             ],
             "Optimize your website by managing cache and performance settings": [
-                "Ottimizza il tuo sito gestendo cache e impostazioni di prestazioni"
+                "Optimiza tu sitio web gestionando la cach\u00e9 y la configuraci\u00f3n de rendimiento"
             ],
             "General Settings": [
-                "Ambientazioni generali"
+                "Escenarios generales"
             ],
             "This is where you can manage common settings for your website.": [
-                "Qui puoi gestire le impostazioni comuni del tuo sito web."
+                "Aqu\u00ed puedes administrar la configuraci\u00f3n com\u00fan de tu sitio web. "
             ],
             "Features": [
-                "Caratteristiche"
+                " Caracter\u00edsticas "
             ],
             "Customize the available features as you manage your website.": [
-                "Personalizza le funzionalit\u00e0 disponibili mentre gestisci il tuo sito web."
+                "Personaliza las funciones disponibles mientras administras tu sitio web."
             ],
             "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready.": [
-                "Un sito di staging \u00e8 un duplicato del tuo sito live, offrendo un ambiente sicuro per sperimentare, testare aggiornamenti e distribuire quando pronto."
+                "Un sitio de staging es un duplicado de tu sitio en vivo, ofreciendo un entorno seguro para experimentar, probar actualizaciones y desplegar cuando est\u00e9s listo."
             ],
             "The performance feature provides improvements to loads faster for visitors including cache settings.": [
-                "La funzione di prestazioni offre miglioramenti per caricare pi\u00f9 velocemente i visitatori, incluse le impostazioni della cache."
+                " La funci\u00f3n de rendimiento proporciona mejoras para cargar m\u00e1s r\u00e1pido para los visitantes, incluida la configuraci\u00f3n de cach\u00e9."
             ],
             "The staging feature provides a way to copy a site to test new updates, features or content.": [
-                "La funzione staging offre un modo per copiare un sito per testare nuovi aggiornamenti, funzionalit\u00e0 o contenuti."
+                " La funci\u00f3n de preparaci\u00f3n proporciona una forma de copiar un sitio para probar nuevas actualizaciones, funciones o contenido."
             ],
             "WonderBlocks provides a library of customizable block patterns and page templates.": [
-                "WonderBlocks offre una libreria di modelli di blocchi personalizzabili e modelli di pagina."
+                "WonderBlocks proporciona una biblioteca de patrones de bloques y plantillas de p\u00e1ginas personalizables."
             ],
             "Site Editor": [
-                "Editor del sito"
+                "Editor del sitio"
             ],
             "Customizer": [
-                "Personalizzatore"
+                "Personalizador"
             ]
         }
     }

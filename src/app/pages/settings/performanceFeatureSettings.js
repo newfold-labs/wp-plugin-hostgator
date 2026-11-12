@@ -27,11 +27,11 @@ const PerformanceFeatureSettings = () => {
 			? __(
 					'You need to reload the page to manage Performance.',
 					'wp-plugin-hostgator'
-			  )
+				)
 			: __(
 					'Performance will no longer display.',
 					'wp-plugin-hostgator'
-			  );
+				);
 	};
 
 	const togglePerformance = () => {

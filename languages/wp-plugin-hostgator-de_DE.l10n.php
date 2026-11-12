@@ -5,7 +5,7 @@ return [
 	'language' => 'de_DE',
 	'project-id-version' => 'hostgator-wordpress-plugin',
 	'pot-creation-date' => '2023-01-11T20:21:44+00:00',
-	'po-revision-date' => '2026-08-26T22:16:59+00:00',
+	'po-revision-date' => '2026-10-01T18:00:43+00:00',
 	'messages' => [
 		'The HostGator Plugin' => 'Das HostGator-Plugin',
 		'https://hostgator.com' => 'https://hostgator.com',
@@ -21,7 +21,7 @@ return [
 		'%s &mdash; Coming Soon' => '%s — Kommt bald',
 		'Coming Soon Active' => 'Bald aktiv',
 		'Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s.' => 'Deine Seite zeigt derzeit eine Seite von 1$, die bald kommt, an. Sobald du bereit bist, starte deine Seite 3 % 4 Dollar.',
-		'Preview the coming soon landing page' => 'Vorschau auf die demnächst kommende Landingpage',
+		'Manage your coming soon page settings' => 'Verwalten Sie Ihre baldigen Seiteneinstellungen',
 		'Home' => 'Zuhause',
 		'Settings' => 'Einstellungen',
 		'Help Resources' => 'Hilferessourcen',

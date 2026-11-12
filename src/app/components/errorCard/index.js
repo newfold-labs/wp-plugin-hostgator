@@ -46,7 +46,7 @@ const ErrorCard = ( { error, className, notice = 'Error!' } ) => {
 					{ error && error.message ? error.message : '' }
 					{ error && error.data
 						? __( 'Error code:', 'wp-plugin-hostgator' ) +
-						  error.data.status
+							error.data.status
 						: '' }
 				</p>
 			</CardFooter>

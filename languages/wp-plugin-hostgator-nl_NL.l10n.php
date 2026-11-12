@@ -5,7 +5,7 @@ return [
 	'language' => 'nl_NL',
 	'project-id-version' => 'The HostGator Plugin 3.0.0',
 	'pot-creation-date' => '2023-01-11T20:21:44+00:00',
-	'po-revision-date' => '2026-08-26T22:16:59+00:00',
+	'po-revision-date' => '2026-10-01T18:00:43+00:00',
 	'messages' => [
 		'The HostGator Plugin' => 'De HostGator Plugin',
 		'https://hostgator.com' => 'https://hostgator.com',
@@ -21,7 +21,7 @@ return [
 		'%s &mdash; Coming Soon' => '%s — Binnenkort',
 		'Coming Soon Active' => 'Binnenkort Actief',
 		'Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s.' => 'Je site toont momenteel een pagina van 1 dollar binnenkort binnenkort aankomen. Als je er klaar voor bent, lanceer je site 4 dollar.',
-		'Preview the coming soon landing page' => 'Bekijk de binnenkort aankomende landingspagina',
+		'Manage your coming soon page settings' => 'Beheer je instellingen voor binnenkort pagina\'s',
 		'Home' => 'Home',
 		'Settings' => 'Instellingen',
 		'Help Resources' => 'Hulpbronnen',

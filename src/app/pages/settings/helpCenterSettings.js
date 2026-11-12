@@ -24,11 +24,11 @@ const HelpCenterSettings = ( { forceShow = false } ) => {
 			? __(
 					'Reload the page to access the Help Center.',
 					'wp-plugin-hostgator'
-			  )
+				)
 			: __(
 					'The Help Center will no longer display.',
 					'wp-plugin-hostgator'
-			  );
+				);
 	};
 
 	const toggleHelpCenter = () => {

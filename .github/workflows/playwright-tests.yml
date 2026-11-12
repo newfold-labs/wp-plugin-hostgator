@@ -26,7 +26,7 @@ jobs:
       dist: ${{ steps.workflow.outputs.DIST }}
       package: ${{ steps.workflow.outputs.PACKAGE }}
     permissions:
-      contents: read
+      contents: read # Required to checkout the repository.
 
     steps:
       - name: Checkout
@@ -112,7 +112,7 @@ jobs:
     timeout-minutes: 60
     needs: build
     permissions:
-      contents: read
+      contents: read # Required to checkout the repository.
 
     steps:
       - name: Checkout
