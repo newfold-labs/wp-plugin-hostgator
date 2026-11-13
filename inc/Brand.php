@@ -262,7 +262,11 @@ final class Brand {
 	}
 
 	/**
-	 * Register brand payloads on the module loader container.
+	 * Register the editor-chat brand payload on the module loader container.
+	 *
+	 * This is the plugin-owned source of truth. wp-module-onboarding also writes
+	 * this container key later (with static, non-regional URLs and no icons);
+	 * see filter_editor_chat_brand() for how we win that overwrite.
 	 *
 	 * @param \NewfoldLabs\WP\ModuleLoader\Container $container Module container.
 	 *
@@ -273,18 +277,35 @@ final class Brand {
 	}
 
 	/**
+	 * Filter for `newfold/container/editor_chat_brand` (applied by onboarding
+	 * just before it overwrites the container key). Our values take precedence
+	 * over onboarding's so region-aware links and icons are preserved; any
+	 * extra keys onboarding adds are kept.
+	 *
+	 * @param array<string, mixed> $payload Payload built by onboarding.
+	 *
+	 * @return array<string, mixed>
+	 */
+	public static function filter_editor_chat_brand( $payload ): array {
+		return array_merge( (array) $payload, self::editor_chat_payload() );
+	}
+
+	/**
 	 * Payload for wp-module-editor-chat. Portal URLs follow the current region
-	 * via the shared LINKS map so onboarding and editor-chat stay in sync.
+	 * via the shared LINKS map and pass through `nfd_build_url` for tracking.
 	 *
 	 * @return array<string, mixed>
 	 */
 	private static function editor_chat_payload(): array {
+		$account = \apply_filters( 'nfd_build_url', self::link( 'site_info_portal' ) );
+		$email   = \apply_filters( 'nfd_build_url', self::link( 'home_manage_email' ) );
+
 		return array(
 			'id'         => self::ID,
 			'name'       => self::NAME,
-			'accountUrl' => self::link( 'site_info_portal' ),
-			'emailUrl'   => self::link( 'home_manage_email' ),
-			'billingUrl' => self::link( 'site_info_portal' ),
+			'accountUrl' => \esc_url( $account ),
+			'emailUrl'   => \esc_url( $email ),
+			'billingUrl' => \esc_url( $account ),
 			'adminUrl'   => \admin_url(),
 			'icons'      => self::icons(),
 		);
