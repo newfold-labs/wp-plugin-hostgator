@@ -121,7 +121,7 @@ class BrandWpunitTest extends \lucatume\WPBrowser\TestCase\WPTestCase {
 		$this->assertSame( 'hostgator', $payload['id'] );
 		$this->assertSame( 'HostGator', $payload['name'] );
 		$this->assertSame( 'https://financeiro.hostgator.com.br', $payload['accountUrl'] );
-		$this->assertSame( 'https://financeiro.hostgator.com.br', $payload['billingUrl'] );
+		$this->assertSame( 'https://cliente.hostgator.com.br/', $payload['billingUrl'] );
 		$this->assertSame( 'https://cliente.hostgator.com.br/emails-list', $payload['emailUrl'] );
 		$this->assertArrayHasKey( 'adminUrl', $payload );
 		$this->assertArrayHasKey( 'icons', $payload );

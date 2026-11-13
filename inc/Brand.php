@@ -100,7 +100,7 @@ final class Brand {
 			'UY'      => 'https://cliente.hostgator.uy/e-mails',
 		),
 		'home_find_domain'  => array(
-			'default' => 'https://www.hostgator.com/my-account/domain-center/domain-list',
+			'default' => 'https://www.hostgator.com/my-account/domain-center-update/list',
 			'AR'      => 'https://www.hostgator.ar/dominios',
 			'BO'      => 'https://www.hostgator.bo/dominios',
 			'BR'      => 'https://www.hostgator.com.br/registro-de-dominio/',
@@ -189,6 +189,19 @@ final class Brand {
 			'MX'      => 'https://www.youtube.com/c/HostGatorMexico',
 			'PE'      => 'https://www.youtube.com/c/HostGatorMexico',
 			'UY'      => 'https://www.youtube.com/c/HostGatorMexico',
+		),
+		'billing'       => array(
+			'default' => 'https://www.hostgator.com/my-account/billing-center-v2',
+			'AR'      => 'https://cliente.hostgator.ar/facturas/pendientes',
+			'BO'      => 'https://cliente.hostgator.bo/facturas/pendientes',
+			'BR'      => 'https://cliente.hostgator.com.br/',
+			'CL'      => 'https://cliente.hostgator.cl/facturas/pendientes',
+			'CO'      => 'https://cliente.hostgator.co/facturas/pendientes',
+			'DO'      => 'https://cliente.hostgator.do/facturas/pendientes',
+			'EC'      => 'https://cliente.hostgator.net.ec/facturas/pendientes',
+			'MX'      => 'https://cliente.hostgator.mx/facturas/pendientes',
+			'PE'      => 'https://cliente.hostgator.pe/facturas/pendientes',
+			'UY'      => 'https://cliente.hostgator.uy/facturas/pendientes',
 		),
 	);
 
@@ -299,13 +312,14 @@ final class Brand {
 	private static function editor_chat_payload(): array {
 		$account = \apply_filters( 'nfd_build_url', self::link( 'site_info_portal' ) );
 		$email   = \apply_filters( 'nfd_build_url', self::link( 'home_manage_email' ) );
+		$billing = \apply_filters( 'nfd_build_url', self::link( 'billing' ) );
 
 		return array(
 			'id'         => self::ID,
 			'name'       => self::NAME,
 			'accountUrl' => \esc_url( $account ),
 			'emailUrl'   => \esc_url( $email ),
-			'billingUrl' => \esc_url( $account ),
+			'billingUrl' => \esc_url( $billing ),
 			'adminUrl'   => \admin_url(),
 			'icons'      => self::icons(),
 		);
