@@ -59,6 +59,9 @@ $nfd_module_container->set(
 	)
 );
 
+// Onboarding writes the `editor_chat_brand` container key but it doesn't include icons or region-specific links
+add_filter( 'newfold/container/editor_chat_brand', array( Brand::class, 'filter_editor_chat_brand' ) );
+
 // Assign container values based on context
 add_action(
 	'plugins_loaded',
@@ -78,6 +81,7 @@ add_action(
 		if ( $nfd_module_container ) {
 			$nfd_module_container->set( 'cache_types', $cache_types );
 			$nfd_module_container->set( 'marketplace_brand', $marketplace_brand );
+			Brand::register( $nfd_module_container );
 		}
 	}
 );
