@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: The HostGator Plugin 3.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/newfold-labs/wp-plugin-hostgator/issues\n"
 "POT-Creation-Date: 2023-01-11T20:21:44+00:00\n"
-"PO-Revision-Date: 2026-11-12T23:14:51+00:00\n"
+"PO-Revision-Date: 2026-11-16T15:29:28+00:00\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fr_FR\n"
@@ -49,7 +49,7 @@ msgid "%1$s requires the %2$s PHP extension."
 msgstr "%1$s nécessite l’extension %2$s PHP."
 
 #. translators: %s is Blog name
-#: bootstrap.php:131
+#: bootstrap.php:135
 #, php-format
 msgid "%s &mdash; Coming Soon"
 msgstr "%s — À venir bientôt"
@@ -59,12 +59,12 @@ msgid "24/7/365 support. We work when you work."
 msgstr "Support 24h/24, 7j/7, 365 jours sur 24. On travaille quand tu travailles."
 
 #. translators: %1$s is replaced with opening link tag taking you to hostgator.com/wordpress, %2$s is replaced with closing link tag, %3$s is replaced with opening link tag taking you to login page, %4$s is replaced with closing link tag, %5$s is replaced with opening link tag taking you to portal.hostgator.com, %6$s is replaced with closing link tag.
-#: bootstrap.php:121
+#: bootstrap.php:125
 #, php-format
 msgid "A %1$sHostGator%2$s powered website. Is this your website? Log in to %3$sWordPress%4$s or %5$sHostgator%6$s."
 msgstr "Un site web alimenté par %1$sHostGator %2$s. Est-ce votre site web ? Connectez-vous à %3$sWordPress %4$s ou %5$sHostgator %6$s."
 
-#: bootstrap.php:107
+#: bootstrap.php:111
 msgid "A New WordPress Site"
 msgstr "Un nouveau site WordPress"
 
@@ -129,7 +129,7 @@ msgid_plural "Close comments after %s days."
 msgstr[0] ""
 msgstr[1] ""
 
-#: bootstrap.php:134
+#: bootstrap.php:138
 msgid "Coming Soon Active"
 msgstr "Bientôt Actif"
 
@@ -137,7 +137,7 @@ msgstr "Bientôt Actif"
 msgid "Coming Soon page"
 msgstr "Page à venir"
 
-#: bootstrap.php:108
+#: bootstrap.php:112
 msgid "Coming Soon!"
 msgstr "Bientôt à venir !"
 
@@ -330,11 +330,11 @@ msgstr "HostGator WordPress Plugin"
 msgid "Hosting Panel"
 msgstr "Panel d’accueil"
 
-#: bootstrap.php:114
+#: bootstrap.php:118
 msgid "How to Migrate a Website to Hostgator?"
 msgstr "Comment migrer un site web vers Hostgator ?"
 
-#: bootstrap.php:111
+#: bootstrap.php:115
 msgid "How to build your WordPress Website"
 msgstr "Comment construire votre site WordPress"
 
@@ -410,7 +410,7 @@ msgstr "Gérer WordPress"
 msgid "Manage site performance and caching settings as well as clear the site cache."
 msgstr "Gérez les performances du site et les paramètres de mise en cache ainsi que videz le cache du site."
 
-#: bootstrap.php:138
+#: bootstrap.php:142
 msgid "Manage your coming soon page settings"
 msgstr "Gérez vos paramètres de page à venir"
 
@@ -693,7 +693,7 @@ msgstr "Contenu du site web"
 msgid "Welcome to HostGator"
 msgstr "Bienvenue sur HostGator"
 
-#: bootstrap.php:117
+#: bootstrap.php:121
 msgid "Why choose HostGator for your WordPress site?"
 msgstr "Pourquoi choisir HostGator pour votre site WordPress ?"
 
@@ -723,7 +723,7 @@ msgid "Your Hostgator Coming Soon page lets you hide your site from visitors whi
 msgstr "Votre page Bientôt Hostgator vous permet de cacher votre site aux visiteurs pendant que vous faites la magie."
 
 #. translators: %1$s is replaced with the opening link tag to the coming soon setting, and %2$s is replaced with the closing link tag, %3$s is the opening link tag, %4$s is the closing link tag.
-#: bootstrap.php:137
+#: bootstrap.php:141
 #, php-format
 msgid "Your site is currently displaying a %1$scoming soon page%2$s. Once you are ready, %3$slaunch your site%4$s."
 msgstr "Votre site affiche actuellement une page %1$coming soon %2$s. Une fois prêt, %3$lance votre site %4$s."
