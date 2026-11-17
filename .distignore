@@ -15,6 +15,7 @@ postcss.config.js
 tailwind.config.js
 webpack.config.js
 playwright.config.mjs
+scoper.inc.php
 
 # File Types
 /*.json
@@ -48,3 +49,11 @@ wordpress/mcp-adapter/*.json
 wordpress/mcp-adapter/*.md
 wordpress/mcp-adapter/tests
 wordpress/mcp-adapter/docs
+
+# Add wordpress/php-mcp-schema rules vendor and vendor-prefixed
+wordpress/php-mcp-schema/.*
+wordpress/php-mcp-schema/*.lock
+wordpress/php-mcp-schema/*.json
+wordpress/php-mcp-schema/*.md
+wordpress/php-mcp-schema/tests
+wordpress/php-mcp-schema/docs

@@ -31,6 +31,12 @@
             "ignore": ["PKSA-y2cr-5h3j-g3ys"]
         }
     },
+    "autoload": {
+        "psr-4": {
+            "Bluehost\\Plugin\\WP\\MCP\\": "vendor-prefixed/wordpress/mcp-adapter/includes/",
+            "Bluehost\\Plugin\\WP\\McpSchema\\": "vendor-prefixed/wordpress/php-mcp-schema/src/"
+        }
+    },
     "repositories": {
         "newfold": {
             "type": "composer",
@@ -69,6 +75,22 @@
             "@i18n-json",
             "@i18n-php"
         ],
+        "ensure-scoper": "@composer install -d bin/php-scoper --no-interaction --no-progress",
+        "scoper-run": [
+            "bin/php-scoper/vendor/bin/php-scoper add-prefix vendor/wordpress/mcp-adapter --config=scoper.inc.php --output-dir=vendor-prefixed/wordpress/mcp-adapter --force --stop-on-failure",
+            "bin/php-scoper/vendor/bin/php-scoper add-prefix vendor/wordpress/php-mcp-schema --config=scoper.inc.php --output-dir=vendor-prefixed/wordpress/php-mcp-schema --force --stop-on-failure"
+        ],
+        "prefix-namespaces": [
+            "@ensure-scoper",
+            "@scoper-run",
+            "@composer dump-autoload"
+        ],
+        "post-install-cmd": [
+            "@prefix-namespaces"
+        ],
+        "post-update-cmd": [
+            "@prefix-namespaces"
+        ],
         "test": "codecept run wpunit",
         "test:phpunit": "HOSTGATOR_PHPUNIT_MINIMAL=1 vendor/bin/phpunit --bootstrap tests/phpunit/bootstrap.php tests/phpunit/PluginTest.php --no-configuration"
     },
@@ -82,6 +104,9 @@
         "i18n-po": "Update existing .po files.",
         "i18n-php": "Generate new language .l10n.php files.",
         "i18n-json": "Generate new language .json files.",
+        "ensure-scoper": "Install PHP-Scoper in isolation under bin/php-scoper.",
+        "scoper-run": "Prefix the namespaces of bundled packages into vendor-prefixed (one PHP-Scoper run per package).",
+        "prefix-namespaces": "Prefix namespaces for the plugin and refresh the autoloader.",
         "test": "Run Codeception wpunit tests.",
         "test:phpunit": "Run minimal PHPUnit tests (no WordPress)."
     },
