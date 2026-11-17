@@ -156,7 +156,7 @@ jobs:
             --arg core "WordPress/WordPress#tags/${{ matrix.wpVersion }}" \
             --arg phpVersion "${{ matrix.phpVersion }}" \
             --arg plugin "$DIST/$PACKAGE" \
-            '{core: $core, phpVersion: $phpVersion, plugins: [$plugin]}' \
+            '{core: $core, phpVersion: $phpVersion, plugins: [$plugin], config: {WP_MEMORY_LIMIT: "512M", WP_MAX_MEMORY_LIMIT: "512M", WP_HTTP_BLOCK_EXTERNAL: true, WP_ACCESSIBLE_HOSTS: "api.wordpress.org,*.wordpress.org,downloads.wordpress.org,localhost"}}' \
             > .wp-env.override.json
 
       - name: Install WordPress
