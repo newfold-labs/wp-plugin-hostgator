@@ -46,7 +46,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962  # v2.40.0
         with:
-          php-version: '8.1'
+          php-version: '8.3'
           coverage: none
           tools: composer, cs2pr
 
@@ -101,6 +101,18 @@ jobs:
 
       - name: Install PHP Dependencies
         run: composer install --no-progress --no-dev --optimize-autoloader --prefer-dist
+
+      - name: Validate vendor directories
+        run: |
+          if [ ! -d "vendor" ]; then
+            echo "❌ Error: vendor directory does not exist"
+            exit 1
+          fi
+          if [ ! -d "vendor-prefixed" ]; then
+            echo "❌ Error: vendor-prefixed directory does not exist"
+            exit 1
+          fi
+          echo "✅ Both vendor and vendor-prefixed directories exist"
 
       - name: NPM Install
         run: npm install --legacy-peer-deps

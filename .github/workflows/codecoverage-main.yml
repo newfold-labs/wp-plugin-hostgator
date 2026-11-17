@@ -40,6 +40,10 @@ jobs:
     with:
       php-versions: '["7.4", "8.0", "8.1", "8.2", "8.3", "8.4"]'
       coverage-php-version: '7.4'
+      # composer install runs PHP-Scoper, which needs PHP >= 8.2. Tests still
+      # run on each matrix PHP version; the lock file and the composer
+      # platform config (php 7.4) keep the installed dependencies identical.
+      install-php-version: '8.3'
       repository-name: ${{ needs.get-repo-name.outputs.repository-name }}
       minimum-coverage: 25
     secrets:
