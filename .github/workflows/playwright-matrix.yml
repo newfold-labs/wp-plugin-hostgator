@@ -156,7 +156,8 @@ jobs:
             --arg core "WordPress/WordPress#tags/${{ matrix.wpVersion }}" \
             --arg phpVersion "${{ matrix.phpVersion }}" \
             --arg plugin "$DIST/$PACKAGE" \
-            '{core: $core, phpVersion: $phpVersion, plugins: [$plugin], config: {WP_MEMORY_LIMIT: "512M", WP_MAX_MEMORY_LIMIT: "512M", WP_HTTP_BLOCK_EXTERNAL: true, WP_ACCESSIBLE_HOSTS: "api.wordpress.org,*.wordpress.org,downloads.wordpress.org,localhost"}}' \
+            --arg hosts "localhost,127.0.0.1,wordpress.org,*.wordpress.org,w.org,*.w.org,hiive.cloud,*.hiive.cloud,hiive.space,*.hiive.space" \
+            '{core: $core, phpVersion: $phpVersion, plugins: [$plugin], config: {WP_HTTP_BLOCK_EXTERNAL: true, WP_ACCESSIBLE_HOSTS: $hosts}, mappings: {"wp-content/mu-plugins/ci-log-slow-http.php": "./tests/playwright/mu-plugins/ci-log-slow-http.php"}}' \
             > .wp-env.override.json
 
       - name: Install WordPress
