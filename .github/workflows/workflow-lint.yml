@@ -31,4 +31,4 @@ jobs:
       security-events: write   # Required for SARIF or code scanning uploads from the reusable workflow.
       actions: read           # Required for the reusable workflow to read workflow definitions.
       contents: read          # Required for the reusable workflow to clone this repo.
-    uses: newfold-labs/workflows/.github/workflows/reusable-workflow-lint.yml@main
+    uses: newfold-labs/workflows/.github/workflows/reusable-workflow-lint.yml@9b37fae0b51f04fe41e5aa6642b873a3a8559642 # main

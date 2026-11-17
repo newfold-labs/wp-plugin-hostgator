@@ -29,7 +29,7 @@ jobs:
       github.event.pull_request.head.repo.fork == false &&
       github.actor != 'dependabot[bot]'
     name: Review PR diff
-    uses: newfold-labs/workflows/.github/workflows/reusable-code-review.yml@main
+    uses: newfold-labs/workflows/.github/workflows/reusable-code-review.yml@9b37fae0b51f04fe41e5aa6642b873a3a8559642 # main
     with:
       prompts_ref: main
     permissions:

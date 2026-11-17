@@ -46,7 +46,7 @@ jobs:
     if: always() && needs.get-merged-pr-commits.result == 'success'
     permissions:
       contents: write         # Required for reusable workflow to prune coverage output on gh-pages.
-    uses: newfold-labs/workflows/.github/workflows/reusable-codecoverage-cleanup.yml@main
+    uses: newfold-labs/workflows/.github/workflows/reusable-codecoverage-cleanup.yml@9b37fae0b51f04fe41e5aa6642b873a3a8559642 # main
     with:
       shas: ${{ needs.get-merged-pr-commits.outputs.shas }}
       prune_unreachable: false
@@ -57,7 +57,7 @@ jobs:
     if: github.event_name == 'delete' && github.event.ref_type == 'branch'
     permissions:
       contents: write         # Required for reusable workflow to prune coverage output on gh-pages.
-    uses: newfold-labs/workflows/.github/workflows/reusable-codecoverage-cleanup.yml@main
+    uses: newfold-labs/workflows/.github/workflows/reusable-codecoverage-cleanup.yml@9b37fae0b51f04fe41e5aa6642b873a3a8559642 # main
     with:
       shas: ''
       prune_unreachable: true
@@ -68,7 +68,7 @@ jobs:
     if: github.event_name == 'schedule'
     permissions:
       contents: write         # Required for reusable workflow to prune coverage output on gh-pages.
-    uses: newfold-labs/workflows/.github/workflows/reusable-codecoverage-cleanup.yml@main
+    uses: newfold-labs/workflows/.github/workflows/reusable-codecoverage-cleanup.yml@9b37fae0b51f04fe41e5aa6642b873a3a8559642 # main
     with:
       shas: ''
       prune_unreachable: true

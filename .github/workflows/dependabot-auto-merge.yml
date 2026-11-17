@@ -21,7 +21,7 @@ jobs:
   # all check runs green, an opted-in bump type). Majors are left for a human.
   auto-merge:
     name: Auto-merge Dependabot PRs
-    uses: newfold-labs/workflows/.github/workflows/reusable-dependabot-auto-merge.yml@main
+    uses: newfold-labs/workflows/.github/workflows/reusable-dependabot-auto-merge.yml@9b37fae0b51f04fe41e5aa6642b873a3a8559642 # main
     with:
       merge-method: squash
       update-types: patch,minor
