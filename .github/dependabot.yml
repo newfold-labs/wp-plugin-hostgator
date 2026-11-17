@@ -14,6 +14,7 @@ updates:
       include: "scope"
     labels:
       - "dependencies"
+      - "workflows"
 
   # Maintain dependencies for npm
   - package-ecosystem: "npm"
@@ -44,6 +45,22 @@ updates:
     commit-message:
       prefix: "Composer"
       prefix-development: "Composer Dev"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "php"
+
+  # Maintain the isolated PHP-Scoper tooling used for namespace prefixing
+  - package-ecosystem: "composer"
+    directory: "/bin/php-scoper"
+    target-branch: "develop"
+    schedule:
+      interval: "weekly"
+    allow:
+      - dependency-type: direct
+    versioning-strategy: increase
+    commit-message:
+      prefix: "Composer"
       include: "scope"
     labels:
       - "dependencies"

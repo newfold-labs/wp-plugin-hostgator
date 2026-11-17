@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { auth, a11y, utils } from '../helpers';
 
-test.describe('Help Page', () => {
+test.describe('Help Page', { tag: '@env-any' }, () => {
   test.beforeEach(async ({ page }) => {
     await page.route('**/newfold-marketplace**/v1**/marketplace**', async (route) => {
       await route.fulfill({
