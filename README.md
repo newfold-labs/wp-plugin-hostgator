@@ -14,6 +14,10 @@
 WordPress plugin that integrates a WordPress site with the HostGator control panel, including performance, security, and
 update features.
 
+# Documentation
+
+See the [docs/](docs/index.md) directory for architecture, modules, development, testing, release and workflow documentation.
+
 # Installation
 
 Find the `wp-plugin-hostgator.zip` asset for your preferred version at: https://github.com/newfold-labs/wp-plugin-hostgator/releases/.
