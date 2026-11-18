@@ -152,12 +152,14 @@ jobs:
           DIST: ${{ steps.workflow.outputs.DIST }}
           PACKAGE: ${{ steps.workflow.outputs.PACKAGE }}
         run: |
+          # Merge the CI-only settings in .wp-env.ci.json (external HTTP block and
+          # allowlist) with the per-cell core, PHP version and built plugin.
           jq -n \
+            --slurpfile ci .wp-env.ci.json \
             --arg core "WordPress/WordPress#tags/${{ matrix.wpVersion }}" \
             --arg phpVersion "${{ matrix.phpVersion }}" \
             --arg plugin "$DIST/$PACKAGE" \
-            --arg hosts "localhost,127.0.0.1,wordpress.org,*.wordpress.org,w.org,*.w.org,hiive.cloud,*.hiive.cloud,hiive.space,*.hiive.space" \
-            '{core: $core, phpVersion: $phpVersion, plugins: [$plugin], config: {WP_HTTP_BLOCK_EXTERNAL: true, WP_ACCESSIBLE_HOSTS: $hosts}, mappings: {"wp-content/mu-plugins/ci-log-slow-http.php": "./tests/playwright/mu-plugins/ci-log-slow-http.php"}}' \
+            '$ci[0] * {core: $core, phpVersion: $phpVersion, plugins: [$plugin]}' \
             > .wp-env.override.json
 
       - name: Install WordPress

@@ -3,10 +3,10 @@
 </a>
 
 [![Version Number](https://img.shields.io/github/v/release/newfold-labs/wp-plugin-hostgator?color=21a0ed&labelColor=333333)](https://github.com/newfold-labs/wp-plugin-hostgator/releases)
-[![Lint PHP](https://github.com/newfold-labs/wp-plugin-hostgator/actions/workflows/lint-php.yml/badge.svg?branch=main)](https://github.com/newfold-labs/wp-plugin-hostgator/actions/workflows/lint-php.yml)
-[![Lint YML](https://github.com/newfold-labs/wp-plugin-hostgator/actions/workflows/lint-yml.yml/badge.svg?branch=main)](https://github.com/newfold-labs/wp-plugin-hostgator/actions/workflows/lint-yml.yml)
+[![Lint](https://github.com/newfold-labs/wp-plugin-hostgator/actions/workflows/lint.yml/badge.svg?branch=main)](https://github.com/newfold-labs/wp-plugin-hostgator/actions/workflows/lint.yml)
+[![Workflow Lint](https://github.com/newfold-labs/wp-plugin-hostgator/actions/workflows/workflow-lint.yml/badge.svg?branch=main)](https://github.com/newfold-labs/wp-plugin-hostgator/actions/workflows/workflow-lint.yml)
 [![WP Internationalization](https://github.com/newfold-labs/wp-plugin-hostgator/actions/workflows/wp-i18n.yml/badge.svg?branch=main)](https://github.com/newfold-labs/wp-plugin-hostgator/actions/workflows/wp-i18n.yml)
-[![Cypress Tests](https://github.com/newfold-labs/wp-plugin-hostgator/actions/workflows/cypress-tests.yml/badge.svg?branch=main)](https://github.com/newfold-labs/wp-plugin-hostgator/actions/workflows/cypress-tests.yml)
+[![Playwright Tests](https://github.com/newfold-labs/wp-plugin-hostgator/actions/workflows/playwright-tests.yml/badge.svg?branch=main)](https://github.com/newfold-labs/wp-plugin-hostgator/actions/workflows/playwright-tests.yml)
 [![Build Plugin](https://github.com/newfold-labs/wp-plugin-hostgator/actions/workflows/upload-artifact-on-push.yml/badge.svg?branch=main)](https://github.com/newfold-labs/wp-plugin-hostgator/actions/workflows/upload-artifact-on-push.yml)
 
 # Hostgator WordPress Plugin
