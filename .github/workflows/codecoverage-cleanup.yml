@@ -51,7 +51,8 @@ jobs:
       shas: ${{ needs.get-merged-pr-commits.outputs.shas }}
       prune_unreachable: false
       squash_history: false
-    secrets: inherit
+    secrets:
+      repo_token: ${{ secrets.GITHUB_TOKEN }}
 
   cleanup-on-branch-delete:
     if: github.event_name == 'delete' && github.event.ref_type == 'branch'
@@ -62,7 +63,8 @@ jobs:
       shas: ''
       prune_unreachable: true
       squash_history: false
-    secrets: inherit
+    secrets:
+      repo_token: ${{ secrets.GITHUB_TOKEN }}
 
   cleanup-scheduled:
     if: github.event_name == 'schedule'
@@ -73,4 +75,5 @@ jobs:
       shas: ''
       prune_unreachable: true
       squash_history: true
-    secrets: inherit
+    secrets:
+      repo_token: ${{ secrets.GITHUB_TOKEN }}

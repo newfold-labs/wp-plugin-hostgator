@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e6d0c325d3a77719c8150093f3311aa4",
+    "content-hash": "6a47aec5e849d0bcb0ccd027f6add8df",
     "packages": [
         {
             "name": "automattic/jetpack-autoloader",
@@ -2323,16 +2323,16 @@
         },
         {
             "name": "newfold-labs/wp-module-mcp",
-            "version": "1.9.1",
+            "version": "1.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-mcp.git",
-                "reference": "6a9a3f0bccfef164b516d47fb3704801fae94b97"
+                "reference": "5e5ff4a352bb5949b42aea535cae79c747457338"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-mcp/zipball/6a9a3f0bccfef164b516d47fb3704801fae94b97",
-                "reference": "6a9a3f0bccfef164b516d47fb3704801fae94b97",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-mcp/zipball/5e5ff4a352bb5949b42aea535cae79c747457338",
+                "reference": "5e5ff4a352bb5949b42aea535cae79c747457338",
                 "shasum": ""
             },
             "require": {
@@ -2408,7 +2408,7 @@
                 }
             ],
             "description": "WordPress MCP module for Newfold Labs BLU",
-            "time": "2026-10-23T20:13:50+00:00"
+            "time": "2026-11-18T16:08:34+00:00"
         },
         {
             "name": "newfold-labs/wp-module-migration",
