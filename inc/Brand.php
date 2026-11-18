@@ -277,9 +277,7 @@ final class Brand {
 	/**
 	 * Register the editor-chat brand payload on the module loader container.
 	 *
-	 * This is the plugin-owned source of truth. wp-module-onboarding also writes
-	 * this container key later (with static, non-regional URLs and no icons);
-	 * see filter_editor_chat_brand() for how we win that overwrite.
+	 * The plugin owns this payload; modules (editor-chat) only read it.
 	 *
 	 * @param \NewfoldLabs\WP\ModuleLoader\Container $container Module container.
 	 *
@@ -287,20 +285,6 @@ final class Brand {
 	 */
 	public static function register( $container ) {
 		$container->set( self::EDITOR_CHAT_CONTAINER_KEY, self::editor_chat_payload() );
-	}
-
-	/**
-	 * Filter for `newfold/container/editor_chat_brand` (applied by onboarding
-	 * just before it overwrites the container key). Our values take precedence
-	 * over onboarding's so region-aware links and icons are preserved; any
-	 * extra keys onboarding adds are kept.
-	 *
-	 * @param array<string, mixed> $payload Payload built by onboarding.
-	 *
-	 * @return array<string, mixed>
-	 */
-	public static function filter_editor_chat_brand( $payload ): array {
-		return array_merge( (array) $payload, self::editor_chat_payload() );
 	}
 
 	/**
