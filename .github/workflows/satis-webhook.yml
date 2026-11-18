@@ -16,6 +16,7 @@ jobs:
     timeout-minutes: 10
     # Repository dispatch uses secrets.WEBHOOK_TOKEN; the job does not use GITHUB_TOKEN against this repo.
     permissions: {}
+    environment: release
     steps:
 
       - name: Set Package

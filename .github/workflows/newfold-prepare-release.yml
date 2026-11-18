@@ -41,4 +41,4 @@ jobs:
       plugin-target-branch: ${{ inputs.target-branch }}
       plugin-source-branch: ${{ inputs.source-branch }}
       level: ${{ inputs.level }}
-      php-file: ${{ 'wp-plugin-hostgator.php' }}
+      php-file: wp-plugin-hostgator.php

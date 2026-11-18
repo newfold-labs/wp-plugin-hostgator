@@ -9,6 +9,8 @@ updates:
       - dependency-type: direct
     schedule:
       interval: "daily"
+    cooldown:
+      default-days: 7
     commit-message:
       prefix: "GitHub Actions"
       include: "scope"
@@ -24,6 +26,8 @@ updates:
       - dependency-type: direct
     schedule:
       interval: "daily"
+    cooldown:
+      default-days: 7
     versioning-strategy: increase
     commit-message:
       prefix: "NPM"
@@ -39,6 +43,8 @@ updates:
     target-branch: "develop"
     schedule:
       interval: "daily"
+    cooldown:
+      default-days: 7
     allow:
       - dependency-type: direct
     versioning-strategy: increase
@@ -56,6 +62,8 @@ updates:
     target-branch: "develop"
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 7
     allow:
       - dependency-type: direct
     versioning-strategy: increase
