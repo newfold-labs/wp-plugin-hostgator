@@ -6,11 +6,11 @@ const BUTTON = '.nfd-sso-hosting-login__button';
 const DIVIDER = '.nfd-sso-hosting-login__divider';
 const ICON = '.nfd-sso-hosting-login__button .nfd-sso-hosting-login__icon svg';
 
-test.describe('wp-login.php — Login with HostGator button', () => {
+test.describe('wp-login.php — Login with HostGator button', { tag: '@env-remote' }, () => {
   test.use({ storageState: { cookies: [], origins: [] } });
 
   test.beforeEach(async ({ page }) => {
-    await page.goto('/wp-login.php');
+    await page.goto('wp-login.php');
   });
 
   test('renders the wrapper, divider, and button on the default login screen', async ({ page }) => {
@@ -54,7 +54,7 @@ test.describe('wp-login.php — Login with HostGator button', () => {
   });
 
   test('is hidden on the lostpassword screen', async ({ page }) => {
-    await page.goto('/wp-login.php?action=lostpassword');
+    await page.goto('wp-login.php?action=lostpassword');
     await expect(page.locator('#lostpasswordform')).toBeVisible();
     await expect(page.locator('.nfd-sso-hosting-login')).toHaveCount(0);
   });

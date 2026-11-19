@@ -2,7 +2,7 @@
     "name": "wp-plugin-hostgator",
     "description": "WordPress plugin that integrates your WordPress site with the HostGator control panel, including performance, security, and update features.",
     "license": "GPL-2.0-or-later",
-    "version": "3.3.0",
+    "version": "4.0.0",
     "private": true,
     "contributors": [
         "Abdulrahman Al Ani (https://alani.dev/)",
@@ -39,20 +39,22 @@
         "uuid": "^14.0.3"
     },
     "devDependencies": {
-        "@wordpress/eslint-plugin": "^28.1.0",
-        "eslint": "^10.15.0",
         "@automattic/babel-plugin-preserve-i18n": "^1.0.0",
         "@axe-core/playwright": "^4.14.0",
         "@playwright/test": "^1.65.1",
         "@tailwindcss/forms": "^0.5.11",
         "@wordpress/e2e-test-utils-playwright": "^3.2.0",
         "@wordpress/env": "^12.1.0",
+        "@wordpress/eslint-plugin": "^28.1.0",
         "@wordpress/scripts": "^37.1.0",
+        "@wp-playground/cli": "^3.1.65",
+        "eslint": "^10.15.0",
         "eslint-import-resolver-alias": "^1.1.2",
         "node-fetch": "^3.3.2",
         "node-wp-i18n": "^1.2.8",
         "tailwindcss": "^3.4.19",
-        "typescript": "^6.0.3"
+        "typescript": "^6.0.3",
+        "ws": "^8.23.0"
     },
     "scripts": {
         "build": "wp-scripts build",
@@ -89,8 +91,7 @@
         "storybook:build": "build-storybook -c ./storybook -o ./.docs",
         "storybook:dev": "start-storybook -c ./storybook",
         "test:e2e": "npm run test:playwright",
-        "playwright:prune-vendor-dupes": "node .github/scripts/prune-vendor-playwright-dupes.mjs",
-        "test:playwright": "npm run playwright:prune-vendor-dupes && npx playwright test",
+        "test:playwright": "npx playwright test",
         "test:playwright:update-projects": "node .github/scripts/generate-playwright-projects.mjs",
         "test:unit": "wp-scripts test-unit-js"
     }

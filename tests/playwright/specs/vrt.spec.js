@@ -22,8 +22,8 @@ const paths = [
     'wp-admin/admin.php?page=' + pluginId + '#/commerce',
     'wp-admin/admin.php?page=' + pluginId + '#/marketplace',
     'wp-admin/admin.php?page=' + pluginId + '#/help',
-    '/wp-admin/plugins.php',
-    '/wp-admin/plugin-install.php',
+    'wp-admin/plugins.php',
+    'wp-admin/plugin-install.php',
     'wp-admin/plugin-install.php?tab=premium-marketplace'
 ];
 

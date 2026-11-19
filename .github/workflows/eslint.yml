@@ -26,8 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
-      contents: read # Required to checkout the repository.
-
+      contents: read           # Required to clone the repo.
     steps:
 
       - name: Checkout
@@ -38,7 +37,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # v2.40.0
         with:
-          php-version: '8.1'
+          php-version: '8.3'
           coverage: none
           tools: composer, cs2pr
 
@@ -80,9 +79,6 @@ jobs:
 
       - name: Install PHP Dependencies
         run: composer install --no-progress --no-dev --optimize-autoloader --prefer-dist
-
-      - name: Setup Registry
-        run: printf "\n//npm.pkg.github.com/:_authToken=${{ secrets.NEWFOLD_ACCESS_TOKEN }}" >> .npmrc
 
       - name: NPM Install
         run: npm ci --legacy-peer-deps

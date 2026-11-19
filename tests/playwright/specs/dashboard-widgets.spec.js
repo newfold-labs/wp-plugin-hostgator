@@ -7,10 +7,13 @@ test.describe('Dashboard Widgets', () => {
 
   test.beforeEach(async ({ page }) => {
     await auth.navigateToAdminPage(page, 'index.php');
-    await newfold.clearCapabilities();
+    // WP-CLI is only available against wp-env (not Playground / remote BASE_URL).
+    if (!process.env.BASE_URL) {
+      await newfold.clearCapabilities();
+    }
   });
 
-  test('Dashboard widgets are all accessible', async ({ page }) => {
+  test('Dashboard widgets are all accessible', { tag: '@env-any' }, async ({ page }) => {
     await expect(page).toHaveURL(/\/wp-admin\/index\.php(\?.*)?$/);
 
     try {

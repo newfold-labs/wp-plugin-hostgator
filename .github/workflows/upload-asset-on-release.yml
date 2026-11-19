@@ -20,21 +20,25 @@ jobs:
   build:
     name: On Release
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     permissions:
-      contents: write # Required to upload the built plugin zip as a release asset.
+      contents: write             # Required to checkout with persist-credentials and upload release assets with gh.
     steps:
 
       - name: Checkout
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: true
 
       - name: Validate version number
         if: ${{ (github.repository == 'newfold-labs/wp-plugin-hostgator') && (github.event.release.prerelease == false) }}
+        env:
+          PLUGIN_NAME: wp-plugin-hostgator
         run: |
           taggedVersion=${{ env.VERSION }}
-          pluginHeaderVersion=`grep "Version:" wp-plugin-hostgator.php | grep -Eo "[0-9\.]*"`
-          pluginConstantVersion=`grep "'HOSTGATOR_PLUGIN_VERSION'" wp-plugin-hostgator.php | grep -Eo "[0-9\.]*"`
-          pluginPackageVersion=`grep '"version"' package.json | grep -Eo "[0-9\.]*"`
+          pluginHeaderVersion=$(grep "Version:" "$PLUGIN_NAME.php" | grep -Eo "[0-9\.]*")
+          pluginConstantVersion=$(grep "'HOSTGATOR_PLUGIN_VERSION'" "$PLUGIN_NAME.php" | grep -Eo "[0-9\.]*")
+          pluginPackageVersion=$(grep '"version"' package.json | grep -Eo "[0-9\.]*")
           echo "Tagged version: $taggedVersion"
           echo "Plugin header version: $pluginHeaderVersion"
           echo "Plugin constant version: $pluginConstantVersion"
@@ -44,50 +48,38 @@ jobs:
           [[ "$taggedVersion" == "$pluginPackageVersion" ]] || exit 1
 
       - name: Setup PHP
-        uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962  # v2.40.0
+        uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # v2.40.0
         with:
-          php-version: '8.1'
+          php-version: '8.3'
           coverage: none
           tools: composer, cs2pr
 
-      - name: Setup Workflow Context
+      - name: Setup workflow context
         id: workflow
         working-directory: ${{ runner.temp }}
         env:
           REPO: ${{ github.repository }}
+          PLUGIN_NAME: wp-plugin-hostgator
         run: |
           mkdir dist
-          echo "DIST=${PWD}/dist" >> $GITHUB_OUTPUT
-          echo "PACKAGE=${REPO##*/}" >> $GITHUB_OUTPUT
+          echo "DIST=${PWD}/dist" >> "$GITHUB_OUTPUT"
+          echo "PACKAGE=$PLUGIN_NAME" >> "$GITHUB_OUTPUT"
 
       - name: Use Node.js 20.x
-        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1  # v7.1.0
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: 20.x
+          cache: 'npm'
 
-      - name: Get npm cache directory
-        id: npm-cache
-        run: echo "dir=$(npm config get cache)" >> $GITHUB_OUTPUT
-
-      - name: Cache node modules
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
-        with:
-          path: ${{ steps.npm-cache.outputs.dir }}
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Get Composer Cache Directory
+      - name: Get Composer cache directory
         id: composer-cache
-        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+        run: echo "dir=$(composer config cache-files-dir)" >> "$GITHUB_OUTPUT"
 
       - name: Cache Composer vendor directory
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: ${{ steps.composer-cache.outputs.dir }}
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-composer-
 
       - name: Show versions
         run: |
@@ -102,45 +94,59 @@ jobs:
       - name: Install PHP Dependencies
         run: composer install --no-progress --no-dev --optimize-autoloader --prefer-dist
 
+      - name: Validate vendor directories
+        run: |
+          if [ ! -d "vendor" ]; then
+            echo "❌ Error: vendor directory does not exist"
+            exit 1
+          fi
+          if [ ! -d "vendor-prefixed" ]; then
+            echo "❌ Error: vendor-prefixed directory does not exist"
+            exit 1
+          fi
+          echo "✅ Both vendor and vendor-prefixed directories exist"
+
       - name: NPM Install
         run: npm install --legacy-peer-deps
 
       - name: Validate WP Versions
         if: ${{ (github.repository == 'newfold-labs/wp-plugin-hostgator') && (github.event.release.prerelease == false) }}
+        env:
+          PLUGIN_NAME: wp-plugin-hostgator
         run: |
-          wpEnvVersion=`grep "WordPress/WordPress#tags/" .wp-env.json | grep -Eo "[0-9\.]*"`
-          pluginHeaderTestedVersion=`grep "Tested up to:" wp-plugin-hostgator.php | grep -Eo "[0-9\.]*"`
-          echo "wp-env version: $wpEnvVersion"
+          pluginHeaderTestedVersion=$(grep "Tested up to:" "$PLUGIN_NAME.php" | grep -Eo "[0-9\.]*")
+          wpEnvVersion=$(grep "WordPress/WordPress#tags/" .wp-env.json | grep -Eo "[0-9\.]*")
           echo "Plugin header tested version: $pluginHeaderTestedVersion"
+          echo "wp-env version: $wpEnvVersion"
           [[ "$wpEnvVersion" == "$pluginHeaderTestedVersion" ]] || exit 1
 
       - name: Build JavaScript
         run: npm run build
 
       - name: Create Distribution Copy
-        run: rsync -r --include-from=.distinclude --exclude-from=.distignore . ${{ steps.workflow.outputs.DIST }}/${{ steps.workflow.outputs.PACKAGE }}
+        env:
+          DIST: ${{ steps.workflow.outputs.DIST }}
+          PACKAGE: ${{ steps.workflow.outputs.PACKAGE }}
+        run: rsync -r --include-from=.distinclude --exclude-from=.distignore . "$DIST/$PACKAGE"
 
-      - name: List Files
+      - name: List Distribution Files
         working-directory: ${{ steps.workflow.outputs.DIST }}
         run: find .
 
       - name: Create Zip
         working-directory: ${{ steps.workflow.outputs.DIST }}
-        run: zip -r ${{ steps.workflow.outputs.PACKAGE }}.zip .
+        env:
+          PACKAGE: ${{ steps.workflow.outputs.PACKAGE }}
+        run: zip -r "$PACKAGE.zip" .
 
       - name: Upload Release Asset
-        uses: actions/upload-release-asset@e8f9f06c4b078e705bd2ea027f0926603fc9b4d5  # v1.0.21
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: https://uploads.github.com/repos/${{ github.repository }}/releases/${{ github.event.release.id }}/assets{?name,label}
-          asset_path: ${{ steps.workflow.outputs.DIST }}/${{ steps.workflow.outputs.PACKAGE }}.zip
-          asset_name: ${{ steps.workflow.outputs.PACKAGE }}.zip
-          asset_content_type: application/zip
-
-      - name: Clear cache for release API
+          TAG_NAME: ${{ github.event.release.tag_name }}
+          DIST: ${{ steps.workflow.outputs.DIST }}
+          PACKAGE: ${{ steps.workflow.outputs.PACKAGE }}
         run: |
-          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
-               -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
-               -H "Content-Type: application/json" \
-               --data '{"files":["https://hiive.cloud/workers/release-api/plugins/newfold-labs/wp-plugin-hostgator"]}'
+          gh release upload "$TAG_NAME" "$DIST/$PACKAGE.zip"
+
+      # - name: Upload Zip to R2
+      # This is either done manually or via the upload-release-asset workflow after the release is published to github.

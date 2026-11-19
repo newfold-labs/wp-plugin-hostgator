@@ -1,0 +1,106 @@
+name: Upload Release Asset to R2
+run-name: Upload Release Asset (${{ inputs.tag || 'latest' }}) to R2
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag to upload (e.g. 4.14.1). Leave blank to use the latest published release.'
+        required: false
+        type: string
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+# Disable permissions for all available scopes by default.
+# Any needed permissions should be configured at the job level.
+permissions: {}
+
+jobs:
+  upload:
+    name: Upload to R2
+    environment: release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+
+      - name: Resolve release tag
+        id: release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          INPUT_TAG: ${{ inputs.tag }}
+        run: |
+          if [ -n "$INPUT_TAG" ]; then
+            TAG="$INPUT_TAG"
+          else
+            TAG=$(gh release view --repo "$GITHUB_REPOSITORY" --json tagName -q .tagName)
+          fi
+          echo "Resolved tag: $TAG"
+          echo "TAG=$TAG" >> "$GITHUB_OUTPUT"
+
+      - name: Setup workflow context
+        id: workflow
+        working-directory: ${{ runner.temp }}
+        env:
+          PLUGIN_NAME: wp-plugin-hostgator
+          # The repo this workflow is intentionally configured for. Update
+          # this when copying the workflow to another brand plugin repo.
+          CANONICAL_REPOSITORY: newfold-labs/wp-plugin-hostgator
+        run: |
+          mkdir dist
+          {
+            echo "DIST=${PWD}/dist"
+            echo "PACKAGE=$PLUGIN_NAME"
+            echo "CANONICAL_REPOSITORY=$CANONICAL_REPOSITORY"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Download release asset
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ steps.release.outputs.TAG }}
+          DIST: ${{ steps.workflow.outputs.DIST }}
+        run: |
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --pattern '*.zip' --dir "$DIST"
+
+      - name: Verify downloaded zip
+        env:
+          DIST: ${{ steps.workflow.outputs.DIST }}
+          PACKAGE: ${{ steps.workflow.outputs.PACKAGE }}
+        run: |
+          if [ ! -f "$DIST/$PACKAGE.zip" ]; then
+            echo "❌ Error: $PACKAGE.zip not found in release assets"
+            exit 1
+          fi
+          echo "✅ Found $PACKAGE.zip"
+
+      - name: Upload Zip to R2
+        if: ${{ github.repository == steps.workflow.outputs.CANONICAL_REPOSITORY }}
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          DIST: ${{ steps.workflow.outputs.DIST }}
+          PACKAGE: ${{ steps.workflow.outputs.PACKAGE }}
+        run: |
+          aws --version
+          ENDPOINT="https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com"
+
+          echo "Uploading $PACKAGE.zip to R2 bucket: $R2_BUCKET_NAME"
+          aws s3 cp "$DIST/$PACKAGE.zip" \
+            "s3://${R2_BUCKET_NAME}/uploads/free/$PACKAGE.zip" \
+            --endpoint-url "$ENDPOINT"
+
+      - name: Clear cache for release API
+        if: ${{ github.repository == steps.workflow.outputs.CANONICAL_REPOSITORY }}
+        env:
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/${CLOUDFLARE_ZONE_ID}/purge_cache" \
+               -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+               -H "Content-Type: application/json" \
+               --data '{"files":["https://hiive.cloud/workers/release-api/plugins/'"$GITHUB_REPOSITORY"'"]}'

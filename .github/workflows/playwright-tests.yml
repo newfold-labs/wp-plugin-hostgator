@@ -26,7 +26,7 @@ jobs:
       dist: ${{ steps.workflow.outputs.DIST }}
       package: ${{ steps.workflow.outputs.PACKAGE }}
     permissions:
-      contents: read # Required to checkout the repository.
+      contents: read            # Required to clone the repo.
 
     steps:
       - name: Checkout
@@ -54,7 +54,7 @@ jobs:
       - name: Use Node.js 24.x
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1  # v7.1.0
         with:
-          node-version: 24.15.0  # Locking to avoid breaking changes with wp-env in newer versions.
+          node-version: 24.15.0
           cache: 'npm'
 
       - name: Get Composer cache directory
@@ -112,7 +112,7 @@ jobs:
     timeout-minutes: 60
     needs: build
     permissions:
-      contents: read # Required to checkout the repository.
+      contents: read            # Required to clone the repo.
 
     steps:
       - name: Checkout
@@ -130,7 +130,7 @@ jobs:
       - name: Use Node.js 24.x
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1  # v7.1.0
         with:
-          node-version: 24.15.0  # Locking to avoid breaking changes with wp-env in newer versions.
+          node-version: 24.15.0
           cache: 'npm'
 
       - name: Get Composer cache directory
@@ -176,13 +176,22 @@ jobs:
       - name: Install WordPress
         uses: nick-fields/retry@ad984534de44a9489a53aefd81eb77f87c70dc60  # v4.0.0
         with:
-          timeout_minutes: 4
+          timeout_minutes: 10
           max_attempts: 3
-          command: npx wp-env start --debug
+          retry_wait_seconds: 15
+          command: |
+            npx wp-env destroy --debug || true
+            sleep 10
+            pwd
+            ls -la .wp-env*
+            npx wp-env start --debug
+            npx wp-env run cli wp core version
 
       - name: Verify WordPress is ready
         run: |
           echo "Verifying WordPress is ready..."
+          pwd
+          ls -la .wp-env*
           npx wp-env run cli wp core version
           echo "WordPress is ready!"
 
@@ -201,20 +210,11 @@ jobs:
         timeout-minutes: 5
         run: npx playwright install chromium
 
-      - name: Prune nested Playwright copies from vendor modules
-        run: node .github/scripts/prune-vendor-playwright-dupes.mjs
-
       - name: Run Playwright Tests
-        run: npx playwright test --reporter=line,json,github
+        run: npx playwright test --reporter=line
         env:
           CI: true
-          PLAYWRIGHT_JSON_OUTPUT_FILE: tests/playwright/test-results/github-summary-source.json
-
-      - name: Add Playwright results to job summary
-        if: always()
-        env:
-          PLAYWRIGHT_JSON_OUTPUT_FILE: tests/playwright/test-results/github-summary-source.json
-        run: node .github/scripts/playwright-job-summary.mjs
+          PLAYWRIGHT_FORCE_ASYNC_LOADER: '1'
 
       - name: Store Playwright test results
         if: always()

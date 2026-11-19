@@ -22,8 +22,9 @@ permissions: {}
 jobs:
   get-repo-name:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
-    permissions: {} # Computes outputs only; no checkout or GitHub API calls with GITHUB_TOKEN.
+    timeout-minutes: 5
+    # No repository clone or token use; only parses github.repository for reusable workflow inputs.
+    permissions: {}
     outputs:
       repository-name: ${{ steps.repo-name.outputs.name }}
     steps:
@@ -33,13 +34,17 @@ jobs:
 
   codecoverage:
     needs: get-repo-name
-    uses: newfold-labs/workflows/.github/workflows/reusable-codecoverage.yml@main
     permissions:
-      contents: write       # Required for reusable workflow to publish coverage artifacts/commits.
-      pull-requests: write # Required for reusable workflow pull-request interactions.
+      contents: write           # Required for reusable workflow to push coverage to GitHub Pages.
+      pull-requests: write      # Required for reusable workflow to post or update PR comments.
+    uses: newfold-labs/workflows/.github/workflows/reusable-codecoverage.yml@9b37fae0b51f04fe41e5aa6642b873a3a8559642 # main
     with:
       php-versions: '["7.4", "8.0", "8.1", "8.2", "8.3", "8.4"]'
       coverage-php-version: '7.4'
+      # composer install runs PHP-Scoper, which needs PHP >= 8.2. Tests still
+      # run on each matrix PHP version; the lock file and the composer
+      # platform config (php 7.4) keep the installed dependencies identical.
+      install-php-version: '8.3'
       repository-name: ${{ needs.get-repo-name.outputs.repository-name }}
       minimum-coverage: 25
     secrets:

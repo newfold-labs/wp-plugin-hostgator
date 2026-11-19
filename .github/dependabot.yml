@@ -9,11 +9,14 @@ updates:
       - dependency-type: direct
     schedule:
       interval: "daily"
+    cooldown:
+      default-days: 7
     commit-message:
       prefix: "GitHub Actions"
       include: "scope"
     labels:
       - "dependencies"
+      - "workflows"
 
   # Maintain dependencies for npm
   - package-ecosystem: "npm"
@@ -23,6 +26,8 @@ updates:
       - dependency-type: direct
     schedule:
       interval: "daily"
+    cooldown:
+      default-days: 7
     versioning-strategy: increase
     commit-message:
       prefix: "NPM"
@@ -38,12 +43,32 @@ updates:
     target-branch: "develop"
     schedule:
       interval: "daily"
+    cooldown:
+      default-days: 7
     allow:
       - dependency-type: direct
     versioning-strategy: increase
     commit-message:
       prefix: "Composer"
       prefix-development: "Composer Dev"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "php"
+
+  # Maintain the isolated PHP-Scoper tooling used for namespace prefixing
+  - package-ecosystem: "composer"
+    directory: "/bin/php-scoper"
+    target-branch: "develop"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
+    allow:
+      - dependency-type: direct
+    versioning-strategy: increase
+    commit-message:
+      prefix: "Composer"
       include: "scope"
     labels:
       - "dependencies"

@@ -12,14 +12,16 @@ jobs:
   playground-preview:
     runs-on: ubuntu-latest
     timeout-minutes: 45
-    permissions:
-      contents: read       # Required to checkout the repository.
-      pull-requests: write # Required to read the PR and create/update PR comments via github-script.
-      actions: write       # Required for github.rest.actions.deleteArtifact below.
-      pages: write         # Required to publish GitHub Pages preview builds.
-      id-token: write      # Required for OIDC token exchange when deploying to Pages.
-
     if: github.event.pull_request.head.repo.fork == false
+    outputs:
+      zip_url: ${{ steps.preview_urls.outputs.zip_url }}
+
+    permissions:
+      contents: read          # Required to clone the repo.
+      pull-requests: write    # Required for github-script to upsert PR comments.
+      pages: write            # Required to publish and update GitHub Pages.
+      id-token: write         # Required for OIDC authentication to GitHub Pages.
+      actions: write          # Required to list and delete stale github-pages workflow artifacts before upload.
 
     concurrency:
       group: pages-${{ github.event.pull_request.number }}
@@ -69,7 +71,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962  # v2.40.0
         with:
-          php-version: '8.1'
+          php-version: '8.3'
           coverage: none
           tools: composer, cs2pr
 
@@ -161,7 +163,7 @@ jobs:
           <html>
           <head>
             <meta charset="utf-8" />
-            <title>Hostgator Plugin - Playground Previews</title>
+            <title>HostGator Plugin - Playground Previews</title>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <style>
               body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; }
@@ -174,7 +176,7 @@ jobs:
           </head>
           <body>
             <h1>🎮 WordPress Playground Previews</h1>
-            <p>Preview builds of the Hostgator WordPress Plugin for testing in WordPress Playground.</p>
+            <p>Preview builds of the HostGator WordPress Plugin for testing in WordPress Playground.</p>
             <div class="preview">
               <p><strong>Latest:</strong> <a href="${ZIP_NAME}">${ZIP_NAME}</a> (${SIZE})</p>
             </div>
@@ -223,6 +225,16 @@ jobs:
         id: deploy
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
 
+      - name: Export preview URLs for downstream jobs
+        id: preview_urls
+        env:
+          PAGES_URL: ${{ steps.deploy.outputs.page_url }}
+          ZIP_NAME: ${{ steps.prepare.outputs.zip_name }}
+        run: |
+          set -euo pipefail
+          BASE="${PAGES_URL%/}"
+          echo "zip_url=${BASE}/previews/${ZIP_NAME}" >> "$GITHUB_OUTPUT"
+
       - name: Comment Playground link on PR
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
@@ -269,7 +281,7 @@ jobs:
 
             [**▶️ Launch Preview in Playground**](${playgroundUrl})
 
-            _This spins up a fresh WordPress-in-browser, installs this PR's plugin build, and drops you straight into the Hostgator screen._
+            _This spins up a fresh WordPress-in-browser, installs this PR's plugin build, and drops you straight into the HostGator screen._
 
             ---
             **Preview Details**
@@ -303,3 +315,78 @@ jobs:
                 body,
               });
             }
+
+  playwright-env-any:
+    name: Playwright @env-any (Playground)
+    runs-on: ubuntu-latest
+    needs: playground-preview
+    if: github.event.pull_request.head.repo.fork == false
+    timeout-minutes: 30
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Use Node from .nvmrc
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+          cache-dependency-path: 'package-lock.json'
+
+      - name: Install Node dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Install Playwright Chromium
+        timeout-minutes: 5
+        run: npx playwright install chromium
+
+      - name: Download PR preview plugin build
+        env:
+          ZIP_URL: ${{ needs.playground-preview.outputs.zip_url }}
+        run: |
+          set -euo pipefail
+          PLUGIN_DIR="${RUNNER_TEMP}/hostgator-preview-plugin"
+          rm -rf "$PLUGIN_DIR"
+          mkdir -p "$PLUGIN_DIR"
+
+          # The preview zip is served from GitHub Pages. Each Pages deploy replaces the
+          # whole site, so a concurrent deploy for another PR (or Pages propagation lag)
+          # can briefly 404 this URL. Retry with backoff, then fail loudly so a genuinely
+          # broken preview pipeline doesn't go unnoticed.
+          MAX_ATTEMPTS=8
+          DELAY=5
+          for attempt in $(seq 1 "$MAX_ATTEMPTS"); do
+            if curl -fsSL "$ZIP_URL" -o "${RUNNER_TEMP}/preview.zip"; then
+              echo "Downloaded preview zip on attempt ${attempt}."
+              break
+            fi
+            if [ "$attempt" -eq "$MAX_ATTEMPTS" ]; then
+              echo "::error::Preview zip not available at ${ZIP_URL} after ${MAX_ATTEMPTS} attempts."
+              exit 1
+            fi
+            echo "Attempt ${attempt}/${MAX_ATTEMPTS} failed; retrying in ${DELAY}s..."
+            sleep "$DELAY"
+            DELAY=$(( DELAY * 2 > 60 ? 60 : DELAY * 2 ))
+          done
+
+          unzip -q "${RUNNER_TEMP}/preview.zip" -d "$PLUGIN_DIR"
+          echo "PLAYGROUND_PLUGIN_DIR=$PLUGIN_DIR" >> "$GITHUB_ENV"
+
+      - name: Run @env-any tests against Playground server
+        env:
+          CI: true
+          PLAYWRIGHT_FORCE_ASYNC_LOADER: '1'
+        run: npx playwright test --grep @env-any --project newfold-labs/wp-plugin-hostgator --reporter=line
+
+      - name: Store Playwright test results
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: playwright-playground-env-any
+          path: tests/playwright/test-results/
+          retention-days: 10
