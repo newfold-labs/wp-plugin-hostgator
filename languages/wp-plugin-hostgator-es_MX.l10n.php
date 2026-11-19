@@ -5,7 +5,7 @@ return [
 	'language' => 'es_MX',
 	'project-id-version' => 'hostgator-wordpress-plugin',
 	'pot-creation-date' => '2023-01-11T20:21:44+00:00',
-	'po-revision-date' => '2026-10-01T18:00:43+00:00',
+	'po-revision-date' => '2026-11-16T18:12:06+00:00',
 	'messages' => [
 		'The HostGator Plugin' => 'El plugin de HostGator',
 		'https://hostgator.com' => 'https://www.hostgator.mx',

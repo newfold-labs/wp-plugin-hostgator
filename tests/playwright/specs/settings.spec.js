@@ -6,13 +6,13 @@ test.describe('Settings Page', () => {
     await auth.navigateToAdminPage(page, 'admin.php?page=hostgator#/settings');
   });
 
-  test('Is accessible', async ({ page }) => {
+  test('Is accessible', { tag: '@env-any' }, async ({ page }) => {
     await page.waitForSelector('#hgwp-app-rendered', { timeout: 10000 });
     await page.waitForSelector('.hgwp-app-body', { timeout: 10000 });
     await a11y.checkA11y(page, '.hgwp-app-body');
   });
 
-  test('Has coming soon section', async ({ page }) => {
+  test('Has coming soon section', { tag: '@env-any' }, async ({ page }) => {
     const generalSettings = page.locator('.settings-details');
     if (!(await generalSettings.getAttribute('open'))) {
       await generalSettings.locator('summary').click();

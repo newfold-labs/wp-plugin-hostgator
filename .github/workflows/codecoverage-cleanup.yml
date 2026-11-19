@@ -1,0 +1,79 @@
+##
+# Removes stale gh-pages/<sha>/ coverage dirs (see reusable-codecoverage-cleanup in newfold-labs/workflows).
+# Pair with codecoverage-main.yml (reusable-codecoverage). For pinned refs, replace @main with a workflows repo SHA.
+#
+# One cleanup run at a time per repo so concurrent triggers (merged PRs, branch delete, schedule) do not race on gh-pages.
+##
+name: Code Coverage Cleanup
+
+concurrency:
+  group: codecoverage-cleanup-${{ github.repository }}
+  cancel-in-progress: false
+
+on:
+  pull_request:
+    types: [ closed ]
+  delete:
+  schedule:
+    # Weekly on Sunday at 00:00 UTC
+    - cron: '0 0 * * 0'
+
+# Disable permissions for all available scopes by default.
+# Any needed permissions should be configured at the job level.
+permissions: {}
+
+jobs:
+  get-merged-pr-commits:
+    if: github.event_name == 'pull_request' && github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pull-requests: read    # Required for gh to list commits on the merged pull request.
+    outputs:
+      shas: ${{ steps.shas.outputs.list }}
+    steps:
+      - name: Get PR commit SHAs
+        id: shas
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          list=$(gh api "repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/commits" --jq '[.[].sha] | @json') || list='[]'
+          [ -n "$list" ] || list='[]'
+          echo "list=${list}" >> "$GITHUB_OUTPUT"
+
+  cleanup-on-merge:
+    needs: get-merged-pr-commits
+    if: always() && needs.get-merged-pr-commits.result == 'success'
+    permissions:
+      contents: write         # Required for reusable workflow to prune coverage output on gh-pages.
+    uses: newfold-labs/workflows/.github/workflows/reusable-codecoverage-cleanup.yml@9b37fae0b51f04fe41e5aa6642b873a3a8559642 # main
+    with:
+      shas: ${{ needs.get-merged-pr-commits.outputs.shas }}
+      prune_unreachable: false
+      squash_history: false
+    secrets:
+      repo_token: ${{ secrets.GITHUB_TOKEN }}
+
+  cleanup-on-branch-delete:
+    if: github.event_name == 'delete' && github.event.ref_type == 'branch'
+    permissions:
+      contents: write         # Required for reusable workflow to prune coverage output on gh-pages.
+    uses: newfold-labs/workflows/.github/workflows/reusable-codecoverage-cleanup.yml@9b37fae0b51f04fe41e5aa6642b873a3a8559642 # main
+    with:
+      shas: ''
+      prune_unreachable: true
+      squash_history: false
+    secrets:
+      repo_token: ${{ secrets.GITHUB_TOKEN }}
+
+  cleanup-scheduled:
+    if: github.event_name == 'schedule'
+    permissions:
+      contents: write         # Required for reusable workflow to prune coverage output on gh-pages.
+    uses: newfold-labs/workflows/.github/workflows/reusable-codecoverage-cleanup.yml@9b37fae0b51f04fe41e5aa6642b873a3a8559642 # main
+    with:
+      shas: ''
+      prune_unreachable: true
+      squash_history: true
+    secrets:
+      repo_token: ${{ secrets.GITHUB_TOKEN }}

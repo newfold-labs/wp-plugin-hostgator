@@ -2,15 +2,8 @@ name: Build Plugin
 on:
   push:
     branches:
-      - main
-      - master
-      - develop
-      - release/*
-      - feature/*
-      - add/*
-      - update/*
-      - fix/*
-      - try/*
+      - 'main'
+      - 'develop'
   pull_request:
     types: [ opened, synchronize, reopened, ready_for_review ]
   workflow_dispatch:
@@ -27,61 +20,65 @@ jobs:
   build:
     name: On Push
     runs-on: ubuntu-latest
-    timeout-minutes: 30
-    if: ${{ github.repository == 'newfold-labs/wp-plugin-hostgator' }}
+    timeout-minutes: 45
     permissions:
-      contents: read       # Required to checkout the repository.
-      pull-requests: write # Required to create/update PR comments (Issues API on a PR needs pull-requests scope).
+      contents: read            # Required to clone the repo.
+      pull-requests: write      # Required for github-script to create/update PR comments with artifact links.
+    if: ${{ github.repository == 'newfold-labs/wp-plugin-hostgator' }}
     steps:
 
       - name: Checkout
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Validate version number
+        if: ${{ (github.repository == 'newfold-labs/wp-plugin-hostgator') }}
+        env:
+          PLUGIN_NAME: wp-plugin-hostgator
+        run: |
+          pluginHeaderVersion=$(grep "Version:" "$PLUGIN_NAME.php" | grep -Eo "[0-9\.]*")
+          pluginConstantVersion=$(grep "'HOSTGATOR_PLUGIN_VERSION'" "$PLUGIN_NAME.php" | grep -Eo "[0-9\.]*")
+          pluginPackageVersion=$(grep '"version"' package.json | grep -Eo "[0-9\.]*")
+          echo "Plugin header version: $pluginHeaderVersion"
+          echo "Plugin constant version: $pluginConstantVersion"
+          echo "Plugin package version: $pluginPackageVersion"
+          [[ "$pluginPackageVersion" == "$pluginHeaderVersion" ]] || exit 1
+          [[ "$pluginPackageVersion" == "$pluginConstantVersion" ]] || exit 1
 
       - name: Setup PHP
-        uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240  # v2.37.2
+        uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962  # v2.40.0
         with:
-          php-version: '8.1'
+          php-version: '8.3'
           coverage: none
           tools: composer, cs2pr
 
-      - name: Setup Workflow Context
+      - name: Setup workflow context
         id: workflow
         working-directory: ${{ runner.temp }}
         env:
           REPO: ${{ github.repository }}
+          PLUGIN_NAME: wp-plugin-hostgator
         run: |
           mkdir dist
-          echo "DIST=${PWD}/dist" >> $GITHUB_OUTPUT
-          echo "PACKAGE=${REPO##*/}" >> $GITHUB_OUTPUT
+          echo "DIST=${PWD}/dist" >> "$GITHUB_OUTPUT"
+          echo "PACKAGE=$PLUGIN_NAME" >> "$GITHUB_OUTPUT"
 
       - name: Use Node.js 20.x
-        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020  # v7.0.0
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1  # v7.1.0
         with:
           node-version: 20.x
-
-      - name: Get npm cache directory
-        id: npm-cache
-        run: echo "dir=$(npm config get cache)" >> $GITHUB_OUTPUT
-
-      - name: Cache node modules
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
-        with:
-          path: ${{ steps.npm-cache.outputs.dir }}
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          cache: 'npm'
 
       - name: Get Composer cache directory
         id: composer-cache
-        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+        run: echo "dir=$(composer config cache-files-dir)" >> "$GITHUB_OUTPUT"
 
       - name: Cache Composer vendor directory
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
         with:
           path: ${{ steps.composer-cache.outputs.dir }}
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-composer-
 
       - name: Show versions
         run: |
@@ -103,20 +100,18 @@ jobs:
       - name: Build JavaScript
         run: npm run build
 
-      # Copy into a "$PACKAGE" subfolder so the zip has a single root directory
       - name: Prepare files
         env:
           DIST: ${{ steps.workflow.outputs.DIST }}
-          PACKAGE: ${{ steps.workflow.outputs.PACKAGE }}
-        run: rsync -r --include-from=.distinclude --exclude-from=.distignore . "$DIST/$PACKAGE"
+        run: rsync -r --include-from=.distinclude --exclude-from=.distignore . "$DIST"
 
       - name: List Files
         working-directory: ${{ steps.workflow.outputs.DIST }}
         run: find .
 
-      - name: Upload Artifact
+      - name: Upload artifact
         id: artifact
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9  # v7.0.2
         with:
           name: ${{ steps.workflow.outputs.PACKAGE }}
           path: ${{ steps.workflow.outputs.DIST }}
@@ -126,12 +121,15 @@ jobs:
         if: github.event_name == 'pull_request' && github.actor != 'dependabot[bot]'
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3  # v9.0.0
         continue-on-error: true
+        env:
+          ARTIFACT_URL: ${{ steps.artifact.outputs.artifact-url }}
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const prNumber = context.payload.pull_request.number;
             const commentMeta = '<!-- plugin-artifact-download -->';
-            const artifactUrl = '${{ steps.artifact.outputs.artifact-url }}';
+            const artifactUrl = process.env.ARTIFACT_URL;
+
             const commentBody = `
             ${commentMeta}
             ## Latest Plugin Build
@@ -141,13 +139,18 @@ jobs:
             📅 _Date:_ \`${new Date().toISOString()}\`
             🚀 Please download, test, and report any issues before merging. 🎉 This build includes the latest changes from this PR and was automatically generated by the GitHub Actions workflow. Any future commits will update this build.
             ⏳ _Note: Artifacts expire after ~90 days_
+
+            _A WordPress Playground preview link will be added shortly by a separate workflow._
             `;
+
             const { data: comments } = await github.rest.issues.listComments({
               issue_number: prNumber,
               owner: context.repo.owner,
               repo: context.repo.repo,
             });
+
             const existingComment = comments.find(c => c.body.includes(commentMeta));
+
             if (existingComment) {
               await github.rest.issues.updateComment({
                 comment_id: existingComment.id,

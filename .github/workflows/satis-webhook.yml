@@ -13,8 +13,10 @@ jobs:
   webhook:
     name: Send Webhook
     runs-on: ubuntu-latest
-    timeout-minutes: 15
-    permissions: {} # No GITHUB_TOKEN repo scopes needed; Satis dispatch uses WEBHOOK_TOKEN.
+    timeout-minutes: 10
+    # Repository dispatch uses secrets.WEBHOOK_TOKEN; the job does not use GITHUB_TOKEN against this repo.
+    permissions: {}
+    environment: release
     steps:
 
       - name: Set Package

@@ -1,0 +1,6 @@
+{
+  "config": {
+    "WP_HTTP_BLOCK_EXTERNAL": true,
+    "WP_ACCESSIBLE_HOSTS": "localhost,127.0.0.1,wordpress.org,*.wordpress.org,w.org,*.w.org,hiive.cloud,*.hiive.cloud,hiive.space,*.hiive.space"
+  }
+}

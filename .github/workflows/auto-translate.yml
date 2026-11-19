@@ -19,10 +19,10 @@ permissions: {}
 jobs:
   translate:
     name: 'Check and update translations'
-    uses: newfold-labs/workflows/.github/workflows/reusable-translations.yml@main
     permissions:
-      contents: write       # Required for reusable workflow to commit translation updates.
-      pull-requests: write # Required for reusable workflow to open/update pull requests.
+      contents: write           # Required for reusable workflow to commit translation updates.
+      pull-requests: write      # Required for reusable workflow to open or update pull requests.
+    uses: newfold-labs/workflows/.github/workflows/reusable-translations.yml@9b37fae0b51f04fe41e5aa6642b873a3a8559642 # main
     with:
       text_domain: 'wp-plugin-hostgator'
       i18n-script-location: 'npm'

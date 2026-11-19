@@ -6,7 +6,7 @@ test.describe('Home Page', () => {
     await auth.navigateToAdminPage(page, 'admin.php?page=hostgator#/home');
   });
 
-  test('Is Accessible', async ({ page }) => {
+  test('Is Accessible', { tag: '@env-any' }, async ({ page }) => {
     await page.waitForSelector('#hgwp-app-rendered', { timeout: 10000 });
     await page.waitForSelector('.hgwp-app-home-page', { timeout: 10000 });
     await page.waitForSelector('[data-cy="nfd-coming-soon-content"]', { timeout: 10000 });

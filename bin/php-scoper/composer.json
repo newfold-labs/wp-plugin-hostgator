@@ -1,0 +1,18 @@
+{
+  "name": "newfold-labs/wp-plugin-hostgator-php-scoper",
+  "license": "GPL-2.0-or-later",
+  "description": "Isolated install of PHP-Scoper used by the prefix-namespaces composer script. Kept separate from the plugin's composer.json so it is available on --no-dev installs and its PHP 8.2+ requirement does not affect the plugin's PHP 7.4 platform target.",
+  "require": {
+    "humbug/php-scoper": "^0.18.20",
+    "sniccowp/php-scoper-wordpress-excludes": "^7.1"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "platform": {
+      "php": "8.2.0"
+    },
+    "optimize-autoloader": true,
+    "sort-packages": true
+  }
+}

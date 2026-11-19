@@ -36,6 +36,7 @@ final class Data {
 			),
 			'siteType'           => self::get_site_type(),
 			'isSalesPromoActive' => self::is_sales_promotions_plugin_active(),
+			'region'             => Brand::links(),
 		);
 
 		if ( class_exists( 'NewfoldLabs\WP\Module\Solutions\Solutions' ) ) {

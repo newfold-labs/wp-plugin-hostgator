@@ -1,5 +1,5 @@
 {
-  "core": "WordPress/WordPress#tags/7.1.2",
+  "core": "WordPress/WordPress#tags/7.1.5",
   "config": {
     "WP_DEBUG": true,
     "WP_DEBUG_LOG": true,
@@ -15,15 +15,5 @@
     "https://downloads.wordpress.org/theme/yith-wonder.latest-stable.zip"
   ],
   "port": 8884,
-  "testsPort": 8885,
-  "env": {
-    "tests": {
-      "config": {
-        "WP_SITEURL": "localhost:8885",
-        "WP_TESTS_DOMAIN": "localhost:8885",
-        "WP_TESTS_TITLE": "HostGator WordPress Plugin",
-        "WP_TESTS_BINARY": "php"
-      }
-    }
-  }
+  "testsEnvironment": false
 }

@@ -1,0 +1,79 @@
+name: Lint
+on:
+  push:
+    branches:
+      - 'main'
+      - 'develop'
+    paths:
+      - '**.php'
+      - 'package*.json'
+      - 'composer.*'
+      - 'phpcs.xml'
+  pull_request:
+    types:
+      - 'opened'
+      - 'synchronize'
+      - 'reopened'
+      - 'ready_for_review'
+    paths:
+      - '**.php'
+      - 'package*.json'
+      - 'composer.*'
+      - 'phpcs.xml'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.head_ref || github.sha }}
+  cancel-in-progress: true
+
+# Disable permissions for all available scopes by default.
+# Any needed permissions should be configured at the job level.
+permissions: {}
+
+env:
+  PHP_VERSION: '8.3' # Set a default PHP version for the job. Must be >= 8.2 because composer install runs PHP-Scoper; phpcs compatibility rules still target the plugin's minimum PHP via testVersion in phpcs.xml.
+
+jobs:
+  phpcs:
+    name: Run PHP Code Sniffer
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read           # Required to clone the repo.
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # v2.40.0
+        with:
+          php-version: '${{ env.PHP_VERSION }}'
+          coverage: none
+          tools: cs2pr
+
+      # This date is used to ensure that the PHPCS cache is cleared at least once every week.
+      # http://man7.org/linux/man-pages/man1/date.1.html
+      - name: "Get last Monday's date"
+        id: get-date
+        run: echo "date=$(/bin/date -u --date='last Mon' "+%F")" >> "$GITHUB_OUTPUT"
+
+      - name: Cache PHPCS scan cache
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: '.cache/phpcs.json'
+          key: ${{ runner.os }}-date-${{ steps.get-date.outputs.date }}-php-${{ env.PHP_VERSION }}-phpcs-cache-${{ hashFiles('**/composer.lock', 'phpcs.xml') }}
+
+      - name: Install Composer dependencies
+        uses: ramsey/composer-install@65e4f84970763564f46a70b8a54b90d033b3bdda # v4.0.0
+        with:
+          composer-options: '--no-progress --optimize-autoloader --prefer-dist'
+
+      - name: Run PHP_CodeSniffer
+        id: phpcs-scan
+        run: vendor/bin/phpcs --report-full --cache=./.cache/phpcs.json --report-checkstyle=./.cache/phpcs-report.xml
+
+      - name: Show scan results in pull request
+        if: ${{ always() && steps.phpcs-scan.outcome == 'failure' }}
+        run: cs2pr ./.cache/phpcs-report.xml

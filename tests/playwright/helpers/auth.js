@@ -10,6 +10,33 @@ import { Admin, PageUtils } from '@wordpress/e2e-test-utils-playwright';
 import { readFileSync } from 'fs';
 
 /**
+ * WordPress Playground (blueprint login: true) auto-authenticates on admin requests.
+ * Skip wp-login.php credential flows in that mode.
+ */
+function usesPlaygroundAutoLogin() {
+  return (
+    process.env.PLAYGROUND_AUTO_LOGIN === '1' ||
+    Boolean(process.env.PLAYGROUND_PLUGIN_DIR)
+  );
+}
+
+/**
+ * @param {import('@playwright/test').Page} page
+ */
+async function waitForLoggedInAdmin(page) {
+  const timeout = usesPlaygroundAutoLogin() ? 60_000 : 30_000;
+  try {
+    await page.waitForSelector('#wpadminbar, body.logged-in', { timeout });
+  } catch (error) {
+    if (!usesPlaygroundAutoLogin()) {
+      throw error;
+    }
+    await page.goto('wp-admin/', { waitUntil: 'domcontentloaded' });
+    await page.waitForSelector('#wpadminbar, body.logged-in', { timeout: 30_000 });
+  }
+}
+
+/**
  * Check if user is already logged in to WordPress
  * 
  * @param {import('@playwright/test').Page} page - Playwright page object
@@ -33,7 +60,7 @@ async function isLoggedIn(page) {
     }
     
     // If we're not on an admin page, try to access a protected page
-    const response = await page.goto('/wp-admin/', { waitUntil: 'domcontentloaded', timeout: 5000 });
+    const response = await page.goto('wp-admin/', { waitUntil: 'domcontentloaded', timeout: 5000 });
     
     // Check if we were redirected to login page
     const newUrl = page.url();
@@ -71,20 +98,36 @@ async function loginToWordPress(page, options = {}) {
     return;
   }
 
-  await page.goto('/wp-login.php');
+  if (usesPlaygroundAutoLogin()) {
+    await page.goto('wp-admin/', { waitUntil: 'domcontentloaded' });
+    await waitForLoggedInAdmin(page);
+    return;
+  }
+
+  await page.goto('wp-login.php');
   await page.fill('#user_login', username);
   await page.fill('#user_pass', password);
   await page.press('#user_pass', 'Enter');
-  
-  // Wait for successful login: either left wp-login or landed on admin email verification (still wp-login.php?action=confirm_admin_email)
-  await page.waitForURL(
-    (url) => {
-      if (!url.pathname.includes('/wp-login.php')) return true;
-      if (url.searchParams.get('action') === 'confirm_admin_email') return true;
-      return false;
-    },
-    { timeout: 10000 }
-  );
+
+  const loginSucceeded = (url) => {
+    if (!url.pathname.includes('/wp-login.php')) return true;
+    if (url.searchParams.get('action') === 'confirm_admin_email') return true;
+    return false;
+  };
+
+  try {
+    await page.waitForURL(loginSucceeded, { timeout: 20000 });
+  } catch (err) {
+    const errorLocator = page.locator('#login_error, .login .message.error').first();
+    if (await errorLocator.isVisible().catch(() => false)) {
+      const text = (await errorLocator.innerText()).trim();
+      throw new Error(
+        `WordPress login failed (${text || 'invalid username or password'}). ` +
+          'Set WP_ADMIN_USERNAME and WP_ADMIN_PASSWORD to real admin credentials for this site (GitHub secrets must not be placeholder text).'
+      );
+    }
+    throw err;
+  }
 }
 
 /**
@@ -117,13 +160,20 @@ async function createWordPressUtils(page, options = {}) {
  * Navigate to a WordPress admin page with smart authentication
  * 
  * @param {import('@playwright/test').Page} page - Playwright page object
- * @param {string} adminPage - Admin page path (e.g., 'admin.php?page=bluehost')
+ * @param {string} adminPage - Admin page path (e.g., 'admin.php?page=hostgator')
  * @param {Object} options - Navigation options
  * @param {boolean} options.forceLogin - Force login even if already logged in (default: false)
  * @returns {Object} Object containing admin and pageUtils instances
  */
 async function navigateToAdminPage(page, adminPage, options = {}) {
   const { forceLogin = false } = options;
+
+  if (usesPlaygroundAutoLogin()) {
+    await page.goto(`wp-admin/${adminPage}`, { waitUntil: 'domcontentloaded' });
+    await waitForLoggedInAdmin(page);
+    const { admin, pageUtils } = await createWordPressUtils(page, { autoLogin: false });
+    return { admin, pageUtils };
+  }
   
   // Check if we need to login first
   if (!await isLoggedIn(page) || forceLogin) {
@@ -131,7 +181,7 @@ async function navigateToAdminPage(page, adminPage, options = {}) {
   }
   
   // Navigate to the admin page
-  const response = await page.goto(`/wp-admin/${adminPage}`, { waitUntil: 'domcontentloaded' });
+  const response = await page.goto(`wp-admin/${adminPage}`, { waitUntil: 'domcontentloaded' });
   
   // Check if we were redirected to login (session expired)
   const currentUrl = page.url();
@@ -139,7 +189,7 @@ async function navigateToAdminPage(page, adminPage, options = {}) {
     // Session expired, login again
     await loginToWordPress(page, { ...options, force: true });
     // Retry navigation
-    await page.goto(`/wp-admin/${adminPage}`, { waitUntil: 'domcontentloaded' });
+    await page.goto(`wp-admin/${adminPage}`, { waitUntil: 'domcontentloaded' });
   }
   
   // Create WordPress utilities for additional functionality

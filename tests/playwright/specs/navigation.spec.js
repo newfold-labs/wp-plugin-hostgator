@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { auth } from '../helpers';
 
-test.describe('Navigation', () => {
+test.describe('Navigation', { tag: '@env-any' }, () => {
   test.beforeEach(async ({ page }) => {
     // Use shared authentication helper
     await auth.navigateToAdminPage(page, 'admin.php?page=hostgator');
