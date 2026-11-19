@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1794431823">
-  <project timestamp="1794431823">
+<coverage generated="1795102667">
+  <project timestamp="1795102667">
     <file name="/home/runner/work/wp-plugin-hostgator/wp-plugin-hostgator/inc/Admin.php">
       <class name="HostGator\Admin" namespace="global">
         <metrics complexity="38" methods="16" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="223" coveredstatements="67" elements="239" coveredelements="67"/>
@@ -373,13 +373,51 @@
     </file>
     <file name="/home/runner/work/wp-plugin-hostgator/wp-plugin-hostgator/inc/Brand.php">
       <class name="HostGator\Brand" namespace="global">
-        <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        <metrics complexity="12" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="31" elements="38" coveredelements="38"/>
       </class>
-      <metrics loc="22" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      <line num="213" type="method" name="links" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="214" type="stmt" count="1"/>
+      <line num="222" type="method" name="region" visibility="public" complexity="1" crap="1" count="10"/>
+      <line num="223" type="stmt" count="10"/>
+      <line num="235" type="method" name="link" visibility="public" complexity="4" crap="4" count="7"/>
+      <line num="236" type="stmt" count="7"/>
+      <line num="237" type="stmt" count="1"/>
+      <line num="239" type="stmt" count="6"/>
+      <line num="240" type="stmt" count="6"/>
+      <line num="241" type="stmt" count="6"/>
+      <line num="242" type="stmt" count="1"/>
+      <line num="244" type="stmt" count="5"/>
+      <line num="256" type="method" name="supports" visibility="public" complexity="3" crap="3" count="5"/>
+      <line num="257" type="stmt" count="5"/>
+      <line num="258" type="stmt" count="1"/>
+      <line num="260" type="stmt" count="4"/>
+      <line num="261" type="stmt" count="4"/>
+      <line num="262" type="stmt" count="4"/>
+      <line num="270" type="method" name="icons" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="271" type="stmt" count="2"/>
+      <line num="272" type="stmt" count="2"/>
+      <line num="273" type="stmt" count="2"/>
+      <line num="274" type="stmt" count="2"/>
+      <line num="286" type="method" name="register" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="287" type="stmt" count="1"/>
+      <line num="296" type="method" name="editor_chat_payload" visibility="private" complexity="1" crap="1" count="1"/>
+      <line num="297" type="stmt" count="1"/>
+      <line num="298" type="stmt" count="1"/>
+      <line num="299" type="stmt" count="1"/>
+      <line num="301" type="stmt" count="1"/>
+      <line num="302" type="stmt" count="1"/>
+      <line num="303" type="stmt" count="1"/>
+      <line num="304" type="stmt" count="1"/>
+      <line num="305" type="stmt" count="1"/>
+      <line num="306" type="stmt" count="1"/>
+      <line num="307" type="stmt" count="1"/>
+      <line num="308" type="stmt" count="1"/>
+      <line num="309" type="stmt" count="1"/>
+      <metrics loc="312" ncloc="230" classes="1" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="31" elements="38" coveredelements="38"/>
     </file>
     <file name="/home/runner/work/wp-plugin-hostgator/wp-plugin-hostgator/inc/Data.php">
       <class name="HostGator\Data" namespace="global">
-        <metrics complexity="17" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="53" coveredstatements="20" elements="57" coveredelements="23"/>
+        <metrics complexity="17" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="54" coveredstatements="20" elements="58" coveredelements="23"/>
       </class>
       <line num="23" type="method" name="runtime" visibility="public" complexity="6" crap="42" count="0"/>
       <line num="24" type="stmt" count="0"/>
@@ -397,7 +435,7 @@
       <line num="37" type="stmt" count="0"/>
       <line num="38" type="stmt" count="0"/>
       <line num="39" type="stmt" count="0"/>
-      <line num="41" type="stmt" count="0"/>
+      <line num="40" type="stmt" count="0"/>
       <line num="42" type="stmt" count="0"/>
       <line num="43" type="stmt" count="0"/>
       <line num="44" type="stmt" count="0"/>
@@ -405,40 +443,41 @@
       <line num="46" type="stmt" count="0"/>
       <line num="47" type="stmt" count="0"/>
       <line num="48" type="stmt" count="0"/>
-      <line num="51" type="stmt" count="0"/>
+      <line num="49" type="stmt" count="0"/>
       <line num="52" type="stmt" count="0"/>
       <line num="53" type="stmt" count="0"/>
       <line num="54" type="stmt" count="0"/>
       <line num="55" type="stmt" count="0"/>
       <line num="56" type="stmt" count="0"/>
-      <line num="58" type="stmt" count="0"/>
+      <line num="57" type="stmt" count="0"/>
       <line num="59" type="stmt" count="0"/>
       <line num="60" type="stmt" count="0"/>
-      <line num="63" type="stmt" count="0"/>
-      <line num="73" type="method" name="get_entitlement_by_name" visibility="public" complexity="6" crap="6" count="4"/>
-      <line num="74" type="stmt" count="4"/>
-      <line num="75" type="stmt" count="2"/>
-      <line num="78" type="stmt" count="2"/>
+      <line num="61" type="stmt" count="0"/>
+      <line num="64" type="stmt" count="0"/>
+      <line num="74" type="method" name="get_entitlement_by_name" visibility="public" complexity="6" crap="6" count="4"/>
+      <line num="75" type="stmt" count="4"/>
+      <line num="76" type="stmt" count="2"/>
       <line num="79" type="stmt" count="2"/>
-      <line num="80" type="stmt" count="1"/>
-      <line num="84" type="stmt" count="1"/>
-      <line num="92" type="method" name="get_site_type" visibility="public" complexity="4" crap="4" count="6"/>
-      <line num="93" type="stmt" count="6"/>
-      <line num="95" type="stmt" count="6"/>
+      <line num="80" type="stmt" count="2"/>
+      <line num="81" type="stmt" count="1"/>
+      <line num="85" type="stmt" count="1"/>
+      <line num="93" type="method" name="get_site_type" visibility="public" complexity="4" crap="4" count="6"/>
+      <line num="94" type="stmt" count="6"/>
       <line num="96" type="stmt" count="6"/>
       <line num="97" type="stmt" count="6"/>
       <line num="98" type="stmt" count="6"/>
       <line num="99" type="stmt" count="6"/>
-      <line num="101" type="stmt" count="6"/>
-      <line num="102" type="stmt" count="1"/>
-      <line num="105" type="stmt" count="5"/>
+      <line num="100" type="stmt" count="6"/>
+      <line num="102" type="stmt" count="6"/>
+      <line num="103" type="stmt" count="1"/>
       <line num="106" type="stmt" count="5"/>
       <line num="107" type="stmt" count="5"/>
-      <line num="108" type="stmt" count="3"/>
-      <line num="111" type="stmt" count="2"/>
-      <line num="119" type="method" name="is_sales_promotions_plugin_active" visibility="public" complexity="1" crap="1" count="2"/>
-      <line num="120" type="stmt" count="2"/>
-      <metrics loc="123" ncloc="92" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="53" coveredstatements="20" elements="57" coveredelements="23"/>
+      <line num="108" type="stmt" count="5"/>
+      <line num="109" type="stmt" count="3"/>
+      <line num="112" type="stmt" count="2"/>
+      <line num="120" type="method" name="is_sales_promotions_plugin_active" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="121" type="stmt" count="2"/>
+      <metrics loc="124" ncloc="93" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="54" coveredstatements="20" elements="58" coveredelements="23"/>
     </file>
     <file name="/home/runner/work/wp-plugin-hostgator/wp-plugin-hostgator/inc/Filters.php">
       <class name="HostGator\Filters" namespace="global">
@@ -1389,6 +1428,6 @@
       <line num="246" type="stmt" count="0"/>
       <metrics loc="247" ncloc="233" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="128" coveredstatements="0" elements="128" coveredelements="0"/>
     </file>
-    <metrics files="24" loc="3187" ncloc="2134" classes="11" methods="82" coveredmethods="25" conditionals="0" coveredconditionals="0" statements="1198" coveredstatements="360" elements="1280" coveredelements="385"/>
+    <metrics files="24" loc="3478" ncloc="2356" classes="12" methods="89" coveredmethods="32" conditionals="0" coveredconditionals="0" statements="1230" coveredstatements="391" elements="1319" coveredelements="423"/>
   </project>
 </coverage>
