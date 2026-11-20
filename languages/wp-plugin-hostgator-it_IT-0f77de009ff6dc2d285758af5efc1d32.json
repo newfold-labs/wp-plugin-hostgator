@@ -1,323 +1,323 @@
 {
-    "translation-revision-date": "2026-11-16T18:12:06+00:00",
+    "translation-revision-date": "2026-11-20T17:35:24+00:00",
     "generator": "WP-CLI\/2.12.0",
-    "source": "build\/4.0.0\/index.js",
+    "source": "build\/4.0.1\/index.js",
     "domain": "messages",
     "locale_data": {
         "messages": {
             "": {
                 "domain": "messages",
-                "lang": "fr_FR",
+                "lang": "it_IT",
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
             "HostGator": [
                 "HostGator"
             ],
             "Home": [
-                "Accueil"
+                "Casa"
             ],
             "Settings": [
-                "D\u00e9cors"
+                "Impostazioni"
             ],
             "Not Live": [
-                "Pas en direct"
+                "Non dal vivo"
             ],
             "Live": [
-                "En direct"
+                "Live"
             ],
             "Your website is currently displaying a \"Coming Soon\" page.": [
-                "Votre site web affiche actuellement une page \u00ab Bient\u00f4t \u00bb."
+                "Il tuo sito web mostra attualmente una pagina \"Prossimamente\"."
             ],
             "Editor": [
-                "R\u00e9dacteur en chef"
+                "Direttore"
             ],
             "Hosting Panel": [
-                "Panel d\u2019accueil"
+                "Panel di conduzione"
             ],
             "Oh No, An Error!": [
-                "Oh non, une erreur !"
+                "Oh no, un errore!"
             ],
             "You found an error, please refresh the page and try again!": [
-                "Vous avez trouv\u00e9 une erreur, veuillez rafra\u00eechir la page et r\u00e9essayer !"
+                "Hai trovato un errore, per favore aggiorna la pagina e riprova!"
             ],
             "If the error persists, please contact support.": [
-                "Si l\u2019erreur persiste, veuillez contacter le support."
+                "Se l'errore persiste, contatta l'assistenza."
             ],
             "Error code:": [
-                "Code d\u2019erreur :"
+                "Codice di errore:"
             ],
             "HostGator WordPress Plugin": [
                 "HostGator WordPress Plugin"
             ],
             "Phone": [
-                "T\u00e9l\u00e9phone"
+                "Telefono"
             ],
             "Give us a ring at (866) 96-GATOR": [
-                "Appelez-nous au (866) 96-GATOR"
+                "Chiamaci al (866) 96-GATOR"
             ],
             "Call Us": [
-                "Appelez-nous"
+                "Chiamaci"
             ],
             "Chat": [
                 "Chat"
             ],
             "Have a question? We're here 24\/7\/365": [
-                "Vous avez une question ? Nous sommes l\u00e0 24h\/24, 7j\/7, 365 jours sur 7"
+                "Hai una domanda? Siamo qui 24\/7\/365"
             ],
             "Live Chat": [
-                "Chat en direct"
+                "Chat dal vivo"
             ],
             "Tweet": [
                 "Tweet"
             ],
             "Tweet us at @hgsupport for support": [
-                "Tweetez-nous \u00e0 @hgsupport pour obtenir du soutien"
+                "Scrivici su Twitter @hgsupport per supporto"
             ],
             "Tweet Us": [
-                "Tweetez-nous"
+                "Tweetaci"
             ],
             "Knowledge Base": [
-                "Base de connaissances"
+                "Base di conoscenza"
             ],
             "Know what the pros know.": [
-                "Sachez ce que savent les pros."
+                "Sappi quello che sanno i professionisti."
             ],
             "Find Answers": [
-                "Trouver des r\u00e9ponses"
+                "Trova risposte"
             ],
             "Blog": [
                 "Blog"
             ],
             "Get our tips and in-depth articles.": [
-                "Obtenez nos conseils et articles d\u00e9taill\u00e9s."
+                "Ricevi i nostri consigli e articoli approfonditi."
             ],
             "Learn Stuff": [
-                "Apprenez des choses"
+                "Impara cose"
             ],
             "Video Tutorials": [
-                "Tutoriels vid\u00e9o"
+                "Video tutorial"
             ],
             "Step-by-step tutorials and additional guides.": [
-                "Tutoriels \u00e9tape par \u00e9tape et guides suppl\u00e9mentaires."
+                "Tutorial passo dopo passo e guide aggiuntive."
             ],
             "Watch Now": [
-                "Regardez maintenant"
+                "Guarda ora"
             ],
             "There's nothing here!": [
-                "Il n\u2019y a rien ici !"
+                "Non c'\u00e8 niente qui!"
             ],
             "Manage WordPress": [
-                "G\u00e9rer WordPress"
+                "Gestisci WordPress"
             ],
             "Staging": [
-                "Mise en sc\u00e8ne"
+                "Messa in scena"
             ],
             "Performance": [
-                "Performances"
+                "Prestazioni"
             ],
             "Commerce": [
-                "Commerce"
+                "Commercio"
             ],
             "Marketplace": [
-                "March\u00e9"
+                "Mercato"
             ],
             "Help": [
-                "\u00c0 l\u2019aide"
+                "Aiuto"
             ],
             "Admin": [
-                "Administration"
+                "Amministrazione"
             ],
             "Secret page to manage admin features and settings.": [
-                "Page secr\u00e8te pour g\u00e9rer les fonctionnalit\u00e9s et param\u00e8tres d\u2019administration."
+                "Pagina segreta per gestire le funzionalit\u00e0 amministrative e le impostazioni."
             ],
             "Discover exclusive features, designed to deliver unmatched value and elevate your online experience.": [
-                "D\u00e9couvrez des fonctionnalit\u00e9s exclusives, con\u00e7ues pour offrir une valeur in\u00e9gal\u00e9e et am\u00e9liorer votre exp\u00e9rience en ligne."
+                "Scopri funzionalit\u00e0 esclusive, pensate per offrire un valore senza pari e elevare la tua esperienza online."
             ],
             "We are available 24\/7 to help answer questions and solve your problems.": [
-                "Nous sommes disponibles 24h\/24 et 7j\/7 pour r\u00e9pondre \u00e0 vos questions et r\u00e9soudre vos probl\u00e8mes."
+                "Siamo disponibili 24 ore su 24, 7 giorni su 7, per aiutarti a rispondere alle domande e risolvere i tuoi problemi."
             ],
             "Welcome to HostGator": [
-                "Bienvenue sur HostGator"
+                "Benvenuti su HostGator"
             ],
             "We're very excited to get started with you!": [
-                "Nous sommes tr\u00e8s enthousiastes \u00e0 l\u2019id\u00e9e de commencer avec vous !"
+                "Siamo molto entusiasti di iniziare con te!"
             ],
             "Quick Links": [
-                "Liens rapides"
+                "Collegamenti rapidi"
             ],
             "Settings and Performance": [
-                "D\u00e9cors et performances"
+                "Impostazioni e prestazioni"
             ],
             "Customize & fine-tune your site.": [
-                "Personnalisez et affinez votre site."
+                "Personalizza e affina il tuo sito."
             ],
             "Manage Settings": [
-                "G\u00e9rer les param\u00e8tres"
+                "Gestisci le impostazioni"
             ],
             "Manage your site settings. You can adjust automatic updates, comments, revisions and more.": [
-                "G\u00e9rez les param\u00e8tres de votre site. Vous pouvez ajuster les mises \u00e0 jour automatiques, les commentaires, les r\u00e9visions et plus encore."
+                "Gestisci le impostazioni del sito. Puoi regolare aggiornamenti automatici, commenti, revisioni e altro ancora."
             ],
             "Manage site performance and caching settings as well as clear the site cache.": [
-                "G\u00e9rez les performances du site et les param\u00e8tres de mise en cache ainsi que videz le cache du site."
+                "Gestisci le prestazioni del sito e le impostazioni di cache, oltre a cancellare la cache del sito."
             ],
             "Visit Marketplace": [
-                "Visitez Marketplace"
+                "Visita Marketplace"
             ],
             "Add site services, themes or plugins from the marketplace.": [
-                "Ajoutez des services de site, des th\u00e8mes ou des plugins issus du march\u00e9."
+                "Aggiungi servizi del sito, temi o plugin dal marketplace."
             ],
             "Website Content": [
-                "Contenu du site web"
+                "Contenuto del sito web"
             ],
             "Create, manage & sort your story.": [
-                "Cr\u00e9ez, g\u00e9rez et triez votre histoire."
+                "Crea, gestisci e ordina la tua storia."
             ],
             "New Post": [
-                "Nouveau poste"
+                "Nuovo incarico"
             ],
             "Write a new blog post.": [
-                "\u00c9crivez un nouvel article de blog."
+                "Scrivi un nuovo post sul blog."
             ],
             "Pages": [
-                "Pages"
+                "Pagine"
             ],
             "New Page": [
-                "Nouvelle page"
+                "Nuova pagina"
             ],
             "Add fresh pages to your website.": [
-                "Ajoutez de nouvelles pages \u00e0 votre site web."
+                "Aggiungi nuove pagine al tuo sito web."
             ],
             "Categories": [
-                "Cat\u00e9gories"
+                "Categorie"
             ],
             "Manage Categories": [
-                "Cat\u00e9gories de gestion"
+                "Gestire le categorie"
             ],
             "Organize existing content into categories.": [
-                "Organisez le contenu existant en cat\u00e9gories."
+                "Organizza i contenuti esistenti in categorie."
             ],
             "Web Hosting": [
-                "H\u00e9bergement web"
+                "Web Hosting"
             ],
             "Access & manage your HostGator account.": [
-                "Acc\u00e9dez et g\u00e9rez votre compte HostGator."
+                "Accedi e gestisci il tuo account HostGator."
             ],
             "Manage Sites": [
-                "G\u00e9rer les sites"
+                "Gestione dei siti"
             ],
             "Manage your site from the control panel. You can create backups, set security, and improve performance.": [
-                "G\u00e9rez votre site depuis le panneau de configuration. Vous pouvez cr\u00e9er des sauvegardes, mettre en place la s\u00e9curit\u00e9 et am\u00e9liorer les performances."
+                "Gestisci il tuo sito dal pannello di controllo. Puoi creare backup, impostare la sicurezza e migliorare le prestazioni."
             ],
             "Email": [
-                "Email"
+                "E-mail"
             ],
             "Manage Email": [
-                "G\u00e9rer les e-mails"
+                "Gestisci l'email"
             ],
             "Create email accounts, compose, send, and receive your email from the control panel.": [
-                "Cr\u00e9ez des comptes email, composez, envoyez et recevez votre email depuis le panneau de contr\u00f4le."
+                "Crea account email, componi, invia e ricevi la tua email dal pannello di controllo."
             ],
             "Domains": [
-                "Domaines"
+                "Domini"
             ],
             "Manage Domain": [
-                "G\u00e9rer le domaine"
+                "Gestione del dominio"
             ],
             "Find a Domain": [
-                "Trouver un domaine"
+                "Trova un dominio"
             ],
             "Find a new domain and assign it to your site or start a new site with a fresh domain.": [
-                "Trouvez un nouveau domaine et attribuez-le \u00e0 votre site ou cr\u00e9ez un nouveau site avec un nouveau domaine."
+                "Trova un nuovo dominio e assegnalo al tuo sito oppure inizia un nuovo sito con un dominio nuovo."
             ],
             "Get Help": [
-                "Cherchez de l\u2019aide"
+                "Fatti aiutare"
             ],
             "24\/7\/365 support. We work when you work.": [
-                "Support 24h\/24, 7j\/7, 365 jours sur 24. On travaille quand tu travailles."
+                "Supporto 24\/7\/365. Noi lavoriamo quando lavori tu."
             ],
             "Explore our featured collection of tools and services.": [
-                "D\u00e9couvrez notre collection d\u2019outils et de services en vedette."
+                "Esplora la nostra collezione di strumenti e servizi in evidenza."
             ],
             "Oops, there was an error loading the marketplace, please try again later.": [
-                "Oups, il y a eu une erreur lors du chargement du march\u00e9, veuillez r\u00e9essayer plus tard."
+                "Ops, c'\u00e8 stato un errore nel caricamento del marketplace, per favore riprova pi\u00f9 tardi."
             ],
             "Sorry, no marketplace items. Please, try again later.": [
-                "D\u00e9sol\u00e9, pas d\u2019articles du march\u00e9. S\u2019il vous pla\u00eet, r\u00e9essayez plus tard."
+                "Mi dispiace, niente articoli del mercato. Per favore, riprova pi\u00f9 tardi."
             ],
             "Load More": [
-                "Chargez plus"
+                "Carica di pi\u00f9"
             ],
             "Oops! Something Went Wrong": [
-                "Oups ! Quelque chose a mal tourn\u00e9"
+                "Ops! Qualcosa \u00e8 andato storto"
             ],
             "An error occurred while loading the content. Please try again later.": [
-                "Une erreur s\u2019est produite lors du chargement du contenu. Veuillez r\u00e9essayer plus tard."
+                "Si \u00e8 verificato un errore durante il caricamento del contenuto. Per favore, riprova pi\u00f9 tardi."
             ],
             "Manage All Updates": [
-                "G\u00e9rer toutes les mises \u00e0 jour"
+                "Gestisci tutti gli aggiornamenti"
             ],
             "WordPress Core": [
                 "WordPress Core"
             ],
             "Plugins": [
-                "Plugins"
+                "Plugin"
             ],
             "Themes": [
-                "Th\u00e8mes"
+                "Temi"
             ],
             "Automatic Updates": [
-                "Mises \u00e0 jour automatiques"
+                "Aggiornamenti automatici"
             ],
             "Keeping automatic updates on ensures timely security fixes and the latest features.": [
-                "Maintenir des mises \u00e0 jour automatiques garantit des correctifs de s\u00e9curit\u00e9 en temps voulu et les derni\u00e8res fonctionnalit\u00e9s."
+                "Mantenere aggiornamenti automatici garantisce correzioni di sicurezza tempestive e le ultime funzionalit\u00e0."
             ],
             "Oops! Something went wrong. Please try again.": [
-                "Oups ! Quelque chose a mal tourn\u00e9. Veuillez r\u00e9essayer."
+                "Ops! Qualcosa \u00e8 andato storto. Per favore, riprova."
             ],
             "Coming soon activated": [
-                "Bient\u00f4t activ\u00e9"
+                "Presto attivato"
             ],
             "Coming soon deactivated": [
-                "Bient\u00f4t d\u00e9sactiv\u00e9"
+                "Prossimamente disattivato"
             ],
             "Coming soon page is active. Site requires login.": [
-                "La page \u00e0 venir est active. Le site n\u00e9cessite une connexion."
+                "La pagina in arrivo \u00e8 attiva. Il sito richiede il login."
             ],
             "Coming soon page is not active. Site is live to visitors.": [
-                "La page Bient\u00f4t n\u2019est pas active. Le site est disponible pour les visiteurs."
+                "La pagina in arrivo non \u00e8 attiva. Il sito \u00e8 attivo per i visitatori."
             ],
             "Site Status": [
-                "Statut du site"
+                "Stato del sito"
             ],
             "Turn off your \"Coming Soon\" page when you are ready to launch your website.": [
-                "D\u00e9sactivez votre page \u00ab Bient\u00f4t \u00bb lorsque vous \u00eates pr\u00eat \u00e0 lancer votre site web."
+                "Disattiva la tua pagina \"Prossimamente\" quando sei pronto a lanciare il tuo sito web."
             ],
             "Turn on your \"Coming Soon\" page when you need to make major changes to your website.": [
-                "Activez votre page \u00ab Bient\u00f4t \u00bb lorsque vous devez apporter des changements majeurs \u00e0 votre site web."
+                "Attiva la tua pagina \"In arrivo\" quando devi apportare cambiamenti importanti al tuo sito web."
             ],
             "Coming Soon page": [
-                "Page \u00e0 venir"
+                "Pagina in arrivo"
             ],
             "Your Hostgator Coming Soon page lets you hide your site from visitors while you make the magic happen.": [
-                "Votre page Bient\u00f4t Hostgator vous permet de cacher votre site aux visiteurs pendant que vous faites la magie."
+                "La tua pagina Hostgator Coming Soon ti permette di nascondere il tuo sito ai visitatori mentre fai accadere la magia."
             ],
             "Disabled old post comments": [
-                "Anciens commentaires de publication d\u00e9sactiv\u00e9s"
+                "Disabilitato vecchi commenti del post"
             ],
             "Enabled old post comments": [
-                "Activation des anciens commentaires du post"
+                "Abilitato i commenti del vecchio post"
             ],
             "Comments on old posts are disabled.": [
-                "Les commentaires sur les anciens posts sont d\u00e9sactiv\u00e9s."
+                "I commenti ai post vecchi sono disabilitati."
             ],
             "Comments are allowed on old posts.": [
-                "Les commentaires sont autoris\u00e9s sur les anciens posts."
+                "I commenti sono consentiti ai post precedenti."
             ],
             "Disable comments for older posts": [
-                "D\u00e9sactivez les commentaires pour les anciens posts"
+                "Disabilita i commenti per i post pi\u00f9 vecchi"
             ],
             "Comments setting saved": [
-                "Param\u00e8tre des commentaires sauvegard\u00e9"
+                "Impostazioni commenti salvate"
             ],
             "Comments on posts are disabled after %s day.": [
                 ""
@@ -326,91 +326,91 @@
                 ""
             ],
             "Comments setting saved.": [
-                "Param\u00e8tre des commentaires sauvegard\u00e9."
+                "Impostazioni commenti salvate."
             ],
             "Posts will display %s comment at a time.": [
                 ""
             ],
             "Display %s comments per page.": [
-                "Afficher des pourcentages de commentaires par page."
+                "Mostra percentuali di commenti per pagina."
             ],
             "Comments": [
-                "Commentaires"
+                "Commenti"
             ],
             "Comments allow visitors to provide feedback and respond to your posts or pages.": [
-                "Les commentaires permettent aux visiteurs de donner des retours et de r\u00e9pondre \u00e0 vos publications ou pages."
+                "I commenti permettono ai visitatori di fornire feedback e rispondere ai tuoi post o pagine."
             ],
             "Post revision setting saved": [
-                "R\u00e9glage de la r\u00e9vision apr\u00e8s une sauvegarde"
+                "Impostazione della revisione salvata"
             ],
             "Posts will save %s revision.": [
                 ""
             ],
             "Number of revisions posts can save": [
-                "Nombre de r\u00e9visions que les publications peuvent sauver"
+                "Numero di revisioni che i post possono salvare"
             ],
             "Saving drafts and updating published content creates revisions. Make changes with confidence, knowing you can take %s step back.": [
                 ""
             ],
             "Trash setting saved": [
-                "Param\u00e8tres de corbeille sauvegard\u00e9s"
+                "Impostazione del cestino salvata"
             ],
             "The trash will automatically empty every %s week.": [
                 ""
             ],
             "Trash emptying frequency": [
-                "Fr\u00e9quence de vidage des d\u00e9chets"
+                "Frequenza di svuotamento dei rifiuti"
             ],
             "Content Options": [
-                "Options de contenu"
+                "Opzioni di contenuto"
             ],
             "Controls for content revisions and how often to empty the trash.": [
-                "Contr\u00f4les pour les r\u00e9visions de contenu et la fr\u00e9quence \u00e0 laquelle vider la corbeille."
+                "Controlli per le revisioni del contenuto e la frequenza con cui svuotare il cestino."
             ],
             "The Help Center provides guided, step-by-step assistance as you build your site.": [
-                "Le Centre d\u2019Aide fournit une assistance guid\u00e9e, \u00e9tape par \u00e9tape, tout au long de la cr\u00e9ation de votre site."
+                "Il Centro di Assistenza offre assistenza guidata passo dopo passo mentre costruisci il tuo sito."
             ],
             "Sorry, that is not allowed.": [
-                "D\u00e9sol\u00e9, ce n\u2019est pas autoris\u00e9."
+                "Mi dispiace, non \u00e8 permesso."
             ],
             "This feature cannot currently be modified.": [
-                "Cette fonctionnalit\u00e9 ne peut actuellement pas \u00eatre modifi\u00e9e."
+                "Questa funzione attualmente non pu\u00f2 essere modificata."
             ],
             "Optimize your website my managing cache, security and performance settings.": [
-                "Optimisez votre site web en g\u00e9rant le cache, la s\u00e9curit\u00e9 et les param\u00e8tres de performance."
+                "Ottimizza il tuo sito web per gestire la cache, la sicurezza e le impostazioni di prestazioni."
             ],
             "Optimize your website by managing cache and performance settings": [
-                "Optimisez votre site web en g\u00e9rant les param\u00e8tres de cache et de performance"
+                "Ottimizza il tuo sito gestendo cache e impostazioni di prestazioni"
             ],
             "General Settings": [
-                "Univers g\u00e9n\u00e9raux"
+                "Ambientazioni generali"
             ],
             "This is where you can manage common settings for your website.": [
-                "C\u2019est l\u00e0 que vous pouvez g\u00e9rer les param\u00e8tres courants de votre site web."
+                "Qui puoi gestire le impostazioni comuni del tuo sito web."
             ],
             "Features": [
-                "Caract\u00e9ristiques"
+                "Caratteristiche"
             ],
             "Customize the available features as you manage your website.": [
-                "Personnalisez les fonctionnalit\u00e9s disponibles au fur et \u00e0 mesure que vous g\u00e9rez votre site web."
+                "Personalizza le funzionalit\u00e0 disponibili mentre gestisci il tuo sito web."
             ],
             "A staging site is a duplicate of your live site, offering a secure environment to experiment, test updates, and deploy when ready.": [
-                "Un site de staging est un double de votre site en direct, offrant un environnement s\u00e9curis\u00e9 pour exp\u00e9rimenter, tester les mises \u00e0 jour et d\u00e9ployer lorsque vous \u00eates pr\u00eat."
+                "Un sito di staging \u00e8 un duplicato del tuo sito live, offrendo un ambiente sicuro per sperimentare, testare aggiornamenti e distribuire quando pronto."
             ],
             "The performance feature provides improvements to loads faster for visitors including cache settings.": [
-                "La fonctionnalit\u00e9 de performance am\u00e9liore les chargements plus rapides pour les visiteurs, y compris les param\u00e8tres de cache."
+                "La funzione di prestazioni offre miglioramenti per caricare pi\u00f9 velocemente i visitatori, incluse le impostazioni della cache."
             ],
             "The staging feature provides a way to copy a site to test new updates, features or content.": [
-                "La fonction de staging permet de copier un site pour tester de nouvelles mises \u00e0 jour, fonctionnalit\u00e9s ou contenus."
+                "La funzione staging offre un modo per copiare un sito per testare nuovi aggiornamenti, funzionalit\u00e0 o contenuti."
             ],
             "WonderBlocks provides a library of customizable block patterns and page templates.": [
-                "WonderBlocks propose une biblioth\u00e8que de motifs de blocs personnalisables et de mod\u00e8les de pages."
+                "WonderBlocks offre una libreria di modelli di blocchi personalizzabili e modelli di pagina."
             ],
             "Site Editor": [
-                "\u00c9diteur du site"
+                "Editor del sito"
             ],
             "Customizer": [
-                "Customizer"
+                "Personalizzatore"
             ]
         }
     }
