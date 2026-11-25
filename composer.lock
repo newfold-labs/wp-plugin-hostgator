@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8349c4cea80452e75235f9dcb942e6db",
+    "content-hash": "dfb3c240a60522365a4de6a225bd96bf",
     "packages": [
         {
             "name": "automattic/jetpack-autoloader",
@@ -1222,16 +1222,16 @@
         },
         {
             "name": "newfold-labs/wp-module-deactivation",
-            "version": "1.7.0",
+            "version": "1.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/newfold-labs/wp-module-deactivation.git",
-                "reference": "9a1f077cf03115e046458dd09adcd7dead79420d"
+                "reference": "8aa8b91279ac4ef6d6b26511a7f538dc0848fcd3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newfold-labs/wp-module-deactivation/zipball/9a1f077cf03115e046458dd09adcd7dead79420d",
-                "reference": "9a1f077cf03115e046458dd09adcd7dead79420d",
+                "url": "https://api.github.com/repos/newfold-labs/wp-module-deactivation/zipball/8aa8b91279ac4ef6d6b26511a7f538dc0848fcd3",
+                "reference": "8aa8b91279ac4ef6d6b26511a7f538dc0848fcd3",
                 "shasum": ""
             },
             "require": {
@@ -1313,7 +1313,7 @@
                 }
             ],
             "description": "A Module for handling WordPress brand plugins and modules deactivations",
-            "time": "2026-09-28T18:45:19+00:00"
+            "time": "2026-11-24T12:39:37+00:00"
         },
         {
             "name": "newfold-labs/wp-module-ecommerce",
